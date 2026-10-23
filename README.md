@@ -1,6 +1,8 @@
 # Paper Rerun
 
-We re-run published research code and report what holds.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23585151.svg)](https://doi.org/10.5281/zenodo.23585151)
+
+We re-run published research code and report what holds. Project page: https://paper-rerun.github.io
 
 Most papers that ship code are never re-run by anyone outside the lab that wrote them. Reviewers read the paper; they rarely run it. Paper Rerun picks papers that many people build on, runs the authors' code on the authors' data again, and publishes what came out: the numbers, every command, and everything we had to fix to get there.
 
