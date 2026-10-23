@@ -1,0 +1,2 @@
+keys pickle 613 safetensors 548 only in pickle ['caduceus.backbone.layers.0.mixer.submodule.mamba_rev.in_proj.weight', 'caduceus.backbone.layers.0.mixer.submodule.mamba_rev.out_proj.weight', 'caduceus.backbone.layers.1.mixer.submodule.mamba_rev.in_proj.weight', 'caduceus.backbone.layers.1.mixer.submodule.mamba_rev.out_proj.weight', 'caduceus.backbone.layers.10.mixer.submodule.mamba_rev.in_proj.weight'] only in safe []
+different tensors 0 dtypes {'torch.float32', 'torch.int64'}

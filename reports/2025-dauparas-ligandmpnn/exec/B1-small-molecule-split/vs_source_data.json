@@ -1,0 +1,36 @@
+{
+ "C1-LMPNN-SMALLMOL": {
+  "their_median": 63.33333206176758,
+  "sidechain_within_5A": {
+   "n": 317,
+   "our_median": 62.941176470588246,
+   "mean_diff_pp": 0.9441502281244172,
+   "median_abs_diff_pp": 6.5714263916015625,
+   "corr": 0.6951413006225143
+  },
+  "any_heavy_atom_within_5A": {
+   "n": 317,
+   "our_median": 65.23809523809524,
+   "mean_diff_pp": 2.6385824192845275,
+   "median_abs_diff_pp": 4.999997820173007,
+   "corr": 0.8106537918557193
+  }
+ },
+ "C2-PMPNN-SMALLMOL": {
+  "their_median": 50.476192,
+  "sidechain_within_5A": {
+   "n": 317,
+   "our_median": 47.64705882352941,
+   "mean_diff_pp": -2.3520331115331907,
+   "median_abs_diff_pp": 6.588234,
+   "corr": 0.6902703703402764
+  },
+  "any_heavy_atom_within_5A": {
+   "n": 317,
+   "our_median": 51.33333333333333,
+   "mean_diff_pp": -0.05886239280191494,
+   "median_abs_diff_pp": 5.000002666666674,
+   "corr": 0.7676990925368011
+  }
+ }
+}

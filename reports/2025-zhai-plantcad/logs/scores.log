@@ -1,0 +1,48 @@
+TIS_valid	chunks=1	pos=998	neg=7002	pos_rate=1.0	neg_rate=1.00000	auPRC=0.9261	CI95=[0.9124,0.9374]
+Donor_valid	chunks=1	pos=1361	neg=6639	pos_rate=1.0	neg_rate=1.00000	auPRC=0.9861	CI95=[0.9813,0.9902]
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/scripts/score_sample.py", line 51, in <module>
+    main()
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/scripts/score_sample.py", line 36, in main
+    Labels, Scores, Uniforms = np.concatenate(LabelParts), np.concatenate(ScoreParts), np.concatenate(UniformParts)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: need at least one array to concatenate
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/scripts/score_sample.py", line 51, in <module>
+    main()
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/scripts/score_sample.py", line 36, in main
+    Labels, Scores, Uniforms = np.concatenate(LabelParts), np.concatenate(ScoreParts), np.concatenate(UniformParts)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: need at least one array to concatenate
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/scripts/score_sample.py", line 51, in <module>
+    main()
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/scripts/score_sample.py", line 36, in main
+    Labels, Scores, Uniforms = np.concatenate(LabelParts), np.concatenate(ScoreParts), np.concatenate(UniformParts)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: need at least one array to concatenate
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/scripts/score_sample.py", line 51, in <module>
+    main()
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/scripts/score_sample.py", line 36, in main
+    Labels, Scores, Uniforms = np.concatenate(LabelParts), np.concatenate(ScoreParts), np.concatenate(UniformParts)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: need at least one array to concatenate
+TIS_valid	chunks=1	pos=998	neg=7002	pos_rate=1.0	neg_rate=1.00000	auPRC=0.9261	CI95=[0.9124,0.9374]
+Donor_valid	chunks=1	pos=1361	neg=6639	pos_rate=1.0	neg_rate=1.00000	auPRC=0.9861	CI95=[0.9813,0.9902]
+TIS_sorghum	chunks=1	pos=3214	neg=4786	pos_rate=1.0	neg_rate=0.00122	auPRC=0.7001	CI95=[0.5428,0.8941]
+TIS_maize	chunks=1	pos=3098	neg=4902	pos_rate=1.0	neg_rate=0.00044	auPRC=0.7722	CI95=[0.7455,0.8527]
+Donor_sorghum	chunks=1	pos=6213	neg=1787	pos_rate=0.25	neg_rate=0.00016	auPRC=0.9284	CI95=[0.9220,0.9356]
+Donor_maize	chunks=1	pos=6196	neg=1804	pos_rate=0.25	neg_rate=0.00005	auPRC=0.9626	CI95=[0.9559,0.9759]
+TIS_valid	chunks=1	pos=998	neg=7002	pos_rate=1.0	neg_rate=1.00000	auPRC=0.9261	CI95=[0.9124,0.9374]
+Donor_valid	chunks=1	pos=1361	neg=6639	pos_rate=1.0	neg_rate=1.00000	auPRC=0.9861	CI95=[0.9813,0.9902]
+TIS_sorghum	chunks=5	pos=3214	neg=36786	pos_rate=1.0	neg_rate=0.00931	auPRC=0.7946	CI95=[0.7085,0.8902]
+TIS_maize	chunks=6	pos=3098	neg=44902	pos_rate=1.0	neg_rate=0.00399	auPRC=0.6835	CI95=[0.6182,0.8004]
+Donor_sorghum	chunks=6	pos=6213	neg=41787	pos_rate=0.25	neg_rate=0.00387	auPRC=0.8834	CI95=[0.8519,0.9086]
+Donor_maize	chunks=6	pos=6196	neg=41804	pos_rate=0.25	neg_rate=0.00122	auPRC=0.8401	CI95=[0.7476,0.9297]
+TIS_valid	chunks=1	pos=998	neg=7002	pos_rate=1.0	neg_rate=1.00000	auPRC=0.9261	CI95=[0.9124,0.9374]
+Donor_valid	chunks=1	pos=1361	neg=6639	pos_rate=1.0	neg_rate=1.00000	auPRC=0.9861	CI95=[0.9813,0.9902]
+TIS_sorghum	chunks=11	pos=3214	neg=79089	pos_rate=1.0	neg_rate=0.02000	auPRC=0.8096	CI95=[0.7518,0.8579]
+TIS_maize	chunks=9	pos=3098	neg=67651	pos_rate=1.0	neg_rate=0.00600	auPRC=0.6959	CI95=[0.6375,0.7652]
+Donor_sorghum	chunks=9	pos=6213	neg=64954	pos_rate=0.25	neg_rate=0.00600	auPRC=0.8806	CI95=[0.8468,0.9074]
+Donor_maize	chunks=10	pos=6196	neg=68879	pos_rate=0.25	neg_rate=0.00200	auPRC=0.8331	CI95=[0.7661,0.8950]

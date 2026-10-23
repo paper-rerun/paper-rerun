@@ -1,0 +1,48 @@
+flywing 2% noisy                              0.277 +- 0.041
+flywing 2% denoised                           0.758 +- 0.030
+flywing 3% noisy                              0.810 +- 0.023
+flywing 3% denoised                           0.971 +- 0.004
+flywing 5% noisy                              0.960 +- 0.005
+flywing 5% denoised                           0.989 +- 0.001
+flywing example iex=10 2% noisy               0.25825244188308716
+flywing example iex=10 2% denoised            0.8323699235916138
+flywing n_images                              26
+tribolium level0 noisy                        0.046 +- 0.008
+tribolium level0 denoised                     0.312 +- 0.040
+tribolium level1 noisy                        0.140 +- 0.019
+tribolium level1 denoised                     0.492 +- 0.061
+tribolium level2 noisy                        0.238 +- 0.037
+tribolium level2 denoised                     0.610 +- 0.061
+tribolium example iex=0 level1 noisy          0.1929260492324829
+tribolium example iex=0 level1 denoised       0.7567567825317383
+tribolium n_images                            6
+ribo dense 1fr noisy                          0.168 +- 0.015
+ribo dense 1fr denoised                       0.302 +- 0.030
+ribo sparse 1fr noisy                         0.093 +- 0.014
+ribo sparse 1fr denoised                      0.187 +- 0.019
+ribo dense 2fr noisy                          0.232 +- 0.020
+ribo dense 2fr denoised                       0.494 +- 0.034
+ribo sparse 2fr noisy                         0.240 +- 0.023
+ribo sparse 2fr denoised                      0.359 +- 0.034
+ribo dense 4fr noisy                          0.309 +- 0.026
+ribo dense 4fr denoised                       0.599 +- 0.025
+ribo sparse 4fr noisy                         0.326 +- 0.026
+ribo sparse 4fr denoised                      0.489 +- 0.033
+ribo dense 8fr noisy                          0.400 +- 0.038
+ribo dense 8fr denoised                       0.637 +- 0.029
+ribo sparse 8fr noisy                         0.379 +- 0.028
+ribo sparse 8fr denoised                      0.633 +- 0.028
+ribo dense 16fr noisy                         0.556 +- 0.040
+ribo dense 16fr denoised                      0.717 +- 0.017
+ribo sparse 16fr noisy                        0.428 +- 0.028
+ribo sparse 16fr denoised                     0.662 +- 0.020
+ribo dense 32fr noisy                         0.709 +- 0.030
+ribo dense 32fr denoised                      0.764 +- 0.016
+ribo sparse 32fr noisy                        0.531 +- 0.038
+ribo sparse 32fr denoised                     0.708 +- 0.031
+ribo dense 64fr noisy                         0.804 +- 0.020
+ribo dense 64fr denoised                      0.817 +- 0.016
+ribo sparse 64fr noisy                        0.666 +- 0.034
+ribo sparse 64fr denoised                     0.738 +- 0.016
+ribo example iex=3 4fr noisy                  0.3439306318759918
+ribo example iex=3 4fr denoised               0.6183844208717346

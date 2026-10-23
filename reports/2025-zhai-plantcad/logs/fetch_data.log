@@ -1,0 +1,13 @@
+TIS/test_sorghum.tsv rate=0.2 total={'0': 3937719, '1': 3214} kept={'0': 787614, '1': 3214}
+TIS/test_maize.tsv rate=0.05 total={'0': 11265574, '1': 3098} kept={'0': 563254, '1': 3098}
+Donor/test_sorghum.tsv rate=0.05 total={'0': 10821941, '1': 24801} kept={'0': 541120, '1': 24801}
+Donor/test_maize.tsv rate=0.02 total={'0': 34516038, '1': 24399} kept={'0': 690982, '1': 24399}
+    715382 Donor/test_maize.sample.tsv
+    565922 Donor/test_sorghum.sample.tsv
+    580021 Donor/train.tsv
+    169914 Donor/valid.tsv
+    566353 TIS/test_maize.sample.tsv
+    790829 TIS/test_sorghum.sample.tsv
+    198592 TIS/train.tsv
+     57826 TIS/valid.tsv
+   3644839 total

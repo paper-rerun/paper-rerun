@@ -1,0 +1,22 @@
+logs/authors_chains/lcdm_act_baseline_nobao_167989490589 ignore_rows = 0.3
+rows = 15909  sum(w) = 45353.0  (sum w)^2/sum(w^2) = 9631.1
+R-1 (getdist, worst eigenvalue of sampled params): 0.004949421592647679
+S8CMBL_check   mean = 0.8163  std = 0.0219  R-1(this param) = 0.0017
+S825           mean = 0.8163  std = 0.0219  R-1(this param) = 0.0017
+sigma8         mean = 0.8059  std = 0.1017  R-1(this param) = 0.0035
+S8_check       mean = 0.8395  std = 0.1038  R-1(this param) = 0.0033
+omegam         mean = 0.3686  std = 0.1870  R-1(this param) = 0.0034
+H0             mean = 67.9735  std = 17.2379  R-1(this param) = 0.0034
+Removed 0.3 as burn in
+logs/authors_chains/lcdm_act_baseline_rerun_167934952674 ignore_rows = 0.3
+rows = 28915  sum(w) = 80875.0  (sum w)^2/sum(w^2) = 17567.4
+R-1 (getdist, worst eigenvalue of sampled params): 0.006207075027484612
+S8CMBL_check   mean = 0.8296  std = 0.0197  R-1(this param) = 0.0019
+S825           mean = 0.8296  std = 0.0197  R-1(this param) = 0.0019
+sigma8         mean = 0.8198  std = 0.0147  R-1(this param) = 0.0020
+S8_check       mean = 0.8398  std = 0.0282  R-1(this param) = 0.0017
+omegam         mean = 0.3150  std = 0.0160  R-1(this param) = 0.0014
+H0             mean = 68.2478  std = 1.1109  R-1(this param) = 0.0023
+Table 1 priors (as sampled)  S8CMBL = 0.8163 +- 0.0219   (sum w)^2/sum(w^2) = 9631
+Qu+24 priors (reweighted)    S8CMBL = 0.8162 +- 0.0217   (sum w)^2/sum(w^2) = 4297
+fraction of weight with logA < 2: 0.0

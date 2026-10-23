@@ -1,0 +1,87 @@
+flywing ok
+tribolium ok
+ribo 1 ok
+ribo 3 ok
+ribo 4 ok
+ribo 5 ok
+ribo 6 ok
+/mnt/e/Ciencia/artigos/2025-stringer-cellpose3/data:
+total 0
+drwxrwxrwx 1 root root 512 Oct 21 17:43 .
+drwxrwxrwx 1 root root 512 Oct 21 18:08 ..
+drwxrwxrwx 1 root root 512 Oct 21 18:06 care
+drwxrwxrwx 1 root root 512 Oct 21 18:14 ribo
+
+/mnt/e/Ciencia/artigos/2025-stringer-cellpose3/data/care:
+total 0
+drwxrwxrwx 1 root root 512 Oct 21 18:06 .
+drwxrwxrwx 1 root root 512 Oct 21 17:43 ..
+drwxrwxrwx 1 root root 512 Oct 21 18:06 Denoising_Tribolium
+drwxrwxrwx 1 root root 512 Oct 21 17:54 Projection_Flywing
+
+/mnt/e/Ciencia/artigos/2025-stringer-cellpose3/data/care/Denoising_Tribolium:
+total 0
+drwxrwxrwx 1 root root 512 Oct 21 18:06 .
+drwxrwxrwx 1 root root 512 Oct 21 18:06 ..
+drwxrwxrwx 1 root root 512 Nov 23  2018 test_data
+
+/mnt/e/Ciencia/artigos/2025-stringer-cellpose3/data/care/Denoising_Tribolium/test_data:
+total 1290992
+drwxrwxrwx 1 root root       512 Nov 23  2018 .
+drwxrwxrwx 1 root root       512 Oct 21 18:06 ..
+-rwxrwxrwx 1 root root 208430690 Oct  1  2018 nGFP_0.1_0.2_0.5_20_07.tif
+-rwxrwxrwx 1 root root 246079865 Oct  1  2018 nGFP_0.1_0.2_0.5_20_13_mid.tif
+-rwxrwxrwx 1 root root 166936865 Oct  1  2018 nGFP_0.1_0.2_0.5_20_14_late.tif
+-rwxrwxrwx 1 root root 242223649 Oct  1  2018 nGFP_0.1_0.2_0.5_20_29_late.tif
+-rwxrwxrwx 1 root root 207030833 Oct  1  2018 nGFP_0.1_0.2_0.5_20_30_mid.tif
+-rwxrwxrwx 1 root root 251258945 Oct  1  2018 nGFP_0.1_0.2_0.5_20_31_mid-late.tif
+
+/mnt/e/Ciencia/artigos/2025-stringer-cellpose3/data/care/Projection_Flywing:
+total 0
+drwxrwxrwx 1 root root 512 Oct 21 17:54 .
+drwxrwxrwx 1 root root 512 Oct 21 18:06 ..
+drwxrwxrwx 1 root root 512 Nov 23  2018 test_data
+
+/mnt/e/Ciencia/artigos/2025-stringer-cellpose3/data/care/Projection_Flywing/test_data:
+total 3728640
+drwxrwxrwx 1 root root      512 Nov 23  2018 .
+drwxrwxrwx 1 root root      512 Oct 21 17:54 ..
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T001.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T002.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T003.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T004.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T005.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T006.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T007.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T008.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T009.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T010.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T011.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T012.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T013.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T014.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T015.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T016.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T017.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T018.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T019.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T020.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T021.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T022.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T023.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T024.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T025.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C0_T026.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T001.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T002.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T003.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T004.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T005.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T006.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T007.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T008.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T009.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T010.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T011.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T012.tif
+-rwxrwxrwx 1 root root 35991034 Oct  1  2018 C1_T013.tif

@@ -1,0 +1,14 @@
+small_molecule 317
+nucleotide 74
+metal 83
+=== ligand_mpnn / small_molecule / seed 101 ===
+2026-10-22T19:16:19-03:00
+/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/env/lib/python3.11/site-packages/prody/utilities/misctools.py:424: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+2026-10-22T19:30:52-03:00
+stats files: 317
+=== protein_mpnn / small_molecule / seed 201 ===
+2026-10-22T19:30:52-03:00
+/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/env/lib/python3.11/site-packages/prody/utilities/misctools.py:424: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/tools/run_split.sh: line 68: unexpected EOF while looking for matching `"'

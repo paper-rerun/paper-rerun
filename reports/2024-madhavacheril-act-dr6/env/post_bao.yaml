@@ -1,0 +1,13 @@
+# Importance-reweight the lens-only chains with the same four BAO likelihoods the
+# authors used (cross-check of the lensing+BAO numbers, not the paper's method)
+output: /mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/chains_lensonly/lensonly
+packages_path: /mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/packages
+post:
+  suffix: bao
+  skip: 0.3
+  add:
+    likelihood:
+      bao.sdss_dr7_mgs: null
+      bao.sixdf_2011_bao: null
+      bao.sdss_dr12_lrg_bao_dmdh: null
+      bao.sdss_dr16_lrg_bao_dmdh: null

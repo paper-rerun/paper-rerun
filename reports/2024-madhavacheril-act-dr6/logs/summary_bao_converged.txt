@@ -1,0 +1,20 @@
+Removed 0.3 as burn in
+logs/chains_bao/lensbao ignore_rows = 0.3
+rows = 13556  sum(w) = 37461.0  (sum w)^2/sum(w^2) = 8273.8
+R-1 (getdist, worst eigenvalue of sampled params): 0.004343436208868943
+S8CMBL_check   mean = 0.8295  std = 0.0196  R-1(this param) = 0.0012
+S825           mean = 0.8295  std = 0.0196  R-1(this param) = 0.0012
+sigma8         mean = 0.8192  std = 0.0146  R-1(this param) = 0.0014
+S8_check       mean = 0.8401  std = 0.0281  R-1(this param) = 0.0010
+omegam         mean = 0.3157  std = 0.0161  R-1(this param) = 0.0008
+H0             mean = 68.2540  std = 1.1131  R-1(this param) = 0.0018
+Removed 0.5 as burn in
+logs/chains_bao/lensbao ignore_rows = 0.5
+rows = 9682  sum(w) = 26736.0  (sum w)^2/sum(w^2) = 5930.1
+R-1 (getdist, worst eigenvalue of sampled params): 0.00753184955819724
+S8CMBL_check   mean = 0.8294  std = 0.0197  R-1(this param) = 0.0022
+S825           mean = 0.8294  std = 0.0197  R-1(this param) = 0.0022
+sigma8         mean = 0.8192  std = 0.0148  R-1(this param) = 0.0044
+S8_check       mean = 0.8400  std = 0.0283  R-1(this param) = 0.0012
+omegam         mean = 0.3156  std = 0.0162  R-1(this param) = 0.0006
+H0             mean = 68.2351  std = 1.1234  R-1(this param) = 0.0018

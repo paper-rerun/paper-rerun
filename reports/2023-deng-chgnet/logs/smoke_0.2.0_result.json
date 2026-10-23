@@ -1,0 +1,19 @@
+{
+ "model": "0.2.0",
+ "jsonl": "logs/smoke.jsonl",
+ "n_frames_evaluated": 302,
+ "n_frames_failed_graph": 0,
+ "n_materials": 24,
+ "energy_MAE_meV_per_atom": 20.603121415594753,
+ "force_MAE_meV_per_A": 32.173244385038295,
+ "stress_MAE_GPa": 0.2670456816423808,
+ "magmom_MAE_muB": 0.033835497553856037,
+ "sizes": {
+  "e": 302,
+  "f": 13365,
+  "s": 2718,
+  "m": 626
+ },
+ "wall_seconds": 25.363025665283203,
+ "failed_frames": []
+}

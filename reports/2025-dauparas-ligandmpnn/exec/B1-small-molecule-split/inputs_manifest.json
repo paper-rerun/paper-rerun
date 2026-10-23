@@ -1,0 +1,5080 @@
+{
+ "reading": "asymmetric unit; one protein chain + the nearest copy of the named ligand; waters and all other hetero atoms dropped",
+ "n_built": 317,
+ "n_failed": 0,
+ "failures": [],
+ "records": [
+  {
+   "name": "1a28_ASTR.pdb",
+   "pdb_id": "1a28",
+   "chain": "A",
+   "ligand": "STR",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 2.775,
+   "protein_atoms": 2019,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1a28_ASTR.pdb"
+  },
+  {
+   "name": "1bzc_ATPI.pdb",
+   "pdb_id": "1bzc",
+   "chain": "A",
+   "ligand": "TPI",
+   "ligand_copy": [
+    "A",
+    902,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.716,
+   "protein_atoms": 2426,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1bzc_ATPI.pdb"
+  },
+  {
+   "name": "1drv_AA3D.pdb",
+   "pdb_id": "1drv",
+   "chain": "A",
+   "ligand": "A3D",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 44,
+   "min_dist_chain_ligand": 2.52,
+   "protein_atoms": 1970,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1drv_AA3D.pdb"
+  },
+  {
+   "name": "1e3g_AR18.pdb",
+   "pdb_id": "1e3g",
+   "chain": "A",
+   "ligand": "R18",
+   "ligand_copy": [
+    "A",
+    1000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.791,
+   "protein_atoms": 2043,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1e3g_AR18.pdb"
+  },
+  {
+   "name": "1elb_A0Z4.pdb",
+   "pdb_id": "1elb",
+   "chain": "A",
+   "ligand": "0Z4",
+   "ligand_copy": [
+    "A",
+    256,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.735,
+   "protein_atoms": 1822,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1elb_A0Z4.pdb"
+  },
+  {
+   "name": "1elc_A0Z3.pdb",
+   "pdb_id": "1elc",
+   "chain": "A",
+   "ligand": "0Z3",
+   "ligand_copy": [
+    "A",
+    256,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 36,
+   "min_dist_chain_ligand": 2.641,
+   "protein_atoms": 1822,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1elc_A0Z3.pdb"
+  },
+  {
+   "name": "1epo_E2Z3.pdb",
+   "pdb_id": "1epo",
+   "chain": "E",
+   "ligand": "2Z3",
+   "ligand_copy": [
+    "E",
+    327,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 46,
+   "min_dist_chain_ligand": 2.575,
+   "protein_atoms": 2389,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1epo_E2Z3.pdb"
+  },
+  {
+   "name": "1f0r_A815.pdb",
+   "pdb_id": "1f0r",
+   "chain": "A",
+   "ligand": "815",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.501,
+   "protein_atoms": 1852,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1f0r_A815.pdb"
+  },
+  {
+   "name": "1g7f_AINZ.pdb",
+   "pdb_id": "1g7f",
+   "chain": "A",
+   "ligand": "INZ",
+   "ligand_copy": [
+    "A",
+    500,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 39,
+   "min_dist_chain_ligand": 2.744,
+   "protein_atoms": 2426,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1g7f_AINZ.pdb"
+  },
+  {
+   "name": "1g7g_AINX.pdb",
+   "pdb_id": "1g7g",
+   "chain": "A",
+   "ligand": "INX",
+   "ligand_copy": [
+    "A",
+    600,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 43,
+   "min_dist_chain_ligand": 2.472,
+   "protein_atoms": 2427,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1g7g_AINX.pdb"
+  },
+  {
+   "name": "1gvw_A0EM.pdb",
+   "pdb_id": "1gvw",
+   "chain": "A",
+   "ligand": "0EM",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 46,
+   "min_dist_chain_ligand": 2.4,
+   "protein_atoms": 2377,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1gvw_A0EM.pdb"
+  },
+  {
+   "name": "1gx8_ARTL.pdb",
+   "pdb_id": "1gx8",
+   "chain": "A",
+   "ligand": "RTL",
+   "ligand_copy": [
+    "A",
+    1163,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.484,
+   "protein_atoms": 1272,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1gx8_ARTL.pdb"
+  },
+  {
+   "name": "1i37_ADHT.pdb",
+   "pdb_id": "1i37",
+   "chain": "A",
+   "ligand": "DHT",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.696,
+   "protein_atoms": 1990,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1i37_ADHT.pdb"
+  },
+  {
+   "name": "1kav_AFEP.pdb",
+   "pdb_id": "1kav",
+   "chain": "A",
+   "ligand": "FEP",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.611,
+   "protein_atoms": 2427,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1kav_AFEP.pdb"
+  },
+  {
+   "name": "1kdk_ADHT.pdb",
+   "pdb_id": "1kdk",
+   "chain": "A",
+   "ligand": "DHT",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.569,
+   "protein_atoms": 1378,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1kdk_ADHT.pdb"
+  },
+  {
+   "name": "1kv1_ABMU.pdb",
+   "pdb_id": "1kv1",
+   "chain": "A",
+   "ligand": "BMU",
+   "ligand_copy": [
+    "A",
+    391,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.757,
+   "protein_atoms": 2664,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1kv1_ABMU.pdb"
+  },
+  {
+   "name": "1l8g_ADBD.pdb",
+   "pdb_id": "1l8g",
+   "chain": "A",
+   "ligand": "DBD",
+   "ligand_copy": [
+    "A",
+    322,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.75,
+   "protein_atoms": 2426,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1l8g_ADBD.pdb"
+  },
+  {
+   "name": "1lhu_AEST.pdb",
+   "pdb_id": "1lhu",
+   "chain": "A",
+   "ligand": "EST",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 20,
+   "min_dist_chain_ligand": 2.388,
+   "protein_atoms": 1366,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1lhu_AEST.pdb"
+  },
+  {
+   "name": "1lpg_BIMA.pdb",
+   "pdb_id": "1lpg",
+   "chain": "B",
+   "ligand": "IMA",
+   "ligand_copy": [
+    "B",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 41,
+   "min_dist_chain_ligand": 2.735,
+   "protein_atoms": 1852,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1lpg_BIMA.pdb"
+  },
+  {
+   "name": "1nc1_AMTH.pdb",
+   "pdb_id": "1nc1",
+   "chain": "A",
+   "ligand": "MTH",
+   "ligand_copy": [
+    "A",
+    233,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 20,
+   "min_dist_chain_ligand": 2.509,
+   "protein_atoms": 1721,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1nc1_AMTH.pdb"
+  },
+  {
+   "name": "1nfx_ARDR.pdb",
+   "pdb_id": "1nfx",
+   "chain": "A",
+   "ligand": "RDR",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.873,
+   "protein_atoms": 1852,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1nfx_ARDR.pdb"
+  },
+  {
+   "name": "1nhz_A486.pdb",
+   "pdb_id": "1nhz",
+   "chain": "A",
+   "ligand": "486",
+   "ligand_copy": [
+    "A",
+    800,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.661,
+   "protein_atoms": 1952,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1nhz_A486.pdb"
+  },
+  {
+   "name": "1nl9_A989.pdb",
+   "pdb_id": "1nl9",
+   "chain": "A",
+   "ligand": "989",
+   "ligand_copy": [
+    "A",
+    322,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 39,
+   "min_dist_chain_ligand": 2.641,
+   "protein_atoms": 2300,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1nl9_A989.pdb"
+  },
+  {
+   "name": "1nny_A515.pdb",
+   "pdb_id": "1nny",
+   "chain": "A",
+   "ligand": "515",
+   "ligand_copy": [
+    "A",
+    322,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 53,
+   "min_dist_chain_ligand": 2.637,
+   "protein_atoms": 2300,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1nny_A515.pdb"
+  },
+  {
+   "name": "1nwl_A964.pdb",
+   "pdb_id": "1nwl",
+   "chain": "A",
+   "ligand": "964",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.379,
+   "protein_atoms": 2304,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1nwl_A964.pdb"
+  },
+  {
+   "name": "1ony_A588.pdb",
+   "pdb_id": "1ony",
+   "chain": "A",
+   "ligand": "588",
+   "ligand_copy": [
+    "A",
+    322,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 41,
+   "min_dist_chain_ligand": 2.618,
+   "protein_atoms": 2300,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1ony_A588.pdb"
+  },
+  {
+   "name": "1pyn_A941.pdb",
+   "pdb_id": "1pyn",
+   "chain": "A",
+   "ligand": "941",
+   "ligand_copy": [
+    "A",
+    322,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 43,
+   "min_dist_chain_ligand": 2.79,
+   "protein_atoms": 2300,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1pyn_A941.pdb"
+  },
+  {
+   "name": "1qb1_A974.pdb",
+   "pdb_id": "1qb1",
+   "chain": "A",
+   "ligand": "974",
+   "ligand_copy": [
+    "A",
+    300,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 41,
+   "min_dist_chain_ligand": 2.33,
+   "protein_atoms": 1629,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1qb1_A974.pdb"
+  },
+  {
+   "name": "1qkt_AEST.pdb",
+   "pdb_id": "1qkt",
+   "chain": "A",
+   "ligand": "EST",
+   "ligand_copy": [
+    "A",
+    600,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 20,
+   "min_dist_chain_ligand": 2.541,
+   "protein_atoms": 1980,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1qkt_AEST.pdb"
+  },
+  {
+   "name": "1qxk_A429.pdb",
+   "pdb_id": "1qxk",
+   "chain": "A",
+   "ligand": "429",
+   "ligand_copy": [
+    "A",
+    322,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 37,
+   "min_dist_chain_ligand": 2.767,
+   "protein_atoms": 2300,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1qxk_A429.pdb"
+  },
+  {
+   "name": "1r0p_AKSA.pdb",
+   "pdb_id": "1r0p",
+   "chain": "A",
+   "ligand": "KSA",
+   "ligand_copy": [
+    "A",
+    0,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 35,
+   "min_dist_chain_ligand": 2.782,
+   "protein_atoms": 2396,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1r0p_AKSA.pdb"
+  },
+  {
+   "name": "1sj0_AE4D.pdb",
+   "pdb_id": "1sj0",
+   "chain": "A",
+   "ligand": "E4D",
+   "ligand_copy": [
+    "A",
+    600,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.583,
+   "protein_atoms": 1934,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1sj0_AE4D.pdb"
+  },
+  {
+   "name": "1sqn_ANDR.pdb",
+   "pdb_id": "1sqn",
+   "chain": "A",
+   "ligand": "NDR",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.761,
+   "protein_atoms": 1976,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1sqn_ANDR.pdb"
+  },
+  {
+   "name": "1v2n_TBBA.pdb",
+   "pdb_id": "1v2n",
+   "chain": "T",
+   "ligand": "BBA",
+   "ligand_copy": [
+    "T",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.768,
+   "protein_atoms": 1632,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1v2n_TBBA.pdb"
+  },
+  {
+   "name": "1xjd_ASTU.pdb",
+   "pdb_id": "1xjd",
+   "chain": "A",
+   "ligand": "STU",
+   "ligand_copy": [
+    "A",
+    200,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 35,
+   "min_dist_chain_ligand": 2.583,
+   "protein_atoms": 2352,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1xjd_ASTU.pdb"
+  },
+  {
+   "name": "1xws_ABI1.pdb",
+   "pdb_id": "1xws",
+   "chain": "A",
+   "ligand": "BI1",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.876,
+   "protein_atoms": 2213,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1xws_ABI1.pdb"
+  },
+  {
+   "name": "1yc1_A4BC.pdb",
+   "pdb_id": "1yc1",
+   "chain": "A",
+   "ligand": "4BC",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 2.698,
+   "protein_atoms": 1654,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1yc1_A4BC.pdb"
+  },
+  {
+   "name": "1yqj_A6NP.pdb",
+   "pdb_id": "1yqj",
+   "chain": "A",
+   "ligand": "6NP",
+   "ligand_copy": [
+    "A",
+    362,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 35,
+   "min_dist_chain_ligand": 2.77,
+   "protein_atoms": 2866,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1yqj_A6NP.pdb"
+  },
+  {
+   "name": "1z95_A198.pdb",
+   "pdb_id": "1z95",
+   "chain": "A",
+   "ligand": "198",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.539,
+   "protein_atoms": 1946,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1z95_A198.pdb"
+  },
+  {
+   "name": "1zp8_AAB2.pdb",
+   "pdb_id": "1zp8",
+   "chain": "A",
+   "ligand": "AB2",
+   "ligand_copy": [
+    "A",
+    200,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 47,
+   "min_dist_chain_ligand": 2.636,
+   "protein_atoms": 758,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/1zp8_AAB2.pdb"
+  },
+  {
+   "name": "2ayr_AL4G.pdb",
+   "pdb_id": "2ayr",
+   "chain": "A",
+   "ligand": "L4G",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 37,
+   "min_dist_chain_ligand": 2.534,
+   "protein_atoms": 1962,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2ayr_AL4G.pdb"
+  },
+  {
+   "name": "2b07_A598.pdb",
+   "pdb_id": "2b07",
+   "chain": "A",
+   "ligand": "598",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 37,
+   "min_dist_chain_ligand": 2.674,
+   "protein_atoms": 2426,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2b07_A598.pdb"
+  },
+  {
+   "name": "2b4l_ABET.pdb",
+   "pdb_id": "2b4l",
+   "chain": "A",
+   "ligand": "BET",
+   "ligand_copy": [
+    "A",
+    273,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 8,
+   "min_dist_chain_ligand": 2.645,
+   "protein_atoms": 2091,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2b4l_ABET.pdb"
+  },
+  {
+   "name": "2baj_A1PP.pdb",
+   "pdb_id": "2baj",
+   "chain": "A",
+   "ligand": "1PP",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 2.835,
+   "protein_atoms": 2718,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2baj_A1PP.pdb"
+  },
+  {
+   "name": "2bak_AAQZ.pdb",
+   "pdb_id": "2bak",
+   "chain": "A",
+   "ligand": "AQZ",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 43,
+   "min_dist_chain_ligand": 2.8,
+   "protein_atoms": 2695,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2bak_AAQZ.pdb"
+  },
+  {
+   "name": "2bal_APQA.pdb",
+   "pdb_id": "2bal",
+   "chain": "A",
+   "ligand": "PQA",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.851,
+   "protein_atoms": 2719,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2bal_APQA.pdb"
+  },
+  {
+   "name": "2bsm_ABSM.pdb",
+   "pdb_id": "2bsm",
+   "chain": "A",
+   "ligand": "BSM",
+   "ligand_copy": [
+    "A",
+    1224,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 2.778,
+   "protein_atoms": 1627,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2bsm_ABSM.pdb"
+  },
+  {
+   "name": "2cet_APGI.pdb",
+   "pdb_id": "2cet",
+   "chain": "A",
+   "ligand": "PGI",
+   "ligand_copy": [
+    "A",
+    1447,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.542,
+   "protein_atoms": 3565,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2cet_APGI.pdb"
+  },
+  {
+   "name": "2e2r_A2OH.pdb",
+   "pdb_id": "2e2r",
+   "chain": "A",
+   "ligand": "2OH",
+   "ligand_copy": [
+    "A",
+    1401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 17,
+   "min_dist_chain_ligand": 2.553,
+   "protein_atoms": 1805,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2e2r_A2OH.pdb"
+  },
+  {
+   "name": "2f6t_A1C2.pdb",
+   "pdb_id": "2f6t",
+   "chain": "A",
+   "ligand": "1C2",
+   "ligand_copy": [
+    "A",
+    608,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 26,
+   "min_dist_chain_ligand": 2.822,
+   "protein_atoms": 2427,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2f6t_A1C2.pdb"
+  },
+  {
+   "name": "2fdp_AFRP.pdb",
+   "pdb_id": "2fdp",
+   "chain": "A",
+   "ligand": "FRP",
+   "ligand_copy": [
+    "A",
+    386,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 41,
+   "min_dist_chain_ligand": 2.636,
+   "protein_atoms": 2940,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2fdp_AFRP.pdb"
+  },
+  {
+   "name": "2g94_AZPQ.pdb",
+   "pdb_id": "2g94",
+   "chain": "A",
+   "ligand": "ZPQ",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 45,
+   "min_dist_chain_ligand": 2.491,
+   "protein_atoms": 3053,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2g94_AZPQ.pdb"
+  },
+  {
+   "name": "2hah_A3TL.pdb",
+   "pdb_id": "2hah",
+   "chain": "A",
+   "ligand": "3TL",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.831,
+   "protein_atoms": 892,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2hah_A3TL.pdb"
+  },
+  {
+   "name": "2ihq_ALG7.pdb",
+   "pdb_id": "2ihq",
+   "chain": "A",
+   "ligand": "LG7",
+   "ligand_copy": [
+    "A",
+    90,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 2.504,
+   "protein_atoms": 2007,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2ihq_ALG7.pdb"
+  },
+  {
+   "name": "2iwx_AM1S.pdb",
+   "pdb_id": "2iwx",
+   "chain": "A",
+   "ligand": "M1S",
+   "ligand_copy": [
+    "A",
+    1215,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 24,
+   "min_dist_chain_ligand": 2.566,
+   "protein_atoms": 1702,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2iwx_AM1S.pdb"
+  },
+  {
+   "name": "2j2u_AGSQ.pdb",
+   "pdb_id": "2j2u",
+   "chain": "A",
+   "ligand": "GSQ",
+   "ligand_copy": [
+    "A",
+    1244,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.922,
+   "protein_atoms": 1819,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2j2u_AGSQ.pdb"
+  },
+  {
+   "name": "2j34_AGS6.pdb",
+   "pdb_id": "2j34",
+   "chain": "A",
+   "ligand": "GS6",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.909,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2j34_AGS6.pdb"
+  },
+  {
+   "name": "2j4i_AGSJ.pdb",
+   "pdb_id": "2j4i",
+   "chain": "A",
+   "ligand": "GSJ",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 36,
+   "min_dist_chain_ligand": 2.614,
+   "protein_atoms": 1837,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2j4i_AGSJ.pdb"
+  },
+  {
+   "name": "2j94_AG15.pdb",
+   "pdb_id": "2j94",
+   "chain": "A",
+   "ligand": "G15",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.875,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2j94_AG15.pdb"
+  },
+  {
+   "name": "2j95_AGSX.pdb",
+   "pdb_id": "2j95",
+   "chain": "A",
+   "ligand": "GSX",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 3.021,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2j95_AGSX.pdb"
+  },
+  {
+   "name": "2o0u_AC0M.pdb",
+   "pdb_id": "2o0u",
+   "chain": "A",
+   "ligand": "C0M",
+   "ligand_copy": [
+    "A",
+    2000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 34,
+   "min_dist_chain_ligand": 2.946,
+   "protein_atoms": 2700,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2o0u_AC0M.pdb"
+  },
+  {
+   "name": "2oax_ASNL.pdb",
+   "pdb_id": "2oax",
+   "chain": "A",
+   "ligand": "SNL",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 6,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.73,
+   "protein_atoms": 1903,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2oax_ASNL.pdb"
+  },
+  {
+   "name": "2ojg_A19A.pdb",
+   "pdb_id": "2ojg",
+   "chain": "A",
+   "ligand": "19A",
+   "ligand_copy": [
+    "A",
+    360,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.658,
+   "protein_atoms": 2756,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2ojg_A19A.pdb"
+  },
+  {
+   "name": "2ojj_A82A.pdb",
+   "pdb_id": "2ojj",
+   "chain": "A",
+   "ligand": "82A",
+   "ligand_copy": [
+    "A",
+    360,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.687,
+   "protein_atoms": 2815,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2ojj_A82A.pdb"
+  },
+  {
+   "name": "2p4j_A23I.pdb",
+   "pdb_id": "2p4j",
+   "chain": "A",
+   "ligand": "23I",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 49,
+   "min_dist_chain_ligand": 2.385,
+   "protein_atoms": 3053,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2p4j_A23I.pdb"
+  },
+  {
+   "name": "2p7g_A2OH.pdb",
+   "pdb_id": "2p7g",
+   "chain": "A",
+   "ligand": "2OH",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 17,
+   "min_dist_chain_ligand": 2.566,
+   "protein_atoms": 1761,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2p7g_A2OH.pdb"
+  },
+  {
+   "name": "2p7z_AOHT.pdb",
+   "pdb_id": "2p7z",
+   "chain": "A",
+   "ligand": "OHT",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.754,
+   "protein_atoms": 1641,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2p7z_AOHT.pdb"
+  },
+  {
+   "name": "2pog_AWST.pdb",
+   "pdb_id": "2pog",
+   "chain": "A",
+   "ligand": "WST",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.499,
+   "protein_atoms": 1864,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2pog_AWST.pdb"
+  },
+  {
+   "name": "2qbp_A527.pdb",
+   "pdb_id": "2qbp",
+   "chain": "A",
+   "ligand": "527",
+   "ligand_copy": [
+    "A",
+    800,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 37,
+   "min_dist_chain_ligand": 2.772,
+   "protein_atoms": 2426,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2qbp_A527.pdb"
+  },
+  {
+   "name": "2qbq_A4B3.pdb",
+   "pdb_id": "2qbq",
+   "chain": "A",
+   "ligand": "4B3",
+   "ligand_copy": [
+    "A",
+    800,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.895,
+   "protein_atoms": 2426,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2qbq_A4B3.pdb"
+  },
+  {
+   "name": "2qbs_A024.pdb",
+   "pdb_id": "2qbs",
+   "chain": "A",
+   "ligand": "024",
+   "ligand_copy": [
+    "A",
+    800,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 2.746,
+   "protein_atoms": 2426,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2qbs_A024.pdb"
+  },
+  {
+   "name": "2qe4_AJJ3.pdb",
+   "pdb_id": "2qe4",
+   "chain": "A",
+   "ligand": "JJ3",
+   "ligand_copy": [
+    "A",
+    601,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 24,
+   "min_dist_chain_ligand": 2.496,
+   "protein_atoms": 1646,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2qe4_AJJ3.pdb"
+  },
+  {
+   "name": "2qmg_ASC6.pdb",
+   "pdb_id": "2qmg",
+   "chain": "A",
+   "ligand": "SC6",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 44,
+   "min_dist_chain_ligand": 2.643,
+   "protein_atoms": 3060,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2qmg_ASC6.pdb"
+  },
+  {
+   "name": "2uwl_A895.pdb",
+   "pdb_id": "2uwl",
+   "chain": "A",
+   "ligand": "895",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.868,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2uwl_A895.pdb"
+  },
+  {
+   "name": "2uwo_A701.pdb",
+   "pdb_id": "2uwo",
+   "chain": "A",
+   "ligand": "701",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.692,
+   "protein_atoms": 1837,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2uwo_A701.pdb"
+  },
+  {
+   "name": "2uwp_A894.pdb",
+   "pdb_id": "2uwp",
+   "chain": "A",
+   "ligand": "894",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.963,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2uwp_A894.pdb"
+  },
+  {
+   "name": "2v7a_A627.pdb",
+   "pdb_id": "2v7a",
+   "chain": "A",
+   "ligand": "627",
+   "ligand_copy": [
+    "A",
+    1504,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 35,
+   "min_dist_chain_ligand": 2.826,
+   "protein_atoms": 2203,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2v7a_A627.pdb"
+  },
+  {
+   "name": "2vh0_AGSI.pdb",
+   "pdb_id": "2vh0",
+   "chain": "A",
+   "ligand": "GSI",
+   "ligand_copy": [
+    "A",
+    1247,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 34,
+   "min_dist_chain_ligand": 2.902,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2vh0_AGSI.pdb"
+  },
+  {
+   "name": "2vh6_AGSV.pdb",
+   "pdb_id": "2vh6",
+   "chain": "A",
+   "ligand": "GSV",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 35,
+   "min_dist_chain_ligand": 2.846,
+   "protein_atoms": 1837,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2vh6_AGSV.pdb"
+  },
+  {
+   "name": "2vkm_ABSD.pdb",
+   "pdb_id": "2vkm",
+   "chain": "A",
+   "ligand": "BSD",
+   "ligand_copy": [
+    "A",
+    1386,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 47,
+   "min_dist_chain_ligand": 2.518,
+   "protein_atoms": 3053,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2vkm_ABSD.pdb"
+  },
+  {
+   "name": "2vrj_ANCW.pdb",
+   "pdb_id": "2vrj",
+   "chain": "A",
+   "ligand": "NCW",
+   "ligand_copy": [
+    "A",
+    1446,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.404,
+   "protein_atoms": 3570,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2vrj_ANCW.pdb"
+  },
+  {
+   "name": "2vw5_ABC6.pdb",
+   "pdb_id": "2vw5",
+   "chain": "A",
+   "ligand": "BC6",
+   "ligand_copy": [
+    "A",
+    500,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 36,
+   "min_dist_chain_ligand": 2.687,
+   "protein_atoms": 1702,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2vw5_ABC6.pdb"
+  },
+  {
+   "name": "2vwc_ABC2.pdb",
+   "pdb_id": "2vwc",
+   "chain": "A",
+   "ligand": "BC2",
+   "ligand_copy": [
+    "A",
+    1215,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 40,
+   "min_dist_chain_ligand": 2.764,
+   "protein_atoms": 1693,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2vwc_ABC2.pdb"
+  },
+  {
+   "name": "2w8y_A486.pdb",
+   "pdb_id": "2w8y",
+   "chain": "A",
+   "ligand": "486",
+   "ligand_copy": [
+    "A",
+    1000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.418,
+   "protein_atoms": 2022,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2w8y_A486.pdb"
+  },
+  {
+   "name": "2wc3_AAM3.pdb",
+   "pdb_id": "2wc3",
+   "chain": "A",
+   "ligand": "AM3",
+   "ligand_copy": [
+    "A",
+    1446,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.552,
+   "protein_atoms": 3595,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2wc3_AAM3.pdb"
+  },
+  {
+   "name": "2web_APP4.pdb",
+   "pdb_id": "2web",
+   "chain": "A",
+   "ligand": "PP4",
+   "ligand_copy": [
+    "A",
+    326,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 38,
+   "min_dist_chain_ligand": 2.48,
+   "protein_atoms": 2366,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2web_APP4.pdb"
+  },
+  {
+   "name": "2wec_APP5.pdb",
+   "pdb_id": "2wec",
+   "chain": "A",
+   "ligand": "PP5",
+   "ligand_copy": [
+    "A",
+    326,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 38,
+   "min_dist_chain_ligand": 2.861,
+   "protein_atoms": 2366,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2wec_APP5.pdb"
+  },
+  {
+   "name": "2weq_AGDM.pdb",
+   "pdb_id": "2weq",
+   "chain": "A",
+   "ligand": "GDM",
+   "ligand_copy": [
+    "A",
+    1215,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 40,
+   "min_dist_chain_ligand": 2.669,
+   "protein_atoms": 1692,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2weq_AGDM.pdb"
+  },
+  {
+   "name": "2wgj_AVGH.pdb",
+   "pdb_id": "2wgj",
+   "chain": "A",
+   "ligand": "VGH",
+   "ligand_copy": [
+    "A",
+    2346,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.91,
+   "protein_atoms": 2308,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2wgj_AVGH.pdb"
+  },
+  {
+   "name": "2wuf_BKEM.pdb",
+   "pdb_id": "2wuf",
+   "chain": "B",
+   "ligand": "KEM",
+   "ligand_copy": [
+    "B",
+    1289,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.865,
+   "protein_atoms": 2185,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2wuf_BKEM.pdb"
+  },
+  {
+   "name": "2wyg_A461.pdb",
+   "pdb_id": "2wyg",
+   "chain": "A",
+   "ligand": "461",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.842,
+   "protein_atoms": 1806,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2wyg_A461.pdb"
+  },
+  {
+   "name": "2wyj_A898.pdb",
+   "pdb_id": "2wyj",
+   "chain": "A",
+   "ligand": "898",
+   "ligand_copy": [
+    "A",
+    1244,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.988,
+   "protein_atoms": 1828,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2wyj_A898.pdb"
+  },
+  {
+   "name": "2xab_AVHD.pdb",
+   "pdb_id": "2xab",
+   "chain": "A",
+   "ligand": "VHD",
+   "ligand_copy": [
+    "A",
+    1224,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.536,
+   "protein_atoms": 1635,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2xab_AVHD.pdb"
+  },
+  {
+   "name": "2xb8_AXNW.pdb",
+   "pdb_id": "2xb8",
+   "chain": "A",
+   "ligand": "XNW",
+   "ligand_copy": [
+    "A",
+    1144,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.667,
+   "protein_atoms": 1071,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2xb8_AXNW.pdb"
+  },
+  {
+   "name": "2xda_AJPS.pdb",
+   "pdb_id": "2xda",
+   "chain": "A",
+   "ligand": "JPS",
+   "ligand_copy": [
+    "A",
+    1151,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 20,
+   "min_dist_chain_ligand": 2.633,
+   "protein_atoms": 1153,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2xda_AJPS.pdb"
+  },
+  {
+   "name": "2xht_AC0Y.pdb",
+   "pdb_id": "2xht",
+   "chain": "A",
+   "ligand": "C0Y",
+   "ligand_copy": [
+    "A",
+    1224,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 19,
+   "min_dist_chain_ligand": 2.627,
+   "protein_atoms": 1670,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2xht_AC0Y.pdb"
+  },
+  {
+   "name": "2xj1_AXJ1.pdb",
+   "pdb_id": "2xj1",
+   "chain": "A",
+   "ligand": "XJ1",
+   "ligand_copy": [
+    "A",
+    1307,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.769,
+   "protein_atoms": 2234,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2xj1_AXJ1.pdb"
+  },
+  {
+   "name": "2xj2_A985.pdb",
+   "pdb_id": "2xj2",
+   "chain": "A",
+   "ligand": "985",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.839,
+   "protein_atoms": 2234,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2xj2_A985.pdb"
+  },
+  {
+   "name": "2xjg_AXJG.pdb",
+   "pdb_id": "2xjg",
+   "chain": "A",
+   "ligand": "XJG",
+   "ligand_copy": [
+    "A",
+    1224,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 2.551,
+   "protein_atoms": 1678,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2xjg_AXJG.pdb"
+  },
+  {
+   "name": "2xjx_AXJX.pdb",
+   "pdb_id": "2xjx",
+   "chain": "A",
+   "ligand": "XJX",
+   "ligand_copy": [
+    "A",
+    1232,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.526,
+   "protein_atoms": 1745,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2xjx_AXJX.pdb"
+  },
+  {
+   "name": "2y7x_AMZA.pdb",
+   "pdb_id": "2y7x",
+   "chain": "A",
+   "ligand": "MZA",
+   "ligand_copy": [
+    "A",
+    1246,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.915,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2y7x_AMZA.pdb"
+  },
+  {
+   "name": "2y7z_AC0Z.pdb",
+   "pdb_id": "2y7z",
+   "chain": "A",
+   "ligand": "C0Z",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.897,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2y7z_AC0Z.pdb"
+  },
+  {
+   "name": "2y80_A439.pdb",
+   "pdb_id": "2y80",
+   "chain": "A",
+   "ligand": "439",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.995,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2y80_A439.pdb"
+  },
+  {
+   "name": "2y81_A931.pdb",
+   "pdb_id": "2y81",
+   "chain": "A",
+   "ligand": "931",
+   "ligand_copy": [
+    "A",
+    1244,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.806,
+   "protein_atoms": 1845,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2y81_A931.pdb"
+  },
+  {
+   "name": "2y82_A930.pdb",
+   "pdb_id": "2y82",
+   "chain": "A",
+   "ligand": "930",
+   "ligand_copy": [
+    "A",
+    1245,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.802,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2y82_A930.pdb"
+  },
+  {
+   "name": "2ydw_AWSH.pdb",
+   "pdb_id": "2ydw",
+   "chain": "A",
+   "ligand": "WSH",
+   "ligand_copy": [
+    "A",
+    1183,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 3.007,
+   "protein_atoms": 895,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2ydw_AWSH.pdb"
+  },
+  {
+   "name": "2yek_AEAM.pdb",
+   "pdb_id": "2yek",
+   "chain": "A",
+   "ligand": "EAM",
+   "ligand_copy": [
+    "C",
+    1183,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 3.03,
+   "protein_atoms": 957,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2yek_AEAM.pdb"
+  },
+  {
+   "name": "2yel_AWSH.pdb",
+   "pdb_id": "2yel",
+   "chain": "A",
+   "ligand": "WSH",
+   "ligand_copy": [
+    "A",
+    1170,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.936,
+   "protein_atoms": 1062,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2yel_AWSH.pdb"
+  },
+  {
+   "name": "2yfe_AYFE.pdb",
+   "pdb_id": "2yfe",
+   "chain": "A",
+   "ligand": "YFE",
+   "ligand_copy": [
+    "A",
+    999,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.732,
+   "protein_atoms": 2109,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2yfe_AYFE.pdb"
+  },
+  {
+   "name": "2yfx_AVGH.pdb",
+   "pdb_id": "2yfx",
+   "chain": "A",
+   "ligand": "VGH",
+   "ligand_copy": [
+    "A",
+    9000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.918,
+   "protein_atoms": 2299,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2yfx_AVGH.pdb"
+  },
+  {
+   "name": "2yge_AGDM.pdb",
+   "pdb_id": "2yge",
+   "chain": "A",
+   "ligand": "GDM",
+   "ligand_copy": [
+    "A",
+    1215,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 80,
+   "min_dist_chain_ligand": 1.754,
+   "protein_atoms": 3396,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2yge_AGDM.pdb"
+  },
+  {
+   "name": "2ygf_AGDM.pdb",
+   "pdb_id": "2ygf",
+   "chain": "A",
+   "ligand": "GDM",
+   "ligand_copy": [
+    "A",
+    1215,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 80,
+   "min_dist_chain_ligand": 1.762,
+   "protein_atoms": 3376,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2ygf_AGDM.pdb"
+  },
+  {
+   "name": "2yi0_AYI0.pdb",
+   "pdb_id": "2yi0",
+   "chain": "A",
+   "ligand": "YI0",
+   "ligand_copy": [
+    "A",
+    1225,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.612,
+   "protein_atoms": 1624,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2yi0_AYI0.pdb"
+  },
+  {
+   "name": "2yi7_ABZ8.pdb",
+   "pdb_id": "2yi7",
+   "chain": "A",
+   "ligand": "BZ8",
+   "ligand_copy": [
+    "A",
+    1225,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 2.617,
+   "protein_atoms": 1632,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2yi7_ABZ8.pdb"
+  },
+  {
+   "name": "2yix_AYIX.pdb",
+   "pdb_id": "2yix",
+   "chain": "A",
+   "ligand": "YIX",
+   "ligand_copy": [
+    "A",
+    1355,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 26,
+   "min_dist_chain_ligand": 2.758,
+   "protein_atoms": 2834,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2yix_AYIX.pdb"
+  },
+  {
+   "name": "2zmm_A35B.pdb",
+   "pdb_id": "2zmm",
+   "chain": "A",
+   "ligand": "35B",
+   "ligand_copy": [
+    "A",
+    307,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.776,
+   "protein_atoms": 2426,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/2zmm_A35B.pdb"
+  },
+  {
+   "name": "3acw_A651.pdb",
+   "pdb_id": "3acw",
+   "chain": "A",
+   "ligand": "651",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.734,
+   "protein_atoms": 2392,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3acw_A651.pdb"
+  },
+  {
+   "name": "3acx_A673.pdb",
+   "pdb_id": "3acx",
+   "chain": "A",
+   "ligand": "673",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 3.377,
+   "protein_atoms": 2392,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3acx_A673.pdb"
+  },
+  {
+   "name": "3b5r_AB5R.pdb",
+   "pdb_id": "3b5r",
+   "chain": "A",
+   "ligand": "B5R",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.779,
+   "protein_atoms": 2014,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3b5r_AB5R.pdb"
+  },
+  {
+   "name": "3b65_A3B6.pdb",
+   "pdb_id": "3b65",
+   "chain": "A",
+   "ligand": "3B6",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.728,
+   "protein_atoms": 2014,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3b65_A3B6.pdb"
+  },
+  {
+   "name": "3bgq_AVX2.pdb",
+   "pdb_id": "3bgq",
+   "chain": "A",
+   "ligand": "VX2",
+   "ligand_copy": [
+    "A",
+    314,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 26,
+   "min_dist_chain_ligand": 2.927,
+   "protein_atoms": 2221,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3bgq_AVX2.pdb"
+  },
+  {
+   "name": "3bgz_AVX3.pdb",
+   "pdb_id": "3bgz",
+   "chain": "A",
+   "ligand": "VX3",
+   "ligand_copy": [
+    "A",
+    314,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 24,
+   "min_dist_chain_ligand": 2.705,
+   "protein_atoms": 2190,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3bgz_AVX3.pdb"
+  },
+  {
+   "name": "3ckp_A012.pdb",
+   "pdb_id": "3ckp",
+   "chain": "A",
+   "ligand": "012",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 40,
+   "min_dist_chain_ligand": 2.744,
+   "protein_atoms": 2974,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3ckp_A012.pdb"
+  },
+  {
+   "name": "3cow_A52H.pdb",
+   "pdb_id": "3cow",
+   "chain": "A",
+   "ligand": "52H",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.677,
+   "protein_atoms": 2107,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3cow_A52H.pdb"
+  },
+  {
+   "name": "3coy_A53H.pdb",
+   "pdb_id": "3coy",
+   "chain": "A",
+   "ligand": "53H",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.72,
+   "protein_atoms": 2073,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3coy_A53H.pdb"
+  },
+  {
+   "name": "3coz_A54H.pdb",
+   "pdb_id": "3coz",
+   "chain": "A",
+   "ligand": "54H",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.706,
+   "protein_atoms": 2119,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3coz_A54H.pdb"
+  },
+  {
+   "name": "3d7z_AGK5.pdb",
+   "pdb_id": "3d7z",
+   "chain": "A",
+   "ligand": "GK5",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 26,
+   "min_dist_chain_ligand": 2.774,
+   "protein_atoms": 2818,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3d7z_AGK5.pdb"
+  },
+  {
+   "name": "3d83_AGK6.pdb",
+   "pdb_id": "3d83",
+   "chain": "A",
+   "ligand": "GK6",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 35,
+   "min_dist_chain_ligand": 2.855,
+   "protein_atoms": 2819,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3d83_AGK6.pdb"
+  },
+  {
+   "name": "3eax_ALZP.pdb",
+   "pdb_id": "3eax",
+   "chain": "A",
+   "ligand": "LZP",
+   "ligand_copy": [
+    "A",
+    322,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 48,
+   "min_dist_chain_ligand": 2.77,
+   "protein_atoms": 2296,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3eax_ALZP.pdb"
+  },
+  {
+   "name": "3ekr_APY9.pdb",
+   "pdb_id": "3ekr",
+   "chain": "A",
+   "ligand": "PY9",
+   "ligand_copy": [
+    "A",
+    901,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.568,
+   "protein_atoms": 1712,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3ekr_APY9.pdb"
+  },
+  {
+   "name": "3fv1_ADYH.pdb",
+   "pdb_id": "3fv1",
+   "chain": "A",
+   "ligand": "DYH",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.653,
+   "protein_atoms": 2032,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3fv1_ADYH.pdb"
+  },
+  {
+   "name": "3fv2_ANDZ.pdb",
+   "pdb_id": "3fv2",
+   "chain": "A",
+   "ligand": "NDZ",
+   "ligand_copy": [
+    "A",
+    791,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 20,
+   "min_dist_chain_ligand": 2.682,
+   "protein_atoms": 2025,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3fv2_ANDZ.pdb"
+  },
+  {
+   "name": "3fvk_A8DX.pdb",
+   "pdb_id": "3fvk",
+   "chain": "A",
+   "ligand": "8DX",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 19,
+   "min_dist_chain_ligand": 2.657,
+   "protein_atoms": 2019,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3fvk_A8DX.pdb"
+  },
+  {
+   "name": "3gba_ADYH.pdb",
+   "pdb_id": "3gba",
+   "chain": "A",
+   "ligand": "DYH",
+   "ligand_copy": [
+    "A",
+    258,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.665,
+   "protein_atoms": 2041,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3gba_ADYH.pdb"
+  },
+  {
+   "name": "3gbb_AMS8.pdb",
+   "pdb_id": "3gbb",
+   "chain": "A",
+   "ligand": "MS8",
+   "ligand_copy": [
+    "A",
+    258,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 18,
+   "min_dist_chain_ligand": 2.645,
+   "protein_atoms": 2033,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3gbb_AMS8.pdb"
+  },
+  {
+   "name": "3gcs_ABAX.pdb",
+   "pdb_id": "3gcs",
+   "chain": "A",
+   "ligand": "BAX",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.561,
+   "protein_atoms": 2671,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3gcs_ABAX.pdb"
+  },
+  {
+   "name": "3gcu_AR48.pdb",
+   "pdb_id": "3gcu",
+   "chain": "A",
+   "ligand": "R48",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 38,
+   "min_dist_chain_ligand": 2.75,
+   "protein_atoms": 2717,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3gcu_AR48.pdb"
+  },
+  {
+   "name": "3gy3_APNT.pdb",
+   "pdb_id": "3gy3",
+   "chain": "A",
+   "ligand": "PNT",
+   "ligand_copy": [
+    "A",
+    246,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.667,
+   "protein_atoms": 1629,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3gy3_APNT.pdb"
+  },
+  {
+   "name": "3hek_ABD0.pdb",
+   "pdb_id": "3hek",
+   "chain": "A",
+   "ligand": "BD0",
+   "ligand_copy": [
+    "A",
+    901,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.609,
+   "protein_atoms": 1741,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3hek_ABD0.pdb"
+  },
+  {
+   "name": "3i25_AMV7.pdb",
+   "pdb_id": "3i25",
+   "chain": "A",
+   "ligand": "MV7",
+   "ligand_copy": [
+    "A",
+    531,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 63,
+   "min_dist_chain_ligand": 2.457,
+   "protein_atoms": 2940,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3i25_AMV7.pdb"
+  },
+  {
+   "name": "3ioc_AA5D.pdb",
+   "pdb_id": "3ioc",
+   "chain": "A",
+   "ligand": "A5D",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 2.689,
+   "protein_atoms": 1987,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3ioc_AA5D.pdb"
+  },
+  {
+   "name": "3iph_AG11.pdb",
+   "pdb_id": "3iph",
+   "chain": "A",
+   "ligand": "G11",
+   "ligand_copy": [
+    "A",
+    361,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 26,
+   "min_dist_chain_ligand": 2.833,
+   "protein_atoms": 2803,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3iph_AG11.pdb"
+  },
+  {
+   "name": "3iw6_APP0.pdb",
+   "pdb_id": "3iw6",
+   "chain": "A",
+   "ligand": "PP0",
+   "ligand_copy": [
+    "A",
+    361,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.466,
+   "protein_atoms": 2709,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3iw6_APP0.pdb"
+  },
+  {
+   "name": "3k97_A4CD.pdb",
+   "pdb_id": "3k97",
+   "chain": "A",
+   "ligand": "4CD",
+   "ligand_copy": [
+    "A",
+    901,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 2.564,
+   "protein_atoms": 1653,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3k97_A4CD.pdb"
+  },
+  {
+   "name": "3lpi_AZ74.pdb",
+   "pdb_id": "3lpi",
+   "chain": "A",
+   "ligand": "Z74",
+   "ligand_copy": [
+    "A",
+    456,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 46,
+   "min_dist_chain_ligand": 2.59,
+   "protein_atoms": 3060,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3lpi_AZ74.pdb"
+  },
+  {
+   "name": "3lpk_AZ76.pdb",
+   "pdb_id": "3lpk",
+   "chain": "A",
+   "ligand": "Z76",
+   "ligand_copy": [
+    "A",
+    456,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 48,
+   "min_dist_chain_ligand": 2.583,
+   "protein_atoms": 3060,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3lpk_AZ76.pdb"
+  },
+  {
+   "name": "3lxk_AMI1.pdb",
+   "pdb_id": "3lxk",
+   "chain": "A",
+   "ligand": "MI1",
+   "ligand_copy": [
+    "A",
+    1125,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 2.855,
+   "protein_atoms": 2209,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3lxk_AMI1.pdb"
+  },
+  {
+   "name": "3m35_AM35.pdb",
+   "pdb_id": "3m35",
+   "chain": "A",
+   "ligand": "M35",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 37,
+   "min_dist_chain_ligand": 2.763,
+   "protein_atoms": 1629,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3m35_AM35.pdb"
+  },
+  {
+   "name": "3myg_AEML.pdb",
+   "pdb_id": "3myg",
+   "chain": "A",
+   "ligand": "EML",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.721,
+   "protein_atoms": 2081,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3myg_AEML.pdb"
+  },
+  {
+   "name": "3n76_ACA2.pdb",
+   "pdb_id": "3n76",
+   "chain": "A",
+   "ligand": "CA2",
+   "ligand_copy": [
+    "A",
+    147,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.617,
+   "protein_atoms": 1083,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3n76_ACA2.pdb"
+  },
+  {
+   "name": "3nq3_ADKA.pdb",
+   "pdb_id": "3nq3",
+   "chain": "A",
+   "ligand": "DKA",
+   "ligand_copy": [
+    "A",
+    3053,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 12,
+   "min_dist_chain_ligand": 3.319,
+   "protein_atoms": 1280,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3nq3_ADKA.pdb"
+  },
+  {
+   "name": "3nyx_ATZ1.pdb",
+   "pdb_id": "3nyx",
+   "chain": "A",
+   "ligand": "TZ1",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.724,
+   "protein_atoms": 2352,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3nyx_ATZ1.pdb"
+  },
+  {
+   "name": "3o5x_AJZG.pdb",
+   "pdb_id": "3o5x",
+   "chain": "A",
+   "ligand": "JZG",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 42,
+   "min_dist_chain_ligand": 2.491,
+   "protein_atoms": 2074,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3o5x_AJZG.pdb"
+  },
+  {
+   "name": "3o8p_ABMU.pdb",
+   "pdb_id": "3o8p",
+   "chain": "A",
+   "ligand": "BMU",
+   "ligand_copy": [
+    "A",
+    361,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.786,
+   "protein_atoms": 2698,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3o8p_ABMU.pdb"
+  },
+  {
+   "name": "3pww_AROC.pdb",
+   "pdb_id": "3pww",
+   "chain": "A",
+   "ligand": "ROC",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 49,
+   "min_dist_chain_ligand": 2.688,
+   "protein_atoms": 2369,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3pww_AROC.pdb"
+  },
+  {
+   "name": "3roc_A29A.pdb",
+   "pdb_id": "3roc",
+   "chain": "A",
+   "ligand": "29A",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.835,
+   "protein_atoms": 2715,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3roc_A29A.pdb"
+  },
+  {
+   "name": "3tfn_A2CJ.pdb",
+   "pdb_id": "3tfn",
+   "chain": "A",
+   "ligand": "2CJ",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.411,
+   "protein_atoms": 2392,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3tfn_A2CJ.pdb"
+  },
+  {
+   "name": "3u81_ASAH.pdb",
+   "pdb_id": "3u81",
+   "chain": "A",
+   "ligand": "SAH",
+   "ligand_copy": [
+    "A",
+    222,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 46,
+   "min_dist_chain_ligand": 1.712,
+   "protein_atoms": 3409,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3u81_ASAH.pdb"
+  },
+  {
+   "name": "3ueu_ADAO.pdb",
+   "pdb_id": "3ueu",
+   "chain": "A",
+   "ligand": "DAO",
+   "ligand_copy": [
+    "A",
+    2871,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 14,
+   "min_dist_chain_ligand": 3.35,
+   "protein_atoms": 1227,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3ueu_ADAO.pdb"
+  },
+  {
+   "name": "3uev_AMYR.pdb",
+   "pdb_id": "3uev",
+   "chain": "A",
+   "ligand": "MYR",
+   "ligand_copy": [
+    "A",
+    5412,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 16,
+   "min_dist_chain_ligand": 3.127,
+   "protein_atoms": 1253,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3uev_AMYR.pdb"
+  },
+  {
+   "name": "3uew_APLM.pdb",
+   "pdb_id": "3uew",
+   "chain": "A",
+   "ligand": "PLM",
+   "ligand_copy": [
+    "A",
+    1000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 18,
+   "min_dist_chain_ligand": 2.794,
+   "protein_atoms": 1236,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3uew_APLM.pdb"
+  },
+  {
+   "name": "3uex_ASTE.pdb",
+   "pdb_id": "3uex",
+   "chain": "A",
+   "ligand": "STE",
+   "ligand_copy": [
+    "A",
+    163,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 20,
+   "min_dist_chain_ligand": 3.233,
+   "protein_atoms": 1260,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3uex_ASTE.pdb"
+  },
+  {
+   "name": "3vha_AVHA.pdb",
+   "pdb_id": "3vha",
+   "chain": "A",
+   "ligand": "VHA",
+   "ligand_copy": [
+    "A",
+    237,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 2.862,
+   "protein_atoms": 1691,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3vha_AVHA.pdb"
+  },
+  {
+   "name": "3vhc_AVHC.pdb",
+   "pdb_id": "3vhc",
+   "chain": "A",
+   "ligand": "VHC",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.824,
+   "protein_atoms": 1695,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3vhc_AVHC.pdb"
+  },
+  {
+   "name": "3vhd_AVHE.pdb",
+   "pdb_id": "3vhd",
+   "chain": "A",
+   "ligand": "VHE",
+   "ligand_copy": [
+    "A",
+    1,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 2.812,
+   "protein_atoms": 1676,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3vhd_AVHE.pdb"
+  },
+  {
+   "name": "3vje_AZGA.pdb",
+   "pdb_id": "3vje",
+   "chain": "A",
+   "ligand": "ZGA",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 49,
+   "min_dist_chain_ligand": 2.48,
+   "protein_atoms": 2385,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3vje_AZGA.pdb"
+  },
+  {
+   "name": "3vvy_AET.pdb",
+   "pdb_id": "3vvy",
+   "chain": "A",
+   "ligand": "ET",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 24,
+   "min_dist_chain_ligand": 2.997,
+   "protein_atoms": 1462,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3vvy_AET.pdb"
+  },
+  {
+   "name": "3vw1_BCVI.pdb",
+   "pdb_id": "3vw1",
+   "chain": "B",
+   "ligand": "CVI",
+   "ligand_copy": [
+    "B",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.869,
+   "protein_atoms": 1462,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3vw1_BCVI.pdb"
+  },
+  {
+   "name": "3vw2_ABER.pdb",
+   "pdb_id": "3vw2",
+   "chain": "A",
+   "ligand": "BER",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.877,
+   "protein_atoms": 1462,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3vw2_ABER.pdb"
+  },
+  {
+   "name": "3wha_AWHA.pdb",
+   "pdb_id": "3wha",
+   "chain": "A",
+   "ligand": "WHA",
+   "ligand_copy": [
+    "A",
+    302,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.873,
+   "protein_atoms": 1640,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3wha_AWHA.pdb"
+  },
+  {
+   "name": "3wz6_AIXZ.pdb",
+   "pdb_id": "3wz6",
+   "chain": "A",
+   "ligand": "IXZ",
+   "ligand_copy": [
+    "A",
+    409,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.596,
+   "protein_atoms": 2385,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3wz6_AIXZ.pdb"
+  },
+  {
+   "name": "3wz8_AIXV.pdb",
+   "pdb_id": "3wz8",
+   "chain": "A",
+   "ligand": "IXV",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.911,
+   "protein_atoms": 2389,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3wz8_AIXV.pdb"
+  },
+  {
+   "name": "3zc5_AW9Z.pdb",
+   "pdb_id": "3zc5",
+   "chain": "A",
+   "ligand": "W9Z",
+   "ligand_copy": [
+    "A",
+    2345,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 2.951,
+   "protein_atoms": 2308,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3zc5_AW9Z.pdb"
+  },
+  {
+   "name": "3zm9_AQMQ.pdb",
+   "pdb_id": "3zm9",
+   "chain": "A",
+   "ligand": "QMQ",
+   "ligand_copy": [
+    "A",
+    1458,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 37,
+   "min_dist_chain_ligand": 2.957,
+   "protein_atoms": 2941,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3zm9_AQMQ.pdb"
+  },
+  {
+   "name": "3zze_A6XP.pdb",
+   "pdb_id": "3zze",
+   "chain": "A",
+   "ligand": "6XP",
+   "ligand_copy": [
+    "A",
+    2345,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.625,
+   "protein_atoms": 2283,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/3zze_A6XP.pdb"
+  },
+  {
+   "name": "4a4v_AYFD.pdb",
+   "pdb_id": "4a4v",
+   "chain": "A",
+   "ligand": "YFD",
+   "ligand_copy": [
+    "A",
+    999,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.948,
+   "protein_atoms": 2113,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4a4v_AYFD.pdb"
+  },
+  {
+   "name": "4a4w_AYFB.pdb",
+   "pdb_id": "4a4w",
+   "chain": "A",
+   "ligand": "YFB",
+   "ligand_copy": [
+    "A",
+    999,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.932,
+   "protein_atoms": 2105,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4a4w_AYFB.pdb"
+  },
+  {
+   "name": "4a7i_BA7I.pdb",
+   "pdb_id": "4a7i",
+   "chain": "B",
+   "ligand": "A7I",
+   "ligand_copy": [
+    "B",
+    1246,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 24,
+   "min_dist_chain_ligand": 2.798,
+   "protein_atoms": 1852,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4a7i_BA7I.pdb"
+  },
+  {
+   "name": "4ag8_AAXI.pdb",
+   "pdb_id": "4ag8",
+   "chain": "A",
+   "ligand": "AXI",
+   "ligand_copy": [
+    "A",
+    2000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.697,
+   "protein_atoms": 2381,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4ag8_AAXI.pdb"
+  },
+  {
+   "name": "4ap7_AF47.pdb",
+   "pdb_id": "4ap7",
+   "chain": "A",
+   "ligand": "F47",
+   "ligand_copy": [
+    "A",
+    2345,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 24,
+   "min_dist_chain_ligand": 2.837,
+   "protein_atoms": 2308,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4ap7_AF47.pdb"
+  },
+  {
+   "name": "4b6o_A3DQ.pdb",
+   "pdb_id": "4b6o",
+   "chain": "A",
+   "ligand": "3DQ",
+   "ligand_copy": [
+    "A",
+    1144,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.669,
+   "protein_atoms": 1080,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4b6o_A3DQ.pdb"
+  },
+  {
+   "name": "4b9k_CTG0.pdb",
+   "pdb_id": "4b9k",
+   "chain": "C",
+   "ligand": "TG0",
+   "ligand_copy": [
+    "C",
+    1203,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.651,
+   "protein_atoms": 1088,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4b9k_CTG0.pdb"
+  },
+  {
+   "name": "4cd0_AAWJ.pdb",
+   "pdb_id": "4cd0",
+   "chain": "A",
+   "ligand": "AWJ",
+   "ligand_copy": [
+    "A",
+    1500,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.77,
+   "protein_atoms": 2323,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4cd0_AAWJ.pdb"
+  },
+  {
+   "name": "4cga_AQLW.pdb",
+   "pdb_id": "4cga",
+   "chain": "A",
+   "ligand": "QLW",
+   "ligand_copy": [
+    "A",
+    0,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 24,
+   "min_dist_chain_ligand": 3.234,
+   "protein_atoms": 2941,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4cga_AQLW.pdb"
+  },
+  {
+   "name": "4cmo_AYPW.pdb",
+   "pdb_id": "4cmo",
+   "chain": "A",
+   "ligand": "YPW",
+   "ligand_copy": [
+    "A",
+    2402,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.854,
+   "protein_atoms": 2325,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4cmo_AYPW.pdb"
+  },
+  {
+   "name": "4da5_A0H7.pdb",
+   "pdb_id": "4da5",
+   "chain": "A",
+   "ligand": "0H7",
+   "ligand_copy": [
+    "A",
+    502,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.698,
+   "protein_atoms": 2926,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4da5_A0H7.pdb"
+  },
+  {
+   "name": "4e5w_A0NT.pdb",
+   "pdb_id": "4e5w",
+   "chain": "A",
+   "ligand": "0NT",
+   "ligand_copy": [
+    "A",
+    1201,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 1.913,
+   "protein_atoms": 2388,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4e5w_A0NT.pdb"
+  },
+  {
+   "name": "4e6d_A0NU.pdb",
+   "pdb_id": "4e6d",
+   "chain": "A",
+   "ligand": "0NU",
+   "ligand_copy": [
+    "A",
+    1201,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 39,
+   "min_dist_chain_ligand": 1.766,
+   "protein_atoms": 2391,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4e6d_A0NU.pdb"
+  },
+  {
+   "name": "4e9u_ARWY.pdb",
+   "pdb_id": "4e9u",
+   "chain": "A",
+   "ligand": "RWY",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 19,
+   "min_dist_chain_ligand": 2.536,
+   "protein_atoms": 2392,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4e9u_ARWY.pdb"
+  },
+  {
+   "name": "4ea2_ARWZ.pdb",
+   "pdb_id": "4ea2",
+   "chain": "A",
+   "ligand": "RWZ",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 24,
+   "min_dist_chain_ligand": 3.214,
+   "protein_atoms": 2369,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4ea2_ARWZ.pdb"
+  },
+  {
+   "name": "4egk_ARDC.pdb",
+   "pdb_id": "4egk",
+   "chain": "A",
+   "ligand": "RDC",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.579,
+   "protein_atoms": 1658,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4egk_ARDC.pdb"
+  },
+  {
+   "name": "4er1_E0ZP.pdb",
+   "pdb_id": "4er1",
+   "chain": "E",
+   "ligand": "0ZP",
+   "ligand_copy": [
+    "E",
+    327,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 60,
+   "min_dist_chain_ligand": 2.661,
+   "protein_atoms": 2389,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4er1_E0ZP.pdb"
+  },
+  {
+   "name": "4fcq_A2N6.pdb",
+   "pdb_id": "4fcq",
+   "chain": "A",
+   "ligand": "2N6",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 2.49,
+   "protein_atoms": 1627,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4fcq_A2N6.pdb"
+  },
+  {
+   "name": "4ffs_ABIG.pdb",
+   "pdb_id": "4ffs",
+   "chain": "A",
+   "ligand": "BIG",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 2.67,
+   "protein_atoms": 1779,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4ffs_ABIG.pdb"
+  },
+  {
+   "name": "4flp_AJQ1.pdb",
+   "pdb_id": "4flp",
+   "chain": "A",
+   "ligand": "JQ1",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 3.036,
+   "protein_atoms": 876,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4flp_AJQ1.pdb"
+  },
+  {
+   "name": "4g8n_AG8M.pdb",
+   "pdb_id": "4g8n",
+   "chain": "A",
+   "ligand": "G8M",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 12,
+   "min_dist_chain_ligand": 2.573,
+   "protein_atoms": 2026,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4g8n_AG8M.pdb"
+  },
+  {
+   "name": "4gny_ASDS.pdb",
+   "pdb_id": "4gny",
+   "chain": "A",
+   "ligand": "SDS",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 17,
+   "min_dist_chain_ligand": 3.342,
+   "protein_atoms": 1242,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4gny_ASDS.pdb"
+  },
+  {
+   "name": "4gu6_A10N.pdb",
+   "pdb_id": "4gu6",
+   "chain": "A",
+   "ligand": "10N",
+   "ligand_copy": [
+    "A",
+    701,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.839,
+   "protein_atoms": 2181,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4gu6_A10N.pdb"
+  },
+  {
+   "name": "4hge_A15V.pdb",
+   "pdb_id": "4hge",
+   "chain": "A",
+   "ligand": "15V",
+   "ligand_copy": [
+    "A",
+    1201,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 3.032,
+   "protein_atoms": 2373,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4hge_A15V.pdb"
+  },
+  {
+   "name": "4igt_A3ZA.pdb",
+   "pdb_id": "4igt",
+   "chain": "A",
+   "ligand": "3ZA",
+   "ligand_copy": [
+    "A",
+    801,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 17,
+   "min_dist_chain_ligand": 2.637,
+   "protein_atoms": 2046,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4igt_A3ZA.pdb"
+  },
+  {
+   "name": "4k0y_A1OA.pdb",
+   "pdb_id": "4k0y",
+   "chain": "A",
+   "ligand": "1OA",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 26,
+   "min_dist_chain_ligand": 2.786,
+   "protein_atoms": 2224,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4k0y_A1OA.pdb"
+  },
+  {
+   "name": "4k9y_AK9Y.pdb",
+   "pdb_id": "4k9y",
+   "chain": "A",
+   "ligand": "K9Y",
+   "ligand_copy": [
+    "A",
+    701,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 36,
+   "min_dist_chain_ligand": 2.739,
+   "protein_atoms": 2180,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4k9y_AK9Y.pdb"
+  },
+  {
+   "name": "4kao_AKAO.pdb",
+   "pdb_id": "4kao",
+   "chain": "A",
+   "ligand": "KAO",
+   "ligand_copy": [
+    "A",
+    701,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.507,
+   "protein_atoms": 2024,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4kao_AKAO.pdb"
+  },
+  {
+   "name": "4kcx_A1QK.pdb",
+   "pdb_id": "4kcx",
+   "chain": "A",
+   "ligand": "1QK",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 3.219,
+   "protein_atoms": 887,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4kcx_A1QK.pdb"
+  },
+  {
+   "name": "4lyw_A21Q.pdb",
+   "pdb_id": "4lyw",
+   "chain": "A",
+   "ligand": "21Q",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.922,
+   "protein_atoms": 1061,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4lyw_A21Q.pdb"
+  },
+  {
+   "name": "4m0r_A644.pdb",
+   "pdb_id": "4m0r",
+   "chain": "A",
+   "ligand": "644",
+   "ligand_copy": [
+    "A",
+    600,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.45,
+   "protein_atoms": 2432,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4m0r_A644.pdb"
+  },
+  {
+   "name": "4m12_A1YZ.pdb",
+   "pdb_id": "4m12",
+   "chain": "A",
+   "ligand": "1YZ",
+   "ligand_copy": [
+    "A",
+    701,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 42,
+   "min_dist_chain_ligand": 1.83,
+   "protein_atoms": 2123,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4m12_A1YZ.pdb"
+  },
+  {
+   "name": "4m13_A1E0.pdb",
+   "pdb_id": "4m13",
+   "chain": "A",
+   "ligand": "1E0",
+   "ligand_copy": [
+    "A",
+    701,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 45,
+   "min_dist_chain_ligand": 1.745,
+   "protein_atoms": 2123,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4m13_A1E0.pdb"
+  },
+  {
+   "name": "4muf_A2DJ.pdb",
+   "pdb_id": "4muf",
+   "chain": "A",
+   "ligand": "2DJ",
+   "ligand_copy": [
+    "A",
+    403,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.748,
+   "protein_atoms": 2054,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4muf_A2DJ.pdb"
+  },
+  {
+   "name": "4nh8_A2LC.pdb",
+   "pdb_id": "4nh8",
+   "chain": "A",
+   "ligand": "2LC",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.676,
+   "protein_atoms": 1644,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4nh8_A2LC.pdb"
+  },
+  {
+   "name": "4nwc_A2QE.pdb",
+   "pdb_id": "4nwc",
+   "chain": "A",
+   "ligand": "2QE",
+   "ligand_copy": [
+    "A",
+    905,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 16,
+   "min_dist_chain_ligand": 2.359,
+   "protein_atoms": 2026,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4nwc_A2QE.pdb"
+  },
+  {
+   "name": "4o04_A2Q8.pdb",
+   "pdb_id": "4o04",
+   "chain": "A",
+   "ligand": "2Q8",
+   "ligand_copy": [
+    "A",
+    4000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 26,
+   "min_dist_chain_ligand": 2.664,
+   "protein_atoms": 1635,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4o04_A2Q8.pdb"
+  },
+  {
+   "name": "4o05_A2Q9.pdb",
+   "pdb_id": "4o05",
+   "chain": "A",
+   "ligand": "2Q9",
+   "ligand_copy": [
+    "A",
+    4000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.65,
+   "protein_atoms": 1644,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4o05_A2Q9.pdb"
+  },
+  {
+   "name": "4o07_AFGH.pdb",
+   "pdb_id": "4o07",
+   "chain": "A",
+   "ligand": "FGH",
+   "ligand_copy": [
+    "A",
+    4000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.676,
+   "protein_atoms": 1644,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4o07_AFGH.pdb"
+  },
+  {
+   "name": "4o09_A2R6.pdb",
+   "pdb_id": "4o09",
+   "chain": "A",
+   "ligand": "2R6",
+   "ligand_copy": [
+    "A",
+    4000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.705,
+   "protein_atoms": 1644,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4o09_A2R6.pdb"
+  },
+  {
+   "name": "4o0b_A2QA.pdb",
+   "pdb_id": "4o0b",
+   "chain": "A",
+   "ligand": "2QA",
+   "ligand_copy": [
+    "A",
+    4000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.704,
+   "protein_atoms": 1644,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4o0b_A2QA.pdb"
+  },
+  {
+   "name": "4p5z_AQ7M.pdb",
+   "pdb_id": "4p5z",
+   "chain": "A",
+   "ligand": "Q7M",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 55,
+   "min_dist_chain_ligand": 1.64,
+   "protein_atoms": 4207,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4p5z_AQ7M.pdb"
+  },
+  {
+   "name": "4pmm_A31V.pdb",
+   "pdb_id": "4pmm",
+   "chain": "A",
+   "ligand": "31V",
+   "ligand_copy": [
+    "A",
+    801,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 37,
+   "min_dist_chain_ligand": 2.848,
+   "protein_atoms": 2258,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4pmm_A31V.pdb"
+  },
+  {
+   "name": "4pop_A2VY.pdb",
+   "pdb_id": "4pop",
+   "chain": "A",
+   "ligand": "2VY",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 17,
+   "min_dist_chain_ligand": 2.783,
+   "protein_atoms": 1377,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4pop_A2VY.pdb"
+  },
+  {
+   "name": "4qev_A31O.pdb",
+   "pdb_id": "4qev",
+   "chain": "A",
+   "ligand": "31O",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 3.089,
+   "protein_atoms": 907,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4qev_A31O.pdb"
+  },
+  {
+   "name": "4qew_A31P.pdb",
+   "pdb_id": "4qew",
+   "chain": "A",
+   "ligand": "31P",
+   "ligand_copy": [
+    "A",
+    503,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 3.041,
+   "protein_atoms": 921,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4qew_A31P.pdb"
+  },
+  {
+   "name": "4qyy_A3G7.pdb",
+   "pdb_id": "4qyy",
+   "chain": "A",
+   "ligand": "3G7",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 34,
+   "min_dist_chain_ligand": 2.043,
+   "protein_atoms": 5523,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4qyy_A3G7.pdb"
+  },
+  {
+   "name": "4rfm_A3P6.pdb",
+   "pdb_id": "4rfm",
+   "chain": "A",
+   "ligand": "3P6",
+   "ligand_copy": [
+    "A",
+    701,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 36,
+   "min_dist_chain_ligand": 2.731,
+   "protein_atoms": 1977,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4rfm_A3P6.pdb"
+  },
+  {
+   "name": "4rwj_A66T.pdb",
+   "pdb_id": "4rwj",
+   "chain": "A",
+   "ligand": "66T",
+   "ligand_copy": [
+    "A",
+    801,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 34,
+   "min_dist_chain_ligand": 2.972,
+   "protein_atoms": 2377,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4rwj_A66T.pdb"
+  },
+  {
+   "name": "4twp_AAXI.pdb",
+   "pdb_id": "4twp",
+   "chain": "A",
+   "ligand": "AXI",
+   "ligand_copy": [
+    "A",
+    601,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.688,
+   "protein_atoms": 2164,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4twp_AAXI.pdb"
+  },
+  {
+   "name": "4uyf_A73B.pdb",
+   "pdb_id": "4uyf",
+   "chain": "A",
+   "ligand": "73B",
+   "ligand_copy": [
+    "C",
+    1183,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.567,
+   "protein_atoms": 990,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4uyf_A73B.pdb"
+  },
+  {
+   "name": "4v01_A0LI.pdb",
+   "pdb_id": "4v01",
+   "chain": "A",
+   "ligand": "0LI",
+   "ligand_copy": [
+    "A",
+    1776,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 39,
+   "min_dist_chain_ligand": 2.791,
+   "protein_atoms": 2139,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4v01_A0LI.pdb"
+  },
+  {
+   "name": "4w9f_C3JU.pdb",
+   "pdb_id": "4w9f",
+   "chain": "C",
+   "ligand": "3JU",
+   "ligand_copy": [
+    "C",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.626,
+   "protein_atoms": 1078,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4w9f_C3JU.pdb"
+  },
+  {
+   "name": "4w9l_C3JJ.pdb",
+   "pdb_id": "4w9l",
+   "chain": "C",
+   "ligand": "3JJ",
+   "ligand_copy": [
+    "C",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 41,
+   "min_dist_chain_ligand": 2.515,
+   "protein_atoms": 1110,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4w9l_C3JJ.pdb"
+  },
+  {
+   "name": "4wa9_BAXI.pdb",
+   "pdb_id": "4wa9",
+   "chain": "B",
+   "ligand": "AXI",
+   "ligand_copy": [
+    "B",
+    9000,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.755,
+   "protein_atoms": 2219,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4wa9_BAXI.pdb"
+  },
+  {
+   "name": "4wkn_ATDI.pdb",
+   "pdb_id": "4wkn",
+   "chain": "A",
+   "ligand": "TDI",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 20,
+   "min_dist_chain_ligand": 2.705,
+   "protein_atoms": 1753,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4wkn_ATDI.pdb"
+  },
+  {
+   "name": "4x6p_A3YU.pdb",
+   "pdb_id": "4x6p",
+   "chain": "A",
+   "ligand": "3YU",
+   "ligand_copy": [
+    "A",
+    302,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 63,
+   "min_dist_chain_ligand": 2.032,
+   "protein_atoms": 1845,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4x6p_A3YU.pdb"
+  },
+  {
+   "name": "4xip_A40W.pdb",
+   "pdb_id": "4xip",
+   "chain": "A",
+   "ligand": "40W",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.681,
+   "protein_atoms": 1635,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4xip_A40W.pdb"
+  },
+  {
+   "name": "4xir_A40X.pdb",
+   "pdb_id": "4xir",
+   "chain": "A",
+   "ligand": "40X",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.686,
+   "protein_atoms": 1635,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4xir_A40X.pdb"
+  },
+  {
+   "name": "4y79_A4O6.pdb",
+   "pdb_id": "4y79",
+   "chain": "A",
+   "ligand": "4O6",
+   "ligand_copy": [
+    "A",
+    303,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.825,
+   "protein_atoms": 1850,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4y79_A4O6.pdb"
+  },
+  {
+   "name": "4ybk_A4B7.pdb",
+   "pdb_id": "4ybk",
+   "chain": "A",
+   "ligand": "4B7",
+   "ligand_copy": [
+    "A",
+    601,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 68,
+   "min_dist_chain_ligand": 1.791,
+   "protein_atoms": 2099,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4ybk_A4B7.pdb"
+  },
+  {
+   "name": "4ymb_A4E7.pdb",
+   "pdb_id": "4ymb",
+   "chain": "A",
+   "ligand": "4E7",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 38,
+   "min_dist_chain_ligand": 1.943,
+   "protein_atoms": 4045,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4ymb_A4E7.pdb"
+  },
+  {
+   "name": "4yml_A4F0.pdb",
+   "pdb_id": "4yml",
+   "chain": "A",
+   "ligand": "4F0",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 20,
+   "min_dist_chain_ligand": 2.57,
+   "protein_atoms": 1693,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4yml_A4F0.pdb"
+  },
+  {
+   "name": "4ynb_A4EH.pdb",
+   "pdb_id": "4ynb",
+   "chain": "A",
+   "ligand": "4EH",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.706,
+   "protein_atoms": 1753,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4ynb_A4EH.pdb"
+  },
+  {
+   "name": "4yth_A467.pdb",
+   "pdb_id": "4yth",
+   "chain": "A",
+   "ligand": "467",
+   "ligand_copy": [
+    "A",
+    4000,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.818,
+   "protein_atoms": 2395,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4yth_A467.pdb"
+  },
+  {
+   "name": "4z0k_A4LN.pdb",
+   "pdb_id": "4z0k",
+   "chain": "A",
+   "ligand": "4LN",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.722,
+   "protein_atoms": 3621,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4z0k_A4LN.pdb"
+  },
+  {
+   "name": "4zae_A4M1.pdb",
+   "pdb_id": "4zae",
+   "chain": "A",
+   "ligand": "4M1",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 57,
+   "min_dist_chain_ligand": 1.826,
+   "protein_atoms": 3620,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/4zae_A4M1.pdb"
+  },
+  {
+   "name": "5aa9_A5P8.pdb",
+   "pdb_id": "5aa9",
+   "chain": "A",
+   "ligand": "5P8",
+   "ligand_copy": [
+    "A",
+    2402,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.857,
+   "protein_atoms": 2328,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5aa9_A5P8.pdb"
+  },
+  {
+   "name": "5acy_A9S3.pdb",
+   "pdb_id": "5acy",
+   "chain": "A",
+   "ligand": "9S3",
+   "ligand_copy": [
+    "A",
+    1172,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 34,
+   "min_dist_chain_ligand": 2.969,
+   "protein_atoms": 1057,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5acy_A9S3.pdb"
+  },
+  {
+   "name": "5d26_AL28.pdb",
+   "pdb_id": "5d26",
+   "chain": "A",
+   "ligand": "L28",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.857,
+   "protein_atoms": 1059,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5d26_AL28.pdb"
+  },
+  {
+   "name": "5d3h_A57G.pdb",
+   "pdb_id": "5d3h",
+   "chain": "A",
+   "ligand": "57G",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.43,
+   "protein_atoms": 1046,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5d3h_A57G.pdb"
+  },
+  {
+   "name": "5d3j_AL33.pdb",
+   "pdb_id": "5d3j",
+   "chain": "A",
+   "ligand": "L33",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.828,
+   "protein_atoms": 1055,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5d3j_AL33.pdb"
+  },
+  {
+   "name": "5d3l_A57F.pdb",
+   "pdb_id": "5d3l",
+   "chain": "A",
+   "ligand": "57F",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.823,
+   "protein_atoms": 1062,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5d3l_A57F.pdb"
+  },
+  {
+   "name": "5d3t_A56Y.pdb",
+   "pdb_id": "5d3t",
+   "chain": "A",
+   "ligand": "56Y",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 25,
+   "min_dist_chain_ligand": 2.538,
+   "protein_atoms": 1062,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5d3t_A56Y.pdb"
+  },
+  {
+   "name": "5dlx_A5D2.pdb",
+   "pdb_id": "5dlx",
+   "chain": "A",
+   "ligand": "5D2",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 35,
+   "min_dist_chain_ligand": 3.128,
+   "protein_atoms": 1043,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5dlx_A5D2.pdb"
+  },
+  {
+   "name": "5dqc_A5E7.pdb",
+   "pdb_id": "5dqc",
+   "chain": "A",
+   "ligand": "5E7",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 49,
+   "min_dist_chain_ligand": 2.52,
+   "protein_atoms": 2929,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5dqc_A5E7.pdb"
+  },
+  {
+   "name": "5dwr_A5H7.pdb",
+   "pdb_id": "5dwr",
+   "chain": "A",
+   "ligand": "5H7",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 55,
+   "min_dist_chain_ligand": 1.809,
+   "protein_atoms": 2224,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5dwr_A5H7.pdb"
+  },
+  {
+   "name": "5e74_A5KH.pdb",
+   "pdb_id": "5e74",
+   "chain": "A",
+   "ligand": "5KH",
+   "ligand_copy": [
+    "A",
+    2001,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.885,
+   "protein_atoms": 947,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5e74_A5KH.pdb"
+  },
+  {
+   "name": "5egm_A5NY.pdb",
+   "pdb_id": "5egm",
+   "chain": "A",
+   "ligand": "5NY",
+   "ligand_copy": [
+    "A",
+    303,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 63,
+   "min_dist_chain_ligand": 1.991,
+   "protein_atoms": 3634,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5egm_A5NY.pdb"
+  },
+  {
+   "name": "5eng_A5QN.pdb",
+   "pdb_id": "5eng",
+   "chain": "A",
+   "ligand": "5QN",
+   "ligand_copy": [
+    "A",
+    1201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 34,
+   "min_dist_chain_ligand": 2.963,
+   "protein_atoms": 962,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5eng_A5QN.pdb"
+  },
+  {
+   "name": "5eqp_A5R9.pdb",
+   "pdb_id": "5eqp",
+   "chain": "A",
+   "ligand": "5R9",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 19,
+   "min_dist_chain_ligand": 2.6,
+   "protein_atoms": 2925,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5eqp_A5R9.pdb"
+  },
+  {
+   "name": "5eqy_A5RA.pdb",
+   "pdb_id": "5eqy",
+   "chain": "A",
+   "ligand": "5RA",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.606,
+   "protein_atoms": 2925,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5eqy_A5RA.pdb"
+  },
+  {
+   "name": "5er1_E0HT.pdb",
+   "pdb_id": "5er1",
+   "chain": "E",
+   "ligand": "0HT",
+   "ligand_copy": [
+    "E",
+    327,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 37,
+   "min_dist_chain_ligand": 2.693,
+   "protein_atoms": 2389,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5er1_E0HT.pdb"
+  },
+  {
+   "name": "5exm_A5ST.pdb",
+   "pdb_id": "5exm",
+   "chain": "A",
+   "ligand": "5ST",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 36,
+   "min_dist_chain_ligand": 2.805,
+   "protein_atoms": 1859,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5exm_A5ST.pdb"
+  },
+  {
+   "name": "5exn_A5SU.pdb",
+   "pdb_id": "5exn",
+   "chain": "A",
+   "ligand": "5SU",
+   "ligand_copy": [
+    "A",
+    302,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 68,
+   "min_dist_chain_ligand": 1.856,
+   "protein_atoms": 1851,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5exn_A5SU.pdb"
+  },
+  {
+   "name": "5f9b_B5VN.pdb",
+   "pdb_id": "5f9b",
+   "chain": "B",
+   "ligand": "5VN",
+   "ligand_copy": [
+    "B",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 35,
+   "min_dist_chain_ligand": 2.19,
+   "protein_atoms": 1993,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5f9b_B5VN.pdb"
+  },
+  {
+   "name": "5fto_AYMX.pdb",
+   "pdb_id": "5fto",
+   "chain": "A",
+   "ligand": "YMX",
+   "ligand_copy": [
+    "A",
+    2402,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 41,
+   "min_dist_chain_ligand": 2.898,
+   "protein_atoms": 2335,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5fto_AYMX.pdb"
+  },
+  {
+   "name": "5fut_APQ7.pdb",
+   "pdb_id": "5fut",
+   "chain": "A",
+   "ligand": "PQ7",
+   "ligand_copy": [
+    "A",
+    1467,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 38,
+   "min_dist_chain_ligand": 3.093,
+   "protein_atoms": 2944,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5fut_APQ7.pdb"
+  },
+  {
+   "name": "5hcv_A60R.pdb",
+   "pdb_id": "5hcv",
+   "chain": "A",
+   "ligand": "60R",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.707,
+   "protein_atoms": 1939,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5hcv_A60R.pdb"
+  },
+  {
+   "name": "5i3v_A68M.pdb",
+   "pdb_id": "5i3v",
+   "chain": "A",
+   "ligand": "68M",
+   "ligand_copy": [
+    "A",
+    404,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.696,
+   "protein_atoms": 2917,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5i3v_A68M.pdb"
+  },
+  {
+   "name": "5i3y_A68K.pdb",
+   "pdb_id": "5i3y",
+   "chain": "A",
+   "ligand": "68K",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 46,
+   "min_dist_chain_ligand": 2.613,
+   "protein_atoms": 2913,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5i3y_A68K.pdb"
+  },
+  {
+   "name": "5i9x_ADB8.pdb",
+   "pdb_id": "5i9x",
+   "chain": "A",
+   "ligand": "DB8",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 36,
+   "min_dist_chain_ligand": 3.152,
+   "protein_atoms": 2268,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5i9x_ADB8.pdb"
+  },
+  {
+   "name": "5i9z_A627.pdb",
+   "pdb_id": "5i9z",
+   "chain": "A",
+   "ligand": "627",
+   "ligand_copy": [
+    "A",
+    1001,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 35,
+   "min_dist_chain_ligand": 2.865,
+   "protein_atoms": 2179,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5i9z_A627.pdb"
+  },
+  {
+   "name": "5ie1_A6BS.pdb",
+   "pdb_id": "5ie1",
+   "chain": "A",
+   "ligand": "6BS",
+   "ligand_copy": [
+    "A",
+    407,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.711,
+   "protein_atoms": 2849,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5ie1_A6BS.pdb"
+  },
+  {
+   "name": "5ih9_A6BF.pdb",
+   "pdb_id": "5ih9",
+   "chain": "A",
+   "ligand": "6BF",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 32,
+   "min_dist_chain_ligand": 2.836,
+   "protein_atoms": 2519,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5ih9_A6BF.pdb"
+  },
+  {
+   "name": "5jq5_AI74.pdb",
+   "pdb_id": "5jq5",
+   "chain": "A",
+   "ligand": "I74",
+   "ligand_copy": [
+    "A",
+    302,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.582,
+   "protein_atoms": 2309,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5jq5_AI74.pdb"
+  },
+  {
+   "name": "5kz0_A6YL.pdb",
+   "pdb_id": "5kz0",
+   "chain": "A",
+   "ligand": "6YL",
+   "ligand_copy": [
+    "A",
+    1501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.804,
+   "protein_atoms": 2302,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5kz0_A6YL.pdb"
+  },
+  {
+   "name": "5l2s_A6ZV.pdb",
+   "pdb_id": "5l2s",
+   "chain": "A",
+   "ligand": "6ZV",
+   "ligand_copy": [
+    "A",
+    900,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 69,
+   "min_dist_chain_ligand": 2.31,
+   "protein_atoms": 2090,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5l2s_A6ZV.pdb"
+  },
+  {
+   "name": "5lli_C6Z3.pdb",
+   "pdb_id": "5lli",
+   "chain": "C",
+   "ligand": "6Z3",
+   "ligand_copy": [
+    "C",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 37,
+   "min_dist_chain_ligand": 2.56,
+   "protein_atoms": 1119,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5lli_C6Z3.pdb"
+  },
+  {
+   "name": "5lny_A70K.pdb",
+   "pdb_id": "5lny",
+   "chain": "A",
+   "ligand": "70K",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 34,
+   "min_dist_chain_ligand": 2.599,
+   "protein_atoms": 1626,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5lny_A70K.pdb"
+  },
+  {
+   "name": "5lsg_AQZQ.pdb",
+   "pdb_id": "5lsg",
+   "chain": "A",
+   "ligand": "QZQ",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.341,
+   "protein_atoms": 2047,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5lsg_AQZQ.pdb"
+  },
+  {
+   "name": "5neb_B8VE.pdb",
+   "pdb_id": "5neb",
+   "chain": "B",
+   "ligand": "8VE",
+   "ligand_copy": [
+    "B",
+    309,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 15,
+   "min_dist_chain_ligand": 2.396,
+   "protein_atoms": 2001,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5neb_B8VE.pdb"
+  },
+  {
+   "name": "5nw1_C9BH.pdb",
+   "pdb_id": "5nw1",
+   "chain": "C",
+   "ligand": "9BH",
+   "ligand_copy": [
+    "C",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 4,
+   "ligand_atoms_kept": 36,
+   "min_dist_chain_ligand": 2.662,
+   "protein_atoms": 1120,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5nw1_C9BH.pdb"
+  },
+  {
+   "name": "5nyh_A9EK.pdb",
+   "pdb_id": "5nyh",
+   "chain": "A",
+   "ligand": "9EK",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 33,
+   "min_dist_chain_ligand": 2.549,
+   "protein_atoms": 1644,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5nyh_A9EK.pdb"
+  },
+  {
+   "name": "5op5_A3FE.pdb",
+   "pdb_id": "5op5",
+   "chain": "A",
+   "ligand": "3FE",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 2.792,
+   "protein_atoms": 2083,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5op5_A3FE.pdb"
+  },
+  {
+   "name": "5oq8_AA0Q.pdb",
+   "pdb_id": "5oq8",
+   "chain": "A",
+   "ligand": "A0Q",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.973,
+   "protein_atoms": 2096,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5oq8_AA0Q.pdb"
+  },
+  {
+   "name": "5qqp_ANR7.pdb",
+   "pdb_id": "5qqp",
+   "chain": "A",
+   "ligand": "NR7",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 69,
+   "min_dist_chain_ligand": 1.867,
+   "protein_atoms": 1841,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5qqp_ANR7.pdb"
+  },
+  {
+   "name": "5t19_A73U.pdb",
+   "pdb_id": "5t19",
+   "chain": "A",
+   "ligand": "73U",
+   "ligand_copy": [
+    "A",
+    402,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 2.821,
+   "protein_atoms": 2431,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5t19_A73U.pdb"
+  },
+  {
+   "name": "5tpx_A7H7.pdb",
+   "pdb_id": "5tpx",
+   "chain": "A",
+   "ligand": "7H7",
+   "ligand_copy": [
+    "A",
+    1505,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 2.722,
+   "protein_atoms": 870,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5tpx_A7H7.pdb"
+  },
+  {
+   "name": "5v82_A96Y.pdb",
+   "pdb_id": "5v82",
+   "chain": "A",
+   "ligand": "96Y",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.746,
+   "protein_atoms": 2223,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5v82_A96Y.pdb"
+  },
+  {
+   "name": "5yfs_ARI2.pdb",
+   "pdb_id": "5yfs",
+   "chain": "A",
+   "ligand": "RI2",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 18,
+   "min_dist_chain_ligand": 2.67,
+   "protein_atoms": 2546,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5yfs_ARI2.pdb"
+  },
+  {
+   "name": "5yft_ARI2.pdb",
+   "pdb_id": "5yft",
+   "chain": "A",
+   "ligand": "RI2",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 18,
+   "min_dist_chain_ligand": 2.623,
+   "protein_atoms": 2546,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/5yft_ARI2.pdb"
+  },
+  {
+   "name": "6c2r_AEG7.pdb",
+   "pdb_id": "6c2r",
+   "chain": "A",
+   "ligand": "EG7",
+   "ligand_copy": [
+    "A",
+    404,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 60,
+   "min_dist_chain_ligand": 1.878,
+   "protein_atoms": 2018,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6c2r_AEG7.pdb"
+  },
+  {
+   "name": "6cjr_AE0G.pdb",
+   "pdb_id": "6cjr",
+   "chain": "A",
+   "ligand": "E0G",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 60,
+   "min_dist_chain_ligand": 2.04,
+   "protein_atoms": 3360,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6cjr_AE0G.pdb"
+  },
+  {
+   "name": "6cpw_AF8V.pdb",
+   "pdb_id": "6cpw",
+   "chain": "A",
+   "ligand": "F8V",
+   "ligand_copy": [
+    "A",
+    403,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 83,
+   "min_dist_chain_ligand": 1.777,
+   "protein_atoms": 5367,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6cpw_AF8V.pdb"
+  },
+  {
+   "name": "6dgq_AGBV.pdb",
+   "pdb_id": "6dgq",
+   "chain": "A",
+   "ligand": "GBV",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 29,
+   "min_dist_chain_ligand": 2.504,
+   "protein_atoms": 2052,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6dgq_AGBV.pdb"
+  },
+  {
+   "name": "6dgr_AGDY.pdb",
+   "pdb_id": "6dgr",
+   "chain": "A",
+   "ligand": "GDY",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.647,
+   "protein_atoms": 2093,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6dgr_AGDY.pdb"
+  },
+  {
+   "name": "6dyu_AOS2.pdb",
+   "pdb_id": "6dyu",
+   "chain": "A",
+   "ligand": "OS2",
+   "ligand_copy": [
+    "A",
+    302,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 22,
+   "min_dist_chain_ligand": 2.662,
+   "protein_atoms": 1764,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6dyu_AOS2.pdb"
+  },
+  {
+   "name": "6dyv_AOS3.pdb",
+   "pdb_id": "6dyv",
+   "chain": "A",
+   "ligand": "OS3",
+   "ligand_copy": [
+    "A",
+    306,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 24,
+   "min_dist_chain_ligand": 2.625,
+   "protein_atoms": 1765,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6dyv_AOS3.pdb"
+  },
+  {
+   "name": "6el5_APU1.pdb",
+   "pdb_id": "6el5",
+   "chain": "A",
+   "ligand": "PU1",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.961,
+   "protein_atoms": 1635,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6el5_APU1.pdb"
+  },
+  {
+   "name": "6elo_ABAW.pdb",
+   "pdb_id": "6elo",
+   "chain": "A",
+   "ligand": "BAW",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 23,
+   "min_dist_chain_ligand": 2.626,
+   "protein_atoms": 1626,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6elo_ABAW.pdb"
+  },
+  {
+   "name": "6elp_ABA8.pdb",
+   "pdb_id": "6elp",
+   "chain": "A",
+   "ligand": "BA8",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.704,
+   "protein_atoms": 1626,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6elp_ABA8.pdb"
+  },
+  {
+   "name": "6ey9_AC4N.pdb",
+   "pdb_id": "6ey9",
+   "chain": "A",
+   "ligand": "C4N",
+   "ligand_copy": [
+    "A",
+    302,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 30,
+   "min_dist_chain_ligand": 2.655,
+   "protein_atoms": 1628,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6ey9_AC4N.pdb"
+  },
+  {
+   "name": "6eyb_AC3Z.pdb",
+   "pdb_id": "6eyb",
+   "chain": "A",
+   "ligand": "C3Z",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.647,
+   "protein_atoms": 1626,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6eyb_AC3Z.pdb"
+  },
+  {
+   "name": "6f1n_AC8W.pdb",
+   "pdb_id": "6f1n",
+   "chain": "A",
+   "ligand": "C8W",
+   "ligand_copy": [
+    "A",
+    302,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 31,
+   "min_dist_chain_ligand": 2.752,
+   "protein_atoms": 1644,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6f1n_AC8W.pdb"
+  },
+  {
+   "name": "6ge7_AEW8.pdb",
+   "pdb_id": "6ge7",
+   "chain": "A",
+   "ligand": "EW8",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 21,
+   "min_dist_chain_ligand": 3.185,
+   "protein_atoms": 1280,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6ge7_AEW8.pdb"
+  },
+  {
+   "name": "6gf9_AX90.pdb",
+   "pdb_id": "6gf9",
+   "chain": "A",
+   "ligand": "X90",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 19,
+   "min_dist_chain_ligand": 3.293,
+   "protein_atoms": 1272,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6gf9_AX90.pdb"
+  },
+  {
+   "name": "6gfs_AF15.pdb",
+   "pdb_id": "6gfs",
+   "chain": "A",
+   "ligand": "F15",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 17,
+   "min_dist_chain_ligand": 3.581,
+   "protein_atoms": 1280,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6gfs_AF15.pdb"
+  },
+  {
+   "name": "6ghh_ATDA.pdb",
+   "pdb_id": "6ghh",
+   "chain": "A",
+   "ligand": "TDA",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 15,
+   "min_dist_chain_ligand": 3.184,
+   "protein_atoms": 1280,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6ghh_ATDA.pdb"
+  },
+  {
+   "name": "6i61_AH3W.pdb",
+   "pdb_id": "6i61",
+   "chain": "A",
+   "ligand": "H3W",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 18,
+   "min_dist_chain_ligand": 2.536,
+   "protein_atoms": 1741,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6i61_AH3W.pdb"
+  },
+  {
+   "name": "6i64_AH48.pdb",
+   "pdb_id": "6i64",
+   "chain": "A",
+   "ligand": "H48",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 16,
+   "min_dist_chain_ligand": 2.455,
+   "protein_atoms": 1760,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6i64_AH48.pdb"
+  },
+  {
+   "name": "6i67_AH42.pdb",
+   "pdb_id": "6i67",
+   "chain": "A",
+   "ligand": "H42",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 11,
+   "min_dist_chain_ligand": 2.437,
+   "protein_atoms": 1768,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6i67_AH42.pdb"
+  },
+  {
+   "name": "6md0_AOLA.pdb",
+   "pdb_id": "6md0",
+   "chain": "A",
+   "ligand": "OLA",
+   "ligand_copy": [
+    "A",
+    501,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 20,
+   "min_dist_chain_ligand": 2.674,
+   "protein_atoms": 2040,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6md0_AOLA.pdb"
+  },
+  {
+   "name": "6mh1_AJQP.pdb",
+   "pdb_id": "6mh1",
+   "chain": "A",
+   "ligand": "JQP",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 60,
+   "min_dist_chain_ligand": 1.984,
+   "protein_atoms": 2118,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6mh1_AJQP.pdb"
+  },
+  {
+   "name": "6mh7_AJQY.pdb",
+   "pdb_id": "6mh7",
+   "chain": "A",
+   "ligand": "JQY",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 60,
+   "min_dist_chain_ligand": 2.13,
+   "protein_atoms": 2118,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6mh7_AJQY.pdb"
+  },
+  {
+   "name": "6n7a_AKEV.pdb",
+   "pdb_id": "6n7a",
+   "chain": "A",
+   "ligand": "KEV",
+   "ligand_copy": [
+    "A",
+    1203,
+    ""
+   ],
+   "ligand_copies_in_file": 2,
+   "ligand_atoms_kept": 28,
+   "min_dist_chain_ligand": 2.888,
+   "protein_atoms": 2258,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6n7a_AKEV.pdb"
+  },
+  {
+   "name": "6n8x_AKFY.pdb",
+   "pdb_id": "6n8x",
+   "chain": "A",
+   "ligand": "KFY",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 3.015,
+   "protein_atoms": 1627,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6n8x_AKFY.pdb"
+  },
+  {
+   "name": "6no9_AKUV.pdb",
+   "pdb_id": "6no9",
+   "chain": "A",
+   "ligand": "KUV",
+   "ligand_copy": [
+    "A",
+    504,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 34,
+   "min_dist_chain_ligand": 2.732,
+   "protein_atoms": 2211,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6no9_AKUV.pdb"
+  },
+  {
+   "name": "6nv7_AL3J.pdb",
+   "pdb_id": "6nv7",
+   "chain": "A",
+   "ligand": "L3J",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 42,
+   "min_dist_chain_ligand": 2.405,
+   "protein_atoms": 2924,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6nv7_AL3J.pdb"
+  },
+  {
+   "name": "6nv9_AL3M.pdb",
+   "pdb_id": "6nv9",
+   "chain": "A",
+   "ligand": "L3M",
+   "ligand_copy": [
+    "A",
+    401,
+    ""
+   ],
+   "ligand_copies_in_file": 3,
+   "ligand_atoms_kept": 96,
+   "min_dist_chain_ligand": 1.835,
+   "protein_atoms": 2938,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6nv9_AL3M.pdb"
+  },
+  {
+   "name": "6olx_AKFY.pdb",
+   "pdb_id": "6olx",
+   "chain": "A",
+   "ligand": "KFY",
+   "ligand_copy": [
+    "A",
+    301,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 27,
+   "min_dist_chain_ligand": 2.979,
+   "protein_atoms": 1615,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6olx_AKFY.pdb"
+  },
+  {
+   "name": "6qi7_APLM.pdb",
+   "pdb_id": "6qi7",
+   "chain": "A",
+   "ligand": "PLM",
+   "ligand_copy": [
+    "A",
+    201,
+    ""
+   ],
+   "ligand_copies_in_file": 1,
+   "ligand_atoms_kept": 18,
+   "min_dist_chain_ligand": 3.407,
+   "protein_atoms": 1171,
+   "input": "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B1-small-molecule-split/inputs/6qi7_APLM.pdb"
+  }
+ ]
+}

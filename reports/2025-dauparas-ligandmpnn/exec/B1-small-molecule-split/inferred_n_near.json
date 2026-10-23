@@ -1,0 +1,1587 @@
+{
+ "1a28_ASTR": {
+  "inferred": 22,
+  "err": 3.0517578011313162e-06,
+  "ours": 21
+ },
+ "1bzc_ATPI": {
+  "inferred": 17,
+  "err": 6.799999994200334e-06,
+  "ours": 13
+ },
+ "1drv_AA3D": {
+  "inferred": 12,
+  "err": 3.2000000089738023e-06,
+  "ours": 15
+ },
+ "1e3g_AR18": {
+  "inferred": 7,
+  "err": 3.4332275404835855e-06,
+  "ours": 20
+ },
+ "1elb_A0Z4": {
+  "inferred": 19,
+  "err": 7.599999989338357e-06,
+  "ours": 12
+ },
+ "1elc_A0Z3": {
+  "inferred": 26,
+  "err": 5.340576166190658e-06,
+  "ours": 19
+ },
+ "1epo_E2Z3": {
+  "inferred": 28,
+  "err": 8.000000008223651e-06,
+  "ours": 24
+ },
+ "1f0r_A815": {
+  "inferred": 18,
+  "err": 3.999999989900971e-06,
+  "ours": 11
+ },
+ "1g7f_AINZ": {
+  "inferred": 6,
+  "err": 4.0000000041118255e-06,
+  "ours": 14
+ },
+ "1g7g_AINX": {
+  "inferred": 20,
+  "err": 0.0,
+  "ours": 16
+ },
+ "1gvw_A0EM": {
+  "inferred": 30,
+  "err": 1.525878909092171e-05,
+  "ours": 26
+ },
+ "1gx8_ARTL": {
+  "inferred": 16,
+  "err": 0.0,
+  "ours": 15
+ },
+ "1i37_ADHT": {
+  "inferred": 22,
+  "err": 8.79999998915082e-06,
+  "ours": 21
+ },
+ "1kav_AFEP": {
+  "inferred": 17,
+  "err": 1.559999999756201e-05,
+  "ours": 14
+ },
+ "1kdk_ADHT": {
+  "inferred": 23,
+  "err": 1.1825561514910987e-05,
+  "ours": 18
+ },
+ "1kv1_ABMU": {
+  "inferred": 18,
+  "err": 2.288818350848487e-06,
+  "ours": 18
+ },
+ "1l8g_ADBD": {
+  "inferred": 16,
+  "err": 0.0,
+  "ours": 13
+ },
+ "1lhu_AEST": {
+  "inferred": 23,
+  "err": 5.340576180401513e-06,
+  "ours": 16
+ },
+ "1lpg_BIMA": {
+  "inferred": 26,
+  "err": 1.0000000031595846e-05,
+  "ours": 15
+ },
+ "1nc1_AMTH": {
+  "inferred": 20,
+  "err": 7.62939453125e-06,
+  "ours": 17
+ },
+ "1nfx_ARDR": {
+  "inferred": 19,
+  "err": 1.1062622078839013e-05,
+  "ours": 12
+ },
+ "1nhz_A486": {
+  "inferred": 22,
+  "err": 7.62939453125e-06,
+  "ours": 20
+ },
+ "1nl9_A989": {
+  "inferred": 23,
+  "err": 1.9073486328125e-06,
+  "ours": 14
+ },
+ "1nny_A515": {
+  "inferred": 31,
+  "err": 7.50000000948603e-06,
+  "ours": 20
+ },
+ "1nwl_A964": {
+  "inferred": 18,
+  "err": 6.999999996537554e-06,
+  "ours": 15
+ },
+ "1ony_A588": {
+  "inferred": 25,
+  "err": 1.9073486328125e-06,
+  "ours": 17
+ },
+ "1pyn_A941": {
+  "inferred": 27,
+  "err": 1.1444091796875e-05,
+  "ours": 18
+ },
+ "1qb1_A974": {
+  "inferred": 23,
+  "err": 1.4399999983538692e-05,
+  "ours": 12
+ },
+ "1qkt_AEST": {
+  "inferred": 18,
+  "err": 2.00000000916134e-06,
+  "ours": 17
+ },
+ "1qxk_A429": {
+  "inferred": 23,
+  "err": 1.0299682614345329e-05,
+  "ours": 16
+ },
+ "1r0p_AKSA": {
+  "inferred": 21,
+  "err": 1.4000000021496817e-05,
+  "ours": 13
+ },
+ "1sj0_AE4D": {
+  "inferred": 25,
+  "err": 9.999999974752427e-06,
+  "ours": 23
+ },
+ "1sqn_ANDR": {
+  "inferred": 7,
+  "err": 1.5258789041183718e-06,
+  "ours": 20
+ },
+ "1v2n_TBBA": {
+  "inferred": 20,
+  "err": 1.52587890625e-05,
+  "ours": 10
+ },
+ "1xjd_ASTU": {
+  "inferred": 23,
+  "err": 8.800000017572529e-06,
+  "ours": 16
+ },
+ "1xws_ABI1": {
+  "inferred": 19,
+  "err": 1.499999999055035e-05,
+  "ours": 17
+ },
+ "1yc1_A4BC": {
+  "inferred": 17,
+  "err": 8.010864263496842e-06,
+  "ours": 15
+ },
+ "1yqj_A6NP": {
+  "inferred": 25,
+  "err": 1.71661376953125e-05,
+  "ours": 18
+ },
+ "1z95_A198": {
+  "inferred": 25,
+  "err": 5.7220458984375e-06,
+  "ours": 23
+ },
+ "1zp8_AAB2": {
+  "inferred": 17,
+  "err": 2.9999999995311555e-06,
+  "ours": 13
+ },
+ "2ayr_AL4G": {
+  "inferred": 28,
+  "err": 7.1999999846639184e-06,
+  "ours": 24
+ },
+ "2b07_A598": {
+  "inferred": 10,
+  "err": 0.0,
+  "ours": 16
+ },
+ "2b4l_ABET": {
+  "inferred": 11,
+  "err": 3.5999999994373866e-06,
+  "ours": 10
+ },
+ "2baj_A1PP": {
+  "inferred": 24,
+  "err": 9.599999998499698e-06,
+  "ours": 21
+ },
+ "2bak_AAQZ": {
+  "inferred": 25,
+  "err": 7.62939453125e-06,
+  "ours": 21
+ },
+ "2bal_APQA": {
+  "inferred": 21,
+  "err": 1.52587890625e-05,
+  "ours": 16
+ },
+ "2bsm_ABSM": {
+  "inferred": 22,
+  "err": 7.62939453125e-06,
+  "ours": 17
+ },
+ "2cet_APGI": {
+  "inferred": 19,
+  "err": 1.3000000024021574e-05,
+  "ours": 19
+ },
+ "2e2r_A2OH": {
+  "inferred": 22,
+  "err": 1.1199999988775744e-05,
+  "ours": 19
+ },
+ "2f6t_A1C2": {
+  "inferred": 9,
+  "err": 9.59999999139427e-06,
+  "ours": 14
+ },
+ "2fdp_AFRP": {
+  "inferred": 27,
+  "err": 1.1199999988775744e-05,
+  "ours": 20
+ },
+ "2g94_AZPQ": {
+  "inferred": 31,
+  "err": 2.288818359375e-05,
+  "ours": 22
+ },
+ "2hah_A3TL": {
+  "inferred": 13,
+  "err": 5.340576166190658e-06,
+  "ours": 9
+ },
+ "2ihq_ALG7": {
+  "inferred": 20,
+  "err": 3.999999997006398e-06,
+  "ours": 19
+ },
+ "2iwx_AM1S": {
+  "inferred": 15,
+  "err": 1.5258789076710855e-05,
+  "ours": 14
+ },
+ "2j2u_AGSQ": {
+  "inferred": 22,
+  "err": 8.392333995743684e-06,
+  "ours": 13
+ },
+ "2j34_AGS6": {
+  "inferred": 21,
+  "err": 1.2207031232946974e-05,
+  "ours": 13
+ },
+ "2j4i_AGSJ": {
+  "inferred": 20,
+  "err": 7.62939453125e-06,
+  "ours": 14
+ },
+ "2j94_AG15": {
+  "inferred": 21,
+  "err": 9.155273431815658e-06,
+  "ours": 13
+ },
+ "2j95_AGSX": {
+  "inferred": 20,
+  "err": 0.0,
+  "ours": 12
+ },
+ "2o0u_AC0M": {
+  "inferred": 21,
+  "err": 9.155273460237368e-06,
+  "ours": 15
+ },
+ "2oax_ASNL": {
+  "inferred": 25,
+  "err": 1.52587890625e-05,
+  "ours": 25
+ },
+ "2ojg_A19A": {
+  "inferred": 21,
+  "err": 9.155273460237368e-06,
+  "ours": 16
+ },
+ "2ojj_A82A": {
+  "inferred": 26,
+  "err": 1.7547607427559342e-05,
+  "ours": 17
+ },
+ "2p4j_A23I": {
+  "inferred": 32,
+  "err": 1.2207031261368684e-05,
+  "ours": 27
+ },
+ "2p7g_A2OH": {
+  "inferred": 19,
+  "err": 1.039999999363772e-05,
+  "ours": 19
+ },
+ "2p7z_AOHT": {
+  "inferred": 25,
+  "err": 9.999999988963282e-06,
+  "ours": 24
+ },
+ "2pog_AWST": {
+  "inferred": 19,
+  "err": 7.62939453125e-06,
+  "ours": 18
+ },
+ "2qbp_A527": {
+  "inferred": 25,
+  "err": 1.500000001897206e-05,
+  "ours": 20
+ },
+ "2qbq_A4B3": {
+  "inferred": 20,
+  "err": 0.0,
+  "ours": 16
+ },
+ "2qbs_A024": {
+  "inferred": 20,
+  "err": 7.62939453125e-06,
+  "ours": 16
+ },
+ "2qe4_AJJ3": {
+  "inferred": 21,
+  "err": 3.051757815342171e-06,
+  "ours": 20
+ },
+ "2qmg_ASC6": {
+  "inferred": 30,
+  "err": 4.00000001832268e-06,
+  "ours": 19
+ },
+ "2uwl_A895": {
+  "inferred": 7,
+  "err": 1.5258789076710855e-06,
+  "ours": 13
+ },
+ "2uwo_A701": {
+  "inferred": 21,
+  "err": 2.5177001958809342e-05,
+  "ours": 14
+ },
+ "2uwp_A894": {
+  "inferred": 26,
+  "err": 9.918212896309342e-06,
+  "ours": 12
+ },
+ "2v7a_A627": {
+  "inferred": 28,
+  "err": 1.8310546892053026e-05,
+  "ours": 15
+ },
+ "2vh0_AGSI": {
+  "inferred": 21,
+  "err": 1.5640258794746842e-05,
+  "ours": 11
+ },
+ "2vh6_AGSV": {
+  "inferred": 23,
+  "err": 6.484985348720329e-06,
+  "ours": 13
+ },
+ "2vkm_ABSD": {
+  "inferred": 33,
+  "err": 2.6702880973061838e-06,
+  "ours": 24
+ },
+ "2vrj_ANCW": {
+  "inferred": 25,
+  "err": 9.999999974752427e-06,
+  "ours": 21
+ },
+ "2vw5_ABC6": {
+  "inferred": 20,
+  "err": 7.62939453125e-06,
+  "ours": 18
+ },
+ "2vwc_ABC2": {
+  "inferred": 22,
+  "err": 7.62939453125e-06,
+  "ours": 17
+ },
+ "2w8y_A486": {
+  "inferred": 29,
+  "err": 9.155273460237368e-06,
+  "ours": 24
+ },
+ "2wc3_AAM3": {
+  "inferred": 17,
+  "err": 4.577636730118684e-06,
+  "ours": 17
+ },
+ "2web_APP4": {
+  "inferred": 26,
+  "err": 1.4400000011960401e-05,
+  "ours": 21
+ },
+ "2wec_APP5": {
+  "inferred": 27,
+  "err": 2.9373168956681184e-05,
+  "ours": 20
+ },
+ "2weq_AGDM": {
+  "inferred": 22,
+  "err": 9.155273431815658e-06,
+  "ours": 18
+ },
+ "2wgj_AVGH": {
+  "inferred": 25,
+  "err": 7.62939453125e-06,
+  "ours": 14
+ },
+ "2wuf_BKEM": {
+  "inferred": 20,
+  "err": 7.62939453125e-06,
+  "ours": 16
+ },
+ "2wyg_A461": {
+  "inferred": 21,
+  "err": 3.814697265625e-06,
+  "ours": 12
+ },
+ "2wyj_A898": {
+  "inferred": 22,
+  "err": 3.199999980552093e-06,
+  "ours": 12
+ },
+ "2xab_AVHD": {
+  "inferred": 19,
+  "err": 4.577636701696974e-06,
+  "ours": 16
+ },
+ "2xb8_AXNW": {
+  "inferred": 19,
+  "err": 1.2400000002799061e-05,
+  "ours": 15
+ },
+ "2xda_AJPS": {
+  "inferred": 20,
+  "err": 7.999999994012796e-06,
+  "ours": 16
+ },
+ "2xht_AC0Y": {
+  "inferred": 9,
+  "err": 4.577636723013256e-06,
+  "ours": 15
+ },
+ "2xj1_AXJ1": {
+  "inferred": 21,
+  "err": 1.1400000005323818e-05,
+  "ours": 17
+ },
+ "2xj2_A985": {
+  "inferred": 20,
+  "err": 1.52587890625e-05,
+  "ours": 17
+ },
+ "2xjg_AXJG": {
+  "inferred": 17,
+  "err": 4.577636715907829e-06,
+  "ours": 16
+ },
+ "2xjx_AXJX": {
+  "inferred": 17,
+  "err": 7.62939453125e-06,
+  "ours": 16
+ },
+ "2y7x_AMZA": {
+  "inferred": 28,
+  "err": 1.8310546863631316e-05,
+  "ours": 12
+ },
+ "2y7z_AC0Z": {
+  "inferred": 28,
+  "err": 6.103515616473487e-06,
+  "ours": 12
+ },
+ "2y80_A439": {
+  "inferred": 27,
+  "err": 6.866455066756316e-06,
+  "ours": 12
+ },
+ "2y81_A931": {
+  "inferred": 22,
+  "err": 7.62939453125e-06,
+  "ours": 13
+ },
+ "2y82_A930": {
+  "inferred": 14,
+  "err": 9.155273446026513e-06,
+  "ours": 12
+ },
+ "2ydw_AWSH": {
+  "inferred": 15,
+  "err": 3.8146972514141453e-06,
+  "ours": 15
+ },
+ "2yek_AEAM": {
+  "inferred": 14,
+  "err": 7.62939453125e-06,
+  "ours": 5
+ },
+ "2yel_AWSH": {
+  "inferred": 13,
+  "err": 5.340576180401513e-06,
+  "ours": 13
+ },
+ "2yfe_AYFE": {
+  "inferred": 21,
+  "err": 5.600000008598727e-06,
+  "ours": 18
+ },
+ "2yfx_AVGH": {
+  "inferred": 22,
+  "err": 7.62939453125e-06,
+  "ours": 12
+ },
+ "2yge_AGDM": {
+  "inferred": 20,
+  "err": 1.52587890625e-05,
+  "ours": 18
+ },
+ "2ygf_AGDM": {
+  "inferred": 21,
+  "err": 1.3732910133512632e-05,
+  "ours": 18
+ },
+ "2yi0_AYI0": {
+  "inferred": 18,
+  "err": 1.3999999993075107e-05,
+  "ours": 15
+ },
+ "2yi7_ABZ8": {
+  "inferred": 17,
+  "err": 5.999999999062311e-06,
+  "ours": 14
+ },
+ "2yix_AYIX": {
+  "inferred": 27,
+  "err": 8.392333995743684e-06,
+  "ours": 20
+ },
+ "2zmm_A35B": {
+  "inferred": 20,
+  "err": 7.62939453125e-06,
+  "ours": 16
+ },
+ "3acw_A651": {
+  "inferred": 18,
+  "err": 7.62939453125e-06,
+  "ours": 15
+ },
+ "3acx_A673": {
+  "inferred": 22,
+  "err": 1.2207031261368684e-05,
+  "ours": 19
+ },
+ "3b5r_AB5R": {
+  "inferred": 24,
+  "err": 6.103515630684342e-06,
+  "ours": 22
+ },
+ "3b65_A3B6": {
+  "inferred": 24,
+  "err": 3.051757815342171e-06,
+  "ours": 22
+ },
+ "3bgq_AVX2": {
+  "inferred": 20,
+  "err": 0.0,
+  "ours": 17
+ },
+ "3bgz_AVX3": {
+  "inferred": 17,
+  "err": 6.103515616473487e-06,
+  "ours": 13
+ },
+ "3ckp_A012": {
+  "inferred": 28,
+  "err": 1.3732910161934342e-05,
+  "ours": 18
+ },
+ "3cow_A52H": {
+  "inferred": 27,
+  "err": 2.9373168956681184e-05,
+  "ours": 18
+ },
+ "3coy_A53H": {
+  "inferred": 27,
+  "err": 1.3732910161934342e-05,
+  "ours": 18
+ },
+ "3coz_A54H": {
+  "inferred": 26,
+  "err": 1.2969970697440658e-05,
+  "ours": 17
+ },
+ "3d7z_AGK5": {
+  "inferred": 22,
+  "err": 1.3732910161934342e-05,
+  "ours": 19
+ },
+ "3d83_AGK6": {
+  "inferred": 26,
+  "err": 1.0399999979426866e-05,
+  "ours": 21
+ },
+ "3eax_ALZP": {
+  "inferred": 18,
+  "err": 1.4600000000086766e-05,
+  "ours": 13
+ },
+ "3ekr_APY9": {
+  "inferred": 16,
+  "err": 6.399999989525895e-06,
+  "ours": 15
+ },
+ "3fv1_ADYH": {
+  "inferred": 20,
+  "err": 0.0,
+  "ours": 17
+ },
+ "3fv2_ANDZ": {
+  "inferred": 10,
+  "err": 3.814697265625e-06,
+  "ours": 15
+ },
+ "3fvk_A8DX": {
+  "inferred": 18,
+  "err": 1.6784667977276513e-05,
+  "ours": 14
+ },
+ "3gba_ADYH": {
+  "inferred": 21,
+  "err": 1.3732910161934342e-05,
+  "ours": 16
+ },
+ "3gbb_AMS8": {
+  "inferred": 8,
+  "err": 3.051757815342171e-06,
+  "ours": 14
+ },
+ "3gcs_ABAX": {
+  "inferred": 25,
+  "err": 1.7499999984238457e-05,
+  "ours": 22
+ },
+ "3gcu_AR48": {
+  "inferred": 13,
+  "err": 4.577636715907829e-06,
+  "ours": 24
+ },
+ "3gy3_APNT": {
+  "inferred": 22,
+  "err": 6.103515616473487e-06,
+  "ours": 12
+ },
+ "3hek_ABD0": {
+  "inferred": 20,
+  "err": 0.0,
+  "ours": 17
+ },
+ "3i25_AMV7": {
+  "inferred": 39,
+  "err": 1.369999998246385e-05,
+  "ours": 29
+ },
+ "3ioc_AA5D": {
+  "inferred": 26,
+  "err": 9.155273431815658e-06,
+  "ours": 17
+ },
+ "3iph_AG11": {
+  "inferred": 22,
+  "err": 1.3732910161934342e-05,
+  "ours": 18
+ },
+ "3iw6_APP0": {
+  "inferred": 24,
+  "err": 6.103515616473487e-06,
+  "ours": 18
+ },
+ "3k97_A4CD": {
+  "inferred": 16,
+  "err": 6.103515630684342e-06,
+  "ours": 15
+ },
+ "3lpi_AZ74": {
+  "inferred": 31,
+  "err": 1.1825561529121842e-05,
+  "ours": 19
+ },
+ "3lpk_AZ76": {
+  "inferred": 31,
+  "err": 1.0800000012523014e-05,
+  "ours": 19
+ },
+ "3lxk_AMI1": {
+  "inferred": 22,
+  "err": 1.0681152332381316e-05,
+  "ours": 14
+ },
+ "3m35_AM35": {
+  "inferred": 20,
+  "err": 7.999999994012796e-06,
+  "ours": 12
+ },
+ "3myg_AEML": {
+  "inferred": 21,
+  "err": 1.52587890625e-05,
+  "ours": 17
+ },
+ "3n76_ACA2": {
+  "inferred": 21,
+  "err": 8.999999991488039e-06,
+  "ours": 16
+ },
+ "3nq3_ADKA": {
+  "inferred": 16,
+  "err": 6.103515630684342e-06,
+  "ours": 15
+ },
+ "3nyx_ATZ1": {
+  "inferred": 12,
+  "err": 1.2207031261368684e-05,
+  "ours": 17
+ },
+ "3o5x_AJZG": {
+  "inferred": 16,
+  "err": 0.0,
+  "ours": 12
+ },
+ "3o8p_ABMU": {
+  "inferred": 19,
+  "err": 3.999999989900971e-06,
+  "ours": 17
+ },
+ "3pww_AROC": {
+  "inferred": 15,
+  "err": 1.1999999998124622e-05,
+  "ours": 25
+ },
+ "3roc_A29A": {
+  "inferred": 23,
+  "err": 7.62939453125e-06,
+  "ours": 17
+ },
+ "3tfn_A2CJ": {
+  "inferred": 23,
+  "err": 3.814697265625e-06,
+  "ours": 18
+ },
+ "3u81_ASAH": {
+  "inferred": 21,
+  "err": 5.340576180401513e-06,
+  "ours": 18
+ },
+ "3ueu_ADAO": {
+  "inferred": 17,
+  "err": 7.62939453125e-06,
+  "ours": 17
+ },
+ "3uev_AMYR": {
+  "inferred": 19,
+  "err": 1.2207031247157829e-05,
+  "ours": 18
+ },
+ "3uew_APLM": {
+  "inferred": 18,
+  "err": 4.0000000041118255e-06,
+  "ours": 17
+ },
+ "3uex_ASTE": {
+  "inferred": 22,
+  "err": 8.392333995743684e-06,
+  "ours": 21
+ },
+ "3vha_AVHA": {
+  "inferred": 17,
+  "err": 1.3199999997937084e-05,
+  "ours": 15
+ },
+ "3vhc_AVHC": {
+  "inferred": 19,
+  "err": 1.1444091796875e-05,
+  "ours": 16
+ },
+ "3vhd_AVHE": {
+  "inferred": 17,
+  "err": 1.4000000007285962e-05,
+  "ours": 14
+ },
+ "3vje_AZGA": {
+  "inferred": 30,
+  "err": 7.62939453125e-06,
+  "ours": 30
+ },
+ "3vvy_AET": {
+  "inferred": 19,
+  "err": 5.340576180401513e-06,
+  "ours": 18
+ },
+ "3vw1_BCVI": {
+  "inferred": 20,
+  "err": 3.8146972585195726e-06,
+  "ours": 20
+ },
+ "3vw2_ABER": {
+  "inferred": 19,
+  "err": 3.051757815342171e-06,
+  "ours": 18
+ },
+ "3wha_AWHA": {
+  "inferred": 19,
+  "err": 7.62939453125e-06,
+  "ours": 16
+ },
+ "3wz6_AIXZ": {
+  "inferred": 20,
+  "err": 1.52587890625e-05,
+  "ours": 16
+ },
+ "3wz8_AIXV": {
+  "inferred": 23,
+  "err": 1.9200000025421105e-05,
+  "ours": 20
+ },
+ "3zc5_AW9Z": {
+  "inferred": 27,
+  "err": 1.4200000009623182e-05,
+  "ours": 17
+ },
+ "3zm9_AQMQ": {
+  "inferred": 27,
+  "err": 3.433227547589013e-06,
+  "ours": 25
+ },
+ "3zze_A6XP": {
+  "inferred": 27,
+  "err": 1.1999999969702912e-05,
+  "ours": 18
+ },
+ "4a4v_AYFD": {
+  "inferred": 20,
+  "err": 7.62939453125e-06,
+  "ours": 18
+ },
+ "4a4w_AYFB": {
+  "inferred": 24,
+  "err": 4.799999992144421e-06,
+  "ours": 21
+ },
+ "4a7i_BA7I": {
+  "inferred": 21,
+  "err": 1.1444091796875e-05,
+  "ours": 11
+ },
+ "4ag8_AAXI": {
+  "inferred": 21,
+  "err": 5.000000015797923e-06,
+  "ours": 15
+ },
+ "4ap7_AF47": {
+  "inferred": 24,
+  "err": 8.000000008223651e-06,
+  "ours": 16
+ },
+ "4b6o_A3DQ": {
+  "inferred": 19,
+  "err": 4.577636715907829e-06,
+  "ours": 15
+ },
+ "4b9k_CTG0": {
+  "inferred": 16,
+  "err": 3.051757815342171e-06,
+  "ours": 15
+ },
+ "4cd0_AAWJ": {
+  "inferred": 25,
+  "err": 1.52587890625e-05,
+  "ours": 13
+ },
+ "4cga_AQLW": {
+  "inferred": 15,
+  "err": 4.0000000041118255e-06,
+  "ours": 13
+ },
+ "4cmo_AYPW": {
+  "inferred": 22,
+  "err": 9.155273431815658e-06,
+  "ours": 12
+ },
+ "4da5_A0H7": {
+  "inferred": 13,
+  "err": 2.670288083095329e-06,
+  "ours": 12
+ },
+ "4e5w_A0NT": {
+  "inferred": 21,
+  "err": 1.6021728526993684e-05,
+  "ours": 14
+ },
+ "4e6d_A0NU": {
+  "inferred": 21,
+  "err": 9.918212896309342e-06,
+  "ours": 12
+ },
+ "4e9u_ARWY": {
+  "inferred": 21,
+  "err": 8.773803713779671e-06,
+  "ours": 17
+ },
+ "4ea2_ARWZ": {
+  "inferred": 20,
+  "err": 0.0,
+  "ours": 17
+ },
+ "4egk_ARDC": {
+  "inferred": 16,
+  "err": 0.0,
+  "ours": 15
+ },
+ "4er1_E0ZP": {
+  "inferred": 33,
+  "err": 1.1444091796875e-05,
+  "ours": 29
+ },
+ "4fcq_A2N6": {
+  "inferred": 17,
+  "err": 7.247924799003158e-06,
+  "ours": 15
+ },
+ "4ffs_ABIG": {
+  "inferred": 21,
+  "err": 6.103515630684342e-06,
+  "ours": 18
+ },
+ "4flp_AJQ1": {
+  "inferred": 13,
+  "err": 1.0681152346592171e-05,
+  "ours": 13
+ },
+ "4g8n_AG8M": {
+  "inferred": 14,
+  "err": 1.5258789005656581e-06,
+  "ours": 12
+ },
+ "4gny_ASDS": {
+  "inferred": 19,
+  "err": 6.866455080967171e-06,
+  "ours": 18
+ },
+ "4gu6_A10N": {
+  "inferred": 23,
+  "err": 1.3000000024021574e-05,
+  "ours": 13
+ },
+ "4hge_A15V": {
+  "inferred": 22,
+  "err": 7.62939453125e-06,
+  "ours": 13
+ },
+ "4igt_A3ZA": {
+  "inferred": 19,
+  "err": 5.340576166190658e-06,
+  "ours": 15
+ },
+ "4k0y_A1OA": {
+  "inferred": 20,
+  "err": 2.0000000006348273e-05,
+  "ours": 16
+ },
+ "4k9y_AK9Y": {
+  "inferred": 27,
+  "err": 1.1444091796875e-05,
+  "ours": 23
+ },
+ "4kao_AKAO": {
+  "inferred": 23,
+  "err": 1.6784667963065658e-05,
+  "ours": 21
+ },
+ "4kcx_A1QK": {
+  "inferred": 13,
+  "err": 4.099999998175008e-06,
+  "ours": 13
+ },
+ "4lyw_A21Q": {
+  "inferred": 14,
+  "err": 3.051757815342171e-06,
+  "ours": 14
+ },
+ "4m0r_A644": {
+  "inferred": 17,
+  "err": 1.1444091796875e-05,
+  "ours": 13
+ },
+ "4m12_A1YZ": {
+  "inferred": 23,
+  "err": 1.1062622078839013e-05,
+  "ours": 18
+ },
+ "4m13_A1E0": {
+  "inferred": 23,
+  "err": 5.7220458984375e-06,
+  "ours": 18
+ },
+ "4muf_A2DJ": {
+  "inferred": 30,
+  "err": 7.999999979801942e-06,
+  "ours": 24
+ },
+ "4nh8_A2LC": {
+  "inferred": 22,
+  "err": 1.2207031261368684e-05,
+  "ours": 18
+ },
+ "4nwc_A2QE": {
+  "inferred": 19,
+  "err": 6.800000008411189e-06,
+  "ours": 15
+ },
+ "4o04_A2Q8": {
+  "inferred": 19,
+  "err": 1.0681152332381316e-05,
+  "ours": 15
+ },
+ "4o05_A2Q9": {
+  "inferred": 22,
+  "err": 1.2207031261368684e-05,
+  "ours": 17
+ },
+ "4o07_AFGH": {
+  "inferred": 23,
+  "err": 3.814697265625e-06,
+  "ours": 18
+ },
+ "4o09_A2R6": {
+  "inferred": 23,
+  "err": 6.484985362931184e-06,
+  "ours": 18
+ },
+ "4o0b_A2QA": {
+  "inferred": 23,
+  "err": 2.6702880688844743e-06,
+  "ours": 18
+ },
+ "4p5z_AQ7M": {
+  "inferred": 26,
+  "err": 7.999999994012796e-06,
+  "ours": 21
+ },
+ "4pmm_A31V": {
+  "inferred": 24,
+  "err": 6.1035156022626325e-06,
+  "ours": 21
+ },
+ "4pop_A2VY": {
+  "inferred": 18,
+  "err": 7.62939453125e-06,
+  "ours": 15
+ },
+ "4qev_A31O": {
+  "inferred": 13,
+  "err": 6.103515630684342e-06,
+  "ours": 13
+ },
+ "4qew_A31P": {
+  "inferred": 13,
+  "err": 6.103515630684342e-06,
+  "ours": 13
+ },
+ "4qyy_A3G7": {
+  "inferred": 23,
+  "err": 4.196166983660987e-06,
+  "ours": 20
+ },
+ "4rfm_A3P6": {
+  "inferred": 20,
+  "err": 7.999999979801942e-06,
+  "ours": 14
+ },
+ "4rwj_A66T": {
+  "inferred": 26,
+  "err": 1.0681152332381316e-05,
+  "ours": 18
+ },
+ "4twp_AAXI": {
+  "inferred": 21,
+  "err": 8.392333981532829e-06,
+  "ours": 14
+ },
+ "4uyf_A73B": {
+  "inferred": 13,
+  "err": 2.1000000032245225e-06,
+  "ours": 7
+ },
+ "4v01_A0LI": {
+  "inferred": 27,
+  "err": 1.0500000001911758e-05,
+  "ours": 23
+ },
+ "4w9f_C3JU": {
+  "inferred": 16,
+  "err": 0.0,
+  "ours": 15
+ },
+ "4w9l_C3JJ": {
+  "inferred": 17,
+  "err": 3.051757815342171e-06,
+  "ours": 17
+ },
+ "4wa9_BAXI": {
+  "inferred": 22,
+  "err": 3.199999980552093e-06,
+  "ours": 14
+ },
+ "4wkn_ATDI": {
+  "inferred": 21,
+  "err": 1.4495849626428026e-05,
+  "ours": 18
+ },
+ "4x6p_A3YU": {
+  "inferred": 26,
+  "err": 1.3732910161934342e-05,
+  "ours": 19
+ },
+ "4xip_A40W": {
+  "inferred": 20,
+  "err": 1.52587890625e-05,
+  "ours": 16
+ },
+ "4xir_A40X": {
+  "inferred": 21,
+  "err": 1.2207031247157829e-05,
+  "ours": 17
+ },
+ "4y79_A4O6": {
+  "inferred": 10,
+  "err": 0.0,
+  "ours": 12
+ },
+ "4ybk_A4B7": {
+  "inferred": 26,
+  "err": 4.577636701696974e-06,
+  "ours": 18
+ },
+ "4ymb_A4E7": {
+  "inferred": 9,
+  "err": 4.577636715907829e-06,
+  "ours": 15
+ },
+ "4yml_A4F0": {
+  "inferred": 20,
+  "err": 7.999999994012796e-06,
+  "ours": 18
+ },
+ "4ynb_A4EH": {
+  "inferred": 21,
+  "err": 1.0681152332381316e-05,
+  "ours": 18
+ },
+ "4yth_A467": {
+  "inferred": 19,
+  "err": 8.392333981532829e-06,
+  "ours": 12
+ },
+ "4z0k_A4LN": {
+  "inferred": 18,
+  "err": 4.577636715907829e-06,
+  "ours": 12
+ },
+ "4zae_A4M1": {
+  "inferred": 21,
+  "err": 1.2999999995599865e-05,
+  "ours": 16
+ },
+ "5aa9_A5P8": {
+  "inferred": 22,
+  "err": 8.79999998915082e-06,
+  "ours": 12
+ },
+ "5acy_A9S3": {
+  "inferred": 14,
+  "err": 4.577636715907829e-06,
+  "ours": 14
+ },
+ "5d26_AL28": {
+  "inferred": 13,
+  "err": 6.2000000013995304e-06,
+  "ours": 13
+ },
+ "5d3h_A57G": {
+  "inferred": 7,
+  "err": 1.900000000887303e-06,
+  "ours": 13
+ },
+ "5d3j_AL33": {
+  "inferred": 7,
+  "err": 5.340576180401513e-06,
+  "ours": 14
+ },
+ "5d3l_A57F": {
+  "inferred": 7,
+  "err": 4.577636715907829e-06,
+  "ours": 14
+ },
+ "5d3t_A56Y": {
+  "inferred": 15,
+  "err": 7.629394545460855e-06,
+  "ours": 14
+ },
+ "5dlx_A5D2": {
+  "inferred": 15,
+  "err": 1.1444091811085855e-05,
+  "ours": 15
+ },
+ "5dqc_A5E7": {
+  "inferred": 17,
+  "err": 8.392333995743684e-06,
+  "ours": 26
+ },
+ "5dwr_A5H7": {
+  "inferred": 19,
+  "err": 1.0000000003174137e-05,
+  "ours": 17
+ },
+ "5e74_A5KH": {
+  "inferred": 13,
+  "err": 9.199999993825259e-06,
+  "ours": 12
+ },
+ "5egm_A5NY": {
+  "inferred": 20,
+  "err": 7.62939453125e-06,
+  "ours": 17
+ },
+ "5eng_A5QN": {
+  "inferred": 15,
+  "err": 7.62939453125e-06,
+  "ours": 14
+ },
+ "5eqp_A5R9": {
+  "inferred": 12,
+  "err": 6.103515630684342e-06,
+  "ours": 12
+ },
+ "5eqy_A5RA": {
+  "inferred": 16,
+  "err": 0.0,
+  "ours": 14
+ },
+ "5er1_E0HT": {
+  "inferred": 22,
+  "err": 9.155273460237368e-06,
+  "ours": 19
+ },
+ "5exm_A5ST": {
+  "inferred": 22,
+  "err": 7.62939453125e-06,
+  "ours": 15
+ },
+ "5exn_A5SU": {
+  "inferred": 26,
+  "err": 1.4400000011960401e-05,
+  "ours": 19
+ },
+ "5f9b_B5VN": {
+  "inferred": 20,
+  "err": 0.0,
+  "ours": 15
+ },
+ "5fto_AYMX": {
+  "inferred": 23,
+  "err": 2.0599365228690658e-05,
+  "ours": 14
+ },
+ "5fut_APQ7": {
+  "inferred": 17,
+  "err": 3.814697265625e-06,
+  "ours": 15
+ },
+ "5hcv_A60R": {
+  "inferred": 22,
+  "err": 7.62939453125e-06,
+  "ours": 21
+ },
+ "5i3v_A68M": {
+  "inferred": 24,
+  "err": 6.400000017947605e-06,
+  "ours": 15
+ },
+ "5i3y_A68K": {
+  "inferred": 32,
+  "err": 1.2207031261368684e-05,
+  "ours": 21
+ },
+ "5i9x_ADB8": {
+  "inferred": 22,
+  "err": 7.62939453125e-06,
+  "ours": 15
+ },
+ "5i9z_A627": {
+  "inferred": 23,
+  "err": 8.399999998687235e-06,
+  "ours": 15
+ },
+ "5ie1_A6BS": {
+  "inferred": 19,
+  "err": 6.484985348720329e-06,
+  "ours": 13
+ },
+ "5ih9_A6BF": {
+  "inferred": 17,
+  "err": 6.484985362931184e-06,
+  "ours": 15
+ },
+ "5jq5_AI74": {
+  "inferred": 22,
+  "err": 1.679999999737447e-05,
+  "ours": 16
+ },
+ "5kz0_A6YL": {
+  "inferred": 21,
+  "err": 5.999999984851456e-06,
+  "ours": 12
+ },
+ "5l2s_A6ZV": {
+  "inferred": 21,
+  "err": 1.679999999737447e-05,
+  "ours": 16
+ },
+ "5lli_C6Z3": {
+  "inferred": 18,
+  "err": 4.577636723013256e-06,
+  "ours": 17
+ },
+ "5lny_A70K": {
+  "inferred": 19,
+  "err": 7.62939453125e-06,
+  "ours": 17
+ },
+ "5lsg_AQZQ": {
+  "inferred": 24,
+  "err": 3.0517578011313162e-06,
+  "ours": 22
+ },
+ "5neb_B8VE": {
+  "inferred": 18,
+  "err": 5.340576180401513e-06,
+  "ours": 13
+ },
+ "5nw1_C9BH": {
+  "inferred": 18,
+  "err": 4.577636715907829e-06,
+  "ours": 17
+ },
+ "5nyh_A9EK": {
+  "inferred": 9,
+  "err": 5.340576180401513e-06,
+  "ours": 16
+ },
+ "5op5_A3FE": {
+  "inferred": 19,
+  "err": 8.392333967321974e-06,
+  "ours": 13
+ },
+ "5oq8_AA0Q": {
+  "inferred": 20,
+  "err": 1.5258789048289145e-05,
+  "ours": 12
+ },
+ "5qqp_ANR7": {
+  "inferred": 23,
+  "err": 6.103515630684342e-06,
+  "ours": 15
+ },
+ "5t19_A73U": {
+  "inferred": 18,
+  "err": 1.5999999988025593e-05,
+  "ours": 14
+ },
+ "5tpx_A7H7": {
+  "inferred": 7,
+  "err": 3.051757815342171e-06,
+  "ours": 12
+ },
+ "5v82_A96Y": {
+  "inferred": 19,
+  "err": 1.499999999055035e-05,
+  "ours": 17
+ },
+ "5yfs_ARI2": {
+  "inferred": 25,
+  "err": 7.62939453125e-06,
+  "ours": 16
+ },
+ "5yft_ARI2": {
+  "inferred": 24,
+  "err": 6.400000017947605e-06,
+  "ours": 15
+ },
+ "6c2r_AEG7": {
+  "inferred": 11,
+  "err": 1.5258789147765128e-06,
+  "ours": 15
+ },
+ "6cjr_AE0G": {
+  "inferred": 24,
+  "err": 1.2207031261368684e-05,
+  "ours": 20
+ },
+ "6cpw_AF8V": {
+  "inferred": 29,
+  "err": 7.400000001211993e-06,
+  "ours": 24
+ },
+ "6dgq_AGBV": {
+  "inferred": 13,
+  "err": 3.200000001868375e-06,
+  "ours": 24
+ },
+ "6dgr_AGDY": {
+  "inferred": 23,
+  "err": 4.799999985038994e-06,
+  "ours": 21
+ },
+ "6dyu_AOS2": {
+  "inferred": 21,
+  "err": 1.8310546863631316e-05,
+  "ours": 18
+ },
+ "6dyv_AOS3": {
+  "inferred": 21,
+  "err": 1.5999999988025593e-05,
+  "ours": 18
+ },
+ "6el5_APU1": {
+  "inferred": 20,
+  "err": 1.52587890625e-05,
+  "ours": 16
+ },
+ "6elo_ABAW": {
+  "inferred": 18,
+  "err": 9.155273446026513e-06,
+  "ours": 16
+ },
+ "6elp_ABA8": {
+  "inferred": 16,
+  "err": 6.399999989525895e-06,
+  "ours": 15
+ },
+ "6ey9_AC4N": {
+  "inferred": 20,
+  "err": 7.62939453125e-06,
+  "ours": 17
+ },
+ "6eyb_AC3Z": {
+  "inferred": 19,
+  "err": 1.6000000002236447e-05,
+  "ours": 17
+ },
+ "6f1n_AC8W": {
+  "inferred": 22,
+  "err": 6.103515630684342e-06,
+  "ours": 17
+ },
+ "6ge7_AEW8": {
+  "inferred": 22,
+  "err": 3.0517578011313162e-06,
+  "ours": 20
+ },
+ "6gf9_AX90": {
+  "inferred": 22,
+  "err": 8.392333981532829e-06,
+  "ours": 21
+ },
+ "6gfs_AF15": {
+  "inferred": 19,
+  "err": 3.051757815342171e-06,
+  "ours": 18
+ },
+ "6ghh_ATDA": {
+  "inferred": 19,
+  "err": 7.247924813214013e-06,
+  "ours": 18
+ },
+ "6i61_AH3W": {
+  "inferred": 19,
+  "err": 1.1444091796875e-05,
+  "ours": 19
+ },
+ "6i64_AH48": {
+  "inferred": 17,
+  "err": 4.577636730118684e-06,
+  "ours": 17
+ },
+ "6i67_AH42": {
+  "inferred": 13,
+  "err": 7.62939453125e-06,
+  "ours": 13
+ },
+ "6md0_AOLA": {
+  "inferred": 22,
+  "err": 6.866455066756316e-06,
+  "ours": 20
+ },
+ "6mh1_AJQP": {
+  "inferred": 16,
+  "err": 6.399999989525895e-06,
+  "ours": 15
+ },
+ "6mh7_AJQY": {
+  "inferred": 15,
+  "err": 7.629394517039145e-06,
+  "ours": 14
+ },
+ "6n7a_AKEV": {
+  "inferred": 11,
+  "err": 8.392333995743684e-06,
+  "ours": 12
+ },
+ "6n8x_AKFY": {
+  "inferred": 19,
+  "err": 1.0999999986438525e-05,
+  "ours": 17
+ },
+ "6no9_AKUV": {
+  "inferred": 20,
+  "err": 3.0517578125e-05,
+  "ours": 17
+ },
+ "6nv7_AL3J": {
+  "inferred": 28,
+  "err": 1.2207031261368684e-05,
+  "ours": 23
+ },
+ "6nv9_AL3M": {
+  "inferred": 30,
+  "err": 1.52587890625e-05,
+  "ours": 25
+ },
+ "6olx_AKFY": {
+  "inferred": 19,
+  "err": 3.000000006636583e-06,
+  "ours": 17
+ },
+ "6qi7_APLM": {
+  "inferred": 17,
+  "err": 3.000000006636583e-06,
+  "ours": 17
+ }
+}

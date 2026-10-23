@@ -1,0 +1,1639 @@
+{
+ "tally": {
+  "asym/any_atom": 33,
+  "biounit1/any_atom": 37,
+  "asym/sidechain": 3,
+  "biounit1/sidechain": 3
+ },
+ "n_solvable": 74,
+ "rows": [
+  {
+   "name": "1a0a",
+   "values": [
+    6.333334,
+    13.0,
+    26.333336
+   ],
+   "n_solved": [
+    30,
+    60,
+    90,
+    120,
+    150,
+    180
+   ],
+   "asym/any_atom": 30,
+   "n_residues_asym": 126,
+   "asym/sidechain": 28,
+   "biounit1/any_atom": 30,
+   "n_residues_biounit1": 126,
+   "biounit1/sidechain": 28
+  },
+  {
+   "name": "1am9",
+   "values": [
+    33.0303,
+    14.848486,
+    36.9697
+   ],
+   "n_solved": [
+    33,
+    66,
+    99,
+    132,
+    165,
+    198
+   ],
+   "asym/any_atom": 66,
+   "n_residues_asym": 313,
+   "asym/sidechain": 62,
+   "biounit1/any_atom": 66,
+   "n_residues_biounit1": 313,
+   "biounit1/sidechain": 62
+  },
+  {
+   "name": "1an4",
+   "values": [
+    10.27027,
+    4.054054,
+    15.405405
+   ],
+   "n_solved": [
+    37,
+    74,
+    111,
+    148,
+    185,
+    222
+   ],
+   "asym/any_atom": 37,
+   "n_residues_asym": 130,
+   "asym/sidechain": 32,
+   "biounit1/any_atom": 37,
+   "n_residues_biounit1": 130,
+   "biounit1/sidechain": 32
+  },
+  {
+   "name": "1b01",
+   "values": [
+    28.000004,
+    51.0,
+    52.499996
+   ],
+   "n_solved": [
+    20,
+    40,
+    60,
+    80,
+    100,
+    120
+   ],
+   "asym/any_atom": 20,
+   "n_residues_asym": 86,
+   "asym/sidechain": 17,
+   "biounit1/any_atom": 20,
+   "n_residues_biounit1": 86,
+   "biounit1/sidechain": 17
+  },
+  {
+   "name": "1bc7",
+   "values": [
+    43.333332,
+    40.37037,
+    54.814816
+   ],
+   "n_solved": [
+    27,
+    54,
+    81,
+    108,
+    135,
+    162
+   ],
+   "asym/any_atom": 27,
+   "n_residues_asym": 93,
+   "asym/sidechain": 24,
+   "biounit1/any_atom": 27,
+   "n_residues_biounit1": 93,
+   "biounit1/sidechain": 24
+  },
+  {
+   "name": "1bc8",
+   "values": [
+    31.785715,
+    38.214287,
+    54.285717
+   ],
+   "n_solved": [
+    28,
+    56,
+    84,
+    112,
+    140,
+    168
+   ],
+   "asym/any_atom": 28,
+   "n_residues_asym": 93,
+   "asym/sidechain": 25,
+   "biounit1/any_atom": 28,
+   "n_residues_biounit1": 93,
+   "biounit1/sidechain": 25
+  },
+  {
+   "name": "1di2",
+   "values": [
+    31.42857,
+    23.571428,
+    33.214287
+   ],
+   "n_solved": [
+    28,
+    56,
+    84,
+    112,
+    140,
+    168
+   ],
+   "asym/any_atom": 28,
+   "n_residues_asym": 129,
+   "asym/sidechain": 25,
+   "biounit1/any_atom": 18,
+   "n_residues_biounit1": 129,
+   "biounit1/sidechain": 15
+  },
+  {
+   "name": "1ec6",
+   "values": [
+    33.793106,
+    39.655174,
+    52.75862
+   ],
+   "n_solved": [
+    29,
+    58,
+    87,
+    116,
+    145,
+    174
+   ],
+   "asym/any_atom": 56,
+   "n_residues_asym": 171,
+   "asym/sidechain": 39,
+   "biounit1/any_atom": 29,
+   "n_residues_biounit1": 87,
+   "biounit1/sidechain": 20
+  },
+  {
+   "name": "1hlo",
+   "values": [
+    32.413788,
+    31.034485,
+    67.931046
+   ],
+   "n_solved": [
+    29,
+    58,
+    87,
+    116,
+    145,
+    174
+   ],
+   "asym/any_atom": 29,
+   "n_residues_asym": 153,
+   "asym/sidechain": 27,
+   "biounit1/any_atom": 29,
+   "n_residues_biounit1": 153,
+   "biounit1/sidechain": 27
+  },
+  {
+   "name": "1hlv",
+   "values": [
+    46.326534,
+    41.83673,
+    51.632656
+   ],
+   "n_solved": [
+    49,
+    98,
+    147,
+    196,
+    245,
+    294
+   ],
+   "asym/any_atom": 49,
+   "n_residues_asym": 131,
+   "asym/sidechain": 40,
+   "biounit1/any_atom": 49,
+   "n_residues_biounit1": 131,
+   "biounit1/sidechain": 40
+  },
+  {
+   "name": "1i3j",
+   "values": [
+    42.166668,
+    37.666668,
+    50.33333
+   ],
+   "n_solved": [
+    60,
+    120,
+    180,
+    240,
+    300,
+    360
+   ],
+   "asym/any_atom": 60,
+   "n_residues_asym": 96,
+   "asym/sidechain": 55,
+   "biounit1/any_atom": 60,
+   "n_residues_biounit1": 96,
+   "biounit1/sidechain": 55
+  },
+  {
+   "name": "1pvi",
+   "values": [
+    35.238094,
+    36.8254,
+    41.428574
+   ],
+   "n_solved": [
+    63,
+    126,
+    189,
+    252,
+    315,
+    378
+   ],
+   "asym/any_atom": 63,
+   "n_residues_asym": 312,
+   "asym/sidechain": 54,
+   "biounit1/any_atom": 63,
+   "n_residues_biounit1": 312,
+   "biounit1/sidechain": 54
+  },
+  {
+   "name": "1qum",
+   "values": [
+    51.025646,
+    53.076923,
+    64.61538
+   ],
+   "n_solved": [
+    39,
+    78,
+    117,
+    156,
+    195,
+    234
+   ],
+   "asym/any_atom": 40,
+   "n_residues_asym": 279,
+   "asym/sidechain": 32,
+   "biounit1/any_atom": 40,
+   "n_residues_biounit1": 279,
+   "biounit1/sidechain": 32
+  },
+  {
+   "name": "1sfu",
+   "values": [
+    33.0,
+    50.0,
+    60.000004
+   ],
+   "n_solved": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60
+   ],
+   "asym/any_atom": 19,
+   "n_residues_asym": 140,
+   "asym/sidechain": 18,
+   "biounit1/any_atom": 19,
+   "n_residues_biounit1": 140,
+   "biounit1/sidechain": 18
+  },
+  {
+   "name": "1u3e",
+   "values": [
+    45.28571,
+    27.714285,
+    62.0
+   ],
+   "n_solved": [
+    70,
+    140,
+    210,
+    280,
+    350,
+    420
+   ],
+   "asym/any_atom": 89,
+   "n_residues_asym": 174,
+   "asym/sidechain": 69,
+   "biounit1/any_atom": 89,
+   "n_residues_biounit1": 174,
+   "biounit1/sidechain": 69
+  },
+  {
+   "name": "1xpx",
+   "values": [
+    29.230768,
+    23.846153,
+    44.615383
+   ],
+   "n_solved": [
+    13,
+    26,
+    39,
+    52,
+    65,
+    78
+   ],
+   "asym/any_atom": 13,
+   "n_residues_asym": 144,
+   "asym/sidechain": 13,
+   "biounit1/any_atom": 13,
+   "n_residues_biounit1": 144,
+   "biounit1/sidechain": 13
+  },
+  {
+   "name": "1yo5",
+   "values": [
+    30.35714,
+    30.714289,
+    36.42857
+   ],
+   "n_solved": [
+    28,
+    56,
+    84,
+    112,
+    140,
+    168
+   ],
+   "asym/any_atom": 28,
+   "n_residues_asym": 88,
+   "asym/sidechain": 25,
+   "biounit1/any_atom": 28,
+   "n_residues_biounit1": 88,
+   "biounit1/sidechain": 25
+  },
+  {
+   "name": "1zx4",
+   "values": [
+    28.800001,
+    26.0,
+    26.4
+   ],
+   "n_solved": [
+    25,
+    50,
+    75,
+    100,
+    125,
+    150
+   ],
+   "asym/any_atom": 33,
+   "n_residues_asym": 356,
+   "asym/sidechain": 30,
+   "biounit1/any_atom": 33,
+   "n_residues_biounit1": 356,
+   "biounit1/sidechain": 30
+  },
+  {
+   "name": "2c5r",
+   "values": [
+    11.37931,
+    14.827587,
+    23.793102
+   ],
+   "n_solved": [
+    29,
+    58,
+    87,
+    116,
+    145,
+    174
+   ],
+   "asym/any_atom": 29,
+   "n_residues_asym": 378,
+   "asym/sidechain": 27,
+   "biounit1/any_atom": 29,
+   "n_residues_biounit1": 378,
+   "biounit1/sidechain": 27
+  },
+  {
+   "name": "2c62",
+   "values": [
+    48.372093,
+    39.302326,
+    53.023254
+   ],
+   "n_solved": [
+    43,
+    86,
+    129,
+    172,
+    215,
+    258
+   ],
+   "asym/any_atom": 46,
+   "n_residues_asym": 132,
+   "asym/sidechain": 40,
+   "biounit1/any_atom": 46,
+   "n_residues_biounit1": 132,
+   "biounit1/sidechain": 40
+  },
+  {
+   "name": "2nq9",
+   "values": [
+    51.750004,
+    52.0,
+    64.25001
+   ],
+   "n_solved": [
+    40,
+    80,
+    120,
+    160,
+    200,
+    240
+   ],
+   "asym/any_atom": 41,
+   "n_residues_asym": 279,
+   "asym/sidechain": 34,
+   "biounit1/any_atom": 41,
+   "n_residues_biounit1": 279,
+   "biounit1/sidechain": 34
+  },
+  {
+   "name": "2o4a",
+   "values": [
+    40.0,
+    36.875,
+    53.750004
+   ],
+   "n_solved": [
+    16,
+    32,
+    48,
+    64,
+    80,
+    96
+   ],
+   "asym/any_atom": 16,
+   "n_residues_asym": 84,
+   "asym/sidechain": 12,
+   "biounit1/any_atom": 16,
+   "n_residues_biounit1": 84,
+   "biounit1/sidechain": 12
+  },
+  {
+   "name": "2p5l",
+   "values": [
+    35.238094,
+    47.61905,
+    60.952385
+   ],
+   "n_solved": [
+    21,
+    42,
+    63,
+    84,
+    105,
+    126
+   ],
+   "asym/any_atom": 106,
+   "n_residues_asym": 254,
+   "asym/sidechain": 92,
+   "biounit1/any_atom": 47,
+   "n_residues_biounit1": 127,
+   "biounit1/sidechain": 41
+  },
+  {
+   "name": "2xdb",
+   "values": [
+    33.68421,
+    33.157898,
+    39.736843
+   ],
+   "n_solved": [
+    38,
+    76,
+    114,
+    152,
+    190,
+    228
+   ],
+   "asym/any_atom": 51,
+   "n_residues_asym": 162,
+   "asym/sidechain": 41,
+   "biounit1/any_atom": 51,
+   "n_residues_biounit1": 162,
+   "biounit1/sidechain": 41
+  },
+  {
+   "name": "2ypb",
+   "values": [
+    24.333334,
+    26.666664,
+    58.66667
+   ],
+   "n_solved": [
+    30,
+    60,
+    90,
+    120,
+    150,
+    180
+   ],
+   "asym/any_atom": 30,
+   "n_residues_asym": 141,
+   "asym/sidechain": 23,
+   "biounit1/any_atom": 30,
+   "n_residues_biounit1": 141,
+   "biounit1/sidechain": 23
+  },
+  {
+   "name": "2zhg",
+   "values": [
+    26.750002,
+    32.5,
+    41.000004
+   ],
+   "n_solved": [
+    40,
+    80,
+    120,
+    160,
+    200,
+    240
+   ],
+   "asym/any_atom": 27,
+   "n_residues_asym": 121,
+   "asym/sidechain": 22,
+   "biounit1/any_atom": 27,
+   "n_residues_biounit1": 121,
+   "biounit1/sidechain": 22
+  },
+  {
+   "name": "2zio",
+   "values": [
+    43.962265,
+    18.301886,
+    45.660378
+   ],
+   "n_solved": [
+    53,
+    106,
+    159,
+    212,
+    265,
+    318
+   ],
+   "asym/any_atom": 33,
+   "n_residues_asym": 255,
+   "asym/sidechain": 24,
+   "biounit1/any_atom": 33,
+   "n_residues_biounit1": 255,
+   "biounit1/sidechain": 24
+  },
+  {
+   "name": "3adl",
+   "values": [
+    28.75,
+    26.249998,
+    41.25
+   ],
+   "n_solved": [
+    8,
+    16,
+    24,
+    32,
+    40,
+    48
+   ],
+   "asym/any_atom": 8,
+   "n_residues_asym": 76,
+   "asym/sidechain": 7,
+   "biounit1/any_atom": 8,
+   "n_residues_biounit1": 76,
+   "biounit1/sidechain": 7
+  },
+  {
+   "name": "3bsu",
+   "values": [
+    45.71429,
+    40.0,
+    50.0
+   ],
+   "n_solved": [
+    7,
+    14,
+    21,
+    28,
+    35,
+    42
+   ],
+   "asym/any_atom": 97,
+   "n_residues_asym": 290,
+   "asym/sidechain": 76,
+   "biounit1/any_atom": 50,
+   "n_residues_biounit1": 144,
+   "biounit1/sidechain": 39
+  },
+  {
+   "name": "3fc3",
+   "values": [
+    35.96154,
+    43.942307,
+    50.576927
+   ],
+   "n_solved": [
+    104,
+    208,
+    312,
+    416,
+    520,
+    624
+   ],
+   "asym/any_atom": 111,
+   "n_residues_asym": 377,
+   "asym/sidechain": 101,
+   "biounit1/any_atom": 111,
+   "n_residues_biounit1": 377,
+   "biounit1/sidechain": 101
+  },
+  {
+   "name": "3g73",
+   "values": [
+    37.083332,
+    23.333332,
+    50.0
+   ],
+   "n_solved": [
+    24,
+    48,
+    72,
+    96,
+    120,
+    144
+   ],
+   "asym/any_atom": 50,
+   "n_residues_asym": 185,
+   "asym/sidechain": 40,
+   "biounit1/any_atom": 50,
+   "n_residues_biounit1": 185,
+   "biounit1/sidechain": 40
+  },
+  {
+   "name": "3gna",
+   "values": [
+    46.818184,
+    31.363636,
+    50.454544
+   ],
+   "n_solved": [
+    22,
+    44,
+    66,
+    88,
+    110,
+    132
+   ],
+   "asym/any_atom": 9,
+   "n_residues_asym": 68,
+   "asym/sidechain": 7,
+   "biounit1/any_atom": 9,
+   "n_residues_biounit1": 68,
+   "biounit1/sidechain": 7
+  },
+  {
+   "name": "3gx4",
+   "values": [
+    16.0,
+    24.0,
+    32.8
+   ],
+   "n_solved": [
+    25,
+    50,
+    75,
+    100,
+    125,
+    150
+   ],
+   "asym/any_atom": 33,
+   "n_residues_asym": 108,
+   "asym/sidechain": 26,
+   "biounit1/any_atom": 33,
+   "n_residues_biounit1": 108,
+   "biounit1/sidechain": 26
+  },
+  {
+   "name": "3lsr",
+   "values": [
+    63.333332,
+    29.166668,
+    45.0
+   ],
+   "n_solved": [
+    12,
+    24,
+    36,
+    48,
+    60,
+    72
+   ],
+   "asym/any_atom": 28,
+   "n_residues_asym": 192,
+   "asym/sidechain": 23,
+   "biounit1/any_atom": 28,
+   "n_residues_biounit1": 192,
+   "biounit1/sidechain": 23
+  },
+  {
+   "name": "3mj0",
+   "values": [
+    44.736843,
+    45.789474,
+    55.78947
+   ],
+   "n_solved": [
+    19,
+    38,
+    57,
+    76,
+    95,
+    114
+   ],
+   "asym/any_atom": 17,
+   "n_residues_asym": 118,
+   "asym/sidechain": 16,
+   "biounit1/any_atom": 17,
+   "n_residues_biounit1": 118,
+   "biounit1/sidechain": 16
+  },
+  {
+   "name": "3mva",
+   "values": [
+    45.60606,
+    33.63636,
+    55.757576
+   ],
+   "n_solved": [
+    66,
+    132,
+    198,
+    264,
+    330,
+    396
+   ],
+   "asym/any_atom": 66,
+   "n_residues_asym": 324,
+   "asym/sidechain": 62,
+   "biounit1/any_atom": 66,
+   "n_residues_biounit1": 324,
+   "biounit1/sidechain": 62
+  },
+  {
+   "name": "3n7q",
+   "values": [
+    21.0,
+    28.000004,
+    49.0
+   ],
+   "n_solved": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60
+   ],
+   "asym/any_atom": 27,
+   "n_residues_asym": 298,
+   "asym/sidechain": 24,
+   "biounit1/any_atom": 27,
+   "n_residues_biounit1": 298,
+   "biounit1/sidechain": 24
+  },
+  {
+   "name": "3olt",
+   "values": [
+    34.0,
+    44.4,
+    55.6
+   ],
+   "n_solved": [
+    25,
+    50,
+    75,
+    100,
+    125,
+    150
+   ],
+   "asym/any_atom": 253,
+   "n_residues_asym": 1102,
+   "asym/sidechain": 223,
+   "biounit1/any_atom": 253,
+   "n_residues_biounit1": 1102,
+   "biounit1/sidechain": 223
+  },
+  {
+   "name": "3vok",
+   "values": [
+    53.571426,
+    51.42857,
+    49.285717
+   ],
+   "n_solved": [
+    14,
+    28,
+    42,
+    56,
+    70,
+    84
+   ],
+   "asym/any_atom": 4,
+   "n_residues_asym": 176,
+   "asym/sidechain": 3,
+   "biounit1/any_atom": 4,
+   "n_residues_biounit1": 176,
+   "biounit1/sidechain": 3
+  },
+  {
+   "name": "3vwb",
+   "values": [
+    25.263157,
+    30.526314,
+    23.684212
+   ],
+   "n_solved": [
+    19,
+    38,
+    57,
+    76,
+    95,
+    114
+   ],
+   "asym/any_atom": 19,
+   "n_residues_asym": 116,
+   "asym/sidechain": 16,
+   "biounit1/any_atom": 19,
+   "n_residues_biounit1": 116,
+   "biounit1/sidechain": 16
+  },
+  {
+   "name": "3zp5",
+   "values": [
+    28.888887,
+    23.333332,
+    45.555553
+   ],
+   "n_solved": [
+    9,
+    18,
+    27,
+    36,
+    45,
+    54
+   ],
+   "asym/any_atom": 27,
+   "n_residues_asym": 92,
+   "asym/sidechain": 24,
+   "biounit1/any_atom": 27,
+   "n_residues_biounit1": 92,
+   "biounit1/sidechain": 24
+  },
+  {
+   "name": "4ato",
+   "values": [
+    40.9375,
+    34.0625,
+    52.499996
+   ],
+   "n_solved": [
+    32,
+    64,
+    96,
+    128,
+    160,
+    192
+   ],
+   "asym/any_atom": 33,
+   "n_residues_asym": 168,
+   "asym/sidechain": 30,
+   "biounit1/any_atom": 33,
+   "n_residues_biounit1": 168,
+   "biounit1/sidechain": 30
+  },
+  {
+   "name": "4bhm",
+   "values": [
+    38.26087,
+    37.826088,
+    54.565216
+   ],
+   "n_solved": [
+    46,
+    92,
+    138,
+    184,
+    230,
+    276
+   ],
+   "asym/any_atom": 126,
+   "n_residues_asym": 463,
+   "asym/sidechain": 103,
+   "biounit1/any_atom": 126,
+   "n_residues_biounit1": 463,
+   "biounit1/sidechain": 103
+  },
+  {
+   "name": "4bqa",
+   "values": [
+    30.000002,
+    27.916666,
+    42.5
+   ],
+   "n_solved": [
+    24,
+    48,
+    72,
+    96,
+    120,
+    144
+   ],
+   "asym/any_atom": 73,
+   "n_residues_asym": 301,
+   "asym/sidechain": 57,
+   "biounit1/any_atom": 25,
+   "n_residues_biounit1": 132,
+   "biounit1/sidechain": 20
+  },
+  {
+   "name": "4e0p",
+   "values": [
+    39.649124,
+    22.807018,
+    42.105263
+   ],
+   "n_solved": [
+    57,
+    114,
+    171,
+    228,
+    285,
+    342
+   ],
+   "asym/any_atom": 62,
+   "n_residues_asym": 318,
+   "asym/sidechain": 56,
+   "biounit1/any_atom": 62,
+   "n_residues_biounit1": 318,
+   "biounit1/sidechain": 56
+  },
+  {
+   "name": "4nid",
+   "values": [
+    38.695656,
+    39.130436,
+    49.130432
+   ],
+   "n_solved": [
+    23,
+    46,
+    69,
+    92,
+    115,
+    138
+   ],
+   "asym/any_atom": 41,
+   "n_residues_asym": 203,
+   "asym/sidechain": 33,
+   "biounit1/any_atom": 41,
+   "n_residues_biounit1": 203,
+   "biounit1/sidechain": 33
+  },
+  {
+   "name": "4wal",
+   "values": [
+    60.73171,
+    53.65853,
+    67.80488
+   ],
+   "n_solved": [
+    41,
+    82,
+    123,
+    164,
+    205,
+    246
+   ],
+   "asym/any_atom": 48,
+   "n_residues_asym": 127,
+   "asym/sidechain": 35,
+   "biounit1/any_atom": 48,
+   "n_residues_biounit1": 127,
+   "biounit1/sidechain": 35
+  },
+  {
+   "name": "5cm3",
+   "values": [
+    42.619045,
+    24.04762,
+    58.571434
+   ],
+   "n_solved": [
+    42,
+    84,
+    126,
+    168,
+    210,
+    252
+   ],
+   "asym/any_atom": 42,
+   "n_residues_asym": 190,
+   "asym/sidechain": 35,
+   "biounit1/any_atom": 42,
+   "n_residues_biounit1": 190,
+   "biounit1/sidechain": 35
+  },
+  {
+   "name": "5haw",
+   "values": [
+    41.935482,
+    46.77419,
+    61.290325
+   ],
+   "n_solved": [
+    31,
+    62,
+    93,
+    124,
+    155,
+    186
+   ],
+   "asym/any_atom": 15,
+   "n_residues_asym": 393,
+   "asym/sidechain": 11,
+   "biounit1/any_atom": 15,
+   "n_residues_biounit1": 393,
+   "biounit1/sidechain": 11
+  },
+  {
+   "name": "5mht",
+   "values": [
+    32.5,
+    34.423073,
+    48.846157
+   ],
+   "n_solved": [
+    52,
+    104,
+    156,
+    208,
+    260,
+    312
+   ],
+   "asym/any_atom": 71,
+   "n_residues_asym": 327,
+   "asym/sidechain": 54,
+   "biounit1/any_atom": 71,
+   "n_residues_biounit1": 327,
+   "biounit1/sidechain": 54
+  },
+  {
+   "name": "5vc9",
+   "values": [
+    28.275866,
+    48.620693,
+    51.034485
+   ],
+   "n_solved": [
+    29,
+    58,
+    87,
+    116,
+    145,
+    174
+   ],
+   "asym/any_atom": 65,
+   "n_residues_asym": 90,
+   "asym/sidechain": 49,
+   "biounit1/any_atom": 29,
+   "n_residues_biounit1": 46,
+   "biounit1/sidechain": 21
+  },
+  {
+   "name": "5w9s",
+   "values": [
+    24.545456,
+    46.060608,
+    52.727272
+   ],
+   "n_solved": [
+    33,
+    66,
+    99,
+    132,
+    165,
+    198
+   ],
+   "asym/any_atom": 34,
+   "n_residues_asym": 44,
+   "asym/sidechain": 25,
+   "biounit1/any_atom": 34,
+   "n_residues_biounit1": 44,
+   "biounit1/sidechain": 25
+  },
+  {
+   "name": "5ybd",
+   "values": [
+    33.46154,
+    22.692308,
+    49.615383
+   ],
+   "n_solved": [
+    26,
+    52,
+    78,
+    104,
+    130,
+    156
+   ],
+   "asym/any_atom": 54,
+   "n_residues_asym": 190,
+   "asym/sidechain": 46,
+   "biounit1/any_atom": 26,
+   "n_residues_biounit1": 96,
+   "biounit1/sidechain": 23
+  },
+  {
+   "name": "6bjv",
+   "values": [
+    38.19672,
+    33.77049,
+    40.65574
+   ],
+   "n_solved": [
+    61,
+    122,
+    183,
+    244,
+    305,
+    366
+   ],
+   "asym/any_atom": 61,
+   "n_residues_asym": 294,
+   "asym/sidechain": 48,
+   "biounit1/any_atom": 61,
+   "n_residues_biounit1": 294,
+   "biounit1/sidechain": 48
+  },
+  {
+   "name": "6dnw",
+   "values": [
+    38.39506,
+    39.87654,
+    56.419754
+   ],
+   "n_solved": [
+    81,
+    162,
+    243,
+    324,
+    405,
+    486
+   ],
+   "asym/any_atom": 81,
+   "n_residues_asym": 231,
+   "asym/sidechain": 70,
+   "biounit1/any_atom": 81,
+   "n_residues_biounit1": 231,
+   "biounit1/sidechain": 70
+  },
+  {
+   "name": "6fqr",
+   "values": [
+    32.941177,
+    25.294119,
+    54.11765
+   ],
+   "n_solved": [
+    17,
+    34,
+    51,
+    68,
+    85,
+    102
+   ],
+   "asym/any_atom": 17,
+   "n_residues_asym": 318,
+   "asym/sidechain": 12,
+   "biounit1/any_atom": 17,
+   "n_residues_biounit1": 318,
+   "biounit1/sidechain": 12
+  },
+  {
+   "name": "6gdr",
+   "values": [
+    49.83051,
+    39.152542,
+    55.423725
+   ],
+   "n_solved": [
+    59,
+    118,
+    177,
+    236,
+    295,
+    354
+   ],
+   "asym/any_atom": 67,
+   "n_residues_asym": 256,
+   "asym/sidechain": 52,
+   "biounit1/any_atom": 67,
+   "n_residues_biounit1": 256,
+   "biounit1/sidechain": 52
+  },
+  {
+   "name": "6kbs",
+   "values": [
+    45.42857,
+    34.0,
+    65.14286
+   ],
+   "n_solved": [
+    35,
+    70,
+    105,
+    140,
+    175,
+    210
+   ],
+   "asym/any_atom": 30,
+   "n_residues_asym": 227,
+   "asym/sidechain": 26,
+   "biounit1/any_atom": 30,
+   "n_residues_biounit1": 227,
+   "biounit1/sidechain": 26
+  },
+  {
+   "name": "6lff",
+   "values": [
+    28.333336,
+    47.5,
+    49.999992
+   ],
+   "n_solved": [
+    12,
+    24,
+    36,
+    48,
+    60,
+    72
+   ],
+   "asym/any_atom": 38,
+   "n_residues_asym": 164,
+   "asym/sidechain": 30,
+   "biounit1/any_atom": 20,
+   "n_residues_biounit1": 82,
+   "biounit1/sidechain": 17
+  },
+  {
+   "name": "6lmj",
+   "values": [
+    28.66667,
+    26.666664,
+    44.0
+   ],
+   "n_solved": [
+    15,
+    30,
+    45,
+    60,
+    75,
+    90
+   ],
+   "asym/any_atom": 15,
+   "n_residues_asym": 197,
+   "asym/sidechain": 13,
+   "biounit1/any_atom": 15,
+   "n_residues_biounit1": 197,
+   "biounit1/sidechain": 13
+  },
+  {
+   "name": "6od4",
+   "values": [
+    14.8,
+    22.400002,
+    42.799995
+   ],
+   "n_solved": [
+    25,
+    50,
+    75,
+    100,
+    125,
+    150
+   ],
+   "asym/any_atom": 26,
+   "n_residues_asym": 228,
+   "asym/sidechain": 23,
+   "biounit1/any_atom": 25,
+   "n_residues_biounit1": 122,
+   "biounit1/sidechain": 22
+  },
+  {
+   "name": "6wdz",
+   "values": [
+    47.142857,
+    22.142857,
+    53.214283
+   ],
+   "n_solved": [
+    28,
+    56,
+    84,
+    112,
+    140,
+    168
+   ],
+   "asym/any_atom": 104,
+   "n_residues_asym": 302,
+   "asym/sidechain": 87,
+   "biounit1/any_atom": 28,
+   "n_residues_biounit1": 101,
+   "biounit1/sidechain": 24
+  },
+  {
+   "name": "6x70",
+   "values": [
+    35.072464,
+    45.507248,
+    50.144924
+   ],
+   "n_solved": [
+    69,
+    138,
+    207,
+    276,
+    345,
+    414
+   ],
+   "asym/any_atom": 69,
+   "n_residues_asym": 437,
+   "asym/sidechain": 54,
+   "biounit1/any_atom": 69,
+   "n_residues_biounit1": 437,
+   "biounit1/sidechain": 54
+  },
+  {
+   "name": "6y93",
+   "values": [
+    41.11111,
+    40.740738,
+    58.88888
+   ],
+   "n_solved": [
+    27,
+    54,
+    81,
+    108,
+    135,
+    162
+   ],
+   "asym/any_atom": 54,
+   "n_residues_asym": 221,
+   "asym/sidechain": 43,
+   "biounit1/any_atom": 54,
+   "n_residues_biounit1": 221,
+   "biounit1/sidechain": 43
+  },
+  {
+   "name": "7bca",
+   "values": [
+    41.53846,
+    39.743595,
+    54.871796
+   ],
+   "n_solved": [
+    39,
+    78,
+    117,
+    156,
+    195,
+    234
+   ],
+   "asym/any_atom": 41,
+   "n_residues_asym": 189,
+   "asym/sidechain": 38,
+   "biounit1/any_atom": 41,
+   "n_residues_biounit1": 189,
+   "biounit1/sidechain": 38
+  },
+  {
+   "name": "7c0g",
+   "values": [
+    40.714287,
+    29.285713,
+    43.57143
+   ],
+   "n_solved": [
+    14,
+    28,
+    42,
+    56,
+    70,
+    84
+   ],
+   "asym/any_atom": 14,
+   "n_residues_asym": 143,
+   "asym/sidechain": 14,
+   "biounit1/any_atom": 14,
+   "n_residues_biounit1": 143,
+   "biounit1/sidechain": 14
+  },
+  {
+   "name": "7el3",
+   "values": [
+    21.864407,
+    28.305084,
+    39.66102
+   ],
+   "n_solved": [
+    59,
+    118,
+    177,
+    236,
+    295,
+    354
+   ],
+   "asym/any_atom": 60,
+   "n_residues_asym": 273,
+   "asym/sidechain": 53,
+   "biounit1/any_atom": 60,
+   "n_residues_biounit1": 273,
+   "biounit1/sidechain": 53
+  },
+  {
+   "name": "7jsa",
+   "values": [
+    26.4,
+    28.0,
+    53.599995
+   ],
+   "n_solved": [
+    25,
+    50,
+    75,
+    100,
+    125,
+    150
+   ],
+   "asym/any_atom": 25,
+   "n_residues_asym": 88,
+   "asym/sidechain": 22,
+   "biounit1/any_atom": 25,
+   "n_residues_biounit1": 88,
+   "biounit1/sidechain": 22
+  },
+  {
+   "name": "7ju3",
+   "values": [
+    42.666668,
+    53.777782,
+    67.33334
+   ],
+   "n_solved": [
+    45,
+    90,
+    135,
+    180,
+    225,
+    270
+   ],
+   "asym/any_atom": 45,
+   "n_residues_asym": 405,
+   "asym/sidechain": 33,
+   "biounit1/any_atom": 45,
+   "n_residues_biounit1": 405,
+   "biounit1/sidechain": 33
+  },
+  {
+   "name": "7kii",
+   "values": [
+    49.25,
+    36.25,
+    65.25
+   ],
+   "n_solved": [
+    40,
+    80,
+    120,
+    160,
+    200,
+    240
+   ],
+   "asym/any_atom": 49,
+   "n_residues_asym": 103,
+   "asym/sidechain": 40,
+   "biounit1/any_atom": 49,
+   "n_residues_biounit1": 103,
+   "biounit1/sidechain": 40
+  },
+  {
+   "name": "7kij",
+   "values": [
+    65.08475,
+    39.999996,
+    61.355938
+   ],
+   "n_solved": [
+    59,
+    118,
+    177,
+    236,
+    295,
+    354
+   ],
+   "asym/any_atom": 69,
+   "n_residues_asym": 198,
+   "asym/sidechain": 60,
+   "biounit1/any_atom": 30,
+   "n_residues_biounit1": 100,
+   "biounit1/sidechain": 26
+  },
+  {
+   "name": "7mtl",
+   "values": [
+    25.0,
+    9.375,
+    39.0625
+   ],
+   "n_solved": [
+    32,
+    64,
+    96,
+    128,
+    160,
+    192
+   ],
+   "asym/any_atom": 32,
+   "n_residues_asym": 330,
+   "asym/sidechain": 29,
+   "biounit1/any_atom": 32,
+   "n_residues_biounit1": 330,
+   "biounit1/sidechain": 29
+  },
+  {
+   "name": "7z0u",
+   "values": [
+    30.833334,
+    39.583332,
+    48.75
+   ],
+   "n_solved": [
+    24,
+    48,
+    72,
+    96,
+    120,
+    144
+   ],
+   "asym/any_atom": 24,
+   "n_residues_asym": 78,
+   "asym/sidechain": 20,
+   "biounit1/any_atom": 24,
+   "n_residues_biounit1": 78,
+   "biounit1/sidechain": 20
+  },
+  {
+   "name": "8dwm",
+   "values": [
+    56.666668,
+    51.66666,
+    82.5
+   ],
+   "n_solved": [
+    12,
+    24,
+    36,
+    48,
+    60,
+    72
+   ],
+   "asym/any_atom": 12,
+   "n_residues_asym": 248,
+   "asym/sidechain": 9,
+   "biounit1/any_atom": 12,
+   "n_residues_biounit1": 248,
+   "biounit1/sidechain": 9
+  }
+ ]
+}

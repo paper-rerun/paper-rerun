@@ -1,0 +1,142 @@
+{
+ "1dwh": {
+  "n_other_atoms_in_file": 349,
+  "n_context_atoms_reaching_model": 349,
+  "raw_elements": {
+   "C": 173,
+   "O": 153,
+   "N": 14,
+   "S": 8,
+   "ZN": 1
+  },
+  "kept_elements": {
+   "C": 173,
+   "O": 153,
+   "N": 14,
+   "S": 8,
+   "ZN": 1
+  },
+  "metal_atoms_in_file": {
+   "ZN": 1
+  },
+  "metal_atoms_kept": {
+   "ZN": 1
+  }
+ },
+ "1e4m": {
+  "n_other_atoms_in_file": 321,
+  "n_context_atoms_reaching_model": 321,
+  "raw_elements": {
+   "C": 157,
+   "O": 143,
+   "N": 12,
+   "S": 8,
+   "ZN": 1
+  },
+  "kept_elements": {
+   "C": 157,
+   "O": 143,
+   "N": 12,
+   "S": 8,
+   "ZN": 1
+  },
+  "metal_atoms_in_file": {
+   "ZN": 1
+  },
+  "metal_atoms_kept": {
+   "ZN": 1
+  }
+ },
+ "1e6s": {
+  "n_other_atoms_in_file": 328,
+  "n_context_atoms_reaching_model": 328,
+  "raw_elements": {
+   "C": 160,
+   "O": 145,
+   "N": 14,
+   "S": 8,
+   "ZN": 1
+  },
+  "kept_elements": {
+   "C": 160,
+   "O": 145,
+   "N": 14,
+   "S": 8,
+   "ZN": 1
+  },
+  "metal_atoms_in_file": {
+   "ZN": 1
+  },
+  "metal_atoms_kept": {
+   "ZN": 1
+  }
+ },
+ "1e72": {
+  "n_other_atoms_in_file": 324,
+  "n_context_atoms_reaching_model": 324,
+  "raw_elements": {
+   "C": 160,
+   "O": 142,
+   "N": 14,
+   "S": 7,
+   "ZN": 1
+  },
+  "kept_elements": {
+   "C": 160,
+   "O": 142,
+   "N": 14,
+   "S": 7,
+   "ZN": 1
+  },
+  "metal_atoms_in_file": {
+   "ZN": 1
+  },
+  "metal_atoms_kept": {
+   "ZN": 1
+  }
+ },
+ "1f35": {
+  "n_other_atoms_in_file": 15,
+  "n_context_atoms_reaching_model": 15,
+  "raw_elements": {
+   "ZN": 10,
+   "O": 2,
+   "C": 2,
+   "AS": 1
+  },
+  "kept_elements": {
+   "ZN": 10,
+   "O": 2,
+   "C": 2,
+   "AS": 1
+  },
+  "metal_atoms_in_file": {
+   "ZN": 10
+  },
+  "metal_atoms_kept": {
+   "ZN": 10
+  }
+ },
+ "1fee": {
+  "n_other_atoms_in_file": 34,
+  "n_context_atoms_reaching_model": 34,
+  "raw_elements": {
+   "O": 19,
+   "C": 12,
+   "S": 2,
+   "CU": 1
+  },
+  "kept_elements": {
+   "O": 19,
+   "C": 12,
+   "S": 2,
+   "CU": 1
+  },
+  "metal_atoms_in_file": {
+   "CU": 1
+  },
+  "metal_atoms_kept": {
+   "CU": 1
+  }
+ }
+}

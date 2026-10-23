@@ -1,0 +1,68 @@
+{
+ "block": "B3-metal-split",
+ "flavor_main": "biounit1",
+ "main_result": {
+  "C5-LMPNN-METAL": {
+   "paper_value": 77.5,
+   "ours": 64.333,
+   "mean_over_proteins": 65.1,
+   "n": 83,
+   "tolerance": 2,
+   "within_tolerance": false,
+   "file": "exec/B3-metal-split/recovery_lmpnn_biounit1.json"
+  },
+  "C6-PMPNN-METAL": {
+   "paper_value": 40.566,
+   "ours": 40.0,
+   "mean_over_proteins": 39.303,
+   "n": 83,
+   "tolerance": 2,
+   "within_tolerance": true,
+   "file": "exec/B3-metal-split/recovery_pmpnn_biounit1.json"
+  },
+  "gap_lmpnn_minus_pmpnn_pp": 24.333,
+  "paper_gap_pp": 36.9
+ },
+ "scored_positions_main": {
+  "median_per_protein": 30,
+  "mean_per_protein": 35.0,
+  "min": 3,
+  "max": 103,
+  "total": 2901
+ },
+ "per_protein_check_against_source_data": {
+  "why": "definition 'row_order_matches_test_lists' lets each of the 83 proteins be compared one to one, not only the medians",
+  "lmpnn": {"pearson_r": 0.333, "mean_abs_diff_pp": 15.71, "median_abs_diff_pp": 14.41, "within_1pp": 5},
+  "pmpnn": {"pearson_r": 0.574, "mean_abs_diff_pp": 15.37, "median_abs_diff_pp": 10.85, "within_1pp": 6},
+  "reading": "The C6 median lands on the paper's number while its per-protein values do not, so the C6 hit is not evidence that the scored position set is the authors'. Both models disagree protein by protein, which points at the position set rather than at either checkpoint.",
+  "file": "exec/B3-metal-split/compare_source_data_biounit1.json"
+ },
+ "what_the_authors_per_protein_values_look_like": {
+  "observation": "Their metal values sit on a coarse grid: 3f4v is 100.00 for LigandMPNN and 0.00 for ProteinMPNN, 6buu is 92.00 (= 23/25), 2ou7 is 6.67 (= 1/15), 5f56 ProteinMPNN is 78.89 (= 71/90, so 9 positions over 10 sequences) and 6lrd is 81.11 (= 73/90, again 9). Values like that need a handful of scored positions per protein, fewer than the median 30 that 'every non-protein atom of the deposited file' produces here.",
+  "our_median_near_positions_all_context": 30,
+  "our_median_near_positions_metal_only": 10,
+  "entries_where_the_implied_count_matches_metal_only": "6lrd (9 and 9); it does not match on 4x68 (their grid implies 8, metal-only gives 5) or 5f56 (9 against 7)"
+ },
+ "extra_analyses": {
+  "note": "Run after the main result and reported only as extras. None of them changes the verdict.",
+  "asym_all_context": {
+   "lmpnn_median": 64.615, "pmpnn_median": 39.571,
+   "lmpnn_r": 0.343, "pmpnn_r": 0.579,
+   "median_near_positions": 35,
+   "file": "exec/B3-metal-split/variant_asym_all.json"
+  },
+  "biounit1_metal_only_context": {
+   "lmpnn_median": 81.0, "pmpnn_median": 37.17,
+   "lmpnn_r": 0.689, "pmpnn_r": 0.783,
+   "median_near_positions": 10,
+   "file": "exec/B3-metal-split/variant_biounit1_metal.json"
+  },
+  "asym_metal_only_context": {
+   "lmpnn_median": 80.714, "pmpnn_median": 36.415,
+   "lmpnn_r": 0.687, "pmpnn_r": 0.798,
+   "median_near_positions": 11,
+   "file": "exec/B3-metal-split/variant_asym_metal.json"
+  },
+  "reading": "The assembly choice is worth about 0.3 pp and settles nothing. The context reading is worth 16.7 pp for LigandMPNN (64.3 to 81.0) and -2.8 pp for ProteinMPNN (40.0 to 37.2), and it roughly doubles the per-protein correlation with the authors' own values. Restricting the context to metal and ion atoms brings C5 from 13.2 pp off to 3.5 pp off and pushes C6 from 0.6 pp off to 3.4 pp off, so neither reading reproduces both claims inside the 2 pp tolerance and neither matches protein by protein."
+ }
+}

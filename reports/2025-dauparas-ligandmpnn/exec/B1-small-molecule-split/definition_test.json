@@ -1,0 +1,38 @@
+{
+ "score": {
+  "asym_chain_named_ligand": {
+   "sidechain_heavy": 26,
+   "any_heavy_atom": 282,
+   "CA_only": 4,
+   "CB_only": 2,
+   "virtual_CB": 2
+  },
+  "asym_chain_all_hetero": {
+   "sidechain_heavy": 26,
+   "any_heavy_atom": 155,
+   "CA_only": 6,
+   "CB_only": 9,
+   "virtual_CB": 8
+  },
+  "asym_allchains_all_hetero": {
+   "sidechain_heavy": 22,
+   "any_heavy_atom": 129,
+   "CA_only": 10,
+   "CB_only": 4,
+   "virtual_CB": 9
+  },
+  "biounit_allchains_all_hetero": {
+   "sidechain_heavy": 0,
+   "any_heavy_atom": 0,
+   "CA_only": 0,
+   "CB_only": 0,
+   "virtual_CB": 0
+  }
+ },
+ "total": {
+  "asym_chain_named_ligand": 317,
+  "asym_chain_all_hetero": 317,
+  "asym_allchains_all_hetero": 317,
+  "biounit_allchains_all_hetero": 0
+ }
+}

@@ -1,0 +1,6 @@
+TIS_sorghum: pos=3214 (rate 1.0) neg=79089 (max rate 0.02) chunks=11
+TIS_maize: pos=3098 (rate 1.0) neg=67651 (max rate 0.006) chunks=9
+Donor_sorghum: pos=6213 (rate 0.25) neg=64954 (max rate 0.006) chunks=9
+Donor_maize: pos=6196 (rate 0.25) neg=68879 (max rate 0.002) chunks=10
+TIS_valid: pos=998 neg=7002
+Donor_valid: pos=1361 neg=6639

@@ -1,0 +1,13 @@
+### pass 1 lmpnn biounit1 2026-10-22T19:41:47-03:00
+wrote /mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B2-nucleotide-split/todo_lmpnn_biounit1.json: 11 to do, 63 already done
+/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/env/lib/python3.11/site-packages/prody/utilities/misctools.py:424: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+PASS DONE lmpnn_biounit1 stats=74
+### after pass 1: lmpnn biounit1 stats=74
+### pass 1 pmpnn biounit1 2026-10-22T20:04:40-03:00
+wrote /mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/exec/B2-nucleotide-split/todo_pmpnn_biounit1.json: 74 to do, 0 already done
+/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/env/lib/python3.11/site-packages/prody/utilities/misctools.py:424: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+PASS DONE pmpnn_biounit1 stats=74
+### after pass 1: pmpnn biounit1 stats=74
+ALL DONE biounit1

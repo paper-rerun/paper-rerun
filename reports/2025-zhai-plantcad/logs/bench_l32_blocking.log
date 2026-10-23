@@ -1,0 +1,10 @@
+INFO:root:Loading model and tokenizer from kuleshov-group/PlantCaduceus_l32
+INFO:root:Using float16 as the GPU supports sm_60 or higher.
+INFO:root:Loading data from /mnt/e/Ciencia/artigos/2025-zhai-plantcad/data/TIS/valid.tsv
+INFO:root:Creating DataLoader with batch size 8
+INFO:root:Extracting embeddings
+params 225354752 dtype torch.float32
+INFO:root:Creating DataLoader with batch size 32
+INFO:root:Extracting embeddings
+batch=8 shape=(2048, 1024) seq/s=4.9 peakGB=3.53 nan=False
+batch=32 shape=(2048, 1024) seq/s=0.3 peakGB=11.40 nan=False

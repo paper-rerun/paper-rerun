@@ -1,0 +1,3 @@
+﻿ijson backend: yajl2_c
+{'seed': 0, 'n_materials': 145923, 'n_frames': 1580395, 'n_test_materials': 14704, 'n_test_frames': 159000} 1734s
+exit 0

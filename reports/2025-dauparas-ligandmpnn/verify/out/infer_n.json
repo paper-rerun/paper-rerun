@@ -1,0 +1,2014 @@
+{
+ "counts": {
+  "sidechain": [
+   2,
+   60
+  ],
+  "any_atom": [
+   59,
+   60
+  ],
+  "sidechain_plus_CA": [
+   13,
+   60
+  ],
+  "sidechain_keep_OXT": [
+   2,
+   60
+  ],
+  "ctx_with_H": [
+   59,
+   60
+  ],
+  "protein_with_H": [
+   59,
+   60
+  ],
+  "sidechain_ctx_whole_entry": [
+   3,
+   60
+  ]
+ },
+ "detail": [
+  {
+   "name": "1a28_ASTR",
+   "p1x": 51.3636360168457,
+   "p1y": 40.45454406738281,
+   "sidechain": [
+    21,
+    0.0
+   ],
+   "any_atom": [
+    22,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    22,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    21,
+    0.0
+   ],
+   "ctx_with_H": [
+    22,
+    1.0
+   ],
+   "protein_with_H": [
+    22,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    21,
+    0.0
+   ]
+  },
+  {
+   "name": "1bzc_ATPI",
+   "p1x": 35.882354736328125,
+   "p1y": 61.17647171020508,
+   "sidechain": [
+    13,
+    0.0
+   ],
+   "any_atom": [
+    17,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    15,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    13,
+    0.0
+   ],
+   "ctx_with_H": [
+    17,
+    1.0
+   ],
+   "protein_with_H": [
+    17,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    13,
+    0.0
+   ]
+  },
+  {
+   "name": "1drv_AA3D",
+   "p1x": 45.833335876464844,
+   "p1y": 54.16666793823242,
+   "sidechain": [
+    15,
+    0.0
+   ],
+   "any_atom": [
+    24,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    21,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    15,
+    0.0
+   ],
+   "ctx_with_H": [
+    24,
+    1.0
+   ],
+   "protein_with_H": [
+    24,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    15,
+    0.0
+   ]
+  },
+  {
+   "name": "1e3g_AR18",
+   "p1x": 45.714290618896484,
+   "p1y": 31.428569793701172,
+   "sidechain": [
+    20,
+    0.0
+   ],
+   "any_atom": [
+    21,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    21,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    20,
+    0.0
+   ],
+   "ctx_with_H": [
+    21,
+    1.0
+   ],
+   "protein_with_H": [
+    21,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    20,
+    0.0
+   ]
+  },
+  {
+   "name": "1elb_A0Z4",
+   "p1x": 24.210527420043945,
+   "p1y": 55.263160705566406,
+   "sidechain": [
+    12,
+    0.0
+   ],
+   "any_atom": [
+    19,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    16,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    12,
+    0.0
+   ],
+   "ctx_with_H": [
+    19,
+    1.0
+   ],
+   "protein_with_H": [
+    19,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    22,
+    0.0
+   ]
+  },
+  {
+   "name": "1elc_A0Z3",
+   "p1x": 26.538461685180664,
+   "p1y": 46.5384635925293,
+   "sidechain": [
+    19,
+    0.0
+   ],
+   "any_atom": [
+    26,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    25,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    19,
+    0.0
+   ],
+   "ctx_with_H": [
+    26,
+    1.0
+   ],
+   "protein_with_H": [
+    26,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    23,
+    0.0
+   ]
+  },
+  {
+   "name": "1epo_E2Z3",
+   "p1x": 58.92857360839844,
+   "p1y": 68.21428680419922,
+   "sidechain": [
+    24,
+    0.0
+   ],
+   "any_atom": [
+    28,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    27,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    24,
+    0.0
+   ],
+   "ctx_with_H": [
+    28,
+    1.0
+   ],
+   "protein_with_H": [
+    28,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    24,
+    0.0
+   ]
+  },
+  {
+   "name": "1f0r_A815",
+   "p1x": 41.11111068725586,
+   "p1y": 58.33333206176758,
+   "sidechain": [
+    11,
+    0.0
+   ],
+   "any_atom": [
+    18,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    17,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    11,
+    0.0
+   ],
+   "ctx_with_H": [
+    18,
+    1.0
+   ],
+   "protein_with_H": [
+    18,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    15,
+    0.0
+   ]
+  },
+  {
+   "name": "1g7f_AINZ",
+   "p1x": 61.66666793823242,
+   "p1y": 68.33333587646484,
+   "sidechain": [
+    14,
+    0.0
+   ],
+   "any_atom": [
+    18,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    16,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    14,
+    0.0
+   ],
+   "ctx_with_H": [
+    18,
+    1.0
+   ],
+   "protein_with_H": [
+    18,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    14,
+    0.0
+   ]
+  },
+  {
+   "name": "1g7g_AINX",
+   "p1x": 60.5,
+   "p1y": 65.5,
+   "sidechain": [
+    16,
+    0.0
+   ],
+   "any_atom": [
+    20,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    17,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    16,
+    0.0
+   ],
+   "ctx_with_H": [
+    20,
+    1.0
+   ],
+   "protein_with_H": [
+    20,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    16,
+    0.0
+   ]
+  },
+  {
+   "name": "1gvw_A0EM",
+   "p1x": 64.33332824707031,
+   "p1y": 64.33332824707031,
+   "sidechain": [
+    26,
+    0.0
+   ],
+   "any_atom": [
+    30,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    29,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    26,
+    0.0
+   ],
+   "ctx_with_H": [
+    30,
+    1.0
+   ],
+   "protein_with_H": [
+    30,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    37,
+    0.0
+   ]
+  },
+  {
+   "name": "1gx8_ARTL",
+   "p1x": 20.625,
+   "p1y": 32.5,
+   "sidechain": [
+    15,
+    0.0
+   ],
+   "any_atom": [
+    16,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    15,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    15,
+    0.0
+   ],
+   "ctx_with_H": [
+    16,
+    1.0
+   ],
+   "protein_with_H": [
+    16,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    15,
+    0.0
+   ]
+  },
+  {
+   "name": "1i37_ADHT",
+   "p1x": 45.45454406738281,
+   "p1y": 43.181819915771484,
+   "sidechain": [
+    21,
+    0.0
+   ],
+   "any_atom": [
+    22,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    22,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    21,
+    0.0
+   ],
+   "ctx_with_H": [
+    22,
+    1.0
+   ],
+   "protein_with_H": [
+    22,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    21,
+    0.0
+   ]
+  },
+  {
+   "name": "1kav_AFEP",
+   "p1x": 47.0588264465332,
+   "p1y": 62.352943420410156,
+   "sidechain": [
+    14,
+    0.0
+   ],
+   "any_atom": [
+    17,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    16,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    14,
+    0.0
+   ],
+   "ctx_with_H": [
+    17,
+    1.0
+   ],
+   "protein_with_H": [
+    17,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    14,
+    0.0
+   ]
+  },
+  {
+   "name": "1kdk_ADHT",
+   "p1x": 49.56521224975586,
+   "p1y": 59.565216064453125,
+   "sidechain": [
+    18,
+    0.0
+   ],
+   "any_atom": [
+    23,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    22,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    18,
+    0.0
+   ],
+   "ctx_with_H": [
+    23,
+    1.0
+   ],
+   "protein_with_H": [
+    23,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    18,
+    0.0
+   ]
+  },
+  {
+   "name": "1kv1_ABMU",
+   "p1x": 43.33333206176758,
+   "p1y": 52.22222137451172,
+   "sidechain": [
+    18,
+    1.0
+   ],
+   "any_atom": [
+    18,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    18,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    18,
+    1.0
+   ],
+   "ctx_with_H": [
+    18,
+    1.0
+   ],
+   "protein_with_H": [
+    18,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    18,
+    1.0
+   ]
+  },
+  {
+   "name": "1l8g_ADBD",
+   "p1x": 43.75,
+   "p1y": 64.375,
+   "sidechain": [
+    13,
+    0.0
+   ],
+   "any_atom": [
+    16,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    15,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    13,
+    0.0
+   ],
+   "ctx_with_H": [
+    16,
+    1.0
+   ],
+   "protein_with_H": [
+    16,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    13,
+    0.0
+   ]
+  },
+  {
+   "name": "1lhu_AEST",
+   "p1x": 38.26087188720703,
+   "p1y": 64.78260803222656,
+   "sidechain": [
+    16,
+    0.0
+   ],
+   "any_atom": [
+    23,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    21,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    16,
+    0.0
+   ],
+   "ctx_with_H": [
+    23,
+    1.0
+   ],
+   "protein_with_H": [
+    23,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    20,
+    0.0
+   ]
+  },
+  {
+   "name": "1lpg_BIMA",
+   "p1x": 34.230770111083984,
+   "p1y": 66.92308044433594,
+   "sidechain": [
+    15,
+    0.0
+   ],
+   "any_atom": [
+    26,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    20,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    15,
+    0.0
+   ],
+   "ctx_with_H": [
+    26,
+    1.0
+   ],
+   "protein_with_H": [
+    26,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    18,
+    0.0
+   ]
+  },
+  {
+   "name": "1nc1_AMTH",
+   "p1x": 58.499996185302734,
+   "p1y": 66.5,
+   "sidechain": [
+    17,
+    0.0
+   ],
+   "any_atom": [
+    20,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    19,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    17,
+    0.0
+   ],
+   "ctx_with_H": [
+    20,
+    1.0
+   ],
+   "protein_with_H": [
+    20,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    20,
+    1.0
+   ]
+  },
+  {
+   "name": "1nfx_ARDR",
+   "p1x": 47.89474105834961,
+   "p1y": 60.526309967041016,
+   "sidechain": [
+    12,
+    0.0
+   ],
+   "any_atom": [
+    19,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    18,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    12,
+    0.0
+   ],
+   "ctx_with_H": [
+    19,
+    1.0
+   ],
+   "protein_with_H": [
+    19,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    15,
+    0.0
+   ]
+  },
+  {
+   "name": "1nhz_A486",
+   "p1x": 41.36363983154297,
+   "p1y": 46.36363983154297,
+   "sidechain": [
+    20,
+    0.0
+   ],
+   "any_atom": [
+    22,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    22,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    20,
+    0.0
+   ],
+   "ctx_with_H": [
+    22,
+    1.0
+   ],
+   "protein_with_H": [
+    22,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    43,
+    0.0
+   ]
+  },
+  {
+   "name": "1nl9_A989",
+   "p1x": 53.4782600402832,
+   "p1y": 64.78260803222656,
+   "sidechain": [
+    16,
+    0.0
+   ],
+   "any_atom": [
+    23,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    21,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    16,
+    0.0
+   ],
+   "ctx_with_H": [
+    23,
+    1.0
+   ],
+   "protein_with_H": [
+    23,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    16,
+    0.0
+   ]
+  },
+  {
+   "name": "1nny_A515",
+   "p1x": 50.967742919921875,
+   "p1y": 60.967742919921875,
+   "sidechain": [
+    22,
+    0.0
+   ],
+   "any_atom": [
+    31,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    26,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    22,
+    0.0
+   ],
+   "ctx_with_H": [
+    31,
+    1.0
+   ],
+   "protein_with_H": [
+    31,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    22,
+    0.0
+   ]
+  },
+  {
+   "name": "1nwl_A964",
+   "p1x": 42.22222137451172,
+   "p1y": 52.77777862548828,
+   "sidechain": [
+    15,
+    0.0
+   ],
+   "any_atom": [
+    18,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    16,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    15,
+    0.0
+   ],
+   "ctx_with_H": [
+    18,
+    1.0
+   ],
+   "protein_with_H": [
+    18,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    17,
+    0.0
+   ]
+  },
+  {
+   "name": "1ony_A588",
+   "p1x": 54.79999923706055,
+   "p1y": 50.0,
+   "sidechain": [
+    17,
+    0.0
+   ],
+   "any_atom": [
+    25,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    22,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    17,
+    0.0
+   ],
+   "ctx_with_H": [
+    25,
+    1.0
+   ],
+   "protein_with_H": [
+    25,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    17,
+    0.0
+   ]
+  },
+  {
+   "name": "1pyn_A941",
+   "p1x": 51.111106872558594,
+   "p1y": 60.74073791503906,
+   "sidechain": [
+    18,
+    0.0
+   ],
+   "any_atom": [
+    27,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    23,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    18,
+    0.0
+   ],
+   "ctx_with_H": [
+    27,
+    1.0
+   ],
+   "protein_with_H": [
+    27,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    18,
+    0.0
+   ]
+  },
+  {
+   "name": "1qb1_A974",
+   "p1x": 43.043479919433594,
+   "p1y": 63.913047790527344,
+   "sidechain": [
+    12,
+    0.0
+   ],
+   "any_atom": [
+    23,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    17,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    12,
+    0.0
+   ],
+   "ctx_with_H": [
+    23,
+    1.0
+   ],
+   "protein_with_H": [
+    23,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    16,
+    0.0
+   ]
+  },
+  {
+   "name": "1qkt_AEST",
+   "p1x": 33.88888931274414,
+   "p1y": 48.88888931274414,
+   "sidechain": [
+    17,
+    0.0
+   ],
+   "any_atom": [
+    18,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    18,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    17,
+    0.0
+   ],
+   "ctx_with_H": [
+    18,
+    1.0
+   ],
+   "protein_with_H": [
+    18,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    17,
+    0.0
+   ]
+  },
+  {
+   "name": "1qxk_A429",
+   "p1x": 54.7826042175293,
+   "p1y": 59.13043212890625,
+   "sidechain": [
+    16,
+    0.0
+   ],
+   "any_atom": [
+    23,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    19,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    16,
+    0.0
+   ],
+   "ctx_with_H": [
+    23,
+    1.0
+   ],
+   "protein_with_H": [
+    23,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    16,
+    0.0
+   ]
+  },
+  {
+   "name": "1r0p_AKSA",
+   "p1x": 59.04762268066406,
+   "p1y": 67.14286041259766,
+   "sidechain": [
+    13,
+    0.0
+   ],
+   "any_atom": [
+    21,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    17,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    13,
+    0.0
+   ],
+   "ctx_with_H": [
+    21,
+    1.0
+   ],
+   "protein_with_H": [
+    21,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    13,
+    0.0
+   ]
+  },
+  {
+   "name": "1sj0_AE4D",
+   "p1x": 55.19999694824219,
+   "p1y": 61.599998474121094,
+   "sidechain": [
+    23,
+    0.0
+   ],
+   "any_atom": [
+    25,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    24,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    23,
+    0.0
+   ],
+   "ctx_with_H": [
+    25,
+    1.0
+   ],
+   "protein_with_H": [
+    25,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    23,
+    0.0
+   ]
+  },
+  {
+   "name": "1sqn_ANDR",
+   "p1x": 41.42857360839844,
+   "p1y": 41.42857360839844,
+   "sidechain": [
+    20,
+    0.0
+   ],
+   "any_atom": [
+    21,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    21,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    20,
+    0.0
+   ],
+   "ctx_with_H": [
+    21,
+    1.0
+   ],
+   "protein_with_H": [
+    21,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    20,
+    0.0
+   ]
+  },
+  {
+   "name": "1v2n_TBBA",
+   "p1x": 45.0,
+   "p1y": 81.50000762939453,
+   "sidechain": [
+    10,
+    0.0
+   ],
+   "any_atom": [
+    21,
+    0.0
+   ],
+   "sidechain_plus_CA": [
+    14,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    10,
+    0.0
+   ],
+   "ctx_with_H": [
+    21,
+    0.0
+   ],
+   "protein_with_H": [
+    21,
+    0.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    14,
+    0.0
+   ]
+  },
+  {
+   "name": "1xjd_ASTU",
+   "p1x": 60.434783935546875,
+   "p1y": 76.9565200805664,
+   "sidechain": [
+    16,
+    0.0
+   ],
+   "any_atom": [
+    23,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    21,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    16,
+    0.0
+   ],
+   "ctx_with_H": [
+    23,
+    1.0
+   ],
+   "protein_with_H": [
+    23,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    16,
+    0.0
+   ]
+  },
+  {
+   "name": "1xws_ABI1",
+   "p1x": 63.684207916259766,
+   "p1y": 85.26315307617188,
+   "sidechain": [
+    17,
+    0.0
+   ],
+   "any_atom": [
+    19,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    18,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    17,
+    0.0
+   ],
+   "ctx_with_H": [
+    19,
+    1.0
+   ],
+   "protein_with_H": [
+    19,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    19,
+    1.0
+   ]
+  },
+  {
+   "name": "1yc1_A4BC",
+   "p1x": 62.94118118286133,
+   "p1y": 76.47058868408203,
+   "sidechain": [
+    15,
+    0.0
+   ],
+   "any_atom": [
+    17,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    16,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    15,
+    0.0
+   ],
+   "ctx_with_H": [
+    17,
+    1.0
+   ],
+   "protein_with_H": [
+    17,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    15,
+    0.0
+   ]
+  },
+  {
+   "name": "1yqj_A6NP",
+   "p1x": 37.19999694824219,
+   "p1y": 55.19999313354492,
+   "sidechain": [
+    18,
+    0.0
+   ],
+   "any_atom": [
+    25,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    22,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    18,
+    0.0
+   ],
+   "ctx_with_H": [
+    25,
+    1.0
+   ],
+   "protein_with_H": [
+    25,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    21,
+    0.0
+   ]
+  },
+  {
+   "name": "1z95_A198",
+   "p1x": 47.60000228881836,
+   "p1y": 47.599998474121094,
+   "sidechain": [
+    23,
+    0.0
+   ],
+   "any_atom": [
+    25,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    24,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    23,
+    0.0
+   ],
+   "ctx_with_H": [
+    25,
+    1.0
+   ],
+   "protein_with_H": [
+    25,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    27,
+    0.0
+   ]
+  },
+  {
+   "name": "1zp8_AAB2",
+   "p1x": 17.647058486938477,
+   "p1y": 49.411766052246094,
+   "sidechain": [
+    13,
+    0.0
+   ],
+   "any_atom": [
+    17,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    16,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    13,
+    0.0
+   ],
+   "ctx_with_H": [
+    17,
+    1.0
+   ],
+   "protein_with_H": [
+    17,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    13,
+    0.0
+   ]
+  },
+  {
+   "name": "2ayr_AL4G",
+   "p1x": 56.78571319580078,
+   "p1y": 58.57142639160156,
+   "sidechain": [
+    24,
+    0.0
+   ],
+   "any_atom": [
+    28,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    26,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    24,
+    0.0
+   ],
+   "ctx_with_H": [
+    28,
+    1.0
+   ],
+   "protein_with_H": [
+    28,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    24,
+    0.0
+   ]
+  },
+  {
+   "name": "2b07_A598",
+   "p1x": 43.0,
+   "p1y": 65.0,
+   "sidechain": [
+    16,
+    0.0
+   ],
+   "any_atom": [
+    20,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    18,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    16,
+    0.0
+   ],
+   "ctx_with_H": [
+    20,
+    1.0
+   ],
+   "protein_with_H": [
+    20,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    16,
+    0.0
+   ]
+  },
+  {
+   "name": "2b4l_ABET",
+   "p1x": 27.272727966308594,
+   "p1y": 20.0,
+   "sidechain": [
+    10,
+    0.0
+   ],
+   "any_atom": [
+    11,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    11,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    10,
+    0.0
+   ],
+   "ctx_with_H": [
+    11,
+    1.0
+   ],
+   "protein_with_H": [
+    11,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    48,
+    0.0
+   ]
+  },
+  {
+   "name": "2baj_A1PP",
+   "p1x": 48.333335876464844,
+   "p1y": 65.0,
+   "sidechain": [
+    21,
+    0.0
+   ],
+   "any_atom": [
+    24,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    24,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    21,
+    0.0
+   ],
+   "ctx_with_H": [
+    24,
+    1.0
+   ],
+   "protein_with_H": [
+    24,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    21,
+    0.0
+   ]
+  },
+  {
+   "name": "2bak_AAQZ",
+   "p1x": 51.599998474121094,
+   "p1y": 72.80000305175781,
+   "sidechain": [
+    21,
+    0.0
+   ],
+   "any_atom": [
+    25,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    24,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    21,
+    0.0
+   ],
+   "ctx_with_H": [
+    25,
+    1.0
+   ],
+   "protein_with_H": [
+    25,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    21,
+    0.0
+   ]
+  },
+  {
+   "name": "2bal_APQA",
+   "p1x": 49.0476188659668,
+   "p1y": 48.095245361328125,
+   "sidechain": [
+    16,
+    0.0
+   ],
+   "any_atom": [
+    21,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    18,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    16,
+    0.0
+   ],
+   "ctx_with_H": [
+    21,
+    1.0
+   ],
+   "protein_with_H": [
+    21,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    26,
+    0.0
+   ]
+  },
+  {
+   "name": "2bsm_ABSM",
+   "p1x": 55.45454788208008,
+   "p1y": 68.63636016845703,
+   "sidechain": [
+    18,
+    0.0
+   ],
+   "any_atom": [
+    22,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    21,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    18,
+    0.0
+   ],
+   "ctx_with_H": [
+    22,
+    1.0
+   ],
+   "protein_with_H": [
+    22,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    18,
+    0.0
+   ]
+  },
+  {
+   "name": "2cet_APGI",
+   "p1x": 30.52631378173828,
+   "p1y": 63.684207916259766,
+   "sidechain": [
+    19,
+    1.0
+   ],
+   "any_atom": [
+    19,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    19,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    19,
+    1.0
+   ],
+   "ctx_with_H": [
+    19,
+    1.0
+   ],
+   "protein_with_H": [
+    19,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    23,
+    0.0
+   ]
+  },
+  {
+   "name": "2e2r_A2OH",
+   "p1x": 53.18181610107422,
+   "p1y": 57.727272033691406,
+   "sidechain": [
+    21,
+    0.0
+   ],
+   "any_atom": [
+    22,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    21,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    21,
+    0.0
+   ],
+   "ctx_with_H": [
+    22,
+    1.0
+   ],
+   "protein_with_H": [
+    22,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    38,
+    0.0
+   ]
+  },
+  {
+   "name": "2f6t_A1C2",
+   "p1x": 43.33333206176758,
+   "p1y": 62.222225189208984,
+   "sidechain": [
+    14,
+    0.0
+   ],
+   "any_atom": [
+    18,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    17,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    14,
+    0.0
+   ],
+   "ctx_with_H": [
+    18,
+    1.0
+   ],
+   "protein_with_H": [
+    18,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    32,
+    0.0
+   ]
+  },
+  {
+   "name": "2fdp_AFRP",
+   "p1x": 58.518516540527344,
+   "p1y": 52.22222137451172,
+   "sidechain": [
+    20,
+    0.0
+   ],
+   "any_atom": [
+    27,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    25,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    20,
+    0.0
+   ],
+   "ctx_with_H": [
+    27,
+    1.0
+   ],
+   "protein_with_H": [
+    27,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    20,
+    0.0
+   ]
+  },
+  {
+   "name": "2g94_AZPQ",
+   "p1x": 57.74192810058594,
+   "p1y": 55.806453704833984,
+   "sidechain": [
+    22,
+    0.0
+   ],
+   "any_atom": [
+    31,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    28,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    22,
+    0.0
+   ],
+   "ctx_with_H": [
+    31,
+    1.0
+   ],
+   "protein_with_H": [
+    31,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    22,
+    0.0
+   ]
+  },
+  {
+   "name": "2hah_A3TL",
+   "p1x": 56.923072814941406,
+   "p1y": 61.5384635925293,
+   "sidechain": [
+    9,
+    0.0
+   ],
+   "any_atom": [
+    13,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    12,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    9,
+    0.0
+   ],
+   "ctx_with_H": [
+    13,
+    1.0
+   ],
+   "protein_with_H": [
+    13,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    9,
+    0.0
+   ]
+  },
+  {
+   "name": "2ihq_ALG7",
+   "p1x": 69.0,
+   "p1y": 50.0,
+   "sidechain": [
+    19,
+    0.0
+   ],
+   "any_atom": [
+    20,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    20,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    19,
+    0.0
+   ],
+   "ctx_with_H": [
+    20,
+    1.0
+   ],
+   "protein_with_H": [
+    20,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    19,
+    0.0
+   ]
+  },
+  {
+   "name": "2iwx_AM1S",
+   "p1x": 31.33333396911621,
+   "p1y": 67.33334350585938,
+   "sidechain": [
+    14,
+    0.0
+   ],
+   "any_atom": [
+    15,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    15,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    14,
+    0.0
+   ],
+   "ctx_with_H": [
+    15,
+    1.0
+   ],
+   "protein_with_H": [
+    15,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    14,
+    0.0
+   ]
+  },
+  {
+   "name": "2j2u_AGSQ",
+   "p1x": 45.000003814697266,
+   "p1y": 80.0,
+   "sidechain": [
+    13,
+    0.0
+   ],
+   "any_atom": [
+    22,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    19,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    13,
+    0.0
+   ],
+   "ctx_with_H": [
+    22,
+    1.0
+   ],
+   "protein_with_H": [
+    22,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    13,
+    0.0
+   ]
+  },
+  {
+   "name": "2j34_AGS6",
+   "p1x": 45.714290618896484,
+   "p1y": 70.4761962890625,
+   "sidechain": [
+    13,
+    0.0
+   ],
+   "any_atom": [
+    21,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    18,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    13,
+    0.0
+   ],
+   "ctx_with_H": [
+    21,
+    1.0
+   ],
+   "protein_with_H": [
+    21,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    17,
+    0.0
+   ]
+  },
+  {
+   "name": "2j4i_AGSJ",
+   "p1x": 45.999996185302734,
+   "p1y": 82.5,
+   "sidechain": [
+    14,
+    0.0
+   ],
+   "any_atom": [
+    20,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    20,
+    1.0
+   ],
+   "sidechain_keep_OXT": [
+    14,
+    0.0
+   ],
+   "ctx_with_H": [
+    20,
+    1.0
+   ],
+   "protein_with_H": [
+    20,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    18,
+    0.0
+   ]
+  },
+  {
+   "name": "2j94_AG15",
+   "p1x": 52.857147216796875,
+   "p1y": 70.47618865966797,
+   "sidechain": [
+    13,
+    0.0
+   ],
+   "any_atom": [
+    21,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    18,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    13,
+    0.0
+   ],
+   "ctx_with_H": [
+    21,
+    1.0
+   ],
+   "protein_with_H": [
+    21,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    18,
+    0.0
+   ]
+  },
+  {
+   "name": "2j95_AGSX",
+   "p1x": 37.5,
+   "p1y": 63.0,
+   "sidechain": [
+    12,
+    0.0
+   ],
+   "any_atom": [
+    20,
+    1.0
+   ],
+   "sidechain_plus_CA": [
+    19,
+    0.0
+   ],
+   "sidechain_keep_OXT": [
+    12,
+    0.0
+   ],
+   "ctx_with_H": [
+    20,
+    1.0
+   ],
+   "protein_with_H": [
+    20,
+    1.0
+   ],
+   "sidechain_ctx_whole_entry": [
+    16,
+    0.0
+   ]
+  }
+ ]
+}

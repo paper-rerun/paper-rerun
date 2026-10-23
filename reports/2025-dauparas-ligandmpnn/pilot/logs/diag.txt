@@ -1,0 +1,42 @@
+=== time: Wed Oct 21 20:04:22 -03 2026 ===
+--- gpu run log ---
+  183/468 done, 1511s
+  243/468 done, 1728s
+  303/468 done, 1891s
+  363/468 done, 2071s
+  423/468 done, 2249s
+  468/468 done, 2409s
+finished: 468/468, 0 failed, 2410s
+=== protein_mpnn_32 20:03:31 ===
+--- cpu run log ---
+=== ligand_mpnn 19:10:49 ===
+ligand_mpnn: 468 structures, 468 to do
+--- stats counts ---
+outputs/ligand_mpnn: 468
+outputs/protein_mpnn_32: 0
+outputs/protein_mpnn_48: 0
+outputs_cpu/ligand_mpnn: 22
+outputs_cpu/protein_mpnn_32: 0
+outputs_cpu/protein_mpnn_48: 0
+--- seqs counts (cpu ligand) ---
+_multi.json
+backbones
+packed
+seqs
+stats
+--- processes ---
+your 131072x1 screen size is bogus. expect trouble
+  11243       00:49 10.9 16036 .venv/bin/python run_benchmark.py --model_type protein_mpnn_32 --chunk 60
+--- gpu state ---
+580 MiB, 21 %
+--- gpu lock queue ---
+your 131072x1 screen size is bogus. expect trouble
+   01:40:21 bash -lc cd /mnt/e/Ciencia/artigos/2025-dauparas-ligandmpnn && flock /mnt/e/Ci
+   01:40:21 flock /mnt/e/Ciencia/.gpu.lock bash run_all.sh
+   01:02:48 /usr/bin/time -v flock /mnt/e/Ciencia/.gpu.lock bash -c echo got GPU lock $(da
+   01:02:48 flock /mnt/e/Ciencia/.gpu.lock bash -c echo got GPU lock $(date); python -I sc
+      48:12 bash -lc cd /mnt/e/Ciencia/artigos/2025-stringer-cellpose3 && source .venv/bin
+      48:12 /usr/bin/time -v flock /mnt/e/Ciencia/.gpu.lock python run_real.py
+      48:12 flock /mnt/e/Ciencia/.gpu.lock python run_real.py
+      46:28 bash -lc source /mnt/e/Ciencia/artigos/2025-zhai-plantcad/env/activate.sh && C
+      46:28 flock /mnt/e/Ciencia/.gpu.lock python scripts/bench_l32.py 8 32

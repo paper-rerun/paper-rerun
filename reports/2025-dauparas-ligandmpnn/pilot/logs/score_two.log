@@ -1,0 +1,24 @@
+########## context=all ##########
+ligand_mpnn            small_molecule  n=316 median=0.5784 mean=0.5847 pooled=0.5712 missing=0
+ligand_mpnn            nucleotide      n= 74 median=0.5045 mean=0.4986 pooled=0.5067 missing=0
+ligand_mpnn            metal           n= 82 median=0.5974 mean=0.6078 pooled=0.5960 missing=1
+protein_mpnn_32        small_molecule  n=316 median=0.4988 mean=0.4965 pooled=0.4874 missing=0
+protein_mpnn_32        nucleotide      n= 74 median=0.3152 mean=0.3274 pooled=0.3363 missing=0
+protein_mpnn_32        metal           n= 82 median=0.3969 mean=0.3883 pooled=0.4048 missing=1
+wrote /mnt/e/Ciencia/artigos/2025-dauparas-ligandmpnn/logs/recovery_all.json
+########## context=metal ##########
+ligand_mpnn            small_molecule  n= 49 median=0.5000 mean=0.5125 pooled=0.5215 missing=0
+ligand_mpnn            nucleotide      n= 22 median=0.6619 mean=0.6604 pooled=0.6940 missing=0
+ligand_mpnn            metal           n= 82 median=0.7817 mean=0.7548 pooled=0.6994 missing=1
+protein_mpnn_32        small_molecule  n= 49 median=0.4143 mean=0.4540 pooled=0.4630 missing=0
+protein_mpnn_32        nucleotide      n= 22 median=0.6167 mean=0.5147 pooled=0.5720 missing=0
+protein_mpnn_32        metal           n= 82 median=0.3787 mean=0.4075 pooled=0.4264 missing=1
+wrote /mnt/e/Ciencia/artigos/2025-dauparas-ligandmpnn/logs/recovery_metal.json
+########## context=largest ##########
+ligand_mpnn            small_molecule  n=316 median=0.6089 mean=0.6027 pooled=0.5975 missing=0
+ligand_mpnn            nucleotide      n= 49 median=0.5750 mean=0.5420 pooled=0.5816 missing=0
+ligand_mpnn            metal           n= 78 median=0.6025 mean=0.6249 pooled=0.6044 missing=1
+protein_mpnn_32        small_molecule  n=316 median=0.5138 mean=0.5090 pooled=0.5030 missing=0
+protein_mpnn_32        nucleotide      n= 49 median=0.3000 mean=0.3050 pooled=0.3510 missing=0
+protein_mpnn_32        metal           n= 78 median=0.4333 mean=0.4334 pooled=0.4557 missing=1
+wrote /mnt/e/Ciencia/artigos/2025-dauparas-ligandmpnn/logs/recovery_largest.json

@@ -1,0 +1,898 @@
+{
+ "tally": {
+  "asym/all_nonprotein": 30,
+  "asym/nucleic_only": 29,
+  "biounit1/all_nonprotein": 34,
+  "biounit1/nucleic_only": 30
+ },
+ "detail": [
+  {
+   "id": "1a0a",
+   "n_true": 30,
+   "asym": {
+    "all_nonprotein": 30,
+    "nucleic_only": 30
+   },
+   "biounit1": {
+    "all_nonprotein": 30,
+    "nucleic_only": 30
+   }
+  },
+  {
+   "id": "1am9",
+   "n_true": 33,
+   "asym": {
+    "all_nonprotein": 66,
+    "nucleic_only": 66
+   },
+   "biounit1": {
+    "all_nonprotein": 66,
+    "nucleic_only": 66
+   }
+  },
+  {
+   "id": "1an4",
+   "n_true": 37,
+   "asym": {
+    "all_nonprotein": 37,
+    "nucleic_only": 37
+   },
+   "biounit1": {
+    "all_nonprotein": 37,
+    "nucleic_only": 37
+   }
+  },
+  {
+   "id": "1b01",
+   "n_true": 20,
+   "asym": {
+    "all_nonprotein": 20,
+    "nucleic_only": 20
+   },
+   "biounit1": {
+    "all_nonprotein": 20,
+    "nucleic_only": 20
+   }
+  },
+  {
+   "id": "1bc7",
+   "n_true": 27,
+   "asym": {
+    "all_nonprotein": 27,
+    "nucleic_only": 27
+   },
+   "biounit1": {
+    "all_nonprotein": 27,
+    "nucleic_only": 27
+   }
+  },
+  {
+   "id": "1bc8",
+   "n_true": 28,
+   "asym": {
+    "all_nonprotein": 28,
+    "nucleic_only": 26
+   },
+   "biounit1": {
+    "all_nonprotein": 28,
+    "nucleic_only": 26
+   }
+  },
+  {
+   "id": "1di2",
+   "n_true": 28,
+   "asym": {
+    "all_nonprotein": 28,
+    "nucleic_only": 28
+   },
+   "biounit1": {
+    "all_nonprotein": 18,
+    "nucleic_only": 18
+   }
+  },
+  {
+   "id": "1ec6",
+   "n_true": 29,
+   "asym": {
+    "all_nonprotein": 56,
+    "nucleic_only": 56
+   },
+   "biounit1": {
+    "all_nonprotein": 29,
+    "nucleic_only": 29
+   }
+  },
+  {
+   "id": "1hlo",
+   "n_true": 29,
+   "asym": {
+    "all_nonprotein": 29,
+    "nucleic_only": 29
+   },
+   "biounit1": {
+    "all_nonprotein": 29,
+    "nucleic_only": 29
+   }
+  },
+  {
+   "id": "1hlv",
+   "n_true": 49,
+   "asym": {
+    "all_nonprotein": 49,
+    "nucleic_only": 49
+   },
+   "biounit1": {
+    "all_nonprotein": 49,
+    "nucleic_only": 49
+   }
+  },
+  {
+   "id": "1i3j",
+   "n_true": 60,
+   "asym": {
+    "all_nonprotein": 60,
+    "nucleic_only": 55
+   },
+   "biounit1": {
+    "all_nonprotein": 60,
+    "nucleic_only": 55
+   }
+  },
+  {
+   "id": "1pvi",
+   "n_true": 63,
+   "asym": {
+    "all_nonprotein": 63,
+    "nucleic_only": 63
+   },
+   "biounit1": {
+    "all_nonprotein": 63,
+    "nucleic_only": 63
+   }
+  },
+  {
+   "id": "1qum",
+   "n_true": 39,
+   "asym": {
+    "all_nonprotein": 40,
+    "nucleic_only": 31
+   },
+   "biounit1": {
+    "all_nonprotein": 40,
+    "nucleic_only": 31
+   }
+  },
+  {
+   "id": "1sfu",
+   "n_true": 10,
+   "asym": {
+    "all_nonprotein": 19,
+    "nucleic_only": 19
+   },
+   "biounit1": {
+    "all_nonprotein": 19,
+    "nucleic_only": 19
+   }
+  },
+  {
+   "id": "1u3e",
+   "n_true": 70,
+   "asym": {
+    "all_nonprotein": 89,
+    "nucleic_only": 69
+   },
+   "biounit1": {
+    "all_nonprotein": 89,
+    "nucleic_only": 69
+   }
+  },
+  {
+   "id": "1xpx",
+   "n_true": 13,
+   "asym": {
+    "all_nonprotein": 13,
+    "nucleic_only": 13
+   },
+   "biounit1": {
+    "all_nonprotein": 13,
+    "nucleic_only": 13
+   }
+  },
+  {
+   "id": "1yo5",
+   "n_true": 28,
+   "asym": {
+    "all_nonprotein": 28,
+    "nucleic_only": 28
+   },
+   "biounit1": {
+    "all_nonprotein": 28,
+    "nucleic_only": 28
+   }
+  },
+  {
+   "id": "1zx4",
+   "n_true": 25,
+   "asym": {
+    "all_nonprotein": 33,
+    "nucleic_only": 26
+   },
+   "biounit1": {
+    "all_nonprotein": 33,
+    "nucleic_only": 26
+   }
+  },
+  {
+   "id": "2c5r",
+   "n_true": 29,
+   "asym": {
+    "all_nonprotein": 29,
+    "nucleic_only": 14
+   },
+   "biounit1": {
+    "all_nonprotein": 29,
+    "nucleic_only": 14
+   }
+  },
+  {
+   "id": "2c62",
+   "n_true": 43,
+   "asym": {
+    "all_nonprotein": 46,
+    "nucleic_only": 43
+   },
+   "biounit1": {
+    "all_nonprotein": 46,
+    "nucleic_only": 43
+   }
+  },
+  {
+   "id": "2nq9",
+   "n_true": 40,
+   "asym": {
+    "all_nonprotein": 41,
+    "nucleic_only": 33
+   },
+   "biounit1": {
+    "all_nonprotein": 41,
+    "nucleic_only": 33
+   }
+  },
+  {
+   "id": "2o4a",
+   "n_true": 16,
+   "asym": {
+    "all_nonprotein": 16,
+    "nucleic_only": 16
+   },
+   "biounit1": {
+    "all_nonprotein": 16,
+    "nucleic_only": 16
+   }
+  },
+  {
+   "id": "2p5l",
+   "n_true": 21,
+   "asym": {
+    "all_nonprotein": 106,
+    "nucleic_only": 84
+   },
+   "biounit1": {
+    "all_nonprotein": 47,
+    "nucleic_only": 42
+   }
+  },
+  {
+   "id": "2xdb",
+   "n_true": 38,
+   "asym": {
+    "all_nonprotein": 51,
+    "nucleic_only": 31
+   },
+   "biounit1": {
+    "all_nonprotein": 51,
+    "nucleic_only": 31
+   }
+  },
+  {
+   "id": "2ypb",
+   "n_true": 30,
+   "asym": {
+    "all_nonprotein": 30,
+    "nucleic_only": 30
+   },
+   "biounit1": {
+    "all_nonprotein": 30,
+    "nucleic_only": 30
+   }
+  },
+  {
+   "id": "2zhg",
+   "n_true": 40,
+   "asym": {
+    "all_nonprotein": 27,
+    "nucleic_only": 11
+   },
+   "biounit1": {
+    "all_nonprotein": 27,
+    "nucleic_only": 11
+   }
+  },
+  {
+   "id": "2zio",
+   "n_true": 53,
+   "asym": {
+    "all_nonprotein": 33,
+    "nucleic_only": 0
+   },
+   "biounit1": {
+    "all_nonprotein": 33,
+    "nucleic_only": 0
+   }
+  },
+  {
+   "id": "3adl",
+   "n_true": 8,
+   "asym": {
+    "all_nonprotein": 8,
+    "nucleic_only": 8
+   },
+   "biounit1": {
+    "all_nonprotein": 8,
+    "nucleic_only": 8
+   }
+  },
+  {
+   "id": "3bsu",
+   "n_true": 7,
+   "asym": {
+    "all_nonprotein": 97,
+    "nucleic_only": 88
+   },
+   "biounit1": {
+    "all_nonprotein": 50,
+    "nucleic_only": 41
+   }
+  },
+  {
+   "id": "3fc3",
+   "n_true": 104,
+   "asym": {
+    "all_nonprotein": 111,
+    "nucleic_only": 75
+   },
+   "biounit1": {
+    "all_nonprotein": 111,
+    "nucleic_only": 75
+   }
+  },
+  {
+   "id": "3g73",
+   "n_true": 24,
+   "asym": {
+    "all_nonprotein": 50,
+    "nucleic_only": 44
+   },
+   "biounit1": {
+    "all_nonprotein": 50,
+    "nucleic_only": 44
+   }
+  },
+  {
+   "id": "3gna",
+   "n_true": 22,
+   "asym": {
+    "all_nonprotein": 9,
+    "nucleic_only": 9
+   },
+   "biounit1": {
+    "all_nonprotein": 9,
+    "nucleic_only": 9
+   }
+  },
+  {
+   "id": "3gx4",
+   "n_true": 25,
+   "asym": {
+    "all_nonprotein": 33,
+    "nucleic_only": 25
+   },
+   "biounit1": {
+    "all_nonprotein": 33,
+    "nucleic_only": 25
+   }
+  },
+  {
+   "id": "3lsr",
+   "n_true": 12,
+   "asym": {
+    "all_nonprotein": 28,
+    "nucleic_only": 16
+   },
+   "biounit1": {
+    "all_nonprotein": 28,
+    "nucleic_only": 16
+   }
+  },
+  {
+   "id": "3mj0",
+   "n_true": 19,
+   "asym": {
+    "all_nonprotein": 17,
+    "nucleic_only": 9
+   },
+   "biounit1": {
+    "all_nonprotein": 17,
+    "nucleic_only": 9
+   }
+  },
+  {
+   "id": "3mva",
+   "n_true": 66,
+   "asym": {
+    "all_nonprotein": 66,
+    "nucleic_only": 66
+   },
+   "biounit1": {
+    "all_nonprotein": 66,
+    "nucleic_only": 66
+   }
+  },
+  {
+   "id": "3n7q",
+   "n_true": 10,
+   "asym": {
+    "all_nonprotein": 27,
+    "nucleic_only": 19
+   },
+   "biounit1": {
+    "all_nonprotein": 27,
+    "nucleic_only": 19
+   }
+  },
+  {
+   "id": "3olt",
+   "n_true": 25,
+   "asym": {
+    "all_nonprotein": 253,
+    "nucleic_only": 0
+   },
+   "biounit1": {
+    "all_nonprotein": 253,
+    "nucleic_only": 0
+   }
+  },
+  {
+   "id": "3vok",
+   "n_true": 14,
+   "asym": {
+    "all_nonprotein": 4,
+    "nucleic_only": 4
+   },
+   "biounit1": {
+    "all_nonprotein": 4,
+    "nucleic_only": 4
+   }
+  },
+  {
+   "id": "3vwb",
+   "n_true": 19,
+   "asym": {
+    "all_nonprotein": 19,
+    "nucleic_only": 19
+   },
+   "biounit1": {
+    "all_nonprotein": 19,
+    "nucleic_only": 19
+   }
+  },
+  {
+   "id": "3zp5",
+   "n_true": 9,
+   "asym": {
+    "all_nonprotein": 27,
+    "nucleic_only": 27
+   },
+   "biounit1": {
+    "all_nonprotein": 27,
+    "nucleic_only": 27
+   }
+  },
+  {
+   "id": "4ato",
+   "n_true": 32,
+   "asym": {
+    "all_nonprotein": 33,
+    "nucleic_only": 32
+   },
+   "biounit1": {
+    "all_nonprotein": 33,
+    "nucleic_only": 32
+   }
+  },
+  {
+   "id": "4bhm",
+   "n_true": 46,
+   "asym": {
+    "all_nonprotein": 126,
+    "nucleic_only": 104
+   },
+   "biounit1": {
+    "all_nonprotein": 126,
+    "nucleic_only": 104
+   }
+  },
+  {
+   "id": "4bqa",
+   "n_true": 24,
+   "asym": {
+    "all_nonprotein": 73,
+    "nucleic_only": 73
+   },
+   "biounit1": {
+    "all_nonprotein": 25,
+    "nucleic_only": 25
+   }
+  },
+  {
+   "id": "4e0p",
+   "n_true": 57,
+   "asym": {
+    "all_nonprotein": 62,
+    "nucleic_only": 58
+   },
+   "biounit1": {
+    "all_nonprotein": 62,
+    "nucleic_only": 58
+   }
+  },
+  {
+   "id": "4nid",
+   "n_true": 23,
+   "asym": {
+    "all_nonprotein": 41,
+    "nucleic_only": 19
+   },
+   "biounit1": {
+    "all_nonprotein": 41,
+    "nucleic_only": 19
+   }
+  },
+  {
+   "id": "4wal",
+   "n_true": 41,
+   "asym": {
+    "all_nonprotein": 48,
+    "nucleic_only": 41
+   },
+   "biounit1": {
+    "all_nonprotein": 48,
+    "nucleic_only": 41
+   }
+  },
+  {
+   "id": "5cm3",
+   "n_true": 42,
+   "asym": {
+    "all_nonprotein": 42,
+    "nucleic_only": 42
+   },
+   "biounit1": {
+    "all_nonprotein": 42,
+    "nucleic_only": 42
+   }
+  },
+  {
+   "id": "5haw",
+   "n_true": 31,
+   "asym": {
+    "all_nonprotein": 15,
+    "nucleic_only": 15
+   },
+   "biounit1": {
+    "all_nonprotein": 15,
+    "nucleic_only": 15
+   }
+  },
+  {
+   "id": "5mht",
+   "n_true": 52,
+   "asym": {
+    "all_nonprotein": 71,
+    "nucleic_only": 50
+   },
+   "biounit1": {
+    "all_nonprotein": 71,
+    "nucleic_only": 50
+   }
+  },
+  {
+   "id": "5vc9",
+   "n_true": 29,
+   "asym": {
+    "all_nonprotein": 65,
+    "nucleic_only": 31
+   },
+   "biounit1": {
+    "all_nonprotein": 29,
+    "nucleic_only": 13
+   }
+  },
+  {
+   "id": "5w9s",
+   "n_true": 33,
+   "asym": {
+    "all_nonprotein": 34,
+    "nucleic_only": 16
+   },
+   "biounit1": {
+    "all_nonprotein": 34,
+    "nucleic_only": 16
+   }
+  },
+  {
+   "id": "5ybd",
+   "n_true": 26,
+   "asym": {
+    "all_nonprotein": 54,
+    "nucleic_only": 54
+   },
+   "biounit1": {
+    "all_nonprotein": 26,
+    "nucleic_only": 26
+   }
+  },
+  {
+   "id": "6bjv",
+   "n_true": 61,
+   "asym": {
+    "all_nonprotein": 61,
+    "nucleic_only": 61
+   },
+   "biounit1": {
+    "all_nonprotein": 61,
+    "nucleic_only": 61
+   }
+  },
+  {
+   "id": "6dnw",
+   "n_true": 81,
+   "asym": {
+    "all_nonprotein": 81,
+    "nucleic_only": 72
+   },
+   "biounit1": {
+    "all_nonprotein": 81,
+    "nucleic_only": 72
+   }
+  },
+  {
+   "id": "6fqr",
+   "n_true": 17,
+   "asym": {
+    "all_nonprotein": 17,
+    "nucleic_only": 17
+   },
+   "biounit1": {
+    "all_nonprotein": 17,
+    "nucleic_only": 17
+   }
+  },
+  {
+   "id": "6gdr",
+   "n_true": 59,
+   "asym": {
+    "all_nonprotein": 67,
+    "nucleic_only": 67
+   },
+   "biounit1": {
+    "all_nonprotein": 67,
+    "nucleic_only": 67
+   }
+  },
+  {
+   "id": "6kbs",
+   "n_true": 35,
+   "asym": {
+    "all_nonprotein": 30,
+    "nucleic_only": 30
+   },
+   "biounit1": {
+    "all_nonprotein": 30,
+    "nucleic_only": 30
+   }
+  },
+  {
+   "id": "6lff",
+   "n_true": 12,
+   "asym": {
+    "all_nonprotein": 38,
+    "nucleic_only": 26
+   },
+   "biounit1": {
+    "all_nonprotein": 20,
+    "nucleic_only": 8
+   }
+  },
+  {
+   "id": "6lmj",
+   "n_true": 15,
+   "asym": {
+    "all_nonprotein": 15,
+    "nucleic_only": 15
+   },
+   "biounit1": {
+    "all_nonprotein": 15,
+    "nucleic_only": 15
+   }
+  },
+  {
+   "id": "6od4",
+   "n_true": 25,
+   "asym": {
+    "all_nonprotein": 26,
+    "nucleic_only": 26
+   },
+   "biounit1": {
+    "all_nonprotein": 25,
+    "nucleic_only": 25
+   }
+  },
+  {
+   "id": "6wdz",
+   "n_true": 28,
+   "asym": {
+    "all_nonprotein": 104,
+    "nucleic_only": 102
+   },
+   "biounit1": {
+    "all_nonprotein": 28,
+    "nucleic_only": 27
+   }
+  },
+  {
+   "id": "6x70",
+   "n_true": 69,
+   "asym": {
+    "all_nonprotein": 69,
+    "nucleic_only": 68
+   },
+   "biounit1": {
+    "all_nonprotein": 69,
+    "nucleic_only": 68
+   }
+  },
+  {
+   "id": "6y93",
+   "n_true": 27,
+   "asym": {
+    "all_nonprotein": 54,
+    "nucleic_only": 54
+   },
+   "biounit1": {
+    "all_nonprotein": 54,
+    "nucleic_only": 54
+   }
+  },
+  {
+   "id": "7bca",
+   "n_true": 39,
+   "asym": {
+    "all_nonprotein": 41,
+    "nucleic_only": 41
+   },
+   "biounit1": {
+    "all_nonprotein": 41,
+    "nucleic_only": 41
+   }
+  },
+  {
+   "id": "7c0g",
+   "n_true": 14,
+   "asym": {
+    "all_nonprotein": 14,
+    "nucleic_only": 14
+   },
+   "biounit1": {
+    "all_nonprotein": 14,
+    "nucleic_only": 14
+   }
+  },
+  {
+   "id": "7el3",
+   "n_true": 59,
+   "asym": {
+    "all_nonprotein": 60,
+    "nucleic_only": 59
+   },
+   "biounit1": {
+    "all_nonprotein": 60,
+    "nucleic_only": 59
+   }
+  },
+  {
+   "id": "7jsa",
+   "n_true": 25,
+   "asym": {
+    "all_nonprotein": 25,
+    "nucleic_only": 25
+   },
+   "biounit1": {
+    "all_nonprotein": 25,
+    "nucleic_only": 25
+   }
+  },
+  {
+   "id": "7ju3",
+   "n_true": 45,
+   "asym": {
+    "all_nonprotein": 45,
+    "nucleic_only": 39
+   },
+   "biounit1": {
+    "all_nonprotein": 45,
+    "nucleic_only": 39
+   }
+  },
+  {
+   "id": "7kii",
+   "n_true": 40,
+   "asym": {
+    "all_nonprotein": 49,
+    "nucleic_only": 33
+   },
+   "biounit1": {
+    "all_nonprotein": 49,
+    "nucleic_only": 33
+   }
+  },
+  {
+   "id": "7kij",
+   "n_true": 59,
+   "asym": {
+    "all_nonprotein": 69,
+    "nucleic_only": 59
+   },
+   "biounit1": {
+    "all_nonprotein": 30,
+    "nucleic_only": 24
+   }
+  },
+  {
+   "id": "7mtl",
+   "n_true": 32,
+   "asym": {
+    "all_nonprotein": 32,
+    "nucleic_only": 32
+   },
+   "biounit1": {
+    "all_nonprotein": 32,
+    "nucleic_only": 32
+   }
+  },
+  {
+   "id": "7z0u",
+   "n_true": 24,
+   "asym": {
+    "all_nonprotein": 24,
+    "nucleic_only": 16
+   },
+   "biounit1": {
+    "all_nonprotein": 24,
+    "nucleic_only": 16
+   }
+  },
+  {
+   "id": "8dwm",
+   "n_true": 12,
+   "asym": {
+    "all_nonprotein": 12,
+    "nucleic_only": 12
+   },
+   "biounit1": {
+    "all_nonprotein": 12,
+    "nucleic_only": 12
+   }
+  }
+ ]
+}

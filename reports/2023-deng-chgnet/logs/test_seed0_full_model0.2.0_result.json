@@ -1,0 +1,728 @@
+{
+ "model": "0.2.0",
+ "jsonl": "data/mptrj_test_seed0.jsonl",
+ "n_frames_evaluated": 158823,
+ "n_frames_failed_graph": 177,
+ "n_materials": 14683,
+ "energy_MAE_meV_per_atom": 23.4007193031068,
+ "force_MAE_meV_per_A": 57.646116157617726,
+ "stress_MAE_GPa": 0.2700100781526832,
+ "magmom_MAE_muB": 0.02990533675941793,
+ "sizes": {
+  "e": 158823,
+  "f": 14745795,
+  "s": 1429407,
+  "m": 794604
+ },
+ "wall_seconds": 3395.060340166092,
+ "failed_frames": [
+  {
+   "failed": "mp-1206297-1-6",
+   "error": "ValueError(\"Structure graph_id='mp-1206297-1-6' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207356-0-3",
+   "error": "ValueError(\"Structure graph_id='mp-1207356-0-3' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1209113-1-5",
+   "error": "ValueError(\"Structure graph_id='mp-1209113-1-5' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-1-11",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-1-11' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-0-0' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-572722-0-1",
+   "error": "ValueError(\"Structure graph_id='mp-572722-0-1' has 20 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207356-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1207356-1-3' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-0-3",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-0-3' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-15",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-15' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207331-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1207331-1-3' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206751-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1206751-1-1' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-1-4' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1212644-1-0",
+   "error": "ValueError(\"Structure graph_id='mp-1212644-1-0' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207281-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207281-1-2' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206751-0-4",
+   "error": "ValueError(\"Structure graph_id='mp-1206751-0-4' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207006-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1207006-1-3' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1172913-0-6",
+   "error": "ValueError(\"Structure graph_id='mp-1172913-0-6' has 10 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206751-0-3",
+   "error": "ValueError(\"Structure graph_id='mp-1206751-0-3' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-672241-1-7",
+   "error": "ValueError(\"Structure graph_id='mp-672241-1-7' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-0-2' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207331-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1207331-0-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206751-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1206751-1-2' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-5",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-5' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-672241-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-672241-1-3' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207356-1-8",
+   "error": "ValueError(\"Structure graph_id='mp-1207356-1-8' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206073-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-1206073-1-4' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-1-7",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-1-7' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207284-1-0",
+   "error": "ValueError(\"Structure graph_id='mp-1207284-1-0' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-1-13",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-1-13' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1172913-0-3",
+   "error": "ValueError(\"Structure graph_id='mp-1172913-0-3' has 10 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-672241-1-10",
+   "error": "ValueError(\"Structure graph_id='mp-672241-1-10' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-916195-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-916195-0-0' has 16 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-0-2' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206297-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1206297-1-3' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1436986-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1436986-0-0' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206751-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1206751-0-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1209113-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1209113-0-0' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207281-0-1",
+   "error": "ValueError(\"Structure graph_id='mp-1207281-0-1' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207331-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207331-1-2' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1367700-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1367700-0-0' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-979983-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-979983-0-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-0-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1172913-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-1172913-1-4' has 10 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-8",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-8' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-1-0",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-1-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206986-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1206986-0-0' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-0-4",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-0-4' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-0-7",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-0-7' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-1-2' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1172913-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1172913-1-2' has 10 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-1-8",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-1-8' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207162-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1207162-1-1' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-1-8",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-1-8' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-1-7",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-1-7' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206073-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1206073-0-2' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-0-1",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-0-1' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-0-6",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-0-6' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207281-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207281-0-2' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-1-9",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-1-9' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-1-10",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-1-10' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207162-1-0",
+   "error": "ValueError(\"Structure graph_id='mp-1207162-1-0' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-2' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206986-1-0",
+   "error": "ValueError(\"Structure graph_id='mp-1206986-1-0' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207284-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207284-1-2' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1172913-0-1",
+   "error": "ValueError(\"Structure graph_id='mp-1172913-0-1' has 10 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1209113-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1209113-1-3' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-0-1",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-0-1' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-14",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-14' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1172913-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1172913-1-1' has 10 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1192978-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1192978-0-0' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1891656-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1891656-0-0' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-11",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-11' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207356-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207356-0-2' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-572722-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-572722-1-2' has 20 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-1-4' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-0-2' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-1-9",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-1-9' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1209113-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-1209113-1-4' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206751-0-1",
+   "error": "ValueError(\"Structure graph_id='mp-1206751-0-1' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-572722-1-5",
+   "error": "ValueError(\"Structure graph_id='mp-572722-1-5' has 20 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207331-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1207331-1-1' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1172913-1-5",
+   "error": "ValueError(\"Structure graph_id='mp-1172913-1-5' has 10 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-1-6",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-1-6' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-0-1",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-0-1' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206751-1-0",
+   "error": "ValueError(\"Structure graph_id='mp-1206751-1-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-979983-1-5",
+   "error": "ValueError(\"Structure graph_id='mp-979983-1-5' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-4' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1209113-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1209113-0-2' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-572722-0-8",
+   "error": "ValueError(\"Structure graph_id='mp-572722-0-8' has 16 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-6",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-6' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207356-1-6",
+   "error": "ValueError(\"Structure graph_id='mp-1207356-1-6' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-1-1' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207356-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-1207356-1-4' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-1-5",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-1-5' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206297-1-7",
+   "error": "ValueError(\"Structure graph_id='mp-1206297-1-7' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206073-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1206073-1-3' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-572722-0-19",
+   "error": "ValueError(\"Structure graph_id='mp-572722-0-19' has 16 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-0-0' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207284-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1207284-1-1' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-1-2' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206091-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1206091-0-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-572722-0-14",
+   "error": "ValueError(\"Structure graph_id='mp-572722-0-14' has 16 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1769446-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1769446-0-0' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-672241-1-8",
+   "error": "ValueError(\"Structure graph_id='mp-672241-1-8' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206297-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1206297-0-0' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206986-0-1",
+   "error": "ValueError(\"Structure graph_id='mp-1206986-0-1' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-1-4' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1172913-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1172913-1-3' has 10 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-0-8",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-0-8' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206297-1-5",
+   "error": "ValueError(\"Structure graph_id='mp-1206297-1-5' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-13",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-13' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207284-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1207284-1-3' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-572722-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-572722-1-3' has 20 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1333932-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1333932-0-0' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1335851-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1335851-0-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207331-0-5",
+   "error": "ValueError(\"Structure graph_id='mp-1207331-0-5' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207331-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207331-0-2' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1212644-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1212644-1-1' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206297-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1206297-1-2' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1327881-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1327881-0-0' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1365829-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1365829-0-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206073-1-0",
+   "error": "ValueError(\"Structure graph_id='mp-1206073-1-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207331-0-3",
+   "error": "ValueError(\"Structure graph_id='mp-1207331-0-3' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206751-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1206751-1-3' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-0-3",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-0-3' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206297-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1206297-1-1' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-1-3' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206297-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-1206297-1-4' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207281-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1207281-1-3' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-672241-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-672241-1-4' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-0-5",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-0-5' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-0-2' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-572722-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-572722-1-1' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1209113-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1209113-1-1' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-12",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-12' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-7",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-7' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206986-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1206986-1-1' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-979983-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-979983-1-2' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-672241-1-6",
+   "error": "ValueError(\"Structure graph_id='mp-672241-1-6' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-0",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-0' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206073-0-3",
+   "error": "ValueError(\"Structure graph_id='mp-1206073-0-3' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-979983-1-0",
+   "error": "ValueError(\"Structure graph_id='mp-979983-1-0' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206091-1-0",
+   "error": "ValueError(\"Structure graph_id='mp-1206091-1-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-979983-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-979983-1-1' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1324607-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1324607-0-0' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-1-3",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-1-3' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207356-1-7",
+   "error": "ValueError(\"Structure graph_id='mp-1207356-1-7' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1883055-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1883055-0-0' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207356-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207356-1-2' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-1-7",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-1-7' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206073-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1206073-1-1' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1172913-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1172913-0-2' has 10 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206073-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1206073-1-2' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-0-8",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-0-8' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1768386-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1768386-0-0' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1247881-1-5",
+   "error": "ValueError(\"Structure graph_id='mp-1247881-1-5' has 6 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-16",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-16' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-0-0' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206986-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1206986-0-2' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-572722-1-4",
+   "error": "ValueError(\"Structure graph_id='mp-572722-1-4' has 16 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-572722-0-4",
+   "error": "ValueError(\"Structure graph_id='mp-572722-0-4' has 16 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-1-1' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207077-1-14",
+   "error": "ValueError(\"Structure graph_id='mp-1207077-1-14' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207006-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1207006-0-0' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1192978-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1192978-1-2' has 4 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1209113-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1209113-1-2' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1209113-1-8",
+   "error": "ValueError(\"Structure graph_id='mp-1209113-1-8' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206297-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1206297-0-2' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1208477-1-9",
+   "error": "ValueError(\"Structure graph_id='mp-1208477-1-9' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207006-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207006-0-2' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206751-0-2",
+   "error": "ValueError(\"Structure graph_id='mp-1206751-0-2' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-1-9",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-1-9' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-672241-1-5",
+   "error": "ValueError(\"Structure graph_id='mp-672241-1-5' has 8 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1365516-0-0",
+   "error": "ValueError(\"Structure graph_id='mp-1365516-0-0' has 16 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207006-1-2",
+   "error": "ValueError(\"Structure graph_id='mp-1207006-1-2' has 1 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1206091-1-1",
+   "error": "ValueError(\"Structure graph_id='mp-1206091-1-1' has 2 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  },
+  {
+   "failed": "mp-1207051-0-7",
+   "error": "ValueError(\"Structure graph_id='mp-1207051-0-7' has 3 isolated atom(s) with atom_graph_cutoff=5. CHGNet calculation will likely go wrong\")"
+  }
+ ]
+}

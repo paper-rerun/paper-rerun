@@ -1,0 +1,74 @@
+{
+ "small_molecule/Rosetta": {
+  "n": 317,
+  "median": 50.43478,
+  "ci95_low": 48.333336,
+  "ci95_high": 51.6,
+  "ci95_half_width": 1.6333319999999993,
+  "n_distinct_values": 257
+ },
+ "small_molecule/ProteinMPNN": {
+  "n": 317,
+  "median": 50.476192,
+  "ci95_low": 49.09091,
+  "ci95_high": 52.592594,
+  "ci95_half_width": 1.7508419999999987,
+  "n_distinct_values": 265
+ },
+ "small_molecule/LigandMPNN": {
+  "n": 317,
+  "median": 63.333332,
+  "ci95_low": 61.53846,
+  "ci95_high": 64.78261,
+  "ci95_half_width": 1.6220750000000024,
+  "n_distinct_values": 251
+ },
+ "nucleotide/Rosetta": {
+  "n": 74,
+  "median": 35.238094,
+  "ci95_low": 32.941177,
+  "ci95_high": 40.0,
+  "ci95_half_width": 3.5294114999999984,
+  "n_distinct_values": 73
+ },
+ "nucleotide/ProteinMPNN": {
+  "n": 74,
+  "median": 34.03125,
+  "ci95_low": 30.6203015,
+  "ci95_high": 38.6723615,
+  "ci95_half_width": 4.02603,
+  "n_distinct_values": 70
+ },
+ "nucleotide/LigandMPNN": {
+  "n": 74,
+  "median": 50.5157355,
+  "ci95_low": 49.1428585,
+  "ci95_high": 53.1636335,
+  "ci95_half_width": 2.0103875,
+  "n_distinct_values": 71
+ },
+ "metal/Rosetta": {
+  "n": 83,
+  "median": 30.000002,
+  "ci95_low": 25.0,
+  "ci95_high": 33.333336,
+  "ci95_half_width": 4.166668000000001,
+  "n_distinct_values": 44
+ },
+ "metal/ProteinMPNN": {
+  "n": 83,
+  "median": 40.56604,
+  "ci95_low": 33.636364,
+  "ci95_high": 45.71429,
+  "ci95_half_width": 6.038962999999999,
+  "n_distinct_values": 68
+ },
+ "metal/LigandMPNN": {
+  "n": 83,
+  "median": 77.5,
+  "ci95_low": 72.0,
+  "ci95_high": 81.59091,
+  "ci95_half_width": 4.795454999999997,
+  "n_distinct_values": 63
+ }
+}

@@ -1,0 +1,180 @@
+{
+  "paper": {
+    "title": "Atomic context-conditioned protein sequence design using LigandMPNN",
+    "authors": "Dauparas et al.",
+    "venue": "Nature Methods 2025",
+    "doi": "10.1038/s41592-025-02626-1",
+    "open_access_copy": "PMC11978504",
+    "code": "https://github.com/dauparas/LigandMPNN",
+    "stage": "claims map",
+    "scope": "Headline native sequence recovery near ligand/nucleotide/metal, LigandMPNN vs ProteinMPNN, three test splits. Rosetta baseline and side-chain packing (Fig. 3) are out of scope."
+  },
+  "sources_read": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11978504/fullTextXML (full text of the Nature Methods article, incl. Methods, Fig. 2 legend, data/code availability)",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC11978504/ (same article, abstract and Results)",
+    "Source Data Fig. 2 (41592_2025_2626_MOESM3_ESM.zip, folder s2: fig_2_1_1.csv, fig_2_2_1.csv, fig_2_3_1.csv, fig_2_replot.ipynb)",
+    "41592_2025_2626_MOESM1_ESM.pdf (Supplementary Information = Supplementary Figs. 1-8 only; no test-set id lists, no table of recoveries)",
+    "https://github.com/dauparas/LigandMPNN README.md, run.py, data_utils.py, training/README.md, training/test_small_molecule.json, training/test_nucleotide.json, training/test_metal.json"
+  ],
+  "definitions": [
+    {
+      "name": "near_residue",
+      "value": "A residue counts if any of its side-chain atoms is within 5.0 A of any non-protein atom in the same structure. Recovery is scored only at those positions.",
+      "source_quote": "We determined the native amino-acid residue sequence recovery for positions close to the ligand (with sidechain atoms within 5.0 A of any nonprotein atoms).",
+      "ambiguity_note": "The paper does not say whether 'sidechain atoms' means heavy atoms only, whether CB counts as side chain, or what happens to glycine (no side chain). Most literal reading taken: side-chain atoms = every atom of the deposited residue other than N, CA, C, O (and OXT); hydrogens ignored, since deposited X-ray structures at <=3.5 A normally carry none; glycine therefore never qualifies. Distances are measured on the native deposited coordinates, not on designed side chains."
+    },
+    {
+      "name": "distance_cutoff",
+      "value": "5.0 A, single cutoff, applied to the native structure.",
+      "source_quote": "Sequence recoveries (sec. rec.) are averaged over the residues within 5.0 A from the context atoms.",
+      "ambiguity_note": "Fig. 2a legend says 'residues within 5.0 A from the context atoms' while Results says 'sidechain atoms within 5.0 A of any nonprotein atoms'. The Results wording is more specific and is the one adopted. Do not confuse this with run.py's --ligand_mpnn_cutoff_for_score (default 8.0 A), which is only used for the model's own confidence score."
+    },
+    {
+      "name": "context_atoms_ligand",
+      "value": "All non-protein, non-water heavy atoms present in the input structure: small molecules, nucleotides, metals, ions and any other hetero atoms. Hydrogens and atoms of unknown element are masked out.",
+      "source_quote": "We parsed all residues present in the PDBs except ['HOH', 'NA', 'CL', 'K', 'BR'].",
+      "ambiguity_note": "Conflict between paper and released code. The Methods sentence above describes TRAINING-data parsing and drops Na, Cl, K and Br. The released inference code does not: data_utils.py uses other_atoms = atoms.select('not protein and not water'), then masks only element H (Y_t==1) and unknown elements (Y_t==0). For the evaluation we follow the released code (water-only exclusion), because that is the code the authors published for running the model, and record the alternative as an extra analysis. This matters most for the metal split, where Na/K/Cl are common."
+    },
+    {
+      "name": "designed_region",
+      "value": "The whole protein is redesigned (no fixed or omitted residues, no bias); recovery is then scored only at the near-ligand positions.",
+      "source_quote": "We determined the native amino-acid residue sequence recovery for positions close to the ligand",
+      "ambiguity_note": "The paper never says that distant residues were held fixed, so the literal reading is a full redesign with the interface positions scored afterwards. Keeping distant positions fixed would raise LigandMPNN's recovery; not done."
+    },
+    {
+      "name": "chain_and_assembly",
+      "value": "One structure per PDB entry id from the test lists. Design all protein chains present in that structure in one pass; context atoms come from the same structure.",
+      "source_quote": "We used protein assemblies in the PDB (as of 16 December 2022) determined by X-ray crystallography or cryo-electron microscopy to better than 3.5 A resolution and with fewer than 6,000 residues.",
+      "ambiguity_note": "Biggest open definition. The published test lists hold bare 4-character entry ids (e.g. '1a28'), no chain, no assembly number. Training used 'PDB biounits', so the literal reading is biological assembly 1. Which assembly is picked changes both the designed residues and the 5.0 A neighbourhood. Fixed here, before any run: download the first biological assembly (pdb{id}.pdb1 / assembly 1) and use all of it."
+    },
+    {
+      "name": "recovery_per_sequence",
+      "value": "Per designed sequence: 100 * (number of near-ligand positions whose designed amino acid equals the native one) / (number of near-ligand positions).",
+      "source_quote": "LigandMPNN has a higher recovery of native protein amino-acid identities than Rosetta and ProteinMPNN around small molecules, nucleic acids and metals.",
+      "ambiguity_note": "Stated only implicitly. Pooling over all residues of all proteins is explicitly NOT the definition (see aggregation)."
+    },
+    {
+      "name": "aggregation",
+      "value": "Two steps. Per protein: mean of the per-sequence recovery over the 10 designed sequences. Headline number: median of those per-protein values over the proteins in the split. Not pooled over residues.",
+      "source_quote": "The median sequence recoveries (ten designed sequences per protein) near small molecules were 50.4% for Rosetta ... One dot represents an average sequence recovery over 10 sequences for one protein",
+      "ambiguity_note": "The text alone leaves 'median over what' open. Settled against the authors' own Source Data Fig. 2: fig_2_1_1.csv / fig_2_2_1.csv / fig_2_3_1.csv hold exactly 317, 74 and 83 values per model, and their medians are 50.435 / 50.476 / 63.333, 35.238 / 34.031 / 50.516 and 30.000 / 40.566 / 77.500. So each row is one protein, the statistic is the median across proteins, and the per-protein value is a mean over the 10 sequences."
+    },
+    {
+      "name": "n_sequences_per_protein",
+      "value": "10 designed sequences per protein (batch_size * number_of_batches = 10).",
+      "source_quote": "The median sequence recoveries (ten designed sequences per protein)",
+      "ambiguity_note": "None on the count. The random seed is not reported; fix one seed per model/split and record it."
+    },
+    {
+      "name": "sampling_temperature",
+      "value": "0.1 (the released code's default).",
+      "source_quote": "During the inference, we sample from these probabilities with some temperate (T) (algorithm 13) and iteratively run algorithm 12 to populate the designed sequence (S).",
+      "ambiguity_note": "The paper never gives a numeric temperature, anywhere, for the recovery benchmark. Taken from run.py: argparser.add_argument('--temperature', default=0.1). Recovery rises as T falls, so this choice moves the number; it is fixed here before running and any other T is an extra analysis only."
+    },
+    {
+      "name": "ligandmpnn_checkpoint",
+      "value": "ligandmpnn_v_32_010_25.pt (0.1 A training noise, 25 context atoms per residue, K=32 neighbours), --model_type ligand_mpnn, --ligand_mpnn_use_atom_context 1, --ligand_mpnn_use_side_chain_context 0.",
+      "source_quote": "The baseline model was trained with 0.1 A standard deviation noise ... We obtained the best performance by selecting for the protein-ligand and individual residue intraligand graphs the 25 closest ligand atoms",
+      "ambiguity_note": "The paper names no checkpoint file. The 0.1 A noise + 25 context atoms description matches exactly one released file, which is also run.py's default for --checkpoint_ligand_mpnn. Side-chain context is left off: the headline metric is defined against non-protein atoms, and the released default is 0."
+    },
+    {
+      "name": "proteinmpnn_checkpoint",
+      "value": "proteinmpnn_v_48_010.pt (0.1 A training noise), --model_type protein_mpnn.",
+      "source_quote": "For fair comparison, we retrained ProteinMPNN on the same training dataset of PDB biounits as LigandMPNN (the retrained model is referred to as ProteinMPNN in this Article), except none of the context atoms was provided during training.",
+      "ambiguity_note": "Open question we cannot settle from the paper: it is not stated whether the proteinmpnn_v_48_*.pt weights shipped in the LigandMPNN repo ARE that retrained model or the original 2022 ProteinMPNN weights. Noise level is matched to the stated 0.1 A baseline, so proteinmpnn_v_48_010.pt is picked, not run.py's own default (proteinmpnn_v_48_020.pt, 0.2 A). If the ProteinMPNN numbers miss, this is the first thing to suspect, not the metric."
+    },
+    {
+      "name": "test_set_id_lists",
+      "value": "The authors' own lists in the repo: training/test_small_molecule.json (317 ids), training/test_nucleotide.json (74 ids), training/test_metal.json (83 ids).",
+      "source_quote": "We held out a nonoverlapping subset of proteins that have small-molecule contexts (a total of 317), nucleotide contexts (a total of 74) and metal contexts (a total of 83).",
+      "ambiguity_note": "The counts match the paper exactly (317 / 74 / 83), so these are the right lists. They are entry ids only, lowercase, no chains. The small-molecule list is disjoint from the other two; nucleotide and metal share 5 entries (1qum, 1u3e, 2nq9, 6wdz, 7kii), which is fine since the splits are scored separately. The Supplementary Information holds figures only and no id list, so the repo is the only published source."
+    },
+    {
+      "name": "split_membership_is_given_not_derived",
+      "value": "A structure belongs to the small-molecule / nucleotide / metal split because it is in that list, not because of any rule we apply to its hetero atoms.",
+      "source_quote": "We evaluated LigandMPNN sequence design performance on a test set of 317 protein structures containing small molecules, 74 with nucleic acids and 83 with a transition metal",
+      "ambiguity_note": "The paper gives no rule for classifying a structure (what counts as a small molecule, which metals count as transition metals). Using the published lists sidesteps the whole question. Within a split, the 5.0 A neighbourhood still uses ALL non-protein atoms of the structure, not only the atoms of the molecule class that names the split: that is what 'any nonprotein atoms' says."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1-LMPNN-SMALLMOL",
+      "block": "B1-small-molecule-split",
+      "text": "Median per-protein native sequence recovery of LigandMPNN at residues with side-chain atoms within 5.0 A of any non-protein atom, on the 317-structure small-molecule test set.",
+      "paper_value": 63.3,
+      "unit": "percent",
+      "location": "Nature Methods 2025, Abstract and Results (paragraph 'We determined the native amino-acid residue sequence recovery...'), Fig. 2a; Source Data Fig. 2 / s2/fig_2_1_1.csv gives 63.333",
+      "tolerance": 1.0,
+      "tolerance_basis": "Paper reports no seed or sample variability for recovery, so tolerance is set from its own resolution: rounding to 0.1 pp (+-0.05) plus stochastic sampling of 10 sequences per protein and median over 317 proteins. 1.0 pp is half the smallest effect the paper itself treats as meaningful ('increased and decreased sequence recovery by about 2%'), and far below the 12.9 pp gap being tested.",
+      "conditions": "LigandMPNN ligandmpnn_v_32_010_25.pt; 10 sequences per protein; temperature 0.1; atom context on; side-chain context off; whole structure redesigned; biological assembly 1; ids from training/test_small_molecule.json."
+    },
+    {
+      "id": "C2-PMPNN-SMALLMOL",
+      "block": "B1-small-molecule-split",
+      "text": "Median per-protein native sequence recovery of the retrained ProteinMPNN at the same positions, same 317-structure small-molecule test set.",
+      "paper_value": 50.4,
+      "unit": "percent",
+      "location": "Nature Methods 2025, Results (same paragraph), Fig. 2a. Note: the Abstract says 50.5% for the same quantity; Source Data Fig. 2 / s2/fig_2_1_1.csv gives 50.476, which rounds to 50.5.",
+      "tolerance": 1.0,
+      "tolerance_basis": "Same basis as C1. The tolerance also absorbs the paper's own 50.4 vs 50.5 inconsistency (0.1 pp).",
+      "conditions": "ProteinMPNN proteinmpnn_v_48_010.pt; no context atoms given to the model; 10 sequences per protein; temperature 0.1; whole structure redesigned; biological assembly 1; same ids and same scored positions as C1 (positions are defined by the native structure, not by the model)."
+    },
+    {
+      "id": "C3-LMPNN-NUCLEOTIDE",
+      "block": "B2-nucleotide-split",
+      "text": "Median per-protein native sequence recovery of LigandMPNN at residues with side-chain atoms within 5.0 A of any non-protein atom, on the 74-structure nucleotide test set.",
+      "paper_value": 50.5,
+      "unit": "percent",
+      "location": "Nature Methods 2025, Abstract and Results, Fig. 2a; Source Data Fig. 2 / s2/fig_2_2_1.csv gives 50.516",
+      "tolerance": 2.0,
+      "tolerance_basis": "As C1, doubled because the median is taken over 74 proteins instead of 317, so it moves more under sampling noise; equal to the ~2 pp effect the paper itself calls a real difference. Gap being tested is 16.5 pp.",
+      "conditions": "Same as C1 but ids from training/test_nucleotide.json. Context atoms are all non-protein atoms of the structure (DNA/RNA plus anything else present), per the 'any nonprotein atoms' definition."
+    },
+    {
+      "id": "C4-PMPNN-NUCLEOTIDE",
+      "block": "B2-nucleotide-split",
+      "text": "Median per-protein native sequence recovery of the retrained ProteinMPNN at the same positions, same 74-structure nucleotide test set.",
+      "paper_value": 34.0,
+      "unit": "percent",
+      "location": "Nature Methods 2025, Abstract and Results, Fig. 2a; Source Data Fig. 2 / s2/fig_2_2_1.csv gives 34.031",
+      "tolerance": 2.0,
+      "tolerance_basis": "Same as C3.",
+      "conditions": "Same as C2 but ids from training/test_nucleotide.json."
+    },
+    {
+      "id": "C5-LMPNN-METAL",
+      "block": "B3-metal-split",
+      "text": "Median per-protein native sequence recovery of LigandMPNN at residues with side-chain atoms within 5.0 A of any non-protein atom, on the 83-structure metal test set.",
+      "paper_value": 77.5,
+      "unit": "percent",
+      "location": "Nature Methods 2025, Abstract and Results, Fig. 2a; Source Data Fig. 2 / s2/fig_2_3_1.csv gives 77.500",
+      "tolerance": 2.0,
+      "tolerance_basis": "As C3 (median over 83 proteins). Gap being tested is 36.9 pp, so the verdict is not sensitive to this choice.",
+      "conditions": "Same as C1 but ids from training/test_metal.json. Note the context-atom conflict recorded under context_atoms_ligand: the released code keeps Na/K/Cl/Br as context while the Methods' training parse drops them, which bites hardest here."
+    },
+    {
+      "id": "C6-PMPNN-METAL",
+      "block": "B3-metal-split",
+      "text": "Median per-protein native sequence recovery of the retrained ProteinMPNN at the same positions, same 83-structure metal test set.",
+      "paper_value": 40.6,
+      "unit": "percent",
+      "location": "Nature Methods 2025, Abstract and Results, Fig. 2a; Source Data Fig. 2 / s2/fig_2_3_1.csv gives 40.566",
+      "tolerance": 2.0,
+      "tolerance_basis": "Same as C5.",
+      "conditions": "Same as C2 but ids from training/test_metal.json."
+    }
+  ],
+  "issues": [
+    "Rosetta's metal number does not match the authors' own source data: Results says 36.0% but the median of the Rosetta column in Source Data Fig. 2 (s2/fig_2_3_1.csv, 83 values) is 30.000 (mean 30.181). The other five Rosetta/ProteinMPNN/LigandMPNN numbers match their source-data medians to the rounding digit. Rosetta is out of scope for this reproduction, but the mismatch should go in the report.",
+    "ProteinMPNN on small molecules is 50.5% in the Abstract and 50.4% in the Results for the same quantity. Source data median is 50.476, so the Abstract rounds correctly. Both sit inside the 1.0 pp tolerance.",
+    "No sampling temperature is given anywhere in the paper for the recovery benchmark. We fixed T=0.1 from run.py's default before running. Recovery grows as T falls, so this is a real degree of freedom.",
+    "No seed, no standard deviation, no error bar is reported for any recovery number. The tolerances above are ours, derived from the paper's own rounding and from the ~2% effect size it treats as meaningful.",
+    "The test lists are bare PDB entry ids with no chain and no assembly number. We fixed 'biological assembly 1, design every protein chain in it' before running. A different assembly choice changes both the designed residues and the 5.0 A neighbourhood.",
+    "Methods and released code disagree on what counts as context: Methods drops ['HOH','NA','CL','K','BR'] when parsing training data, data_utils.py drops only water (and masks H / unknown elements). We follow the code and record the other reading as an extra analysis.",
+    "It is not stated whether the proteinmpnn_v_48_*.pt weights in the repo are the ProteinMPNN retrained on the LigandMPNN dataset (which is what the paper compares against) or the original 2022 weights. If C2/C4/C6 miss while C1/C3/C5 hit, this is the likely cause.",
+    "Supplementary Information is Supplementary Figs. 1-8 only: no table of recoveries, no id lists, no per-split numbers beyond Fig. 2. Everything numeric we need comes from the Results paragraph, Fig. 2a and Source Data Fig. 2.",
+    "Nucleotide and metal test lists share 5 entries (1qum, 1u3e, 2nq9, 6wdz, 7kii). Harmless because the splits are scored separately, but a structure in both contributes to two claims.",
+    "Fig. 3 (side-chain packing, out of scope) uses 67 nucleotide and 76 metal proteins instead of 74 and 83. Do not reuse Fig. 3's counts for the sequence-recovery splits.",
+    "Glycine has no side chain, so under the literal reading it can never be a scored position. The paper does not address this."
+  ]
+}

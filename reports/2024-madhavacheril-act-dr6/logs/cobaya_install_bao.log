@@ -1,0 +1,47 @@
+[install] Installing external packages at '/mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/packages'
+[install] The installation path has been written into the global config file: /root/.config/cobaya/config.yaml
+
+================================================================================
+bao.sdss_dr7_mgs
+================================================================================
+
+[install] Checking if dependencies have already been installed...
+[install] Check found no existing installation
+[install] (If you expected this to be already installed, re-run `cobaya-install` with --debug to get more verbose output.)
+[install] Installing...
+[bao.sdss_dr7_mgs] Downloading CobayaSampler/bao_data data...
+0.00iB [00:00, ?iB/s]544kiB [00:00, 5.54MiB/s]1.53MiB [00:00, 7.67MiB/s]2.27MiB [00:00, 7.19MiB/s]3.25MiB [00:00, 7.35MiB/s]4.02MiB [00:00, 7.50MiB/s]4.75MiB [00:00, 7.48MiB/s]5.50MiB [00:00, 7.49MiB/s]6.25MiB [00:00, 7.54MiB/s]7.03MiB [00:00, 7.63MiB/s]7.78MiB [00:01, 7.47MiB/s]8.50MiB [00:01, 7.49MiB/s]9.22MiB [00:01, 7.16MiB/s]9.92MiB [00:01, 6.46MiB/s]10.6MiB [00:01, 6.45MiB/s]10.6MiB [00:01, 7.12MiB/s]
+[bao.sdss_dr7_mgs] Downloaded filename bao_data-2.6.tar.gz
+[bao.sdss_dr7_mgs] bao_data v2.6 downloaded and decompressed correctly.
+[install] Successfully installed! Let's check it...
+[install] Installation check successful.
+
+================================================================================
+bao.sixdf_2011_bao
+================================================================================
+
+[install] Checking if dependencies have already been installed...
+[install] External dependencies for this component already installed.
+[install] Doing nothing.
+
+================================================================================
+bao.sdss_dr12_lrg_bao_dmdh
+================================================================================
+
+[install] Checking if dependencies have already been installed...
+[install] External dependencies for this component already installed.
+[install] Doing nothing.
+
+================================================================================
+bao.sdss_dr16_lrg_bao_dmdh
+================================================================================
+
+[install] Checking if dependencies have already been installed...
+[install] External dependencies for this component already installed.
+[install] Doing nothing.
+
+================================================================================
+* Summary * 
+================================================================================
+
+[install] All requested components' dependencies correctly installed at /mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/packages

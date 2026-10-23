@@ -1,0 +1,29 @@
+=== ls outputs_cpu/ligand_mpnn ===
+total 8
+drwxrwxrwx 1 root root  512 Oct 21 19:17 .
+drwxrwxrwx 1 root root  512 Oct 21 19:10 ..
+-rwxrwxrwx 1 root root 4140 Oct 21 19:16 _multi.json
+drwxrwxrwx 1 root root  512 Oct 21 19:23 backbones
+drwxrwxrwx 1 root root  512 Oct 21 19:17 packed
+drwxrwxrwx 1 root root  512 Oct 21 19:23 seqs
+drwxrwxrwx 1 root root  512 Oct 21 19:23 stats
+=== ls outputs/ligand_mpnn ===
+total 8
+drwxrwxrwx 1 root root  512 Oct 21 18:11 .
+drwxrwxrwx 1 root root  512 Oct 21 18:10 ..
+-rwxrwxrwx 1 root root 4140 Oct 21 19:23 _multi.json
+drwxrwxrwx 1 root root  512 Oct 21 19:23 backbones
+-rwxrwxrwx 1 root root    2 Oct 21 18:11 failed.json
+drwxrwxrwx 1 root root  512 Oct 21 18:11 packed
+drwxrwxrwx 1 root root  512 Oct 21 19:23 seqs
+drwxrwxrwx 1 root root  512 Oct 21 19:23 stats
+=== cpu log ===
+=== ligand_mpnn 19:10:49 ===
+ligand_mpnn: 468 structures, 468 to do
+=== gpu log ===
+=== ligand_mpnn 19:15:04 ===
+ligand_mpnn: 468 structures, 465 to do
+=== cpu chunk errors (last 60 lines) ===
+tail: cannot open '/mnt/e/Ciencia/artigos/2025-dauparas-ligandmpnn/outputs_cpu/ligand_mpnn/chunk_errors.log' for reading: No such file or directory
+=== gpu chunk errors (last 60 lines) ===
+tail: cannot open '/mnt/e/Ciencia/artigos/2025-dauparas-ligandmpnn/outputs/ligand_mpnn/chunk_errors.log' for reading: No such file or directory

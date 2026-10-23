@@ -1,0 +1,3 @@
+params 225354752 dtypes Counter({'torch.float32': 546})
+batch=8 shape=(2048, 1024) seq/s=6.1 peakGB=3.53 nan=False
+batch=16 shape=(2048, 1024) seq/s=3.2 peakGB=6.15 nan=False

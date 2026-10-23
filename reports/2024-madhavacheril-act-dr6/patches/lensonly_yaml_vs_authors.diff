@@ -1,0 +1,15 @@
+--- authors_lcdm_act_baseline_nobao_167989490589.input.yaml	2026-10-21 17:42:31.811169800 -0300
++++ lensonly.yaml	2026-10-21 18:04:17.300723400 -0300
+@@ -134,9 +134,10 @@
+   mcmc:
+     Rminus1_cl_stop: 0.2
+     Rminus1_stop: 0.01
+-    covmat: null
++    covmat: /mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/authors_chains/lcdm_act_baseline_nobao_167989490589.covmat
+     drag: false
+     oversample_power: 0.4
+     proposal_scale: 1.9
+     max_tries: 10000
+-output: lcdm_act_baseline_nobao_167989490589
++output: /mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/chains_lensonly/lensonly
++packages_path: /mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/packages

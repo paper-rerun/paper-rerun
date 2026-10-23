@@ -1,0 +1,35 @@
+=== ligand_mpnn 19:15:04 ===
+ligand_mpnn: 468 structures, 465 to do
+  63/468 done, 225s
+  123/468 done, 851s
+  183/468 done, 1511s
+  243/468 done, 1728s
+  303/468 done, 1891s
+  363/468 done, 2071s
+  423/468 done, 2249s
+  468/468 done, 2409s
+finished: 468/468, 0 failed, 2410s
+=== protein_mpnn_32 20:03:31 ===
+protein_mpnn_32: 468 structures, 468 to do
+  60/468 done, 187s
+  120/468 done, 483s
+  180/468 done, 765s
+  240/468 done, 1051s
+  300/468 done, 1308s
+  360/468 done, 1574s
+  420/468 done, 1844s
+  468/468 done, 2029s
+finished: 468/468, 0 failed, 2030s
+=== protein_mpnn_48 20:43:03 ===
+protein_mpnn_48: 468 structures, 468 to do
+  60/468 done, 188s
+  120/468 done, 453s
+  180/468 done, 695s
+  240/468 done, 861s
+  300/468 done, 1018s
+  360/468 done, 1165s
+  420/468 done, 1317s
+  468/468 done, 1461s
+finished: 468/468, 0 failed, 1462s
+run_all.sh: line 14: syntax error near unexpected token `)'
+run_all.sh: line 14: `date +%H:%M:%S) ==="'

@@ -1,0 +1,49 @@
+{
+ "block": "B3-metal-split",
+ "claims": ["C5-LMPNN-METAL", "C6-PMPNN-METAL"],
+ "repo_commit": "26ec57ac976ade5379920dbd43c7f97a91cf82de",
+ "date": "2026-10-22",
+ "readings_fixed_before_running": {
+  "chain_and_assembly": "biological assembly 1 (data/structures/biounit1/<id>.pdb), whole deposited file per entry id. Chosen because the Results say the models were trained and compared on 'PDB biounits'. The asymmetric unit is run afterwards as an extra analysis only.",
+  "context_atoms": "whatever parse_PDB keeps: all non-protein, non-water atoms, hydrogens masked. Measured, not assumed, see context_atoms_check.",
+  "near_residue": "any side-chain heavy atom (every slot of the 37-atom representation except N, CA, C, O, OXT) within 5.0 A of a context atom; glycine never qualifies, alanine qualifies through CB",
+  "designed_region": "full redesign, run.py defaults for --fixed_residues and --redesigned_residues",
+  "n_sequences": "batch_size 10 x 1 batch = 10 per protein",
+  "temperature": 0.1,
+  "seeds": {"ligand_mpnn": 37, "protein_mpnn": 38},
+  "checkpoints": {
+   "ligand_mpnn": "data/model_params/ligandmpnn_v_32_010_25.pt",
+   "protein_mpnn": "data/model_params/proteinmpnn_v_48_010.pt"
+  },
+  "side_chain_context": "off (--ligand_mpnn_use_side_chain_context 0)"
+ },
+ "context_atoms_check": {
+  "why": "The claim conditions require measuring, on one metal case, how many context atoms survive parsing before scoring the split. Reading (3) of 'context_atoms_ligand' predicted every two-letter element symbol would be dropped as unknown.",
+  "case": "1dwh, biological assembly 1",
+  "non_protein_non_water_atoms_in_file": 349,
+  "context_atoms_kept_by_parse_PDB": 349,
+  "elements_kept": {"C": 173, "N": 14, "O": 153, "S": 8, "ZN": 1},
+  "verdict": "Reading (3) does not hold at this commit. data_utils.py line 648 upper-cases element_list before building element_dict, and line 838 looks up y_t.upper(), so two-letter symbols match. Every metal ion reaches the model. No code change was needed or made.",
+  "script": "exec/B3-metal-split/check_context_atoms.py"
+ },
+ "changes_made": [
+  {
+   "what": "5l70 renamed its ligand A1IJ4 to LIG and the rest of those 32 lines shifted back two columns",
+   "why": "A1IJ4 is one of the new 5-character CCD codes; legacy PDB gives the residue name 3 columns, so the converted file pushed chain, resSeq and the coordinates two columns right and prody raised PDBParseError at line 4023 ('could not convert string to float: 91  12.2'). The run died on it at entry 66 of 83.",
+   "scope": "data format only: coordinates, elements and atom names are untouched, and nothing in the model or the metric changed. The downloaded files were left alone; fixed copies live in exec/B3-metal-split/fixed/<flavor>/5l70.pdb.",
+   "script": "exec/B3-metal-split/fix_5l70.py",
+   "other_entries_affected": "none, the other 82 entries were scanned for over-long residue names and malformed coordinate columns in both flavors"
+  }
+ ],
+ "how_the_run_actually_went": {
+  "launcher": "run_block.sh was killed three times while queued on the shared GPU lock (SIGTERM once, SIGKILL twice; the other blocks held the lock for long stretches). resume.sh does the same two run.py calls but builds its input list from the entries whose stats file is still missing, so a kill costs at most the entry in flight. The 83 LigandMPNN designs therefore came out of two passes (65 + 18) and the 83 ProteinMPNN designs out of one.",
+  "seed_consequence": "Each pass re-seeds at 37 (LigandMPNN) or 38 (ProteinMPNN), so the designs are not the same draw a single uninterrupted pass would have produced. The paper reports no seed and the claim is a median over 10 samples at T=0.1, so this does not touch either number; recorded because it is a difference from the command as written.",
+  "stray_directory": "An early single-structure trial ran with an unexpanded variable and created an empty /trial in the WSL root. Removed; nothing was written into it."
+ },
+ "commands": {
+  "design": "bash exec/B3-metal-split/resume.sh biounit1   (two run.py calls, each under flock /mnt/e/Ciencia/.gpu.lock; run_block.sh holds the same commands in one pass)",
+  "score": "python exec/B3-metal-split/score.py biounit1",
+  "compare": "python exec/B3-metal-split/compare_to_source_data.py biounit1",
+  "extras": "python exec/B3-metal-split/variants.py <biounit1|asym> <all|metal>"
+ }
+}

@@ -1,0 +1,1174 @@
+{
+ "tally": {
+  "asym/metal_all": 55,
+  "asym/metal_transition": 64,
+  "biounit1/metal_all": 42,
+  "biounit1/metal_transition": 51,
+  "asym/all_nonprotein": 15,
+  "biounit1/all_nonprotein": 9
+ },
+ "detail": [
+  {
+   "id": "1dwh",
+   "n_true": 3,
+   "asym": {
+    "all_nonprotein": 122,
+    "metal_all": 3,
+    "metal_transition": 3
+   },
+   "biounit1": {
+    "all_nonprotein": 122,
+    "metal_all": 3,
+    "metal_transition": 3
+   }
+  },
+  {
+   "id": "1e4m",
+   "n_true": 3,
+   "asym": {
+    "all_nonprotein": 115,
+    "metal_all": 3,
+    "metal_transition": 3
+   },
+   "biounit1": {
+    "all_nonprotein": 115,
+    "metal_all": 3,
+    "metal_transition": 3
+   }
+  },
+  {
+   "id": "1e6s",
+   "n_true": 3,
+   "asym": {
+    "all_nonprotein": 118,
+    "metal_all": 3,
+    "metal_transition": 3
+   },
+   "biounit1": {
+    "all_nonprotein": 118,
+    "metal_all": 3,
+    "metal_transition": 3
+   }
+  },
+  {
+   "id": "1e72",
+   "n_true": 3,
+   "asym": {
+    "all_nonprotein": 121,
+    "metal_all": 3,
+    "metal_transition": 3
+   },
+   "biounit1": {
+    "all_nonprotein": 121,
+    "metal_all": 3,
+    "metal_transition": 3
+   }
+  },
+  {
+   "id": "1f35",
+   "n_true": 26,
+   "asym": {
+    "all_nonprotein": 28,
+    "metal_all": 26,
+    "metal_transition": 26
+   },
+   "biounit1": {
+    "all_nonprotein": 16,
+    "metal_all": 14,
+    "metal_transition": 14
+   }
+  },
+  {
+   "id": "1fee",
+   "n_true": 4,
+   "asym": {
+    "all_nonprotein": 19,
+    "metal_all": 8,
+    "metal_transition": 8
+   },
+   "biounit1": {
+    "all_nonprotein": 19,
+    "metal_all": 8,
+    "metal_transition": 8
+   }
+  },
+  {
+   "id": "1job",
+   "n_true": 15,
+   "asym": {
+    "all_nonprotein": 15,
+    "metal_all": 15,
+    "metal_transition": 15
+   },
+   "biounit1": {
+    "all_nonprotein": 15,
+    "metal_all": 15,
+    "metal_transition": 15
+   }
+  },
+  {
+   "id": "1lqk",
+   "n_true": 12,
+   "asym": {
+    "all_nonprotein": 32,
+    "metal_all": 28,
+    "metal_transition": 12
+   },
+   "biounit1": {
+    "all_nonprotein": 32,
+    "metal_all": 28,
+    "metal_transition": 12
+   }
+  },
+  {
+   "id": "1m5e",
+   "n_true": 28,
+   "asym": {
+    "all_nonprotein": 85,
+    "metal_all": 28,
+    "metal_transition": 28
+   },
+   "biounit1": {
+    "all_nonprotein": 47,
+    "metal_all": 11,
+    "metal_transition": 11
+   }
+  },
+  {
+   "id": "1m5f",
+   "n_true": 25,
+   "asym": {
+    "all_nonprotein": 81,
+    "metal_all": 25,
+    "metal_transition": 25
+   },
+   "biounit1": {
+    "all_nonprotein": 41,
+    "metal_all": 7,
+    "metal_transition": 7
+   }
+  },
+  {
+   "id": "1moj",
+   "n_true": 30,
+   "asym": {
+    "all_nonprotein": 58,
+    "metal_all": 58,
+    "metal_transition": 30
+   },
+   "biounit1": {
+    "all_nonprotein": 58,
+    "metal_all": 58,
+    "metal_transition": 30
+   }
+  },
+  {
+   "id": "1mxy",
+   "n_true": 23,
+   "asym": {
+    "all_nonprotein": 23,
+    "metal_all": 23,
+    "metal_transition": 23
+   },
+   "biounit1": {
+    "all_nonprotein": 10,
+    "metal_all": 10,
+    "metal_transition": 10
+   }
+  },
+  {
+   "id": "1mxz",
+   "n_true": 23,
+   "asym": {
+    "all_nonprotein": 23,
+    "metal_all": 23,
+    "metal_transition": 23
+   },
+   "biounit1": {
+    "all_nonprotein": 10,
+    "metal_all": 10,
+    "metal_transition": 10
+   }
+  },
+  {
+   "id": "1my1",
+   "n_true": 23,
+   "asym": {
+    "all_nonprotein": 23,
+    "metal_all": 23,
+    "metal_transition": 23
+   },
+   "biounit1": {
+    "all_nonprotein": 10,
+    "metal_all": 10,
+    "metal_transition": 10
+   }
+  },
+  {
+   "id": "1nki",
+   "n_true": 6,
+   "asym": {
+    "all_nonprotein": 36,
+    "metal_all": 28,
+    "metal_transition": 12
+   },
+   "biounit1": {
+    "all_nonprotein": 36,
+    "metal_all": 28,
+    "metal_transition": 12
+   }
+  },
+  {
+   "id": "1qum",
+   "n_true": 11,
+   "asym": {
+    "all_nonprotein": 40,
+    "metal_all": 11,
+    "metal_transition": 11
+   },
+   "biounit1": {
+    "all_nonprotein": 40,
+    "metal_all": 11,
+    "metal_transition": 11
+   }
+  },
+  {
+   "id": "1sgf",
+   "n_true": 13,
+   "asym": {
+    "all_nonprotein": 37,
+    "metal_all": 13,
+    "metal_transition": 13
+   },
+   "biounit1": {
+    "all_nonprotein": 37,
+    "metal_all": 13,
+    "metal_transition": 13
+   }
+  },
+  {
+   "id": "1t31",
+   "n_true": 3,
+   "asym": {
+    "all_nonprotein": 65,
+    "metal_all": 3,
+    "metal_transition": 3
+   },
+   "biounit1": {
+    "all_nonprotein": 65,
+    "metal_all": 3,
+    "metal_transition": 3
+   }
+  },
+  {
+   "id": "1u3e",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 89,
+    "metal_all": 9,
+    "metal_transition": 5
+   },
+   "biounit1": {
+    "all_nonprotein": 89,
+    "metal_all": 9,
+    "metal_transition": 5
+   }
+  },
+  {
+   "id": "2bdh",
+   "n_true": 4,
+   "asym": {
+    "all_nonprotein": 62,
+    "metal_all": 4,
+    "metal_transition": 4
+   },
+   "biounit1": {
+    "all_nonprotein": 19,
+    "metal_all": 4,
+    "metal_transition": 4
+   }
+  },
+  {
+   "id": "2bx2",
+   "n_true": 4,
+   "asym": {
+    "all_nonprotein": 29,
+    "metal_all": 10,
+    "metal_transition": 4
+   },
+   "biounit1": {
+    "all_nonprotein": 29,
+    "metal_all": 10,
+    "metal_transition": 4
+   }
+  },
+  {
+   "id": "2cfv",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 6,
+    "metal_all": 5,
+    "metal_transition": 5
+   },
+   "biounit1": {
+    "all_nonprotein": 6,
+    "metal_all": 5,
+    "metal_transition": 5
+   }
+  },
+  {
+   "id": "2e6c",
+   "n_true": 22,
+   "asym": {
+    "all_nonprotein": 96,
+    "metal_all": 22,
+    "metal_transition": 22
+   },
+   "biounit1": {
+    "all_nonprotein": 96,
+    "metal_all": 22,
+    "metal_transition": 22
+   }
+  },
+  {
+   "id": "2nq9",
+   "n_true": 11,
+   "asym": {
+    "all_nonprotein": 41,
+    "metal_all": 11,
+    "metal_transition": 11
+   },
+   "biounit1": {
+    "all_nonprotein": 41,
+    "metal_all": 11,
+    "metal_transition": 11
+   }
+  },
+  {
+   "id": "2nqj",
+   "n_true": 16,
+   "asym": {
+    "all_nonprotein": 45,
+    "metal_all": 16,
+    "metal_transition": 16
+   },
+   "biounit1": {
+    "all_nonprotein": 40,
+    "metal_all": 11,
+    "metal_transition": 11
+   }
+  },
+  {
+   "id": "2nz6",
+   "n_true": 4,
+   "asym": {
+    "all_nonprotein": 19,
+    "metal_all": 8,
+    "metal_transition": 8
+   },
+   "biounit1": {
+    "all_nonprotein": 19,
+    "metal_all": 8,
+    "metal_transition": 8
+   }
+  },
+  {
+   "id": "2ou7",
+   "n_true": 3,
+   "asym": {
+    "all_nonprotein": 29,
+    "metal_all": 10,
+    "metal_transition": 3
+   },
+   "biounit1": {
+    "all_nonprotein": 29,
+    "metal_all": 10,
+    "metal_transition": 3
+   }
+  },
+  {
+   "id": "2vxx",
+   "n_true": 14,
+   "asym": {
+    "all_nonprotein": 48,
+    "metal_all": 28,
+    "metal_transition": 28
+   },
+   "biounit1": {
+    "all_nonprotein": 48,
+    "metal_all": 28,
+    "metal_transition": 28
+   }
+  },
+  {
+   "id": "2zwn",
+   "n_true": 57,
+   "asym": {
+    "all_nonprotein": 64,
+    "metal_all": 57,
+    "metal_transition": 57
+   },
+   "biounit1": {
+    "all_nonprotein": 64,
+    "metal_all": 57,
+    "metal_transition": 57
+   }
+  },
+  {
+   "id": "3bvx",
+   "n_true": 7,
+   "asym": {
+    "all_nonprotein": 34,
+    "metal_all": 7,
+    "metal_transition": 7
+   },
+   "biounit1": {
+    "all_nonprotein": 34,
+    "metal_all": 7,
+    "metal_transition": 7
+   }
+  },
+  {
+   "id": "3cv5",
+   "n_true": 7,
+   "asym": {
+    "all_nonprotein": 37,
+    "metal_all": 7,
+    "metal_transition": 7
+   },
+   "biounit1": {
+    "all_nonprotein": 37,
+    "metal_all": 7,
+    "metal_transition": 7
+   }
+  },
+  {
+   "id": "3f4v",
+   "n_true": 1,
+   "asym": {
+    "all_nonprotein": 62,
+    "metal_all": 4,
+    "metal_transition": 4
+   },
+   "biounit1": {
+    "all_nonprotein": 31,
+    "metal_all": 2,
+    "metal_transition": 2
+   }
+  },
+  {
+   "id": "3f5l",
+   "n_true": 1,
+   "asym": {
+    "all_nonprotein": 70,
+    "metal_all": 4,
+    "metal_transition": 4
+   },
+   "biounit1": {
+    "all_nonprotein": 36,
+    "metal_all": 2,
+    "metal_transition": 2
+   }
+  },
+  {
+   "id": "3fgg",
+   "n_true": 13,
+   "asym": {
+    "all_nonprotein": 61,
+    "metal_all": 28,
+    "metal_transition": 28
+   },
+   "biounit1": {
+    "all_nonprotein": 61,
+    "metal_all": 28,
+    "metal_transition": 28
+   }
+  },
+  {
+   "id": "3hg9",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 5,
+    "metal_all": 5,
+    "metal_transition": 5
+   },
+   "biounit1": {
+    "all_nonprotein": 5,
+    "metal_all": 5,
+    "metal_transition": 5
+   }
+  },
+  {
+   "id": "3hkn",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 40,
+    "metal_all": 5,
+    "metal_transition": 5
+   },
+   "biounit1": {
+    "all_nonprotein": 40,
+    "metal_all": 5,
+    "metal_transition": 5
+   }
+  },
+  {
+   "id": "3hkt",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 17,
+    "metal_all": 5,
+    "metal_transition": 5
+   },
+   "biounit1": {
+    "all_nonprotein": 17,
+    "metal_all": 5,
+    "metal_transition": 5
+   }
+  },
+  {
+   "id": "3i9z",
+   "n_true": 3,
+   "asym": {
+    "all_nonprotein": 3,
+    "metal_all": 3,
+    "metal_transition": 3
+   },
+   "biounit1": {
+    "all_nonprotein": 3,
+    "metal_all": 3,
+    "metal_transition": 3
+   }
+  },
+  {
+   "id": "3k7r",
+   "n_true": 12,
+   "asym": {
+    "all_nonprotein": 72,
+    "metal_all": 60,
+    "metal_transition": 60
+   },
+   "biounit1": {
+    "all_nonprotein": 15,
+    "metal_all": 15,
+    "metal_transition": 15
+   }
+  },
+  {
+   "id": "3l24",
+   "n_true": 9,
+   "asym": {
+    "all_nonprotein": 46,
+    "metal_all": 45,
+    "metal_transition": 45
+   },
+   "biounit1": {
+    "all_nonprotein": 16,
+    "metal_all": 15,
+    "metal_transition": 15
+   }
+  },
+  {
+   "id": "3l7t",
+   "n_true": 14,
+   "asym": {
+    "all_nonprotein": 14,
+    "metal_all": 14,
+    "metal_transition": 14
+   },
+   "biounit1": {
+    "all_nonprotein": 7,
+    "metal_all": 7,
+    "metal_transition": 7
+   }
+  },
+  {
+   "id": "3m7p",
+   "n_true": 26,
+   "asym": {
+    "all_nonprotein": 50,
+    "metal_all": 26,
+    "metal_transition": 26
+   },
+   "biounit1": {
+    "all_nonprotein": 50,
+    "metal_all": 26,
+    "metal_transition": 26
+   }
+  },
+  {
+   "id": "3mi9",
+   "n_true": 2,
+   "asym": {
+    "all_nonprotein": 10,
+    "metal_all": 10,
+    "metal_transition": 10
+   },
+   "biounit1": {
+    "all_nonprotein": 10,
+    "metal_all": 10,
+    "metal_transition": 10
+   }
+  },
+  {
+   "id": "3o1u",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 41,
+    "metal_all": 5,
+    "metal_transition": 5
+   },
+   "biounit1": {
+    "all_nonprotein": 41,
+    "metal_all": 5,
+    "metal_transition": 5
+   }
+  },
+  {
+   "id": "3u92",
+   "n_true": 18,
+   "asym": {
+    "all_nonprotein": 60,
+    "metal_all": 18,
+    "metal_transition": 18
+   },
+   "biounit1": {
+    "all_nonprotein": 60,
+    "metal_all": 18,
+    "metal_transition": 18
+   }
+  },
+  {
+   "id": "3u93",
+   "n_true": 12,
+   "asym": {
+    "all_nonprotein": 21,
+    "metal_all": 12,
+    "metal_transition": 12
+   },
+   "biounit1": {
+    "all_nonprotein": 21,
+    "metal_all": 12,
+    "metal_transition": 12
+   }
+  },
+  {
+   "id": "3u94",
+   "n_true": 44,
+   "asym": {
+    "all_nonprotein": 54,
+    "metal_all": 44,
+    "metal_transition": 44
+   },
+   "biounit1": {
+    "all_nonprotein": 54,
+    "metal_all": 44,
+    "metal_transition": 44
+   }
+  },
+  {
+   "id": "3won",
+   "n_true": 10,
+   "asym": {
+    "all_nonprotein": 84,
+    "metal_all": 10,
+    "metal_transition": 10
+   },
+   "biounit1": {
+    "all_nonprotein": 84,
+    "metal_all": 10,
+    "metal_transition": 10
+   }
+  },
+  {
+   "id": "4aoj",
+   "n_true": 31,
+   "asym": {
+    "all_nonprotein": 98,
+    "metal_all": 31,
+    "metal_transition": 31
+   },
+   "biounit1": {
+    "all_nonprotein": 98,
+    "metal_all": 31,
+    "metal_transition": 31
+   }
+  },
+  {
+   "id": "4dy1",
+   "n_true": 1,
+   "asym": {
+    "all_nonprotein": 12,
+    "metal_all": 10,
+    "metal_transition": 10
+   },
+   "biounit1": {
+    "all_nonprotein": 12,
+    "metal_all": 10,
+    "metal_transition": 10
+   }
+  },
+  {
+   "id": "4hzt",
+   "n_true": 4,
+   "asym": {
+    "all_nonprotein": 29,
+    "metal_all": 8,
+    "metal_transition": 8
+   },
+   "biounit1": {
+    "all_nonprotein": 29,
+    "metal_all": 8,
+    "metal_transition": 8
+   }
+  },
+  {
+   "id": "4i0f",
+   "n_true": 2,
+   "asym": {
+    "all_nonprotein": 27,
+    "metal_all": 8,
+    "metal_transition": 8
+   },
+   "biounit1": {
+    "all_nonprotein": 27,
+    "metal_all": 8,
+    "metal_transition": 8
+   }
+  },
+  {
+   "id": "4i0j",
+   "n_true": 11,
+   "asym": {
+    "all_nonprotein": 40,
+    "metal_all": 11,
+    "metal_transition": 11
+   },
+   "biounit1": {
+    "all_nonprotein": 40,
+    "metal_all": 11,
+    "metal_transition": 11
+   }
+  },
+  {
+   "id": "4i0z",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 29,
+    "metal_all": 10,
+    "metal_transition": 10
+   },
+   "biounit1": {
+    "all_nonprotein": 29,
+    "metal_all": 10,
+    "metal_transition": 10
+   }
+  },
+  {
+   "id": "4i11",
+   "n_true": 2,
+   "asym": {
+    "all_nonprotein": 25,
+    "metal_all": 8,
+    "metal_transition": 8
+   },
+   "biounit1": {
+    "all_nonprotein": 25,
+    "metal_all": 8,
+    "metal_transition": 8
+   }
+  },
+  {
+   "id": "4i12",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 45,
+    "metal_all": 21,
+    "metal_transition": 5
+   },
+   "biounit1": {
+    "all_nonprotein": 45,
+    "metal_all": 21,
+    "metal_transition": 5
+   }
+  },
+  {
+   "id": "4jd1",
+   "n_true": 14,
+   "asym": {
+    "all_nonprotein": 41,
+    "metal_all": 14,
+    "metal_transition": 14
+   },
+   "biounit1": {
+    "all_nonprotein": 41,
+    "metal_all": 14,
+    "metal_transition": 14
+   }
+  },
+  {
+   "id": "4naz",
+   "n_true": 2,
+   "asym": {
+    "all_nonprotein": 19,
+    "metal_all": 4,
+    "metal_transition": 4
+   },
+   "biounit1": {
+    "all_nonprotein": 19,
+    "metal_all": 4,
+    "metal_transition": 4
+   }
+  },
+  {
+   "id": "4wd8",
+   "n_true": 67,
+   "asym": {
+    "all_nonprotein": 67,
+    "metal_all": 67,
+    "metal_transition": 67
+   },
+   "biounit1": {
+    "all_nonprotein": 67,
+    "metal_all": 67,
+    "metal_transition": 67
+   }
+  },
+  {
+   "id": "4x68",
+   "n_true": 8,
+   "asym": {
+    "all_nonprotein": 45,
+    "metal_all": 8,
+    "metal_transition": 8
+   },
+   "biounit1": {
+    "all_nonprotein": 45,
+    "metal_all": 8,
+    "metal_transition": 8
+   }
+  },
+  {
+   "id": "5f55",
+   "n_true": 10,
+   "asym": {
+    "all_nonprotein": 90,
+    "metal_all": 10,
+    "metal_transition": 10
+   },
+   "biounit1": {
+    "all_nonprotein": 90,
+    "metal_all": 10,
+    "metal_transition": 10
+   }
+  },
+  {
+   "id": "5f56",
+   "n_true": 9,
+   "asym": {
+    "all_nonprotein": 69,
+    "metal_all": 9,
+    "metal_transition": 9
+   },
+   "biounit1": {
+    "all_nonprotein": 69,
+    "metal_all": 9,
+    "metal_transition": 9
+   }
+  },
+  {
+   "id": "5fgs",
+   "n_true": 22,
+   "asym": {
+    "all_nonprotein": 22,
+    "metal_all": 22,
+    "metal_transition": 22
+   },
+   "biounit1": {
+    "all_nonprotein": 22,
+    "metal_all": 22,
+    "metal_transition": 22
+   }
+  },
+  {
+   "id": "5hez",
+   "n_true": 9,
+   "asym": {
+    "all_nonprotein": 181,
+    "metal_all": 9,
+    "metal_transition": 9
+   },
+   "biounit1": {
+    "all_nonprotein": 43,
+    "metal_all": 3,
+    "metal_transition": 3
+   }
+  },
+  {
+   "id": "5i4j",
+   "n_true": 19,
+   "asym": {
+    "all_nonprotein": 26,
+    "metal_all": 19,
+    "metal_transition": 19
+   },
+   "biounit1": {
+    "all_nonprotein": 26,
+    "metal_all": 19,
+    "metal_transition": 19
+   }
+  },
+  {
+   "id": "5l70",
+   "n_true": 33,
+   "asym": {
+    "all_nonprotein": 88,
+    "metal_all": 33,
+    "metal_transition": 33
+   },
+   "biounit1": {
+    "all_nonprotein": 88,
+    "metal_all": 33,
+    "metal_transition": 33
+   }
+  },
+  {
+   "id": "5vde",
+   "n_true": 19,
+   "asym": {
+    "all_nonprotein": 19,
+    "metal_all": 19,
+    "metal_transition": 19
+   },
+   "biounit1": {
+    "all_nonprotein": 9,
+    "metal_all": 9,
+    "metal_transition": 9
+   }
+  },
+  {
+   "id": "6a4x",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 5,
+    "metal_all": 5,
+    "metal_transition": 5
+   },
+   "biounit1": {
+    "all_nonprotein": 5,
+    "metal_all": 5,
+    "metal_transition": 5
+   }
+  },
+  {
+   "id": "6buu",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 70,
+    "metal_all": 5,
+    "metal_transition": 5
+   },
+   "biounit1": {
+    "all_nonprotein": 36,
+    "metal_all": 2,
+    "metal_transition": 2
+   }
+  },
+  {
+   "id": "6cyt",
+   "n_true": 13,
+   "asym": {
+    "all_nonprotein": 26,
+    "metal_all": 13,
+    "metal_transition": 13
+   },
+   "biounit1": {
+    "all_nonprotein": 26,
+    "metal_all": 13,
+    "metal_transition": 13
+   }
+  },
+  {
+   "id": "6iv2",
+   "n_true": 32,
+   "asym": {
+    "all_nonprotein": 64,
+    "metal_all": 64,
+    "metal_transition": 64
+   },
+   "biounit1": {
+    "all_nonprotein": 64,
+    "metal_all": 64,
+    "metal_transition": 64
+   }
+  },
+  {
+   "id": "6lkp",
+   "n_true": 80,
+   "asym": {
+    "all_nonprotein": 80,
+    "metal_all": 80,
+    "metal_transition": 80
+   },
+   "biounit1": {
+    "all_nonprotein": 80,
+    "metal_all": 80,
+    "metal_transition": 80
+   }
+  },
+  {
+   "id": "6lrd",
+   "n_true": 9,
+   "asym": {
+    "all_nonprotein": 75,
+    "metal_all": 11,
+    "metal_transition": 11
+   },
+   "biounit1": {
+    "all_nonprotein": 75,
+    "metal_all": 11,
+    "metal_transition": 11
+   }
+  },
+  {
+   "id": "6wdz",
+   "n_true": 16,
+   "asym": {
+    "all_nonprotein": 104,
+    "metal_all": 16,
+    "metal_transition": 16
+   },
+   "biounit1": {
+    "all_nonprotein": 28,
+    "metal_all": 5,
+    "metal_transition": 5
+   }
+  },
+  {
+   "id": "6x75",
+   "n_true": 15,
+   "asym": {
+    "all_nonprotein": 98,
+    "metal_all": 15,
+    "metal_transition": 15
+   },
+   "biounit1": {
+    "all_nonprotein": 98,
+    "metal_all": 15,
+    "metal_transition": 15
+   }
+  },
+  {
+   "id": "7dnr",
+   "n_true": 16,
+   "asym": {
+    "all_nonprotein": 16,
+    "metal_all": 16,
+    "metal_transition": 16
+   },
+   "biounit1": {
+    "all_nonprotein": 16,
+    "metal_all": 16,
+    "metal_transition": 16
+   }
+  },
+  {
+   "id": "7e34",
+   "n_true": 1,
+   "asym": {
+    "all_nonprotein": 6,
+    "metal_all": 2,
+    "metal_transition": 2
+   },
+   "biounit1": {
+    "all_nonprotein": 6,
+    "metal_all": 2,
+    "metal_transition": 2
+   }
+  },
+  {
+   "id": "7kii",
+   "n_true": 5,
+   "asym": {
+    "all_nonprotein": 49,
+    "metal_all": 11,
+    "metal_transition": 5
+   },
+   "biounit1": {
+    "all_nonprotein": 49,
+    "metal_all": 11,
+    "metal_transition": 5
+   }
+  },
+  {
+   "id": "7n7g",
+   "n_true": 13,
+   "asym": {
+    "all_nonprotein": 50,
+    "metal_all": 13,
+    "metal_transition": 13
+   },
+   "biounit1": {
+    "all_nonprotein": 50,
+    "metal_all": 13,
+    "metal_transition": 13
+   }
+  },
+  {
+   "id": "7s7l",
+   "n_true": 17,
+   "asym": {
+    "all_nonprotein": 65,
+    "metal_all": 44,
+    "metal_transition": 17
+   },
+   "biounit1": {
+    "all_nonprotein": 65,
+    "metal_all": 44,
+    "metal_transition": 17
+   }
+  },
+  {
+   "id": "7s7m",
+   "n_true": 17,
+   "asym": {
+    "all_nonprotein": 44,
+    "metal_all": 44,
+    "metal_transition": 17
+   },
+   "biounit1": {
+    "all_nonprotein": 44,
+    "metal_all": 44,
+    "metal_transition": 17
+   }
+  },
+  {
+   "id": "7w5e",
+   "n_true": 77,
+   "asym": {
+    "all_nonprotein": 77,
+    "metal_all": 77,
+    "metal_transition": 77
+   },
+   "biounit1": {
+    "all_nonprotein": 77,
+    "metal_all": 77,
+    "metal_transition": 77
+   }
+  },
+  {
+   "id": "7wb2",
+   "n_true": 53,
+   "asym": {
+    "all_nonprotein": 53,
+    "metal_all": 53,
+    "metal_transition": 53
+   },
+   "biounit1": {
+    "all_nonprotein": 32,
+    "metal_all": 32,
+    "metal_transition": 32
+   }
+  }
+ ]
+}

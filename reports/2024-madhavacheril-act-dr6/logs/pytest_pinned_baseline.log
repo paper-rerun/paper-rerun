@@ -1,0 +1,13 @@
+..                                                                       [100%]
+=============================== warnings summary ===============================
+.venv-pinned/lib/python3.11/site-packages/cobaya/component.py:4
+  /mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/.venv-pinned/lib/python3.11/site-packages/cobaya/component.py:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    import pkg_resources
+
+act_dr6_lenslike/tests/test_cobaya.py::ACTLikeTest::test_act_baseline
+act_dr6_lenslike/tests/test_cobaya.py::ACTLikeTest::test_act_baseline_lensonly
+  /mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/repo/act_dr6_lenslike/act_dr6_lenslike.py:422: UserWarning: Hartlap correction to cinv: 0.9860935524652339
+    warnings.warn(f"Hartlap correction to cinv: {hartlap_correction}")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2 passed, 9 deselected, 3 warnings in 40.00s

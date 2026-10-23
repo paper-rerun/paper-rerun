@@ -1,0 +1,133 @@
+	Command being timed: "python -I scripts/eval_test.py data/mptrj_test_seed0.jsonl 0.2.0 logs/test_seed0_cpu20k_model0.2.0 20000 4 cpu"
+	User time (seconds): 11013.32
+	System time (seconds): 245.84
+	Percent of CPU this job got: 329%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 56:54.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8021544
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5379
+	Minor (reclaiming a frame) page faults: 8229864
+	Voluntary context switches: 455412
+	Involuntary context switches: 34288
+	Swaps: 0
+	File system inputs: 1029960
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+rames, 312s, running MAE e=23.4 meV/atom f=57.7 meV/A s=0.246 GPa m=0.0238 muB
+batch 450, 1803 frames, 342s, running MAE e=23.1 meV/atom f=57.4 meV/A s=0.246 GPa m=0.0234 muB
+batch 500, 2003 frames, 374s, running MAE e=23.0 meV/atom f=56.6 meV/A s=0.250 GPa m=0.0243 muB
+batch 550, 2203 frames, 421s, running MAE e=23.8 meV/atom f=57.2 meV/A s=0.261 GPa m=0.0253 muB
+batch 600, 2403 frames, 444s, running MAE e=24.5 meV/atom f=57.7 meV/A s=0.264 GPa m=0.0262 muB
+batch 650, 2603 frames, 475s, running MAE e=24.4 meV/atom f=57.7 meV/A s=0.261 GPa m=0.0263 muB
+batch 700, 2803 frames, 507s, running MAE e=24.5 meV/atom f=57.9 meV/A s=0.261 GPa m=0.0310 muB
+batch 750, 3003 frames, 538s, running MAE e=24.7 meV/atom f=58.0 meV/A s=0.262 GPa m=0.0308 muB
+batch 800, 3203 frames, 566s, running MAE e=24.7 meV/atom f=58.0 meV/A s=0.264 GPa m=0.0300 muB
+batch 850, 3403 frames, 592s, running MAE e=24.7 meV/atom f=58.1 meV/A s=0.264 GPa m=0.0294 muB
+batch 900, 3603 frames, 620s, running MAE e=24.8 meV/atom f=58.5 meV/A s=0.263 GPa m=0.0294 muB
+batch 950, 3803 frames, 656s, running MAE e=24.8 meV/atom f=58.4 meV/A s=0.267 GPa m=0.0289 muB
+batch 1000, 4003 frames, 684s, running MAE e=24.6 meV/atom f=57.8 meV/A s=0.266 GPa m=0.0294 muB
+batch 1050, 4203 frames, 720s, running MAE e=24.7 meV/atom f=58.1 meV/A s=0.267 GPa m=0.0299 muB
+batch 1100, 4403 frames, 749s, running MAE e=24.6 meV/atom f=57.9 meV/A s=0.266 GPa m=0.0302 muB
+batch 1150, 4603 frames, 781s, running MAE e=24.4 meV/atom f=58.0 meV/A s=0.264 GPa m=0.0300 muB
+batch 1200, 4802 frames, 809s, running MAE e=24.5 meV/atom f=57.7 meV/A s=0.264 GPa m=0.0294 muB
+batch 1250, 5001 frames, 838s, running MAE e=24.3 meV/atom f=57.5 meV/A s=0.265 GPa m=0.0291 muB
+batch 1300, 5201 frames, 866s, running MAE e=24.2 meV/atom f=57.3 meV/A s=0.265 GPa m=0.0293 muB
+batch 1350, 5401 frames, 902s, running MAE e=24.1 meV/atom f=57.3 meV/A s=0.263 GPa m=0.0294 muB
+batch 1400, 5600 frames, 939s, running MAE e=24.2 meV/atom f=57.2 meV/A s=0.264 GPa m=0.0298 muB
+batch 1450, 5800 frames, 979s, running MAE e=24.2 meV/atom f=57.3 meV/A s=0.263 GPa m=0.0292 muB
+batch 1500, 6000 frames, 1022s, running MAE e=24.2 meV/atom f=57.2 meV/A s=0.263 GPa m=0.0289 muB
+batch 1550, 6200 frames, 1065s, running MAE e=24.4 meV/atom f=57.1 meV/A s=0.263 GPa m=0.0286 muB
+batch 1600, 6400 frames, 1107s, running MAE e=24.5 meV/atom f=57.1 meV/A s=0.262 GPa m=0.0289 muB
+batch 1650, 6600 frames, 1149s, running MAE e=24.5 meV/atom f=57.1 meV/A s=0.263 GPa m=0.0291 muB
+batch 1700, 6800 frames, 1189s, running MAE e=24.4 meV/atom f=57.1 meV/A s=0.262 GPa m=0.0304 muB
+batch 1750, 7000 frames, 1224s, running MAE e=24.4 meV/atom f=57.2 meV/A s=0.261 GPa m=0.0305 muB
+batch 1800, 7200 frames, 1324s, running MAE e=24.5 meV/atom f=57.4 meV/A s=0.264 GPa m=0.0336 muB
+batch 1850, 7400 frames, 1361s, running MAE e=24.4 meV/atom f=57.5 meV/A s=0.264 GPa m=0.0337 muB
+batch 1900, 7600 frames, 1397s, running MAE e=24.3 meV/atom f=57.3 meV/A s=0.263 GPa m=0.0336 muB
+batch 1950, 7800 frames, 1433s, running MAE e=24.3 meV/atom f=57.3 meV/A s=0.262 GPa m=0.0332 muB
+batch 2000, 8000 frames, 1466s, running MAE e=24.3 meV/atom f=57.4 meV/A s=0.262 GPa m=0.0329 muB
+batch 2050, 8200 frames, 1506s, running MAE e=24.3 meV/atom f=57.2 meV/A s=0.261 GPa m=0.0329 muB
+batch 2100, 8399 frames, 1548s, running MAE e=24.3 meV/atom f=57.2 meV/A s=0.262 GPa m=0.0335 muB
+batch 2150, 8599 frames, 1577s, running MAE e=24.3 meV/atom f=57.2 meV/A s=0.261 GPa m=0.0332 muB
+batch 2200, 8799 frames, 1612s, running MAE e=24.2 meV/atom f=57.1 meV/A s=0.260 GPa m=0.0337 muB
+batch 2250, 8999 frames, 1646s, running MAE e=24.1 meV/atom f=57.2 meV/A s=0.259 GPa m=0.0341 muB
+batch 2300, 9199 frames, 1680s, running MAE e=24.1 meV/atom f=57.2 meV/A s=0.259 GPa m=0.0341 muB
+batch 2350, 9399 frames, 1714s, running MAE e=24.1 meV/atom f=57.4 meV/A s=0.259 GPa m=0.0338 muB
+batch 2400, 9599 frames, 1748s, running MAE e=24.1 meV/atom f=57.4 meV/A s=0.259 GPa m=0.0341 muB
+batch 2450, 9799 frames, 1791s, running MAE e=24.1 meV/atom f=57.2 meV/A s=0.259 GPa m=0.0342 muB
+batch 2500, 9999 frames, 1832s, running MAE e=24.1 meV/atom f=57.4 meV/A s=0.259 GPa m=0.0341 muB
+batch 2550, 10199 frames, 1874s, running MAE e=24.0 meV/atom f=57.5 meV/A s=0.258 GPa m=0.0343 muB
+batch 2600, 10398 frames, 1908s, running MAE e=24.0 meV/atom f=57.6 meV/A s=0.261 GPa m=0.0346 muB
+batch 2650, 10598 frames, 1938s, running MAE e=24.0 meV/atom f=57.5 meV/A s=0.263 GPa m=0.0348 muB
+batch 2700, 10798 frames, 1962s, running MAE e=24.0 meV/atom f=57.5 meV/A s=0.263 GPa m=0.0344 muB
+batch 2750, 10998 frames, 1991s, running MAE e=24.0 meV/atom f=57.4 meV/A s=0.262 GPa m=0.0345 muB
+batch 2800, 11198 frames, 2019s, running MAE e=24.0 meV/atom f=57.3 meV/A s=0.262 GPa m=0.0343 muB
+batch 2850, 11398 frames, 2046s, running MAE e=24.0 meV/atom f=57.3 meV/A s=0.262 GPa m=0.0342 muB
+batch 2900, 11598 frames, 2075s, running MAE e=23.9 meV/atom f=57.4 meV/A s=0.261 GPa m=0.0340 muB
+batch 2950, 11798 frames, 2098s, running MAE e=24.0 meV/atom f=57.3 meV/A s=0.262 GPa m=0.0338 muB
+batch 3000, 11997 frames, 2122s, running MAE e=23.9 meV/atom f=57.2 meV/A s=0.261 GPa m=0.0337 muB
+batch 3050, 12197 frames, 2147s, running MAE e=24.0 meV/atom f=57.4 meV/A s=0.262 GPa m=0.0334 muB
+batch 3100, 12397 frames, 2171s, running MAE e=24.0 meV/atom f=57.4 meV/A s=0.263 GPa m=0.0332 muB
+batch 3150, 12597 frames, 2193s, running MAE e=24.1 meV/atom f=57.4 meV/A s=0.265 GPa m=0.0330 muB
+batch 3200, 12796 frames, 2219s, running MAE e=24.1 meV/atom f=57.2 meV/A s=0.265 GPa m=0.0332 muB
+batch 3250, 12996 frames, 2249s, running MAE e=24.1 meV/atom f=57.3 meV/A s=0.266 GPa m=0.0330 muB
+batch 3300, 13196 frames, 2273s, running MAE e=24.1 meV/atom f=57.2 meV/A s=0.267 GPa m=0.0328 muB
+batch 3350, 13395 frames, 2296s, running MAE e=24.1 meV/atom f=57.3 meV/A s=0.267 GPa m=0.0326 muB
+batch 3400, 13595 frames, 2326s, running MAE e=24.1 meV/atom f=57.4 meV/A s=0.266 GPa m=0.0325 muB
+batch 3450, 13795 frames, 2352s, running MAE e=24.0 meV/atom f=57.4 meV/A s=0.266 GPa m=0.0325 muB
+batch 3500, 13994 frames, 2386s, running MAE e=24.0 meV/atom f=57.3 meV/A s=0.266 GPa m=0.0327 muB
+batch 3550, 14194 frames, 2421s, running MAE e=24.0 meV/atom f=57.2 meV/A s=0.265 GPa m=0.0325 muB
+batch 3600, 14394 frames, 2449s, running MAE e=23.9 meV/atom f=57.2 meV/A s=0.264 GPa m=0.0325 muB
+batch 3650, 14593 frames, 2475s, running MAE e=23.9 meV/atom f=57.1 meV/A s=0.264 GPa m=0.0324 muB
+batch 3700, 14793 frames, 2569s, running MAE e=23.9 meV/atom f=57.1 meV/A s=0.263 GPa m=0.0326 muB
+batch 3750, 14993 frames, 2596s, running MAE e=24.0 meV/atom f=57.2 meV/A s=0.264 GPa m=0.0329 muB
+batch 3800, 15193 frames, 2620s, running MAE e=24.0 meV/atom f=57.2 meV/A s=0.264 GPa m=0.0329 muB
+batch 3850, 15393 frames, 2638s, running MAE e=24.0 meV/atom f=57.2 meV/A s=0.264 GPa m=0.0328 muB
+batch 3900, 15593 frames, 2661s, running MAE e=24.0 meV/atom f=57.1 meV/A s=0.264 GPa m=0.0328 muB
+batch 3950, 15793 frames, 2682s, running MAE e=23.9 meV/atom f=57.1 meV/A s=0.264 GPa m=0.0327 muB
+batch 4000, 15993 frames, 2702s, running MAE e=24.0 meV/atom f=57.1 meV/A s=0.264 GPa m=0.0326 muB
+batch 4050, 16192 frames, 2725s, running MAE e=23.9 meV/atom f=57.1 meV/A s=0.263 GPa m=0.0324 muB
+batch 4100, 16391 frames, 2750s, running MAE e=23.9 meV/atom f=57.1 meV/A s=0.263 GPa m=0.0323 muB
+batch 4150, 16591 frames, 2772s, running MAE e=23.9 meV/atom f=57.1 meV/A s=0.262 GPa m=0.0321 muB
+batch 4200, 16791 frames, 2796s, running MAE e=23.9 meV/atom f=57.1 meV/A s=0.262 GPa m=0.0319 muB
+batch 4250, 16991 frames, 2821s, running MAE e=23.9 meV/atom f=57.1 meV/A s=0.262 GPa m=0.0318 muB
+batch 4300, 17191 frames, 2851s, running MAE e=23.9 meV/atom f=57.1 meV/A s=0.270 GPa m=0.0320 muB
+batch 4350, 17391 frames, 2874s, running MAE e=23.9 meV/atom f=57.0 meV/A s=0.269 GPa m=0.0319 muB
+batch 4400, 17591 frames, 2895s, running MAE e=23.9 meV/atom f=57.0 meV/A s=0.269 GPa m=0.0318 muB
+batch 4450, 17791 frames, 2912s, running MAE e=23.9 meV/atom f=56.9 meV/A s=0.269 GPa m=0.0318 muB
+batch 4500, 17990 frames, 2932s, running MAE e=23.8 meV/atom f=56.8 meV/A s=0.270 GPa m=0.0317 muB
+batch 4550, 18190 frames, 2957s, running MAE e=23.8 meV/atom f=56.9 meV/A s=0.270 GPa m=0.0317 muB
+batch 4600, 18390 frames, 2980s, running MAE e=23.8 meV/atom f=56.9 meV/A s=0.269 GPa m=0.0315 muB
+batch 4650, 18590 frames, 3006s, running MAE e=23.8 meV/atom f=56.9 meV/A s=0.269 GPa m=0.0317 muB
+batch 4700, 18790 frames, 3029s, running MAE e=23.8 meV/atom f=56.8 meV/A s=0.268 GPa m=0.0316 muB
+batch 4750, 18990 frames, 3056s, running MAE e=23.7 meV/atom f=56.9 meV/A s=0.268 GPa m=0.0317 muB
+batch 4800, 19190 frames, 3079s, running MAE e=23.7 meV/atom f=56.9 meV/A s=0.268 GPa m=0.0317 muB
+batch 4850, 19389 frames, 3103s, running MAE e=23.8 meV/atom f=56.9 meV/A s=0.275 GPa m=0.0318 muB
+batch 4900, 19589 frames, 3127s, running MAE e=23.8 meV/atom f=57.3 meV/A s=0.275 GPa m=0.0318 muB
+batch 4950, 19788 frames, 3148s, running MAE e=23.7 meV/atom f=57.3 meV/A s=0.275 GPa m=0.0319 muB
+{
+ "model": "0.2.0",
+ "jsonl": "data/mptrj_test_seed0.jsonl",
+ "n_frames_evaluated": 19984,
+ "n_frames_failed_graph": 16,
+ "n_materials": 9393,
+ "energy_MAE_meV_per_atom": 23.68515719225003,
+ "force_MAE_meV_per_A": 57.29236834313983,
+ "stress_MAE_GPa": 0.27435005180838945,
+ "magmom_MAE_muB": 0.03178783158603946,
+ "sizes": {
+  "e": 19984,
+  "f": 1858935,
+  "s": 179856,
+  "m": 99639
+ },
+ "wall_seconds": 3171.471326828003
+}

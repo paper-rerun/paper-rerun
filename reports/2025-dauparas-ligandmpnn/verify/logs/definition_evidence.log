@@ -1,0 +1,28 @@
+/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/env/lib/python3.11/site-packages/prody/utilities/misctools.py:424: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+  ... small_molecule 50 / 317
+  ... small_molecule 100 / 317
+  ... small_molecule 150 / 317
+  ... small_molecule 200 / 317
+  ... small_molecule 250 / 317
+  ... small_molecule 300 / 317
+
+=== small_molecule (317 proteins) ===
+    primary reading here: any_atom|all
+    any_atom|all                 exact n match 284 / 317  (90%)  <= primary
+    sidechain|all                exact n match  26 / 317  (8%)
+  ... nucleotide 50 / 74
+
+=== nucleotide (74 proteins) ===
+    primary reading here: any_atom|all
+    any_atom|all                 exact n match  30 /  74  (41%)  <= primary
+    sidechain|all                exact n match   3 /  74  (4%)
+  ... metal 50 / 83
+
+=== metal (83 proteins) ===
+    primary reading here: any_atom|metal_transition
+    any_atom|metal_transition    exact n match  64 /  83  (77%)  <= primary
+    any_atom|all                 exact n match  15 /  83  (18%)
+    sidechain|all                exact n match   6 /  83  (7%)
+
+wrote verify/out/definition_evidence.json

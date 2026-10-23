@@ -1,0 +1,5338 @@
+{
+ "split": "metal",
+ "model": "protein_mpnn",
+ "n_total": 83,
+ "any_atom|all": {
+  "n_proteins": 83,
+  "n_missing": 0,
+  "median_recovery": 42.03389830508475,
+  "mean_recovery": 42.639964191775455
+ },
+ "sidechain|all": {
+  "n_proteins": 83,
+  "n_missing": 0,
+  "median_recovery": 38.867924528301884,
+  "mean_recovery": 38.848617238399406
+ },
+ "any_atom|metal_transition": {
+  "n_proteins": 83,
+  "n_missing": 0,
+  "median_recovery": 37.8125,
+  "mean_recovery": 42.211419895402635
+ },
+ "errors": [],
+ "per_protein": [
+  {
+   "n_residues": 499,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 349,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 122,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.819672131147534,
+    "recovery_backbone_complete_only": 40.819672131147534,
+    "per_sequence": [
+     44.262295,
+     36.885246,
+     42.622951,
+     40.163934,
+     40.983607,
+     39.344262,
+     43.442623,
+     40.163934,
+     41.803279,
+     38.52459
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 101,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 36.039603960396036,
+    "recovery_backbone_complete_only": 36.039603960396036,
+    "per_sequence": [
+     40.594059,
+     32.673267,
+     37.623762,
+     34.653465,
+     34.653465,
+     34.653465,
+     39.60396,
+     35.643564,
+     37.623762,
+     32.673267
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 3,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 33.33333333333333,
+    "recovery_backbone_complete_only": 33.33333333333333,
+    "per_sequence": [
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1dwh"
+  },
+  {
+   "n_residues": 499,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 321,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 115,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.26086956521739,
+    "recovery_backbone_complete_only": 40.26086956521739,
+    "per_sequence": [
+     40.869565,
+     37.391304,
+     39.130435,
+     38.26087,
+     43.478261,
+     36.521739,
+     43.478261,
+     40.869565,
+     41.73913,
+     40.869565
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 96,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 36.14583333333333,
+    "recovery_backbone_complete_only": 36.14583333333333,
+    "per_sequence": [
+     36.458333,
+     33.333333,
+     36.458333,
+     33.333333,
+     39.583333,
+     32.291667,
+     39.583333,
+     36.458333,
+     37.5,
+     36.458333
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 3,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 29.999999999999993,
+    "recovery_backbone_complete_only": 29.999999999999993,
+    "per_sequence": [
+     33.333333,
+     33.333333,
+     0.0,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1e4m"
+  },
+  {
+   "n_residues": 499,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 328,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 118,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 42.03389830508475,
+    "recovery_backbone_complete_only": 42.03389830508475,
+    "per_sequence": [
+     40.677966,
+     43.220339,
+     44.067797,
+     39.830508,
+     39.830508,
+     42.372881,
+     46.610169,
+     41.525424,
+     41.525424,
+     40.677966
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 100,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 38.0,
+    "recovery_backbone_complete_only": 38.0,
+    "per_sequence": [
+     37.0,
+     39.0,
+     40.0,
+     35.0,
+     37.0,
+     38.0,
+     44.0,
+     37.0,
+     37.0,
+     36.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 3,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 26.666666666666664,
+    "recovery_backbone_complete_only": 26.666666666666664,
+    "per_sequence": [
+     33.333333,
+     0.0,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     0.0,
+     33.333333,
+     33.333333
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1e6s"
+  },
+  {
+   "n_residues": 499,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 324,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 121,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 41.48760330578513,
+    "recovery_backbone_complete_only": 41.48760330578513,
+    "per_sequence": [
+     45.454545,
+     43.801653,
+     44.628099,
+     39.669421,
+     36.363636,
+     44.628099,
+     38.842975,
+     41.322314,
+     39.669421,
+     40.495868
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 103,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 37.18446601941748,
+    "recovery_backbone_complete_only": 37.18446601941748,
+    "per_sequence": [
+     40.776699,
+     40.776699,
+     39.805825,
+     34.951456,
+     32.038835,
+     39.805825,
+     34.951456,
+     37.864078,
+     35.92233,
+     34.951456
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 3,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 23.33333333333333,
+    "recovery_backbone_complete_only": 23.33333333333333,
+    "per_sequence": [
+     33.333333,
+     33.333333,
+     33.333333,
+     0.0,
+     0.0,
+     0.0,
+     33.333333,
+     33.333333,
+     66.666667,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1e72"
+  },
+  {
+   "n_residues": 324,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 15,
+   "n_context_metal": 10,
+   "any_atom|all": {
+    "n_scored": 28,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 51.42857142857142,
+    "recovery_backbone_complete_only": 51.42857142857142,
+    "per_sequence": [
+     42.857143,
+     57.142857,
+     46.428571,
+     50.0,
+     57.142857,
+     50.0,
+     57.142857,
+     42.857143,
+     50.0,
+     60.714286
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 24,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 46.66666666666667,
+    "recovery_backbone_complete_only": 46.66666666666667,
+    "per_sequence": [
+     41.666667,
+     50.0,
+     41.666667,
+     45.833333,
+     50.0,
+     45.833333,
+     50.0,
+     41.666667,
+     45.833333,
+     54.166667
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 26,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 51.53846153846153,
+    "recovery_backbone_complete_only": 51.53846153846153,
+    "per_sequence": [
+     42.307692,
+     57.692308,
+     46.153846,
+     50.0,
+     57.692308,
+     50.0,
+     57.692308,
+     42.307692,
+     50.0,
+     61.538462
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1f35"
+  },
+  {
+   "n_residues": 134,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 34,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 19,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 33.1578947368421,
+    "recovery_backbone_complete_only": 33.1578947368421,
+    "per_sequence": [
+     36.842105,
+     31.578947,
+     42.105263,
+     47.368421,
+     42.105263,
+     21.052632,
+     26.315789,
+     31.578947,
+     26.315789,
+     26.315789
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 15,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 22.0,
+    "recovery_backbone_complete_only": 22.0,
+    "per_sequence": [
+     26.666667,
+     20.0,
+     33.333333,
+     40.0,
+     33.333333,
+     6.666667,
+     13.333333,
+     20.0,
+     13.333333,
+     13.333333
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 8,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 37.5,
+    "recovery_backbone_complete_only": 37.5,
+    "per_sequence": [
+     50.0,
+     25.0,
+     50.0,
+     75.0,
+     50.0,
+     25.0,
+     25.0,
+     25.0,
+     25.0,
+     25.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1fee"
+  },
+  {
+   "n_residues": 162,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 6,
+   "n_context_metal": 6,
+   "any_atom|all": {
+    "n_scored": 15,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 30.0,
+    "recovery_backbone_complete_only": 30.0,
+    "per_sequence": [
+     26.666667,
+     33.333333,
+     33.333333,
+     33.333333,
+     26.666667,
+     26.666667,
+     33.333333,
+     26.666667,
+     33.333333,
+     26.666667
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 15,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 30.0,
+    "recovery_backbone_complete_only": 30.0,
+    "per_sequence": [
+     26.666667,
+     33.333333,
+     33.333333,
+     33.333333,
+     26.666667,
+     26.666667,
+     33.333333,
+     26.666667,
+     33.333333,
+     26.666667
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 15,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 30.0,
+    "recovery_backbone_complete_only": 30.0,
+    "per_sequence": [
+     26.666667,
+     33.333333,
+     33.333333,
+     33.333333,
+     26.666667,
+     26.666667,
+     33.333333,
+     26.666667,
+     33.333333,
+     26.666667
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1job"
+  },
+  {
+   "n_residues": 268,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 14,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 32,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 45.625,
+    "recovery_backbone_complete_only": 45.625,
+    "per_sequence": [
+     46.875,
+     37.5,
+     40.625,
+     46.875,
+     50.0,
+     46.875,
+     46.875,
+     46.875,
+     46.875,
+     46.875
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 26,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 46.92307692307692,
+    "recovery_backbone_complete_only": 46.92307692307692,
+    "per_sequence": [
+     46.153846,
+     38.461538,
+     42.307692,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     46.153846,
+     46.153846
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 12,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 75.0,
+    "recovery_backbone_complete_only": 75.0,
+    "per_sequence": [
+     75.0,
+     66.666667,
+     75.0,
+     75.0,
+     75.0,
+     75.0,
+     83.333333,
+     75.0,
+     75.0,
+     75.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1lqk"
+  },
+  {
+   "n_residues": 774,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 57,
+   "n_context_metal": 8,
+   "any_atom|all": {
+    "n_scored": 85,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 43.529411764705884,
+    "recovery_backbone_complete_only": 43.529411764705884,
+    "per_sequence": [
+     42.352941,
+     41.176471,
+     42.352941,
+     43.529412,
+     42.352941,
+     44.705882,
+     40.0,
+     45.882353,
+     45.882353,
+     47.058824
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 74,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 43.108108108108105,
+    "recovery_backbone_complete_only": 43.108108108108105,
+    "per_sequence": [
+     41.891892,
+     40.540541,
+     41.891892,
+     43.243243,
+     41.891892,
+     44.594595,
+     39.189189,
+     44.594595,
+     45.945946,
+     47.297297
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 28,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 31.071428571428573,
+    "recovery_backbone_complete_only": 31.071428571428573,
+    "per_sequence": [
+     32.142857,
+     35.714286,
+     25.0,
+     32.142857,
+     28.571429,
+     28.571429,
+     25.0,
+     28.571429,
+     35.714286,
+     39.285714
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1m5e"
+  },
+  {
+   "n_residues": 774,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 55,
+   "n_context_metal": 6,
+   "any_atom|all": {
+    "n_scored": 81,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 39.99999999999999,
+    "recovery_backbone_complete_only": 39.99999999999999,
+    "per_sequence": [
+     35.802469,
+     40.740741,
+     40.740741,
+     39.506173,
+     38.271605,
+     43.209877,
+     39.506173,
+     44.444444,
+     38.271605,
+     39.506173
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 70,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 39.285714285714285,
+    "recovery_backbone_complete_only": 39.285714285714285,
+    "per_sequence": [
+     34.285714,
+     40.0,
+     40.0,
+     38.571429,
+     37.142857,
+     44.285714,
+     38.571429,
+     44.285714,
+     37.142857,
+     38.571429
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 25,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 33.2,
+    "recovery_backbone_complete_only": 33.2,
+    "per_sequence": [
+     28.0,
+     32.0,
+     32.0,
+     32.0,
+     32.0,
+     36.0,
+     32.0,
+     44.0,
+     36.0,
+     28.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1m5f"
+  },
+  {
+   "n_residues": 705,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 12,
+   "n_context_metal": 6,
+   "any_atom|all": {
+    "n_scored": 58,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 48.10344827586208,
+    "recovery_backbone_complete_only": 48.10344827586208,
+    "per_sequence": [
+     46.551724,
+     51.724138,
+     50.0,
+     46.551724,
+     50.0,
+     46.551724,
+     44.827586,
+     50.0,
+     48.275862,
+     46.551724
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 58,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 48.10344827586208,
+    "recovery_backbone_complete_only": 48.10344827586208,
+    "per_sequence": [
+     46.551724,
+     51.724138,
+     50.0,
+     46.551724,
+     50.0,
+     46.551724,
+     44.827586,
+     50.0,
+     48.275862,
+     46.551724
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 30,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 73.33333333333333,
+    "recovery_backbone_complete_only": 73.33333333333333,
+    "per_sequence": [
+     76.666667,
+     76.666667,
+     70.0,
+     73.333333,
+     76.666667,
+     66.666667,
+     70.0,
+     73.333333,
+     73.333333,
+     76.666667
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1moj"
+  },
+  {
+   "n_residues": 775,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 5,
+   "n_context_metal": 5,
+   "any_atom|all": {
+    "n_scored": 23,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 43.47826086956522,
+    "recovery_backbone_complete_only": 43.47826086956522,
+    "per_sequence": [
+     47.826087,
+     43.478261,
+     43.478261,
+     39.130435,
+     43.478261,
+     43.478261,
+     39.130435,
+     39.130435,
+     47.826087,
+     47.826087
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 21,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.47619047619047,
+    "recovery_backbone_complete_only": 40.47619047619047,
+    "per_sequence": [
+     47.619048,
+     38.095238,
+     38.095238,
+     38.095238,
+     38.095238,
+     42.857143,
+     38.095238,
+     38.095238,
+     42.857143,
+     42.857143
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 23,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 43.47826086956522,
+    "recovery_backbone_complete_only": 43.47826086956522,
+    "per_sequence": [
+     47.826087,
+     43.478261,
+     43.478261,
+     39.130435,
+     43.478261,
+     43.478261,
+     39.130435,
+     39.130435,
+     47.826087,
+     47.826087
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1mxy"
+  },
+  {
+   "n_residues": 774,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 5,
+   "n_context_metal": 5,
+   "any_atom|all": {
+    "n_scored": 23,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 41.30434782608696,
+    "recovery_backbone_complete_only": 41.30434782608696,
+    "per_sequence": [
+     39.130435,
+     34.782609,
+     43.478261,
+     39.130435,
+     39.130435,
+     47.826087,
+     39.130435,
+     39.130435,
+     47.826087,
+     43.478261
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 21,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 37.619047619047606,
+    "recovery_backbone_complete_only": 37.619047619047606,
+    "per_sequence": [
+     38.095238,
+     33.333333,
+     38.095238,
+     33.333333,
+     33.333333,
+     42.857143,
+     38.095238,
+     38.095238,
+     42.857143,
+     38.095238
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 23,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 41.30434782608696,
+    "recovery_backbone_complete_only": 41.30434782608696,
+    "per_sequence": [
+     39.130435,
+     34.782609,
+     43.478261,
+     39.130435,
+     39.130435,
+     47.826087,
+     39.130435,
+     39.130435,
+     47.826087,
+     43.478261
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1mxz"
+  },
+  {
+   "n_residues": 774,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 5,
+   "n_context_metal": 5,
+   "any_atom|all": {
+    "n_scored": 23,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 44.782608695652186,
+    "recovery_backbone_complete_only": 44.782608695652186,
+    "per_sequence": [
+     47.826087,
+     43.478261,
+     43.478261,
+     43.478261,
+     47.826087,
+     43.478261,
+     47.826087,
+     43.478261,
+     43.478261,
+     43.478261
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 21,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.95238095238095,
+    "recovery_backbone_complete_only": 40.95238095238095,
+    "per_sequence": [
+     47.619048,
+     38.095238,
+     38.095238,
+     38.095238,
+     42.857143,
+     38.095238,
+     42.857143,
+     42.857143,
+     38.095238,
+     42.857143
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 23,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 44.782608695652186,
+    "recovery_backbone_complete_only": 44.782608695652186,
+    "per_sequence": [
+     47.826087,
+     43.478261,
+     43.478261,
+     43.478261,
+     47.826087,
+     43.478261,
+     47.826087,
+     43.478261,
+     43.478261,
+     43.478261
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1my1"
+  },
+  {
+   "n_residues": 268,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 18,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 36,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.55555555555556,
+    "recovery_backbone_complete_only": 40.55555555555556,
+    "per_sequence": [
+     47.222222,
+     38.888889,
+     47.222222,
+     41.666667,
+     36.111111,
+     41.666667,
+     41.666667,
+     36.111111,
+     36.111111,
+     38.888889
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 30,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 41.0,
+    "recovery_backbone_complete_only": 41.0,
+    "per_sequence": [
+     46.666667,
+     40.0,
+     46.666667,
+     40.0,
+     36.666667,
+     43.333333,
+     43.333333,
+     36.666667,
+     36.666667,
+     40.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 12,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 74.16666666666667,
+    "recovery_backbone_complete_only": 74.16666666666667,
+    "per_sequence": [
+     75.0,
+     75.0,
+     83.333333,
+     75.0,
+     66.666667,
+     75.0,
+     66.666667,
+     75.0,
+     75.0,
+     75.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1nki"
+  },
+  {
+   "n_residues": 279,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 523,
+   "n_context_metal": 3,
+   "any_atom|all": {
+    "n_scored": 40,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 58.75,
+    "recovery_backbone_complete_only": 58.75,
+    "per_sequence": [
+     57.5,
+     57.5,
+     60.0,
+     57.5,
+     60.0,
+     55.0,
+     55.0,
+     62.5,
+     62.5,
+     60.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 32,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 57.8125,
+    "recovery_backbone_complete_only": 57.8125,
+    "per_sequence": [
+     56.25,
+     56.25,
+     59.375,
+     56.25,
+     59.375,
+     53.125,
+     53.125,
+     62.5,
+     62.5,
+     59.375
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 11,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 84.54545454545455,
+    "recovery_backbone_complete_only": 84.54545454545455,
+    "per_sequence": [
+     90.909091,
+     90.909091,
+     81.818182,
+     72.727273,
+     81.818182,
+     72.727273,
+     81.818182,
+     90.909091,
+     90.909091,
+     90.909091
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1qum"
+  },
+  {
+   "n_residues": 1089,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 86,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 37,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 32.16216216216217,
+    "recovery_backbone_complete_only": 32.16216216216217,
+    "per_sequence": [
+     32.432432,
+     32.432432,
+     29.72973,
+     32.432432,
+     32.432432,
+     35.135135,
+     29.72973,
+     35.135135,
+     32.432432,
+     29.72973
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 34,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 33.82352941176471,
+    "recovery_backbone_complete_only": 33.82352941176471,
+    "per_sequence": [
+     32.352941,
+     35.294118,
+     32.352941,
+     32.352941,
+     35.294118,
+     38.235294,
+     32.352941,
+     35.294118,
+     32.352941,
+     32.352941
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 13,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 18.46153846153846,
+    "recovery_backbone_complete_only": 18.46153846153846,
+    "per_sequence": [
+     23.076923,
+     15.384615,
+     15.384615,
+     23.076923,
+     15.384615,
+     15.384615,
+     15.384615,
+     23.076923,
+     23.076923,
+     15.384615
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1sgf"
+  },
+  {
+   "n_residues": 226,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 139,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 65,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 46.30769230769231,
+    "recovery_backbone_complete_only": 46.30769230769231,
+    "per_sequence": [
+     49.230769,
+     46.153846,
+     49.230769,
+     44.615385,
+     44.615385,
+     44.615385,
+     44.615385,
+     49.230769,
+     41.538462,
+     49.230769
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 54,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 41.111111111111114,
+    "recovery_backbone_complete_only": 41.111111111111114,
+    "per_sequence": [
+     44.444444,
+     38.888889,
+     46.296296,
+     38.888889,
+     40.740741,
+     40.740741,
+     40.740741,
+     42.592593,
+     33.333333,
+     44.444444
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 3,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 63.33333333333333,
+    "recovery_backbone_complete_only": 63.33333333333333,
+    "per_sequence": [
+     66.666667,
+     66.666667,
+     66.666667,
+     66.666667,
+     66.666667,
+     66.666667,
+     66.666667,
+     66.666667,
+     33.333333,
+     66.666667
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1t31"
+  },
+  {
+   "n_residues": 174,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 1512,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 89,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 31.01123595505618,
+    "recovery_backbone_complete_only": 31.01123595505618,
+    "per_sequence": [
+     32.58427,
+     29.213483,
+     29.213483,
+     32.58427,
+     32.58427,
+     30.337079,
+     30.337079,
+     33.707865,
+     32.58427,
+     26.966292
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 69,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 25.942028985507243,
+    "recovery_backbone_complete_only": 25.942028985507243,
+    "per_sequence": [
+     28.985507,
+     26.086957,
+     24.637681,
+     27.536232,
+     27.536232,
+     23.188406,
+     24.637681,
+     27.536232,
+     27.536232,
+     21.73913
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 12.0,
+    "recovery_backbone_complete_only": 12.0,
+    "per_sequence": [
+     20.0,
+     20.0,
+     0.0,
+     0.0,
+     40.0,
+     0.0,
+     0.0,
+     20.0,
+     20.0,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "1u3e"
+  },
+  {
+   "n_residues": 892,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 41,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 62,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 39.83870967741935,
+    "recovery_backbone_complete_only": 39.83870967741935,
+    "per_sequence": [
+     40.322581,
+     40.322581,
+     38.709677,
+     35.483871,
+     40.322581,
+     40.322581,
+     38.709677,
+     37.096774,
+     43.548387,
+     43.548387
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 44,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 35.45454545454545,
+    "recovery_backbone_complete_only": 35.45454545454545,
+    "per_sequence": [
+     36.363636,
+     34.090909,
+     36.363636,
+     31.818182,
+     38.636364,
+     34.090909,
+     34.090909,
+     36.363636,
+     36.363636,
+     36.363636
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 4,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 57.5,
+    "recovery_backbone_complete_only": 57.5,
+    "per_sequence": [
+     75.0,
+     50.0,
+     50.0,
+     25.0,
+     75.0,
+     50.0,
+     25.0,
+     75.0,
+     75.0,
+     75.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "2bdh"
+  },
+  {
+   "n_residues": 500,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 296,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 29,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 34.48275862068965,
+    "recovery_backbone_complete_only": 34.48275862068965,
+    "per_sequence": [
+     37.931034,
+     37.931034,
+     31.034483,
+     34.482759,
+     37.931034,
+     34.482759,
+     27.586207,
+     34.482759,
+     41.37931,
+     27.586207
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 19,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 26.31578947368421,
+    "recovery_backbone_complete_only": 26.31578947368421,
+    "per_sequence": [
+     31.578947,
+     31.578947,
+     21.052632,
+     26.315789,
+     31.578947,
+     26.315789,
+     15.789474,
+     26.315789,
+     36.842105,
+     15.789474
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 4,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 50.0,
+    "recovery_backbone_complete_only": 50.0,
+    "per_sequence": [
+     75.0,
+     75.0,
+     25.0,
+     25.0,
+     75.0,
+     75.0,
+     25.0,
+     25.0,
+     75.0,
+     25.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "2bx2"
+  },
+  {
+   "n_residues": 268,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 5,
+   "n_context_metal": 4,
+   "any_atom|all": {
+    "n_scored": 6,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 3.333333333333333,
+    "recovery_backbone_complete_only": 3.333333333333333,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     16.666667,
+     16.666667,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 4.0,
+    "recovery_backbone_complete_only": 4.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     20.0,
+     20.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 4.0,
+    "recovery_backbone_complete_only": 4.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     20.0,
+     20.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "2cfv"
+  },
+  {
+   "n_residues": 952,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 61,
+   "n_context_metal": 4,
+   "any_atom|all": {
+    "n_scored": 96,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 58.333333333333336,
+    "recovery_backbone_complete_only": 58.333333333333336,
+    "per_sequence": [
+     56.25,
+     57.291667,
+     59.375,
+     58.333333,
+     55.208333,
+     60.416667,
+     58.333333,
+     57.291667,
+     59.375,
+     61.458333
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 71,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 59.29577464788732,
+    "recovery_backbone_complete_only": 59.29577464788732,
+    "per_sequence": [
+     59.15493,
+     59.15493,
+     59.15493,
+     59.15493,
+     57.746479,
+     59.15493,
+     59.15493,
+     57.746479,
+     60.56338,
+     61.971831
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 22,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 62.72727272727273,
+    "recovery_backbone_complete_only": 62.72727272727273,
+    "per_sequence": [
+     59.090909,
+     59.090909,
+     59.090909,
+     63.636364,
+     68.181818,
+     63.636364,
+     63.636364,
+     63.636364,
+     63.636364,
+     63.636364
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "2e6c"
+  },
+  {
+   "n_residues": 279,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 441,
+   "n_context_metal": 3,
+   "any_atom|all": {
+    "n_scored": 41,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 52.6829268292683,
+    "recovery_backbone_complete_only": 52.6829268292683,
+    "per_sequence": [
+     48.780488,
+     51.219512,
+     48.780488,
+     56.097561,
+     53.658537,
+     53.658537,
+     56.097561,
+     51.219512,
+     51.219512,
+     56.097561
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 34,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 48.82352941176471,
+    "recovery_backbone_complete_only": 48.82352941176471,
+    "per_sequence": [
+     44.117647,
+     47.058824,
+     44.117647,
+     52.941176,
+     50.0,
+     50.0,
+     52.941176,
+     47.058824,
+     47.058824,
+     52.941176
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 11,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 84.54545454545455,
+    "recovery_backbone_complete_only": 84.54545454545455,
+    "per_sequence": [
+     81.818182,
+     81.818182,
+     72.727273,
+     90.909091,
+     90.909091,
+     90.909091,
+     81.818182,
+     81.818182,
+     81.818182,
+     90.909091
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "2nq9"
+  },
+  {
+   "n_residues": 558,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 605,
+   "n_context_metal": 4,
+   "any_atom|all": {
+    "n_scored": 45,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 56.666666666666664,
+    "recovery_backbone_complete_only": 56.666666666666664,
+    "per_sequence": [
+     55.555556,
+     57.777778,
+     53.333333,
+     55.555556,
+     57.777778,
+     55.555556,
+     55.555556,
+     60.0,
+     57.777778,
+     57.777778
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 37,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 55.67567567567568,
+    "recovery_backbone_complete_only": 55.67567567567568,
+    "per_sequence": [
+     54.054054,
+     56.756757,
+     54.054054,
+     54.054054,
+     56.756757,
+     54.054054,
+     54.054054,
+     59.459459,
+     56.756757,
+     56.756757
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 16,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 70.0,
+    "recovery_backbone_complete_only": 70.0,
+    "per_sequence": [
+     68.75,
+     68.75,
+     68.75,
+     68.75,
+     68.75,
+     68.75,
+     75.0,
+     75.0,
+     68.75,
+     68.75
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "2nqj"
+  },
+  {
+   "n_residues": 296,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 11,
+   "n_context_metal": 5,
+   "any_atom|all": {
+    "n_scored": 19,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 25.263157894736842,
+    "recovery_backbone_complete_only": 25.263157894736842,
+    "per_sequence": [
+     26.315789,
+     26.315789,
+     26.315789,
+     26.315789,
+     26.315789,
+     26.315789,
+     26.315789,
+     26.315789,
+     15.789474,
+     26.315789
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 16,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 17.5,
+    "recovery_backbone_complete_only": 17.5,
+    "per_sequence": [
+     18.75,
+     18.75,
+     18.75,
+     18.75,
+     18.75,
+     18.75,
+     18.75,
+     18.75,
+     6.25,
+     18.75
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 8,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 0.0,
+    "recovery_backbone_complete_only": 0.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "2nz6"
+  },
+  {
+   "n_residues": 292,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 42,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 29,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 69.3103448275862,
+    "recovery_backbone_complete_only": 69.3103448275862,
+    "per_sequence": [
+     68.965517,
+     68.965517,
+     72.413793,
+     68.965517,
+     62.068966,
+     72.413793,
+     75.862069,
+     68.965517,
+     75.862069,
+     58.62069
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 22,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 66.81818181818183,
+    "recovery_backbone_complete_only": 66.81818181818183,
+    "per_sequence": [
+     63.636364,
+     63.636364,
+     72.727273,
+     68.181818,
+     63.636364,
+     68.181818,
+     72.727273,
+     68.181818,
+     72.727273,
+     54.545455
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 3,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 29.999999999999993,
+    "recovery_backbone_complete_only": 29.999999999999993,
+    "per_sequence": [
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "2ou7"
+  },
+  {
+   "n_residues": 690,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 44,
+   "n_context_metal": 10,
+   "any_atom|all": {
+    "n_scored": 48,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 44.58333333333333,
+    "recovery_backbone_complete_only": 44.58333333333333,
+    "per_sequence": [
+     45.833333,
+     41.666667,
+     43.75,
+     43.75,
+     43.75,
+     43.75,
+     45.833333,
+     45.833333,
+     47.916667,
+     43.75
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 44,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 42.04545454545455,
+    "recovery_backbone_complete_only": 42.04545454545455,
+    "per_sequence": [
+     43.181818,
+     38.636364,
+     45.454545,
+     40.909091,
+     40.909091,
+     38.636364,
+     43.181818,
+     45.454545,
+     43.181818,
+     40.909091
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 28,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 47.857142857142854,
+    "recovery_backbone_complete_only": 47.857142857142854,
+    "per_sequence": [
+     53.571429,
+     42.857143,
+     53.571429,
+     46.428571,
+     42.857143,
+     42.857143,
+     50.0,
+     53.571429,
+     46.428571,
+     46.428571
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "2vxx"
+  },
+  {
+   "n_residues": 949,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 16,
+   "n_context_metal": 12,
+   "any_atom|all": {
+    "n_scored": 64,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 80.78125,
+    "recovery_backbone_complete_only": 80.78125,
+    "per_sequence": [
+     82.8125,
+     81.25,
+     79.6875,
+     78.125,
+     81.25,
+     82.8125,
+     82.8125,
+     78.125,
+     81.25,
+     79.6875
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 50,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 83.4,
+    "recovery_backbone_complete_only": 83.4,
+    "per_sequence": [
+     86.0,
+     84.0,
+     82.0,
+     80.0,
+     84.0,
+     86.0,
+     86.0,
+     80.0,
+     84.0,
+     82.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 57,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 83.50877192982455,
+    "recovery_backbone_complete_only": 83.50877192982455,
+    "per_sequence": [
+     85.964912,
+     82.45614,
+     82.45614,
+     80.701754,
+     84.210526,
+     84.210526,
+     84.210526,
+     82.45614,
+     85.964912,
+     82.45614
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "2zwn"
+  },
+  {
+   "n_residues": 1016,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 69,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 34,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 45.58823529411764,
+    "recovery_backbone_complete_only": 45.58823529411764,
+    "per_sequence": [
+     50.0,
+     41.176471,
+     44.117647,
+     41.176471,
+     47.058824,
+     52.941176,
+     38.235294,
+     44.117647,
+     47.058824,
+     50.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 31,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 43.87096774193548,
+    "recovery_backbone_complete_only": 43.87096774193548,
+    "per_sequence": [
+     48.387097,
+     38.709677,
+     41.935484,
+     38.709677,
+     45.16129,
+     51.612903,
+     35.483871,
+     41.935484,
+     48.387097,
+     48.387097
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 7,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 42.857142857142854,
+    "recovery_backbone_complete_only": 42.857142857142854,
+    "per_sequence": [
+     57.142857,
+     28.571429,
+     28.571429,
+     28.571429,
+     71.428571,
+     71.428571,
+     28.571429,
+     14.285714,
+     71.428571,
+     28.571429
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3bvx"
+  },
+  {
+   "n_residues": 1015,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 79,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 37,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 50.810810810810814,
+    "recovery_backbone_complete_only": 50.810810810810814,
+    "per_sequence": [
+     54.054054,
+     51.351351,
+     54.054054,
+     48.648649,
+     43.243243,
+     56.756757,
+     48.648649,
+     54.054054,
+     51.351351,
+     45.945946
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 31,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 47.096774193548384,
+    "recovery_backbone_complete_only": 47.096774193548384,
+    "per_sequence": [
+     51.612903,
+     48.387097,
+     51.612903,
+     45.16129,
+     38.709677,
+     51.612903,
+     45.16129,
+     48.387097,
+     48.387097,
+     41.935484
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 7,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 34.28571428571428,
+    "recovery_backbone_complete_only": 34.28571428571428,
+    "per_sequence": [
+     57.142857,
+     28.571429,
+     28.571429,
+     28.571429,
+     14.285714,
+     57.142857,
+     42.857143,
+     28.571429,
+     28.571429,
+     28.571429
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3cv5"
+  },
+  {
+   "n_residues": 944,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 59,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 62,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 51.774193548387096,
+    "recovery_backbone_complete_only": 51.774193548387096,
+    "per_sequence": [
+     51.612903,
+     50.0,
+     56.451613,
+     51.612903,
+     53.225806,
+     48.387097,
+     54.83871,
+     46.774194,
+     51.612903,
+     53.225806
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 51,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 46.470588235294116,
+    "recovery_backbone_complete_only": 46.470588235294116,
+    "per_sequence": [
+     45.098039,
+     45.098039,
+     52.941176,
+     45.098039,
+     47.058824,
+     41.176471,
+     49.019608,
+     41.176471,
+     47.058824,
+     50.980392
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 4,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 0.0,
+    "recovery_backbone_complete_only": 0.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3f4v"
+  },
+  {
+   "n_residues": 944,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 81,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 70,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 46.857142857142854,
+    "recovery_backbone_complete_only": 46.857142857142854,
+    "per_sequence": [
+     45.714286,
+     44.285714,
+     50.0,
+     50.0,
+     45.714286,
+     45.714286,
+     47.142857,
+     47.142857,
+     48.571429,
+     44.285714
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 59,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 41.186440677966104,
+    "recovery_backbone_complete_only": 41.186440677966104,
+    "per_sequence": [
+     42.372881,
+     37.288136,
+     44.067797,
+     42.372881,
+     40.677966,
+     42.372881,
+     40.677966,
+     38.983051,
+     44.067797,
+     38.983051
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 4,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 0.0,
+    "recovery_backbone_complete_only": 0.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3f5l"
+  },
+  {
+   "n_residues": 293,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 44,
+   "n_context_metal": 8,
+   "any_atom|all": {
+    "n_scored": 61,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.0,
+    "recovery_backbone_complete_only": 40.0,
+    "per_sequence": [
+     36.065574,
+     37.704918,
+     39.344262,
+     44.262295,
+     40.983607,
+     40.983607,
+     45.901639,
+     29.508197,
+     37.704918,
+     47.540984
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 54,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 37.96296296296296,
+    "recovery_backbone_complete_only": 37.96296296296296,
+    "per_sequence": [
+     33.333333,
+     35.185185,
+     35.185185,
+     40.740741,
+     40.740741,
+     40.740741,
+     44.444444,
+     27.777778,
+     35.185185,
+     46.296296
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 28,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 23.92857142857143,
+    "recovery_backbone_complete_only": 23.92857142857143,
+    "per_sequence": [
+     17.857143,
+     28.571429,
+     25.0,
+     32.142857,
+     17.857143,
+     25.0,
+     32.142857,
+     10.714286,
+     17.857143,
+     32.142857
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3fgg"
+  },
+  {
+   "n_residues": 239,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 2,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 0.0,
+    "recovery_backbone_complete_only": 0.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 0.0,
+    "recovery_backbone_complete_only": 0.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 0.0,
+    "recovery_backbone_complete_only": 0.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3hg9"
+  },
+  {
+   "n_residues": 257,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 60,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 40,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 62.25,
+    "recovery_backbone_complete_only": 62.25,
+    "per_sequence": [
+     65.0,
+     57.5,
+     67.5,
+     65.0,
+     60.0,
+     57.5,
+     65.0,
+     65.0,
+     62.5,
+     57.5
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 33,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 56.06060606060606,
+    "recovery_backbone_complete_only": 56.06060606060606,
+    "per_sequence": [
+     57.575758,
+     51.515152,
+     60.606061,
+     60.606061,
+     54.545455,
+     51.515152,
+     60.606061,
+     57.575758,
+     57.575758,
+     48.484848
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 98.0,
+    "recovery_backbone_complete_only": 98.0,
+    "per_sequence": [
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     80.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3hkn"
+  },
+  {
+   "n_residues": 257,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 27,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 17,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 67.05882352941178,
+    "recovery_backbone_complete_only": 67.05882352941178,
+    "per_sequence": [
+     58.823529,
+     64.705882,
+     76.470588,
+     70.588235,
+     64.705882,
+     64.705882,
+     70.588235,
+     64.705882,
+     64.705882,
+     70.588235
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 16,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 65.0,
+    "recovery_backbone_complete_only": 65.0,
+    "per_sequence": [
+     56.25,
+     62.5,
+     75.0,
+     68.75,
+     62.5,
+     62.5,
+     68.75,
+     62.5,
+     62.5,
+     68.75
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 94.0,
+    "recovery_backbone_complete_only": 94.0,
+    "per_sequence": [
+     80.0,
+     100.0,
+     100.0,
+     100.0,
+     80.0,
+     80.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3hkt"
+  },
+  {
+   "n_residues": 69,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 1,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 3,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 0.0,
+    "recovery_backbone_complete_only": 0.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 3,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 0.0,
+    "recovery_backbone_complete_only": 0.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 3,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 0.0,
+    "recovery_backbone_complete_only": 0.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3i9z"
+  },
+  {
+   "n_residues": 855,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 54,
+   "n_context_metal": 20,
+   "any_atom|all": {
+    "n_scored": 72,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 33.33333333333333,
+    "recovery_backbone_complete_only": 33.33333333333333,
+    "per_sequence": [
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333,
+     33.333333
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 60,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 20.0,
+    "recovery_backbone_complete_only": 20.0,
+    "per_sequence": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 60,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 20.0,
+    "recovery_backbone_complete_only": 20.0,
+    "per_sequence": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3k7r"
+  },
+  {
+   "n_residues": 1259,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 25,
+   "n_context_metal": 10,
+   "any_atom|all": {
+    "n_scored": 46,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 73.47826086956522,
+    "recovery_backbone_complete_only": 73.47826086956522,
+    "per_sequence": [
+     71.73913,
+     73.913043,
+     80.434783,
+     76.086957,
+     76.086957,
+     71.73913,
+     69.565217,
+     73.913043,
+     76.086957,
+     65.217391
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 41,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 71.70731707317073,
+    "recovery_backbone_complete_only": 71.70731707317073,
+    "per_sequence": [
+     68.292683,
+     73.170732,
+     78.04878,
+     75.609756,
+     73.170732,
+     68.292683,
+     68.292683,
+     73.170732,
+     75.609756,
+     63.414634
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 45,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 72.88888888888889,
+    "recovery_backbone_complete_only": 72.88888888888889,
+    "per_sequence": [
+     71.111111,
+     73.333333,
+     80.0,
+     75.555556,
+     75.555556,
+     71.111111,
+     68.888889,
+     73.333333,
+     75.555556,
+     64.444444
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3l24"
+  },
+  {
+   "n_residues": 532,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 2,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 14,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 57.857142857142854,
+    "recovery_backbone_complete_only": 57.857142857142854,
+    "per_sequence": [
+     57.142857,
+     42.857143,
+     57.142857,
+     64.285714,
+     64.285714,
+     64.285714,
+     57.142857,
+     57.142857,
+     57.142857,
+     57.142857
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 14,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 57.857142857142854,
+    "recovery_backbone_complete_only": 57.857142857142854,
+    "per_sequence": [
+     57.142857,
+     42.857143,
+     57.142857,
+     64.285714,
+     64.285714,
+     64.285714,
+     57.142857,
+     57.142857,
+     57.142857,
+     57.142857
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 14,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 57.857142857142854,
+    "recovery_backbone_complete_only": 57.857142857142854,
+    "per_sequence": [
+     57.142857,
+     42.857143,
+     57.142857,
+     64.285714,
+     64.285714,
+     64.285714,
+     57.142857,
+     57.142857,
+     57.142857,
+     57.142857
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3l7t"
+  },
+  {
+   "n_residues": 301,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 75,
+   "n_context_metal": 7,
+   "any_atom|all": {
+    "n_scored": 50,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 29.6,
+    "recovery_backbone_complete_only": 29.6,
+    "per_sequence": [
+     28.0,
+     32.0,
+     28.0,
+     30.0,
+     22.0,
+     32.0,
+     30.0,
+     26.0,
+     36.0,
+     32.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 46,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 27.391304347826086,
+    "recovery_backbone_complete_only": 27.391304347826086,
+    "per_sequence": [
+     26.086957,
+     30.434783,
+     26.086957,
+     28.26087,
+     19.565217,
+     30.434783,
+     26.086957,
+     21.73913,
+     34.782609,
+     30.434783
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 26,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 19.230769230769234,
+    "recovery_backbone_complete_only": 19.230769230769234,
+    "per_sequence": [
+     15.384615,
+     23.076923,
+     15.384615,
+     23.076923,
+     11.538462,
+     19.230769,
+     19.230769,
+     11.538462,
+     26.923077,
+     26.923077
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3m7p"
+  },
+  {
+   "n_residues": 625,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 2,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 10,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 26.0,
+    "recovery_backbone_complete_only": 26.0,
+    "per_sequence": [
+     30.0,
+     30.0,
+     30.0,
+     20.0,
+     30.0,
+     30.0,
+     30.0,
+     20.0,
+     30.0,
+     10.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 9,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 28.88888888888888,
+    "recovery_backbone_complete_only": 28.88888888888888,
+    "per_sequence": [
+     33.333333,
+     33.333333,
+     33.333333,
+     22.222222,
+     33.333333,
+     33.333333,
+     33.333333,
+     22.222222,
+     33.333333,
+     11.111111
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 10,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 26.0,
+    "recovery_backbone_complete_only": 26.0,
+    "per_sequence": [
+     30.0,
+     30.0,
+     30.0,
+     20.0,
+     30.0,
+     30.0,
+     30.0,
+     20.0,
+     30.0,
+     10.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3mi9"
+  },
+  {
+   "n_residues": 202,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 515,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 41,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 39.02439024390243,
+    "recovery_backbone_complete_only": 39.02439024390243,
+    "per_sequence": [
+     34.146341,
+     41.463415,
+     41.463415,
+     36.585366,
+     43.902439,
+     41.463415,
+     36.585366,
+     39.02439,
+     41.463415,
+     34.146341
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 35,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 37.71428571428571,
+    "recovery_backbone_complete_only": 37.71428571428571,
+    "per_sequence": [
+     28.571429,
+     37.142857,
+     37.142857,
+     37.142857,
+     45.714286,
+     40.0,
+     34.285714,
+     40.0,
+     42.857143,
+     34.285714
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 72.0,
+    "recovery_backbone_complete_only": 72.0,
+    "per_sequence": [
+     60.0,
+     80.0,
+     80.0,
+     60.0,
+     80.0,
+     80.0,
+     60.0,
+     80.0,
+     60.0,
+     80.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3o1u"
+  },
+  {
+   "n_residues": 508,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 40,
+   "n_context_metal": 8,
+   "any_atom|all": {
+    "n_scored": 60,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 50.16666666666667,
+    "recovery_backbone_complete_only": 50.16666666666667,
+    "per_sequence": [
+     45.0,
+     50.0,
+     58.333333,
+     46.666667,
+     46.666667,
+     41.666667,
+     51.666667,
+     58.333333,
+     51.666667,
+     51.666667
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 48,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 52.291666666666664,
+    "recovery_backbone_complete_only": 52.291666666666664,
+    "per_sequence": [
+     47.916667,
+     54.166667,
+     58.333333,
+     47.916667,
+     50.0,
+     45.833333,
+     54.166667,
+     58.333333,
+     52.083333,
+     54.166667
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 18,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 20.555555555555554,
+    "recovery_backbone_complete_only": 20.555555555555554,
+    "per_sequence": [
+     11.111111,
+     22.222222,
+     27.777778,
+     11.111111,
+     11.111111,
+     27.777778,
+     27.777778,
+     27.777778,
+     22.222222,
+     16.666667
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3u92"
+  },
+  {
+   "n_residues": 504,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 7,
+   "n_context_metal": 5,
+   "any_atom|all": {
+    "n_scored": 21,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 33.8095238095238,
+    "recovery_backbone_complete_only": 33.8095238095238,
+    "per_sequence": [
+     33.333333,
+     33.333333,
+     38.095238,
+     28.571429,
+     38.095238,
+     33.333333,
+     33.333333,
+     33.333333,
+     38.095238,
+     28.571429
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 20,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 30.5,
+    "recovery_backbone_complete_only": 30.5,
+    "per_sequence": [
+     30.0,
+     30.0,
+     35.0,
+     25.0,
+     35.0,
+     30.0,
+     30.0,
+     30.0,
+     35.0,
+     25.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 12,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 16.666666666666664,
+    "recovery_backbone_complete_only": 16.666666666666664,
+    "per_sequence": [
+     16.666667,
+     16.666667,
+     25.0,
+     8.333333,
+     25.0,
+     16.666667,
+     16.666667,
+     8.333333,
+     33.333333,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3u93"
+  },
+  {
+   "n_residues": 1018,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 24,
+   "n_context_metal": 13,
+   "any_atom|all": {
+    "n_scored": 54,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 31.481481481481485,
+    "recovery_backbone_complete_only": 31.481481481481485,
+    "per_sequence": [
+     31.481481,
+     24.074074,
+     37.037037,
+     27.777778,
+     35.185185,
+     37.037037,
+     37.037037,
+     42.592593,
+     22.222222,
+     20.37037
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 53,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 30.18867924528302,
+    "recovery_backbone_complete_only": 30.18867924528302,
+    "per_sequence": [
+     30.188679,
+     22.641509,
+     35.849057,
+     26.415094,
+     33.962264,
+     35.849057,
+     35.849057,
+     41.509434,
+     20.754717,
+     18.867925
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 44,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 31.363636363636363,
+    "recovery_backbone_complete_only": 31.363636363636363,
+    "per_sequence": [
+     29.545455,
+     25.0,
+     38.636364,
+     27.272727,
+     36.363636,
+     38.636364,
+     36.363636,
+     43.181818,
+     20.454545,
+     18.181818
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3u94"
+  },
+  {
+   "n_residues": 1398,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 58,
+   "n_context_metal": 4,
+   "any_atom|all": {
+    "n_scored": 84,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 47.26190476190476,
+    "recovery_backbone_complete_only": 47.26190476190476,
+    "per_sequence": [
+     50.0,
+     47.619048,
+     47.619048,
+     44.047619,
+     41.666667,
+     48.809524,
+     44.047619,
+     46.428571,
+     53.571429,
+     48.809524
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 58,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.00000000000001,
+    "recovery_backbone_complete_only": 40.00000000000001,
+    "per_sequence": [
+     44.827586,
+     39.655172,
+     41.37931,
+     36.206897,
+     34.482759,
+     39.655172,
+     34.482759,
+     37.931034,
+     46.551724,
+     44.827586
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 10,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 18.0,
+    "recovery_backbone_complete_only": 18.0,
+    "per_sequence": [
+     30.0,
+     20.0,
+     10.0,
+     20.0,
+     10.0,
+     20.0,
+     0.0,
+     20.0,
+     20.0,
+     30.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "3won"
+  },
+  {
+   "n_residues": 779,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 87,
+   "n_context_metal": 6,
+   "any_atom|all": {
+    "n_scored": 98,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 43.469387755102034,
+    "recovery_backbone_complete_only": 43.469387755102034,
+    "per_sequence": [
+     45.918367,
+     38.77551,
+     43.877551,
+     42.857143,
+     41.836735,
+     45.918367,
+     47.959184,
+     44.897959,
+     41.836735,
+     40.816327
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 66,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.90909090909092,
+    "recovery_backbone_complete_only": 40.90909090909092,
+    "per_sequence": [
+     45.454545,
+     37.878788,
+     40.909091,
+     40.909091,
+     36.363636,
+     40.909091,
+     46.969697,
+     42.424242,
+     36.363636,
+     40.909091
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 31,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 31.935483870967744,
+    "recovery_backbone_complete_only": 31.935483870967744,
+    "per_sequence": [
+     41.935484,
+     25.806452,
+     25.806452,
+     25.806452,
+     32.258065,
+     41.935484,
+     45.16129,
+     29.032258,
+     22.580645,
+     29.032258
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4aoj"
+  },
+  {
+   "n_residues": 369,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 3,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 12,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 58.333333333333336,
+    "recovery_backbone_complete_only": 58.333333333333336,
+    "per_sequence": [
+     58.333333,
+     58.333333,
+     58.333333,
+     58.333333,
+     66.666667,
+     41.666667,
+     66.666667,
+     58.333333,
+     58.333333,
+     58.333333
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 10,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 68.0,
+    "recovery_backbone_complete_only": 68.0,
+    "per_sequence": [
+     70.0,
+     70.0,
+     70.0,
+     70.0,
+     70.0,
+     50.0,
+     70.0,
+     70.0,
+     70.0,
+     70.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 10,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 68.0,
+    "recovery_backbone_complete_only": 68.0,
+    "per_sequence": [
+     70.0,
+     70.0,
+     70.0,
+     70.0,
+     70.0,
+     50.0,
+     70.0,
+     70.0,
+     70.0,
+     70.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4dy1"
+  },
+  {
+   "n_residues": 393,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 31,
+   "n_context_metal": 3,
+   "any_atom|all": {
+    "n_scored": 29,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 31.379310344827587,
+    "recovery_backbone_complete_only": 31.379310344827587,
+    "per_sequence": [
+     34.482759,
+     24.137931,
+     34.482759,
+     31.034483,
+     31.034483,
+     34.482759,
+     31.034483,
+     27.586207,
+     27.586207,
+     37.931034
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 22,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 23.18181818181818,
+    "recovery_backbone_complete_only": 23.18181818181818,
+    "per_sequence": [
+     27.272727,
+     13.636364,
+     27.272727,
+     22.727273,
+     22.727273,
+     27.272727,
+     22.727273,
+     18.181818,
+     18.181818,
+     31.818182
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 8,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 13.75,
+    "recovery_backbone_complete_only": 13.75,
+    "per_sequence": [
+     12.5,
+     12.5,
+     12.5,
+     12.5,
+     12.5,
+     12.5,
+     12.5,
+     12.5,
+     12.5,
+     25.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4hzt"
+  },
+  {
+   "n_residues": 393,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 32,
+   "n_context_metal": 3,
+   "any_atom|all": {
+    "n_scored": 27,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 38.888888888888886,
+    "recovery_backbone_complete_only": 38.888888888888886,
+    "per_sequence": [
+     44.444444,
+     37.037037,
+     37.037037,
+     44.444444,
+     37.037037,
+     29.62963,
+     40.740741,
+     40.740741,
+     44.444444,
+     33.333333
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 20,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 31.5,
+    "recovery_backbone_complete_only": 31.5,
+    "per_sequence": [
+     35.0,
+     25.0,
+     30.0,
+     35.0,
+     30.0,
+     25.0,
+     35.0,
+     35.0,
+     40.0,
+     25.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 8,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 20.0,
+    "recovery_backbone_complete_only": 20.0,
+    "per_sequence": [
+     25.0,
+     12.5,
+     12.5,
+     25.0,
+     12.5,
+     12.5,
+     37.5,
+     12.5,
+     37.5,
+     12.5
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4i0f"
+  },
+  {
+   "n_residues": 388,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 39,
+   "n_context_metal": 4,
+   "any_atom|all": {
+    "n_scored": 40,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 41.5,
+    "recovery_backbone_complete_only": 41.5,
+    "per_sequence": [
+     45.0,
+     37.5,
+     42.5,
+     42.5,
+     40.0,
+     47.5,
+     40.0,
+     37.5,
+     42.5,
+     40.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 30,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 39.0,
+    "recovery_backbone_complete_only": 39.0,
+    "per_sequence": [
+     43.333333,
+     33.333333,
+     40.0,
+     40.0,
+     36.666667,
+     46.666667,
+     36.666667,
+     33.333333,
+     40.0,
+     40.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 11,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 29.090909090909086,
+    "recovery_backbone_complete_only": 29.090909090909086,
+    "per_sequence": [
+     27.272727,
+     27.272727,
+     27.272727,
+     27.272727,
+     27.272727,
+     36.363636,
+     36.363636,
+     27.272727,
+     27.272727,
+     27.272727
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4i0j"
+  },
+  {
+   "n_residues": 390,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 35,
+   "n_context_metal": 4,
+   "any_atom|all": {
+    "n_scored": 29,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 37.58620689655173,
+    "recovery_backbone_complete_only": 37.58620689655173,
+    "per_sequence": [
+     37.931034,
+     31.034483,
+     37.931034,
+     41.37931,
+     31.034483,
+     41.37931,
+     37.931034,
+     37.931034,
+     44.827586,
+     34.482759
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 22,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 22.727272727272727,
+    "recovery_backbone_complete_only": 22.727272727272727,
+    "per_sequence": [
+     22.727273,
+     13.636364,
+     22.727273,
+     27.272727,
+     18.181818,
+     27.272727,
+     22.727273,
+     22.727273,
+     31.818182,
+     18.181818
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 10,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 11.0,
+    "recovery_backbone_complete_only": 11.0,
+    "per_sequence": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     0.0,
+     10.0,
+     10.0,
+     10.0,
+     30.0,
+     10.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4i0z"
+  },
+  {
+   "n_residues": 397,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 27,
+   "n_context_metal": 3,
+   "any_atom|all": {
+    "n_scored": 25,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 37.6,
+    "recovery_backbone_complete_only": 37.6,
+    "per_sequence": [
+     36.0,
+     44.0,
+     40.0,
+     32.0,
+     40.0,
+     36.0,
+     44.0,
+     32.0,
+     32.0,
+     40.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 19,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 27.89473684210526,
+    "recovery_backbone_complete_only": 27.89473684210526,
+    "per_sequence": [
+     26.315789,
+     31.578947,
+     31.578947,
+     21.052632,
+     31.578947,
+     26.315789,
+     36.842105,
+     21.052632,
+     21.052632,
+     31.578947
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 8,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 15.0,
+    "recovery_backbone_complete_only": 15.0,
+    "per_sequence": [
+     12.5,
+     25.0,
+     12.5,
+     12.5,
+     12.5,
+     12.5,
+     25.0,
+     12.5,
+     12.5,
+     12.5
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4i11"
+  },
+  {
+   "n_residues": 374,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 41,
+   "n_context_metal": 3,
+   "any_atom|all": {
+    "n_scored": 45,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 43.77777777777778,
+    "recovery_backbone_complete_only": 43.77777777777778,
+    "per_sequence": [
+     44.444444,
+     42.222222,
+     46.666667,
+     42.222222,
+     42.222222,
+     48.888889,
+     44.444444,
+     44.444444,
+     42.222222,
+     40.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 28,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 42.857142857142854,
+    "recovery_backbone_complete_only": 42.857142857142854,
+    "per_sequence": [
+     46.428571,
+     42.857143,
+     50.0,
+     35.714286,
+     42.857143,
+     46.428571,
+     42.857143,
+     42.857143,
+     39.285714,
+     39.285714
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 0.0,
+    "recovery_backbone_complete_only": 0.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4i12"
+  },
+  {
+   "n_residues": 295,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 28,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 41,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.73170731707317,
+    "recovery_backbone_complete_only": 40.73170731707317,
+    "per_sequence": [
+     43.902439,
+     39.02439,
+     43.902439,
+     36.585366,
+     41.463415,
+     43.902439,
+     43.902439,
+     36.585366,
+     34.146341,
+     43.902439
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 40,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 41.5,
+    "recovery_backbone_complete_only": 41.5,
+    "per_sequence": [
+     45.0,
+     40.0,
+     45.0,
+     35.0,
+     42.5,
+     45.0,
+     45.0,
+     37.5,
+     35.0,
+     45.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 14,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 55.71428571428571,
+    "recovery_backbone_complete_only": 55.71428571428571,
+    "per_sequence": [
+     57.142857,
+     57.142857,
+     57.142857,
+     50.0,
+     57.142857,
+     57.142857,
+     57.142857,
+     57.142857,
+     42.857143,
+     64.285714
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4jd1"
+  },
+  {
+   "n_residues": 130,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 27,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 19,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 21.57894736842105,
+    "recovery_backbone_complete_only": 21.57894736842105,
+    "per_sequence": [
+     21.052632,
+     26.315789,
+     10.526316,
+     21.052632,
+     26.315789,
+     10.526316,
+     26.315789,
+     31.578947,
+     21.052632,
+     21.052632
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 17,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 24.11764705882353,
+    "recovery_backbone_complete_only": 24.11764705882353,
+    "per_sequence": [
+     23.529412,
+     29.411765,
+     11.764706,
+     23.529412,
+     29.411765,
+     11.764706,
+     29.411765,
+     35.294118,
+     23.529412,
+     23.529412
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 4,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 22.5,
+    "recovery_backbone_complete_only": 22.5,
+    "per_sequence": [
+     25.0,
+     25.0,
+     0.0,
+     25.0,
+     25.0,
+     0.0,
+     25.0,
+     25.0,
+     25.0,
+     50.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4naz"
+  },
+  {
+   "n_residues": 1345,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 15,
+   "n_context_metal": 15,
+   "any_atom|all": {
+    "n_scored": 67,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 49.1044776119403,
+    "recovery_backbone_complete_only": 49.1044776119403,
+    "per_sequence": [
+     59.701493,
+     40.298507,
+     41.791045,
+     46.268657,
+     47.761194,
+     47.761194,
+     49.253731,
+     47.761194,
+     55.223881,
+     55.223881
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 53,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 38.867924528301884,
+    "recovery_backbone_complete_only": 38.867924528301884,
+    "per_sequence": [
+     50.943396,
+     28.301887,
+     32.075472,
+     33.962264,
+     37.735849,
+     35.849057,
+     37.735849,
+     41.509434,
+     45.283019,
+     45.283019
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 67,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 49.1044776119403,
+    "recovery_backbone_complete_only": 49.1044776119403,
+    "per_sequence": [
+     59.701493,
+     40.298507,
+     41.791045,
+     46.268657,
+     47.761194,
+     47.761194,
+     49.253731,
+     47.761194,
+     55.223881,
+     55.223881
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4wd8"
+  },
+  {
+   "n_residues": 714,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 44,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 45,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 55.55555555555556,
+    "recovery_backbone_complete_only": 55.55555555555556,
+    "per_sequence": [
+     53.333333,
+     55.555556,
+     57.777778,
+     53.333333,
+     57.777778,
+     57.777778,
+     55.555556,
+     55.555556,
+     55.555556,
+     53.333333
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 33,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 47.87878787878788,
+    "recovery_backbone_complete_only": 47.87878787878788,
+    "per_sequence": [
+     45.454545,
+     45.454545,
+     48.484848,
+     45.454545,
+     48.484848,
+     51.515152,
+     51.515152,
+     48.484848,
+     48.484848,
+     45.454545
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 8,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 75.0,
+    "recovery_backbone_complete_only": 75.0,
+    "per_sequence": [
+     75.0,
+     75.0,
+     50.0,
+     75.0,
+     75.0,
+     87.5,
+     75.0,
+     75.0,
+     87.5,
+     75.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "4x68"
+  },
+  {
+   "n_residues": 705,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 323,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 90,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 43.222222222222214,
+    "recovery_backbone_complete_only": 43.222222222222214,
+    "per_sequence": [
+     44.444444,
+     44.444444,
+     43.333333,
+     43.333333,
+     41.111111,
+     45.555556,
+     41.111111,
+     43.333333,
+     43.333333,
+     42.222222
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 65,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 32.46153846153847,
+    "recovery_backbone_complete_only": 32.46153846153847,
+    "per_sequence": [
+     33.846154,
+     33.846154,
+     32.307692,
+     32.307692,
+     29.230769,
+     35.384615,
+     29.230769,
+     33.846154,
+     33.846154,
+     30.769231
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 10,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 70.0,
+    "recovery_backbone_complete_only": 70.0,
+    "per_sequence": [
+     80.0,
+     70.0,
+     80.0,
+     70.0,
+     50.0,
+     60.0,
+     70.0,
+     90.0,
+     70.0,
+     60.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "5f55"
+  },
+  {
+   "n_residues": 708,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 199,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 69,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 35.21739130434783,
+    "recovery_backbone_complete_only": 35.21739130434783,
+    "per_sequence": [
+     36.231884,
+     34.782609,
+     40.57971,
+     33.333333,
+     33.333333,
+     34.782609,
+     36.231884,
+     34.782609,
+     33.333333,
+     34.782609
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 51,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 24.901960784313722,
+    "recovery_backbone_complete_only": 24.901960784313722,
+    "per_sequence": [
+     25.490196,
+     23.529412,
+     31.372549,
+     25.490196,
+     21.568627,
+     27.45098,
+     27.45098,
+     23.529412,
+     21.568627,
+     21.568627
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 9,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 58.88888888888889,
+    "recovery_backbone_complete_only": 58.88888888888889,
+    "per_sequence": [
+     55.555556,
+     55.555556,
+     55.555556,
+     55.555556,
+     55.555556,
+     55.555556,
+     77.777778,
+     66.666667,
+     55.555556,
+     55.555556
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "5f56"
+  },
+  {
+   "n_residues": 493,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 9,
+   "n_context_metal": 9,
+   "any_atom|all": {
+    "n_scored": 22,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 39.54545454545455,
+    "recovery_backbone_complete_only": 39.54545454545455,
+    "per_sequence": [
+     45.454545,
+     36.363636,
+     45.454545,
+     31.818182,
+     31.818182,
+     40.909091,
+     40.909091,
+     50.0,
+     40.909091,
+     31.818182
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 21,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 36.66666666666666,
+    "recovery_backbone_complete_only": 36.66666666666666,
+    "per_sequence": [
+     42.857143,
+     33.333333,
+     42.857143,
+     28.571429,
+     28.571429,
+     38.095238,
+     38.095238,
+     47.619048,
+     38.095238,
+     28.571429
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 22,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 39.54545454545455,
+    "recovery_backbone_complete_only": 39.54545454545455,
+    "per_sequence": [
+     45.454545,
+     36.363636,
+     45.454545,
+     31.818182,
+     31.818182,
+     40.909091,
+     40.909091,
+     50.0,
+     40.909091,
+     31.818182
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "5fgs"
+  },
+  {
+   "n_residues": 1162,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 293,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 181,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 58.784530386740336,
+    "recovery_backbone_complete_only": 58.784530386740336,
+    "per_sequence": [
+     61.878453,
+     58.01105,
+     59.116022,
+     59.116022,
+     60.773481,
+     58.01105,
+     55.248619,
+     59.668508,
+     56.353591,
+     59.668508
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 121,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 55.86776859504132,
+    "recovery_backbone_complete_only": 55.86776859504132,
+    "per_sequence": [
+     60.330579,
+     54.545455,
+     56.198347,
+     57.024793,
+     57.024793,
+     56.198347,
+     52.066116,
+     54.545455,
+     52.892562,
+     57.85124
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 9,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 55.55555555555556,
+    "recovery_backbone_complete_only": 55.55555555555556,
+    "per_sequence": [
+     55.555556,
+     55.555556,
+     55.555556,
+     55.555556,
+     55.555556,
+     55.555556,
+     55.555556,
+     55.555556,
+     55.555556,
+     55.555556
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "5hez"
+  },
+  {
+   "n_residues": 708,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 19,
+   "n_context_metal": 4,
+   "any_atom|all": {
+    "n_scored": 26,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 51.92307692307693,
+    "recovery_backbone_complete_only": 51.92307692307693,
+    "per_sequence": [
+     53.846154,
+     53.846154,
+     50.0,
+     50.0,
+     46.153846,
+     50.0,
+     50.0,
+     57.692308,
+     50.0,
+     57.692308
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 24,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 47.916666666666664,
+    "recovery_backbone_complete_only": 47.916666666666664,
+    "per_sequence": [
+     50.0,
+     50.0,
+     45.833333,
+     45.833333,
+     41.666667,
+     45.833333,
+     45.833333,
+     54.166667,
+     45.833333,
+     54.166667
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 19,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 53.684210526315795,
+    "recovery_backbone_complete_only": 53.684210526315795,
+    "per_sequence": [
+     52.631579,
+     57.894737,
+     52.631579,
+     52.631579,
+     47.368421,
+     47.368421,
+     52.631579,
+     63.157895,
+     52.631579,
+     57.894737
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "5i4j"
+  },
+  {
+   "n_residues": 516,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 235,
+   "n_context_metal": 13,
+   "any_atom|all": {
+    "n_scored": 88,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 54.54545454545455,
+    "recovery_backbone_complete_only": 54.54545454545455,
+    "per_sequence": [
+     55.681818,
+     48.863636,
+     54.545455,
+     54.545455,
+     57.954545,
+     51.136364,
+     53.409091,
+     59.090909,
+     57.954545,
+     52.272727
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 75,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 52.8,
+    "recovery_backbone_complete_only": 52.8,
+    "per_sequence": [
+     52.0,
+     46.666667,
+     53.333333,
+     53.333333,
+     57.333333,
+     49.333333,
+     53.333333,
+     56.0,
+     56.0,
+     50.666667
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 33,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 56.66666666666667,
+    "recovery_backbone_complete_only": 56.66666666666667,
+    "per_sequence": [
+     51.515152,
+     45.454545,
+     51.515152,
+     57.575758,
+     63.636364,
+     57.575758,
+     54.545455,
+     66.666667,
+     60.606061,
+     57.575758
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "5l70"
+  },
+  {
+   "n_residues": 284,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 2,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 19,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 28.94736842105263,
+    "recovery_backbone_complete_only": 28.94736842105263,
+    "per_sequence": [
+     21.052632,
+     26.315789,
+     21.052632,
+     31.578947,
+     21.052632,
+     21.052632,
+     47.368421,
+     31.578947,
+     47.368421,
+     21.052632
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 15,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 11.333333333333332,
+    "recovery_backbone_complete_only": 11.333333333333332,
+    "per_sequence": [
+     0.0,
+     6.666667,
+     0.0,
+     13.333333,
+     0.0,
+     0.0,
+     33.333333,
+     26.666667,
+     33.333333,
+     0.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 19,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 28.94736842105263,
+    "recovery_backbone_complete_only": 28.94736842105263,
+    "per_sequence": [
+     21.052632,
+     26.315789,
+     21.052632,
+     31.578947,
+     21.052632,
+     21.052632,
+     47.368421,
+     31.578947,
+     47.368421,
+     21.052632
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "5vde"
+  },
+  {
+   "n_residues": 127,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 1,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 32.0,
+    "recovery_backbone_complete_only": 32.0,
+    "per_sequence": [
+     40.0,
+     20.0,
+     60.0,
+     20.0,
+     0.0,
+     60.0,
+     40.0,
+     60.0,
+     0.0,
+     20.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 32.0,
+    "recovery_backbone_complete_only": 32.0,
+    "per_sequence": [
+     40.0,
+     20.0,
+     60.0,
+     20.0,
+     0.0,
+     60.0,
+     40.0,
+     60.0,
+     0.0,
+     20.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 32.0,
+    "recovery_backbone_complete_only": 32.0,
+    "per_sequence": [
+     40.0,
+     20.0,
+     60.0,
+     20.0,
+     0.0,
+     60.0,
+     40.0,
+     60.0,
+     0.0,
+     20.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "6a4x"
+  },
+  {
+   "n_residues": 660,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 87,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 70,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 60.71428571428571,
+    "recovery_backbone_complete_only": 60.71428571428571,
+    "per_sequence": [
+     60.0,
+     61.428571,
+     60.0,
+     58.571429,
+     62.857143,
+     60.0,
+     57.142857,
+     57.142857,
+     67.142857,
+     62.857143
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 50,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 56.6,
+    "recovery_backbone_complete_only": 56.6,
+    "per_sequence": [
+     54.0,
+     58.0,
+     54.0,
+     56.0,
+     62.0,
+     56.0,
+     52.0,
+     52.0,
+     64.0,
+     58.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 96.0,
+    "recovery_backbone_complete_only": 96.0,
+    "per_sequence": [
+     100.0,
+     100.0,
+     100.0,
+     80.0,
+     100.0,
+     100.0,
+     80.0,
+     100.0,
+     100.0,
+     100.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "6buu"
+  },
+  {
+   "n_residues": 653,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 369,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 26,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 29.615384615384613,
+    "recovery_backbone_complete_only": 29.615384615384613,
+    "per_sequence": [
+     46.153846,
+     30.769231,
+     26.923077,
+     26.923077,
+     19.230769,
+     23.076923,
+     23.076923,
+     30.769231,
+     42.307692,
+     26.923077
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 24,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 29.999999999999993,
+    "recovery_backbone_complete_only": 29.999999999999993,
+    "per_sequence": [
+     45.833333,
+     33.333333,
+     25.0,
+     29.166667,
+     16.666667,
+     25.0,
+     20.833333,
+     33.333333,
+     45.833333,
+     25.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 13,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 36.92307692307692,
+    "recovery_backbone_complete_only": 36.92307692307692,
+    "per_sequence": [
+     53.846154,
+     46.153846,
+     30.769231,
+     30.769231,
+     23.076923,
+     30.769231,
+     23.076923,
+     38.461538,
+     53.846154,
+     38.461538
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "6cyt"
+  },
+  {
+   "n_residues": 1329,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 12,
+   "n_context_metal": 12,
+   "any_atom|all": {
+    "n_scored": 64,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 37.8125,
+    "recovery_backbone_complete_only": 37.8125,
+    "per_sequence": [
+     43.75,
+     39.0625,
+     42.1875,
+     34.375,
+     39.0625,
+     32.8125,
+     39.0625,
+     31.25,
+     37.5,
+     39.0625
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 48,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 27.291666666666668,
+    "recovery_backbone_complete_only": 27.291666666666668,
+    "per_sequence": [
+     35.416667,
+     27.083333,
+     31.25,
+     20.833333,
+     29.166667,
+     20.833333,
+     29.166667,
+     18.75,
+     31.25,
+     29.166667
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 64,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 37.8125,
+    "recovery_backbone_complete_only": 37.8125,
+    "per_sequence": [
+     43.75,
+     39.0625,
+     42.1875,
+     34.375,
+     39.0625,
+     32.8125,
+     39.0625,
+     31.25,
+     37.5,
+     39.0625
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "6iv2"
+  },
+  {
+   "n_residues": 1001,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 24,
+   "n_context_metal": 24,
+   "any_atom|all": {
+    "n_scored": 80,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 46.5,
+    "recovery_backbone_complete_only": 46.5,
+    "per_sequence": [
+     47.5,
+     48.75,
+     42.5,
+     43.75,
+     50.0,
+     50.0,
+     46.25,
+     52.5,
+     40.0,
+     43.75
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 52,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 34.42307692307692,
+    "recovery_backbone_complete_only": 34.42307692307692,
+    "per_sequence": [
+     38.461538,
+     40.384615,
+     28.846154,
+     30.769231,
+     36.538462,
+     40.384615,
+     30.769231,
+     42.307692,
+     23.076923,
+     32.692308
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 80,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 46.5,
+    "recovery_backbone_complete_only": 46.5,
+    "per_sequence": [
+     47.5,
+     48.75,
+     42.5,
+     43.75,
+     50.0,
+     50.0,
+     46.25,
+     52.5,
+     40.0,
+     43.75
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "6lkp"
+  },
+  {
+   "n_residues": 702,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 134,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 75,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 49.60000000000001,
+    "recovery_backbone_complete_only": 49.60000000000001,
+    "per_sequence": [
+     50.666667,
+     49.333333,
+     52.0,
+     49.333333,
+     49.333333,
+     46.666667,
+     48.0,
+     52.0,
+     50.666667,
+     48.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 53,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 37.54716981132076,
+    "recovery_backbone_complete_only": 37.54716981132076,
+    "per_sequence": [
+     37.735849,
+     39.622642,
+     39.622642,
+     39.622642,
+     37.735849,
+     32.075472,
+     33.962264,
+     41.509434,
+     35.849057,
+     37.735849
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 11,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 65.45454545454547,
+    "recovery_backbone_complete_only": 65.45454545454547,
+    "per_sequence": [
+     63.636364,
+     63.636364,
+     63.636364,
+     72.727273,
+     63.636364,
+     54.545455,
+     54.545455,
+     63.636364,
+     72.727273,
+     81.818182
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "6lrd"
+  },
+  {
+   "n_residues": 302,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 690,
+   "n_context_metal": 3,
+   "any_atom|all": {
+    "n_scored": 104,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 31.826923076923077,
+    "recovery_backbone_complete_only": 31.826923076923077,
+    "per_sequence": [
+     34.615385,
+     36.538462,
+     30.769231,
+     32.692308,
+     30.769231,
+     29.807692,
+     29.807692,
+     29.807692,
+     32.692308,
+     30.769231
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 87,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 31.14942528735632,
+    "recovery_backbone_complete_only": 31.14942528735632,
+    "per_sequence": [
+     33.333333,
+     35.632184,
+     28.735632,
+     32.183908,
+     32.183908,
+     29.885057,
+     29.885057,
+     29.885057,
+     31.034483,
+     28.735632
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 16,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 29.375,
+    "recovery_backbone_complete_only": 29.375,
+    "per_sequence": [
+     37.5,
+     31.25,
+     31.25,
+     25.0,
+     25.0,
+     25.0,
+     31.25,
+     25.0,
+     31.25,
+     31.25
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "6wdz"
+  },
+  {
+   "n_residues": 438,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 629,
+   "n_context_metal": 4,
+   "any_atom|all": {
+    "n_scored": 98,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 45.204081632653065,
+    "recovery_backbone_complete_only": 45.204081632653065,
+    "per_sequence": [
+     47.959184,
+     43.877551,
+     44.897959,
+     45.918367,
+     47.959184,
+     43.877551,
+     46.938776,
+     44.897959,
+     40.816327,
+     44.897959
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 79,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 41.64556962025317,
+    "recovery_backbone_complete_only": 41.64556962025317,
+    "per_sequence": [
+     44.303797,
+     40.506329,
+     43.037975,
+     44.303797,
+     45.56962,
+     40.506329,
+     41.772152,
+     39.240506,
+     36.708861,
+     40.506329
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 15,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 78.66666666666667,
+    "recovery_backbone_complete_only": 78.66666666666667,
+    "per_sequence": [
+     80.0,
+     86.666667,
+     80.0,
+     80.0,
+     86.666667,
+     80.0,
+     73.333333,
+     66.666667,
+     73.333333,
+     80.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "6x75"
+  },
+  {
+   "n_residues": 711,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 3,
+   "n_context_metal": 3,
+   "any_atom|all": {
+    "n_scored": 16,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 28.125,
+    "recovery_backbone_complete_only": 28.125,
+    "per_sequence": [
+     31.25,
+     25.0,
+     31.25,
+     31.25,
+     25.0,
+     31.25,
+     25.0,
+     25.0,
+     25.0,
+     31.25
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 14,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 17.857142857142854,
+    "recovery_backbone_complete_only": 17.857142857142854,
+    "per_sequence": [
+     21.428571,
+     14.285714,
+     21.428571,
+     21.428571,
+     14.285714,
+     21.428571,
+     14.285714,
+     14.285714,
+     14.285714,
+     21.428571
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 16,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 28.125,
+    "recovery_backbone_complete_only": 28.125,
+    "per_sequence": [
+     31.25,
+     25.0,
+     31.25,
+     31.25,
+     25.0,
+     31.25,
+     25.0,
+     25.0,
+     25.0,
+     31.25
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "7dnr"
+  },
+  {
+   "n_residues": 459,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 7,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 6,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 8.333333333333332,
+    "recovery_backbone_complete_only": 8.333333333333332,
+    "per_sequence": [
+     0.0,
+     0.0,
+     16.666667,
+     16.666667,
+     16.666667,
+     0.0,
+     0.0,
+     0.0,
+     33.333333,
+     0.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 10.0,
+    "recovery_backbone_complete_only": 10.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     20.0,
+     20.0,
+     20.0,
+     0.0,
+     0.0,
+     0.0,
+     40.0,
+     0.0
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 2,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 15.0,
+    "recovery_backbone_complete_only": 15.0,
+    "per_sequence": [
+     0.0,
+     0.0,
+     0.0,
+     50.0,
+     50.0,
+     0.0,
+     0.0,
+     0.0,
+     50.0,
+     0.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "7e34"
+  },
+  {
+   "n_residues": 103,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 206,
+   "n_context_metal": 1,
+   "any_atom|all": {
+    "n_scored": 49,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.408163265306115,
+    "recovery_backbone_complete_only": 40.408163265306115,
+    "per_sequence": [
+     42.857143,
+     42.857143,
+     42.857143,
+     38.77551,
+     36.734694,
+     34.693878,
+     40.816327,
+     40.816327,
+     42.857143,
+     40.816327
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 40,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 33.75,
+    "recovery_backbone_complete_only": 33.75,
+    "per_sequence": [
+     35.0,
+     37.5,
+     35.0,
+     35.0,
+     27.5,
+     30.0,
+     37.5,
+     32.5,
+     35.0,
+     32.5
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 5,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 20.0,
+    "recovery_backbone_complete_only": 20.0,
+    "per_sequence": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "7kii"
+  },
+  {
+   "n_residues": 271,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 42,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 50,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 50.8,
+    "recovery_backbone_complete_only": 50.8,
+    "per_sequence": [
+     50.0,
+     50.0,
+     48.0,
+     56.0,
+     50.0,
+     50.0,
+     50.0,
+     52.0,
+     52.0,
+     50.0
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 41,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 45.1219512195122,
+    "recovery_backbone_complete_only": 45.1219512195122,
+    "per_sequence": [
+     43.902439,
+     43.902439,
+     41.463415,
+     48.780488,
+     43.902439,
+     46.341463,
+     46.341463,
+     43.902439,
+     46.341463,
+     46.341463
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 13,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 74.61538461538461,
+    "recovery_backbone_complete_only": 74.61538461538461,
+    "per_sequence": [
+     76.923077,
+     76.923077,
+     69.230769,
+     76.923077,
+     69.230769,
+     76.923077,
+     69.230769,
+     76.923077,
+     76.923077,
+     76.923077
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "7n7g"
+  },
+  {
+   "n_residues": 340,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 29,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 65,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 59.38461538461538,
+    "recovery_backbone_complete_only": 59.38461538461538,
+    "per_sequence": [
+     58.461538,
+     60.0,
+     61.538462,
+     58.461538,
+     56.923077,
+     60.0,
+     60.0,
+     61.538462,
+     61.538462,
+     55.384615
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 42,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 48.80952380952381,
+    "recovery_backbone_complete_only": 48.80952380952381,
+    "per_sequence": [
+     47.619048,
+     47.619048,
+     50.0,
+     50.0,
+     45.238095,
+     47.619048,
+     50.0,
+     52.380952,
+     50.0,
+     47.619048
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 17,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 60.000000000000014,
+    "recovery_backbone_complete_only": 60.000000000000014,
+    "per_sequence": [
+     52.941176,
+     52.941176,
+     58.823529,
+     64.705882,
+     58.823529,
+     64.705882,
+     64.705882,
+     64.705882,
+     64.705882,
+     52.941176
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "7s7l"
+  },
+  {
+   "n_residues": 333,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 5,
+   "n_context_metal": 2,
+   "any_atom|all": {
+    "n_scored": 44,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 73.86363636363636,
+    "recovery_backbone_complete_only": 73.86363636363636,
+    "per_sequence": [
+     75.0,
+     75.0,
+     79.545455,
+     72.727273,
+     72.727273,
+     68.181818,
+     77.272727,
+     79.545455,
+     70.454545,
+     68.181818
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 24,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 71.25000000000001,
+    "recovery_backbone_complete_only": 71.25000000000001,
+    "per_sequence": [
+     70.833333,
+     75.0,
+     79.166667,
+     70.833333,
+     66.666667,
+     62.5,
+     75.0,
+     79.166667,
+     70.833333,
+     62.5
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 17,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 77.05882352941177,
+    "recovery_backbone_complete_only": 77.05882352941177,
+    "per_sequence": [
+     82.352941,
+     76.470588,
+     82.352941,
+     76.470588,
+     76.470588,
+     64.705882,
+     88.235294,
+     82.352941,
+     70.588235,
+     70.588235
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "7s7m"
+  },
+  {
+   "n_residues": 480,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 13,
+   "n_context_metal": 13,
+   "any_atom|all": {
+    "n_scored": 77,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 46.623376623376615,
+    "recovery_backbone_complete_only": 46.623376623376615,
+    "per_sequence": [
+     46.753247,
+     50.649351,
+     48.051948,
+     48.051948,
+     45.454545,
+     45.454545,
+     48.051948,
+     44.155844,
+     44.155844,
+     45.454545
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 74,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 46.21621621621622,
+    "recovery_backbone_complete_only": 46.21621621621622,
+    "per_sequence": [
+     45.945946,
+     50.0,
+     47.297297,
+     47.297297,
+     44.594595,
+     45.945946,
+     48.648649,
+     44.594595,
+     43.243243,
+     44.594595
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 77,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 46.623376623376615,
+    "recovery_backbone_complete_only": 46.623376623376615,
+    "per_sequence": [
+     46.753247,
+     50.649351,
+     48.051948,
+     48.051948,
+     45.454545,
+     45.454545,
+     48.051948,
+     44.155844,
+     44.155844,
+     45.454545
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "7w5e"
+  },
+  {
+   "n_residues": 477,
+   "n_duplicate_ca_keys": 0,
+   "n_context_all": 15,
+   "n_context_metal": 15,
+   "any_atom|all": {
+    "n_scored": 53,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.18867924528302,
+    "recovery_backbone_complete_only": 40.18867924528302,
+    "per_sequence": [
+     37.735849,
+     37.735849,
+     43.396226,
+     39.622642,
+     37.735849,
+     43.396226,
+     39.622642,
+     43.396226,
+     37.735849,
+     41.509434
+    ]
+   },
+   "sidechain|all": {
+    "n_scored": 47,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 34.68085106382979,
+    "recovery_backbone_complete_only": 34.68085106382979,
+    "per_sequence": [
+     31.914894,
+     34.042553,
+     38.297872,
+     34.042553,
+     31.914894,
+     38.297872,
+     34.042553,
+     38.297872,
+     31.914894,
+     34.042553
+    ]
+   },
+   "any_atom|metal_transition": {
+    "n_scored": 53,
+    "n_dropped_by_valid_or_chain": 0,
+    "recovery": 40.18867924528302,
+    "recovery_backbone_complete_only": 40.18867924528302,
+    "per_sequence": [
+     37.735849,
+     37.735849,
+     43.396226,
+     39.622642,
+     37.735849,
+     43.396226,
+     39.622642,
+     43.396226,
+     37.735849,
+     41.509434
+    ]
+   },
+   "n_sequences": 10,
+   "seed": 203,
+   "temperature": 0.1,
+   "name": "7wb2"
+  }
+ ]
+}

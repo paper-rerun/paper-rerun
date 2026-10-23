@@ -1,0 +1,20 @@
+{
+ "lmpnn": {
+  "model": "lmpnn",
+  "flavor": "biounit1",
+  "n_proteins": 83,
+  "n_proteins_with_near_positions": 83,
+  "median_recovery": 64.33333333333333,
+  "mean_recovery": 65.10018220722854,
+  "total_near_positions": 2901
+ },
+ "pmpnn": {
+  "model": "pmpnn",
+  "flavor": "biounit1",
+  "n_proteins": 83,
+  "n_proteins_with_near_positions": 83,
+  "median_recovery": 40.0,
+  "mean_recovery": 39.30299836522181,
+  "total_near_positions": 2901
+ }
+}

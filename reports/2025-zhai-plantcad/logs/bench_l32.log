@@ -1,0 +1,26 @@
+full=0.9097 weighted_sample=0.9134 unweighted_sample=0.9856
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/hf_cache/modules/transformers_modules/kuleshov-group/PlantCaduceus_l32/e624c13c3d35415348b854c87a218893b23564f7/modeling_caduceus.py", line 128, in forward
+    out = self.mamba_fwd(hidden_states, inference_params=inference_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/env/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/env/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/env/.venv/lib/python3.11/site-packages/mamba_ssm/modules/mamba_simple.py", line 146, in forward
+    out = mamba_inner_fn(
+          ^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/env/.venv/lib/python3.11/site-packages/mamba_ssm/ops/selective_scan_interface.py", line 377, in mamba_inner_fn
+    return MambaInnerFn.apply(xz, conv1d_weight, conv1d_bias, x_proj_weight, delta_proj_weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/env/.venv/lib/python3.11/site-packages/torch/autograd/function.py", line 575, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/env/.venv/lib/python3.11/site-packages/torch/amp/autocast_mode.py", line 465, in decorate_fwd
+    return fwd(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/artigos/2025-zhai-plantcad/env/.venv/lib/python3.11/site-packages/mamba_ssm/ops/selective_scan_interface.py", line 216, in forward
+    delta = rearrange(delta_proj_weight @ x_dbl[:, :delta_rank].t(), "d (b l) -> b d l", l = L)
+                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+RuntimeError: CUDA error: CUBLAS_STATUS_EXECUTION_FAILED when calling `cublasSgemm( handle, opa, opb, m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc)`

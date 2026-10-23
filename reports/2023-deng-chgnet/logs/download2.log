@@ -1,0 +1,10 @@
+attempt 1 from 2485813248 bytes Wed Oct 21 18:11:02 ESAST 2026
+curl: (28) Operation too slow. Less than 50000 bytes/sec transferred the last 60 seconds
+attempt 2 from 2485813248 bytes Wed Oct 21 18:12:05 ESAST 2026
+curl: (28) Operation too slow. Less than 50000 bytes/sec transferred the last 60 seconds
+attempt 3 from 2485813248 bytes Wed Oct 21 18:13:11 ESAST 2026
+curl: (28) Operation too slow. Less than 50000 bytes/sec transferred the last 60 seconds
+attempt 4 from 2485813248 bytes Wed Oct 21 18:14:16 ESAST 2026
+curl: (28) Operation too slow. Less than 50000 bytes/sec transferred the last 60 seconds
+attempt 5 from 10501638396 bytes Wed Oct 21 18:35:05 ESAST 2026
+done size 12188168685 Wed Oct 21 18:39:44 ESAST 2026

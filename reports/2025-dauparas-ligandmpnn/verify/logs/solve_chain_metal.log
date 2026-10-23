@@ -1,0 +1,26 @@
+/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/env/lib/python3.11/site-packages/prody/utilities/misctools.py:424: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+  ... 25 / 83
+  ... 50 / 83
+  ... 75 / 83
+
+=== metal: does SOME single chain reproduce the authors' n? ===
+    83 of 83 proteins have a solvable n
+    asym/chain_ownctx          8 /  83  (10%)
+    biounit1/chain_ownctx      8 /  83  (10%)
+    asym/chain                 5 /  83  (6%)
+    biounit1/chain             5 /  83  (6%)
+    chain letter that matched (asym, context = whole file):
+        chain A     3
+        chain F     1
+        chain B     1
+
+  first 8:
+    1dwh   n_true=3     asym_chains={'M': 122}                   biou_chains={'M': 122}
+    1e4m   n_true=3     asym_chains={'M': 115}                   biou_chains={'M': 115}
+    1e6s   n_true=3     asym_chains={'M': 118}                   biou_chains={'M': 118}
+    1e72   n_true=3     asym_chains={'M': 121}                   biou_chains={'M': 121}
+    1f35   n_true=26    asym_chains={'A': 18, 'B': 10}           biou_chains={'A': 16}
+    1fee   n_true=4     asym_chains={'A': 13, 'B': 6}            biou_chains={'A': 13, 'B': 6}
+    1job   n_true=15    asym_chains={'A': 15}                    biou_chains={'A': 15}
+    1lqk   n_true=12    asym_chains={'A': 16, 'B': 16}           biou_chains={'A': 16, 'B': 16}

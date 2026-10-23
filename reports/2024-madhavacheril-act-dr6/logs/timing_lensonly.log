@@ -1,0 +1,12 @@
+threads=1
+eval 0: 10.32 s  logpost = -0.489  loglikes = [-7.00489955]
+eval 1: 6.42 s  logpost = -0.498  loglikes = [-7.00668065]
+eval 2: 6.38 s  logpost = -0.507  loglikes = [-7.0086453]
+threads=2
+eval 0: 6.76 s  logpost = -0.489  loglikes = [-7.00489955]
+eval 1: 4.02 s  logpost = -0.498  loglikes = [-7.00668065]
+eval 2: 3.68 s  logpost = -0.507  loglikes = [-7.0086453]
+threads=4
+eval 0: 2.56 s  logpost = -0.489  loglikes = [-7.00489955]
+eval 1: 1.98 s  logpost = -0.498  loglikes = [-7.00668065]
+eval 2: 2.01 s  logpost = -0.507  loglikes = [-7.0086453]

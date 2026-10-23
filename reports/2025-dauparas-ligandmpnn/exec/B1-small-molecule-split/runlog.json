@@ -1,0 +1,48 @@
+{
+ "block": "B1-small-molecule-split",
+ "date": "2026-10-22",
+ "repo_commit": "26ec57a",
+ "hardware": "Ryzen 9 3900X, RTX 2070 SUPER 8 GB, WSL2 Ubuntu 24.04",
+ "readings_fixed_before_running": {
+  "chain_and_assembly": "asymmetric unit (data/structures/asym/<id>.pdb); keep the protein atoms of the chain named in the Source Data file name plus ONE copy of the named ligand, the copy closest to that chain; every other hetero atom and all waters dropped",
+  "near_residue": "a residue counts if any side-chain heavy atom (every deposited atom other than N, CA, C, O, OXT; hydrogens ignored) is within 5.0 A of a non-protein, non-water heavy atom",
+  "n_sequences": "batch_size 5 x number_of_batches 2 = 10",
+  "temperature": 0.1,
+  "seeds": {"C1": 20251022, "C2": 20251023, "extra_pmpnn020": 20251024}
+ },
+ "runs": {
+  "C1-LMPNN-SMALLMOL": {
+   "start": "2026-10-22T19:27:26-03:00",
+   "end": "2026-10-22T19:46:19-03:00",
+   "command": "flock /mnt/e/Ciencia/.gpu.lock python run.py --model_type ligand_mpnn --checkpoint_ligand_mpnn /mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/data/model_params/ligandmpnn_v_32_010_25.pt --pdb_path_multi exec/B1-small-molecule-split/pdb_list.json --out_folder exec/B1-small-molecule-split/out_lmpnn --batch_size 5 --number_of_batches 2 --temperature 0.1 --ligand_mpnn_use_atom_context 1 --ligand_mpnn_use_side_chain_context 0 --parse_atoms_with_zero_occupancy 0 --seed 20251022 --save_stats 1 --verbose 0",
+   "median_percent": 62.9412,
+   "mean_percent": 62.3286,
+   "n": 317
+  },
+  "C2-PMPNN-SMALLMOL": {
+   "start": "2026-10-22T19:46:19-03:00",
+   "end": "2026-10-22T20:19:24-03:00",
+   "command": "flock /mnt/e/Ciencia/.gpu.lock python run.py --model_type protein_mpnn --checkpoint_protein_mpnn /mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/data/model_params/proteinmpnn_v_48_010.pt --pdb_path_multi exec/B1-small-molecule-split/pdb_list.json --out_folder exec/B1-small-molecule-split/out_pmpnn --batch_size 5 --number_of_batches 2 --temperature 0.1 --parse_atoms_with_zero_occupancy 0 --seed 20251023 --save_stats 1 --verbose 0",
+   "median_percent": 47.6471,
+   "mean_percent": 48.3782,
+   "n": 317
+  },
+  "extra_pmpnn_v_48_020": {
+   "start": "2026-10-22T20:20:29-03:00",
+   "end": "2026-10-22T20:54:46-03:00",
+   "median_percent_sidechain": 46.1111,
+   "median_percent_any_atom": 48.5,
+   "n": 317
+  }
+ },
+ "measurements_the_definitions_asked_for": {
+  "context_atoms_kept_by_installed_code": "no atoms lost: data_utils.py line 648 uppercases element_list BEFORE building element_dict, so two-letter symbols do match. Over all 317 inputs, parse_PDB kept exactly the deposited non-hydrogen hetero atoms (0 mismatches). Elements present: C 6968, O 1087, N 1056, S 129, F 104, Cl 68, P 12, Br 4, I 1 - Cl and Br survive. The reading (3) failure mode in the definition does not exist at this commit.",
+  "authors_scored_positions": "the per-protein Source Data values are k/(10*n_near), so the three methods' values for one protein share a denominator. All 317 proteins have a clean denominator, which confirms the two-step aggregation. The counts match 'any heavy atom of the residue within 5.0 A' for 282/317 proteins and 'side-chain atoms within 5.0 A' for only 26/317. The Fig. 2a legend wording ('residues within 5.0 A from the context atoms'), not the Results wording, is what the authors measured.",
+  "input_construction_check": "the same test prefers one chain + the named ligand (282/317) over the chain with every hetero atom of the entry (155/317) and over all chains with every hetero atom (129/317), which independently confirms the 'chain_and_assembly' reading taken from the file names."
+ },
+ "stability": {
+  "half_split_spread_pp": {"C1": 0.19, "C2": 0.46},
+  "bootstrap_sd_over_proteins_pp": {"C1": 1.11, "C2": 0.81}
+ },
+ "contention_note": "another process was running the same split from /mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/ throughout this stage and held /mnt/e/Ciencia/.gpu.lock for long stretches. Nothing of ours was read from or written to that folder; the only effect was wall-clock queueing."
+}

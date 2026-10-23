@@ -1,0 +1,80 @@
+B2-nucleotide-split  -  run log
+2026-10-22, repo commit 26ec57ac976ade5379920dbd43c7f97a91cf82de, frozen env in env/
+
+Claims computed: C3-LMPNN-NUCLEOTIDE, C4-PMPNN-NUCLEOTIDE
+Test set: repo/training/test_nucleotide.json, 74 ids, all present in both structure flavors
+
+Choices fixed BEFORE the first design (and not revisited after seeing a number)
+-----------------------------------------------------------------------------
+input file        biological assembly 1, data/structures/biounit1/<id>.pdb, because the
+                  Results call the training data "PDB biounits". The asymmetric unit was
+                  only looked at afterwards, and only through the denominator check below.
+near_residue      side-chain atoms = the 37-atom set minus N, CA, C, O; OXT is not parsed
+                  in the all-atom branch. Glycine never qualifies, alanine qualifies via CB.
+                  Distances on native deposited coordinates, 5.0 A, one cutoff.
+scored positions  near-ligand AND backbone complete (parse_PDB's own mask, the same mask
+                  the authors' get_seq_rec uses). It turned out to make no difference:
+                  the median is identical with and without it, to three decimals.
+designed region   whole protein, no fixed or redesigned residues, no bias, no omit
+10 sequences      --batch_size 1 --number_of_batches 10
+temperature       0.1, the released default
+seeds             20251022 LigandMPNN, 20251023 ProteinMPNN
+checkpoints       ligandmpnn_v_32_010_25.pt and proteinmpnn_v_48_010.pt, both 0.1 A noise
+
+Exact commands
+--------------
+source /mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/env/activate.sh
+
+flock /mnt/e/Ciencia/.gpu.lock python run.py \
+  --model_type ligand_mpnn \
+  --checkpoint_ligand_mpnn /mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/data/model_params/ligandmpnn_v_32_010_25.pt \
+  --ligand_mpnn_use_atom_context 1 --ligand_mpnn_use_side_chain_context 0 \
+  --temperature 0.1 --batch_size 1 --number_of_batches 10 \
+  --seed 20251022 --save_stats 1 --verbose 0 \
+  --pdb_path_multi .../exec/B2-nucleotide-split/todo_lmpnn_biounit1.json \
+  --out_folder .../exec/B2-nucleotide-split/lmpnn_biounit1
+
+flock /mnt/e/Ciencia/.gpu.lock python run.py \
+  --model_type protein_mpnn \
+  --checkpoint_protein_mpnn /mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/data/model_params/proteinmpnn_v_48_010.pt \
+  --temperature 0.1 --batch_size 1 --number_of_batches 10 \
+  --seed 20251023 --save_stats 1 --verbose 0 \
+  --pdb_path_multi .../exec/B2-nucleotide-split/todo_pmpnn_biounit1.json \
+  --out_folder .../exec/B2-nucleotide-split/pmpnn_biounit1
+
+python score.py biounit1        -> results_biounit1.json, logs/score_biounit1.log
+python compare.py biounit1      -> per-protein comparison against the Source Data
+python check_denominators.py biounit1 | asym
+python diag_inputs.py           -> context-atom survival and MODEL counts
+
+Results
+-------
+LigandMPNN   n=74  median 54.508  mean 53.756   (paper 50.5, Source Data 50.516)
+ProteinMPNN  n=74  median 32.482  mean 33.353   (paper 34.0, Source Data 34.031)
+Scored positions: 2570 in total, 3 to 223 per protein, median 27.
+
+What had to be worked around
+----------------------------
+The first full pass was killed at the 64th structure and a second pass at the first one it
+retried, both times by a signal from outside the process (no OOM in dmesg, 28 GB free, and
+the structure it died on parses to 221 residues and 896 context atoms). Three other agents
+were queueing on the same GPU lock at the time. The fix was not a code change: every pass
+now only designs the ids that have no stats file yet, so a killed pass costs one structure
+instead of the run. Third pass finished both models. Because of that resume, the random
+draws for the last 11 LigandMPNN structures came from a fresh process with the same seed,
+not from one continuous stream. The seed is recorded; nothing else about the method moved.
+
+Also worth recording: nothing was installed or upgraded. The venv has no pandas, so the
+Source Data CSV is read with the csv module.
+
+What the installed code actually does with context atoms
+--------------------------------------------------------
+The claim's reading (3) says every two-letter element symbol is dropped, which would wipe
+the metals out. That is wrong for this commit. data_utils.py line 648 uppercases
+element_list before building element_dict, so "ZN".upper() does match. Measured: 1dwh keeps
+349 of 349 non-protein non-water heavy atoms, zinc included; 1a0a keeps 691 of 691. Only
+hydrogen (type 1) and genuinely unknown elements are masked. Reading (2) is what runs.
+
+10 of the 74 biounit files carry more than one MODEL (1b01, 2zhg, 2zio, 3gna, 3lsr, 3vok,
+4ato, 4e0p, 5haw, 8dwm). prody keeps the extra models as coordsets and getCoords returns
+only the first, so for those 10 the symmetry copies are silently not used.

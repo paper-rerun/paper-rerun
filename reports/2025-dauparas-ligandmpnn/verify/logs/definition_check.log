@@ -1,0 +1,49 @@
+/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/env/lib/python3.11/site-packages/prody/utilities/misctools.py:424: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+  ... small_molecule 50 / 317
+  ... small_molecule 100 / 317
+  ... small_molecule 150 / 317
+  ... small_molecule 200 / 317
+  ... small_molecule 250 / 317
+  ... small_molecule 300 / 317
+
+=== small_molecule (n=317) ===
+   chain+ligand/any_atom    309 / 317  (97%)
+   chain+ligand/sidechain    30 / 317  (9%)
+  ... nucleotide 50 / 74
+
+=== nucleotide (n=74) ===
+   biounit1/any_atom         37 /  74  (50%)
+   asym/any_atom             33 /  74  (45%)
+   asym/sidechain             4 /  74  (5%)
+   biounit1/sidechain         4 /  74  (5%)
+  ... metal 50 / 83
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/env/lib/python3.11/site-packages/prody/proteins/pdbfile.py", line 576, in _parsePDBLines
+    coordinates[acount, 1] = line[38:46]
+    ~~~~~~~~~~~^^^^^^^^^^^
+ValueError: could not convert string to float: '91  12.2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/tools/check_definition.py", line 140, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/tools/check_definition.py", line 119, in main
+    n, total = count_near(path, mode)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/tools/check_definition.py", line 32, in count_near
+    atoms = parsePDB(path)
+            ^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/env/lib/python3.11/site-packages/prody/proteins/pdbfile.py", line 124, in parsePDB
+    return _parsePDB(pdb[0], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/env/lib/python3.11/site-packages/prody/proteins/pdbfile.py", line 235, in _parsePDB
+    result = parsePDBStream(stream, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/env/lib/python3.11/site-packages/prody/proteins/pdbfile.py", line 324, in parsePDBStream
+    _parsePDBLines(ag, lines, split, model, chain, subset, altloc, bonds=bonds)
+  File "/mnt/e/Ciencia/pipeline/2025-dauparas-ligandmpnn/verify/env/lib/python3.11/site-packages/prody/proteins/pdbfile.py", line 597, in _parsePDBLines
+    raise PDBParseError('invalid or missing coordinate(s) at '
+prody.proteins.pdbfile.PDBParseError: invalid or missing coordinate(s) at line 4023

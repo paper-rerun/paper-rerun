@@ -1,0 +1,160 @@
+{
+ "results": [
+  {
+   "claim_id": "C1-LMPNN-SMALLMOL",
+   "model": "ligand_mpnn",
+   "split": "small_molecule",
+   "scoring_key": "any_atom|all",
+   "paper_value": 63.3,
+   "our_value": 64.76190476190476,
+   "diff": 1.461904761904762,
+   "tolerance": 1.0,
+   "verdict": "MISS",
+   "n": 317,
+   "mean_ours": 63.639207030324386,
+   "medians_all_readings": {
+    "any_atom|all": 64.76190476190476,
+    "sidechain|all": 63.0,
+    "any_atom|metal_transition": null
+   },
+   "per_protein_vs_source_data": {
+    "n_compared": 317,
+    "mean_abs_diff": 6.260889513676296,
+    "median_abs_diff": 4.666669999999989,
+    "within_5pp": 52.05047318611987,
+    "pearson_r": 0.7916163044498806
+   },
+   "n_errors": 0
+  },
+  {
+   "claim_id": "C2-PMPNN-SMALLMOL",
+   "model": "protein_mpnn",
+   "split": "small_molecule",
+   "scoring_key": "any_atom|all",
+   "paper_value": 50.5,
+   "our_value": 50.76923076923077,
+   "diff": 0.2692307692307665,
+   "tolerance": 1.0,
+   "verdict": "match",
+   "n": 317,
+   "mean_ours": 50.257077858176366,
+   "medians_all_readings": {
+    "any_atom|all": 50.76923076923077,
+    "sidechain|all": 47.99999999999999,
+    "any_atom|metal_transition": null
+   },
+   "per_protein_vs_source_data": {
+    "n_compared": 317,
+    "mean_abs_diff": 6.217316174915522,
+    "median_abs_diff": 5.34187711111111,
+    "within_5pp": 47.63406940063091,
+    "pearson_r": 0.7750874289890963
+   },
+   "n_errors": 0
+  },
+  {
+   "claim_id": "C3-LMPNN-NUCLEOTIDE",
+   "model": "ligand_mpnn",
+   "split": "nucleotide",
+   "scoring_key": "any_atom|all",
+   "paper_value": 50.5,
+   "our_value": 55.71070234113712,
+   "diff": 5.210702341137122,
+   "tolerance": 2.0,
+   "verdict": "MISS",
+   "n": 74,
+   "mean_ours": 52.8749346265901,
+   "medians_all_readings": {
+    "any_atom|all": 55.71070234113712,
+    "sidechain|all": 54.32954545454545,
+    "any_atom|metal_transition": 73.21428571428572
+   },
+   "per_protein_vs_source_data": {
+    "n_compared": 74,
+    "mean_abs_diff": 6.64212936329293,
+    "median_abs_diff": 6.317740463054182,
+    "within_5pp": 40.54054054054054,
+    "pearson_r": 0.7994187495410875
+   },
+   "n_errors": 0
+  },
+  {
+   "claim_id": "C4-PMPNN-NUCLEOTIDE",
+   "model": "protein_mpnn",
+   "split": "nucleotide",
+   "scoring_key": "any_atom|all",
+   "paper_value": 34.0,
+   "our_value": 34.72222222222222,
+   "diff": 0.7222222222222214,
+   "tolerance": 2.0,
+   "verdict": "match",
+   "n": 74,
+   "mean_ours": 34.46076935189961,
+   "medians_all_readings": {
+    "any_atom|all": 34.72222222222222,
+    "sidechain|all": 32.42880258899676,
+    "any_atom|metal_transition": 56.388888888888886
+   },
+   "per_protein_vs_source_data": {
+    "n_compared": 74,
+    "mean_abs_diff": 4.711098924602393,
+    "median_abs_diff": 3.392255407407408,
+    "within_5pp": 62.16216216216216,
+    "pearson_r": 0.8226953009342809
+   },
+   "n_errors": 0
+  },
+  {
+   "claim_id": "C5-LMPNN-METAL",
+   "model": "ligand_mpnn",
+   "split": "metal",
+   "scoring_key": "any_atom|metal_transition",
+   "paper_value": 77.5,
+   "our_value": 80.0,
+   "diff": 2.5,
+   "tolerance": 2.0,
+   "verdict": "MISS",
+   "n": 83,
+   "mean_ours": 79.07724810300262,
+   "medians_all_readings": {
+    "any_atom|all": 65.375,
+    "sidechain|all": 65.68627450980394,
+    "any_atom|metal_transition": 80.0
+   },
+   "per_protein_vs_source_data": {
+    "n_compared": 83,
+    "mean_abs_diff": 7.173903794172348,
+    "median_abs_diff": 4.0,
+    "within_5pp": 55.42168674698795,
+    "pearson_r": 0.7817845065522344
+   },
+   "n_errors": 0
+  },
+  {
+   "claim_id": "C6-PMPNN-METAL",
+   "model": "protein_mpnn",
+   "split": "metal",
+   "scoring_key": "any_atom|metal_transition",
+   "paper_value": 40.6,
+   "our_value": 37.8125,
+   "diff": -2.7875000000000014,
+   "tolerance": 2.0,
+   "verdict": "MISS",
+   "n": 83,
+   "mean_ours": 42.211419895402635,
+   "medians_all_readings": {
+    "any_atom|all": 42.03389830508475,
+    "sidechain|all": 38.867924528301884,
+    "any_atom|metal_transition": 37.8125
+   },
+   "per_protein_vs_source_data": {
+    "n_compared": 83,
+    "mean_abs_diff": 9.381916852677982,
+    "median_abs_diff": 8.0,
+    "within_5pp": 37.34939759036144,
+    "pearson_r": 0.8816749784622462
+   },
+   "n_errors": 0
+  }
+ ]
+}

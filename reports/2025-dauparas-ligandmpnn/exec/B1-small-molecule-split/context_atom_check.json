@@ -1,0 +1,1920 @@
+{
+ "per_structure": [
+  {
+   "name": "1a28_ASTR.pdb",
+   "ligand": "STR",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "1bzc_ATPI.pdb",
+   "ligand": "TPI",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "1drv_AA3D.pdb",
+   "ligand": "A3D",
+   "deposited_heavy": 44,
+   "kept_by_parse_PDB": 44
+  },
+  {
+   "name": "1e3g_AR18.pdb",
+   "ligand": "R18",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "1elb_A0Z4.pdb",
+   "ligand": "0Z4",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "1elc_A0Z3.pdb",
+   "ligand": "0Z3",
+   "deposited_heavy": 36,
+   "kept_by_parse_PDB": 36
+  },
+  {
+   "name": "1epo_E2Z3.pdb",
+   "ligand": "2Z3",
+   "deposited_heavy": 46,
+   "kept_by_parse_PDB": 46
+  },
+  {
+   "name": "1f0r_A815.pdb",
+   "ligand": "815",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "1g7f_AINZ.pdb",
+   "ligand": "INZ",
+   "deposited_heavy": 39,
+   "kept_by_parse_PDB": 39
+  },
+  {
+   "name": "1g7g_AINX.pdb",
+   "ligand": "INX",
+   "deposited_heavy": 43,
+   "kept_by_parse_PDB": 43
+  },
+  {
+   "name": "1gvw_A0EM.pdb",
+   "ligand": "0EM",
+   "deposited_heavy": 46,
+   "kept_by_parse_PDB": 46
+  },
+  {
+   "name": "1gx8_ARTL.pdb",
+   "ligand": "RTL",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "1i37_ADHT.pdb",
+   "ligand": "DHT",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "1kav_AFEP.pdb",
+   "ligand": "FEP",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "1kdk_ADHT.pdb",
+   "ligand": "DHT",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "1kv1_ABMU.pdb",
+   "ligand": "BMU",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "1l8g_ADBD.pdb",
+   "ligand": "DBD",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "1lhu_AEST.pdb",
+   "ligand": "EST",
+   "deposited_heavy": 20,
+   "kept_by_parse_PDB": 20
+  },
+  {
+   "name": "1lpg_BIMA.pdb",
+   "ligand": "IMA",
+   "deposited_heavy": 41,
+   "kept_by_parse_PDB": 41
+  },
+  {
+   "name": "1nc1_AMTH.pdb",
+   "ligand": "MTH",
+   "deposited_heavy": 20,
+   "kept_by_parse_PDB": 20
+  },
+  {
+   "name": "1nfx_ARDR.pdb",
+   "ligand": "RDR",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "1nhz_A486.pdb",
+   "ligand": "486",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "1nl9_A989.pdb",
+   "ligand": "989",
+   "deposited_heavy": 39,
+   "kept_by_parse_PDB": 39
+  },
+  {
+   "name": "1nny_A515.pdb",
+   "ligand": "515",
+   "deposited_heavy": 53,
+   "kept_by_parse_PDB": 53
+  },
+  {
+   "name": "1nwl_A964.pdb",
+   "ligand": "964",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "1ony_A588.pdb",
+   "ligand": "588",
+   "deposited_heavy": 41,
+   "kept_by_parse_PDB": 41
+  },
+  {
+   "name": "1pyn_A941.pdb",
+   "ligand": "941",
+   "deposited_heavy": 43,
+   "kept_by_parse_PDB": 43
+  },
+  {
+   "name": "1qb1_A974.pdb",
+   "ligand": "974",
+   "deposited_heavy": 41,
+   "kept_by_parse_PDB": 41
+  },
+  {
+   "name": "1qkt_AEST.pdb",
+   "ligand": "EST",
+   "deposited_heavy": 20,
+   "kept_by_parse_PDB": 20
+  },
+  {
+   "name": "1qxk_A429.pdb",
+   "ligand": "429",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "1r0p_AKSA.pdb",
+   "ligand": "KSA",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "1sj0_AE4D.pdb",
+   "ligand": "E4D",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "1sqn_ANDR.pdb",
+   "ligand": "NDR",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "1v2n_TBBA.pdb",
+   "ligand": "BBA",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "1xjd_ASTU.pdb",
+   "ligand": "STU",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "1xws_ABI1.pdb",
+   "ligand": "BI1",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "1yc1_A4BC.pdb",
+   "ligand": "4BC",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "1yqj_A6NP.pdb",
+   "ligand": "6NP",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "1z95_A198.pdb",
+   "ligand": "198",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "1zp8_AAB2.pdb",
+   "ligand": "AB2",
+   "deposited_heavy": 47,
+   "kept_by_parse_PDB": 47
+  },
+  {
+   "name": "2ayr_AL4G.pdb",
+   "ligand": "L4G",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "2b07_A598.pdb",
+   "ligand": "598",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "2b4l_ABET.pdb",
+   "ligand": "BET",
+   "deposited_heavy": 8,
+   "kept_by_parse_PDB": 8
+  },
+  {
+   "name": "2baj_A1PP.pdb",
+   "ligand": "1PP",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "2bak_AAQZ.pdb",
+   "ligand": "AQZ",
+   "deposited_heavy": 43,
+   "kept_by_parse_PDB": 43
+  },
+  {
+   "name": "2bal_APQA.pdb",
+   "ligand": "PQA",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "2bsm_ABSM.pdb",
+   "ligand": "BSM",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "2cet_APGI.pdb",
+   "ligand": "PGI",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "2e2r_A2OH.pdb",
+   "ligand": "2OH",
+   "deposited_heavy": 17,
+   "kept_by_parse_PDB": 17
+  },
+  {
+   "name": "2f6t_A1C2.pdb",
+   "ligand": "1C2",
+   "deposited_heavy": 26,
+   "kept_by_parse_PDB": 26
+  },
+  {
+   "name": "2fdp_AFRP.pdb",
+   "ligand": "FRP",
+   "deposited_heavy": 41,
+   "kept_by_parse_PDB": 41
+  },
+  {
+   "name": "2g94_AZPQ.pdb",
+   "ligand": "ZPQ",
+   "deposited_heavy": 45,
+   "kept_by_parse_PDB": 45
+  },
+  {
+   "name": "2hah_A3TL.pdb",
+   "ligand": "3TL",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "2ihq_ALG7.pdb",
+   "ligand": "LG7",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "2iwx_AM1S.pdb",
+   "ligand": "M1S",
+   "deposited_heavy": 24,
+   "kept_by_parse_PDB": 24
+  },
+  {
+   "name": "2j2u_AGSQ.pdb",
+   "ligand": "GSQ",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "2j34_AGS6.pdb",
+   "ligand": "GS6",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "2j4i_AGSJ.pdb",
+   "ligand": "GSJ",
+   "deposited_heavy": 36,
+   "kept_by_parse_PDB": 36
+  },
+  {
+   "name": "2j94_AG15.pdb",
+   "ligand": "G15",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "2j95_AGSX.pdb",
+   "ligand": "GSX",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "2o0u_AC0M.pdb",
+   "ligand": "C0M",
+   "deposited_heavy": 34,
+   "kept_by_parse_PDB": 34
+  },
+  {
+   "name": "2oax_ASNL.pdb",
+   "ligand": "SNL",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "2ojg_A19A.pdb",
+   "ligand": "19A",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "2ojj_A82A.pdb",
+   "ligand": "82A",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "2p4j_A23I.pdb",
+   "ligand": "23I",
+   "deposited_heavy": 49,
+   "kept_by_parse_PDB": 49
+  },
+  {
+   "name": "2p7g_A2OH.pdb",
+   "ligand": "2OH",
+   "deposited_heavy": 17,
+   "kept_by_parse_PDB": 17
+  },
+  {
+   "name": "2p7z_AOHT.pdb",
+   "ligand": "OHT",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "2pog_AWST.pdb",
+   "ligand": "WST",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "2qbp_A527.pdb",
+   "ligand": "527",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "2qbq_A4B3.pdb",
+   "ligand": "4B3",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "2qbs_A024.pdb",
+   "ligand": "024",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "2qe4_AJJ3.pdb",
+   "ligand": "JJ3",
+   "deposited_heavy": 24,
+   "kept_by_parse_PDB": 24
+  },
+  {
+   "name": "2qmg_ASC6.pdb",
+   "ligand": "SC6",
+   "deposited_heavy": 44,
+   "kept_by_parse_PDB": 44
+  },
+  {
+   "name": "2uwl_A895.pdb",
+   "ligand": "895",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "2uwo_A701.pdb",
+   "ligand": "701",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "2uwp_A894.pdb",
+   "ligand": "894",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "2v7a_A627.pdb",
+   "ligand": "627",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "2vh0_AGSI.pdb",
+   "ligand": "GSI",
+   "deposited_heavy": 34,
+   "kept_by_parse_PDB": 34
+  },
+  {
+   "name": "2vh6_AGSV.pdb",
+   "ligand": "GSV",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "2vkm_ABSD.pdb",
+   "ligand": "BSD",
+   "deposited_heavy": 47,
+   "kept_by_parse_PDB": 47
+  },
+  {
+   "name": "2vrj_ANCW.pdb",
+   "ligand": "NCW",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "2vw5_ABC6.pdb",
+   "ligand": "BC6",
+   "deposited_heavy": 36,
+   "kept_by_parse_PDB": 36
+  },
+  {
+   "name": "2vwc_ABC2.pdb",
+   "ligand": "BC2",
+   "deposited_heavy": 40,
+   "kept_by_parse_PDB": 40
+  },
+  {
+   "name": "2w8y_A486.pdb",
+   "ligand": "486",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "2wc3_AAM3.pdb",
+   "ligand": "AM3",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "2web_APP4.pdb",
+   "ligand": "PP4",
+   "deposited_heavy": 38,
+   "kept_by_parse_PDB": 38
+  },
+  {
+   "name": "2wec_APP5.pdb",
+   "ligand": "PP5",
+   "deposited_heavy": 38,
+   "kept_by_parse_PDB": 38
+  },
+  {
+   "name": "2weq_AGDM.pdb",
+   "ligand": "GDM",
+   "deposited_heavy": 40,
+   "kept_by_parse_PDB": 40
+  },
+  {
+   "name": "2wgj_AVGH.pdb",
+   "ligand": "VGH",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "2wuf_BKEM.pdb",
+   "ligand": "KEM",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "2wyg_A461.pdb",
+   "ligand": "461",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "2wyj_A898.pdb",
+   "ligand": "898",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "2xab_AVHD.pdb",
+   "ligand": "VHD",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "2xb8_AXNW.pdb",
+   "ligand": "XNW",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "2xda_AJPS.pdb",
+   "ligand": "JPS",
+   "deposited_heavy": 20,
+   "kept_by_parse_PDB": 20
+  },
+  {
+   "name": "2xht_AC0Y.pdb",
+   "ligand": "C0Y",
+   "deposited_heavy": 19,
+   "kept_by_parse_PDB": 19
+  },
+  {
+   "name": "2xj1_AXJ1.pdb",
+   "ligand": "XJ1",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "2xj2_A985.pdb",
+   "ligand": "985",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "2xjg_AXJG.pdb",
+   "ligand": "XJG",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "2xjx_AXJX.pdb",
+   "ligand": "XJX",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "2y7x_AMZA.pdb",
+   "ligand": "MZA",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "2y7z_AC0Z.pdb",
+   "ligand": "C0Z",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "2y80_A439.pdb",
+   "ligand": "439",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "2y81_A931.pdb",
+   "ligand": "931",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "2y82_A930.pdb",
+   "ligand": "930",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "2ydw_AWSH.pdb",
+   "ligand": "WSH",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "2yek_AEAM.pdb",
+   "ligand": "EAM",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "2yel_AWSH.pdb",
+   "ligand": "WSH",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "2yfe_AYFE.pdb",
+   "ligand": "YFE",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "2yfx_AVGH.pdb",
+   "ligand": "VGH",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "2yge_AGDM.pdb",
+   "ligand": "GDM",
+   "deposited_heavy": 40,
+   "kept_by_parse_PDB": 40
+  },
+  {
+   "name": "2ygf_AGDM.pdb",
+   "ligand": "GDM",
+   "deposited_heavy": 40,
+   "kept_by_parse_PDB": 40
+  },
+  {
+   "name": "2yi0_AYI0.pdb",
+   "ligand": "YI0",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "2yi7_ABZ8.pdb",
+   "ligand": "BZ8",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "2yix_AYIX.pdb",
+   "ligand": "YIX",
+   "deposited_heavy": 26,
+   "kept_by_parse_PDB": 26
+  },
+  {
+   "name": "2zmm_A35B.pdb",
+   "ligand": "35B",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "3acw_A651.pdb",
+   "ligand": "651",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "3acx_A673.pdb",
+   "ligand": "673",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "3b5r_AB5R.pdb",
+   "ligand": "B5R",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "3b65_A3B6.pdb",
+   "ligand": "3B6",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "3bgq_AVX2.pdb",
+   "ligand": "VX2",
+   "deposited_heavy": 26,
+   "kept_by_parse_PDB": 26
+  },
+  {
+   "name": "3bgz_AVX3.pdb",
+   "ligand": "VX3",
+   "deposited_heavy": 24,
+   "kept_by_parse_PDB": 24
+  },
+  {
+   "name": "3ckp_A012.pdb",
+   "ligand": "012",
+   "deposited_heavy": 40,
+   "kept_by_parse_PDB": 40
+  },
+  {
+   "name": "3cow_A52H.pdb",
+   "ligand": "52H",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "3coy_A53H.pdb",
+   "ligand": "53H",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "3coz_A54H.pdb",
+   "ligand": "54H",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "3d7z_AGK5.pdb",
+   "ligand": "GK5",
+   "deposited_heavy": 26,
+   "kept_by_parse_PDB": 26
+  },
+  {
+   "name": "3d83_AGK6.pdb",
+   "ligand": "GK6",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "3eax_ALZP.pdb",
+   "ligand": "LZP",
+   "deposited_heavy": 48,
+   "kept_by_parse_PDB": 48
+  },
+  {
+   "name": "3ekr_APY9.pdb",
+   "ligand": "PY9",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "3fv1_ADYH.pdb",
+   "ligand": "DYH",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "3fv2_ANDZ.pdb",
+   "ligand": "NDZ",
+   "deposited_heavy": 20,
+   "kept_by_parse_PDB": 20
+  },
+  {
+   "name": "3fvk_A8DX.pdb",
+   "ligand": "8DX",
+   "deposited_heavy": 19,
+   "kept_by_parse_PDB": 19
+  },
+  {
+   "name": "3gba_ADYH.pdb",
+   "ligand": "DYH",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "3gbb_AMS8.pdb",
+   "ligand": "MS8",
+   "deposited_heavy": 18,
+   "kept_by_parse_PDB": 18
+  },
+  {
+   "name": "3gcs_ABAX.pdb",
+   "ligand": "BAX",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "3gcu_AR48.pdb",
+   "ligand": "R48",
+   "deposited_heavy": 38,
+   "kept_by_parse_PDB": 38
+  },
+  {
+   "name": "3gy3_APNT.pdb",
+   "ligand": "PNT",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "3hek_ABD0.pdb",
+   "ligand": "BD0",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "3i25_AMV7.pdb",
+   "ligand": "MV7",
+   "deposited_heavy": 63,
+   "kept_by_parse_PDB": 63
+  },
+  {
+   "name": "3ioc_AA5D.pdb",
+   "ligand": "A5D",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "3iph_AG11.pdb",
+   "ligand": "G11",
+   "deposited_heavy": 26,
+   "kept_by_parse_PDB": 26
+  },
+  {
+   "name": "3iw6_APP0.pdb",
+   "ligand": "PP0",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "3k97_A4CD.pdb",
+   "ligand": "4CD",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "3lpi_AZ74.pdb",
+   "ligand": "Z74",
+   "deposited_heavy": 46,
+   "kept_by_parse_PDB": 46
+  },
+  {
+   "name": "3lpk_AZ76.pdb",
+   "ligand": "Z76",
+   "deposited_heavy": 48,
+   "kept_by_parse_PDB": 48
+  },
+  {
+   "name": "3lxk_AMI1.pdb",
+   "ligand": "MI1",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "3m35_AM35.pdb",
+   "ligand": "M35",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "3myg_AEML.pdb",
+   "ligand": "EML",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "3n76_ACA2.pdb",
+   "ligand": "CA2",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "3nq3_ADKA.pdb",
+   "ligand": "DKA",
+   "deposited_heavy": 12,
+   "kept_by_parse_PDB": 12
+  },
+  {
+   "name": "3nyx_ATZ1.pdb",
+   "ligand": "TZ1",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "3o5x_AJZG.pdb",
+   "ligand": "JZG",
+   "deposited_heavy": 42,
+   "kept_by_parse_PDB": 42
+  },
+  {
+   "name": "3o8p_ABMU.pdb",
+   "ligand": "BMU",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "3pww_AROC.pdb",
+   "ligand": "ROC",
+   "deposited_heavy": 49,
+   "kept_by_parse_PDB": 49
+  },
+  {
+   "name": "3roc_A29A.pdb",
+   "ligand": "29A",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "3tfn_A2CJ.pdb",
+   "ligand": "2CJ",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "3u81_ASAH.pdb",
+   "ligand": "SAH",
+   "deposited_heavy": 26,
+   "kept_by_parse_PDB": 26
+  },
+  {
+   "name": "3ueu_ADAO.pdb",
+   "ligand": "DAO",
+   "deposited_heavy": 14,
+   "kept_by_parse_PDB": 14
+  },
+  {
+   "name": "3uev_AMYR.pdb",
+   "ligand": "MYR",
+   "deposited_heavy": 16,
+   "kept_by_parse_PDB": 16
+  },
+  {
+   "name": "3uew_APLM.pdb",
+   "ligand": "PLM",
+   "deposited_heavy": 18,
+   "kept_by_parse_PDB": 18
+  },
+  {
+   "name": "3uex_ASTE.pdb",
+   "ligand": "STE",
+   "deposited_heavy": 20,
+   "kept_by_parse_PDB": 20
+  },
+  {
+   "name": "3vha_AVHA.pdb",
+   "ligand": "VHA",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "3vhc_AVHC.pdb",
+   "ligand": "VHC",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "3vhd_AVHE.pdb",
+   "ligand": "VHE",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "3vje_AZGA.pdb",
+   "ligand": "ZGA",
+   "deposited_heavy": 49,
+   "kept_by_parse_PDB": 49
+  },
+  {
+   "name": "3vvy_AET.pdb",
+   "ligand": "ET",
+   "deposited_heavy": 24,
+   "kept_by_parse_PDB": 24
+  },
+  {
+   "name": "3vw1_BCVI.pdb",
+   "ligand": "CVI",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "3vw2_ABER.pdb",
+   "ligand": "BER",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "3wha_AWHA.pdb",
+   "ligand": "WHA",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "3wz6_AIXZ.pdb",
+   "ligand": "IXZ",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "3wz8_AIXV.pdb",
+   "ligand": "IXV",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "3zc5_AW9Z.pdb",
+   "ligand": "W9Z",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "3zm9_AQMQ.pdb",
+   "ligand": "QMQ",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "3zze_A6XP.pdb",
+   "ligand": "6XP",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "4a4v_AYFD.pdb",
+   "ligand": "YFD",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "4a4w_AYFB.pdb",
+   "ligand": "YFB",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "4a7i_BA7I.pdb",
+   "ligand": "A7I",
+   "deposited_heavy": 24,
+   "kept_by_parse_PDB": 24
+  },
+  {
+   "name": "4ag8_AAXI.pdb",
+   "ligand": "AXI",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "4ap7_AF47.pdb",
+   "ligand": "F47",
+   "deposited_heavy": 24,
+   "kept_by_parse_PDB": 24
+  },
+  {
+   "name": "4b6o_A3DQ.pdb",
+   "ligand": "3DQ",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "4b9k_CTG0.pdb",
+   "ligand": "TG0",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "4cd0_AAWJ.pdb",
+   "ligand": "AWJ",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "4cga_AQLW.pdb",
+   "ligand": "QLW",
+   "deposited_heavy": 24,
+   "kept_by_parse_PDB": 24
+  },
+  {
+   "name": "4cmo_AYPW.pdb",
+   "ligand": "YPW",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "4da5_A0H7.pdb",
+   "ligand": "0H7",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "4e5w_A0NT.pdb",
+   "ligand": "0NT",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "4e6d_A0NU.pdb",
+   "ligand": "0NU",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "4e9u_ARWY.pdb",
+   "ligand": "RWY",
+   "deposited_heavy": 19,
+   "kept_by_parse_PDB": 19
+  },
+  {
+   "name": "4ea2_ARWZ.pdb",
+   "ligand": "RWZ",
+   "deposited_heavy": 24,
+   "kept_by_parse_PDB": 24
+  },
+  {
+   "name": "4egk_ARDC.pdb",
+   "ligand": "RDC",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "4er1_E0ZP.pdb",
+   "ligand": "0ZP",
+   "deposited_heavy": 60,
+   "kept_by_parse_PDB": 60
+  },
+  {
+   "name": "4fcq_A2N6.pdb",
+   "ligand": "2N6",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "4ffs_ABIG.pdb",
+   "ligand": "BIG",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "4flp_AJQ1.pdb",
+   "ligand": "JQ1",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "4g8n_AG8M.pdb",
+   "ligand": "G8M",
+   "deposited_heavy": 12,
+   "kept_by_parse_PDB": 12
+  },
+  {
+   "name": "4gny_ASDS.pdb",
+   "ligand": "SDS",
+   "deposited_heavy": 17,
+   "kept_by_parse_PDB": 17
+  },
+  {
+   "name": "4gu6_A10N.pdb",
+   "ligand": "10N",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "4hge_A15V.pdb",
+   "ligand": "15V",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "4igt_A3ZA.pdb",
+   "ligand": "3ZA",
+   "deposited_heavy": 17,
+   "kept_by_parse_PDB": 17
+  },
+  {
+   "name": "4k0y_A1OA.pdb",
+   "ligand": "1OA",
+   "deposited_heavy": 26,
+   "kept_by_parse_PDB": 26
+  },
+  {
+   "name": "4k9y_AK9Y.pdb",
+   "ligand": "K9Y",
+   "deposited_heavy": 36,
+   "kept_by_parse_PDB": 36
+  },
+  {
+   "name": "4kao_AKAO.pdb",
+   "ligand": "KAO",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "4kcx_A1QK.pdb",
+   "ligand": "1QK",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "4lyw_A21Q.pdb",
+   "ligand": "21Q",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "4m0r_A644.pdb",
+   "ligand": "644",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "4m12_A1YZ.pdb",
+   "ligand": "1YZ",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "4m13_A1E0.pdb",
+   "ligand": "1E0",
+   "deposited_heavy": 26,
+   "kept_by_parse_PDB": 26
+  },
+  {
+   "name": "4muf_A2DJ.pdb",
+   "ligand": "2DJ",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "4nh8_A2LC.pdb",
+   "ligand": "2LC",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "4nwc_A2QE.pdb",
+   "ligand": "2QE",
+   "deposited_heavy": 16,
+   "kept_by_parse_PDB": 16
+  },
+  {
+   "name": "4o04_A2Q8.pdb",
+   "ligand": "2Q8",
+   "deposited_heavy": 26,
+   "kept_by_parse_PDB": 26
+  },
+  {
+   "name": "4o05_A2Q9.pdb",
+   "ligand": "2Q9",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "4o07_AFGH.pdb",
+   "ligand": "FGH",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "4o09_A2R6.pdb",
+   "ligand": "2R6",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "4o0b_A2QA.pdb",
+   "ligand": "2QA",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "4p5z_AQ7M.pdb",
+   "ligand": "Q7M",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "4pmm_A31V.pdb",
+   "ligand": "31V",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "4pop_A2VY.pdb",
+   "ligand": "2VY",
+   "deposited_heavy": 17,
+   "kept_by_parse_PDB": 17
+  },
+  {
+   "name": "4qev_A31O.pdb",
+   "ligand": "31O",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "4qew_A31P.pdb",
+   "ligand": "31P",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "4qyy_A3G7.pdb",
+   "ligand": "3G7",
+   "deposited_heavy": 34,
+   "kept_by_parse_PDB": 34
+  },
+  {
+   "name": "4rfm_A3P6.pdb",
+   "ligand": "3P6",
+   "deposited_heavy": 36,
+   "kept_by_parse_PDB": 36
+  },
+  {
+   "name": "4rwj_A66T.pdb",
+   "ligand": "66T",
+   "deposited_heavy": 34,
+   "kept_by_parse_PDB": 34
+  },
+  {
+   "name": "4twp_AAXI.pdb",
+   "ligand": "AXI",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "4uyf_A73B.pdb",
+   "ligand": "73B",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "4v01_A0LI.pdb",
+   "ligand": "0LI",
+   "deposited_heavy": 39,
+   "kept_by_parse_PDB": 39
+  },
+  {
+   "name": "4w9f_C3JU.pdb",
+   "ligand": "3JU",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "4w9l_C3JJ.pdb",
+   "ligand": "3JJ",
+   "deposited_heavy": 41,
+   "kept_by_parse_PDB": 41
+  },
+  {
+   "name": "4wa9_BAXI.pdb",
+   "ligand": "AXI",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "4wkn_ATDI.pdb",
+   "ligand": "TDI",
+   "deposited_heavy": 20,
+   "kept_by_parse_PDB": 20
+  },
+  {
+   "name": "4x6p_A3YU.pdb",
+   "ligand": "3YU",
+   "deposited_heavy": 40,
+   "kept_by_parse_PDB": 40
+  },
+  {
+   "name": "4xip_A40W.pdb",
+   "ligand": "40W",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "4xir_A40X.pdb",
+   "ligand": "40X",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "4y79_A4O6.pdb",
+   "ligand": "4O6",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "4ybk_A4B7.pdb",
+   "ligand": "4B7",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "4ymb_A4E7.pdb",
+   "ligand": "4E7",
+   "deposited_heavy": 20,
+   "kept_by_parse_PDB": 20
+  },
+  {
+   "name": "4yml_A4F0.pdb",
+   "ligand": "4F0",
+   "deposited_heavy": 20,
+   "kept_by_parse_PDB": 20
+  },
+  {
+   "name": "4ynb_A4EH.pdb",
+   "ligand": "4EH",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "4yth_A467.pdb",
+   "ligand": "467",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "4z0k_A4LN.pdb",
+   "ligand": "4LN",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "4zae_A4M1.pdb",
+   "ligand": "4M1",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "5aa9_A5P8.pdb",
+   "ligand": "5P8",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "5acy_A9S3.pdb",
+   "ligand": "9S3",
+   "deposited_heavy": 34,
+   "kept_by_parse_PDB": 34
+  },
+  {
+   "name": "5d26_AL28.pdb",
+   "ligand": "L28",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "5d3h_A57G.pdb",
+   "ligand": "57G",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "5d3j_AL33.pdb",
+   "ligand": "L33",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "5d3l_A57F.pdb",
+   "ligand": "57F",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "5d3t_A56Y.pdb",
+   "ligand": "56Y",
+   "deposited_heavy": 25,
+   "kept_by_parse_PDB": 25
+  },
+  {
+   "name": "5dlx_A5D2.pdb",
+   "ligand": "5D2",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "5dqc_A5E7.pdb",
+   "ligand": "5E7",
+   "deposited_heavy": 49,
+   "kept_by_parse_PDB": 49
+  },
+  {
+   "name": "5dwr_A5H7.pdb",
+   "ligand": "5H7",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "5e74_A5KH.pdb",
+   "ligand": "5KH",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "5egm_A5NY.pdb",
+   "ligand": "5NY",
+   "deposited_heavy": 40,
+   "kept_by_parse_PDB": 40
+  },
+  {
+   "name": "5eng_A5QN.pdb",
+   "ligand": "5QN",
+   "deposited_heavy": 34,
+   "kept_by_parse_PDB": 34
+  },
+  {
+   "name": "5eqp_A5R9.pdb",
+   "ligand": "5R9",
+   "deposited_heavy": 19,
+   "kept_by_parse_PDB": 19
+  },
+  {
+   "name": "5eqy_A5RA.pdb",
+   "ligand": "5RA",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "5er1_E0HT.pdb",
+   "ligand": "0HT",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "5exm_A5ST.pdb",
+   "ligand": "5ST",
+   "deposited_heavy": 36,
+   "kept_by_parse_PDB": 36
+  },
+  {
+   "name": "5exn_A5SU.pdb",
+   "ligand": "5SU",
+   "deposited_heavy": 42,
+   "kept_by_parse_PDB": 42
+  },
+  {
+   "name": "5f9b_B5VN.pdb",
+   "ligand": "5VN",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "5fto_AYMX.pdb",
+   "ligand": "YMX",
+   "deposited_heavy": 41,
+   "kept_by_parse_PDB": 41
+  },
+  {
+   "name": "5fut_APQ7.pdb",
+   "ligand": "PQ7",
+   "deposited_heavy": 38,
+   "kept_by_parse_PDB": 38
+  },
+  {
+   "name": "5hcv_A60R.pdb",
+   "ligand": "60R",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "5i3v_A68M.pdb",
+   "ligand": "68M",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "5i3y_A68K.pdb",
+   "ligand": "68K",
+   "deposited_heavy": 46,
+   "kept_by_parse_PDB": 46
+  },
+  {
+   "name": "5i9x_ADB8.pdb",
+   "ligand": "DB8",
+   "deposited_heavy": 36,
+   "kept_by_parse_PDB": 36
+  },
+  {
+   "name": "5i9z_A627.pdb",
+   "ligand": "627",
+   "deposited_heavy": 35,
+   "kept_by_parse_PDB": 35
+  },
+  {
+   "name": "5ie1_A6BS.pdb",
+   "ligand": "6BS",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "5ih9_A6BF.pdb",
+   "ligand": "6BF",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "5jq5_AI74.pdb",
+   "ligand": "I74",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "5kz0_A6YL.pdb",
+   "ligand": "6YL",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "5l2s_A6ZV.pdb",
+   "ligand": "6ZV",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "5lli_C6Z3.pdb",
+   "ligand": "6Z3",
+   "deposited_heavy": 37,
+   "kept_by_parse_PDB": 37
+  },
+  {
+   "name": "5lny_A70K.pdb",
+   "ligand": "70K",
+   "deposited_heavy": 34,
+   "kept_by_parse_PDB": 34
+  },
+  {
+   "name": "5lsg_AQZQ.pdb",
+   "ligand": "QZQ",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "5neb_B8VE.pdb",
+   "ligand": "8VE",
+   "deposited_heavy": 15,
+   "kept_by_parse_PDB": 15
+  },
+  {
+   "name": "5nw1_C9BH.pdb",
+   "ligand": "9BH",
+   "deposited_heavy": 36,
+   "kept_by_parse_PDB": 36
+  },
+  {
+   "name": "5nyh_A9EK.pdb",
+   "ligand": "9EK",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "5op5_A3FE.pdb",
+   "ligand": "3FE",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "5oq8_AA0Q.pdb",
+   "ligand": "A0Q",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "5qqp_ANR7.pdb",
+   "ligand": "NR7",
+   "deposited_heavy": 39,
+   "kept_by_parse_PDB": 39
+  },
+  {
+   "name": "5t19_A73U.pdb",
+   "ligand": "73U",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "5tpx_A7H7.pdb",
+   "ligand": "7H7",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "5v82_A96Y.pdb",
+   "ligand": "96Y",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "5yfs_ARI2.pdb",
+   "ligand": "RI2",
+   "deposited_heavy": 18,
+   "kept_by_parse_PDB": 18
+  },
+  {
+   "name": "5yft_ARI2.pdb",
+   "ligand": "RI2",
+   "deposited_heavy": 18,
+   "kept_by_parse_PDB": 18
+  },
+  {
+   "name": "6c2r_AEG7.pdb",
+   "ligand": "EG7",
+   "deposited_heavy": 34,
+   "kept_by_parse_PDB": 34
+  },
+  {
+   "name": "6cjr_AE0G.pdb",
+   "ligand": "E0G",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "6cpw_AF8V.pdb",
+   "ligand": "F8V",
+   "deposited_heavy": 47,
+   "kept_by_parse_PDB": 47
+  },
+  {
+   "name": "6dgq_AGBV.pdb",
+   "ligand": "GBV",
+   "deposited_heavy": 29,
+   "kept_by_parse_PDB": 29
+  },
+  {
+   "name": "6dgr_AGDY.pdb",
+   "ligand": "GDY",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "6dyu_AOS2.pdb",
+   "ligand": "OS2",
+   "deposited_heavy": 22,
+   "kept_by_parse_PDB": 22
+  },
+  {
+   "name": "6dyv_AOS3.pdb",
+   "ligand": "OS3",
+   "deposited_heavy": 24,
+   "kept_by_parse_PDB": 24
+  },
+  {
+   "name": "6el5_APU1.pdb",
+   "ligand": "PU1",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "6elo_ABAW.pdb",
+   "ligand": "BAW",
+   "deposited_heavy": 23,
+   "kept_by_parse_PDB": 23
+  },
+  {
+   "name": "6elp_ABA8.pdb",
+   "ligand": "BA8",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "6ey9_AC4N.pdb",
+   "ligand": "C4N",
+   "deposited_heavy": 30,
+   "kept_by_parse_PDB": 30
+  },
+  {
+   "name": "6eyb_AC3Z.pdb",
+   "ligand": "C3Z",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "6f1n_AC8W.pdb",
+   "ligand": "C8W",
+   "deposited_heavy": 31,
+   "kept_by_parse_PDB": 31
+  },
+  {
+   "name": "6ge7_AEW8.pdb",
+   "ligand": "EW8",
+   "deposited_heavy": 21,
+   "kept_by_parse_PDB": 21
+  },
+  {
+   "name": "6gf9_AX90.pdb",
+   "ligand": "X90",
+   "deposited_heavy": 19,
+   "kept_by_parse_PDB": 19
+  },
+  {
+   "name": "6gfs_AF15.pdb",
+   "ligand": "F15",
+   "deposited_heavy": 17,
+   "kept_by_parse_PDB": 17
+  },
+  {
+   "name": "6ghh_ATDA.pdb",
+   "ligand": "TDA",
+   "deposited_heavy": 15,
+   "kept_by_parse_PDB": 15
+  },
+  {
+   "name": "6i61_AH3W.pdb",
+   "ligand": "H3W",
+   "deposited_heavy": 18,
+   "kept_by_parse_PDB": 18
+  },
+  {
+   "name": "6i64_AH48.pdb",
+   "ligand": "H48",
+   "deposited_heavy": 16,
+   "kept_by_parse_PDB": 16
+  },
+  {
+   "name": "6i67_AH42.pdb",
+   "ligand": "H42",
+   "deposited_heavy": 11,
+   "kept_by_parse_PDB": 11
+  },
+  {
+   "name": "6md0_AOLA.pdb",
+   "ligand": "OLA",
+   "deposited_heavy": 20,
+   "kept_by_parse_PDB": 20
+  },
+  {
+   "name": "6mh1_AJQP.pdb",
+   "ligand": "JQP",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "6mh7_AJQY.pdb",
+   "ligand": "JQY",
+   "deposited_heavy": 33,
+   "kept_by_parse_PDB": 33
+  },
+  {
+   "name": "6n7a_AKEV.pdb",
+   "ligand": "KEV",
+   "deposited_heavy": 28,
+   "kept_by_parse_PDB": 28
+  },
+  {
+   "name": "6n8x_AKFY.pdb",
+   "ligand": "KFY",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "6no9_AKUV.pdb",
+   "ligand": "KUV",
+   "deposited_heavy": 32,
+   "kept_by_parse_PDB": 32
+  },
+  {
+   "name": "6nv7_AL3J.pdb",
+   "ligand": "L3J",
+   "deposited_heavy": 42,
+   "kept_by_parse_PDB": 42
+  },
+  {
+   "name": "6nv9_AL3M.pdb",
+   "ligand": "L3M",
+   "deposited_heavy": 44,
+   "kept_by_parse_PDB": 44
+  },
+  {
+   "name": "6olx_AKFY.pdb",
+   "ligand": "KFY",
+   "deposited_heavy": 27,
+   "kept_by_parse_PDB": 27
+  },
+  {
+   "name": "6qi7_APLM.pdb",
+   "ligand": "PLM",
+   "deposited_heavy": 18,
+   "kept_by_parse_PDB": 18
+  }
+ ],
+ "elements_seen": {
+  "C": 6968,
+  "O": 1087,
+  "P": 12,
+  "F": 104,
+  "N": 1056,
+  "S": 129,
+  "CL": 68,
+  "BR": 4,
+  "I": 1
+ },
+ "elements_dropped": {},
+ "n_structures": 317,
+ "n_with_mismatch": 0
+}

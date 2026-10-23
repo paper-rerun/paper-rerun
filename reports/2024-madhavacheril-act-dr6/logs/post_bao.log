@@ -1,0 +1,43 @@
+[output] Output to be read-from/written-into folder '/mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/chains_lensonly', with prefix 'lensonly'
+[output] Found existing info files with the requested output prefix: '/mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/chains_lensonly/lensonly'
+[samplecollection] Loaded 840 sample points from '/mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/chains_lensonly/lensonly.1.txt'
+[samplecollection] Loaded 915 sample points from '/mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/chains_lensonly/lensonly.2.txt'
+[samplecollection] Loaded 891 sample points from '/mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/chains_lensonly/lensonly.3.txt'
+[samplecollection] Loaded 866 sample points from '/mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/chains_lensonly/lensonly.4.txt'
+[samplecollection] Loaded 868 sample points from '/mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/chains_lensonly/lensonly.5.txt'
+[post] Will process 4380 sample points.
+[output] Output to be read-from/written-into folder '/mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/logs/chains_lensonly', with prefix 'lensonly.post.bao'
+[camb] `camb` module loaded successfully from /mnt/e/Ciencia/artigos/2024-madhavacheril-act-dr6/.venv-post/lib/python3.11/site-packages/camb
+[bao.sixdf_2011_bao] Initialized.
+[bao.sdss_dr12_lrg_bao_dmdh] Initialized.
+[bao.sdss_dr16_lrg_bao_dmdh] Initialized.
+[post] Running post-processing...
+[post]  |--------------------|   0%  (0/4380)
+[post]  |@-------------------|   5%  (198/4380)
+[post]  |@@------------------|  10%  (417/4380)
+[post]  |@@@-----------------|  15%  (636/4380)
+[post]  |@@@@----------------|  20%  (855/4380)
+[post]  |@@@@@---------------|  25%  (1074/4380)
+[post]  |@@@@@@--------------|  30%  (1306/4380)
+[post]  |@@@@@@@-------------|  35%  (1512/4380)
+[post]  |@@@@@@@@------------|  40%  (1731/4380)
+[post]  |@@@@@@@@@-----------|  45%  (1953/4380)
+[post]  |@@@@@@@@@@----------|  50%  (2169/4380)
+[post]  |@@@@@@@@@@@---------|  55%  (2397/4380)
+[post]  |@@@@@@@@@@@@--------|  60%  (2608/4380)
+[post]  |@@@@@@@@@@@@@-------|  65%  (2826/4380)
+[post]  |@@@@@@@@@@@@@@------|  70%  (3057/4380)
+[post]  |@@@@@@@@@@@@@@@-----|  75%  (3264/4380)
+[post]  |@@@@@@@@@@@@@@@@----|  80%  (3488/4380)
+[post]  |@@@@@@@@@@@@@@@@@---|  85%  (3702/4380)
+[post]  |@@@@@@@@@@@@@@@@@@--|  90%  (3932/4380)
+[post]  |@@@@@@@@@@@@@@@@@@@-|  95%  (4140/4380)
+[post]  |@@@@@@@@@@@@@@@@@@@@| 100%  (4359/4380)
+[post] Finished! Final number of distinct sample points: 2438
+[post] Importance weight range: 2.779e-116 -- 1
+[post] Effective number of single samples if independent (sum w)/max(w): 6
+[post] Effective number of weighted samples if independent (sum w)^2/sum(w^2): 17
+
+real	1m11.908s
+user	0m57.465s
+sys	0m1.360s

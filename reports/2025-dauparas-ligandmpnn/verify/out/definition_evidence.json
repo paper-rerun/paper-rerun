@@ -1,0 +1,3351 @@
+{
+ "small_molecule": {
+  "n": 317,
+  "tally": {
+   "any_atom|all": 284,
+   "sidechain|all": 26
+  },
+  "primary": "any_atom|all",
+  "detail": [
+   {
+    "name": "1a28_ASTR",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1bzc_ATPI",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1drv_AA3D",
+    "n_true": 12,
+    "any_atom|all": 24,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1e3g_AR18",
+    "n_true": 7,
+    "any_atom|all": 21,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1elb_A0Z4",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1elc_A0Z3",
+    "n_true": 26,
+    "any_atom|all": 26,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1epo_E2Z3",
+    "n_true": 28,
+    "any_atom|all": 28,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1f0r_A815",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 11,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1g7f_AINZ",
+    "n_true": 6,
+    "any_atom|all": 18,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1g7g_AINX",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1gvw_A0EM",
+    "n_true": 30,
+    "any_atom|all": 30,
+    "sidechain|all": 26,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1gx8_ARTL",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1i37_ADHT",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1kav_AFEP",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1kdk_ADHT",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1kv1_ABMU",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1l8g_ADBD",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1lhu_AEST",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1lpg_BIMA",
+    "n_true": 26,
+    "any_atom|all": 26,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1nc1_AMTH",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1nfx_ARDR",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1nhz_A486",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1nl9_A989",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1nny_A515",
+    "n_true": 31,
+    "any_atom|all": 31,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1nwl_A964",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1ony_A588",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1pyn_A941",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1qb1_A974",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1qkt_AEST",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1qxk_A429",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1r0p_AKSA",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1sj0_AE4D",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 23,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1sqn_ANDR",
+    "n_true": 7,
+    "any_atom|all": 21,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1v2n_TBBA",
+    "n_true": 20,
+    "any_atom|all": 21,
+    "sidechain|all": 10,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1xjd_ASTU",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1xws_ABI1",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1yc1_A4BC",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1yqj_A6NP",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1z95_A198",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 23,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1zp8_AAB2",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2ayr_AL4G",
+    "n_true": 28,
+    "any_atom|all": 28,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2b07_A598",
+    "n_true": 10,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2b4l_ABET",
+    "n_true": 11,
+    "any_atom|all": 11,
+    "sidechain|all": 10,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2baj_A1PP",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2bak_AAQZ",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2bal_APQA",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2bsm_ABSM",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2cet_APGI",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2e2r_A2OH",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2f6t_A1C2",
+    "n_true": 9,
+    "any_atom|all": 18,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2fdp_AFRP",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2g94_AZPQ",
+    "n_true": 31,
+    "any_atom|all": 31,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2hah_A3TL",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 9,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2ihq_ALG7",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2iwx_AM1S",
+    "n_true": 15,
+    "any_atom|all": 15,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2j2u_AGSQ",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2j34_AGS6",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2j4i_AGSJ",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2j94_AG15",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2j95_AGSX",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2o0u_AC0M",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2oax_ASNL",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 25,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2ojg_A19A",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2ojj_A82A",
+    "n_true": 26,
+    "any_atom|all": 26,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2p4j_A23I",
+    "n_true": 32,
+    "any_atom|all": 32,
+    "sidechain|all": 27,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2p7g_A2OH",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2p7z_AOHT",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2pog_AWST",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2qbp_A527",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2qbq_A4B3",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2qbs_A024",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2qe4_AJJ3",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2qmg_ASC6",
+    "n_true": 30,
+    "any_atom|all": 30,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2uwl_A895",
+    "n_true": 7,
+    "any_atom|all": 21,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2uwo_A701",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2uwp_A894",
+    "n_true": 26,
+    "any_atom|all": 26,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2v7a_A627",
+    "n_true": 28,
+    "any_atom|all": 28,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2vh0_AGSI",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 11,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2vh6_AGSV",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2vkm_ABSD",
+    "n_true": 33,
+    "any_atom|all": 33,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2vrj_ANCW",
+    "n_true": 25,
+    "any_atom|all": 21,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2vw5_ABC6",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2vwc_ABC2",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2w8y_A486",
+    "n_true": 29,
+    "any_atom|all": 29,
+    "sidechain|all": 26,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2wc3_AAM3",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2web_APP4",
+    "n_true": 26,
+    "any_atom|all": 26,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2wec_APP5",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2weq_AGDM",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2wgj_AVGH",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2wuf_BKEM",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2wyg_A461",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2wyj_A898",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2xab_AVHD",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2xb8_AXNW",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2xda_AJPS",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2xht_AC0Y",
+    "n_true": 9,
+    "any_atom|all": 18,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2xj1_AXJ1",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2xj2_A985",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2xjg_AXJG",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2xjx_AXJX",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2y7x_AMZA",
+    "n_true": 28,
+    "any_atom|all": 28,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2y7z_AC0Z",
+    "n_true": 28,
+    "any_atom|all": 28,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2y80_A439",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2y81_A931",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2y82_A930",
+    "n_true": 14,
+    "any_atom|all": 28,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2ydw_AWSH",
+    "n_true": 15,
+    "any_atom|all": 15,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2yek_AEAM",
+    "n_true": 14,
+    "any_atom|all": 14,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2yel_AWSH",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2yfe_AYFE",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2yfx_AVGH",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2yge_AGDM",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2ygf_AGDM",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2yi0_AYI0",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2yi7_ABZ8",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2yix_AYIX",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2zmm_A35B",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3acw_A651",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3acx_A673",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3b5r_AB5R",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3b65_A3B6",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3bgq_AVX2",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3bgz_AVX3",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3ckp_A012",
+    "n_true": 28,
+    "any_atom|all": 28,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3cow_A52H",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3coy_A53H",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3coz_A54H",
+    "n_true": 26,
+    "any_atom|all": 26,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3d7z_AGK5",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3d83_AGK6",
+    "n_true": 26,
+    "any_atom|all": 26,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3eax_ALZP",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3ekr_APY9",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3fv1_ADYH",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3fv2_ANDZ",
+    "n_true": 10,
+    "any_atom|all": 20,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3fvk_A8DX",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3gba_ADYH",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3gbb_AMS8",
+    "n_true": 8,
+    "any_atom|all": 16,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3gcs_ABAX",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3gcu_AR48",
+    "n_true": 13,
+    "any_atom|all": 26,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3gy3_APNT",
+    "n_true": 22,
+    "any_atom|all": 23,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3hek_ABD0",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3i25_AMV7",
+    "n_true": 39,
+    "any_atom|all": 39,
+    "sidechain|all": 29,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3ioc_AA5D",
+    "n_true": 26,
+    "any_atom|all": 26,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3iph_AG11",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3iw6_APP0",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3k97_A4CD",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3lpi_AZ74",
+    "n_true": 31,
+    "any_atom|all": 31,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3lpk_AZ76",
+    "n_true": 31,
+    "any_atom|all": 31,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3lxk_AMI1",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3m35_AM35",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3myg_AEML",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3n76_ACA2",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3nq3_ADKA",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3nyx_ATZ1",
+    "n_true": 12,
+    "any_atom|all": 24,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3o5x_AJZG",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3o8p_ABMU",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3pww_AROC",
+    "n_true": 15,
+    "any_atom|all": 30,
+    "sidechain|all": 25,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3roc_A29A",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3tfn_A2CJ",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3u81_ASAH",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3ueu_ADAO",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3uev_AMYR",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3uew_APLM",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3uex_ASTE",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3vha_AVHA",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3vhc_AVHC",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3vhd_AVHE",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3vje_AZGA",
+    "n_true": 30,
+    "any_atom|all": 30,
+    "sidechain|all": 30,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3vvy_AET",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3vw1_BCVI",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3vw2_ABER",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3wha_AWHA",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3wz6_AIXZ",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3wz8_AIXV",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3zc5_AW9Z",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3zm9_AQMQ",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 25,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3zze_A6XP",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4a4v_AYFD",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4a4w_AYFB",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4a7i_BA7I",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 11,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4ag8_AAXI",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4ap7_AF47",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4b6o_A3DQ",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4b9k_CTG0",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4cd0_AAWJ",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4cga_AQLW",
+    "n_true": 15,
+    "any_atom|all": 15,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4cmo_AYPW",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4da5_A0H7",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4e5w_A0NT",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4e6d_A0NU",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4e9u_ARWY",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4ea2_ARWZ",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4egk_ARDC",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4er1_E0ZP",
+    "n_true": 33,
+    "any_atom|all": 33,
+    "sidechain|all": 29,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4fcq_A2N6",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4ffs_ABIG",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4flp_AJQ1",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4g8n_AG8M",
+    "n_true": 14,
+    "any_atom|all": 14,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4gny_ASDS",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4gu6_A10N",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4hge_A15V",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4igt_A3ZA",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4k0y_A1OA",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4k9y_AK9Y",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 23,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4kao_AKAO",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4kcx_A1QK",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4lyw_A21Q",
+    "n_true": 14,
+    "any_atom|all": 14,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4m0r_A644",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4m12_A1YZ",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4m13_A1E0",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4muf_A2DJ",
+    "n_true": 30,
+    "any_atom|all": 30,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4nh8_A2LC",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4nwc_A2QE",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4o04_A2Q8",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4o05_A2Q9",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4o07_AFGH",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4o09_A2R6",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4o0b_A2QA",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4p5z_AQ7M",
+    "n_true": 26,
+    "any_atom|all": 26,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4pmm_A31V",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4pop_A2VY",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4qev_A31O",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4qew_A31P",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4qyy_A3G7",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4rfm_A3P6",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4rwj_A66T",
+    "n_true": 26,
+    "any_atom|all": 26,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4twp_AAXI",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4uyf_A73B",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4v01_A0LI",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 23,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4w9f_C3JU",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4w9l_C3JJ",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4wa9_BAXI",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4wkn_ATDI",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4x6p_A3YU",
+    "n_true": 26,
+    "any_atom|all": 27,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4xip_A40W",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4xir_A40X",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4y79_A4O6",
+    "n_true": 10,
+    "any_atom|all": 20,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4ybk_A4B7",
+    "n_true": 26,
+    "any_atom|all": 25,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4ymb_A4E7",
+    "n_true": 9,
+    "any_atom|all": 18,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4yml_A4F0",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4ynb_A4EH",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4yth_A467",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4z0k_A4LN",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4zae_A4M1",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5aa9_A5P8",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5acy_A9S3",
+    "n_true": 14,
+    "any_atom|all": 14,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5d26_AL28",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5d3h_A57G",
+    "n_true": 7,
+    "any_atom|all": 14,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5d3j_AL33",
+    "n_true": 7,
+    "any_atom|all": 14,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5d3l_A57F",
+    "n_true": 7,
+    "any_atom|all": 14,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5d3t_A56Y",
+    "n_true": 15,
+    "any_atom|all": 15,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5dlx_A5D2",
+    "n_true": 15,
+    "any_atom|all": 15,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5dqc_A5E7",
+    "n_true": 17,
+    "any_atom|all": 34,
+    "sidechain|all": 26,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5dwr_A5H7",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5e74_A5KH",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5egm_A5NY",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5eng_A5QN",
+    "n_true": 15,
+    "any_atom|all": 15,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5eqp_A5R9",
+    "n_true": 12,
+    "any_atom|all": 12,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5eqy_A5RA",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5er1_E0HT",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5exm_A5ST",
+    "n_true": 22,
+    "any_atom|all": 23,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5exn_A5SU",
+    "n_true": 26,
+    "any_atom|all": 27,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5f9b_B5VN",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5fto_AYMX",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5fut_APQ7",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5hcv_A60R",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5i3v_A68M",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5i3y_A68K",
+    "n_true": 32,
+    "any_atom|all": 32,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5i9x_ADB8",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5i9z_A627",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5ie1_A6BS",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5ih9_A6BF",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5jq5_AI74",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5kz0_A6YL",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5l2s_A6ZV",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5lli_C6Z3",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5lny_A70K",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5lsg_AQZQ",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5neb_B8VE",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5nw1_C9BH",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5nyh_A9EK",
+    "n_true": 9,
+    "any_atom|all": 18,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5op5_A3FE",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5oq8_AA0Q",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5qqp_ANR7",
+    "n_true": 23,
+    "any_atom|all": 24,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5t19_A73U",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5tpx_A7H7",
+    "n_true": 7,
+    "any_atom|all": 14,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5v82_A96Y",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5yfs_ARI2",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5yft_ARI2",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6c2r_AEG7",
+    "n_true": 11,
+    "any_atom|all": 22,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6cjr_AE0G",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6cpw_AF8V",
+    "n_true": 29,
+    "any_atom|all": 29,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6dgq_AGBV",
+    "n_true": 13,
+    "any_atom|all": 26,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6dgr_AGDY",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6dyu_AOS2",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6dyv_AOS3",
+    "n_true": 21,
+    "any_atom|all": 21,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6el5_APU1",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6elo_ABAW",
+    "n_true": 18,
+    "any_atom|all": 18,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6elp_ABA8",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6ey9_AC4N",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6eyb_AC3Z",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6f1n_AC8W",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6ge7_AEW8",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6gf9_AX90",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6gfs_AF15",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6ghh_ATDA",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6i61_AH3W",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6i64_AH48",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6i67_AH42",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6md0_AOLA",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6mh1_AJQP",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6mh7_AJQY",
+    "n_true": 15,
+    "any_atom|all": 15,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6n7a_AKEV",
+    "n_true": 11,
+    "any_atom|all": 22,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6n8x_AKFY",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6no9_AKUV",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6nv7_AL3J",
+    "n_true": 28,
+    "any_atom|all": 28,
+    "sidechain|all": 23,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6nv9_AL3M",
+    "n_true": 30,
+    "any_atom|all": 30,
+    "sidechain|all": 25,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6olx_AKFY",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6qi7_APLM",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   }
+  ]
+ },
+ "nucleotide": {
+  "n": 74,
+  "tally": {
+   "any_atom|all": 30,
+   "sidechain|all": 3
+  },
+  "primary": "any_atom|all",
+  "detail": [
+   {
+    "name": "1a0a",
+    "n_true": 30,
+    "any_atom|all": 30,
+    "sidechain|all": 28,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1am9",
+    "n_true": 33,
+    "any_atom|all": 66,
+    "sidechain|all": 62,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1an4",
+    "n_true": 37,
+    "any_atom|all": 37,
+    "sidechain|all": 32,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1b01",
+    "n_true": 20,
+    "any_atom|all": 20,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1bc7",
+    "n_true": 27,
+    "any_atom|all": 27,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1bc8",
+    "n_true": 28,
+    "any_atom|all": 28,
+    "sidechain|all": 25,
+    "any_atom|metal_transition": 2
+   },
+   {
+    "name": "1di2",
+    "n_true": 28,
+    "any_atom|all": 28,
+    "sidechain|all": 25,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1ec6",
+    "n_true": 29,
+    "any_atom|all": 56,
+    "sidechain|all": 39,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1hlo",
+    "n_true": 29,
+    "any_atom|all": 29,
+    "sidechain|all": 27,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1hlv",
+    "n_true": 49,
+    "any_atom|all": 49,
+    "sidechain|all": 40,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1i3j",
+    "n_true": 60,
+    "any_atom|all": 60,
+    "sidechain|all": 55,
+    "any_atom|metal_transition": 7
+   },
+   {
+    "name": "1pvi",
+    "n_true": 63,
+    "any_atom|all": 63,
+    "sidechain|all": 54,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1qum",
+    "n_true": 39,
+    "any_atom|all": 40,
+    "sidechain|all": 32,
+    "any_atom|metal_transition": 11
+   },
+   {
+    "name": "1sfu",
+    "n_true": 10,
+    "any_atom|all": 19,
+    "sidechain|all": 18,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1u3e",
+    "n_true": 70,
+    "any_atom|all": 89,
+    "sidechain|all": 69,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "1xpx",
+    "n_true": 13,
+    "any_atom|all": 13,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1yo5",
+    "n_true": 28,
+    "any_atom|all": 28,
+    "sidechain|all": 25,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "1zx4",
+    "n_true": 25,
+    "any_atom|all": 33,
+    "sidechain|all": 30,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2c5r",
+    "n_true": 29,
+    "any_atom|all": 29,
+    "sidechain|all": 27,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2c62",
+    "n_true": 43,
+    "any_atom|all": 46,
+    "sidechain|all": 40,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2nq9",
+    "n_true": 40,
+    "any_atom|all": 41,
+    "sidechain|all": 34,
+    "any_atom|metal_transition": 11
+   },
+   {
+    "name": "2o4a",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2p5l",
+    "n_true": 21,
+    "any_atom|all": 106,
+    "sidechain|all": 92,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2xdb",
+    "n_true": 38,
+    "any_atom|all": 51,
+    "sidechain|all": 41,
+    "any_atom|metal_transition": 10
+   },
+   {
+    "name": "2ypb",
+    "n_true": 30,
+    "any_atom|all": 30,
+    "sidechain|all": 23,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "2zhg",
+    "n_true": 40,
+    "any_atom|all": 27,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 9
+   },
+   {
+    "name": "2zio",
+    "n_true": 53,
+    "any_atom|all": 33,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3adl",
+    "n_true": 8,
+    "any_atom|all": 8,
+    "sidechain|all": 7,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3bsu",
+    "n_true": 7,
+    "any_atom|all": 97,
+    "sidechain|all": 76,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3fc3",
+    "n_true": 104,
+    "any_atom|all": 111,
+    "sidechain|all": 101,
+    "any_atom|metal_transition": 24
+   },
+   {
+    "name": "3g73",
+    "n_true": 24,
+    "any_atom|all": 50,
+    "sidechain|all": 40,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3gna",
+    "n_true": 22,
+    "any_atom|all": 9,
+    "sidechain|all": 7,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3gx4",
+    "n_true": 25,
+    "any_atom|all": 33,
+    "sidechain|all": 26,
+    "any_atom|metal_transition": 2
+   },
+   {
+    "name": "3lsr",
+    "n_true": 12,
+    "any_atom|all": 28,
+    "sidechain|all": 23,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3mj0",
+    "n_true": 19,
+    "any_atom|all": 17,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3mva",
+    "n_true": 66,
+    "any_atom|all": 66,
+    "sidechain|all": 62,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3n7q",
+    "n_true": 10,
+    "any_atom|all": 27,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3olt",
+    "n_true": 25,
+    "any_atom|all": 253,
+    "sidechain|all": 223,
+    "any_atom|metal_transition": 6
+   },
+   {
+    "name": "3vok",
+    "n_true": 14,
+    "any_atom|all": 4,
+    "sidechain|all": 3,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3vwb",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "3zp5",
+    "n_true": 9,
+    "any_atom|all": 27,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4ato",
+    "n_true": 32,
+    "any_atom|all": 33,
+    "sidechain|all": 30,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4bhm",
+    "n_true": 46,
+    "any_atom|all": 126,
+    "sidechain|all": 103,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4bqa",
+    "n_true": 24,
+    "any_atom|all": 73,
+    "sidechain|all": 57,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4e0p",
+    "n_true": 57,
+    "any_atom|all": 62,
+    "sidechain|all": 56,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "4nid",
+    "n_true": 23,
+    "any_atom|all": 41,
+    "sidechain|all": 33,
+    "any_atom|metal_transition": 4
+   },
+   {
+    "name": "4wal",
+    "n_true": 41,
+    "any_atom|all": 48,
+    "sidechain|all": 35,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5cm3",
+    "n_true": 42,
+    "any_atom|all": 42,
+    "sidechain|all": 35,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5haw",
+    "n_true": 31,
+    "any_atom|all": 15,
+    "sidechain|all": 11,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5mht",
+    "n_true": 52,
+    "any_atom|all": 71,
+    "sidechain|all": 54,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "5vc9",
+    "n_true": 29,
+    "any_atom|all": 65,
+    "sidechain|all": 49,
+    "any_atom|metal_transition": 36
+   },
+   {
+    "name": "5w9s",
+    "n_true": 33,
+    "any_atom|all": 34,
+    "sidechain|all": 25,
+    "any_atom|metal_transition": 18
+   },
+   {
+    "name": "5ybd",
+    "n_true": 26,
+    "any_atom|all": 54,
+    "sidechain|all": 46,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6bjv",
+    "n_true": 61,
+    "any_atom|all": 61,
+    "sidechain|all": 48,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6dnw",
+    "n_true": 81,
+    "any_atom|all": 81,
+    "sidechain|all": 70,
+    "any_atom|metal_transition": 9
+   },
+   {
+    "name": "6fqr",
+    "n_true": 17,
+    "any_atom|all": 17,
+    "sidechain|all": 12,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6gdr",
+    "n_true": 59,
+    "any_atom|all": 67,
+    "sidechain|all": 52,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6kbs",
+    "n_true": 35,
+    "any_atom|all": 30,
+    "sidechain|all": 26,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6lff",
+    "n_true": 12,
+    "any_atom|all": 38,
+    "sidechain|all": 30,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6lmj",
+    "n_true": 15,
+    "any_atom|all": 15,
+    "sidechain|all": 13,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6od4",
+    "n_true": 25,
+    "any_atom|all": 26,
+    "sidechain|all": 23,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6wdz",
+    "n_true": 28,
+    "any_atom|all": 104,
+    "sidechain|all": 87,
+    "any_atom|metal_transition": 16
+   },
+   {
+    "name": "6x70",
+    "n_true": 69,
+    "any_atom|all": 69,
+    "sidechain|all": 54,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "6y93",
+    "n_true": 27,
+    "any_atom|all": 54,
+    "sidechain|all": 43,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "7bca",
+    "n_true": 39,
+    "any_atom|all": 41,
+    "sidechain|all": 38,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "7c0g",
+    "n_true": 14,
+    "any_atom|all": 14,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "7el3",
+    "n_true": 59,
+    "any_atom|all": 60,
+    "sidechain|all": 53,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "7jsa",
+    "n_true": 25,
+    "any_atom|all": 25,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "7ju3",
+    "n_true": 45,
+    "any_atom|all": 45,
+    "sidechain|all": 33,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "7kii",
+    "n_true": 40,
+    "any_atom|all": 49,
+    "sidechain|all": 40,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "7kij",
+    "n_true": 59,
+    "any_atom|all": 69,
+    "sidechain|all": 60,
+    "any_atom|metal_transition": 1
+   },
+   {
+    "name": "7mtl",
+    "n_true": 32,
+    "any_atom|all": 32,
+    "sidechain|all": 29,
+    "any_atom|metal_transition": 0
+   },
+   {
+    "name": "7z0u",
+    "n_true": 24,
+    "any_atom|all": 24,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 8
+   },
+   {
+    "name": "8dwm",
+    "n_true": 12,
+    "any_atom|all": 12,
+    "sidechain|all": 9,
+    "any_atom|metal_transition": 0
+   }
+  ]
+ },
+ "metal": {
+  "n": 83,
+  "tally": {
+   "any_atom|metal_transition": 64,
+   "any_atom|all": 15,
+   "sidechain|all": 6
+  },
+  "primary": "any_atom|metal_transition",
+  "detail": [
+   {
+    "name": "1dwh",
+    "n_true": 3,
+    "any_atom|all": 122,
+    "sidechain|all": 101,
+    "any_atom|metal_transition": 3
+   },
+   {
+    "name": "1e4m",
+    "n_true": 3,
+    "any_atom|all": 115,
+    "sidechain|all": 96,
+    "any_atom|metal_transition": 3
+   },
+   {
+    "name": "1e6s",
+    "n_true": 3,
+    "any_atom|all": 118,
+    "sidechain|all": 100,
+    "any_atom|metal_transition": 3
+   },
+   {
+    "name": "1e72",
+    "n_true": 3,
+    "any_atom|all": 121,
+    "sidechain|all": 103,
+    "any_atom|metal_transition": 3
+   },
+   {
+    "name": "1f35",
+    "n_true": 26,
+    "any_atom|all": 28,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 26
+   },
+   {
+    "name": "1fee",
+    "n_true": 4,
+    "any_atom|all": 19,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 8
+   },
+   {
+    "name": "1job",
+    "n_true": 15,
+    "any_atom|all": 15,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 15
+   },
+   {
+    "name": "1lqk",
+    "n_true": 12,
+    "any_atom|all": 32,
+    "sidechain|all": 26,
+    "any_atom|metal_transition": 12
+   },
+   {
+    "name": "1m5e",
+    "n_true": 28,
+    "any_atom|all": 85,
+    "sidechain|all": 74,
+    "any_atom|metal_transition": 28
+   },
+   {
+    "name": "1m5f",
+    "n_true": 25,
+    "any_atom|all": 81,
+    "sidechain|all": 70,
+    "any_atom|metal_transition": 25
+   },
+   {
+    "name": "1moj",
+    "n_true": 30,
+    "any_atom|all": 58,
+    "sidechain|all": 58,
+    "any_atom|metal_transition": 30
+   },
+   {
+    "name": "1mxy",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 23
+   },
+   {
+    "name": "1mxz",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 23
+   },
+   {
+    "name": "1my1",
+    "n_true": 23,
+    "any_atom|all": 23,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 23
+   },
+   {
+    "name": "1nki",
+    "n_true": 6,
+    "any_atom|all": 36,
+    "sidechain|all": 30,
+    "any_atom|metal_transition": 12
+   },
+   {
+    "name": "1qum",
+    "n_true": 11,
+    "any_atom|all": 40,
+    "sidechain|all": 32,
+    "any_atom|metal_transition": 11
+   },
+   {
+    "name": "1sgf",
+    "n_true": 13,
+    "any_atom|all": 37,
+    "sidechain|all": 34,
+    "any_atom|metal_transition": 13
+   },
+   {
+    "name": "1t31",
+    "n_true": 3,
+    "any_atom|all": 65,
+    "sidechain|all": 54,
+    "any_atom|metal_transition": 3
+   },
+   {
+    "name": "1u3e",
+    "n_true": 5,
+    "any_atom|all": 89,
+    "sidechain|all": 69,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "2bdh",
+    "n_true": 4,
+    "any_atom|all": 62,
+    "sidechain|all": 44,
+    "any_atom|metal_transition": 4
+   },
+   {
+    "name": "2bx2",
+    "n_true": 4,
+    "any_atom|all": 29,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 4
+   },
+   {
+    "name": "2cfv",
+    "n_true": 5,
+    "any_atom|all": 6,
+    "sidechain|all": 5,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "2e6c",
+    "n_true": 22,
+    "any_atom|all": 96,
+    "sidechain|all": 71,
+    "any_atom|metal_transition": 22
+   },
+   {
+    "name": "2nq9",
+    "n_true": 11,
+    "any_atom|all": 41,
+    "sidechain|all": 34,
+    "any_atom|metal_transition": 11
+   },
+   {
+    "name": "2nqj",
+    "n_true": 16,
+    "any_atom|all": 45,
+    "sidechain|all": 37,
+    "any_atom|metal_transition": 16
+   },
+   {
+    "name": "2nz6",
+    "n_true": 4,
+    "any_atom|all": 19,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 8
+   },
+   {
+    "name": "2ou7",
+    "n_true": 3,
+    "any_atom|all": 29,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 3
+   },
+   {
+    "name": "2vxx",
+    "n_true": 14,
+    "any_atom|all": 48,
+    "sidechain|all": 44,
+    "any_atom|metal_transition": 28
+   },
+   {
+    "name": "2zwn",
+    "n_true": 57,
+    "any_atom|all": 64,
+    "sidechain|all": 50,
+    "any_atom|metal_transition": 57
+   },
+   {
+    "name": "3bvx",
+    "n_true": 7,
+    "any_atom|all": 34,
+    "sidechain|all": 31,
+    "any_atom|metal_transition": 7
+   },
+   {
+    "name": "3cv5",
+    "n_true": 7,
+    "any_atom|all": 37,
+    "sidechain|all": 31,
+    "any_atom|metal_transition": 7
+   },
+   {
+    "name": "3f4v",
+    "n_true": 1,
+    "any_atom|all": 62,
+    "sidechain|all": 51,
+    "any_atom|metal_transition": 4
+   },
+   {
+    "name": "3f5l",
+    "n_true": 1,
+    "any_atom|all": 70,
+    "sidechain|all": 59,
+    "any_atom|metal_transition": 4
+   },
+   {
+    "name": "3fgg",
+    "n_true": 13,
+    "any_atom|all": 61,
+    "sidechain|all": 54,
+    "any_atom|metal_transition": 28
+   },
+   {
+    "name": "3hg9",
+    "n_true": 5,
+    "any_atom|all": 5,
+    "sidechain|all": 5,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "3hkn",
+    "n_true": 5,
+    "any_atom|all": 40,
+    "sidechain|all": 33,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "3hkt",
+    "n_true": 5,
+    "any_atom|all": 17,
+    "sidechain|all": 16,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "3i9z",
+    "n_true": 3,
+    "any_atom|all": 3,
+    "sidechain|all": 3,
+    "any_atom|metal_transition": 3
+   },
+   {
+    "name": "3k7r",
+    "n_true": 12,
+    "any_atom|all": 72,
+    "sidechain|all": 60,
+    "any_atom|metal_transition": 60
+   },
+   {
+    "name": "3l24",
+    "n_true": 9,
+    "any_atom|all": 46,
+    "sidechain|all": 41,
+    "any_atom|metal_transition": 45
+   },
+   {
+    "name": "3l7t",
+    "n_true": 14,
+    "any_atom|all": 14,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 14
+   },
+   {
+    "name": "3m7p",
+    "n_true": 26,
+    "any_atom|all": 50,
+    "sidechain|all": 46,
+    "any_atom|metal_transition": 26
+   },
+   {
+    "name": "3mi9",
+    "n_true": 2,
+    "any_atom|all": 10,
+    "sidechain|all": 9,
+    "any_atom|metal_transition": 10
+   },
+   {
+    "name": "3o1u",
+    "n_true": 5,
+    "any_atom|all": 41,
+    "sidechain|all": 35,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "3u92",
+    "n_true": 18,
+    "any_atom|all": 60,
+    "sidechain|all": 48,
+    "any_atom|metal_transition": 18
+   },
+   {
+    "name": "3u93",
+    "n_true": 12,
+    "any_atom|all": 21,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 12
+   },
+   {
+    "name": "3u94",
+    "n_true": 44,
+    "any_atom|all": 54,
+    "sidechain|all": 53,
+    "any_atom|metal_transition": 44
+   },
+   {
+    "name": "3won",
+    "n_true": 10,
+    "any_atom|all": 84,
+    "sidechain|all": 58,
+    "any_atom|metal_transition": 10
+   },
+   {
+    "name": "4aoj",
+    "n_true": 31,
+    "any_atom|all": 98,
+    "sidechain|all": 66,
+    "any_atom|metal_transition": 31
+   },
+   {
+    "name": "4dy1",
+    "n_true": 1,
+    "any_atom|all": 12,
+    "sidechain|all": 10,
+    "any_atom|metal_transition": 10
+   },
+   {
+    "name": "4hzt",
+    "n_true": 4,
+    "any_atom|all": 29,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 8
+   },
+   {
+    "name": "4i0f",
+    "n_true": 2,
+    "any_atom|all": 27,
+    "sidechain|all": 20,
+    "any_atom|metal_transition": 8
+   },
+   {
+    "name": "4i0j",
+    "n_true": 11,
+    "any_atom|all": 40,
+    "sidechain|all": 30,
+    "any_atom|metal_transition": 11
+   },
+   {
+    "name": "4i0z",
+    "n_true": 5,
+    "any_atom|all": 29,
+    "sidechain|all": 22,
+    "any_atom|metal_transition": 10
+   },
+   {
+    "name": "4i11",
+    "n_true": 2,
+    "any_atom|all": 25,
+    "sidechain|all": 19,
+    "any_atom|metal_transition": 8
+   },
+   {
+    "name": "4i12",
+    "n_true": 5,
+    "any_atom|all": 45,
+    "sidechain|all": 28,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "4jd1",
+    "n_true": 14,
+    "any_atom|all": 41,
+    "sidechain|all": 40,
+    "any_atom|metal_transition": 14
+   },
+   {
+    "name": "4naz",
+    "n_true": 2,
+    "any_atom|all": 19,
+    "sidechain|all": 17,
+    "any_atom|metal_transition": 4
+   },
+   {
+    "name": "4wd8",
+    "n_true": 67,
+    "any_atom|all": 67,
+    "sidechain|all": 53,
+    "any_atom|metal_transition": 67
+   },
+   {
+    "name": "4x68",
+    "n_true": 8,
+    "any_atom|all": 45,
+    "sidechain|all": 33,
+    "any_atom|metal_transition": 8
+   },
+   {
+    "name": "5f55",
+    "n_true": 10,
+    "any_atom|all": 90,
+    "sidechain|all": 65,
+    "any_atom|metal_transition": 10
+   },
+   {
+    "name": "5f56",
+    "n_true": 9,
+    "any_atom|all": 69,
+    "sidechain|all": 51,
+    "any_atom|metal_transition": 9
+   },
+   {
+    "name": "5fgs",
+    "n_true": 22,
+    "any_atom|all": 22,
+    "sidechain|all": 21,
+    "any_atom|metal_transition": 22
+   },
+   {
+    "name": "5hez",
+    "n_true": 9,
+    "any_atom|all": 181,
+    "sidechain|all": 121,
+    "any_atom|metal_transition": 9
+   },
+   {
+    "name": "5i4j",
+    "n_true": 19,
+    "any_atom|all": 26,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 19
+   },
+   {
+    "name": "5l70",
+    "n_true": 33,
+    "any_atom|all": 88,
+    "sidechain|all": 75,
+    "any_atom|metal_transition": 33
+   },
+   {
+    "name": "5vde",
+    "n_true": 19,
+    "any_atom|all": 19,
+    "sidechain|all": 15,
+    "any_atom|metal_transition": 19
+   },
+   {
+    "name": "6a4x",
+    "n_true": 5,
+    "any_atom|all": 5,
+    "sidechain|all": 5,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "6buu",
+    "n_true": 5,
+    "any_atom|all": 70,
+    "sidechain|all": 50,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "6cyt",
+    "n_true": 13,
+    "any_atom|all": 26,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 13
+   },
+   {
+    "name": "6iv2",
+    "n_true": 32,
+    "any_atom|all": 64,
+    "sidechain|all": 48,
+    "any_atom|metal_transition": 64
+   },
+   {
+    "name": "6lkp",
+    "n_true": 80,
+    "any_atom|all": 80,
+    "sidechain|all": 52,
+    "any_atom|metal_transition": 80
+   },
+   {
+    "name": "6lrd",
+    "n_true": 9,
+    "any_atom|all": 75,
+    "sidechain|all": 53,
+    "any_atom|metal_transition": 11
+   },
+   {
+    "name": "6wdz",
+    "n_true": 16,
+    "any_atom|all": 104,
+    "sidechain|all": 87,
+    "any_atom|metal_transition": 16
+   },
+   {
+    "name": "6x75",
+    "n_true": 15,
+    "any_atom|all": 98,
+    "sidechain|all": 79,
+    "any_atom|metal_transition": 15
+   },
+   {
+    "name": "7dnr",
+    "n_true": 16,
+    "any_atom|all": 16,
+    "sidechain|all": 14,
+    "any_atom|metal_transition": 16
+   },
+   {
+    "name": "7e34",
+    "n_true": 1,
+    "any_atom|all": 6,
+    "sidechain|all": 5,
+    "any_atom|metal_transition": 2
+   },
+   {
+    "name": "7kii",
+    "n_true": 5,
+    "any_atom|all": 49,
+    "sidechain|all": 40,
+    "any_atom|metal_transition": 5
+   },
+   {
+    "name": "7n7g",
+    "n_true": 13,
+    "any_atom|all": 50,
+    "sidechain|all": 41,
+    "any_atom|metal_transition": 13
+   },
+   {
+    "name": "7s7l",
+    "n_true": 17,
+    "any_atom|all": 65,
+    "sidechain|all": 42,
+    "any_atom|metal_transition": 17
+   },
+   {
+    "name": "7s7m",
+    "n_true": 17,
+    "any_atom|all": 44,
+    "sidechain|all": 24,
+    "any_atom|metal_transition": 17
+   },
+   {
+    "name": "7w5e",
+    "n_true": 77,
+    "any_atom|all": 77,
+    "sidechain|all": 74,
+    "any_atom|metal_transition": 77
+   },
+   {
+    "name": "7wb2",
+    "n_true": 53,
+    "any_atom|all": 53,
+    "sidechain|all": 47,
+    "any_atom|metal_transition": 53
+   }
+  ]
+ }
+}
