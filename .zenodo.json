@@ -2,7 +2,7 @@
   "title": "Paper Rerun: reproduction reports for published research code",
   "upload_type": "publication",
   "publication_type": "report",
-  "description": "We re-run published research code on the authors' data and report what holds: the numbers we got, every command and log, and what we had to fix to get there. Each reproduction is done by AI agents on one home computer and reviewed by a human before publication. This release covers five papers: LigandMPNN (Nature Methods 2025, run twice, as a single-agent pilot and through the full pipeline with blind recomputation), ACT DR6 lensing (ApJ 2024), CHGNet (Nature Machine Intelligence 2023), Cellpose3 (Nature Methods 2025) and PlantCAD (PNAS 2025), plus the method and the scripts.",
+  "description": "We re-run published research code on the authors' data and report what holds: the numbers we got, every command and log, and what we had to fix to get there. Each reproduction is done by AI agents on one home computer and reviewed by a human before publication. This release covers six papers: ProteinGym (NeurIPS 2023, run in our standard mode and through the full pipeline), LigandMPNN (Nature Methods 2025, run as a single-agent pilot and through the full pipeline), ACT DR6 lensing (ApJ 2024), CHGNet (Nature Machine Intelligence 2023), Cellpose3 (Nature Methods 2025) and PlantCAD (PNAS 2025), plus the method and the scripts.",
   "creators": [
     {
       "name": "Tessaro, Filipe"
