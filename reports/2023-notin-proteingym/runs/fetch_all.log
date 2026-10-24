@@ -1,0 +1,24 @@
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/sources/DMS_ProteinGym_substitutions.zip 43021128
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm2_t6_8M_UR50D.pt 30099493
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm2_t6_8M_UR50D-contact-regression.pt 1511
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm2_t12_35M_UR50D.pt 134095705
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm2_t12_35M_UR50D-contact-regression.pt 1959
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm2_t30_150M_UR50D.pt 592774773
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm2_t30_150M_UR50D-contact-regression.pt 3431
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm1b_t33_650M_UR50S.pt 7828576466
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm1b_t33_650M_UR50S-contact-regression.pt 3174
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm2_t33_650M_UR50D.pt 2604537549
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm2_t33_650M_UR50D-contact-regression.pt 3687
+curl: (92) HTTP/2 stream 1 was not closed cleanly: CANCEL (err 8)
+OK /mnt/e/Ciencia/meio/2023-notin-proteingym/sources/zero_shot_substitutions_scores.zip 1911045703
+77193a8814f0db0b36a03aebb1a311adc6b4745f463c04839defc15407bbb28a  esm1b_t33_650M_UR50S-contact-regression.pt
+017746a00661bb818be936b304f550e7feb1757e3baa7859aa0eeeb7c490a989  esm1b_t33_650M_UR50S.pt
+16641e05d830d0ce863dd152dbb8c2f3ddfa3c3ec2a66080152c8abad01d8585  esm2_t12_35M_UR50D-contact-regression.pt
+7f21e80e61d16a71735163ef555d3009afb0c98da74c48e29df08606973cc55e  esm2_t12_35M_UR50D.pt
+6a604b96722ed052eef8a094ad90b275ba2e987d406315dbed0bdc6b3c4238a7  esm2_t30_150M_UR50D-contact-regression.pt
+881c7176cf198ef8dec26a3c375d40eb58d0c33df95c22562ca6cc6d3f812c62  esm2_t30_150M_UR50D.pt
+8ffe6edbd4173dc8d45c2cd5cb27d43aad77ec26b4c768200c58ae1f96693575  esm2_t33_650M_UR50D-contact-regression.pt
+ea9d0522b335a8778dea6535a65301f10208dece28cd5865482b0b1fc446168c  esm2_t33_650M_UR50D.pt
+8f7a4557d57713b97ba0e484303007efb7230d25299c0ac47a0a1b12a87bbb9d  esm2_t6_8M_UR50D-contact-regression.pt
+46f002a9870c9bdecd0ea887acb1f9a38a6b561e8f8bf8a6990b679b9d31b928  esm2_t6_8M_UR50D.pt
+ALL_DONE

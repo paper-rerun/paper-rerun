@@ -1,0 +1,27 @@
+{
+  "note": "Written on 2026-10-24 at the revision stage, AFTER the runs. It reconstructs, from the pipeline record, the claims map as changed at the check stage (2026-10-23 11:23-11:24, scripts check_stage/verify_map.py and check_stage/other_metrics.py). That version was never saved as a file at the time. claims.json (mtime 2026-10-23 11:21:26) is the original pre-registration and is left unchanged. The check-stage changes were made before any of our scores existed, but after comparing both definitions of the corrected average on the authors' per-assay tables. The SE values below were re-printed on 2026-10-24 by re-running the two check_stage scripts, which read only the authors' tables.",
+  "supersedes_in_report": "claims.json fields corrected_average_primary_literal, corrected_average_secondary_code, tolerance_rule, and the tolerances of C3, C4, C5",
+  "changes_vs_claims_json": [
+    "Primary corrected average: code definition (performance_DMS_benchmarks.py at PG_v1.3: assays averaged per (UniProt_ID, function type), then per function type, then the mean of the 5). The literal A.5.1 reading becomes an alternative.",
+    "Tolerance: 1 bootstrap SE of the authors' own corrected average under the code definition, 10,000 resamples of (UniProt_ID, type) units within each function type, seed 0, rounded to 3 decimals.",
+    "C3 tolerance 0.017 -> 0.018, C4 0.016 -> 0.017, C5 0.016 -> 0.017 (C1 0.014 and C2 0.016 unchanged).",
+    "C6-C9 added: the other ESM-1b metrics of Table 2."
+  ],
+  "definitions": {
+    "corrected_average_primary_code": "performance_DMS_benchmarks.py lines 361-369 at PG_v1.3. Authors' per-assay values give ESM-1b 0.3941, 8M 0.2257, 35M 0.3208, 150M 0.3868, 650M 0.4138; all 5 paper values at 3 decimals.",
+    "corrected_average_alternative_literal": "Paper A.5.1: plain mean of assays inside each function type, then mean of the 5. ESM-1b 0.3982, 8M 0.2244, 35M 0.3196, 150M 0.3895, 650M 0.4184.",
+    "tolerance_rule": "1 non-parametric bootstrap SE of the authors' own corrected average, code definition, 10,000 resamples of (UniProt_ID, type) units within each type, seed 0, rounded to 3 decimals."
+  },
+  "claims": [
+    {"id": "C0", "paper_value": 217, "tolerance": 0},
+    {"id": "C1", "text": "ESM-1b Spearman, corrected average", "paper_value": 0.394, "tolerance": 0.014, "se_code": 0.0143},
+    {"id": "C2", "text": "ESM2 8M Spearman", "paper_value": 0.226, "tolerance": 0.016, "se_code": 0.0163},
+    {"id": "C3", "text": "ESM2 35M Spearman", "paper_value": 0.321, "tolerance": 0.018, "se_code": 0.0176},
+    {"id": "C4", "text": "ESM2 150M Spearman", "paper_value": 0.387, "tolerance": 0.017, "se_code": 0.0171},
+    {"id": "C5", "text": "ESM2 650M Spearman", "paper_value": 0.414, "tolerance": 0.017, "se_code": 0.0170},
+    {"id": "C6", "text": "ESM-1b AUC, corrected average", "paper_value": 0.719, "tolerance": 0.008, "se_code": 0.0079, "location": "Table 2"},
+    {"id": "C7", "text": "ESM-1b MCC, corrected average", "paper_value": 0.311, "tolerance": 0.012, "se_code": 0.0115, "location": "Table 2"},
+    {"id": "C8", "text": "ESM-1b NDCG@10%, corrected average", "paper_value": 0.747, "tolerance": 0.015, "se_code": 0.0150, "location": "Table 2"},
+    {"id": "C9", "text": "ESM-1b top-10% recall, corrected average", "paper_value": 0.203, "tolerance": 0.007, "se_code": 0.0068, "location": "Table 2"}
+  ]
+}

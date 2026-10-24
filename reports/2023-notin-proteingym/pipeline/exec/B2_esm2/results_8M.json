@@ -1,0 +1,127 @@
+{
+ "claim_id": "C2",
+ "checkpoint": "esm2_t6_8M_UR50D",
+ "n_assays_ours": 217,
+ "full_217": true,
+ "ours_code_definition": 0.2234,
+ "ours_literal_definition": 0.2223,
+ "ours_summary_csv": 0.223,
+ "authors_same_assays_code_definition": 0.2257,
+ "authors_same_assays_literal_definition": 0.2244,
+ "authors_all_217_code_definition": 0.2257,
+ "authors_all_217_literal_definition": 0.2244,
+ "paper": 0.226,
+ "tolerance": 0.016,
+ "diff_vs_paper_code": -0.0026,
+ "within_tolerance_vs_paper": true,
+ "boot_se_ours_code": 0.0164,
+ "boot_se_ours_literal": 0.0158,
+ "per_function_ours_code": {
+  "Activity": 0.1915,
+  "Binding": 0.2597,
+  "Expression": 0.2657,
+  "OrganismalFitness": 0.1386,
+  "Stability": 0.2617
+ },
+ "n_function_types_present": 5,
+ "per_assay_max_abs_diff_vs_csv": 0.393,
+ "per_assay_n_abs_diff_gt_0.001": 4,
+ "per_assay_mean_diff_vs_csv": -0.002235,
+ "per_assay_largest_diffs": [
+  [
+   "KCNH2_HUMAN_Kozek_2020",
+   -0.393
+  ],
+  [
+   "SCN5A_HUMAN_Glazer_2019",
+   -0.095
+  ],
+  [
+   "POLG_CXB3N_Mattenberger_2021",
+   0.005
+  ],
+  [
+   "POLG_HCVJF_Qi_2014",
+   -0.002
+  ],
+  [
+   "YNZC_BACSU_Tsuboyama_2023_2JVD",
+   0.0
+  ],
+  [
+   "YAP1_HUMAN_Araya_2012",
+   0.0
+  ],
+  [
+   "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+   0.0
+  ],
+  [
+   "VRPI_BPT7_Tsuboyama_2023_2WNM",
+   0.0
+  ]
+ ],
+ "authors_zip_vs_csv_max_abs_diff_all_217": 0.0,
+ "per_mutant_vs_authors": {
+  "n_assays_compared": 217,
+  "n_assays_max_abs_diff_le_1e-3": 212,
+  "n_assays_max_abs_diff_le_1e-2": 212,
+  "overall_max_abs_diff": 7.8443591594696045,
+  "median_of_max_abs_diff": 1.239776611328125e-05,
+  "long_assays_n": 16,
+  "long_assays_max_abs_diff": 7.8443591594696045,
+  "short_assays_max_abs_diff": 6.723403930664062e-05,
+  "min_pearson": 0.41290049433184145,
+  "n_unmatched_mutants": 0,
+  "worst_assays": [
+   [
+    "SCN5A_HUMAN_Glazer_2019",
+    2016,
+    7.8443591594696045,
+    0.443985113847465
+   ],
+   [
+    "KCNH2_HUMAN_Kozek_2020",
+    1159,
+    5.720120072364807,
+    0.41290049433184145
+   ],
+   [
+    "A0A140D2T1_ZIKV_Sourisseau_2019",
+    3423,
+    2.1661274433135986,
+    0.958497823722605
+   ],
+   [
+    "POLG_CXB3N_Mattenberger_2021",
+    2185,
+    1.6176903247833252,
+    0.9904683797553578
+   ],
+   [
+    "POLG_HCVJF_Qi_2014",
+    3033,
+    1.4502315521240234,
+    0.9190735157625955
+   ],
+   [
+    "LGK_LIPST_Klesmith_2015",
+    439,
+    6.723403930664062e-05,
+    0.9999999999971545
+   ],
+   [
+    "RNC_ECOLI_Weeks_2023",
+    226,
+    4.839897155761719e-05,
+    0.9999999999976521
+   ],
+   [
+    "PPM1D_HUMAN_Miller_2022",
+    605,
+    3.9577484130859375e-05,
+    0.9999999999985612
+   ]
+  ]
+ }
+}

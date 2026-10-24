@@ -10,7 +10,19 @@ We start from code, because without public code there is nothing to re-run. A sc
 
 Health, food, energy and climate get a 10% bonus. The top of the list then goes through triage before anything runs.
 
-## The pipeline
+## Standard mode
+
+Most papers go through a lighter version of the full pipeline below:
+
+1. **Triage**, as in step 1 below.
+2. **Pre-registration.** One agent writes the claims, every definition (with quotes from the paper) and the tolerances to `claims.json`, then records its SHA-256 hash. Nothing has been computed on our side at that point. Where the paper is ambiguous, the authors' own per-item results decide, never ours.
+3. **Reproduction.** A single agent builds the environment from the versions the authors used and runs the full test set. It cannot edit `claims.json`; alternatives it thinks matter go in a separate section and never change the verdict.
+4. **Adversarial review.** Another agent checks that the hash still matches and attacks the report.
+5. **Revision** and **human approval**, as in steps 8 and 9 below.
+
+We picked this after running ProteinGym both ways. Both runs reached the same numbers and the same findings. The full pipeline cost about twice as much and added a blind second computation. The lighter mode without a separate pre-registration step had written its definitions after computing three models. That is the gap step 2 closes. The full pipeline is kept for very widely used papers, and for any paper the standard mode finds does not reproduce.
+
+## The full pipeline
 
 A paper is split by **claim**: a number the paper reports, with its conditions and tolerance. Each claim is computed and checked on its own.
 
@@ -32,7 +44,7 @@ A paper is split by **claim**: a number the paper reports, with its conditions a
 
 ## Code
 
-`tools/garimpo.py` builds the ranked list of candidate papers. `tools/reproduce-paper-pipeline.js` is the orchestration script with every agent prompt, run with Claude Code's workflow tool.
+`tools/garimpo.py` builds the ranked list of candidate papers. `tools/reproduce-standard.js` (standard mode) and `tools/reproduce-paper-pipeline-v2.js` (full pipeline) are the orchestration scripts with every agent prompt, run with Claude Code's workflow tool. `tools/reproduce-paper-pipeline.js` is the first version of the pipeline, used for LigandMPNN.
 
 ## Hardware
 
@@ -40,4 +52,4 @@ One home computer: AMD Ryzen 9 3900X (12 cores), 64 GB RAM, NVIDIA RTX 2070 SUPE
 
 ## Cost
 
-In the pilot, one paper took 4 to 24 hours of wall-clock time and about 280k tokens of agent work, roughly a quarter to half of it waiting for the single GPU.
+In the pilot, one paper took 4 to 24 hours of wall-clock time and about 280k tokens of agent work, roughly a quarter to half of it waiting for the single GPU. On ProteinGym, the standard mode used about 670k tokens and 10 hours (9 of them GPU); the full pipeline used about twice the tokens.

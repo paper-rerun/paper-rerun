@@ -1,0 +1,27 @@
+1f8de974dead8ff7501eff087b725d14a965e9f9
+{
+ "reference_file": "/mnt/e/Ciencia/pipeline/2023-notin-proteingym/repo/reference_files/DMS_substitutions.csv",
+ "n_assays": 217,
+ "n_unique_DMS_id": 217,
+ "n_data_files_on_disk": 217,
+ "sum_ref_total_mutants": 2465767,
+ "sum_file_rows": 2465767,
+ "sum_file_unique_mutants": 2465767,
+ "assays_where_ref_count_differs_from_file": [],
+ "n_UniProt_IDs": 186,
+ "n_seq_len_gt_1022": 16,
+ "coarse_selection_type_counts": {
+  "Activity": 43,
+  "Binding": 13,
+  "Expression": 18,
+  "OrganismalFitness": 77,
+  "Stability": 66
+ },
+ "n_UniProt_function_units": 200,
+ "n_single_mutants": 696311,
+ "n_multiple_mutants": 1769456,
+ "n_assays_with_multiples": 69,
+ "spearman_csv_n_assays": 217,
+ "spearman_csv_ids_equal_reference": true,
+ "spearman_csv_selection_type_equal_reference": true
+}

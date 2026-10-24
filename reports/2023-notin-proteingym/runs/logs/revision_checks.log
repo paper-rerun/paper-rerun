@@ -1,0 +1,19 @@
+ESM2_8M: assays=212 (excluding the 5 MSA-region assays: True) min_spearman=0.9999995 max_abs_diff=6.72e-05 (LGK_LIPST_Klesmith_2015)
+ESM2_35M: assays=212 (excluding the 5 MSA-region assays: True) min_spearman=1.0000000 max_abs_diff=7.01e-05 (KCNJ2_MOUSE_Coyote-Maestas_2022_surface)
+ESM2_150M: assays=212 (excluding the 5 MSA-region assays: True) min_spearman=1.0000000 max_abs_diff=0.000198 (RDRP_I33A0_Li_2023)
+ESM2_650M: assays=212 (excluding the 5 MSA-region assays: True) min_spearman=0.9999995 max_abs_diff=0.000144 (MSH2_HUMAN_Jia_2020)
+ESM1b: assays=217 (excluding the 5 MSA-region assays: False) min_spearman=0.9999997 max_abs_diff=0.000151 (I6TAH8_I68A0_Doud_2015)
+ESM2_8M: ours=0.2234 with_authors_values_on_5=0.2257 effect=+0.0023 other_assays_identical=212/212
+ESM2_35M: ours=0.3214 with_authors_values_on_5=0.3208 effect=-0.0006 other_assays_identical=212/212
+ESM2_150M: ours=0.3884 with_authors_values_on_5=0.3868 effect=-0.0016 other_assays_identical=212/212
+ESM2_650M: ours=0.4148 with_authors_values_on_5=0.4138 effect=-0.0010 other_assays_identical=212/212
+proteins per function type: {'Activity': 40, 'Binding': 12, 'Expression': 18, 'OrganismalFitness': 64, 'Stability': 66} total proteins: 186
+KCNH2_HUMAN_Kozek_2020: type=Activity assays_of_same_protein_and_type=1 protein_weight=0.5000%
+SCN5A_HUMAN_Glazer_2019: type=OrganismalFitness assays_of_same_protein_and_type=1 protein_weight=0.3125%
+POLG_HCVJF_Qi_2014: type=OrganismalFitness assays_of_same_protein_and_type=1 protein_weight=0.3125%
+POLG_CXB3N_Mattenberger_2021: type=OrganismalFitness assays_of_same_protein_and_type=1 protein_weight=0.3125%
+A0A140D2T1_ZIKV_Sourisseau_2019: type=OrganismalFitness assays_of_same_protein_and_type=1 protein_weight=0.3125%
+KCNH2_HUMAN_Kozek_2020: mutants=200 positions=11 (545-555) MSA_start=535 MSA_end=565
+HIS7_YEAST_Pokusaeva_2019: mutants=496137
+lock vs proteingym_env.txt: cloudpickle 3.1.2 (not in proteingym_env.txt); joblib 1.6.0 (proteingym_env.txt 1.2.0); python-dateutil 3.0.0 (proteingym_env.txt 2.8.2); pytz 2026.5 (proteingym_env.txt 2022.6); six 1.17.0 (proteingym_env.txt 1.16.0); threadpoolctl 3.7.0 (proteingym_env.txt 3.1.0); torch 1.13.1+cu117 (proteingym_env.txt 1.13.1); typing-extensions 4.16.0 (not in proteingym_env.txt); tzdata 2026.5 (proteingym_env.txt 2023.4)
+EXIT 0

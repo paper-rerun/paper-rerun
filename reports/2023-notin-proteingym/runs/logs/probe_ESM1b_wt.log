@@ -1,0 +1,40 @@
+Arguments: Namespace(model_type=['ESM1b'], model_location=['/mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm1b_t33_650M_UR50S.pt'], sequence=None, dms_input=PosixPath('/mnt/e/Ciencia/meio/2023-notin-proteingym/data/dms/DMS_ProteinGym_substitutions'), dms_index=1, dms_mapping='/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/reference_files/DMS_substitutions.csv', mutation_col='mutant', dms_output=PosixPath('/mnt/e/Ciencia/meio/2023-notin-proteingym/runs/scores/probe_ESM1b_wt/tmp'), offset_idx=1, scoring_strategy='wt-marginals', msa_path=None, msa_sampling_strategy='sequence-reweighting', msa_samples=400, msa_weights_folder=None, seeds=1, filter_msa=False, hhfilter_min_cov=75, hhfilter_max_seq_id=90, hhfilter_min_seq_id=0, path_to_hhfilter='/n/groups/marks/software/hhsuite/hhsuite-3.3.0', scoring_window='overlapping', overwrite_prior_scores=False, target_seq=None, weight_file_name=None, MSA_start=None, MSA_end=None, nogpu=False)
+Compute scores for DMS: A0A192B1T2_9HIV1_Haddox_2018
+df shape: (12577, 4)
+Starting model scoring
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/meio/2023-notin-proteingym/runs/score_driver.py", line 57, in <module>
+    compute_fitness.main(Parsed)
+  File "/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/compute_fitness.py", line 349, in main
+    model, alphabet = pretrained.load_model_and_alphabet(model_location)
+  File "/mnt/e/Ciencia/meio/2023-notin-proteingym/runs/score_driver.py", line 25, in CachedLoad
+    LoadedModels[ModelLocation] = OriginalLoad(ModelLocation)
+  File "/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py", line 26, in load_model_and_alphabet
+    return load_model_and_alphabet_local(model_name)
+  File "/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py", line 77, in load_model_and_alphabet_local
+    return load_model_and_alphabet_core(model_name, model_data, regression_data)
+  File "/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py", line 190, in load_model_and_alphabet_core
+    model, alphabet, model_state = _load_model_and_alphabet_core_v1(model_data)
+  File "/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py", line 86, in _load_model_and_alphabet_core_v1
+    from proteingym.baselines.esm import esm  # since esm.inverse_folding is imported below, you actually have to re-import esm here
+ModuleNotFoundError: No module named 'proteingym'
+EXIT 1 probe_ESM1b_wt
+Arguments: Namespace(model_type=['ESM1b'], model_location=['/mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm1b_t33_650M_UR50S.pt'], sequence=None, dms_input=PosixPath('/mnt/e/Ciencia/meio/2023-notin-proteingym/data/dms/DMS_ProteinGym_substitutions'), dms_index=24, dms_mapping='/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/reference_files/DMS_substitutions.csv', mutation_col='mutant', dms_output=PosixPath('/mnt/e/Ciencia/meio/2023-notin-proteingym/runs/scores/probe_ESM1b_wt/tmp'), offset_idx=1, scoring_strategy='wt-marginals', msa_path=None, msa_sampling_strategy='sequence-reweighting', msa_samples=400, msa_weights_folder=None, seeds=1, filter_msa=False, hhfilter_min_cov=75, hhfilter_max_seq_id=90, hhfilter_min_seq_id=0, path_to_hhfilter='/n/groups/marks/software/hhsuite/hhsuite-3.3.0', scoring_window='overlapping', overwrite_prior_scores=False, target_seq=None, weight_file_name=None, MSA_start=None, MSA_end=None, nogpu=False)
+Compute scores for DMS: BRCA1_HUMAN_Findlay_2018
+df shape: (1837, 4)
+Starting model scoring
+/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py:212: UserWarning: Regression weights not found, predicting contacts will not produce correct results.
+  warnings.warn(
+Transferred model to GPU
+DONE 24 BRCA1_HUMAN_Findlay_2018 66.5s
+EXIT 0 probe_ESM1b_wt
+Arguments: Namespace(model_type=['ESM1b'], model_location=['/mnt/e/Ciencia/meio/2023-notin-proteingym/data/weights/esm1b_t33_650M_UR50S.pt'], sequence=None, dms_input=PosixPath('/mnt/e/Ciencia/meio/2023-notin-proteingym/data/dms/DMS_ProteinGym_substitutions'), dms_index=1, dms_mapping='/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/reference_files/DMS_substitutions.csv', mutation_col='mutant', dms_output=PosixPath('/mnt/e/Ciencia/meio/2023-notin-proteingym/runs/scores/probe_ESM1b_wt/tmp'), offset_idx=1, scoring_strategy='wt-marginals', msa_path=None, msa_sampling_strategy='sequence-reweighting', msa_samples=400, msa_weights_folder=None, seeds=1, filter_msa=False, hhfilter_min_cov=75, hhfilter_max_seq_id=90, hhfilter_min_seq_id=0, path_to_hhfilter='/n/groups/marks/software/hhsuite/hhsuite-3.3.0', scoring_window='overlapping', overwrite_prior_scores=False, target_seq=None, weight_file_name=None, MSA_start=None, MSA_end=None, nogpu=False)
+Compute scores for DMS: A0A192B1T2_9HIV1_Haddox_2018
+df shape: (12577, 4)
+Starting model scoring
+/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py:212: UserWarning: Regression weights not found, predicting contacts will not produce correct results.
+  warnings.warn(
+Transferred model to GPU
+DONE 1 A0A192B1T2_9HIV1_Haddox_2018 69.4s
+EXIT 0 probe_ESM1b_wt
+EXIT 0 probe_ESM1b_wt

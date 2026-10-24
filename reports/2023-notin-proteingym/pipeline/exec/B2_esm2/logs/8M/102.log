@@ -1,0 +1,9 @@
+Arguments: Namespace(model_type=['ESM2'], model_location=['/mnt/e/Ciencia/pipeline/2023-notin-proteingym/data/weights/esm2_t6_8M_UR50D.pt'], sequence=None, dms_input=PosixPath('/mnt/e/Ciencia/pipeline/2023-notin-proteingym/data/DMS_ProteinGym_substitutions'), dms_index=102, dms_mapping='../../reference_files/DMS_substitutions.csv', mutation_col='mutant', dms_output=PosixPath('/mnt/e/Ciencia/pipeline/2023-notin-proteingym/exec/B2_esm2/scores/ESM2/8M'), offset_idx=1, scoring_strategy='masked-marginals', msa_path=None, msa_sampling_strategy='sequence-reweighting', msa_samples=400, msa_weights_folder=None, seeds=1, filter_msa=False, hhfilter_min_cov=75, hhfilter_max_seq_id=90, hhfilter_min_seq_id=0, path_to_hhfilter='/n/groups/marks/software/hhsuite/hhsuite-3.3.0', scoring_window='optimal', overwrite_prior_scores=False, target_seq=None, weight_file_name=None, MSA_start=None, MSA_end=None, nogpu=False)
+Compute scores for DMS: NKX31_HUMAN_Tsuboyama_2023_2L9R
+df shape: (2482, 4)
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py:212: UserWarning: Regression weights not found, predicting contacts will not produce correct results.
+  warnings.warn(
+Starting model scoring
+Transferred model to GPU
+Scoring with masked-marginals and model esm2_t6_8M_UR50D
+Scoring masked-marginals:   0%|          | 0/63 [00:00<?, ?it/s]Scoring masked-marginals:   2%|▏         | 1/63 [00:10<10:47, 10.44s/it]Scoring masked-marginals:  14%|█▍        | 9/63 [00:10<00:46,  1.17it/s]Scoring masked-marginals:  27%|██▋       | 17/63 [00:10<00:17,  2.66it/s]Scoring masked-marginals:  43%|████▎     | 27/63 [00:10<00:06,  5.21it/s]Scoring masked-marginals:  62%|██████▏   | 39/63 [00:10<00:02,  9.31it/s]Scoring masked-marginals:  78%|███████▊  | 49/63 [00:10<00:01, 13.64it/s]Scoring masked-marginals:  98%|█████████▊| 62/63 [00:11<00:00, 21.17it/s]Scoring masked-marginals: 100%|██████████| 63/63 [00:11<00:00,  5.68it/s]

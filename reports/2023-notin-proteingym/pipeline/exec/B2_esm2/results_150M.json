@@ -1,0 +1,127 @@
+{
+ "claim_id": "C4",
+ "checkpoint": "esm2_t30_150M_UR50D",
+ "n_assays_ours": 30,
+ "full_217": false,
+ "ours_code_definition": 0.3599,
+ "ours_literal_definition": 0.3607,
+ "ours_summary_csv": 0.36,
+ "authors_same_assays_code_definition": 0.3601,
+ "authors_same_assays_literal_definition": 0.3609,
+ "authors_all_217_code_definition": 0.3868,
+ "authors_all_217_literal_definition": 0.3895,
+ "paper": 0.387,
+ "tolerance": 0.017,
+ "diff_vs_paper_code": -0.0271,
+ "within_tolerance_vs_paper": false,
+ "boot_se_ours_code": 0.0263,
+ "boot_se_ours_literal": 0.0247,
+ "per_function_ours_code": {
+  "Activity": 0.4185,
+  "Binding": 0.151,
+  "Expression": 0.4234,
+  "OrganismalFitness": 0.2332,
+  "Stability": 0.5733
+ },
+ "n_function_types_present": 5,
+ "per_assay_max_abs_diff_vs_csv": 0.01,
+ "per_assay_n_abs_diff_gt_0.001": 1,
+ "per_assay_mean_diff_vs_csv": -0.000333,
+ "per_assay_largest_diffs": [
+  [
+   "POLG_CXB3N_Mattenberger_2021",
+   -0.01
+  ],
+  [
+   "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+   0.0
+  ],
+  [
+   "UBR5_HUMAN_Tsuboyama_2023_1I2T",
+   0.0
+  ],
+  [
+   "TRPC_THEMA_Chan_2017",
+   0.0
+  ],
+  [
+   "TPOR_HUMAN_Bridgford_2020",
+   0.0
+  ],
+  [
+   "TCRG1_MOUSE_Tsuboyama_2023_1E0L",
+   0.0
+  ],
+  [
+   "TADBP_HUMAN_Bolognesi_2019",
+   0.0
+  ],
+  [
+   "SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM",
+   0.0
+  ]
+ ],
+ "authors_zip_vs_csv_max_abs_diff_all_217": 0.0,
+ "per_mutant_vs_authors": {
+  "n_assays_compared": 30,
+  "n_assays_max_abs_diff_le_1e-3": 29,
+  "n_assays_max_abs_diff_le_1e-2": 29,
+  "overall_max_abs_diff": 3.950953722000122,
+  "median_of_max_abs_diff": 1.907348632901318e-05,
+  "long_assays_n": 3,
+  "long_assays_max_abs_diff": 3.950953722000122,
+  "short_assays_max_abs_diff": 7.915496826171875e-05,
+  "min_pearson": 0.989111510119301,
+  "n_unmatched_mutants": 0,
+  "worst_assays": [
+   [
+    "POLG_CXB3N_Mattenberger_2021",
+    2185,
+    3.950953722000122,
+    0.989111510119301
+   ],
+   [
+    "MSH2_HUMAN_Jia_2020",
+    934,
+    7.915496826171875e-05,
+    0.9999999999978223
+   ],
+   [
+    "MBD11_ARATH_Tsuboyama_2023_6ACV",
+    66,
+    5.14984130859375e-05,
+    0.9999999999980352
+   ],
+   [
+    "KCNJ2_MOUSE_Coyote-Maestas_2022_surface",
+    428,
+    4.76837158203125e-05,
+    0.9999999999985235
+   ],
+   [
+    "PTEN_HUMAN_Matreyek_2021",
+    403,
+    4.673004150390625e-05,
+    0.999999999998193
+   ],
+   [
+    "P53_HUMAN_Giacomelli_2018_WT_Nutlin",
+    393,
+    4.3392181396484375e-05,
+    0.9999999999981578
+   ],
+   [
+    "MET_HUMAN_Estevam_2023",
+    287,
+    3.7670135497602786e-05,
+    0.9999999999993374
+   ],
+   [
+    "SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM",
+    536,
+    3.5762786865234375e-05,
+    0.9999999999990743
+   ]
+  ]
+ }
+}

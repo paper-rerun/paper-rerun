@@ -1,0 +1,28 @@
+--- repo/scripts/scoring_DMS_zero_shot/scoring_ESM2_substitutions.sh	2026-10-23 11:27:29.993812200 -0300
++++ smoke/_scripts/8M_17.sh	2026-10-23 11:35:52.256853300 -0300
+@@ -1,12 +1,12 @@
+ #!/bin/bash 
+ 
+-source ../zero_shot_config.sh
+-source activate proteingym_env
++source /mnt/e/Ciencia/pipeline/2023-notin-proteingym/runs_tmp.vE5KBJ/zero_shot_config.sh
++source /mnt/e/Ciencia/pipeline/2023-notin-proteingym/env/activate.sh
+ 
+ # Run whichever size of ESM2 by uncommenting the appropriate pair of lines below
+ 
+-export model_checkpoint="path to 8M ESM2 checkpoint"
+-export dms_output_folder=${DMS_output_score_folder_subs}/ESM2/8M 
++export model_checkpoint="/mnt/e/Ciencia/pipeline/2023-notin-proteingym/data/weights/esm2_t6_8M_UR50D.pt"
++export dms_output_folder=${DMS_output_score_folder_subs}/ESM2/8M
+ 
+ # export model_checkpoint="path to 35M ESM2 checkpoint"
+ # export dms_output_folder=${DMS_output_score_folder_subs}/ESM2/35M
+@@ -28,7 +28,7 @@
+ 
+ export model_type="ESM2"
+ export scoring_strategy="masked-marginals"
+-export DMS_index="Experiment index to run (e.g. 1,2,...217)"
++export DMS_index=17
+ 
+ python ../../proteingym/baselines/esm/compute_fitness.py \
+     --model-location ${model_checkpoint} \

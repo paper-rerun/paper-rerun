@@ -1,0 +1,19 @@
+== PG_v1.0
+ESM-1b         n=217 literal=0.3982 repo=0.3944
+ESM2 (8M)      n=217 literal=0.2244 repo=0.2259
+ESM2 (35M)     n=217 literal=0.3196 repo=0.3211
+ESM2 (150M)    n=217 literal=0.3895 repo=0.3869
+ESM2 (650M)    n=217 literal=0.4184 repo=0.4139
+== PG_v1.1
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/meio/2023-notin-proteingym/runs/aggregate.py", line 21, in <module>
+    literal, repo, n = corrected_averages(per_dms, reference, column)
+  File "/mnt/e/Ciencia/meio/2023-notin-proteingym/runs/aggregate.py", line 12, in corrected_averages
+    assert df[column].notna().all(), f"missing assays for {column}"
+AssertionError: missing assays for ESM-1b
+== PG_v1.3
+ESM-1b         n=217 literal=0.3982 repo=0.3941
+ESM2 (8M)      n=217 literal=0.2244 repo=0.2257
+ESM2 (35M)     n=217 literal=0.3196 repo=0.3208
+ESM2 (150M)    n=217 literal=0.3895 repo=0.3868
+ESM2 (650M)    n=217 literal=0.4184 repo=0.4138

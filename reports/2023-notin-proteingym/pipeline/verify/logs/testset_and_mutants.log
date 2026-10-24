@@ -1,0 +1,27 @@
+{
+ "assays_in_reference": 217,
+ "unique_DMS_id": 217,
+ "assay_files_on_disk": 217,
+ "mutants_reference_column": 2465767,
+ "mutants_counted_in_files": 2465767,
+ "files_matching_reference_count": 217,
+ "unique_UniProt_ID": 186,
+ "seq_len_over_1022": 16,
+ "coarse_selection_type": {
+  "Activity": 43,
+  "Binding": 13,
+  "Expression": 18,
+  "OrganismalFitness": 77,
+  "Stability": 66
+ }
+}
+ESM1b assays 217 all mutants matched True max abs diff 0.00015 min pearson 1.0 assays with max diff > 0.01: 0
+   worst: [['I6TAH8_I68A0_Doud_2015', 498, 0.00015, 1.0], ['ENV_HV1BR_Haddox_2016', 861, 0.00014, 1.0], ['A4_HUMAN_Seuma_2022', 770, 0.00013, 1.0], ['HIS7_YEAST_Pokusaeva_2019', 220, 0.00013, 1.0]]
+ESM2_8M assays 217 all mutants matched True max abs diff 7.84436 min pearson 0.4129 assays with max diff > 0.01: 5
+   worst: [['SCN5A_HUMAN_Glazer_2019', 2016, 7.84436, 0.44399], ['KCNH2_HUMAN_Kozek_2020', 1159, 5.72012, 0.4129], ['A0A140D2T1_ZIKV_Sourisseau_2019', 3423, 2.16613, 0.9585], ['POLG_CXB3N_Mattenberger_2021', 2185, 1.61769, 0.99047]]
+ESM2_35M assays 217 all mutants matched True max abs diff 6.52817 min pearson 0.263291 assays with max diff > 0.01: 5
+   worst: [['SCN5A_HUMAN_Glazer_2019', 2016, 6.52817, 0.80767], ['KCNH2_HUMAN_Kozek_2020', 1159, 6.28919, 0.26329], ['A0A140D2T1_ZIKV_Sourisseau_2019', 3423, 2.50868, 0.9666], ['POLG_CXB3N_Mattenberger_2021', 2185, 2.03894, 0.98789]]
+ESM2_150M assays 217 all mutants matched True max abs diff 8.78728 min pearson 0.520226 assays with max diff > 0.01: 5
+   worst: [['SCN5A_HUMAN_Glazer_2019', 2016, 8.78728, 0.87527], ['KCNH2_HUMAN_Kozek_2020', 1159, 7.67889, 0.52023], ['POLG_CXB3N_Mattenberger_2021', 2185, 3.95095, 0.98911], ['A0A140D2T1_ZIKV_Sourisseau_2019', 3423, 3.06634, 0.96898]]
+ESM2_650M assays 54 all mutants matched True max abs diff 8.22996 min pearson 0.861899 assays with max diff > 0.01: 2
+   worst: [['SCN5A_HUMAN_Glazer_2019', 2016, 8.22996, 0.8619], ['A0A140D2T1_ZIKV_Sourisseau_2019', 3423, 7.00188, 0.97425], ['MTHR_HUMAN_Weile_2021', 656, 8e-05, 1.0], ['HMDH_HUMAN_Jiang_2019', 888, 8e-05, 1.0]]

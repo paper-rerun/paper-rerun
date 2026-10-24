@@ -1,0 +1,6 @@
+weights/esm2_t6_8M_UR50D.pt 30099493 46f002a9870c9bdecd0ea887acb1f9a38a6b561e8f8bf8a6990b679b9d31b928 (size ok, s3 etag ok)
+weights/esm2_t12_35M_UR50D.pt 134095705 7f21e80e61d16a71735163ef555d3009afb0c98da74c48e29df08606973cc55e (size ok, s3 etag ok)
+weights/esm2_t30_150M_UR50D.pt 592774773 881c7176cf198ef8dec26a3c375d40eb58d0c33df95c22562ca6cc6d3f812c62 (size ok, s3 etag ok)
+weights/esm2_t33_650M_UR50D.pt 2604537549 ea9d0522b335a8778dea6535a65301f10208dece28cd5865482b0b1fc446168c (size ok, s3 etag ok)
+weights/esm1b_t33_650M_UR50S.pt 7828576466 0569754efaff7dcb7e068c27367bc73f10afb4b450ea30aac30d9bc60783a8b1 (size ok, s3 etag ok)
+done

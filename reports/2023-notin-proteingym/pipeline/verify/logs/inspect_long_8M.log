@@ -1,0 +1,58 @@
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/env/venv/lib/python3.10/site-packages/pandas/core/util/hashing.py:357: RuntimeWarning: invalid value encountered in cast
+  vals.astype(str).astype(object), hash_key, encoding
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/env/venv/lib/python3.10/site-packages/pandas/core/util/hashing.py:357: RuntimeWarning: invalid value encountered in cast
+  vals.astype(str).astype(object), hash_key, encoding
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/env/venv/lib/python3.10/site-packages/pandas/core/util/hashing.py:357: RuntimeWarning: invalid value encountered in cast
+  vals.astype(str).astype(object), hash_key, encoding
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/env/venv/lib/python3.10/site-packages/pandas/core/util/hashing.py:357: RuntimeWarning: invalid value encountered in cast
+  vals.astype(str).astype(object), hash_key, encoding
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/env/venv/lib/python3.10/site-packages/pandas/core/util/hashing.py:357: RuntimeWarning: invalid value encountered in cast
+  vals.astype(str).astype(object), hash_key, encoding
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/env/venv/lib/python3.10/site-packages/pandas/core/util/hashing.py:357: RuntimeWarning: invalid value encountered in cast
+  vals.astype(str).astype(object), hash_key, encoding
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/env/venv/lib/python3.10/site-packages/pandas/core/util/hashing.py:357: RuntimeWarning: invalid value encountered in cast
+  vals.astype(str).astype(object), hash_key, encoding
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/env/venv/lib/python3.10/site-packages/pandas/core/util/hashing.py:357: RuntimeWarning: invalid value encountered in cast
+  vals.astype(str).astype(object), hash_key, encoding
+KCNH2_HUMAN_Kozek_2020 mutants 200 multi 0 positions 545 - 555 share with diff > 0.01: 1.0
+  pearson ours vs authors 0.4129
+                  count  median     max
+position                               
+(544.99, 546.25]     36  0.4648  2.0317
+(546.25, 547.5]      19  0.9648  2.6795
+(547.5, 548.75]      18  0.9752  3.1270
+(548.75, 550.0]      35  0.8675  3.2872
+(550.0, 551.25]      19  1.1527  4.4422
+(551.25, 552.5]      18  2.0468  5.7201
+(552.5, 553.75]      18  0.4925  2.4701
+(553.75, 555.0]      37  0.5562  2.4804
+SCN5A_HUMAN_Glazer_2019 mutants 224 multi 0 positions 1621 - 1632 share with diff > 0.01: 1.0
+  pearson ours vs authors 0.444
+                      count  median     max
+position                                   
+(1620.989, 1622.375]     38  1.6431  4.5543
+(1622.375, 1623.75]      19  3.4505  4.9794
+(1623.75, 1625.125]      38  2.5247  6.3257
+(1625.125, 1626.5]       19  5.1692  6.8450
+(1626.5, 1627.875]       17  3.8437  7.4229
+(1627.875, 1629.25]      38  4.4615  7.8444
+(1629.25, 1630.625]      18  3.6357  6.8782
+(1630.625, 1632.0]       37  4.2146  7.8128
+POLG_CXB3N_Mattenberger_2021 mutants 15711 multi 0 positions 1 - 851 share with diff > 0.01: 0.87
+  pearson ours vs authors 0.9905
+                 count  median     max
+position                              
+(0.15, 107.25]    1973  0.0346  0.9067
+(107.25, 213.5]   1951  0.0373  0.2825
+(213.5, 319.75]   1953  0.0376  0.4514
+(319.75, 426.0]   1976  0.0276  0.1874
+(426.0, 532.25]   1959  0.0311  0.3697
+(532.25, 638.5]   1958  0.0550  0.4042
+(638.5, 744.75]   1961  0.0793  0.5932
+(744.75, 851.0]   1980  0.1026  1.6177
+BRCA1_HUMAN_Findlay_2018 mutants 1837 multi 0 positions 1 - 1855 share with diff > 0.01: 0.0
+  pearson ours vs authors 1.0
+                   count  median  max
+position                             
+(-0.854, 232.75]     575     0.0  0.0
+(1623.25, 1855.0]   1262     0.0  0.0

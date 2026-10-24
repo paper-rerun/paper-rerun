@@ -1,0 +1,127 @@
+{
+ "claim_id": "C3",
+ "checkpoint": "esm2_t12_35M_UR50D",
+ "n_assays_ours": 30,
+ "full_217": false,
+ "ours_code_definition": 0.2832,
+ "ours_literal_definition": 0.2846,
+ "ours_summary_csv": 0.283,
+ "authors_same_assays_code_definition": 0.2832,
+ "authors_same_assays_literal_definition": 0.2846,
+ "authors_all_217_code_definition": 0.3208,
+ "authors_all_217_literal_definition": 0.3196,
+ "paper": 0.321,
+ "tolerance": 0.018,
+ "diff_vs_paper_code": -0.0378,
+ "within_tolerance_vs_paper": false,
+ "boot_se_ours_code": 0.0287,
+ "boot_se_ours_literal": 0.0273,
+ "per_function_ours_code": {
+  "Activity": 0.3942,
+  "Binding": 0.123,
+  "Expression": 0.3562,
+  "OrganismalFitness": 0.124,
+  "Stability": 0.4184
+ },
+ "n_function_types_present": 5,
+ "per_assay_max_abs_diff_vs_csv": 0.0,
+ "per_assay_n_abs_diff_gt_0.001": 0,
+ "per_assay_mean_diff_vs_csv": 0.0,
+ "per_assay_largest_diffs": [
+  [
+   "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+   0.0
+  ],
+  [
+   "UBR5_HUMAN_Tsuboyama_2023_1I2T",
+   0.0
+  ],
+  [
+   "TRPC_THEMA_Chan_2017",
+   0.0
+  ],
+  [
+   "TPOR_HUMAN_Bridgford_2020",
+   0.0
+  ],
+  [
+   "TCRG1_MOUSE_Tsuboyama_2023_1E0L",
+   0.0
+  ],
+  [
+   "TADBP_HUMAN_Bolognesi_2019",
+   0.0
+  ],
+  [
+   "SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM",
+   0.0
+  ],
+  [
+   "SRC_HUMAN_Ahler_2019",
+   0.0
+  ]
+ ],
+ "authors_zip_vs_csv_max_abs_diff_all_217": 0.0,
+ "per_mutant_vs_authors": {
+  "n_assays_compared": 30,
+  "n_assays_max_abs_diff_le_1e-3": 29,
+  "n_assays_max_abs_diff_le_1e-2": 29,
+  "overall_max_abs_diff": 2.038943290710449,
+  "median_of_max_abs_diff": 1.0728836060458491e-05,
+  "long_assays_n": 3,
+  "long_assays_max_abs_diff": 2.038943290710449,
+  "short_assays_max_abs_diff": 7.009506225585938e-05,
+  "min_pearson": 0.987890316815725,
+  "n_unmatched_mutants": 0,
+  "worst_assays": [
+   [
+    "POLG_CXB3N_Mattenberger_2021",
+    2185,
+    2.038943290710449,
+    0.987890316815725
+   ],
+   [
+    "KCNJ2_MOUSE_Coyote-Maestas_2022_surface",
+    428,
+    7.009506225585938e-05,
+    0.999999999996861
+   ],
+   [
+    "MSH2_HUMAN_Jia_2020",
+    934,
+    5.340576171875e-05,
+    0.9999999999985064
+   ],
+   [
+    "PTEN_HUMAN_Matreyek_2021",
+    403,
+    3.62396240234375e-05,
+    0.9999999999985454
+   ],
+   [
+    "TRPC_THEMA_Chan_2017",
+    252,
+    2.86102294921875e-05,
+    0.9999999999986514
+   ],
+   [
+    "SRC_HUMAN_Ahler_2019",
+    536,
+    2.6702880859375e-05,
+    0.9999999999991505
+   ],
+   [
+    "CASP3_HUMAN_Roychowdhury_2020",
+    258,
+    2.6702880859375e-05,
+    0.999999999998816
+   ],
+   [
+    "MET_HUMAN_Estevam_2023",
+    287,
+    2.6702880859375e-05,
+    0.9999999999993665
+   ]
+  ]
+ }
+}

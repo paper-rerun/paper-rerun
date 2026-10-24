@@ -1,0 +1,25 @@
+assays 217 mutants 2465767 proteins 186
+assays with seq_len>1022: 16 proteins: 13
+OrganismalFitness    77
+Stability            66
+Activity             43
+Expression           18
+Binding              13
+sum seq_len 86179
+       DMS_index                             DMS_id  seq_len  DMS_total_number_mutants
+0      DMS_sub_0    A0A140D2T1_ZIKV_Sourisseau_2019     3423                      9576
+24    DMS_sub_24           BRCA1_HUMAN_Findlay_2018     1863                      1837
+25    DMS_sub_25    BRCA2_HUMAN_Erwood_2022_HEK293T     3418                       265
+29    DMS_sub_29       CAR11_HUMAN_Meitlis_2020_gof     1154                      2374
+30    DMS_sub_30       CAR11_HUMAN_Meitlis_2020_lof     1154                      2395
+31    DMS_sub_31   CAS9_STRP1_Spencer_2017_positive     1368                      8117
+58    DMS_sub_58            ERBB2_HUMAN_Elazar_2016     1255                       326
+86    DMS_sub_86             KCNH2_HUMAN_Kozek_2020     1159                       200
+103  DMS_sub_103     NPC1_HUMAN_Erwood_2022_HEK293T     1278                       637
+104  DMS_sub_104        NPC1_HUMAN_Erwood_2022_RPE1     1278                        63
+128  DMS_sub_128       POLG_CXB3N_Mattenberger_2021     2185                     15711
+130  DMS_sub_130                 POLG_HCVJF_Qi_2014     3033                      1630
+175  DMS_sub_175            SCN5A_HUMAN_Glazer_2019     2016                       224
+184  DMS_sub_184     SPIKE_SARS2_Starr_2020_binding     1273                      3802
+185  DMS_sub_185  SPIKE_SARS2_Starr_2020_expression     1273                      3798
+207  DMS_sub_207           UBE4B_MOUSE_Starita_2013     1173                       899

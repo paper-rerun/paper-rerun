@@ -1,0 +1,8 @@
+probe_ESM1b_wt: assays compared=2 missing_authors=0 min_spearman=1.000000 median_spearman=1.000000 below_0.999=0 max_abs_diff=0.0001078 row_mismatch=0
+                      DMS_id  n_matched  spearman_ours_vs_authors  max_abs_diff
+A0A192B1T2_9HIV1_Haddox_2018      12577                       1.0      0.000108
+    BRCA1_HUMAN_Findlay_2018       1837                       1.0      0.000056
+probe_ESM1b_masked: assays compared=2 missing_authors=0 min_spearman=0.970809 median_spearman=0.973945 below_0.999=2 max_abs_diff=9.527 row_mismatch=0
+                      DMS_id  n_matched  spearman_ours_vs_authors  max_abs_diff
+A0A192B1T2_9HIV1_Haddox_2018      12577                  0.970809      9.527148
+    BRCA1_HUMAN_Findlay_2018       1837                  0.977081      6.471701

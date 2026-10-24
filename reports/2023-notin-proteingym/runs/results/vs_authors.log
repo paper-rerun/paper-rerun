@@ -1,0 +1,40 @@
+ESM2_8M: assays compared=217 missing_authors=0 min_spearman=0.361331 median_spearman=1.000000 below_0.999=5 max_abs_diff=7.844 row_mismatch=0
+                         DMS_id  n_matched  spearman_ours_vs_authors  max_abs_diff
+         KCNH2_HUMAN_Kozek_2020        200                  0.361331      5.720120
+        SCN5A_HUMAN_Glazer_2019        224                  0.390095      7.844359
+             POLG_HCVJF_Qi_2014       1630                  0.911138      1.450232
+A0A140D2T1_ZIKV_Sourisseau_2019       9576                  0.960261      2.166127
+   POLG_CXB3N_Mattenberger_2021      15711                  0.991730      1.617690
+          NRAM_I33A0_Jiang_2016        298                  1.000000      0.000005
+ESM2_35M: assays compared=217 missing_authors=0 min_spearman=0.265450 median_spearman=1.000000 below_0.999=5 max_abs_diff=6.528 row_mismatch=0
+                         DMS_id  n_matched  spearman_ours_vs_authors  max_abs_diff
+         KCNH2_HUMAN_Kozek_2020        200                  0.265450      6.289187
+        SCN5A_HUMAN_Glazer_2019        224                  0.804126      6.528175
+             POLG_HCVJF_Qi_2014       1630                  0.885831      1.840456
+A0A140D2T1_ZIKV_Sourisseau_2019       9576                  0.971835      2.508682
+   POLG_CXB3N_Mattenberger_2021      15711                  0.988071      2.038943
+         RL40A_YEAST_Mavor_2016       1253                  1.000000      0.000014
+ESM2_150M: assays compared=217 missing_authors=0 min_spearman=0.547955 median_spearman=1.000000 below_0.999=5 max_abs_diff=8.787 row_mismatch=0
+                         DMS_id  n_matched  spearman_ours_vs_authors  max_abs_diff
+         KCNH2_HUMAN_Kozek_2020        200                  0.547955      7.678894
+        SCN5A_HUMAN_Glazer_2019        224                  0.835881      8.787279
+             POLG_HCVJF_Qi_2014       1630                  0.936244      2.190447
+A0A140D2T1_ZIKV_Sourisseau_2019       9576                  0.969467      3.066339
+   POLG_CXB3N_Mattenberger_2021      15711                  0.986362      3.950954
+       UBE4B_MOUSE_Starita_2013        899                  1.000000      0.000031
+ESM1b: assays compared=217 missing_authors=0 min_spearman=1.000000 median_spearman=1.000000 below_0.999=0 max_abs_diff=0.0001509 row_mismatch=0
+                         DMS_id  n_matched  spearman_ours_vs_authors  max_abs_diff
+        LYAM1_HUMAN_Elazar_2016        359                       1.0      0.000039
+        Q837P4_ENTFA_Meier_2023        697                       1.0      0.000020
+RD23A_HUMAN_Tsuboyama_2023_1IFY       1019                       1.0      0.000036
+ BCHB_CHLTE_Tsuboyama_2023_2KRU       1572                       1.0      0.000106
+A0A1I9GEU1_NEIME_Kennouche_2019        922                       1.0      0.000023
+ DN7A_SACS2_Tsuboyama_2023_1JIC       1008                       1.0      0.000012
+ESM2_650M: assays compared=217 missing_authors=0 min_spearman=0.636235 median_spearman=1.000000 below_0.999=5 max_abs_diff=10.52 row_mismatch=0
+                         DMS_id  n_matched  spearman_ours_vs_authors  max_abs_diff
+         KCNH2_HUMAN_Kozek_2020        200                  0.636235     10.521631
+        SCN5A_HUMAN_Glazer_2019        224                  0.846768      8.229956
+             POLG_HCVJF_Qi_2014       1630                  0.905517      3.270671
+A0A140D2T1_ZIKV_Sourisseau_2019       9576                  0.969204      7.001879
+   POLG_CXB3N_Mattenberger_2021      15711                  0.995729      3.221688
+   RAF1_HUMAN_Zinkus-Boltz_2019        297                  1.000000      0.000051

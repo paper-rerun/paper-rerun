@@ -1,0 +1,17 @@
+{
+ "assays_in_reference": 217,
+ "unique_DMS_id": 217,
+ "assay_files_on_disk": 217,
+ "mutants_reference_column": 2465767,
+ "mutants_counted_in_files": 2465767,
+ "files_matching_reference_count": 217,
+ "unique_UniProt_ID": 186,
+ "seq_len_over_1022": 16,
+ "coarse_selection_type": {
+  "Activity": 43,
+  "Binding": 13,
+  "Expression": 18,
+  "OrganismalFitness": 77,
+  "Stability": 66
+ }
+}

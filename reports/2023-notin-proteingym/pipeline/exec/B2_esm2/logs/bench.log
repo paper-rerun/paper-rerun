@@ -1,0 +1,23 @@
+import s 13.6
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py:212: UserWarning: Regression weights not found, predicting contacts will not produce correct results.
+  warnings.warn(
+esm2_t6_8M_UR50D load s 32.0
+esm2_t6_8M_UR50D 100 s/pass 0.0161
+esm2_t6_8M_UR50D 300 s/pass 0.0149
+esm2_t6_8M_UR50D 600 s/pass 0.0174
+esm2_t6_8M_UR50D 1022 s/pass 0.0207
+esm2_t12_35M_UR50D load s 2.2
+esm2_t12_35M_UR50D 100 s/pass 0.0239
+esm2_t12_35M_UR50D 300 s/pass 0.0272
+esm2_t12_35M_UR50D 600 s/pass 0.0279
+esm2_t12_35M_UR50D 1022 s/pass 0.0437
+esm2_t30_150M_UR50D load s 11.8
+esm2_t30_150M_UR50D 100 s/pass 0.0694
+esm2_t30_150M_UR50D 300 s/pass 0.0908
+esm2_t30_150M_UR50D 600 s/pass 0.1851
+esm2_t30_150M_UR50D 1022 s/pass 0.3121
+esm2_t33_650M_UR50D load s 38.1
+esm2_t33_650M_UR50D 100 s/pass 0.0607
+esm2_t33_650M_UR50D 300 s/pass 0.0941
+esm2_t33_650M_UR50D 600 s/pass 0.169
+esm2_t33_650M_UR50D 1022 s/pass 0.2806

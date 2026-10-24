@@ -1,0 +1,443 @@
+{
+ "ESM-1b|Spearman": {
+  "assays": 217,
+  "mutants": 2465767,
+  "ours_code": 0.39410582402713124,
+  "ours_literal": 0.3982546819302367,
+  "authors_same_assays_code": 0.3940886773989899,
+  "authors_same_assays_literal": 0.3982353496632567,
+  "max_abs_diff_vs_authors_3dp": 0.0004973973493480957,
+  "assays_abs_diff_over_0.0015": 0,
+  "assays_abs_diff_over_0.01": 0,
+  "mean_diff": 1.562573469389113e-05,
+  "worst_assays": [
+   [
+    "CD19_HUMAN_Klesmith_2019_FMC_singles",
+    556,
+    0.0465,
+    0.046,
+    0.0005
+   ],
+   [
+    "SPG2_STRSG_Tsuboyama_2023_5UBS",
+    56,
+    0.5005,
+    0.501,
+    -0.0005
+   ],
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    52,
+    0.5925,
+    0.593,
+    -0.0005
+   ],
+   [
+    "DLG4_HUMAN_Faure_2021",
+    724,
+    0.5205,
+    0.52,
+    0.0005
+   ],
+   [
+    "TCRG1_MOUSE_Tsuboyama_2023_1E0L",
+    37,
+    0.5905,
+    0.591,
+    -0.0005
+   ]
+  ]
+ },
+ "ESM-1b|AUC": {
+  "assays": 217,
+  "mutants": 2465767,
+  "ours_code": 0.7188158056454027,
+  "ours_literal": 0.7222881741627083,
+  "authors_same_assays_code": 0.7188108980429292,
+  "authors_same_assays_literal": 0.7222855800530219,
+  "max_abs_diff_vs_authors_3dp": 0.0005225786359389639,
+  "assays_abs_diff_over_0.0015": 0,
+  "assays_abs_diff_over_0.01": 0,
+  "mean_diff": -3.3717541933926745e-06,
+  "worst_assays": [
+   [
+    "LYAM1_HUMAN_Elazar_2016",
+    372,
+    0.6975,
+    0.698,
+    -0.0005
+   ],
+   [
+    "TAT_HV1BR_Fernandes_2016",
+    86,
+    0.6165,
+    0.616,
+    0.0005
+   ],
+   [
+    "KCNH2_HUMAN_Kozek_2020",
+    1159,
+    0.6435,
+    0.644,
+    -0.0005
+   ],
+   [
+    "OBSCN_HUMAN_Tsuboyama_2023_1V1C",
+    65,
+    0.9215,
+    0.921,
+    0.0005
+   ],
+   [
+    "IF1_ECOLI_Kelsic_2016",
+    72,
+    0.8025,
+    0.803,
+    -0.0005
+   ]
+  ]
+ },
+ "ESM-1b|MCC": {
+  "assays": 217,
+  "mutants": 2465767,
+  "ours_code": 0.31089537121410965,
+  "ours_literal": 0.31455226320085516,
+  "authors_same_assays_code": 0.310875625,
+  "authors_same_assays_literal": 0.3145360445755795,
+  "max_abs_diff_vs_authors_3dp": 0.002106496187042839,
+  "assays_abs_diff_over_0.0015": 1,
+  "assays_abs_diff_over_0.01": 0,
+  "mean_diff": 1.2223821936812949e-06,
+  "worst_assays": [
+   [
+    "BCHB_CHLTE_Tsuboyama_2023_2KRU",
+    52,
+    0.3321,
+    0.33,
+    0.0021
+   ],
+   [
+    "PKN1_HUMAN_Tsuboyama_2023_1URF",
+    71,
+    0.2255,
+    0.226,
+    -0.0005
+   ],
+   [
+    "KKA2_KLEPN_Melnikov_2014",
+    264,
+    0.4705,
+    0.471,
+    -0.0005
+   ],
+   [
+    "SRC_HUMAN_Nguyen_2022",
+    536,
+    0.3425,
+    0.343,
+    -0.0005
+   ],
+   [
+    "GRB2_HUMAN_Faure_2021",
+    217,
+    0.3905,
+    0.39,
+    0.0005
+   ]
+  ]
+ },
+ "ESM-1b|NDCG": {
+  "assays": 217,
+  "mutants": 2465767,
+  "ours_code": 0.746719907593769,
+  "ours_literal": 0.74708782024153,
+  "authors_same_assays_code": 0.7467469049873737,
+  "authors_same_assays_literal": 0.7471151169244192,
+  "max_abs_diff_vs_authors_3dp": 0.0004952934494304451,
+  "assays_abs_diff_over_0.0015": 0,
+  "assays_abs_diff_over_0.01": 0,
+  "mean_diff": -8.123036177225883e-06,
+  "worst_assays": [
+   [
+    "SPG1_STRSG_Olson_2014",
+    448,
+    0.7085,
+    0.708,
+    0.0005
+   ],
+   [
+    "SRC_HUMAN_Nguyen_2022",
+    536,
+    0.6905,
+    0.69,
+    0.0005
+   ],
+   [
+    "KCNH2_HUMAN_Kozek_2020",
+    1159,
+    0.6785,
+    0.678,
+    0.0005
+   ],
+   [
+    "PRKN_HUMAN_Clausen_2023",
+    465,
+    0.8735,
+    0.874,
+    -0.0005
+   ],
+   [
+    "DLG4_RAT_McLaughlin_2012",
+    724,
+    0.9275,
+    0.928,
+    -0.0005
+   ]
+  ]
+ },
+ "ESM-1b|Top_recall": {
+  "assays": 217,
+  "mutants": 2465767,
+  "ours_code": 0.20213027331213868,
+  "ours_literal": 0.20415665201525876,
+  "authors_same_assays_code": 0.20212747474747478,
+  "authors_same_assays_literal": 0.20415807267667735,
+  "max_abs_diff_vs_authors_3dp": 0.0005000000000000004,
+  "assays_abs_diff_over_0.0015": 0,
+  "assays_abs_diff_over_0.01": 0,
+  "mean_diff": 1.135330244471905e-05,
+  "worst_assays": [
+   [
+    "THO1_YEAST_Tsuboyama_2023_2WQG",
+    41,
+    0.3125,
+    0.312,
+    0.0005
+   ],
+   [
+    "BLAT_ECOLX_Firnberg_2014",
+    286,
+    0.3375,
+    0.338,
+    -0.0005
+   ],
+   [
+    "A0A192B1T2_9HIV1_Haddox_2018",
+    852,
+    0.2345,
+    0.234,
+    0.0005
+   ],
+   [
+    "HIS7_YEAST_Pokusaeva_2019",
+    220,
+    0.2045,
+    0.204,
+    0.0005
+   ],
+   [
+    "CASP3_HUMAN_Roychowdhury_2020",
+    258,
+    0.1465,
+    0.146,
+    0.0005
+   ]
+  ]
+ },
+ "ESM2 (8M)|Spearman": {
+  "assays": 217,
+  "mutants": 2465767,
+  "ours_code": 0.22345194162542326,
+  "ours_literal": 0.22232946964480096,
+  "authors_same_assays_code": 0.2256940056818182,
+  "authors_same_assays_literal": 0.2243832516320888,
+  "max_abs_diff_vs_authors_3dp": 0.39259348983724596,
+  "assays_abs_diff_over_0.0015": 4,
+  "assays_abs_diff_over_0.01": 2,
+  "mean_diff": -0.002214001055315747,
+  "worst_assays": [
+   [
+    "KCNH2_HUMAN_Kozek_2020",
+    1159,
+    -0.1396,
+    0.253,
+    -0.3926
+   ],
+   [
+    "SCN5A_HUMAN_Glazer_2019",
+    2016,
+    0.1206,
+    0.216,
+    -0.0954
+   ],
+   [
+    "POLG_CXB3N_Mattenberger_2021",
+    2185,
+    -0.0735,
+    -0.079,
+    0.0055
+   ],
+   [
+    "POLG_HCVJF_Qi_2014",
+    3033,
+    0.0994,
+    0.101,
+    -0.0016
+   ],
+   [
+    "RPC1_LAMBD_Li_2019_low-expression",
+    237,
+    0.2525,
+    0.253,
+    -0.0005
+   ]
+  ]
+ },
+ "ESM2 (35M)|Spearman": {
+  "assays": 217,
+  "mutants": 2465767,
+  "ours_code": 0.32138274872192935,
+  "ours_literal": 0.32018066036556914,
+  "authors_same_assays_code": 0.3208077951388889,
+  "authors_same_assays_literal": 0.3196410986945871,
+  "max_abs_diff_vs_authors_3dp": 0.12285449636240903,
+  "assays_abs_diff_over_0.0015": 4,
+  "assays_abs_diff_over_0.01": 2,
+  "mean_diff": 0.0004899402066156071,
+  "worst_assays": [
+   [
+    "KCNH2_HUMAN_Kozek_2020",
+    1159,
+    0.3199,
+    0.197,
+    0.1229
+   ],
+   [
+    "SCN5A_HUMAN_Glazer_2019",
+    2016,
+    0.1574,
+    0.177,
+    -0.0196
+   ],
+   [
+    "POLG_HCVJF_Qi_2014",
+    3033,
+    0.1369,
+    0.128,
+    0.0089
+   ],
+   [
+    "A0A140D2T1_ZIKV_Sourisseau_2019",
+    3423,
+    -0.0584,
+    -0.054,
+    -0.0044
+   ],
+   [
+    "BBC1_YEAST_Tsuboyama_2023_1TG0",
+    64,
+    0.4215,
+    0.421,
+    0.0005
+   ]
+  ]
+ },
+ "ESM2 (150M)|Spearman": {
+  "assays": 217,
+  "mutants": 2465767,
+  "ours_code": 0.38835712532025085,
+  "ours_literal": 0.3909866741238909,
+  "authors_same_assays_code": 0.3868099273989899,
+  "authors_same_assays_literal": 0.38953750332354986,
+  "max_abs_diff_vs_authors_3dp": 0.3306939923498088,
+  "assays_abs_diff_over_0.0015": 5,
+  "assays_abs_diff_over_0.01": 3,
+  "mean_diff": 0.001371962420072271,
+  "worst_assays": [
+   [
+    "KCNH2_HUMAN_Kozek_2020",
+    1159,
+    0.5597,
+    0.229,
+    0.3307
+   ],
+   [
+    "SCN5A_HUMAN_Glazer_2019",
+    2016,
+    0.1385,
+    0.156,
+    -0.0175
+   ],
+   [
+    "POLG_HCVJF_Qi_2014",
+    3033,
+    0.102,
+    0.114,
+    -0.012
+   ],
+   [
+    "POLG_CXB3N_Mattenberger_2021",
+    2185,
+    0.1674,
+    0.177,
+    -0.0096
+   ],
+   [
+    "A0A140D2T1_ZIKV_Sourisseau_2019",
+    3423,
+    -0.0492,
+    -0.058,
+    0.0088
+   ]
+  ]
+ },
+ "ESM2 (650M)|Spearman": {
+  "assays": 54,
+  "mutants": 410779,
+  "ours_code": 0.4164303905412849,
+  "ours_literal": 0.4164303905412849,
+  "authors_same_assays_code": 0.41697904761904764,
+  "authors_same_assays_literal": 0.41697904761904764,
+  "max_abs_diff_vs_authors_3dp": 0.062010073193944804,
+  "assays_abs_diff_over_0.0015": 2,
+  "assays_abs_diff_over_0.01": 1,
+  "mean_diff": -0.0011034959677807096,
+  "worst_assays": [
+   [
+    "SCN5A_HUMAN_Glazer_2019",
+    2016,
+    0.121,
+    0.183,
+    -0.062
+   ],
+   [
+    "A0A140D2T1_ZIKV_Sourisseau_2019",
+    3423,
+    0.2149,
+    0.213,
+    0.0019
+   ],
+   [
+    "HSP82_YEAST_Cote-Hammarlof_2020_growth-H2O2",
+    709,
+    0.2565,
+    0.257,
+    -0.0005
+   ],
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    52,
+    0.6245,
+    0.625,
+    -0.0005
+   ],
+   [
+    "MTHR_HUMAN_Weile_2021",
+    656,
+    0.3475,
+    0.348,
+    -0.0005
+   ]
+  ]
+ }
+}

@@ -1,0 +1,18 @@
+Arguments: Namespace(model_type=['ESM1b'], model_location=['/mnt/e/Ciencia/pipeline/2023-notin-proteingym/data/weights/esm1b_t33_650M_UR50S.pt'], sequence=None, dms_input=PosixPath('/mnt/e/Ciencia/pipeline/2023-notin-proteingym/data/DMS_ProteinGym_substitutions'), dms_index=152, dms_mapping='/mnt/e/Ciencia/pipeline/2023-notin-proteingym/repo/reference_files/DMS_substitutions.csv', mutation_col='mutant', dms_output=PosixPath('/mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/scores/ESM1b/_partial'), offset_idx=1, scoring_strategy='wt-marginals', msa_path=None, msa_sampling_strategy='sequence-reweighting', msa_samples=400, msa_weights_folder=None, seeds=1, filter_msa=False, hhfilter_min_cov=75, hhfilter_max_seq_id=90, hhfilter_min_seq_id=0, path_to_hhfilter='/n/groups/marks/software/hhsuite/hhsuite-3.3.0', scoring_window='overlapping', overwrite_prior_scores=False, target_seq=None, weight_file_name=None, MSA_start=None, MSA_end=None, nogpu=False)
+Compute scores for DMS: RASK_HUMAN_Weng_2022_binding-DARPin_K55
+df shape: (24873, 4)
+Starting model scoring
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/scripts/run_scores.py", line 42, in <module>
+    compute_fitness.main(Arguments)
+  File "/mnt/e/Ciencia/pipeline/2023-notin-proteingym/repo/proteingym/baselines/esm/compute_fitness.py", line 349, in main
+    model, alphabet = pretrained.load_model_and_alphabet(model_location)
+  File "/mnt/e/Ciencia/pipeline/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py", line 26, in load_model_and_alphabet
+    return load_model_and_alphabet_local(model_name)
+  File "/mnt/e/Ciencia/pipeline/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py", line 77, in load_model_and_alphabet_local
+    return load_model_and_alphabet_core(model_name, model_data, regression_data)
+  File "/mnt/e/Ciencia/pipeline/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py", line 190, in load_model_and_alphabet_core
+    model, alphabet, model_state = _load_model_and_alphabet_core_v1(model_data)
+  File "/mnt/e/Ciencia/pipeline/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py", line 86, in _load_model_and_alphabet_core_v1
+    from proteingym.baselines.esm import esm  # since esm.inverse_folding is imported below, you actually have to re-import esm here
+ModuleNotFoundError: No module named 'proteingym'

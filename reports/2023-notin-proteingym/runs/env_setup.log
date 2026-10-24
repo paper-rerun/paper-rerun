@@ -1,0 +1,27 @@
+Downloading cpython-3.10.22-linux-x86_64-gnu (download) (28.0MiB)
+ Downloaded cpython-3.10.22-linux-x86_64-gnu (download)
+Installed Python 3.10.22 in 10.14s
+ + cpython-3.10.22-linux-x86_64-gnu
+warning: `/root/.local/bin` is not on your PATH. To use installed Python executables, run `export PATH="/root/.local/bin:$PATH"` or `uv python update-shell`.
+warning: Failed to install executable for cpython-3.10.22-linux-x86_64-gnu
+  cause: Executable already exists at `/root/.local/bin/python3.10` but is not managed by uv; use `--force` to replace it
+Using CPython 3.10.22
+Creating virtual environment at: /mnt/e/Ciencia/meio/2023-notin-proteingym/env/.venv
+Activate with: source /mnt/e/Ciencia/meio/2023-notin-proteingym/env/.venv/bin/activate
+Using Python 3.10.22 environment at: /mnt/e/Ciencia/meio/2023-notin-proteingym/env/.venv
+Resolved 17 packages in 547ms
+Downloading torch (1.7GiB)
+Downloading pandas (11.5MiB)
+Downloading scikit-learn (10.3MiB)
+Downloading biopython (3.0MiB)
+Downloading numpy (16.5MiB)
+Downloading llvmlite (41.6MiB)
+Downloading scipy (32.8MiB)
+Downloading numba (3.5MiB)
+ Downloaded biopython
+ Downloaded numba
+ Downloaded scikit-learn
+ Downloaded llvmlite
+ Downloaded scipy
+ Downloaded numpy
+ Downloaded pandas

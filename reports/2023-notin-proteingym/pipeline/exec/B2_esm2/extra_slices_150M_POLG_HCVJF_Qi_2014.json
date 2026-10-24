@@ -1,0 +1,14 @@
+{
+ "1-3033": {
+  "max_abs_diff_vs_authors": 2.190447092056274,
+  "mean_abs_diff_vs_authors": 0.28304202622431185,
+  "spearman_vs_DMS": 0.10199586650625418,
+  "authors_spearman_vs_DMS": 0.11413469658523014
+ },
+ "1984-2089": {
+  "max_abs_diff_vs_authors": 7.62939453125e-06,
+  "mean_abs_diff_vs_authors": 8.437531126141179e-07,
+  "spearman_vs_DMS": 0.11413469658523014,
+  "authors_spearman_vs_DMS": 0.11413469658523014
+ }
+}

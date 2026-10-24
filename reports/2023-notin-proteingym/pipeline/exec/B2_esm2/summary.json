@@ -1,0 +1,602 @@
+{
+ "8M": {
+  "claim_id": "C2",
+  "checkpoint": "esm2_t6_8M_UR50D",
+  "n_assays_ours": 217,
+  "full_217": true,
+  "ours_code_definition": 0.2234,
+  "ours_literal_definition": 0.2223,
+  "ours_summary_csv": 0.223,
+  "authors_same_assays_code_definition": 0.2257,
+  "authors_same_assays_literal_definition": 0.2244,
+  "authors_all_217_code_definition": 0.2257,
+  "authors_all_217_literal_definition": 0.2244,
+  "paper": 0.226,
+  "tolerance": 0.016,
+  "diff_vs_paper_code": -0.0026,
+  "within_tolerance_vs_paper": true,
+  "boot_se_ours_code": 0.0164,
+  "boot_se_ours_literal": 0.0158,
+  "per_function_ours_code": {
+   "Activity": 0.1915,
+   "Binding": 0.2597,
+   "Expression": 0.2657,
+   "OrganismalFitness": 0.1386,
+   "Stability": 0.2617
+  },
+  "n_function_types_present": 5,
+  "per_assay_max_abs_diff_vs_csv": 0.393,
+  "per_assay_n_abs_diff_gt_0.001": 4,
+  "per_assay_mean_diff_vs_csv": -0.002235,
+  "per_assay_largest_diffs": [
+   [
+    "KCNH2_HUMAN_Kozek_2020",
+    -0.393
+   ],
+   [
+    "SCN5A_HUMAN_Glazer_2019",
+    -0.095
+   ],
+   [
+    "POLG_CXB3N_Mattenberger_2021",
+    0.005
+   ],
+   [
+    "POLG_HCVJF_Qi_2014",
+    -0.002
+   ],
+   [
+    "YNZC_BACSU_Tsuboyama_2023_2JVD",
+    0.0
+   ],
+   [
+    "YAP1_HUMAN_Araya_2012",
+    0.0
+   ],
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    0.0
+   ],
+   [
+    "VRPI_BPT7_Tsuboyama_2023_2WNM",
+    0.0
+   ]
+  ],
+  "authors_zip_vs_csv_max_abs_diff_all_217": 0.0,
+  "per_mutant_vs_authors": {
+   "n_assays_compared": 217,
+   "n_assays_max_abs_diff_le_1e-3": 212,
+   "n_assays_max_abs_diff_le_1e-2": 212,
+   "overall_max_abs_diff": 7.8443591594696045,
+   "median_of_max_abs_diff": 1.239776611328125e-05,
+   "long_assays_n": 16,
+   "long_assays_max_abs_diff": 7.8443591594696045,
+   "short_assays_max_abs_diff": 6.723403930664062e-05,
+   "min_pearson": 0.41290049433184145,
+   "n_unmatched_mutants": 0,
+   "worst_assays": [
+    [
+     "SCN5A_HUMAN_Glazer_2019",
+     2016,
+     7.8443591594696045,
+     0.443985113847465
+    ],
+    [
+     "KCNH2_HUMAN_Kozek_2020",
+     1159,
+     5.720120072364807,
+     0.41290049433184145
+    ],
+    [
+     "A0A140D2T1_ZIKV_Sourisseau_2019",
+     3423,
+     2.1661274433135986,
+     0.958497823722605
+    ],
+    [
+     "POLG_CXB3N_Mattenberger_2021",
+     2185,
+     1.6176903247833252,
+     0.9904683797553578
+    ],
+    [
+     "POLG_HCVJF_Qi_2014",
+     3033,
+     1.4502315521240234,
+     0.9190735157625955
+    ],
+    [
+     "LGK_LIPST_Klesmith_2015",
+     439,
+     6.723403930664062e-05,
+     0.9999999999971545
+    ],
+    [
+     "RNC_ECOLI_Weeks_2023",
+     226,
+     4.839897155761719e-05,
+     0.9999999999976521
+    ],
+    [
+     "PPM1D_HUMAN_Miller_2022",
+     605,
+     3.9577484130859375e-05,
+     0.9999999999985612
+    ]
+   ]
+  },
+  "assays_with_per_mutant_diff_gt_1e-3": [
+   "A0A140D2T1_ZIKV_Sourisseau_2019",
+   "KCNH2_HUMAN_Kozek_2020",
+   "POLG_CXB3N_Mattenberger_2021",
+   "POLG_HCVJF_Qi_2014",
+   "SCN5A_HUMAN_Glazer_2019"
+  ],
+  "msa_region_rescore": {
+   "A0A140D2T1_ZIKV_Sourisseau_2019": {
+    "region": "281-804",
+    "region_max_abs_diff_vs_authors": 9.298324584960938e-06,
+    "spearman_full_seq": -0.0726,
+    "spearman_region": -0.0725,
+    "authors_spearman": -0.0725
+   },
+   "KCNH2_HUMAN_Kozek_2020": {
+    "region": "535-565",
+    "region_max_abs_diff_vs_authors": 3.0994415283203125e-06,
+    "spearman_full_seq": -0.1396,
+    "spearman_region": 0.2529,
+    "authors_spearman": 0.2529
+   },
+   "POLG_CXB3N_Mattenberger_2021": {
+    "region": "1-861",
+    "region_max_abs_diff_vs_authors": 7.867813110351562e-06,
+    "spearman_full_seq": -0.0735,
+    "spearman_region": -0.0789,
+    "authors_spearman": -0.0789
+   },
+   "POLG_HCVJF_Qi_2014": {
+    "region": "1984-2089",
+    "region_max_abs_diff_vs_authors": 3.814697265625e-06,
+    "spearman_full_seq": 0.0994,
+    "spearman_region": 0.1013,
+    "authors_spearman": 0.1013
+   },
+   "SCN5A_HUMAN_Glazer_2019": {
+    "region": "1611-1642",
+    "region_max_abs_diff_vs_authors": 3.5762786865234375e-06,
+    "spearman_full_seq": 0.1206,
+    "spearman_region": 0.2156,
+    "authors_spearman": 0.2156
+   }
+  },
+  "differing_assays_without_region_check": [],
+  "ours_code_definition_with_region_rescore": 0.2257,
+  "ours_literal_definition_with_region_rescore": 0.2244
+ },
+ "35M": {
+  "claim_id": "C3",
+  "checkpoint": "esm2_t12_35M_UR50D",
+  "n_assays_ours": 30,
+  "full_217": false,
+  "ours_code_definition": 0.2832,
+  "ours_literal_definition": 0.2846,
+  "ours_summary_csv": 0.283,
+  "authors_same_assays_code_definition": 0.2832,
+  "authors_same_assays_literal_definition": 0.2846,
+  "authors_all_217_code_definition": 0.3208,
+  "authors_all_217_literal_definition": 0.3196,
+  "paper": 0.321,
+  "tolerance": 0.018,
+  "diff_vs_paper_code": -0.0378,
+  "within_tolerance_vs_paper": false,
+  "boot_se_ours_code": 0.0287,
+  "boot_se_ours_literal": 0.0273,
+  "per_function_ours_code": {
+   "Activity": 0.3942,
+   "Binding": 0.123,
+   "Expression": 0.3562,
+   "OrganismalFitness": 0.124,
+   "Stability": 0.4184
+  },
+  "n_function_types_present": 5,
+  "per_assay_max_abs_diff_vs_csv": 0.0,
+  "per_assay_n_abs_diff_gt_0.001": 0,
+  "per_assay_mean_diff_vs_csv": 0.0,
+  "per_assay_largest_diffs": [
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    0.0
+   ],
+   [
+    "UBR5_HUMAN_Tsuboyama_2023_1I2T",
+    0.0
+   ],
+   [
+    "TRPC_THEMA_Chan_2017",
+    0.0
+   ],
+   [
+    "TPOR_HUMAN_Bridgford_2020",
+    0.0
+   ],
+   [
+    "TCRG1_MOUSE_Tsuboyama_2023_1E0L",
+    0.0
+   ],
+   [
+    "TADBP_HUMAN_Bolognesi_2019",
+    0.0
+   ],
+   [
+    "SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM",
+    0.0
+   ],
+   [
+    "SRC_HUMAN_Ahler_2019",
+    0.0
+   ]
+  ],
+  "authors_zip_vs_csv_max_abs_diff_all_217": 0.0,
+  "per_mutant_vs_authors": {
+   "n_assays_compared": 30,
+   "n_assays_max_abs_diff_le_1e-3": 29,
+   "n_assays_max_abs_diff_le_1e-2": 29,
+   "overall_max_abs_diff": 2.038943290710449,
+   "median_of_max_abs_diff": 1.0728836060458491e-05,
+   "long_assays_n": 3,
+   "long_assays_max_abs_diff": 2.038943290710449,
+   "short_assays_max_abs_diff": 7.009506225585938e-05,
+   "min_pearson": 0.987890316815725,
+   "n_unmatched_mutants": 0,
+   "worst_assays": [
+    [
+     "POLG_CXB3N_Mattenberger_2021",
+     2185,
+     2.038943290710449,
+     0.987890316815725
+    ],
+    [
+     "KCNJ2_MOUSE_Coyote-Maestas_2022_surface",
+     428,
+     7.009506225585938e-05,
+     0.999999999996861
+    ],
+    [
+     "MSH2_HUMAN_Jia_2020",
+     934,
+     5.340576171875e-05,
+     0.9999999999985064
+    ],
+    [
+     "PTEN_HUMAN_Matreyek_2021",
+     403,
+     3.62396240234375e-05,
+     0.9999999999985454
+    ],
+    [
+     "TRPC_THEMA_Chan_2017",
+     252,
+     2.86102294921875e-05,
+     0.9999999999986514
+    ],
+    [
+     "SRC_HUMAN_Ahler_2019",
+     536,
+     2.6702880859375e-05,
+     0.9999999999991505
+    ],
+    [
+     "CASP3_HUMAN_Roychowdhury_2020",
+     258,
+     2.6702880859375e-05,
+     0.999999999998816
+    ],
+    [
+     "MET_HUMAN_Estevam_2023",
+     287,
+     2.6702880859375e-05,
+     0.9999999999993665
+    ]
+   ]
+  },
+  "assays_with_per_mutant_diff_gt_1e-3": [
+   "POLG_CXB3N_Mattenberger_2021"
+  ],
+  "msa_region_rescore": {
+   "POLG_CXB3N_Mattenberger_2021": {
+    "region": "1-861",
+    "region_max_abs_diff_vs_authors": 6.9141387939453125e-06,
+    "spearman_full_seq": -0.0562,
+    "spearman_region": -0.0557,
+    "authors_spearman": -0.0557
+   }
+  },
+  "differing_assays_without_region_check": [],
+  "ours_code_definition_with_region_rescore": 0.2832,
+  "ours_literal_definition_with_region_rescore": 0.2846
+ },
+ "150M": {
+  "claim_id": "C4",
+  "checkpoint": "esm2_t30_150M_UR50D",
+  "n_assays_ours": 30,
+  "full_217": false,
+  "ours_code_definition": 0.3599,
+  "ours_literal_definition": 0.3607,
+  "ours_summary_csv": 0.36,
+  "authors_same_assays_code_definition": 0.3601,
+  "authors_same_assays_literal_definition": 0.3609,
+  "authors_all_217_code_definition": 0.3868,
+  "authors_all_217_literal_definition": 0.3895,
+  "paper": 0.387,
+  "tolerance": 0.017,
+  "diff_vs_paper_code": -0.0271,
+  "within_tolerance_vs_paper": false,
+  "boot_se_ours_code": 0.0263,
+  "boot_se_ours_literal": 0.0247,
+  "per_function_ours_code": {
+   "Activity": 0.4185,
+   "Binding": 0.151,
+   "Expression": 0.4234,
+   "OrganismalFitness": 0.2332,
+   "Stability": 0.5733
+  },
+  "n_function_types_present": 5,
+  "per_assay_max_abs_diff_vs_csv": 0.01,
+  "per_assay_n_abs_diff_gt_0.001": 1,
+  "per_assay_mean_diff_vs_csv": -0.000333,
+  "per_assay_largest_diffs": [
+   [
+    "POLG_CXB3N_Mattenberger_2021",
+    -0.01
+   ],
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    0.0
+   ],
+   [
+    "UBR5_HUMAN_Tsuboyama_2023_1I2T",
+    0.0
+   ],
+   [
+    "TRPC_THEMA_Chan_2017",
+    0.0
+   ],
+   [
+    "TPOR_HUMAN_Bridgford_2020",
+    0.0
+   ],
+   [
+    "TCRG1_MOUSE_Tsuboyama_2023_1E0L",
+    0.0
+   ],
+   [
+    "TADBP_HUMAN_Bolognesi_2019",
+    0.0
+   ],
+   [
+    "SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM",
+    0.0
+   ]
+  ],
+  "authors_zip_vs_csv_max_abs_diff_all_217": 0.0,
+  "per_mutant_vs_authors": {
+   "n_assays_compared": 30,
+   "n_assays_max_abs_diff_le_1e-3": 29,
+   "n_assays_max_abs_diff_le_1e-2": 29,
+   "overall_max_abs_diff": 3.950953722000122,
+   "median_of_max_abs_diff": 1.907348632901318e-05,
+   "long_assays_n": 3,
+   "long_assays_max_abs_diff": 3.950953722000122,
+   "short_assays_max_abs_diff": 7.915496826171875e-05,
+   "min_pearson": 0.989111510119301,
+   "n_unmatched_mutants": 0,
+   "worst_assays": [
+    [
+     "POLG_CXB3N_Mattenberger_2021",
+     2185,
+     3.950953722000122,
+     0.989111510119301
+    ],
+    [
+     "MSH2_HUMAN_Jia_2020",
+     934,
+     7.915496826171875e-05,
+     0.9999999999978223
+    ],
+    [
+     "MBD11_ARATH_Tsuboyama_2023_6ACV",
+     66,
+     5.14984130859375e-05,
+     0.9999999999980352
+    ],
+    [
+     "KCNJ2_MOUSE_Coyote-Maestas_2022_surface",
+     428,
+     4.76837158203125e-05,
+     0.9999999999985235
+    ],
+    [
+     "PTEN_HUMAN_Matreyek_2021",
+     403,
+     4.673004150390625e-05,
+     0.999999999998193
+    ],
+    [
+     "P53_HUMAN_Giacomelli_2018_WT_Nutlin",
+     393,
+     4.3392181396484375e-05,
+     0.9999999999981578
+    ],
+    [
+     "MET_HUMAN_Estevam_2023",
+     287,
+     3.7670135497602786e-05,
+     0.9999999999993374
+    ],
+    [
+     "SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM",
+     536,
+     3.5762786865234375e-05,
+     0.9999999999990743
+    ]
+   ]
+  },
+  "assays_with_per_mutant_diff_gt_1e-3": [
+   "POLG_CXB3N_Mattenberger_2021"
+  ],
+  "msa_region_rescore": {
+   "POLG_CXB3N_Mattenberger_2021": {
+    "region": "1-861",
+    "region_max_abs_diff_vs_authors": 4.76837158203125e-05,
+    "spearman_full_seq": 0.1674,
+    "spearman_region": 0.1775,
+    "authors_spearman": 0.1775
+   }
+  },
+  "differing_assays_without_region_check": [],
+  "ours_code_definition_with_region_rescore": 0.3601,
+  "ours_literal_definition_with_region_rescore": 0.3609
+ },
+ "650M": {
+  "claim_id": "C5",
+  "checkpoint": "esm2_t33_650M_UR50D",
+  "n_assays_ours": 30,
+  "full_217": false,
+  "ours_code_definition": 0.3991,
+  "ours_literal_definition": 0.4012,
+  "ours_summary_csv": 0.399,
+  "authors_same_assays_code_definition": 0.3992,
+  "authors_same_assays_literal_definition": 0.4013,
+  "authors_all_217_code_definition": 0.4138,
+  "authors_all_217_literal_definition": 0.4184,
+  "paper": 0.414,
+  "tolerance": 0.017,
+  "diff_vs_paper_code": -0.0149,
+  "within_tolerance_vs_paper": true,
+  "boot_se_ours_code": 0.0262,
+  "boot_se_ours_literal": 0.0243,
+  "per_function_ours_code": {
+   "Activity": 0.4472,
+   "Binding": 0.27,
+   "Expression": 0.4332,
+   "OrganismalFitness": 0.2903,
+   "Stability": 0.555
+  },
+  "n_function_types_present": 5,
+  "per_assay_max_abs_diff_vs_csv": 0.002,
+  "per_assay_n_abs_diff_gt_0.001": 1,
+  "per_assay_mean_diff_vs_csv": -6.7e-05,
+  "per_assay_largest_diffs": [
+   [
+    "POLG_CXB3N_Mattenberger_2021",
+    -0.002
+   ],
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    0.0
+   ],
+   [
+    "UBR5_HUMAN_Tsuboyama_2023_1I2T",
+    0.0
+   ],
+   [
+    "TRPC_THEMA_Chan_2017",
+    0.0
+   ],
+   [
+    "TPOR_HUMAN_Bridgford_2020",
+    0.0
+   ],
+   [
+    "TCRG1_MOUSE_Tsuboyama_2023_1E0L",
+    0.0
+   ],
+   [
+    "TADBP_HUMAN_Bolognesi_2019",
+    0.0
+   ],
+   [
+    "SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM",
+    0.0
+   ]
+  ],
+  "authors_zip_vs_csv_max_abs_diff_all_217": 0.0,
+  "per_mutant_vs_authors": {
+   "n_assays_compared": 30,
+   "n_assays_max_abs_diff_le_1e-3": 29,
+   "n_assays_max_abs_diff_le_1e-2": 29,
+   "overall_max_abs_diff": 3.2216882705688477,
+   "median_of_max_abs_diff": 4.053115844722399e-05,
+   "long_assays_n": 3,
+   "long_assays_max_abs_diff": 3.2216882705688477,
+   "short_assays_max_abs_diff": 0.00014448165893554688,
+   "min_pearson": 0.9964109826468979,
+   "n_unmatched_mutants": 0,
+   "worst_assays": [
+    [
+     "POLG_CXB3N_Mattenberger_2021",
+     2185,
+     3.2216882705688477,
+     0.9964109826468979
+    ],
+    [
+     "MSH2_HUMAN_Jia_2020",
+     934,
+     0.00014448165893554688,
+     0.9999999999924244
+    ],
+    [
+     "C6KNH7_9INFA_Lee_2018",
+     566,
+     0.00011110305786132812,
+     0.9999999999932263
+    ],
+    [
+     "PTEN_HUMAN_Matreyek_2021",
+     403,
+     7.62939453125e-05,
+     0.9999999999969663
+    ],
+    [
+     "CAR11_HUMAN_Meitlis_2020_gof",
+     1154,
+     7.43865966796875e-05,
+     0.9999999999941948
+    ],
+    [
+     "UBR5_HUMAN_Tsuboyama_2023_1I2T",
+     58,
+     6.914138793945312e-05,
+     0.9999999999923411
+    ],
+    [
+     "SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM",
+     536,
+     6.389617919921875e-05,
+     0.9999999999977982
+    ],
+    [
+     "KCNJ2_MOUSE_Coyote-Maestas_2022_surface",
+     428,
+     5.531311035161801e-05,
+     0.999999999997558
+    ]
+   ]
+  },
+  "assays_with_per_mutant_diff_gt_1e-3": [
+   "POLG_CXB3N_Mattenberger_2021"
+  ],
+  "msa_region_rescore": {
+   "POLG_CXB3N_Mattenberger_2021": {
+    "region": "1-861",
+    "region_max_abs_diff_vs_authors": 8.249282836869654e-05,
+    "spearman_full_seq": 0.3934,
+    "spearman_region": 0.3947,
+    "authors_spearman": 0.3947
+   }
+  },
+  "differing_assays_without_region_check": [],
+  "ours_code_definition_with_region_rescore": 0.3992,
+  "ours_literal_definition_with_region_rescore": 0.4013
+ }
+}

@@ -1,0 +1,6 @@
+SAME first 30099493 bytes of esm2_t6_8M_UR50D.pt
+SAME first 134095705 bytes of esm2_t12_35M_UR50D.pt
+SAME first 592774773 bytes of esm2_t30_150M_UR50D.pt
+- /dev/fd/63 differ: byte 1506803713, line 2056660
+curl: (23) Failure writing output to destination
+DIFF esm1b_t33_650M_UR50S.pt

@@ -1,0 +1,31 @@
+  0%|          | 0/30 [00:00<?, ?it/s]Processing DMS assay B2L11_HUMAN_Dutta_2010_binding-Mcl-1:   0%|          | 0/30 [00:00<?, ?it/s]Processing DMS assay C6KNH7_9INFA_Lee_2018:   0%|          | 0/30 [00:00<?, ?it/s]               Processing DMS assay C6KNH7_9INFA_Lee_2018:   7%|▋         | 2/30 [00:00<00:08,  3.35it/s]Processing DMS assay CAR11_HUMAN_Meitlis_2020_gof:   7%|▋         | 2/30 [00:00<00:08,  3.35it/s]Processing DMS assay CAR11_HUMAN_Meitlis_2020_gof:  10%|█         | 3/30 [00:00<00:07,  3.79it/s]Processing DMS assay CASP3_HUMAN_Roychowdhury_2020:  10%|█         | 3/30 [00:00<00:07,  3.79it/s]Processing DMS assay CSN4_MOUSE_Tsuboyama_2023_1UFM:  10%|█         | 3/30 [00:00<00:07,  3.79it/s]Processing DMS assay CSN4_MOUSE_Tsuboyama_2023_1UFM:  17%|█▋        | 5/30 [00:00<00:03,  6.45it/s]Processing DMS assay D7PM05_CLYGR_Somermeyer_2022:  17%|█▋        | 5/30 [00:00<00:03,  6.45it/s]  Processing DMS assay D7PM05_CLYGR_Somermeyer_2022:  20%|██        | 6/30 [00:01<00:06,  3.48it/s]Processing DMS assay DN7A_SACS2_Tsuboyama_2023_1JIC:  20%|██        | 6/30 [00:01<00:06,  3.48it/s]Processing DMS assay ERBB2_HUMAN_Elazar_2016:  20%|██        | 6/30 [00:01<00:06,  3.48it/s]       Processing DMS assay GLPA_HUMAN_Elazar_2016:  20%|██        | 6/30 [00:01<00:06,  3.48it/s] Processing DMS assay GLPA_HUMAN_Elazar_2016:  30%|███       | 9/30 [00:01<00:03,  6.60it/s]Processing DMS assay KCNJ2_MOUSE_Coyote-Maestas_2022_surface:  30%|███       | 9/30 [00:01<00:03,  6.60it/s]Processing DMS assay MBD11_ARATH_Tsuboyama_2023_6ACV:  30%|███       | 9/30 [00:01<00:03,  6.60it/s]        Processing DMS assay MBD11_ARATH_Tsuboyama_2023_6ACV:  37%|███▋      | 11/30 [00:01<00:02,  6.51it/s]Processing DMS assay MET_HUMAN_Estevam_2023:  37%|███▋      | 11/30 [00:01<00:02,  6.51it/s]         Processing DMS assay MSH2_HUMAN_Jia_2020:  37%|███▋      | 11/30 [00:02<00:02,  6.51it/s]   Processing DMS assay MSH2_HUMAN_Jia_2020:  43%|████▎     | 13/30 [00:03<00:07,  2.32it/s]Processing DMS assay OBSCN_HUMAN_Tsuboyama_2023_1V1C:  43%|████▎     | 13/30 [00:03<00:07,  2.32it/s]Processing DMS assay P53_HUMAN_Giacomelli_2018_WT_Nutlin:  43%|████▎     | 13/30 [00:04<00:07,  2.32it/s]Processing DMS assay P53_HUMAN_Giacomelli_2018_WT_Nutlin:  50%|█████     | 15/30 [00:04<00:05,  2.90it/s]Processing DMS assay PA_I34A1_Wu_2015:  50%|█████     | 15/30 [00:04<00:05,  2.90it/s]                   Processing DMS assay PA_I34A1_Wu_2015:  53%|█████▎    | 16/30 [00:04<00:04,  3.31it/s]Processing DMS assay PAI1_HUMAN_Huttinger_2021:  53%|█████▎    | 16/30 [00:04<00:04,  3.31it/s]Processing DMS assay PAI1_HUMAN_Huttinger_2021:  57%|█████▋    | 17/30 [00:04<00:03,  3.58it/s]Processing DMS assay POLG_CXB3N_Mattenberger_2021:  57%|█████▋    | 17/30 [00:04<00:03,  3.58it/s]Processing DMS assay POLG_CXB3N_Mattenberger_2021:  60%|██████    | 18/30 [00:07<00:10,  1.19it/s]Processing DMS assay PRKN_HUMAN_Clausen_2023:  60%|██████    | 18/30 [00:07<00:10,  1.19it/s]     Processing DMS assay PRKN_HUMAN_Clausen_2023:  63%|██████▎   | 19/30 [00:07<00:08,  1.36it/s]Processing DMS assay PTEN_HUMAN_Matreyek_2021:  63%|██████▎   | 19/30 [00:07<00:08,  1.36it/s]Processing DMS assay PTEN_HUMAN_Matreyek_2021:  67%|██████▋   | 20/30 [00:07<00:06,  1.66it/s]Processing DMS assay RAD_ANTMA_Tsuboyama_2023_2CJJ:  67%|██████▋   | 20/30 [00:07<00:06,  1.66it/s]Processing DMS assay SDA_BACSU_Tsuboyama_2023_1PV0:  67%|██████▋   | 20/30 [00:08<00:06,  1.66it/s]Processing DMS assay SRC_HUMAN_Ahler_2019:  67%|██████▋   | 20/30 [00:08<00:06,  1.66it/s]         Processing DMS assay SRC_HUMAN_Ahler_2019:  77%|███████▋  | 23/30 [00:08<00:02,  3.02it/s]Processing DMS assay SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM:  77%|███████▋  | 23/30 [00:08<00:02,  3.02it/s]Processing DMS assay SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM:  80%|████████  | 24/30 [00:08<00:01,  3.26it/s]Processing DMS assay TADBP_HUMAN_Bolognesi_2019:  80%|████████  | 24/30 [00:08<00:01,  3.26it/s]                 Processing DMS assay TCRG1_MOUSE_Tsuboyama_2023_1E0L:  80%|████████  | 24/30 [00:08<00:01,  3.26it/s]Processing DMS assay TCRG1_MOUSE_Tsuboyama_2023_1E0L:  87%|████████▋ | 26/30 [00:08<00:00,  4.63it/s]Processing DMS assay TPOR_HUMAN_Bridgford_2020:  87%|████████▋ | 26/30 [00:08<00:00,  4.63it/s]      Processing DMS assay TRPC_THEMA_Chan_2017:  87%|████████▋ | 26/30 [00:08<00:00,  4.63it/s]     Processing DMS assay TRPC_THEMA_Chan_2017:  93%|█████████▎| 28/30 [00:08<00:00,  6.17it/s]Processing DMS assay UBR5_HUMAN_Tsuboyama_2023_1I2T:  93%|█████████▎| 28/30 [00:08<00:00,  6.17it/s]Processing DMS assay YAIA_ECOLI_Tsuboyama_2023_2KVT:  93%|█████████▎| 28/30 [00:08<00:00,  6.17it/s]Processing DMS assay YAIA_ECOLI_Tsuboyama_2023_2KVT: 100%|██████████| 30/30 [00:08<00:00,  3.42it/s]
+Length merged file: 170
+Length merged file: 10754
+Length merged file: 2374
+Length merged file: 1567
+Length merged file: 3295
+Length merged file: 24515
+Length merged file: 1008
+Length merged file: 326
+Length merged file: 245
+Length merged file: 6917
+Length merged file: 2116
+Length merged file: 5393
+Length merged file: 16749
+Length merged file: 3197
+Length merged file: 7467
+Length merged file: 1820
+Length merged file: 5345
+Length merged file: 15711
+Length merged file: 8756
+Length merged file: 5083
+Length merged file: 912
+Length merged file: 2770
+Length merged file: 3372
+Length merged file: 3637
+Length merged file: 1196
+Length merged file: 1058
+Length merged file: 562
+Length merged file: 1519
+Length merged file: 1453
+Length merged file: 1890

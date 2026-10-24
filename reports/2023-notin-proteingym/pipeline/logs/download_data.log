@@ -1,0 +1,7 @@
+skip DMS_ProteinGym_substitutions.zip (verified)
+caution: filename not matched:  zero_shot_substitutions_scores/ESM1b/*
+caution: filename not matched:  zero_shot_substitutions_scoresunzip of scores failed
+done
+ not matched:  zero_shot_substitutions_scores/ESM2/35M/*
+caution: filename not matched:  zero_shot_substitutions_scores/ESM2/150M/*
+caution: filename not matched:  zero_shot_substitutions_scores/ESM2/650M/*

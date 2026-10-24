@@ -1,0 +1,4 @@
+ESM2_8M: corrected average with MSA-region scoring on the 5 assays = 0.2257 (paper 0.226)
+ESM2_35M: corrected average with MSA-region scoring on the 5 assays = 0.3208 (paper 0.321)
+ESM2_150M: corrected average with MSA-region scoring on the 5 assays = 0.3868 (paper 0.387)
+ESM2_650M: corrected average with MSA-region scoring on the 5 assays = 0.4138 (paper 0.414)

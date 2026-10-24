@@ -1,0 +1,302 @@
+{
+ "Spearman": {
+  "claim_id": "C1",
+  "n_assays_ours": 217,
+  "n_assays_authors": 217,
+  "ours_code_definition": 0.3941,
+  "ours_literal_definition": 0.3982,
+  "ours_summary_csv": 0.394,
+  "authors_code_definition": 0.3941,
+  "authors_literal_definition": 0.3982,
+  "paper": 0.394,
+  "tolerance": 0.014,
+  "diff_vs_paper_code": 0.0001,
+  "within_tolerance": true,
+  "boot_se_ours_code": 0.0143,
+  "boot_se_ours_literal": 0.0137,
+  "per_function_ours_code": {
+   "Activity": 0.4282,
+   "Binding": 0.287,
+   "Expression": 0.4062,
+   "OrganismalFitness": 0.3494,
+   "Stability": 0.4996
+  },
+  "per_assay_max_abs_diff": 0.0,
+  "per_assay_n_abs_diff_gt_0.001": 0,
+  "per_assay_n_exact": 217,
+  "per_assay_largest_diffs": [
+   [
+    "YNZC_BACSU_Tsuboyama_2023_2JVD",
+    0.0
+   ],
+   [
+    "YAP1_HUMAN_Araya_2012",
+    0.0
+   ],
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    0.0
+   ],
+   [
+    "VRPI_BPT7_Tsuboyama_2023_2WNM",
+    0.0
+   ],
+   [
+    "VKOR1_HUMAN_Chiasson_2020_activity",
+    0.0
+   ],
+   [
+    "VKOR1_HUMAN_Chiasson_2020_abundance",
+    0.0
+   ],
+   [
+    "VILI_CHICK_Tsuboyama_2023_1YU5",
+    0.0
+   ],
+   [
+    "VG08_BPP22_Tsuboyama_2023_2GP8",
+    0.0
+   ]
+  ]
+ },
+ "AUC": {
+  "claim_id": "C6",
+  "n_assays_ours": 217,
+  "n_assays_authors": 217,
+  "ours_code_definition": 0.7188,
+  "ours_literal_definition": 0.7223,
+  "ours_summary_csv": 0.719,
+  "authors_code_definition": 0.7188,
+  "authors_literal_definition": 0.7223,
+  "paper": 0.719,
+  "tolerance": 0.008,
+  "diff_vs_paper_code": -0.0002,
+  "within_tolerance": true,
+  "boot_se_ours_code": 0.0079,
+  "boot_se_ours_literal": 0.0075,
+  "per_function_ours_code": {
+   "Activity": 0.7301,
+   "Binding": 0.6625,
+   "Expression": 0.7204,
+   "OrganismalFitness": 0.6993,
+   "Stability": 0.7817
+  },
+  "per_assay_max_abs_diff": 0.0,
+  "per_assay_n_abs_diff_gt_0.001": 0,
+  "per_assay_n_exact": 217,
+  "per_assay_largest_diffs": [
+   [
+    "YNZC_BACSU_Tsuboyama_2023_2JVD",
+    0.0
+   ],
+   [
+    "YAP1_HUMAN_Araya_2012",
+    0.0
+   ],
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    0.0
+   ],
+   [
+    "VRPI_BPT7_Tsuboyama_2023_2WNM",
+    0.0
+   ],
+   [
+    "VKOR1_HUMAN_Chiasson_2020_activity",
+    0.0
+   ],
+   [
+    "VKOR1_HUMAN_Chiasson_2020_abundance",
+    0.0
+   ],
+   [
+    "VILI_CHICK_Tsuboyama_2023_1YU5",
+    0.0
+   ],
+   [
+    "VG08_BPP22_Tsuboyama_2023_2GP8",
+    0.0
+   ]
+  ]
+ },
+ "MCC": {
+  "claim_id": "C7",
+  "n_assays_ours": 217,
+  "n_assays_authors": 217,
+  "ours_code_definition": 0.3109,
+  "ours_literal_definition": 0.3145,
+  "ours_summary_csv": 0.311,
+  "authors_code_definition": 0.3109,
+  "authors_literal_definition": 0.3145,
+  "paper": 0.311,
+  "tolerance": 0.012,
+  "diff_vs_paper_code": -0.0001,
+  "within_tolerance": true,
+  "boot_se_ours_code": 0.0115,
+  "boot_se_ours_literal": 0.0111,
+  "per_function_ours_code": {
+   "Activity": 0.3282,
+   "Binding": 0.2214,
+   "Expression": 0.3203,
+   "OrganismalFitness": 0.2747,
+   "Stability": 0.4098
+  },
+  "per_assay_max_abs_diff": 0.0,
+  "per_assay_n_abs_diff_gt_0.001": 0,
+  "per_assay_n_exact": 217,
+  "per_assay_largest_diffs": [
+   [
+    "YNZC_BACSU_Tsuboyama_2023_2JVD",
+    0.0
+   ],
+   [
+    "YAP1_HUMAN_Araya_2012",
+    0.0
+   ],
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    0.0
+   ],
+   [
+    "VRPI_BPT7_Tsuboyama_2023_2WNM",
+    0.0
+   ],
+   [
+    "VKOR1_HUMAN_Chiasson_2020_activity",
+    0.0
+   ],
+   [
+    "VKOR1_HUMAN_Chiasson_2020_abundance",
+    0.0
+   ],
+   [
+    "VILI_CHICK_Tsuboyama_2023_1YU5",
+    0.0
+   ],
+   [
+    "VG08_BPP22_Tsuboyama_2023_2GP8",
+    0.0
+   ]
+  ]
+ },
+ "NDCG": {
+  "claim_id": "C8",
+  "n_assays_ours": 217,
+  "n_assays_authors": 217,
+  "ours_code_definition": 0.7467,
+  "ours_literal_definition": 0.7471,
+  "ours_summary_csv": 0.747,
+  "authors_code_definition": 0.7467,
+  "authors_literal_definition": 0.7471,
+  "paper": 0.747,
+  "tolerance": 0.015,
+  "diff_vs_paper_code": -0.0003,
+  "within_tolerance": true,
+  "boot_se_ours_code": 0.015,
+  "boot_se_ours_literal": 0.015,
+  "per_function_ours_code": {
+   "Activity": 0.767,
+   "Binding": 0.6682,
+   "Expression": 0.7674,
+   "OrganismalFitness": 0.6988,
+   "Stability": 0.8322
+  },
+  "per_assay_max_abs_diff": 0.0,
+  "per_assay_n_abs_diff_gt_0.001": 0,
+  "per_assay_n_exact": 217,
+  "per_assay_largest_diffs": [
+   [
+    "YNZC_BACSU_Tsuboyama_2023_2JVD",
+    0.0
+   ],
+   [
+    "YAP1_HUMAN_Araya_2012",
+    0.0
+   ],
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    0.0
+   ],
+   [
+    "VRPI_BPT7_Tsuboyama_2023_2WNM",
+    0.0
+   ],
+   [
+    "VKOR1_HUMAN_Chiasson_2020_activity",
+    0.0
+   ],
+   [
+    "VKOR1_HUMAN_Chiasson_2020_abundance",
+    0.0
+   ],
+   [
+    "VILI_CHICK_Tsuboyama_2023_1YU5",
+    0.0
+   ],
+   [
+    "VG08_BPP22_Tsuboyama_2023_2GP8",
+    0.0
+   ]
+  ]
+ },
+ "Top_recall": {
+  "claim_id": "C9",
+  "n_assays_ours": 217,
+  "n_assays_authors": 217,
+  "ours_code_definition": 0.2021,
+  "ours_literal_definition": 0.2042,
+  "ours_summary_csv": 0.202,
+  "authors_code_definition": 0.2021,
+  "authors_literal_definition": 0.2042,
+  "paper": 0.203,
+  "tolerance": 0.007,
+  "diff_vs_paper_code": -0.0009,
+  "within_tolerance": true,
+  "boot_se_ours_code": 0.0068,
+  "boot_se_ours_literal": 0.0066,
+  "per_function_ours_code": {
+   "Activity": 0.1802,
+   "Binding": 0.1783,
+   "Expression": 0.1966,
+   "OrganismalFitness": 0.1732,
+   "Stability": 0.2823
+  },
+  "per_assay_max_abs_diff": 0.0,
+  "per_assay_n_abs_diff_gt_0.001": 0,
+  "per_assay_n_exact": 217,
+  "per_assay_largest_diffs": [
+   [
+    "YNZC_BACSU_Tsuboyama_2023_2JVD",
+    0.0
+   ],
+   [
+    "YAP1_HUMAN_Araya_2012",
+    0.0
+   ],
+   [
+    "YAIA_ECOLI_Tsuboyama_2023_2KVT",
+    0.0
+   ],
+   [
+    "VRPI_BPT7_Tsuboyama_2023_2WNM",
+    0.0
+   ],
+   [
+    "VKOR1_HUMAN_Chiasson_2020_activity",
+    0.0
+   ],
+   [
+    "VKOR1_HUMAN_Chiasson_2020_abundance",
+    0.0
+   ],
+   [
+    "VILI_CHICK_Tsuboyama_2023_1YU5",
+    0.0
+   ],
+   [
+    "VG08_BPP22_Tsuboyama_2023_2GP8",
+    0.0
+   ]
+  ]
+ }
+}

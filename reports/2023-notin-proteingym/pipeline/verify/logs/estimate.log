@@ -1,0 +1,13 @@
+assays 217 unique target_seq 187 sum seq_len 86179 mutants 2465767
+8M: all assays 0.32 h, unique sequences 0.27 h
+35M: all assays 0.78 h, unique sequences 0.67 h
+150M: all assays 1.84 h, unique sequences 1.58 h
+650M: all assays 4.86 h, unique sequences 4.17 h
+650M first 30 of the order: 0.94 h
+650M first 40 of the order: 1.29 h
+650M first 50 of the order: 1.49 h
+650M first 54 of the order: 1.56 h
+650M first 60 of the order: 1.97 h
+650M first 70 of the order: 2.06 h
+650M first 80 of the order: 2.25 h
+650M first 100 of the order: 2.51 h

@@ -1,0 +1,29 @@
+/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py:212: UserWarning: Regression weights not found, predicting contacts will not produce correct results.
+  warnings.warn(
+KCNH2_HUMAN_Kozek_2020 region=535-565 spearman_vs_authors=1.000000 max_abs_diff=3.10e-06 spearman_vs_DMS=0.253
+SCN5A_HUMAN_Glazer_2019 region=1611-1642 spearman_vs_authors=1.000000 max_abs_diff=3.58e-06 spearman_vs_DMS=0.216
+POLG_HCVJF_Qi_2014 region=1984-2089 spearman_vs_authors=1.000000 max_abs_diff=3.81e-06 spearman_vs_DMS=0.101
+POLG_CXB3N_Mattenberger_2021 region=1-861 spearman_vs_authors=1.000000 max_abs_diff=7.87e-06 spearman_vs_DMS=-0.079
+A0A140D2T1_ZIKV_Sourisseau_2019 region=281-804 spearman_vs_authors=1.000000 max_abs_diff=9.30e-06 spearman_vs_DMS=-0.073
+/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py:212: UserWarning: Regression weights not found, predicting contacts will not produce correct results.
+  warnings.warn(
+KCNH2_HUMAN_Kozek_2020 region=535-565 spearman_vs_authors=1.000000 max_abs_diff=3.34e-06 spearman_vs_DMS=0.197
+SCN5A_HUMAN_Glazer_2019 region=1611-1642 spearman_vs_authors=1.000000 max_abs_diff=8.11e-06 spearman_vs_DMS=0.177
+POLG_HCVJF_Qi_2014 region=1984-2089 spearman_vs_authors=1.000000 max_abs_diff=4.53e-06 spearman_vs_DMS=0.128
+POLG_CXB3N_Mattenberger_2021 region=1-861 spearman_vs_authors=1.000000 max_abs_diff=6.91e-06 spearman_vs_DMS=-0.056
+A0A140D2T1_ZIKV_Sourisseau_2019 region=281-804 spearman_vs_authors=1.000000 max_abs_diff=1.29e-05 spearman_vs_DMS=-0.054
+EXIT 0
+/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py:212: UserWarning: Regression weights not found, predicting contacts will not produce correct results.
+  warnings.warn(
+ESM2_150M KCNH2_HUMAN_Kozek_2020 region=535-565 spearman_vs_authors=1.000000 max_abs_diff=4.05e-06 spearman_vs_DMS=0.229
+ESM2_150M SCN5A_HUMAN_Glazer_2019 region=1611-1642 spearman_vs_authors=1.000000 max_abs_diff=4.77e-06 spearman_vs_DMS=0.156
+ESM2_150M POLG_HCVJF_Qi_2014 region=1984-2089 spearman_vs_authors=1.000000 max_abs_diff=7.63e-06 spearman_vs_DMS=0.114
+ESM2_150M POLG_CXB3N_Mattenberger_2021 region=1-861 spearman_vs_authors=1.000000 max_abs_diff=4.77e-05 spearman_vs_DMS=0.177
+ESM2_150M A0A140D2T1_ZIKV_Sourisseau_2019 region=281-804 spearman_vs_authors=1.000000 max_abs_diff=1.62e-05 spearman_vs_DMS=-0.058
+/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py:212: UserWarning: Regression weights not found, predicting contacts will not produce correct results.
+  warnings.warn(
+ESM2_650M KCNH2_HUMAN_Kozek_2020 region=535-565 spearman_vs_authors=1.000000 max_abs_diff=7.15e-06 spearman_vs_DMS=0.280
+ESM2_650M SCN5A_HUMAN_Glazer_2019 region=1611-1642 spearman_vs_authors=1.000000 max_abs_diff=1.43e-05 spearman_vs_DMS=0.183
+ESM2_650M POLG_HCVJF_Qi_2014 region=1984-2089 spearman_vs_authors=1.000000 max_abs_diff=4.53e-06 spearman_vs_DMS=0.116
+ESM2_650M POLG_CXB3N_Mattenberger_2021 region=1-861 spearman_vs_authors=1.000000 max_abs_diff=8.25e-05 spearman_vs_DMS=0.395
+ESM2_650M A0A140D2T1_ZIKV_Sourisseau_2019 region=281-804 spearman_vs_authors=1.000000 max_abs_diff=6.15e-05 spearman_vs_DMS=0.213

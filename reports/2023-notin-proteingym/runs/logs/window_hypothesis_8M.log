@@ -1,0 +1,25 @@
+/mnt/e/Ciencia/meio/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py:212: UserWarning: Regression weights not found, predicting contacts will not produce correct results.
+  warnings.warn(
+KCNH2_HUMAN_Kozek_2020 len=1159 mode=optimal    spearman_vs_authors=0.361331 spearman_vs_DMS=-0.140
+KCNH2_HUMAN_Kozek_2020 len=1159 mode=full       spearman_vs_authors=0.341892 spearman_vs_DMS=-0.152
+KCNH2_HUMAN_Kozek_2020 len=1159 mode=window1022 spearman_vs_authors=0.361041 spearman_vs_DMS=-0.141
+KCNH2_HUMAN_Kozek_2020 authors spearman_vs_DMS=0.253
+SCN5A_HUMAN_Glazer_2019 len=2016 mode=optimal    spearman_vs_authors=0.390095 spearman_vs_DMS=0.121
+SCN5A_HUMAN_Glazer_2019 len=2016 mode=full       spearman_vs_authors=0.436274 spearman_vs_DMS=0.152
+SCN5A_HUMAN_Glazer_2019 len=2016 mode=window1022 spearman_vs_authors=0.390748 spearman_vs_DMS=0.120
+SCN5A_HUMAN_Glazer_2019 authors spearman_vs_DMS=0.216
+BRCA1_HUMAN_Findlay_2018 len=1863 mode=optimal    spearman_vs_authors=1.000000 spearman_vs_DMS=0.134
+BRCA1_HUMAN_Findlay_2018 len=1863 mode=full       spearman_vs_authors=0.960869 spearman_vs_DMS=0.132
+BRCA1_HUMAN_Findlay_2018 len=1863 mode=window1022 spearman_vs_authors=0.999974 spearman_vs_DMS=0.135
+BRCA1_HUMAN_Findlay_2018 authors spearman_vs_DMS=0.134
+POLG_HCVJF_Qi_2014 len=3033 mode=optimal    spearman_vs_authors=0.911138 spearman_vs_DMS=0.099
+POLG_HCVJF_Qi_2014 len=3033 mode=full       spearman_vs_authors=0.721131 spearman_vs_DMS=0.052
+POLG_HCVJF_Qi_2014 len=3033 mode=window1022 spearman_vs_authors=0.911168 spearman_vs_DMS=0.100
+POLG_HCVJF_Qi_2014 authors spearman_vs_DMS=0.101
+POLG_CXB3N_Mattenberger_2021 len=2185 mode=optimal    spearman_vs_authors=0.991730 spearman_vs_DMS=-0.074
+POLG_CXB3N_Mattenberger_2021 len=2185 mode=full       spearman_vs_authors=0.958109 spearman_vs_DMS=-0.073
+POLG_CXB3N_Mattenberger_2021 len=2185 mode=window1022 spearman_vs_authors=0.991802 spearman_vs_DMS=-0.074
+POLG_CXB3N_Mattenberger_2021 authors spearman_vs_DMS=-0.079
+A0A140D2T1_ZIKV_Sourisseau_2019 len=3423 mode=optimal    spearman_vs_authors=0.960261 spearman_vs_DMS=-0.073
+STOPPED by hand after ZIKV optimal: other modes on ZIKV were not needed (MSA-region hypothesis tested instead)
+EXIT 143

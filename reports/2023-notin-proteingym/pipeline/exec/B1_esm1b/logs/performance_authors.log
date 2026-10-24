@@ -1,0 +1,652 @@
+There are 217 DMSs in mapping file
+A0A140D2T1_ZIKV_Sourisseau_2019
+Length DMS: 9576
+Number of mutants: 9576
+A0A192B1T2_9HIV1_Haddox_2018
+Length DMS: 12577
+Number of mutants: 12577
+A0A1I9GEU1_NEIME_Kennouche_2019
+Length DMS: 922
+Number of mutants: 922
+A0A247D711_LISMN_Stadelmann_2021
+Length DMS: 1653
+Number of mutants: 1653
+A0A2Z5U3Z0_9INFA_Doud_2016
+Length DMS: 10715
+Number of mutants: 10715
+A0A2Z5U3Z0_9INFA_Wu_2014
+Length DMS: 2350
+Number of mutants: 2350
+A4_HUMAN_Seuma_2022
+Length DMS: 14811
+Number of mutants: 14811
+A4D664_9INFA_Soh_2019
+Length DMS: 14421
+Number of mutants: 14421
+A4GRB6_PSEAI_Chen_2020
+Length DMS: 5004
+Number of mutants: 5004
+AACC1_PSEAI_Dandage_2018
+Length DMS: 1801
+Number of mutants: 1801
+ACE2_HUMAN_Chan_2020
+Length DMS: 2223
+Number of mutants: 2223
+ADRB2_HUMAN_Jones_2020
+Length DMS: 7800
+Number of mutants: 7800
+AICDA_HUMAN_Gajula_2014_3cycles
+Length DMS: 209
+Number of mutants: 209
+AMFR_HUMAN_Tsuboyama_2023_4G3O
+Length DMS: 2972
+Number of mutants: 2972
+AMIE_PSEAE_Wrenbeck_2017
+Length DMS: 6227
+Number of mutants: 6227
+ANCSZ_Hobbs_2022
+Length DMS: 4670
+Number of mutants: 4670
+ARGR_ECOLI_Tsuboyama_2023_1AOY
+Length DMS: 1287
+Number of mutants: 1287
+B2L11_HUMAN_Dutta_2010_binding-Mcl-1
+Length DMS: 170
+Number of mutants: 170
+BBC1_YEAST_Tsuboyama_2023_1TG0
+Length DMS: 2069
+Number of mutants: 2069
+BCHB_CHLTE_Tsuboyama_2023_2KRU
+Length DMS: 1572
+Number of mutants: 1572
+BLAT_ECOLX_Deng_2012
+Length DMS: 4996
+Number of mutants: 4996
+BLAT_ECOLX_Firnberg_2014
+Length DMS: 4783
+Number of mutants: 4783
+BLAT_ECOLX_Jacquier_2013
+Length DMS: 989
+Number of mutants: 989
+BLAT_ECOLX_Stiffler_2015
+Length DMS: 4996
+Number of mutants: 4996
+BRCA1_HUMAN_Findlay_2018
+Length DMS: 1837
+Number of mutants: 1837
+BRCA2_HUMAN_Erwood_2022_HEK293T
+Length DMS: 265
+Number of mutants: 265
+C6KNH7_9INFA_Lee_2018
+Length DMS: 10754
+Number of mutants: 10754
+CALM1_HUMAN_Weile_2017
+Length DMS: 1813
+Number of mutants: 1813
+CAPSD_AAV2S_Sinai_2021
+Length DMS: 42328
+Number of mutants: 42328
+CAR11_HUMAN_Meitlis_2020_gof
+Length DMS: 2374
+Number of mutants: 2374
+CAR11_HUMAN_Meitlis_2020_lof
+Length DMS: 2395
+Number of mutants: 2395
+CAS9_STRP1_Spencer_2017_positive
+Length DMS: 8117
+Number of mutants: 8117
+CASP3_HUMAN_Roychowdhury_2020
+Length DMS: 1567
+Number of mutants: 1567
+CASP7_HUMAN_Roychowdhury_2020
+Length DMS: 1680
+Number of mutants: 1680
+CATR_CHLRE_Tsuboyama_2023_2AMI
+Length DMS: 1903
+Number of mutants: 1903
+CBPA2_HUMAN_Tsuboyama_2023_1O6X
+Length DMS: 2068
+Number of mutants: 2068
+CBS_HUMAN_Sun_2020
+Length DMS: 7217
+Number of mutants: 7217
+CBX4_HUMAN_Tsuboyama_2023_2K28
+Length DMS: 2282
+Number of mutants: 2282
+CCDB_ECOLI_Adkar_2012
+Length DMS: 1176
+Number of mutants: 1176
+CCDB_ECOLI_Tripathi_2016
+Length DMS: 1663
+Number of mutants: 1663
+CCR5_HUMAN_Gill_2023
+Length DMS: 6137
+Number of mutants: 6137
+CD19_HUMAN_Klesmith_2019_FMC_singles
+Length DMS: 3761
+Number of mutants: 3761
+CP2C9_HUMAN_Amorosi_2021_abundance
+Length DMS: 6370
+Number of mutants: 6370
+CP2C9_HUMAN_Amorosi_2021_activity
+Length DMS: 6142
+Number of mutants: 6142
+CSN4_MOUSE_Tsuboyama_2023_1UFM
+Length DMS: 3295
+Number of mutants: 3295
+CUE1_YEAST_Tsuboyama_2023_2MYX
+Length DMS: 1580
+Number of mutants: 1580
+D7PM05_CLYGR_Somermeyer_2022
+Length DMS: 24515
+Number of mutants: 24515
+DLG4_HUMAN_Faure_2021
+Length DMS: 6976
+Number of mutants: 6976
+DLG4_RAT_McLaughlin_2012
+Length DMS: 1576
+Number of mutants: 1576
+DN7A_SACS2_Tsuboyama_2023_1JIC
+Length DMS: 1008
+Number of mutants: 1008
+DNJA1_HUMAN_Tsuboyama_2023_2LO1
+Length DMS: 2264
+Number of mutants: 2264
+DOCK1_MOUSE_Tsuboyama_2023_2M0Y
+Length DMS: 2915
+Number of mutants: 2915
+DYR_ECOLI_Nguyen_2023
+Length DMS: 2916
+Number of mutants: 2916
+DYR_ECOLI_Thompson_2019
+Length DMS: 2363
+Number of mutants: 2363
+ENV_HV1B9_DuenasDecamp_2016
+Length DMS: 375
+Number of mutants: 375
+ENV_HV1BR_Haddox_2016
+Length DMS: 12863
+Number of mutants: 12863
+ENVZ_ECOLI_Ghose_2023
+Length DMS: 1121
+Number of mutants: 1121
+EPHB2_HUMAN_Tsuboyama_2023_1F0M
+Length DMS: 1960
+Number of mutants: 1960
+ERBB2_HUMAN_Elazar_2016
+Length DMS: 326
+Number of mutants: 326
+ESTA_BACSU_Nutschel_2020
+Length DMS: 2172
+Number of mutants: 2172
+F7YBW8_MESOW_Ding_2023
+Length DMS: 7922
+Number of mutants: 7922
+F7YBW8_MESOW_Aakre_2015
+Length DMS: 9192
+Number of mutants: 9192
+FECA_ECOLI_Tsuboyama_2023_2D1U
+Length DMS: 1886
+Number of mutants: 1886
+FKBP3_HUMAN_Tsuboyama_2023_2KFV
+Length DMS: 1237
+Number of mutants: 1237
+GAL4_YEAST_Kitzman_2015
+Length DMS: 1195
+Number of mutants: 1195
+GCN4_YEAST_Staller_2018
+Length DMS: 2638
+Number of mutants: 2638
+GDIA_HUMAN_Silverstein_2021
+Length DMS: 1154
+Number of mutants: 1154
+GFP_AEQVI_Sarkisyan_2016
+Length DMS: 51714
+Number of mutants: 51714
+GLPA_HUMAN_Elazar_2016
+Length DMS: 245
+Number of mutants: 245
+GRB2_HUMAN_Faure_2021
+Length DMS: 63366
+Number of mutants: 63366
+HCP_LAMBD_Tsuboyama_2023_2L6Q
+Length DMS: 1040
+Number of mutants: 1040
+HECD1_HUMAN_Tsuboyama_2023_3DKM
+Length DMS: 5586
+Number of mutants: 5586
+HEM3_HUMAN_Loggerenberg_2023
+Length DMS: 5689
+Number of mutants: 5689
+HIS7_YEAST_Pokusaeva_2019
+Length DMS: 496137
+Number of mutants: 496137
+HMDH_HUMAN_Jiang_2019
+Length DMS: 16853
+Number of mutants: 16853
+HSP82_YEAST_Cote-Hammarlof_2020_growth-H2O2
+Length DMS: 2252
+Number of mutants: 2252
+HSP82_YEAST_Flynn_2019
+Length DMS: 13294
+Number of mutants: 13294
+HSP82_YEAST_Mishra_2016
+Length DMS: 4323
+Number of mutants: 4323
+HXK4_HUMAN_Gersing_2022_activity
+Length DMS: 8570
+Number of mutants: 8570
+HXK4_HUMAN_Gersing_2023_abundance
+Length DMS: 8396
+Number of mutants: 8396
+I6TAH8_I68A0_Doud_2015
+Length DMS: 9462
+Number of mutants: 9462
+IF1_ECOLI_Kelsic_2016
+Length DMS: 1367
+Number of mutants: 1367
+ILF3_HUMAN_Tsuboyama_2023_2L33
+Length DMS: 1329
+Number of mutants: 1329
+ISDH_STAAW_Tsuboyama_2023_2LHR
+Length DMS: 1944
+Number of mutants: 1944
+KCNE1_HUMAN_Muhammad_2023_expression
+Length DMS: 2339
+Number of mutants: 2339
+KCNE1_HUMAN_Muhammad_2023_function
+Length DMS: 2315
+Number of mutants: 2315
+KCNH2_HUMAN_Kozek_2020
+Length DMS: 200
+Number of mutants: 200
+KCNJ2_MOUSE_Coyote-Maestas_2022_function
+Length DMS: 6963
+Number of mutants: 6963
+KCNJ2_MOUSE_Coyote-Maestas_2022_surface
+Length DMS: 6917
+Number of mutants: 6917
+KKA2_KLEPN_Melnikov_2014
+Length DMS: 4960
+Number of mutants: 4960
+LGK_LIPST_Klesmith_2015
+Length DMS: 7890
+Number of mutants: 7890
+LYAM1_HUMAN_Elazar_2016
+Length DMS: 359
+Number of mutants: 359
+MAFG_MOUSE_Tsuboyama_2023_1K1V
+Length DMS: 1429
+Number of mutants: 1429
+MBD11_ARATH_Tsuboyama_2023_6ACV
+Length DMS: 2116
+Number of mutants: 2116
+MET_HUMAN_Estevam_2023
+Length DMS: 5393
+Number of mutants: 5393
+MK01_HUMAN_Brenan_2016
+Length DMS: 6809
+Number of mutants: 6809
+MLAC_ECOLI_MacRae_2023
+Length DMS: 4007
+Number of mutants: 4007
+MSH2_HUMAN_Jia_2020
+Length DMS: 16749
+Number of mutants: 16749
+MTH3_HAEAE_RockahShmuel_2015
+Length DMS: 1777
+Number of mutants: 1777
+MTHR_HUMAN_Weile_2021
+Length DMS: 12464
+Number of mutants: 12464
+MYO3_YEAST_Tsuboyama_2023_2BTT
+Length DMS: 3297
+Number of mutants: 3297
+NCAP_I34A1_Doud_2015
+Length DMS: 9462
+Number of mutants: 9462
+NKX31_HUMAN_Tsuboyama_2023_2L9R
+Length DMS: 2482
+Number of mutants: 2482
+NPC1_HUMAN_Erwood_2022_HEK293T
+Length DMS: 637
+Number of mutants: 637
+NPC1_HUMAN_Erwood_2022_RPE1
+Length DMS: 63
+Number of mutants: 63
+NRAM_I33A0_Jiang_2016
+Length DMS: 298
+Number of mutants: 298
+NUD15_HUMAN_Suiter_2020
+Length DMS: 2844
+Number of mutants: 2844
+NUSA_ECOLI_Tsuboyama_2023_1WCL
+Length DMS: 2028
+Number of mutants: 2028
+NUSG_MYCTU_Tsuboyama_2023_2MI6
+Length DMS: 1380
+Number of mutants: 1380
+OBSCN_HUMAN_Tsuboyama_2023_1V1C
+Length DMS: 3197
+Number of mutants: 3197
+ODP2_GEOSE_Tsuboyama_2023_1W4G
+Length DMS: 1134
+Number of mutants: 1134
+OPSD_HUMAN_Wan_2019
+Length DMS: 165
+Number of mutants: 165
+OTC_HUMAN_Lo_2023
+Length DMS: 1570
+Number of mutants: 1570
+OTU7A_HUMAN_Tsuboyama_2023_2L2D
+Length DMS: 635
+Number of mutants: 635
+OXDA_RHOTO_Vanella_2023_activity
+Length DMS: 6396
+Number of mutants: 6396
+OXDA_RHOTO_Vanella_2023_expression
+Length DMS: 6769
+Number of mutants: 6769
+P53_HUMAN_Giacomelli_2018_Null_Etoposide
+Length DMS: 7467
+Number of mutants: 7467
+P53_HUMAN_Giacomelli_2018_Null_Nutlin
+Length DMS: 7467
+Number of mutants: 7467
+P53_HUMAN_Giacomelli_2018_WT_Nutlin
+Length DMS: 7467
+Number of mutants: 7467
+P53_HUMAN_Kotler_2018
+Length DMS: 1048
+Number of mutants: 1048
+P84126_THETH_Chan_2017
+Length DMS: 1519
+Number of mutants: 1519
+PA_I34A1_Wu_2015
+Length DMS: 1820
+Number of mutants: 1820
+PABP_YEAST_Melamed_2013
+Length DMS: 37708
+Number of mutants: 37708
+PAI1_HUMAN_Huttinger_2021
+Length DMS: 5345
+Number of mutants: 5345
+PHOT_CHLRE_Chen_2023
+Length DMS: 167529
+Number of mutants: 167529
+PIN1_HUMAN_Tsuboyama_2023_1I6C
+Length DMS: 802
+Number of mutants: 802
+PITX2_HUMAN_Tsuboyama_2023_2L7M
+Length DMS: 1824
+Number of mutants: 1824
+PKN1_HUMAN_Tsuboyama_2023_1URF
+Length DMS: 1301
+Number of mutants: 1301
+POLG_CXB3N_Mattenberger_2021
+Length DMS: 15711
+Number of mutants: 15711
+POLG_DEN26_Suphatrakul_2023
+Length DMS: 16897
+Number of mutants: 16897
+POLG_HCVJF_Qi_2014
+Length DMS: 1630
+Number of mutants: 1630
+POLG_PESV_Tsuboyama_2023_2MXD
+Length DMS: 5130
+Number of mutants: 5130
+PPARG_HUMAN_Majithia_2016
+Length DMS: 9576
+Number of mutants: 9576
+PPM1D_HUMAN_Miller_2022
+Length DMS: 7889
+Number of mutants: 7889
+PR40A_HUMAN_Tsuboyama_2023_1UZC
+Length DMS: 2033
+Number of mutants: 2033
+PRKN_HUMAN_Clausen_2023
+Length DMS: 8756
+Number of mutants: 8756
+PSAE_PICP2_Tsuboyama_2023_1PSE
+Length DMS: 1579
+Number of mutants: 1579
+PTEN_HUMAN_Matreyek_2021
+Length DMS: 5083
+Number of mutants: 5083
+PTEN_HUMAN_Mighell_2018
+Length DMS: 7260
+Number of mutants: 7260
+Q2N0S5_9HIV1_Haddox_2018
+Length DMS: 12729
+Number of mutants: 12729
+Q53Z42_HUMAN_McShan_2019_binding-TAPBPR
+Length DMS: 3344
+Number of mutants: 3344
+Q53Z42_HUMAN_McShan_2019_expression
+Length DMS: 3344
+Number of mutants: 3344
+Q59976_STRSQ_Romero_2015
+Length DMS: 2999
+Number of mutants: 2999
+Q6WV12_9MAXI_Somermeyer_2022
+Length DMS: 31401
+Number of mutants: 31401
+Q837P4_ENTFA_Meier_2023
+Length DMS: 697
+Number of mutants: 697
+Q837P5_ENTFA_Meier_2023
+Length DMS: 747
+Number of mutants: 747
+Q8WTC7_9CNID_Somermeyer_2022
+Length DMS: 33510
+Number of mutants: 33510
+R1AB_SARS2_Flynn_2022
+Length DMS: 5725
+Number of mutants: 5725
+RAD_ANTMA_Tsuboyama_2023_2CJJ
+Length DMS: 912
+Number of mutants: 912
+RAF1_HUMAN_Zinkus-Boltz_2019
+Length DMS: 297
+Number of mutants: 297
+RASH_HUMAN_Bandaru_2017
+Length DMS: 3134
+Number of mutants: 3134
+RASK_HUMAN_Weng_2022_abundance
+Length DMS: 26012
+Number of mutants: 26012
+RASK_HUMAN_Weng_2022_binding-DARPin_K55
+Length DMS: 24873
+Number of mutants: 24873
+RBP1_HUMAN_Tsuboyama_2023_2KWH
+Length DMS: 1332
+Number of mutants: 1332
+RCD1_ARATH_Tsuboyama_2023_5OAO
+Length DMS: 1261
+Number of mutants: 1261
+RCRO_LAMBD_Tsuboyama_2023_1ORC
+Length DMS: 2278
+Number of mutants: 2278
+RD23A_HUMAN_Tsuboyama_2023_1IFY
+Length DMS: 1019
+Number of mutants: 1019
+RDRP_I33A0_Li_2023
+Length DMS: 12003
+Number of mutants: 12003
+REV_HV1H2_Fernandes_2016
+Length DMS: 2147
+Number of mutants: 2147
+RFAH_ECOLI_Tsuboyama_2023_2LCL
+Length DMS: 1326
+Number of mutants: 1326
+RL20_AQUAE_Tsuboyama_2023_1GYZ
+Length DMS: 1461
+Number of mutants: 1461
+RL40A_YEAST_Mavor_2016
+Length DMS: 1253
+Number of mutants: 1253
+RL40A_YEAST_Roscoe_2013
+Length DMS: 1195
+Number of mutants: 1195
+RL40A_YEAST_Roscoe_2014
+Length DMS: 1380
+Number of mutants: 1380
+RNC_ECOLI_Weeks_2023
+Length DMS: 4277
+Number of mutants: 4277
+RPC1_BP434_Tsuboyama_2023_1R69
+Length DMS: 1459
+Number of mutants: 1459
+RPC1_LAMBD_Li_2019_high-expression
+Length DMS: 351
+Number of mutants: 351
+RPC1_LAMBD_Li_2019_low-expression
+Length DMS: 351
+Number of mutants: 351
+RS15_GEOSE_Tsuboyama_2023_1A32
+Length DMS: 1195
+Number of mutants: 1195
+S22A1_HUMAN_Yee_2023_abundance
+Length DMS: 9803
+Number of mutants: 9803
+S22A1_HUMAN_Yee_2023_activity
+Length DMS: 10094
+Number of mutants: 10094
+SAV1_MOUSE_Tsuboyama_2023_2YSB
+Length DMS: 965
+Number of mutants: 965
+SBI_STAAM_Tsuboyama_2023_2JVG
+Length DMS: 1025
+Number of mutants: 1025
+SC6A4_HUMAN_Young_2021
+Length DMS: 11576
+Number of mutants: 11576
+SCIN_STAAR_Tsuboyama_2023_2QFF
+Length DMS: 1212
+Number of mutants: 1212
+SCN5A_HUMAN_Glazer_2019
+Length DMS: 224
+Number of mutants: 224
+SDA_BACSU_Tsuboyama_2023_1PV0
+Length DMS: 2770
+Number of mutants: 2770
+SERC_HUMAN_Xie_2023
+Length DMS: 1914
+Number of mutants: 1914
+SHOC2_HUMAN_Kwon_2022
+Length DMS: 10972
+Number of mutants: 10972
+SOX30_HUMAN_Tsuboyama_2023_7JJK
+Length DMS: 1010
+Number of mutants: 1010
+SPA_STAAU_Tsuboyama_2023_1LP1
+Length DMS: 2105
+Number of mutants: 2105
+SPG1_STRSG_Olson_2014
+Length DMS: 536962
+Number of mutants: 536962
+SPG1_STRSG_Wu_2016
+Length DMS: 149360
+Number of mutants: 149360
+SPG2_STRSG_Tsuboyama_2023_5UBS
+Length DMS: 1451
+Number of mutants: 1451
+SPIKE_SARS2_Starr_2020_binding
+Length DMS: 3802
+Number of mutants: 3802
+SPIKE_SARS2_Starr_2020_expression
+Length DMS: 3798
+Number of mutants: 3798
+SPTN1_CHICK_Tsuboyama_2023_1TUD
+Length DMS: 3201
+Number of mutants: 3201
+SQSTM_MOUSE_Tsuboyama_2023_2RRU
+Length DMS: 707
+Number of mutants: 707
+SR43C_ARATH_Tsuboyama_2023_2N88
+Length DMS: 1583
+Number of mutants: 1583
+SRBS1_HUMAN_Tsuboyama_2023_2O2W
+Length DMS: 1556
+Number of mutants: 1556
+SRC_HUMAN_Ahler_2019
+Length DMS: 3372
+Number of mutants: 3372
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM
+Length DMS: 3637
+Number of mutants: 3637
+SRC_HUMAN_Nguyen_2022
+Length DMS: 3366
+Number of mutants: 3366
+SUMO1_HUMAN_Weile_2017
+Length DMS: 1700
+Number of mutants: 1700
+SYUA_HUMAN_Newberry_2020
+Length DMS: 2497
+Number of mutants: 2497
+TADBP_HUMAN_Bolognesi_2019
+Length DMS: 1196
+Number of mutants: 1196
+TAT_HV1BR_Fernandes_2016
+Length DMS: 1577
+Number of mutants: 1577
+TCRG1_MOUSE_Tsuboyama_2023_1E0L
+Length DMS: 1058
+Number of mutants: 1058
+THO1_YEAST_Tsuboyama_2023_2WQG
+Length DMS: 1279
+Number of mutants: 1279
+TNKS2_HUMAN_Tsuboyama_2023_5JRT
+Length DMS: 1479
+Number of mutants: 1479
+TPK1_HUMAN_Weile_2017
+Length DMS: 3181
+Number of mutants: 3181
+TPMT_HUMAN_Matreyek_2018
+Length DMS: 3648
+Number of mutants: 3648
+TPOR_HUMAN_Bridgford_2020
+Length DMS: 562
+Number of mutants: 562
+TRPC_SACS2_Chan_2017
+Length DMS: 1519
+Number of mutants: 1519
+TRPC_THEMA_Chan_2017
+Length DMS: 1519
+Number of mutants: 1519
+UBC9_HUMAN_Weile_2017
+Length DMS: 2563
+Number of mutants: 2563
+UBE4B_HUMAN_Tsuboyama_2023_3L1X
+Length DMS: 3622
+Number of mutants: 3622
+UBE4B_MOUSE_Starita_2013
+Length DMS: 899
+Number of mutants: 899
+UBR5_HUMAN_Tsuboyama_2023_1I2T
+Length DMS: 1453
+Number of mutants: 1453
+VG08_BPP22_Tsuboyama_2023_2GP8
+Length DMS: 723
+Number of mutants: 723
+VILI_CHICK_Tsuboyama_2023_1YU5
+Length DMS: 2568
+Number of mutants: 2568
+VKOR1_HUMAN_Chiasson_2020_abundance
+Length DMS: 2695
+Number of mutants: 2695
+VKOR1_HUMAN_Chiasson_2020_activity
+Length DMS: 697
+Number of mutants: 697
+VRPI_BPT7_Tsuboyama_2023_2WNM
+Length DMS: 1047
+Number of mutants: 1047
+YAIA_ECOLI_Tsuboyama_2023_2KVT
+Length DMS: 1890
+Number of mutants: 1890
+YAP1_HUMAN_Araya_2012
+Length DMS: 10075
+Number of mutants: 10075
+YNZC_BACSU_Tsuboyama_2023_2JVD
+Length DMS: 2300
+Number of mutants: 2300

@@ -1,0 +1,4 @@
+/mnt/e/Ciencia/pipeline/2023-notin-proteingym/repo/proteingym/baselines/esm/esm/pretrained.py:212: UserWarning: Regression weights not found, predicting contacts will not produce correct results.
+  warnings.warn(
+1-1159 {'max_abs_diff_vs_authors': 10.521631240844727, 'mean_abs_diff_vs_authors': 3.7966251367330552, 'spearman_vs_DMS': 0.5119312982824571, 'authors_spearman_vs_DMS': 0.2796324908122703}
+535-565 {'max_abs_diff_vs_authors': 7.152557373046875e-06, 'mean_abs_diff_vs_authors': 1.3136863708598616e-06, 'spearman_vs_DMS': 0.2796324908122703, 'authors_spearman_vs_DMS': 0.2796324908122703}

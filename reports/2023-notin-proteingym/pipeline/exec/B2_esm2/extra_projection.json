@@ -1,0 +1,74 @@
+{
+ "8M": {
+  "projected_code_definition": 0.2234,
+  "projected_literal_definition": 0.2223,
+  "region_assay_values": {
+   "A0A140D2T1_ZIKV_Sourisseau_2019": -0.073,
+   "KCNH2_HUMAN_Kozek_2020": -0.14,
+   "POLG_CXB3N_Mattenberger_2021": -0.074,
+   "POLG_HCVJF_Qi_2014": 0.099,
+   "SCN5A_HUMAN_Glazer_2019": 0.121
+  },
+  "sources": {
+   "A0A140D2T1_ZIKV_Sourisseau_2019": "pipeline run",
+   "KCNH2_HUMAN_Kozek_2020": "pipeline run",
+   "POLG_CXB3N_Mattenberger_2021": "pipeline run",
+   "POLG_HCVJF_Qi_2014": "pipeline run",
+   "SCN5A_HUMAN_Glazer_2019": "pipeline run"
+  }
+ },
+ "35M": {
+  "projected_code_definition": 0.3214,
+  "projected_literal_definition": 0.3202,
+  "region_assay_values": {
+   "A0A140D2T1_ZIKV_Sourisseau_2019": -0.058,
+   "KCNH2_HUMAN_Kozek_2020": 0.32,
+   "POLG_CXB3N_Mattenberger_2021": -0.056,
+   "POLG_HCVJF_Qi_2014": 0.137,
+   "SCN5A_HUMAN_Glazer_2019": 0.157
+  },
+  "sources": {
+   "A0A140D2T1_ZIKV_Sourisseau_2019": "extra_slices full target_seq",
+   "KCNH2_HUMAN_Kozek_2020": "extra_slices full target_seq",
+   "POLG_CXB3N_Mattenberger_2021": "pipeline run",
+   "POLG_HCVJF_Qi_2014": "extra_slices full target_seq",
+   "SCN5A_HUMAN_Glazer_2019": "extra_slices full target_seq"
+  }
+ },
+ "150M": {
+  "projected_code_definition": 0.3884,
+  "projected_literal_definition": 0.391,
+  "region_assay_values": {
+   "A0A140D2T1_ZIKV_Sourisseau_2019": -0.049,
+   "KCNH2_HUMAN_Kozek_2020": 0.56,
+   "POLG_CXB3N_Mattenberger_2021": 0.167,
+   "POLG_HCVJF_Qi_2014": 0.102,
+   "SCN5A_HUMAN_Glazer_2019": 0.138
+  },
+  "sources": {
+   "A0A140D2T1_ZIKV_Sourisseau_2019": "extra_slices full target_seq",
+   "KCNH2_HUMAN_Kozek_2020": "extra_slices full target_seq",
+   "POLG_CXB3N_Mattenberger_2021": "pipeline run",
+   "POLG_HCVJF_Qi_2014": "extra_slices full target_seq",
+   "SCN5A_HUMAN_Glazer_2019": "extra_slices full target_seq"
+  }
+ },
+ "650M": {
+  "projected_code_definition": 0.4148,
+  "projected_literal_definition": 0.4194,
+  "region_assay_values": {
+   "A0A140D2T1_ZIKV_Sourisseau_2019": 0.215,
+   "KCNH2_HUMAN_Kozek_2020": 0.512,
+   "POLG_CXB3N_Mattenberger_2021": 0.393,
+   "POLG_HCVJF_Qi_2014": 0.133,
+   "SCN5A_HUMAN_Glazer_2019": 0.121
+  },
+  "sources": {
+   "A0A140D2T1_ZIKV_Sourisseau_2019": "extra_slices full target_seq",
+   "KCNH2_HUMAN_Kozek_2020": "extra_slices full target_seq",
+   "POLG_CXB3N_Mattenberger_2021": "pipeline run",
+   "POLG_HCVJF_Qi_2014": "extra_slices full target_seq",
+   "SCN5A_HUMAN_Glazer_2019": "extra_slices full target_seq"
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "assays_in_reference": 217,
+ "unique_DMS_id": 217,
+ "assay_files_on_disk": 217,
+ "mutants_reference_column": 2465767,
+ "mutants_counted_in_files": 2465767,
+ "files_matching_reference_count": 217,
+ "unique_UniProt_ID": 186,
+ "seq_len_over_1022": 16,
+ "coarse_selection_type": {
+  "Activity": 43,
+  "Binding": 13,
+  "Expression": 18,
+  "OrganismalFitness": 77,
+  "Stability": 66
+ }
+}
+ESM2_8M assays 5 all mutants matched True max abs diff 3e-05 min pearson 1.0 assays with max diff > 0.01: 0
+   worst: [['HMDH_HUMAN_Jiang_2019', 888, 3e-05, 1.0], ['RASK_HUMAN_Weng_2022_binding-DARPin_K55', 188, 2e-05, 1.0], ['VILI_CHICK_Tsuboyama_2023_1YU5', 65, 1e-05, 1.0], ['YAIA_ECOLI_Tsuboyama_2023_2KVT', 52, 1e-05, 1.0]]

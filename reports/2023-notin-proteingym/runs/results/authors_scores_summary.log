@@ -1,0 +1,5 @@
+authors_ESM1b assays=217 mutants=2465767 repo=0.3941 repo_unrounded=0.3941 literal=0.3982 plain_mean=0.4195
+authors_ESM2_8M assays=217 mutants=2465767 repo=0.2257 repo_unrounded=0.2257 literal=0.2244 plain_mean=0.2056
+authors_ESM2_35M assays=217 mutants=2465767 repo=0.3208 repo_unrounded=0.3208 literal=0.3196 plain_mean=0.3188
+authors_ESM2_150M assays=217 mutants=2465767 repo=0.3868 repo_unrounded=0.3868 literal=0.3895 plain_mean=0.4006
+authors_ESM2_650M assays=217 mutants=2465767 repo=0.4138 repo_unrounded=0.4137 literal=0.4184 plain_mean=0.4382

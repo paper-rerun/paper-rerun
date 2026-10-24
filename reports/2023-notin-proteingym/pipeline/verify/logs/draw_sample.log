@@ -1,0 +1,13 @@
+   rank  dms_index                                   DMS_id  seq_len
+0     0        152  RASK_HUMAN_Weng_2022_binding-DARPin_K55      188
+1     1         39                 CCDB_ECOLI_Tripathi_2016      101
+2     2         74                    HMDH_HUMAN_Jiang_2019      888
+3     3        210           VILI_CHICK_Tsuboyama_2023_1YU5       65
+4     4        214           YAIA_ECOLI_Tsuboyama_2023_2KVT       52
+5     5          6                      A4_HUMAN_Seuma_2022      770
+6     6         92           MAFG_MOUSE_Tsuboyama_2023_1K1V       41
+7     7         83           ISDH_STAAW_Tsuboyama_2023_2LHR       55
+8     8        167        RPC1_LAMBD_Li_2019_low-expression      237
+9     9         99                    MTHR_HUMAN_Weile_2021      656
+378866f34ea55a00ce987beaf2ffe68ac7a3e9c72a70095577b2d21b85fe28e5  /mnt/e/Ciencia/pipeline/2023-notin-proteingym/verify/assay_order_seed0.csv
+2026-10-24T01:38:25-03:00
