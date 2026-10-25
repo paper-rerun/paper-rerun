@@ -1,0 +1,23 @@
+review2 recheck 2026-10-25T13:51:29-03:00 (independent review of REPORT.md)
+sha256 claims.json: af95fe40408e9fb954dd8a92558f2abd41b5c3230a0c065ab916d81c8dfa3fb9 (claims.sha256: af95fe40408e9fb954dd8a92558f2abd41b5c3230a0c065ab916d81c8dfa3fb9)
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+env/bin/miniprot: OK
+env/bin/k8: OK
+env/bin/paftools.js: OK
+data/fly/Drosophila_melanogaster.BDGP6.32.107.gtf.gz: OK
+data/fly/Drosophila_melanogaster.BDGP6.32.dna.toplevel.fa.gz: OK
+data/human/GRCh38.primary_assembly.genome.fa.gz: OK
+data/human/gencode.v41.annotation.gtf.gz: OK
+data/human/gencode.v41.basic.annotation.gtf.gz: OK
+data/human/gencode.v41.primary_assembly.annotation.gtf.gz: OK
+data/mosquito/Anopheles_gambiae.AgamP4.pep.all.fa.gz: OK
+data/mouse/gencode.vM30.annotation.gtf.gz: OK
+data/mouse/gencode.vM30.pc_translations.fa.gz: OK
+data/zebrafish/Danio_rerio.GRCz11.pep.all.fa.gz: OK
+ALT-T_identical
+junc_ag_same
+exon_ag_same
+exon_mm_same
+mouse: protein_coding genes with CDS in M30 GTF 21919, of which with a record in pc_translations 21844, without 75
+legend: ALT-T_identical = cmp of runs/alt/ag_dm_j2.ALT-T.paf vs runs/main/ag_dm_j2.paf; junc_ag_same / exon_ag_same / exon_mm_same = paftools junceval/exoneval re-run with the main commands gives output identical to runs/main/*.txt

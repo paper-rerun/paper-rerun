@@ -1,0 +1,12 @@
+[M::mp_ntseq_read@1.738*0.51] read 143726002 bases in 1870 contigs
+[M::mp_idx_build@1.738*0.51] 1124796 blocks
+[M::mp_idx_build@2.444*3.15] collected syncmers
+[M::mp_idx_build@3.221*2.65] 74591866 kmer-block pairs
+[M::mp_idx_print_stat] 2284812 distinct k-mers; mean occ of infrequent k-mers: 32.65; 0 frequent k-mers accounting for 0 occurrences
+[M::worker_pipeline::12.207*13.62] mapped 5064 sequences
+[M::worker_pipeline::19.536*14.82] mapped 3422 sequences
+[M::worker_pipeline::29.540*13.95] mapped 2684 sequences
+[M::worker_pipeline::36.775*13.20] mapped 1924 sequences
+[M::main] Version: 0.7-r207
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-li-miniprot/env/bin/miniprot -t16 -j2 -G 50k /mnt/e/Ciencia/noturno/2023-li-miniprot/data/fly/Drosophila_melanogaster.BDGP6.32.dna.toplevel.fa.gz /mnt/e/Ciencia/noturno/2023-li-miniprot/runs/testsets/mosquito.longest.faa
+[M::main] Real time: 36.791 sec; CPU: 485.263 sec; Peak RSS: 4.447 GB

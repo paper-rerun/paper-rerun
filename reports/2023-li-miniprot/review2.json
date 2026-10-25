@@ -1,0 +1,97 @@
+{
+ "review": "Independent check of REPORT.md written by the reviser agent, against claims.json, paper/miniprot.tex.master Table 1, runs/results.json, runs/main, runs/alt and runs/logs. 2026-10-25.",
+ "verdict_holds": true,
+ "verdict_note": "Partially reproduced, 6 of 12 primary percentages within 0.50 pp (4 x % confirmed junc., mouse base SP, mosquito base SN). Follows the claims.json verdict_rule. Alternative readings were computed after the main result (compare_main.log 12:40:22, first alt output 12:40:35) and are not used for the verdict.",
+ "issues": [
+  {
+   "severity": "major",
+   "where": "REPORT.md, Results, paragraph under the primary table",
+   "problem": "'6 of the 8 base percentages come out below the paper, by 0.42 to 1.20 pp' is wrong. 7 of the 8 are below the paper; 6 are outside the tolerance, by 0.58 to 1.20 pp. The 0.42 pp case (mouse SP) is within tolerance.",
+   "fix": "Rewrote: 6 of 8 outside tolerance, all low, by 0.58 to 1.20 pp; mosquito SN exact, mouse SP 0.42 pp low.",
+   "fixed": true
+  },
+  {
+   "severity": "major",
+   "where": "REPORT.md, Alternative readings, second bullet",
+   "problem": "The bullet opened with 'None of the pre-registered readings brings the three human base SN values up to the paper' and then said ALT-1 brings all three within 0.5 pp (63.21, 63.19, 89.74 vs 63.11, 63.16, 90.10). Self-contradiction.",
+   "fix": "Rewrote: ALT-1 is the only pre-registered reading that brings human SN within 0.50 pp, at the cost of mosquito SN (56.69), SP in all columns and % confirmed junc. (-0.12 to -0.25 pp); no single reading matches all base values.",
+   "fixed": true
+  },
+  {
+   "severity": "major",
+   "where": "REPORT.md, How this report was made",
+   "problem": "Said one agent ran everything and wrote the report and another agent tried to find errors in it. Not what happened: the reproduce agent returned a status note (with a dead download), the first review ran on that note (review.json), a reviser agent finished the runs and wrote the report, and this review is the first independent check of it.",
+   "fix": "Replaced with a short accurate account of the hiccup, the reviser finishing the run, and this independent review (review2.json).",
+   "fixed": true
+  },
+  {
+   "severity": "minor",
+   "where": "REPORT.md, Notes for the authors, draft issue item 1",
+   "problem": "The issue asks whether -1 was used but leaves out the most relevant result: without -1 the human SN values come within 0.4 pp, while fly SN and all SP move away.",
+   "fix": "Added one sentence with those numbers.",
+   "fixed": true
+  },
+  {
+   "severity": "minor",
+   "where": "REPORT.md, Elapsed time and peak RAM; draft issue item 3",
+   "problem": "'6 GB above the paper' and '21.8-22.5 GB in the table' only hold for the zebrafish columns; the mouse column in the paper is 15.3 GB (13.1 GB below ours). Also, miniprot prints peak RSS in GiB (main.c: /1024^3) and labels it GB; not stated.",
+   "fix": "Gave the per-column gap (6.0-6.7 GB zebrafish, 13.1 GB mouse), noted the GiB unit, and added the mouse value to the issue text.",
+   "fixed": true
+  },
+  {
+   "severity": "minor",
+   "where": "REPORT.md, Results header and What it took step 2",
+   "problem": "'We checked the same hash again after the runs' and 'a later sha256sum -c env/lock.sha256 reported no failures' had no log behind them.",
+   "fix": "Re-ran both in this review: claims.json sha256 = af95fe40...3fb9, lock check 13/13 OK. Logged in runs/logs/review2_recheck.log and cited there.",
+   "fixed": true
+  },
+  {
+   "severity": "minor",
+   "where": "REPORT.md, Test-set variants, paragraph after the mouse table",
+   "problem": "Said triage counted 21,919 'by hand' (unsupported) and that the difference to the scripted 21,844 was not tracked down.",
+   "fix": "Traced it: 21,919 is protein_coding genes with CDS in the M30 GTF; 75 of them have no record in pc_translations, giving 21,844. Text updated, recount in runs/logs/review2_recheck.log.",
+   "fixed": true
+  },
+  {
+   "severity": "minor",
+   "where": "REPORT.md, Alternative readings, first bullet",
+   "problem": "Post-hoc interpretation of ALT-4 stated too strongly ('most likely computed SP against all CDS', 'SN must have used a different reference').",
+   "fix": "Softened to 'suggests' and 'if this is what happened'.",
+   "fixed": true
+  },
+  {
+   "severity": "minor",
+   "where": "REPORT.md, Elapsed time and peak RAM",
+   "problem": "'No other heavy job was running' is not logged for the whole run; only the memory snapshot before indexing exists (1 GB used, 29 GB free).",
+   "fix": "Replaced with what memory.log shows.",
+   "fixed": true
+  },
+  {
+   "severity": "nit",
+   "where": "REPORT.md, What it took step 6",
+   "problem": "Alt window given as 12:41-13:41; files show it started at 12:40, right after compare_main.log (12:40:22).",
+   "fix": "Changed to 12:40-13:41 and cited compare_main.log as proof the main result came first.",
+   "fixed": true
+  },
+  {
+   "severity": "nit",
+   "where": "REPORT.md, Target line, count table, Test-set deviation",
+   "problem": "'20 count checks' hides that 4 are '# proteins' (reported only) and the pass count (15/16) was never stated. 'it is also why the mouse # multi-exon is off' and 'the test set doesn't cause the base SP gap' overgeneralize. 'Every number here comes from runs/results.json' is not true for the time/RAM table.",
+   "fix": "Clarified 16 checks + 4 reported only, added '15 of the 16 count checks are within tolerance', softened the two causal sentences, scoped the source sentence to the claim tables.",
+   "fixed": true
+  }
+ ],
+ "checked_ok": [
+  "claims.json sha256 af95fe40408e9fb954dd8a92558f2abd41b5c3230a0c065ab916d81c8dfa3fb9 equals claims.sha256",
+  "All 32 Paper values and the 8 time/RAM values match Table 1 in paper/miniprot.tex.master",
+  "All Ours values match runs/results.json and the raw runs/main/*.junceval.txt / *.exoneval.txt; hand recompute of base Sn/Sp ratios (all 4 columns) and multi-exon = mapped - singletons agrees; relative diffs recomputed",
+  "Tolerances and verdict rule are exactly those of claims.json; compare.py implements them",
+  "All alternative-reading table values match runs/results.json alt and runs/alt raw files",
+  "Runs used the prebuilt v0.7 binary (env/bin/miniprot identical to the release tarball, 0.7-r207), paftools.js sha256 2e85a214... (r1152), k8 1.2-r137; genome FASTA passed gzipped as distributed, contig order unchanged; command lines in *.time match D-SPLICE",
+  "Test-set scripts implement D-TESTSET-ZF/MM/AG and the ALT-ZF/ALT-MM rules; counts recounted from the FASTA files; full sets, nothing sampled",
+  "reduce_gtf.py implements D-EVAL-BASE (largest summed CDS, ties to first, CDS lines unchanged)",
+  "Re-ran mosquito junceval + exoneval and mouse exoneval with the main commands: outputs identical. ALT-T PAF byte-identical (cmp)",
+  "setup.log: md5 OK x6, BSD sum OK x4, k8 md5 OK, paftools sha256 OK; timings and 28.45 GB peak match miniprot logs and /usr/bin/time",
+  "Only our own scripts changed (fetch.sh logging/comment, memory check in run_main.sh); no change to author code or method"
+ ]
+}

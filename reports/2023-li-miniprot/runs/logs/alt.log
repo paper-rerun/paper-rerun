@@ -1,0 +1,22 @@
+longest_spliced gencode.v41.annotation.gtf.gz genes 20427 CDS lines 187546
+longest_spliced Drosophila_melanogaster.BDGP6.32.107.gtf.gz genes 13968 CDS lines 54110
+longest_cds_pc gencode.v41.annotation.gtf.gz genes 20017 CDS lines 198882
+longest_cds_pc Drosophila_melanogaster.BDGP6.32.107.gtf.gz genes 13968 CDS lines 55223
+longest_cds gencode.v41.primary_assembly.annotation.gtf.gz genes 20451 CDS lines 199701
+longest_cds gencode.v41.basic.annotation.gtf.gz genes 20427 CDS lines 199556
+evaluated alt readings for zf_hs_j2
+evaluated alt readings for zf_hs_j1
+evaluated alt readings for mm_hs_j2
+evaluated alt readings for ag_dm_j2
+aligning zf_hs_j2.ALT-zf_A_all Sun Oct 25 12:45:02 -03 2026
+aligning zf_hs_j1.ALT-zf_A_all Sun Oct 25 12:51:33 -03 2026
+aligning zf_hs_j2.ALT-zf_B1_plusMT Sun Oct 25 12:57:51 -03 2026
+aligning zf_hs_j1.ALT-zf_B1_plusMT Sun Oct 25 13:03:22 -03 2026
+aligning zf_hs_j2.ALT-zf_B2_noALT_allregions Sun Oct 25 13:09:03 -03 2026
+aligning zf_hs_j1.ALT-zf_B2_noALT_allregions Sun Oct 25 13:14:40 -03 2026
+aligning zf_hs_j2.ALT-zf_C_pctranscript Sun Oct 25 13:20:19 -03 2026
+aligning zf_hs_j1.ALT-zf_C_pctranscript Sun Oct 25 13:25:50 -03 2026
+aligning mm_hs_j2.ALT-mm_A_longest_pc Sun Oct 25 13:31:31 -03 2026
+aligning mm_hs_j2.ALT-mm_B_canonical_pc Sun Oct 25 13:35:37 -03 2026
+ALT-T: -t4 PAF identical to -t16
+alt done Sun Oct 25 13:41:26 -03 2026

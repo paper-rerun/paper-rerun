@@ -1,0 +1,8 @@
+memory check 2026-10-25T12:23:29-03:00
+no .wslconfig, WSL default memory limit
+MemTotal:       32818700 kB
+MemAvailable:   31348844 kB
+SwapTotal:       8388608 kB
+               total        used        free      shared  buff/cache   available
+Mem:              31           1          29           0           0          29
+Swap:              8           0           8

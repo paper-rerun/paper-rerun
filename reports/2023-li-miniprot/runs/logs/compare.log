@@ -1,0 +1,79 @@
+verdict: Partially reproduced 6 / 12
+zf_hs_j2.n_proteins 25007 25094 87 None
+zf_hs_j2.n_multi_exon 16866 16929 63 True
+zf_hs_j2.n_pred_junc 157918 158226 308 True
+zf_hs_j2.n_nonovlp_junc 482 496 14 True
+zf_hs_j2.n_confirmed_junc 145545 145824 279 True
+zf_hs_j2.pct_confirmed_junc 92.16 92.16 0.0 True
+zf_hs_j2.pct_base_sn 63.11 62.16 -0.95 False
+zf_hs_j2.pct_base_sp 95.43 94.85 -0.58 False
+zf_hs_j1.n_proteins 25007 25094 87 None
+zf_hs_j1.n_multi_exon 17104 17153 49 True
+zf_hs_j1.n_pred_junc 161295 161597 302 True
+zf_hs_j1.n_nonovlp_junc 802 815 13 True
+zf_hs_j1.n_confirmed_junc 144734 145013 279 True
+zf_hs_j1.pct_confirmed_junc 89.73 89.74 0.01 True
+zf_hs_j1.pct_base_sn 63.16 62.21 -0.95 False
+zf_hs_j1.pct_base_sp 94.91 94.33 -0.58 False
+mm_hs_j2.n_proteins 21844 22335 491 None
+mm_hs_j2.n_multi_exon 17065 17322 257 False
+mm_hs_j2.n_pred_junc 167446 167748 302 True
+mm_hs_j2.n_nonovlp_junc 330 360 30 True
+mm_hs_j2.n_confirmed_junc 162675 162879 204 True
+mm_hs_j2.pct_confirmed_junc 97.15 97.1 -0.05 True
+mm_hs_j2.pct_base_sn 90.1 88.9 -1.2 False
+mm_hs_j2.pct_base_sp 97.26 96.84 -0.42 True
+ag_dm_j2.n_proteins 13094 13094 0 None
+ag_dm_j2.n_multi_exon 6675 6676 1 True
+ag_dm_j2.n_pred_junc 22614 22615 1 True
+ag_dm_j2.n_nonovlp_junc 488 488 0 True
+ag_dm_j2.n_confirmed_junc 19774 19774 0 True
+ag_dm_j2.pct_confirmed_junc 87.44 87.44 0.0 True
+ag_dm_j2.pct_base_sn 56.1 56.1 0.0 True
+ag_dm_j2.pct_base_sp 96.69 95.85 -0.84 False
+ag_dm_j2.ALT-1 {'mapped': 8829, 'single_exon': 3055, 'n_multi_exon': 5774, 'n_pred_junc': 22905, 'n_nonovlp_junc': 505, 'n_confirmed_junc': 19998, 'pct_confirmed_junc': 87.31, 'pct_base_sn': 56.69, 'pct_base_sp': 95.8}
+ag_dm_j2.ALT-3_l1 {'mapped': 8829, 'single_exon': 2153, 'n_multi_exon': 6676, 'n_pred_junc': 22615, 'n_nonovlp_junc': 488, 'n_confirmed_junc': 19775, 'pct_confirmed_junc': 87.44}
+ag_dm_j2.ALT-3_l3 {'mapped': 8829, 'single_exon': 2153, 'n_multi_exon': 6676, 'n_pred_junc': 22615, 'n_nonovlp_junc': 488, 'n_confirmed_junc': 19807, 'pct_confirmed_junc': 87.58}
+ag_dm_j2.ALT-4 {'pct_base_sn': 55.42, 'pct_base_sp': 96.69}
+ag_dm_j2.ALT-5 {'pct_base_sn': 56.43, 'pct_base_sp': 94.53}
+ag_dm_j2.ALT-6 {'pct_base_sn': 56.1, 'pct_base_sp': 95.85}
+mm_hs_j2.ALT-1 {'mapped': 20815, 'single_exon': 4839, 'n_multi_exon': 15976, 'n_pred_junc': 169915, 'n_nonovlp_junc': 411, 'n_confirmed_junc': 164568, 'pct_confirmed_junc': 96.85, 'pct_base_sn': 89.74, 'pct_base_sp': 96.56}
+mm_hs_j2.ALT-1x2 {'mapped': 20805, 'single_exon': 4819, 'n_multi_exon': 15986, 'n_pred_junc': 169897, 'n_nonovlp_junc': 393, 'n_confirmed_junc': 164568, 'pct_confirmed_junc': 96.86, 'pct_base_sn': 89.72, 'pct_base_sp': 96.56}
+mm_hs_j2.ALT-2 {'mapped': 20805, 'single_exon': 3486, 'n_multi_exon': 17319, 'n_pred_junc': 167745, 'n_nonovlp_junc': 342, 'n_confirmed_junc': 162894, 'pct_confirmed_junc': 97.11, 'pct_base_sn': 88.89, 'pct_base_sp': 96.84}
+mm_hs_j2.ALT-3_l1 {'mapped': 20815, 'single_exon': 3493, 'n_multi_exon': 17322, 'n_pred_junc': 167748, 'n_nonovlp_junc': 360, 'n_confirmed_junc': 162885, 'pct_confirmed_junc': 97.1}
+mm_hs_j2.ALT-3_l3 {'mapped': 20815, 'single_exon': 3493, 'n_multi_exon': 17322, 'n_pred_junc': 167748, 'n_nonovlp_junc': 360, 'n_confirmed_junc': 163119, 'pct_confirmed_junc': 97.24}
+mm_hs_j2.ALT-4 {'pct_base_sn': 85.08, 'pct_base_sp': 97.26}
+mm_hs_j2.ALT-5 {'pct_base_sn': 89.03, 'pct_base_sp': 91.66}
+mm_hs_j2.ALT-6 {'pct_base_sn': 89.09, 'pct_base_sp': 96.74}
+mm_hs_j2.ALT-7_basic {'mapped': 20815, 'single_exon': 3493, 'n_multi_exon': 17322, 'n_pred_junc': 167748, 'n_nonovlp_junc': 429, 'n_confirmed_junc': 162453, 'pct_confirmed_junc': 96.84, 'pct_base_sn': 88.97, 'pct_base_sp': 96.86}
+mm_hs_j2.ALT-7_primary_assembly {'mapped': 20815, 'single_exon': 3493, 'n_multi_exon': 17322, 'n_pred_junc': 167748, 'n_nonovlp_junc': 345, 'n_confirmed_junc': 162894, 'pct_confirmed_junc': 97.11, 'pct_base_sn': 88.86, 'pct_base_sp': 96.84}
+mm_hs_j2.ALT-mm_A_longest_pc {'mapped': 20479, 'single_exon': 3414, 'n_multi_exon': 17065, 'n_pred_junc': 167444, 'n_nonovlp_junc': 349, 'n_confirmed_junc': 162642, 'pct_confirmed_junc': 97.13, 'pct_base_sn': 88.8, 'pct_base_sp': 96.85, 'n_proteins': 21844}
+mm_hs_j2.ALT-mm_B_canonical_pc {'mapped': 20480, 'single_exon': 3410, 'n_multi_exon': 17070, 'n_pred_junc': 167457, 'n_nonovlp_junc': 349, 'n_confirmed_junc': 162663, 'pct_confirmed_junc': 97.14, 'pct_base_sn': 88.81, 'pct_base_sp': 96.86, 'n_proteins': 21844}
+zf_hs_j1.ALT-1 {'mapped': 20458, 'single_exon': 5417, 'n_multi_exon': 15041, 'n_pred_junc': 166422, 'n_nonovlp_junc': 896, 'n_confirmed_junc': 149145, 'pct_confirmed_junc': 89.62, 'pct_base_sn': 63.19, 'pct_base_sp': 93.94}
+zf_hs_j1.ALT-1x2 {'mapped': 20455, 'single_exon': 5366, 'n_multi_exon': 15089, 'n_pred_junc': 166373, 'n_nonovlp_junc': 847, 'n_confirmed_junc': 149145, 'pct_confirmed_junc': 89.64, 'pct_base_sn': 63.19, 'pct_base_sp': 93.94}
+zf_hs_j1.ALT-2 {'mapped': 20455, 'single_exon': 3307, 'n_multi_exon': 17148, 'n_pred_junc': 161591, 'n_nonovlp_junc': 800, 'n_confirmed_junc': 145020, 'pct_confirmed_junc': 89.75, 'pct_base_sn': 62.22, 'pct_base_sp': 94.32}
+zf_hs_j1.ALT-3_l1 {'mapped': 20458, 'single_exon': 3305, 'n_multi_exon': 17153, 'n_pred_junc': 161597, 'n_nonovlp_junc': 815, 'n_confirmed_junc': 145013, 'pct_confirmed_junc': 89.74}
+zf_hs_j1.ALT-3_l3 {'mapped': 20458, 'single_exon': 3305, 'n_multi_exon': 17153, 'n_pred_junc': 161597, 'n_nonovlp_junc': 815, 'n_confirmed_junc': 145411, 'pct_confirmed_junc': 89.98}
+zf_hs_j1.ALT-4 {'pct_base_sn': 59.65, 'pct_base_sp': 94.92}
+zf_hs_j1.ALT-5 {'pct_base_sn': 62.29, 'pct_base_sp': 89.28}
+zf_hs_j1.ALT-6 {'pct_base_sn': 62.39, 'pct_base_sp': 94.29}
+zf_hs_j1.ALT-7_basic {'mapped': 20458, 'single_exon': 3305, 'n_multi_exon': 17153, 'n_pred_junc': 161597, 'n_nonovlp_junc': 920, 'n_confirmed_junc': 144634, 'pct_confirmed_junc': 89.5, 'pct_base_sn': 62.27, 'pct_base_sp': 94.36}
+zf_hs_j1.ALT-7_primary_assembly {'mapped': 20458, 'single_exon': 3305, 'n_multi_exon': 17153, 'n_pred_junc': 161597, 'n_nonovlp_junc': 808, 'n_confirmed_junc': 145020, 'pct_confirmed_junc': 89.74, 'pct_base_sn': 62.18, 'pct_base_sp': 94.33}
+zf_hs_j1.ALT-zf_A_all {'mapped': 24905, 'single_exon': 3901, 'n_multi_exon': 21004, 'n_pred_junc': 195423, 'n_nonovlp_junc': 935, 'n_confirmed_junc': 175325, 'pct_confirmed_junc': 89.72, 'pct_base_sn': 62.62, 'pct_base_sp': 93.98, 'n_proteins': 30313}
+zf_hs_j1.ALT-zf_B1_plusMT {'mapped': 20470, 'single_exon': 3316, 'n_multi_exon': 17154, 'n_pred_junc': 161598, 'n_nonovlp_junc': 815, 'n_confirmed_junc': 145013, 'pct_confirmed_junc': 89.74, 'pct_base_sn': 62.23, 'pct_base_sp': 94.31, 'n_proteins': 25107}
+zf_hs_j1.ALT-zf_B2_noALT_allregions {'mapped': 20708, 'single_exon': 3363, 'n_multi_exon': 17345, 'n_pred_junc': 162588, 'n_nonovlp_junc': 834, 'n_confirmed_junc': 145822, 'pct_confirmed_junc': 89.69, 'pct_base_sn': 62.46, 'pct_base_sp': 94.24, 'n_proteins': 25432}
+zf_hs_j1.ALT-zf_C_pctranscript {'mapped': 20451, 'single_exon': 3303, 'n_multi_exon': 17148, 'n_pred_junc': 161564, 'n_nonovlp_junc': 814, 'n_confirmed_junc': 144985, 'pct_confirmed_junc': 89.74, 'pct_base_sn': 62.21, 'pct_base_sp': 94.33, 'n_proteins': 25081}
+zf_hs_j2.ALT-1 {'mapped': 20458, 'single_exon': 5727, 'n_multi_exon': 14731, 'n_pred_junc': 162893, 'n_nonovlp_junc': 566, 'n_confirmed_junc': 149883, 'pct_confirmed_junc': 92.01, 'pct_base_sn': 63.21, 'pct_base_sp': 94.47}
+zf_hs_j2.ALT-1x2 {'mapped': 20455, 'single_exon': 5669, 'n_multi_exon': 14786, 'n_pred_junc': 162849, 'n_nonovlp_junc': 522, 'n_confirmed_junc': 149883, 'pct_confirmed_junc': 92.04, 'pct_base_sn': 63.21, 'pct_base_sp': 94.47}
+zf_hs_j2.ALT-2 {'mapped': 20455, 'single_exon': 3530, 'n_multi_exon': 16925, 'n_pred_junc': 158220, 'n_nonovlp_junc': 483, 'n_confirmed_junc': 145831, 'pct_confirmed_junc': 92.17, 'pct_base_sn': 62.16, 'pct_base_sp': 94.84}
+zf_hs_j2.ALT-3_l1 {'mapped': 20458, 'single_exon': 3529, 'n_multi_exon': 16929, 'n_pred_junc': 158226, 'n_nonovlp_junc': 496, 'n_confirmed_junc': 145825, 'pct_confirmed_junc': 92.16}
+zf_hs_j2.ALT-3_l3 {'mapped': 20458, 'single_exon': 3529, 'n_multi_exon': 16929, 'n_pred_junc': 158226, 'n_nonovlp_junc': 496, 'n_confirmed_junc': 146140, 'pct_confirmed_junc': 92.36}
+zf_hs_j2.ALT-4 {'pct_base_sn': 59.6, 'pct_base_sp': 95.44}
+zf_hs_j2.ALT-5 {'pct_base_sn': 62.23, 'pct_base_sp': 89.75}
+zf_hs_j2.ALT-6 {'pct_base_sn': 62.34, 'pct_base_sp': 94.82}
+zf_hs_j2.ALT-7_basic {'mapped': 20458, 'single_exon': 3529, 'n_multi_exon': 16929, 'n_pred_junc': 158226, 'n_nonovlp_junc': 567, 'n_confirmed_junc': 145434, 'pct_confirmed_junc': 91.92, 'pct_base_sn': 62.21, 'pct_base_sp': 94.88}
+zf_hs_j2.ALT-7_primary_assembly {'mapped': 20458, 'single_exon': 3529, 'n_multi_exon': 16929, 'n_pred_junc': 158226, 'n_nonovlp_junc': 489, 'n_confirmed_junc': 145831, 'pct_confirmed_junc': 92.17, 'pct_base_sn': 62.12, 'pct_base_sp': 94.85}
+zf_hs_j2.ALT-zf_A_all {'mapped': 24905, 'single_exon': 4160, 'n_multi_exon': 20745, 'n_pred_junc': 191443, 'n_nonovlp_junc': 584, 'n_confirmed_junc': 176355, 'pct_confirmed_junc': 92.12, 'pct_base_sn': 62.53, 'pct_base_sp': 94.56, 'n_proteins': 30313}
+zf_hs_j2.ALT-zf_B1_plusMT {'mapped': 20470, 'single_exon': 3541, 'n_multi_exon': 16929, 'n_pred_junc': 158226, 'n_nonovlp_junc': 496, 'n_confirmed_junc': 145824, 'pct_confirmed_junc': 92.16, 'pct_base_sn': 62.17, 'pct_base_sp': 94.83, 'n_proteins': 25107}
+zf_hs_j2.ALT-zf_B2_noALT_allregions {'mapped': 20708, 'single_exon': 3597, 'n_multi_exon': 17111, 'n_pred_junc': 159163, 'n_nonovlp_junc': 512, 'n_confirmed_junc': 146632, 'pct_confirmed_junc': 92.13, 'pct_base_sn': 62.4, 'pct_base_sp': 94.77, 'n_proteins': 25432}
+zf_hs_j2.ALT-zf_C_pctranscript {'mapped': 20451, 'single_exon': 3526, 'n_multi_exon': 16925, 'n_pred_junc': 158197, 'n_nonovlp_junc': 496, 'n_confirmed_junc': 145796, 'pct_confirmed_junc': 92.16, 'pct_base_sn': 62.16, 'pct_base_sp': 94.85, 'n_proteins': 25081}

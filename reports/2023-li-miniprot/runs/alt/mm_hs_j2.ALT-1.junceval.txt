@@ -1,0 +1,7 @@
+# unmapped reads: 0
+# mapped reads: 20815
+# primary alignments: 22731
+# singletons: 4839
+# predicted introns: 169915
+# non-overlapping introns: 411
+# correct introns: 164568 (96.85%)

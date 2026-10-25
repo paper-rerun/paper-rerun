@@ -1,0 +1,34 @@
+{
+ "issues": [
+  {
+   "severity": "blocker",
+   "where": "REPORT (whole text) / E:\\Ciencia\\noturno\\2023-li-miniprot\\REPORT.md",
+   "problem": "There is no report to review. REPORT.md does not exist in the working folder, the submitted text is a one-line status note, and there are no runs, outputs, verdict, results table or 'How this report was made' section from the E:\\Ciencia\\README.md template. Without a report there is nothing to check for copied numbers, tolerances or verdict.",
+   "fix": "Don't send this to review or publication. Finish the pipeline (fetch, setup.sh checksum checks, test sets, run_main.sh, compare.py, run_alt.sh) and then write REPORT.md from the template with every number taken from files in runs/. Run the adversarial review again on that file."
+  },
+  {
+   "severity": "blocker",
+   "where": "Status claim 'The data download is still running and should take about 30 minutes'; runs/logs/fetch.log; data/human/GRCh38.primary_assembly.genome.fa.gz",
+   "problem": "The claim is false. No curl, fetch.sh or setup.sh process is running in WSL: ps and pgrep found none at 11:44-11:46. data/human/GRCh38.primary_assembly.genome.fa.gz has been stuck at 93,711,360 bytes since 11:43:51, a fraction of the roughly 0.9 GB file. The last line of fetch.log is the human MD5SUMS ('got ... MD5SUMS local=2797 server=2797'), with no 'got', 'SIZE MISMATCH' or 'downloads done' after it. The mouse, zebrafish and mosquito folders are empty, and fly holds only its two CHECKSUMS files. The download died without logging anything, so no completion notification will arrive. The '30 minutes' figure is not supported by anything either.",
+   "fix": "Restart env/fetch.sh detached so it survives the wsl.exe call returning: setsid nohup bash /mnt/e/.../env/fetch.sh >> runs/logs/fetch.log 2>&1 &, or the harness's run_in_background. Add 'exec 2>>$LOG' (or 2>&1 on curl) so curl errors reach the log. Confirm the file keeps growing and the process still exists before reporting that it is running. Drop the time estimate, or base it on the measured transfer rate."
+  },
+  {
+   "severity": "major",
+   "where": "env/fetch.sh line 2 comment; pipeline order",
+   "problem": "fetch.sh says it verifies 'against server size and published checksums', but it only compares sizes. The MD5 and BSD sum checks are in env/setup.sh. If fetch.sh is run alone, as it was here, nothing has been checked against a checksum, and the partial GRCh38 file currently on disk has not been verified at all.",
+   "fix": "Change the comment to 'server size only', or call the checksum block at the end of fetch.sh. Either way, the report must cite runs/logs/setup.log showing 'md5 OK' or 'sum OK' for all 9 data files plus the k8 md5 and paftools sha256 before any number is used."
+  },
+  {
+   "severity": "minor",
+   "where": "Future REPORT.md, compute and memory section",
+   "problem": "Nothing has been recorded yet for the triage requirement to check the WSL memory limit before the ~22 GB GRCh38 index (Table 1 peak RAM 21.8/22.5 GB). There is no .wslconfig, so the limit is WSL's default, which the task gives as 31 GB total. That leaves little headroom if other jobs are running. Elapsed time and Peak RAM are also not among the claims, but the report has to say so explicitly.",
+   "fix": "Log 'free -g' and the effective memory limit in setup.log before indexing, and record the run's peak RSS (/usr/bin/time -v). In REPORT.md, state that the time and RAM rows were not checked as claims because they depend on the machine."
+  },
+  {
+   "severity": "minor",
+   "where": "claims.json / claims.sha256 (checked, no defect)",
+   "problem": "Checked and correct: sha256 of claims.json is af95fe40...3fb9, the same as claims.sha256 (frozen 2026-10-25T11:39:09-03:00). All 32 paper_values match Table 1 in paper/miniprot.tex.master, lines 482-491. Whether the report uses these definitions and tolerances could not be checked, because no report text exists yet.",
+   "fix": "Once REPORT.md exists, re-run sha256sum on claims.json and check each reported row against the claim tolerances: 1% relative for counts, 10% for non-overlapping junctions, 0.50 pp for percentages, and # proteins reported only, with the test-set deviation stated."
+  }
+ ]
+}

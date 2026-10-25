@@ -1,0 +1,11 @@
+zebrafish.longest.faa 25094
+zf_A_all.faa 30313
+zf_B1_plusMT.faa 25107
+zf_B2_noALT_allregions.faa 25432
+zf_C_pctranscript.faa 25081
+zebrafish location census (records): {'chromosome:1-25': 45620, 'chromosome:ALT': 6029, 'scaffold:other': 427, 'chromosome:MT': 13}
+mosquito.longest.faa 13094
+mouse canonical transcripts in GTF: 56691
+mouse.testset.faa 22335
+mm_A_longest_pc.faa 21844
+mm_B_canonical_pc.faa 21844

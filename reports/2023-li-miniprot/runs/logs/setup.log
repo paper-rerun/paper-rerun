@@ -1,0 +1,25 @@
+/mnt/e/Ciencia/noturno/2023-li-miniprot/env/dl/k8-1.2.tar.bz2: OK
+/mnt/e/Ciencia/noturno/2023-li-miniprot/env/dl/paftools.js: OK
+md5 OK GRCh38.primary_assembly.genome.fa.gz
+md5 OK gencode.v41.annotation.gtf.gz
+md5 OK gencode.v41.basic.annotation.gtf.gz
+md5 OK gencode.v41.primary_assembly.annotation.gtf.gz
+md5 OK gencode.vM30.annotation.gtf.gz
+md5 OK gencode.vM30.pc_translations.fa.gz
+sum OK Danio_rerio.GRCz11.pep.all.fa.gz
+sum OK Anopheles_gambiae.AgamP4.pep.all.fa.gz
+sum OK Drosophila_melanogaster.BDGP6.32.dna.toplevel.fa.gz
+sum OK Drosophila_melanogaster.BDGP6.32.107.gtf.gz
+0.7-r207
+v8: 10.2.154.26-node.28
+k8: 1.2-r137
+2.24-r1152-dirty
+wrote lock.sha256
+memory check 2026-10-25T12:23:29-03:00
+no .wslconfig, WSL default memory limit
+MemTotal:       32818700 kB
+MemAvailable:   31348844 kB
+SwapTotal:       8388608 kB
+               total        used        free      shared  buff/cache   available
+Mem:              31           1          29           0           0          29
+Swap:              8           0           8

@@ -1,0 +1,15 @@
+[M::mp_ntseq_read@32.918*0.53] read 3099750718 bases in 194 contigs
+[M::mp_idx_build@32.918*0.52] 24216990 blocks
+[M::mp_idx_build@45.047*3.65] collected syncmers
+[M::mp_idx_build@61.042*2.98] 1343519354 kmer-block pairs
+[M::mp_idx_print_stat] 2413313 distinct k-mers; mean occ of infrequent k-mers: 510.82; 2317 frequent k-mers accounting for 111938161 occurrences
+[M::worker_pipeline::98.858*7.88] mapped 3645 sequences
+[M::worker_pipeline::140.403*9.83] mapped 3550 sequences
+[M::worker_pipeline::176.205*11.09] mapped 3715 sequences
+[M::worker_pipeline::214.816*11.83] mapped 3470 sequences
+[M::worker_pipeline::251.727*12.44] mapped 3519 sequences
+[M::worker_pipeline::290.306*12.91] mapped 3724 sequences
+[M::worker_pipeline::322.123*13.16] mapped 3484 sequences
+[M::main] Version: 0.7-r207
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-li-miniprot/env/bin/miniprot -t16 -j2 /mnt/e/Ciencia/noturno/2023-li-miniprot/data/human/GRCh38.primary_assembly.genome.fa.gz /mnt/e/Ciencia/noturno/2023-li-miniprot/runs/testsets/alt/zf_B1_plusMT.faa
+[M::main] Real time: 322.221 sec; CPU: 4238.644 sec; Peak RSS: 28.431 GB

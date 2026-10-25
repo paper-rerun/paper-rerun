@@ -1,0 +1,8 @@
+# unmapped reads: 0
+# mapped reads: 20708
+# primary alignments: 20708
+# predicted exons: 183296
+# non-overlapping exons: 6714
+# correct exons: 140252 (76.52%)
+Base Sn: 21324811 / 34141752 = 62.46%
+Base Sp: 21324811 / 22629284 = 94.24%

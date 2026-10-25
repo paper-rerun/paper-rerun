@@ -1,0 +1,23 @@
+	Command being timed: "/mnt/e/Ciencia/noturno/2023-li-miniprot/env/bin/miniprot -t16 -j2 /mnt/e/Ciencia/noturno/2023-li-miniprot/data/human/GRCh38.primary_assembly.genome.fa.gz /mnt/e/Ciencia/noturno/2023-li-miniprot/runs/testsets/alt/mm_B_canonical_pc.faa"
+	User time (seconds): 2754.46
+	System time (seconds): 48.63
+	Percent of CPU this job got: 1191%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:55.26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 29828560
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 461644
+	Voluntary context switches: 137261
+	Involuntary context switches: 11102
+	Swaps: 0
+	File system inputs: 304
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

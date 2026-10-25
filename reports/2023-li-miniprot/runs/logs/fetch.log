@@ -1,0 +1,25 @@
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/env/dl/miniprot-0.7_x64-linux.tar.bz2 local=213263 server=213263
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/env/dl/miniprot-0.7.tar.bz2 local=61104 server=61104
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/env/dl/k8-1.2.tar.bz2 local=16844234 server=16844234
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/env/dl/paftools.js local=120671 server=120671
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/human/MD5SUMS local=2797 server=2797
+fetch start 2026-10-25T11:45:40-03:00
+skip /mnt/e/Ciencia/noturno/2023-li-miniprot/env/dl/miniprot-0.7_x64-linux.tar.bz2 (213263)
+skip /mnt/e/Ciencia/noturno/2023-li-miniprot/env/dl/miniprot-0.7.tar.bz2 (61104)
+skip /mnt/e/Ciencia/noturno/2023-li-miniprot/env/dl/k8-1.2.tar.bz2 (16844234)
+skip /mnt/e/Ciencia/noturno/2023-li-miniprot/env/dl/paftools.js (120671)
+skip /mnt/e/Ciencia/noturno/2023-li-miniprot/data/human/MD5SUMS (2797)
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/human/GRCh38.primary_assembly.genome.fa.gz local=844691642 server=844691642
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/human/gencode.v41.annotation.gtf.gz local=49042889 server=49042889
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/human/gencode.v41.primary_assembly.annotation.gtf.gz local=49051309 server=49051309
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/human/gencode.v41.basic.annotation.gtf.gz local=29161889 server=29161889
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/mouse/MD5SUMS local=2828 server=2828
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/mouse/gencode.vM30.pc_translations.fa.gz local=10186081 server=10186081
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/mouse/gencode.vM30.annotation.gtf.gz local=29248040 server=29248040
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/zebrafish/CHECKSUMS local=114 server=114
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/zebrafish/Danio_rerio.GRCz11.pep.all.fa.gz local=13769320 server=13769320
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/fly/Drosophila_melanogaster.BDGP6.32.dna.toplevel.fa.gz local=43290686 server=43290686
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/fly/Drosophila_melanogaster.BDGP6.32.107.gtf.gz local=6760077 server=6760077
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/mosquito/CHECKSUMS local=126 server=126
+got /mnt/e/Ciencia/noturno/2023-li-miniprot/data/mosquito/Anopheles_gambiae.AgamP4.pep.all.fa.gz local=5260380 server=5260380
+downloads done

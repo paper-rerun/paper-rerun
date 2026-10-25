@@ -1,0 +1,91 @@
+0.7-r207
+memory check 2026-10-25T12:23:29-03:00
+no .wslconfig, WSL default memory limit
+MemTotal:       32818700 kB
+MemAvailable:   31348844 kB
+SwapTotal:       8388608 kB
+               total        used        free      shared  buff/cache   available
+Mem:              31           1          29           0           0          29
+Swap:              8           0           8
+zebrafish.longest.faa 25094
+zf_A_all.faa 30313
+zf_B1_plusMT.faa 25107
+zf_B2_noALT_allregions.faa 25432
+zf_C_pctranscript.faa 25081
+zebrafish location census (records): {'chromosome:1-25': 45620, 'chromosome:ALT': 6029, 'scaffold:other': 427, 'chromosome:MT': 13}
+mosquito.longest.faa 13094
+mouse canonical transcripts in GTF: 56691
+mouse.testset.faa 22335
+mm_A_longest_pc.faa 21844
+mm_B_canonical_pc.faa 21844
+longest_cds gencode.v41.annotation.gtf.gz genes 20427 CDS lines 199599
+longest_cds Drosophila_melanogaster.BDGP6.32.107.gtf.gz genes 13968 CDS lines 55223
+aligning zf_hs_j2 Sun Oct 25 12:23:54 -03 2026
+== zf_hs_j2
+# unmapped reads: 0
+# mapped reads: 20458
+# primary alignments: 20458
+# singletons: 3529
+# predicted introns: 158226
+# non-overlapping introns: 496
+# correct introns: 145824 (92.16%)
+# unmapped reads: 0
+# mapped reads: 20458
+# primary alignments: 20458
+# predicted exons: 178684
+# non-overlapping exons: 4888
+# correct exons: 140849 (78.83%)
+Base Sn: 21221472 / 34141752 = 62.16%
+Base Sp: 21221472 / 22374108 = 94.85%
+aligning zf_hs_j1 Sun Oct 25 12:29:33 -03 2026
+== zf_hs_j1
+# unmapped reads: 0
+# mapped reads: 20458
+# primary alignments: 20458
+# singletons: 3305
+# predicted introns: 161597
+# non-overlapping introns: 815
+# correct introns: 145013 (89.74%)
+# unmapped reads: 0
+# mapped reads: 20458
+# primary alignments: 20458
+# predicted exons: 182055
+# non-overlapping exons: 6578
+# correct exons: 139525 (76.64%)
+Base Sn: 21239638 / 34141752 = 62.21%
+Base Sp: 21239638 / 22516797 = 94.33%
+aligning mm_hs_j2 Sun Oct 25 12:35:17 -03 2026
+== mm_hs_j2
+# unmapped reads: 0
+# mapped reads: 20815
+# primary alignments: 20815
+# singletons: 3493
+# predicted introns: 167748
+# non-overlapping introns: 360
+# correct introns: 162879 (97.10%)
+# unmapped reads: 0
+# mapped reads: 20815
+# primary alignments: 20815
+# predicted exons: 188563
+# non-overlapping exons: 4890
+# correct exons: 169049 (89.65%)
+Base Sn: 30353168 / 34141752 = 88.90%
+Base Sp: 30353168 / 31342987 = 96.84%
+aligning ag_dm_j2 Sun Oct 25 12:39:29 -03 2026
+== ag_dm_j2
+# unmapped reads: 0
+# mapped reads: 8829
+# primary alignments: 8829
+# singletons: 2153
+# predicted introns: 22615
+# non-overlapping introns: 488
+# correct introns: 19774 (87.44%)
+# unmapped reads: 0
+# mapped reads: 8829
+# primary alignments: 8829
+# predicted exons: 31444
+# non-overlapping exons: 874
+# correct exons: 14952 (47.55%)
+Base Sn: 12577152 / 22418057 = 56.10%
+Base Sp: 12577152 / 13122203 = 95.85%
+main done Sun Oct 25 12:40:09 -03 2026
