@@ -1,0 +1,8 @@
+model.pt keys: {'data_mean': tensor(0.), 'data_std': tensor(3.7030), 'element_refs': tensor([  -16.5181, -1036.3730, -1488.6525, -2046.0083]), 'calc_forces': True, 'calc_stresses': False, 'calc_hessian': False, 'calc_repuls': False, 'zbl_trainable': False, 'debug_mode': False, 'calc_magmom': False}
+model.pt model init_args: {'element_types': ('H', 'C', 'N', 'O'), 'units': 64, 'dim_state_embedding': 0, 'ntypes_state': None, 'dim_state_feats': None, 'nblocks': 3, 'nmax': 5, 'cutoff': 5.0, 'rbf_learnable': False, 'target_property': 'atomwise', 'task_type': 'regression', 'readout_type': 'weighted_atom', 'niters_set2set': 3, 'nlayers_set2set': 3, 'nlayers_readout': 2, 'is_intensive': False, 'include_state': False, 'use_vector_representation': False, 'correct_charges': False, 'predict_dipole_magnitude': False, 'activation_type': 'swish', 'ntargets': 1, 'return_vector_representation': False, 'dim_node_embedding': 64, 'lmax': 2}
+n model keys 46 n state keys 46
+missing in state: []
+unexpected in state: []
+shape mismatch: []
+max |loaded - state| over shared keys: 0.0
+data_mean tensor(0.) data_std tensor(3.7030) element_refs tensor([  -16.5181, -1036.3730, -1488.6525, -2046.0083])

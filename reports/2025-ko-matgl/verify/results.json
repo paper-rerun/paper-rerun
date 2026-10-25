@@ -1,0 +1,714 @@
+{
+ "results": [
+  {
+   "claim_id": "fig4a-m3gnet-animd",
+   "value": 7.67714968074813,
+   "n": 1791,
+   "paper_value": 19.159,
+   "diff": -11.481850319251869,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-m3gnet-animd",
+   "value": 0.11357802198862044,
+   "n": 1791,
+   "paper_value": 0.142,
+   "diff": -0.02842197801137955,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-m3gnet-gdb9to11",
+   "value": 4.909842454740896,
+   "n": 35670,
+   "paper_value": 8.925,
+   "diff": -4.015157545259105,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-m3gnet-gdb9to11",
+   "value": 0.09143809857972036,
+   "n": 35670,
+   "paper_value": 0.074,
+   "diff": 0.017438098579720368,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-m3gnet-gdb12to13",
+   "value": 6.516197469176629,
+   "n": 24000,
+   "paper_value": 3.655,
+   "diff": 2.8611974691766293,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-m3gnet-gdb12to13",
+   "value": 0.13671065414973468,
+   "n": 24000,
+   "paper_value": 0.118,
+   "diff": 0.01871065414973469,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-m3gnet-drugbank",
+   "value": 8.934803535451376,
+   "n": 13379,
+   "paper_value": 12.01,
+   "diff": -3.0751964645486236,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-m3gnet-drugbank",
+   "value": 0.10654886328371198,
+   "n": 13379,
+   "paper_value": 0.126,
+   "diff": -0.019451136716288023,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-m3gnet-s66x8",
+   "value": 7.532860249498594,
+   "n": 528,
+   "paper_value": 9.835,
+   "diff": -2.302139750501407,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-m3gnet-s66x8",
+   "value": 0.04489226646348962,
+   "n": 528,
+   "paper_value": 0.029,
+   "diff": 0.01589226646348962,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-m3gnet-tripeptides",
+   "value": 5.701823798235734,
+   "n": 1984,
+   "paper_value": 2.662,
+   "diff": 3.0398237982357337,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-m3gnet-tripeptides",
+   "value": 0.07672354796342913,
+   "n": 1984,
+   "paper_value": 0.067,
+   "diff": 0.009723547963429127,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-tensornet-animd",
+   "value": 2.798365383930786,
+   "n": 1791,
+   "paper_value": 11.099,
+   "diff": -8.300634616069214,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-tensornet-animd",
+   "value": 0.0788955658763792,
+   "n": 1791,
+   "paper_value": 0.099,
+   "diff": -0.0201044341236208,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-tensornet-gdb9to11",
+   "value": 4.101848480096363,
+   "n": 35670,
+   "paper_value": 1.705,
+   "diff": 2.396848480096363,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-tensornet-gdb9to11",
+   "value": 0.08070797050051662,
+   "n": 35670,
+   "paper_value": 0.056,
+   "diff": 0.024707970500516617,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-tensornet-gdb12to13",
+   "value": 5.070714068710077,
+   "n": 24000,
+   "paper_value": 3.252,
+   "diff": 1.8187140687100776,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-tensornet-gdb12to13",
+   "value": 0.1087054345480916,
+   "n": 24000,
+   "paper_value": 0.09,
+   "diff": 0.018705434548091607,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-tensornet-drugbank",
+   "value": 2.7969363186176666,
+   "n": 13379,
+   "paper_value": 1.123,
+   "diff": 1.6739363186176666,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-tensornet-drugbank",
+   "value": 0.07636777476034974,
+   "n": 13379,
+   "paper_value": 0.086,
+   "diff": -0.009632225239650252,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-tensornet-s66x8",
+   "value": 5.670604975074582,
+   "n": 528,
+   "paper_value": 6.031,
+   "diff": -0.36039502492541775,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-tensornet-s66x8",
+   "value": 0.03820952607790931,
+   "n": 528,
+   "paper_value": 0.045,
+   "diff": -0.006790473922090687,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-tensornet-tripeptides",
+   "value": 3.099225546261046,
+   "n": 1984,
+   "paper_value": 2.248,
+   "diff": 0.8512255462610456,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-tensornet-tripeptides",
+   "value": 0.06667009787352278,
+   "n": 1984,
+   "paper_value": 0.067,
+   "diff": -0.0003299021264772245,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-so3net-animd",
+   "value": 1.009392592629906,
+   "n": 1791,
+   "paper_value": 2.283,
+   "diff": -1.2736074073700938,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-so3net-animd",
+   "value": 0.035221424816291244,
+   "n": 1791,
+   "paper_value": 0.044,
+   "diff": -0.008778575183708753,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-so3net-gdb9to11",
+   "value": 1.9682339577492451,
+   "n": 35670,
+   "paper_value": 3.889,
+   "diff": -1.9207660422507546,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-so3net-gdb9to11",
+   "value": 0.039346077015608605,
+   "n": 35670,
+   "paper_value": 0.032,
+   "diff": 0.007346077015608604,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-so3net-gdb12to13",
+   "value": 2.3473166284397236,
+   "n": 24000,
+   "paper_value": 1.271,
+   "diff": 1.0763166284397236,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-so3net-gdb12to13",
+   "value": 0.05480982378857419,
+   "n": 24000,
+   "paper_value": 0.044,
+   "diff": 0.010809823788574195,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-so3net-drugbank",
+   "value": 1.4545121002123305,
+   "n": 13379,
+   "paper_value": 0.969,
+   "diff": 0.4855121002123305,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-so3net-drugbank",
+   "value": 0.0338256364728839,
+   "n": 13379,
+   "paper_value": 0.044,
+   "diff": -0.0101743635271161,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-so3net-s66x8",
+   "value": 1.6610253435243507,
+   "n": 528,
+   "paper_value": 2.558,
+   "diff": -0.8969746564756491,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-so3net-s66x8",
+   "value": 0.015427248091198192,
+   "n": 528,
+   "paper_value": 0.011,
+   "diff": 0.004427248091198193,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4a-so3net-tripeptides",
+   "value": 1.2425843446741685,
+   "n": 1984,
+   "paper_value": 1.245,
+   "diff": -0.002415655325831656,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "fig4b-so3net-tripeptides",
+   "value": 0.029099524758306294,
+   "n": 1984,
+   "paper_value": 0.029,
+   "diff": 9.95247583062929e-05,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "text-m3gnet-animd-energy-gt14",
+   "value": 7.67714968074813,
+   "n": 1791,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "text-m3gnet-animd-force-gt014",
+   "value": 0.11357802198862044,
+   "n": 1791,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "text-tensornet-animd-energy",
+   "value": 2.798365383930786,
+   "n": 1791,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "text-tensornet-animd-force",
+   "value": 0.0788955658763792,
+   "n": 1791,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "text-so3net-animd-energy",
+   "value": 1.009392592629906,
+   "n": 1791,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "text-so3net-animd-force",
+   "value": 0.035221424816291244,
+   "n": 1791,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "data-animd-natoms",
+   "value": 312,
+   "n": 14,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  },
+  {
+   "claim_id": "data-animd-ntraj",
+   "value": 14,
+   "n": 14,
+   "command": "MSYS_NO_PATHCONV=1 wsl -d Ubuntu -- bash /mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/run_score.sh",
+   "output_path": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/results.json"
+  }
+ ],
+ "extras": {
+  "M3GNet_per_file": {
+   "ani_md_bench": {
+    "n_conf": 1791,
+    "energy_mae_meV_atom": 7.67714968074813,
+    "force_mae_eV_A": 0.11357802198862044
+   },
+   "drugbank_testset": {
+    "n_conf": 13379,
+    "energy_mae_meV_atom": 8.934803535451376,
+    "force_mae_eV_A": 0.10654886328371198
+   },
+   "gdb11_07_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 2.9560281518264975,
+    "force_mae_eV_A": 0.05456439840553282
+   },
+   "gdb11_08_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 3.4387992276389836,
+    "force_mae_eV_A": 0.0638932320355562
+   },
+   "gdb11_09_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 4.179030679697174,
+    "force_mae_eV_A": 0.07277222740542141
+   },
+   "gdb11_10_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 5.123415162514597,
+    "force_mae_eV_A": 0.08229027611969107
+   },
+   "gdb11_11_test500": {
+    "n_conf": 11670,
+    "energy_mae_meV_atom": 5.441707819542975,
+    "force_mae_eV_A": 0.11514841197700378
+   },
+   "gdb13_12_test1000": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 6.22904984986616,
+    "force_mae_eV_A": 0.13178985780477606
+   },
+   "gdb13_13_test1000": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 6.803345088487097,
+    "force_mae_eV_A": 0.14126663376556015
+   },
+   "tripeptide_full": {
+    "n_conf": 1984,
+    "energy_mae_meV_atom": 5.701823798235734,
+    "force_mae_eV_A": 0.07672354796342913
+   },
+   "s66x8_wb97x6-31gd": {
+    "n_conf": 528,
+    "energy_mae_meV_atom": 7.532860249498594,
+    "force_mae_eV_A": 0.04489226646348962
+   }
+  },
+  "M3GNet_alternatives": {
+   "animd_mean_of_per_file_energy": 7.67714968074813,
+   "animd_mean_of_per_file_force": 0.11357802198862044,
+   "animd_energy_total_mae_over_mean_natoms": 12.585619903807155,
+   "animd_energy_signed_mean_per_atom": 7.153680091049539,
+   "animd_force_norm_mae": 0.22910944217400744,
+   "animd_force_per_conf_mae_then_mean": 0.09158974838057528,
+   "gdb9to11_mean_of_per_file_energy": 4.914717887251582,
+   "gdb9to11_mean_of_per_file_force": 0.09007030516737208,
+   "gdb9to11_energy_total_mae_over_mean_natoms": 4.82537281711634,
+   "gdb9to11_energy_signed_mean_per_atom": 0.657626645037247,
+   "gdb9to11_force_norm_mae": 0.1837526490349594,
+   "gdb9to11_force_per_conf_mae_then_mean": 0.09195960273248556,
+   "gdb12to13_mean_of_per_file_energy": 6.516197469176628,
+   "gdb12to13_mean_of_per_file_force": 0.1365282457851681,
+   "gdb12to13_energy_total_mae_over_mean_natoms": 6.381831542067715,
+   "gdb12to13_energy_signed_mean_per_atom": -0.5838767222793737,
+   "gdb12to13_force_norm_mae": 0.27422059443710955,
+   "gdb12to13_force_per_conf_mae_then_mean": 0.13837652240687132,
+   "drugbank_mean_of_per_file_energy": 8.934803535451376,
+   "drugbank_mean_of_per_file_force": 0.10654886328371198,
+   "drugbank_energy_total_mae_over_mean_natoms": 10.224694720573314,
+   "drugbank_energy_signed_mean_per_atom": 8.157665335825431,
+   "drugbank_force_norm_mae": 0.2155987174012422,
+   "drugbank_force_per_conf_mae_then_mean": 0.09984836126727319,
+   "s66x8_mean_of_per_file_energy": 7.532860249498594,
+   "s66x8_mean_of_per_file_force": 0.04489226646348962,
+   "s66x8_energy_total_mae_over_mean_natoms": 7.989061936580149,
+   "s66x8_energy_signed_mean_per_atom": 7.073999694957056,
+   "s66x8_force_norm_mae": 0.09614986051185354,
+   "s66x8_force_per_conf_mae_then_mean": 0.04386985168864677,
+   "tripeptides_mean_of_per_file_energy": 5.701823798235734,
+   "tripeptides_mean_of_per_file_force": 0.07672354796342913,
+   "tripeptides_energy_total_mae_over_mean_natoms": 5.572122591718354,
+   "tripeptides_energy_signed_mean_per_atom": 5.476949162986225,
+   "tripeptides_force_norm_mae": 0.1539540985521627,
+   "tripeptides_force_per_conf_mae_then_mean": 0.07678277839433431,
+   "gdb9to11_readingB_gdb11_07to11_n": 59670,
+   "gdb9to11_readingB_gdb11_07to11_energy": 4.221082770474167,
+   "gdb9to11_readingB_gdb11_07to11_force": 0.08052930946549595,
+   "gdb9to11_readingC_folder_GDB07to09_n": 36000,
+   "gdb9to11_readingC_folder_GDB07to09_energy": 3.5246193530542183,
+   "gdb9to11_readingC_folder_GDB07to09_force": 0.06437284644079878,
+   "gdb12to13_readingC_folder_GDB10to13_n": 47670,
+   "gdb12to13_readingC_folder_GDB10to13_energy": 5.902547754656614,
+   "gdb12to13_readingC_folder_GDB10to13_force": 0.11990447093964851
+  },
+  "TensorNet_per_file": {
+   "ani_md_bench": {
+    "n_conf": 1791,
+    "energy_mae_meV_atom": 2.798365383930786,
+    "force_mae_eV_A": 0.0788955658763792
+   },
+   "drugbank_testset": {
+    "n_conf": 13379,
+    "energy_mae_meV_atom": 2.7969363186176666,
+    "force_mae_eV_A": 0.07636777476034974
+   },
+   "gdb11_07_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 3.085599301465182,
+    "force_mae_eV_A": 0.053379491548357944
+   },
+   "gdb11_08_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 3.3648290356366415,
+    "force_mae_eV_A": 0.06016188713662477
+   },
+   "gdb11_09_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 3.682309261401509,
+    "force_mae_eV_A": 0.06624790442586145
+   },
+   "gdb11_10_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 3.953274207107156,
+    "force_mae_eV_A": 0.07300215653274354
+   },
+   "gdb11_11_test500": {
+    "n_conf": 11670,
+    "energy_mae_meV_atom": 4.686026877714936,
+    "force_mae_eV_A": 0.09963746616833764
+   },
+   "gdb13_12_test1000": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 4.991431407991718,
+    "force_mae_eV_A": 0.1058032635668457
+   },
+   "gdb13_13_test1000": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 5.149996729428437,
+    "force_mae_eV_A": 0.11139244512631695
+   },
+   "tripeptide_full": {
+    "n_conf": 1984,
+    "energy_mae_meV_atom": 3.099225546261046,
+    "force_mae_eV_A": 0.06667009787352278
+   },
+   "s66x8_wb97x6-31gd": {
+    "n_conf": 528,
+    "energy_mae_meV_atom": 5.670604975074582,
+    "force_mae_eV_A": 0.03820952607790931
+   }
+  },
+  "TensorNet_alternatives": {
+   "animd_mean_of_per_file_energy": 2.798365383930786,
+   "animd_mean_of_per_file_force": 0.0788955658763792,
+   "animd_energy_total_mae_over_mean_natoms": 3.8295519800083375,
+   "animd_energy_signed_mean_per_atom": 1.302058021163638,
+   "animd_force_norm_mae": 0.15844815982453497,
+   "animd_force_per_conf_mae_then_mean": 0.06654669667821615,
+   "gdb9to11_mean_of_per_file_energy": 4.1072034487412,
+   "gdb9to11_mean_of_per_file_force": 0.07962917570898087,
+   "gdb9to11_energy_total_mae_over_mean_natoms": 3.993837058803928,
+   "gdb9to11_energy_signed_mean_per_atom": -0.6749308145215548,
+   "gdb9to11_force_norm_mae": 0.16264866174683093,
+   "gdb9to11_force_per_conf_mae_then_mean": 0.08183936825853873,
+   "gdb12to13_mean_of_per_file_energy": 5.070714068710077,
+   "gdb12to13_mean_of_per_file_force": 0.10859785434658133,
+   "gdb12to13_energy_total_mae_over_mean_natoms": 4.9625761424587855,
+   "gdb12to13_energy_signed_mean_per_atom": -1.5955420772303661,
+   "gdb12to13_force_norm_mae": 0.21820980069890958,
+   "gdb12to13_force_per_conf_mae_then_mean": 0.1103416595236658,
+   "drugbank_mean_of_per_file_energy": 2.7969363186176666,
+   "drugbank_mean_of_per_file_force": 0.07636777476034974,
+   "drugbank_energy_total_mae_over_mean_natoms": 2.734124511669227,
+   "drugbank_energy_signed_mean_per_atom": 0.03640451608316269,
+   "drugbank_force_norm_mae": 0.15399771770809972,
+   "drugbank_force_per_conf_mae_then_mean": 0.07476039939430991,
+   "s66x8_mean_of_per_file_energy": 5.670604975074582,
+   "s66x8_mean_of_per_file_force": 0.03820952607790931,
+   "s66x8_energy_total_mae_over_mean_natoms": 5.527671155236415,
+   "s66x8_energy_signed_mean_per_atom": 4.3566955903142315,
+   "s66x8_force_norm_mae": 0.08152006990219691,
+   "s66x8_force_per_conf_mae_then_mean": 0.038662844701467,
+   "tripeptides_mean_of_per_file_energy": 3.099225546261046,
+   "tripeptides_mean_of_per_file_force": 0.06667009787352278,
+   "tripeptides_energy_total_mae_over_mean_natoms": 3.1351725663169843,
+   "tripeptides_energy_signed_mean_per_atom": -1.433678788698893,
+   "tripeptides_force_norm_mae": 0.13326240435835224,
+   "tripeptides_force_per_conf_mae_then_mean": 0.06667126049511038,
+   "gdb9to11_readingB_gdb11_07to11_n": 59670,
+   "gdb9to11_readingB_gdb11_07to11_energy": 3.749255494054955,
+   "gdb9to11_readingB_gdb11_07to11_force": 0.07259942910701345,
+   "gdb9to11_readingC_folder_GDB07to09_n": 36000,
+   "gdb9to11_readingC_folder_GDB07to09_energy": 3.3775791995011106,
+   "gdb9to11_readingC_folder_GDB07to09_force": 0.06037453336749706,
+   "gdb12to13_readingC_folder_GDB10to13_n": 47670,
+   "gdb12to13_readingC_folder_GDB10to13_energy": 4.695245684859682,
+   "gdb12to13_readingC_folder_GDB10to13_force": 0.09888287568743037
+  },
+  "SO3Net_per_file": {
+   "ani_md_bench": {
+    "n_conf": 1791,
+    "energy_mae_meV_atom": 1.009392592629906,
+    "force_mae_eV_A": 0.035221424816291244
+   },
+   "drugbank_testset": {
+    "n_conf": 13379,
+    "energy_mae_meV_atom": 1.4545121002123305,
+    "force_mae_eV_A": 0.0338256364728839
+   },
+   "gdb11_07_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 1.5857484465802467,
+    "force_mae_eV_A": 0.025897417767520105
+   },
+   "gdb11_08_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 1.6273032131890453,
+    "force_mae_eV_A": 0.02910486485058292
+   },
+   "gdb11_09_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 1.8219167425208544,
+    "force_mae_eV_A": 0.03224789590356696
+   },
+   "gdb11_10_test500": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 1.9658900275258264,
+    "force_mae_eV_A": 0.03474872292847999
+   },
+   "gdb11_11_test500": {
+    "n_conf": 11670,
+    "energy_mae_meV_atom": 2.1210988888050912,
+    "force_mae_eV_A": 0.04937716753769032
+   },
+   "gdb13_12_test1000": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 2.2587960164920924,
+    "force_mae_eV_A": 0.05335646011830535
+   },
+   "gdb13_13_test1000": {
+    "n_conf": 12000,
+    "energy_mae_meV_atom": 2.4358372403873543,
+    "force_mae_eV_A": 0.05615543835823827
+   },
+   "tripeptide_full": {
+    "n_conf": 1984,
+    "energy_mae_meV_atom": 1.2425843446741685,
+    "force_mae_eV_A": 0.029099524758306294
+   },
+   "s66x8_wb97x6-31gd": {
+    "n_conf": 528,
+    "energy_mae_meV_atom": 1.6610253435243507,
+    "force_mae_eV_A": 0.015427248091198192
+   }
+  },
+  "SO3Net_alternatives": {
+   "animd_mean_of_per_file_energy": 1.009392592629906,
+   "animd_mean_of_per_file_force": 0.035221424816291244,
+   "animd_energy_total_mae_over_mean_natoms": 1.16250125254843,
+   "animd_energy_signed_mean_per_atom": 0.5469154002552858,
+   "animd_force_norm_mae": 0.0709930660626825,
+   "animd_force_per_conf_mae_then_mean": 0.03035710857137327,
+   "gdb9to11_mean_of_per_file_energy": 1.9696352196172573,
+   "gdb9to11_mean_of_per_file_force": 0.03879126212324576,
+   "gdb9to11_energy_total_mae_over_mean_natoms": 1.9351782232937738,
+   "gdb9to11_energy_signed_mean_per_atom": 0.7566434987358727,
+   "gdb9to11_force_norm_mae": 0.07923083003182164,
+   "gdb9to11_force_per_conf_mae_then_mean": 0.03982809272834202,
+   "gdb12to13_mean_of_per_file_energy": 2.3473166284397236,
+   "gdb12to13_mean_of_per_file_force": 0.05475594923827181,
+   "gdb12to13_energy_total_mae_over_mean_natoms": 2.313063465358094,
+   "gdb12to13_energy_signed_mean_per_atom": 0.7491908538724922,
+   "gdb12to13_force_norm_mae": 0.10999220700298784,
+   "gdb12to13_force_per_conf_mae_then_mean": 0.05563580414838886,
+   "drugbank_mean_of_per_file_energy": 1.4545121002123305,
+   "drugbank_mean_of_per_file_force": 0.0338256364728839,
+   "drugbank_energy_total_mae_over_mean_natoms": 1.5000862561620985,
+   "drugbank_energy_signed_mean_per_atom": 0.5876859018272292,
+   "drugbank_force_norm_mae": 0.06809927413719129,
+   "drugbank_force_per_conf_mae_then_mean": 0.03306543959046118,
+   "s66x8_mean_of_per_file_energy": 1.6610253435243507,
+   "s66x8_mean_of_per_file_force": 0.015427248091198192,
+   "s66x8_energy_total_mae_over_mean_natoms": 1.5861472225397746,
+   "s66x8_energy_signed_mean_per_atom": 1.465023656080443,
+   "s66x8_force_norm_mae": 0.03282578973188803,
+   "s66x8_force_per_conf_mae_then_mean": 0.015473380587577072,
+   "tripeptides_mean_of_per_file_energy": 1.2425843446741685,
+   "tripeptides_mean_of_per_file_force": 0.029099524758306294,
+   "tripeptides_energy_total_mae_over_mean_natoms": 1.1868842903268717,
+   "tripeptides_energy_signed_mean_per_atom": 0.3895641252409904,
+   "tripeptides_force_norm_mae": 0.058279967494786145,
+   "tripeptides_force_per_conf_mae_then_mean": 0.029116766214871317,
+   "gdb9to11_readingB_gdb11_07to11_n": 59670,
+   "gdb9to11_readingB_gdb11_07to11_energy": 1.8227505478489539,
+   "gdb9to11_readingB_gdb11_07to11_force": 0.03533237507298384,
+   "gdb9to11_readingC_folder_GDB07to09_n": 36000,
+   "gdb9to11_readingC_folder_GDB07to09_energy": 1.678322800763382,
+   "gdb9to11_readingC_folder_GDB07to09_force": 0.029303010954243335,
+   "gdb12to13_readingC_folder_GDB10to13_n": 47670,
+   "gdb12to13_readingC_folder_GDB10to13_energy": 2.1959199380159156,
+   "gdb12to13_readingC_folder_GDB10to13_force": 0.049210706183225934
+  },
+  "animd_atom_counts": {
+   "crd.dat/molAcetaminophen": 20,
+   "crd.dat/molAtazanavir": 103,
+   "crd.dat/molAtomoxetine": 40,
+   "crd.dat/molCaffeine": 24,
+   "crd.dat/molCapsaicin": 49,
+   "crd.dat/molChignolinNeutral": 149,
+   "crd.dat/molFentanyl": 53,
+   "crd.dat/molLisdexamfetamine": 44,
+   "crd.dat/molOseltamivir": 50,
+   "crd.dat/molRanolazine": 64,
+   "crd.dat/molRetinol": 51,
+   "crd.dat/molSalbutamol": 38,
+   "crd.dat/molTolterodine": 55,
+   "crd.dat/molTrpCage1L2Y": 312
+  }
+ }
+}

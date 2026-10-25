@@ -1,0 +1,62 @@
+{
+ "M3GNet|crd.dat/molCaffeine": {
+  "natoms": 24,
+  "pearson_r": -0.9924155304471971,
+  "slope_through_origin": -0.9890774928710745,
+  "energy_err_per_atom_meV_mean": -0.35141772764291096,
+  "energy_abs_err_per_atom_meV_mean": 0.9894180011163675,
+  "force_mae_eV_A": 1.4119239312383902,
+  "batch_vs_single_max_dE_eV": 0.001953125,
+  "batch_vs_single_max_dF_eV_A": 0.0037217140197753906
+ },
+ "M3GNet|gdb11_s09/mol0000": {
+  "natoms": 19,
+  "pearson_r": -0.9847725163144798,
+  "slope_through_origin": -0.992887793610822,
+  "energy_err_per_atom_meV_mean": 13.711419184292744,
+  "energy_abs_err_per_atom_meV_mean": 13.711419184292744,
+  "force_mae_eV_A": 1.2814428659191885,
+  "batch_vs_single_max_dE_eV": 0.0009765625,
+  "batch_vs_single_max_dF_eV_A": 0.002654939889907837
+ },
+ "TensorNet|crd.dat/molCaffeine": {
+  "natoms": 24,
+  "pearson_r": -0.9873275177778973,
+  "slope_through_origin": -1.0046458418003403,
+  "energy_err_per_atom_meV_mean": -1.816261477642911,
+  "energy_abs_err_per_atom_meV_mean": 1.925885663392061,
+  "force_mae_eV_A": 1.4209379365734103,
+  "batch_vs_single_max_dE_eV": 0.0,
+  "batch_vs_single_max_dF_eV_A": 7.271766662597656e-06
+ },
+ "TensorNet|gdb11_s09/mol0000": {
+  "natoms": 19,
+  "pearson_r": -0.9930035907441953,
+  "slope_through_origin": -0.9939231187830497,
+  "energy_err_per_atom_meV_mean": -0.09858801143093981,
+  "energy_abs_err_per_atom_meV_mean": 1.3436979753817613,
+  "force_mae_eV_A": 1.277684169920325,
+  "batch_vs_single_max_dE_eV": 0.0,
+  "batch_vs_single_max_dF_eV_A": 7.867813110351562e-06
+ },
+ "SO3Net|crd.dat/molCaffeine": {
+  "natoms": 24,
+  "pearson_r": -0.9980694205217969,
+  "slope_through_origin": -1.0025201208296965,
+  "energy_err_per_atom_meV_mean": 0.1673811004820891,
+  "energy_abs_err_per_atom_meV_mean": 0.40439911572320847,
+  "force_mae_eV_A": 1.418859948760844,
+  "batch_vs_single_max_dE_eV": 0.0,
+  "batch_vs_single_max_dF_eV_A": 4.470348358154297e-06
+ },
+ "SO3Net|gdb11_s09/mol0000": {
+  "natoms": 19,
+  "pearson_r": -0.9985773353459582,
+  "slope_through_origin": -0.999329349672138,
+  "energy_err_per_atom_meV_mean": 0.9068858783716917,
+  "energy_abs_err_per_atom_meV_mean": 1.1867183104342123,
+  "force_mae_eV_A": 1.2764882095635024,
+  "batch_vs_single_max_dE_eV": 0.0,
+  "batch_vs_single_max_dF_eV_A": 3.337860107421875e-06
+ }
+}

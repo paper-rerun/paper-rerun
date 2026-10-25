@@ -1,0 +1,22 @@
+f3403c359ef21bcc71f5020000faadf0750dd01a repo/pretrained_models/M3GNet-ANI-1x-Subset-PES/README.md
+a94bcbbf5503dc8f023b7798f7195f104c5214a6 repo/pretrained_models/M3GNet-ANI-1x-Subset-PES/model.json
+80ea61d05c304e4a2fd8e825ef4e0cbe13abca33 repo/pretrained_models/M3GNet-ANI-1x-Subset-PES/model.pt
+76ed498f0778278d86744e8bd0bc15dea7317099 repo/pretrained_models/M3GNet-ANI-1x-Subset-PES/state.pt
+2b5e53927840851323d655b26bc2ae457a5837d0 repo/pretrained_models/TensorNet-ANI-1x-Subset-PES/model.json
+005109bfebf8bf72cfb111818df695e9b12c3f7e repo/pretrained_models/TensorNet-ANI-1x-Subset-PES/model.pt
+270e5fad12b83d97d446a495f2d624dbefe34c84 repo/pretrained_models/TensorNet-ANI-1x-Subset-PES/state.pt
+296dac6a3b8497da2629994dce59cca5b1275f9f repo/pretrained_models/SO3Net-ANI-1x-Subset-PES/README.md
+667a0689e6296e7f2fb8109dde537ffb76b015bd repo/pretrained_models/SO3Net-ANI-1x-Subset-PES/model.json
+96a0ecb76cd7952f23eb5036a1a1e4508eb5b0d2 repo/pretrained_models/SO3Net-ANI-1x-Subset-PES/model.pt
+9cca3b064224f38908d860e0a916ef7195c864ff repo/pretrained_models/SO3Net-ANI-1x-Subset-PES/state.pt
+d168ba5e9ed0155518d911c234e3db341760e4bb 6107773 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/ANI-MD/ani_md_bench.h5
+6ba6de270d99dfcf6fc296ee0947244b1d217951 47930417 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/DrugBank/drugbank_testset.h5
+777129cb224b69fe35d01572dee5a4b9a5a9f41a 22133702 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/GDB07to09/gdb11_07_test500.h5
+6e99a49470b6547e6befae4df386640dc8e0fbf9 22856144 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/GDB07to09/gdb11_08_test500.h5
+31bda868f13bcdf72c183ae106f05733fea8f9d8 23620919 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/GDB07to09/gdb11_09_test500.h5
+a8fd866275df29e0268f056fd041747cb56d695d 24406275 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/GDB10to13/gdb11_10_test500.h5
+34d83b10b212609aee3e4f0585ad63dd6245d452 25273065 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/GDB10to13/gdb11_11_test500.h5
+ff0669cf835549efb94ac5cc8091d48c6925487c 41844732 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/GDB10to13/gdb13_12_test1000.h5
+06c126241dae123c54bf093026b7a37bcc3f5c87 42885035 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/GDB10to13/gdb13_13_test1000.h5
+d9b89b3763bc5b85b12c81880e07ecece123cbaf 11398889 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/Tripeptides/tripeptide_full.h5
+60def9dae025577f94ecd8716720184e17e2cdd1 2297079 /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/s66x8/s66x8_wb97x6-31gd.h5

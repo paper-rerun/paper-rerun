@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/runs/scripts/comp6_eval.py", line 18, in <module>
+    import dgl
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/dgl/__init__.py", line 58, in <module>
+    from .data.utils import load_graphs, save_graphs
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/dgl/data/__init__.py", line 9, in <module>
+    from .movielens import MovieLensDataset
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/dgl/data/movielens.py", line 5, in <module>
+    import pandas as pd
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/pandas/__init__.py", line 46, in <module>
+    from pandas.core.api import (
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/pandas/core/api.py", line 46, in <module>
+    from pandas.core.groupby import (
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/pandas/core/groupby/generic.py", line 64, in <module>
+    from pandas.core.frame import DataFrame
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 154, in <module>
+    from pandas.core.generic import NDFrame
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/pandas/core/generic.py", line 145, in <module>
+    from pandas.core import (
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/pandas/core/indexing.py", line 74, in <module>
+    from pandas.core.indexes.api import (
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1138, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1078, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1507, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1479, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1619, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1662, in _fill_cache
+OSError: [Errno 12] Cannot allocate memory: '/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/pandas/core/indexes'

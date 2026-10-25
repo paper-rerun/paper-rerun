@@ -1,0 +1,4 @@
+exit=137 4000 data/COMP6/COMP6v1/ANI-MD/ani_md_bench.h5
+exit=0 4000 data/COMP6/COMP6v1/GDB07to09/gdb11_07_test500.h5
+exit=0 4000 data/COMP6/COMP6v1/GDB07to09/gdb11_08_test500.h5
+0 > runs/logs/batch_$0_$(basename $1 .h5).log 2>&1

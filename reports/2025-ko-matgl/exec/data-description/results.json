@@ -1,0 +1,491 @@
+{
+ "file": "/mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1/ANI-MD/ani_md_bench.h5",
+ "file_bytes": 6107773,
+ "git_blob_sha1": "d168ba5e9ed0155518d911c234e3db341760e4bb",
+ "top_level_keys": [
+  "crd.dat"
+ ],
+ "molecules": [
+  {
+   "group": "crd.dat/molAcetaminophen",
+   "n_atoms": 20,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    20,
+    3
+   ],
+   "forces_shape": [
+    128,
+    20,
+    3
+   ],
+   "n_heavy_atoms": 11,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molCaffeine",
+   "n_atoms": 24,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    24,
+    3
+   ],
+   "forces_shape": [
+    128,
+    24,
+    3
+   ],
+   "n_heavy_atoms": 14,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molSalbutamol",
+   "n_atoms": 38,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    38,
+    3
+   ],
+   "forces_shape": [
+    128,
+    38,
+    3
+   ],
+   "n_heavy_atoms": 17,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molAtomoxetine",
+   "n_atoms": 40,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    40,
+    3
+   ],
+   "forces_shape": [
+    128,
+    40,
+    3
+   ],
+   "n_heavy_atoms": 19,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molLisdexamfetamine",
+   "n_atoms": 44,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    44,
+    3
+   ],
+   "forces_shape": [
+    128,
+    44,
+    3
+   ],
+   "n_heavy_atoms": 19,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molCapsaicin",
+   "n_atoms": 49,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    49,
+    3
+   ],
+   "forces_shape": [
+    128,
+    49,
+    3
+   ],
+   "n_heavy_atoms": 22,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molOseltamivir",
+   "n_atoms": 50,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    50,
+    3
+   ],
+   "forces_shape": [
+    128,
+    50,
+    3
+   ],
+   "n_heavy_atoms": 22,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molRetinol",
+   "n_atoms": 51,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    51,
+    3
+   ],
+   "forces_shape": [
+    128,
+    51,
+    3
+   ],
+   "n_heavy_atoms": 21,
+   "elements": [
+    "C",
+    "H",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molFentanyl",
+   "n_atoms": 53,
+   "n_conformations": 127,
+   "coordinates_shape": [
+    127,
+    53,
+    3
+   ],
+   "forces_shape": [
+    127,
+    53,
+    3
+   ],
+   "n_heavy_atoms": 25,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molTolterodine",
+   "n_atoms": 55,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    55,
+    3
+   ],
+   "forces_shape": [
+    128,
+    55,
+    3
+   ],
+   "n_heavy_atoms": 24,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molRanolazine",
+   "n_atoms": 64,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    64,
+    3
+   ],
+   "forces_shape": [
+    128,
+    64,
+    3
+   ],
+   "n_heavy_atoms": 31,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molAtazanavir",
+   "n_atoms": 103,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    103,
+    3
+   ],
+   "forces_shape": [
+    128,
+    103,
+    3
+   ],
+   "n_heavy_atoms": 51,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molChignolinNeutral",
+   "n_atoms": 149,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    149,
+    3
+   ],
+   "forces_shape": [
+    128,
+    149,
+    3
+   ],
+   "n_heavy_atoms": 81,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  },
+  {
+   "group": "crd.dat/molTrpCage1L2Y",
+   "n_atoms": 312,
+   "n_conformations": 128,
+   "coordinates_shape": [
+    128,
+    312,
+    3
+   ],
+   "forces_shape": [
+    128,
+    312,
+    3
+   ],
+   "n_heavy_atoms": 158,
+   "elements": [
+    "C",
+    "H",
+    "N",
+    "O"
+   ],
+   "keys": [
+    "cm5",
+    "coordinates",
+    "energies",
+    "forces",
+    "hirdipole",
+    "hirshfeld",
+    "lot",
+    "species",
+    "spindensities"
+   ]
+  }
+ ],
+ "total_conformations": 1791,
+ "claims": {
+  "data-animd-natoms": {
+   "value": 312,
+   "paper_value": 312,
+   "match": true,
+   "n_molecules_with_312_atoms": 1,
+   "literal_reading_every_molecule_312": false,
+   "other_molecules_atom_range": [
+    20,
+    149
+   ],
+   "n_other_molecules": 13
+  },
+  "data-animd-ntraj": {
+   "value": 14,
+   "paper_value": 16,
+   "match": false
+  }
+ }
+}

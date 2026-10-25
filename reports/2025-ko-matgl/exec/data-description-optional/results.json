@@ -1,0 +1,14 @@
+{
+  "block": "data-description-optional",
+  "date": "2026-10-25",
+  "items": [
+    {
+      "claim_id": "data-train-maxatoms",
+      "status": "skipped",
+      "value": null,
+      "n": 0,
+      "reason": "ANI-1x release (figshare c.4712477, several GB) is not on disk. find over the working folder (excluding env/ and repo/) for *ani1x* returned nothing, and the env notes say it was NOT downloaded. The claim's conditions allow skipping without penalty. A multi-GB download was not started without the user's explicit approval.",
+      "how_to_run_later": "Download ani1x-release.h5 into data/ANI1x/, then compute max(len(f[k]['atomic_numbers'])) over all top-level groups with h5py (no model needed) and compare with 63."
+    }
+  ]
+}

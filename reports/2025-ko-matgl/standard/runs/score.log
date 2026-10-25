@@ -1,0 +1,41 @@
+claims.json: OK
+| Claim | Paper | Ours | Diff | Rel | Tol | Grade |
+|---|---|---|---|---|---|---|
+| E-M3GNet-ANIMD | 19.159 | 7.672 | -11.487 | -60.0% | 0.958 | mismatch |
+| F-M3GNet-ANIMD | 0.142 | 0.1136 | -0.0284 | -20.0% | 0.0071 | mismatch |
+| E-M3GNet-GDB9-11 | 8.925 | 3.522 | -5.403 | -60.5% | 0.446 | mismatch |
+| F-M3GNet-GDB9-11 | 0.074 | 0.0644 | -0.0096 | -13.0% | 0.0037 | close |
+| E-M3GNet-GDB12-13 | 3.655 | 5.902 | +2.247 | +61.5% | 0.183 | mismatch |
+| F-M3GNet-GDB12-13 | 0.118 | 0.1199 | +0.0019 | +1.6% | 0.0059 | match |
+| E-M3GNet-DrugBank | 12.01 | 8.933 | -3.077 | -25.6% | 0.601 | mismatch |
+| F-M3GNet-DrugBank | 0.126 | 0.1065 | -0.0195 | -15.4% | 0.0063 | mismatch |
+| E-M3GNet-S66x8 | 9.835 | 7.507 | -2.328 | -23.7% | 0.492 | mismatch |
+| F-M3GNet-S66x8 | 0.029 | 0.0449 | +0.0159 | +54.8% | 0.0014 | mismatch |
+| E-M3GNet-Tripeptides | 2.662 | 5.708 | +3.046 | +114.4% | 0.133 | mismatch |
+| F-M3GNet-Tripeptides | 0.067 | 0.0767 | +0.0097 | +14.5% | 0.0034 | close |
+| E-TensorNet-ANIMD | 11.099 | 2.800 | -8.299 | -74.8% | 0.555 | mismatch |
+| F-TensorNet-ANIMD | 0.099 | 0.0789 | -0.0201 | -20.3% | 0.0050 | mismatch |
+| E-TensorNet-GDB9-11 | 1.705 | 3.377 | +1.672 | +98.1% | 0.085 | mismatch |
+| F-TensorNet-GDB9-11 | 0.056 | 0.0604 | +0.0044 | +7.8% | 0.0028 | close |
+| E-TensorNet-GDB12-13 | 3.252 | 4.694 | +1.442 | +44.4% | 0.163 | mismatch |
+| F-TensorNet-GDB12-13 | 0.09 | 0.0989 | +0.0089 | +9.9% | 0.0045 | close |
+| E-TensorNet-DrugBank | 1.123 | 2.797 | +1.674 | +149.1% | 0.056 | mismatch |
+| F-TensorNet-DrugBank | 0.086 | 0.0764 | -0.0096 | -11.2% | 0.0043 | close |
+| E-TensorNet-S66x8 | 6.031 | 5.673 | -0.358 | -5.9% | 0.302 | close |
+| F-TensorNet-S66x8 | 0.045 | 0.0382 | -0.0068 | -15.1% | 0.0022 | mismatch |
+| E-TensorNet-Tripeptides | 2.248 | 3.098 | +0.850 | +37.8% | 0.112 | mismatch |
+| F-TensorNet-Tripeptides | 0.067 | 0.0667 | -0.0003 | -0.5% | 0.0034 | match |
+| E-SO3Net-ANIMD | 2.283 | 1.011 | -1.272 | -55.7% | 0.114 | mismatch |
+| F-SO3Net-ANIMD | 0.044 | 0.0352 | -0.0088 | -20.0% | 0.0022 | mismatch |
+| E-SO3Net-GDB9-11 | 3.889 | 1.680 | -2.209 | -56.8% | 0.194 | mismatch |
+| F-SO3Net-GDB9-11 | 0.032 | 0.0293 | -0.0027 | -8.4% | 0.0016 | close |
+| E-SO3Net-GDB12-13 | 1.271 | 2.197 | +0.926 | +72.9% | 0.064 | mismatch |
+| F-SO3Net-GDB12-13 | 0.044 | 0.0492 | +0.0052 | +11.8% | 0.0022 | close |
+| E-SO3Net-DrugBank | 0.969 | 1.456 | +0.487 | +50.2% | 0.050 | mismatch |
+| F-SO3Net-DrugBank | 0.044 | 0.0338 | -0.0102 | -23.1% | 0.0022 | mismatch |
+| E-SO3Net-S66x8 | 2.558 | 1.664 | -0.894 | -34.9% | 0.128 | mismatch |
+| F-SO3Net-S66x8 | 0.011 | 0.0154 | +0.0044 | +40.2% | 0.0010 | mismatch |
+| E-SO3Net-Tripeptides | 1.245 | 1.243 | -0.002 | -0.1% | 0.062 | match |
+| F-SO3Net-Tripeptides | 0.029 | 0.0291 | +0.0001 | +0.3% | 0.0014 | match |
+
+match 4, close 8, mismatch 24: Not reproduced

@@ -1,0 +1,3 @@
+ani_md_bench crd.dat/molChignolinNeutral E_calc_cpu -108700.34375 E_run_gpu -108700.34375 max|dF| 6.4373016e-06
+gdb13_13_test1000 gdb11_s13-000/mol0005 E_calc_cpu -17055.5390625 E_run_gpu -17055.5390625 max|dF| 1.3828278e-05
+drugbank_testset drugbank/mol0006 E_calc_cpu -13519.12890625 E_run_gpu -13519.12890625 max|dF| 6.854534e-06

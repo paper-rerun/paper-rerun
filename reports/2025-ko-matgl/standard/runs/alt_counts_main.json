@@ -1,0 +1,18 @@
+{
+ "primary|energy_mae_meV_per_atom": "1/18",
+ "primary|alt_b_energy_total_mae_over_mean_n": "1/18",
+ "primary|alt_d_energy_unweighted_file_mean": "1/18",
+ "primary|exploratory_molecule_centered_energy_mae_meV_per_atom": "2/18",
+ "primary|force_mae_eV_per_A": "3/18",
+ "primary|alt_b_force_mean_of_per_conf_mae": "3/18",
+ "primary|alt_c_force_vector_norm_per_atom": "0/18",
+ "primary|alt_d_force_unweighted_file_mean": "3/18",
+ "alt_gdb_grouping|energy_mae_meV_per_atom": "1/18",
+ "alt_gdb_grouping|alt_b_energy_total_mae_over_mean_n": "1/18",
+ "alt_gdb_grouping|alt_d_energy_unweighted_file_mean": "1/18",
+ "alt_gdb_grouping|exploratory_molecule_centered_energy_mae_meV_per_atom": "1/18",
+ "alt_gdb_grouping|force_mae_eV_per_A": "2/18",
+ "alt_gdb_grouping|alt_b_force_mean_of_per_conf_mae": "2/18",
+ "alt_gdb_grouping|alt_c_force_vector_norm_per_atom": "0/18",
+ "alt_gdb_grouping|alt_d_force_unweighted_file_mean": "2/18"
+}

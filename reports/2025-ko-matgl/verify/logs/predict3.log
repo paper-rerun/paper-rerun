@@ -1,0 +1,85 @@
+element_types ('H', 'C', 'N', 'O') cutoff 5.0
+ani_md_bench conformations 1791 graphs built in 2.7 s
+SO3Net ani_md_bench batches 410
+SO3Net ani_md_bench done in 199.2 s
+drugbank_testset conformations 13379 graphs built in 23.6 s
+SO3Net drugbank_testset batches 1406
+SO3Net drugbank_testset done in 137.6 s
+gdb11_07_test500 conformations 12000 graphs built in 15.5 s
+SO3Net gdb11_07_test500 batches 251
+SO3Net gdb11_07_test500 done in 209.6 s
+gdb11_08_test500 conformations 12000 graphs built in 16.5 s
+SO3Net gdb11_08_test500 batches 301
+SO3Net gdb11_08_test500 done in 151.1 s
+gdb11_09_test500 conformations 12000 graphs built in 17.7 s
+SO3Net gdb11_09_test500 batches 359
+SO3Net gdb11_09_test500 done in 53.6 s
+gdb11_10_test500 conformations 12000 graphs built in 16.2 s
+SO3Net gdb11_10_test500 batches 422
+SO3Net gdb11_10_test500 done in 118.6 s
+gdb11_11_test500 conformations 11670 graphs built in 15.9 s
+SO3Net gdb11_11_test500 batches 502
+SO3Net gdb11_11_test500 done in 254.5 s
+gdb13_12_test1000 conformations 12000 graphs built in 22.3 s
+SO3Net gdb13_12_test1000 batches 598
+SO3Net gdb13_12_test1000 done in 74.5 s
+gdb13_13_test1000 conformations 12000 graphs built in 21.3 s
+SO3Net gdb13_13_test1000 batches 680
+SO3Net gdb13_13_test1000 done in 360.1 s
+tripeptide_full conformations 1984 graphs built in 12.1 s
+SO3Net tripeptide_full batches 254
+SO3Net tripeptide_full done in 78.5 s
+skip s66x8_wb97x6-31gd
+element_types ('H', 'C', 'N', 'O') cutoff 5.0
+skip ani_md_bench
+drugbank_testset conformations 13379 graphs built in 18.3 s
+M3GNet drugbank_testset batches 404
+M3GNet drugbank_testset done in 98.3 s
+TensorNet drugbank_testset batches 404
+TensorNet drugbank_testset done in 72.0 s
+gdb11_07_test500 conformations 12000 graphs built in 12.1 s
+M3GNet gdb11_07_test500 batches 123
+M3GNet gdb11_07_test500 done in 24.5 s
+TensorNet gdb11_07_test500 batches 123
+TensorNet gdb11_07_test500 done in 10.0 s
+gdb11_08_test500 conformations 12000 graphs built in 14.1 s
+M3GNet gdb11_08_test500 batches 137
+M3GNet gdb11_08_test500 done in 22.2 s
+TensorNet gdb11_08_test500 batches 137
+TensorNet gdb11_08_test500 done in 13.8 s
+gdb11_09_test500 conformations 12000 graphs built in 11.5 s
+M3GNet gdb11_09_test500 batches 152
+M3GNet gdb11_09_test500 done in 29.1 s
+TensorNet gdb11_09_test500 batches 152
+TensorNet gdb11_09_test500 done in 12.4 s
+gdb11_10_test500 conformations 12000 graphs built in 14.2 s
+M3GNet gdb11_10_test500 batches 167
+M3GNet gdb11_10_test500 done in 32.8 s
+TensorNet gdb11_10_test500 batches 167
+TensorNet gdb11_10_test500 done in 13.5 s
+gdb11_11_test500 conformations 11670 graphs built in 14.2 s
+M3GNet gdb11_11_test500 batches 184
+M3GNet gdb11_11_test500 done in 37.3 s
+TensorNet gdb11_11_test500 batches 184
+TensorNet gdb11_11_test500 done in 24.8 s
+gdb13_12_test1000 conformations 12000 graphs built in 17.3 s
+M3GNet gdb13_12_test1000 batches 205
+M3GNet gdb13_12_test1000 done in 46.3 s
+TensorNet gdb13_12_test1000 batches 205
+TensorNet gdb13_12_test1000 done in 22.6 s
+gdb13_13_test1000 conformations 12000 graphs built in 19.6 s
+M3GNet gdb13_13_test1000 batches 221
+M3GNet gdb13_13_test1000 done in 48.3 s
+TensorNet gdb13_13_test1000 batches 221
+TensorNet gdb13_13_test1000 done in 21.7 s
+tripeptide_full conformations 1984 graphs built in 3.7 s
+M3GNet tripeptide_full batches 71
+M3GNet tripeptide_full done in 18.4 s
+TensorNet tripeptide_full batches 71
+TensorNet tripeptide_full done in 9.7 s
+s66x8_wb97x6-31gd conformations 528 graphs built in 0.7 s
+M3GNet s66x8_wb97x6-31gd batches 8
+M3GNet s66x8_wb97x6-31gd done in 1.4 s
+TensorNet s66x8_wb97x6-31gd batches 8
+TensorNet s66x8_wb97x6-31gd done in 0.7 s
+ALL DONE

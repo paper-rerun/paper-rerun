@@ -1,0 +1,13 @@
+/mnt/e/Ciencia/pipeline/2025-ko-matgl/env/.venv/lib/python3.12/site-packages/dgl/backend/backend.py:1845: SyntaxWarning: invalid escape sequence '\P'
+  y_i = \Phi_{j=\mathrm{offsets}_i}^{\mathrm{offsets}_{i+1}-1} x_j
+/mnt/e/Ciencia/pipeline/2025-ko-matgl/repo/src/matgl/utils/io.py:138: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(fpaths["state.pt"], map_location=map_location)
+/mnt/e/Ciencia/pipeline/2025-ko-matgl/repo/src/matgl/utils/io.py:139: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  d = torch.load(fpaths["model.pt"], map_location=map_location)
+python 3.12.15 torch 2.4.0+cu121 cuda 12.1 matgl 1.3.0
+dgl 2.4.0+cu121 gpu NVIDIA GeForce RTX 2070 SUPER
+group crd.dat/molCaffeine atoms 24 E_DFT(eV) -18508.640566326594
+M3GNet    device=cuda:0 cutoff=5.0 E_pred=-18508.6680 eV  |dE|/atom=1.142 meV  F_MAE=1.6932 eV/A  r(F)=-0.9930
+TensorNet device=cuda:0 cutoff=5.0 E_pred=-18508.6699 eV  |dE|/atom=1.223 meV  F_MAE=1.6818 eV/A  r(F)=-0.9917
+SO3Net    device=cuda:0 cutoff=5.0 E_pred=-18508.6504 eV  |dE|/atom=0.409 meV  F_MAE=1.6800 eV/A  r(F)=-0.9990
+smoke test done

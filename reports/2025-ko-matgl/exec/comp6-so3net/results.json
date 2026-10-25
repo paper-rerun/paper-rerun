@@ -1,0 +1,603 @@
+{
+ "force_sign": "flip",
+ "groups": {
+  "animd": {
+   "files": [
+    "ani_md_bench"
+   ],
+   "n_conf": 1791,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.009413767815435,
+   "force_mae_eV_A": 0.03522142467918196,
+   "alt_energy_mean_signed_meV_per_atom": 0.5468942250697574,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.1625302730754612,
+   "alt_energy_total_mae_meV": 87.3702190657601,
+   "alt_force_mae_stored_sign_eV_A": 1.3753337575100368,
+   "alt_force_mae_per_conf_mean_eV_A": 0.0303571072463394,
+   "alt_force_mae_vector_norm_eV_A": 0.07099306528668393,
+   "alt_mean_of_per_file_energy_mae": 1.009413767815435,
+   "alt_mean_of_per_file_force_mae": 0.03522142467918196
+  },
+  "gdb9to11": {
+   "files": [
+    "gdb11_09_test500",
+    "gdb11_10_test500",
+    "gdb11_11_test500"
+   ],
+   "n_conf": 35670,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.9682335356452647,
+   "force_mae_eV_A": 0.039346078020695834,
+   "alt_energy_mean_signed_meV_per_atom": 0.7566493195073496,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.9351784555393836,
+   "alt_energy_total_mae_meV": 40.50105530616,
+   "alt_force_mae_stored_sign_eV_A": 1.985748173346093,
+   "alt_force_mae_per_conf_mean_eV_A": 0.0398280937634885,
+   "alt_force_mae_vector_norm_eV_A": 0.07923083158145257,
+   "alt_mean_of_per_file_energy_mae": 1.969634758136265,
+   "alt_mean_of_per_file_force_mae": 0.03879126309895654
+  },
+  "gdb12to13": {
+   "files": [
+    "gdb13_12_test1000",
+    "gdb13_13_test1000"
+   ],
+   "n_conf": 24000,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 2.347310713848864,
+   "force_mae_eV_A": 0.05480982433535724,
+   "alt_energy_mean_signed_meV_per_atom": 0.7491941191893922,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 2.3130588287495097,
+   "alt_energy_total_mae_meV": 60.89705631390272,
+   "alt_force_mae_stored_sign_eV_A": 2.7541719090016077,
+   "alt_force_mae_per_conf_mean_eV_A": 0.05563580465095264,
+   "alt_force_mae_vector_norm_eV_A": 0.10999220847059672,
+   "alt_mean_of_per_file_energy_mae": 2.347310713848864,
+   "alt_mean_of_per_file_force_mae": 0.05475594979399838
+  },
+  "drugbank": {
+   "files": [
+    "drugbank_testset"
+   ],
+   "n_conf": 13379,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.454496069608172,
+   "force_mae_eV_A": 0.033825636326374676,
+   "alt_energy_mean_signed_meV_per_atom": 0.587676247286792,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.5000683656651452,
+   "alt_energy_total_mae_meV": 66.6473681234601,
+   "alt_force_mae_stored_sign_eV_A": 1.937445435190835,
+   "alt_force_mae_per_conf_mean_eV_A": 0.03306543965123203,
+   "alt_force_mae_vector_norm_eV_A": 0.0680992741505084,
+   "alt_mean_of_per_file_energy_mae": 1.454496069608172,
+   "alt_mean_of_per_file_force_mae": 0.033825636326374676
+  },
+  "s66x8": {
+   "files": [
+    "s66x8_wb97x6-31gd"
+   ],
+   "n_conf": 528,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.6610253435243505,
+   "force_mae_eV_A": 0.015427247958378002,
+   "alt_energy_mean_signed_meV_per_atom": 1.465023656080443,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.5861472225397746,
+   "alt_energy_total_mae_meV": 31.578749248746423,
+   "alt_force_mae_stored_sign_eV_A": 0.24706141951892024,
+   "alt_force_mae_per_conf_mean_eV_A": 0.015473377709592798,
+   "alt_force_mae_vector_norm_eV_A": 0.03282578925505122,
+   "alt_mean_of_per_file_energy_mae": 1.6610253435243505,
+   "alt_mean_of_per_file_force_mae": 0.015427247958378002
+  },
+  "tripeptides": {
+   "files": [
+    "tripeptide_full"
+   ],
+   "n_conf": 1984,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.2425498029898163,
+   "force_mae_eV_A": 0.029099526698072066,
+   "alt_energy_mean_signed_meV_per_atom": 0.3895295835566384,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.1868467821650956,
+   "alt_energy_total_mae_meV": 62.29988471865006,
+   "alt_force_mae_stored_sign_eV_A": 1.8927497015279686,
+   "alt_force_mae_per_conf_mean_eV_A": 0.029116768124594534,
+   "alt_force_mae_vector_norm_eV_A": 0.058279968431695396,
+   "alt_mean_of_per_file_energy_mae": 1.2425498029898163,
+   "alt_mean_of_per_file_force_mae": 0.029099526698072066
+  }
+ },
+ "per_file": {
+  "ani_md_bench": {
+   "files": [
+    "ani_md_bench"
+   ],
+   "n_conf": 1791,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.009413767815435,
+   "force_mae_eV_A": 0.03522142467918196,
+   "alt_energy_mean_signed_meV_per_atom": 0.5468942250697574,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.1625302730754612,
+   "alt_energy_total_mae_meV": 87.3702190657601,
+   "alt_force_mae_stored_sign_eV_A": 1.3753337575100368,
+   "alt_force_mae_per_conf_mean_eV_A": 0.0303571072463394,
+   "alt_force_mae_vector_norm_eV_A": 0.07099306528668393
+  },
+  "s66x8_wb97x6-31gd": {
+   "files": [
+    "s66x8_wb97x6-31gd"
+   ],
+   "n_conf": 528,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.6610253435243505,
+   "force_mae_eV_A": 0.015427247958378002,
+   "alt_energy_mean_signed_meV_per_atom": 1.465023656080443,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.5861472225397746,
+   "alt_energy_total_mae_meV": 31.578749248746423,
+   "alt_force_mae_stored_sign_eV_A": 0.24706141951892024,
+   "alt_force_mae_per_conf_mean_eV_A": 0.015473377709592798,
+   "alt_force_mae_vector_norm_eV_A": 0.03282578925505122
+  },
+  "tripeptide_full": {
+   "files": [
+    "tripeptide_full"
+   ],
+   "n_conf": 1984,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.2425498029898163,
+   "force_mae_eV_A": 0.029099526698072066,
+   "alt_energy_mean_signed_meV_per_atom": 0.3895295835566384,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.1868467821650956,
+   "alt_energy_total_mae_meV": 62.29988471865006,
+   "alt_force_mae_stored_sign_eV_A": 1.8927497015279686,
+   "alt_force_mae_per_conf_mean_eV_A": 0.029116768124594534,
+   "alt_force_mae_vector_norm_eV_A": 0.058279968431695396
+  },
+  "drugbank_testset": {
+   "files": [
+    "drugbank_testset"
+   ],
+   "n_conf": 13379,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.454496069608172,
+   "force_mae_eV_A": 0.033825636326374676,
+   "alt_energy_mean_signed_meV_per_atom": 0.587676247286792,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.5000683656651452,
+   "alt_energy_total_mae_meV": 66.6473681234601,
+   "alt_force_mae_stored_sign_eV_A": 1.937445435190835,
+   "alt_force_mae_per_conf_mean_eV_A": 0.03306543965123203,
+   "alt_force_mae_vector_norm_eV_A": 0.0680992741505084
+  },
+  "gdb11_09_test500": {
+   "files": [
+    "gdb11_09_test500"
+   ],
+   "n_conf": 12000,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.8219122924278641,
+   "force_mae_eV_A": 0.032247896679565555,
+   "alt_energy_mean_signed_meV_per_atom": 0.8195074540660562,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.7782694357871727,
+   "alt_energy_total_mae_meV": 33.42790885392727,
+   "alt_force_mae_stored_sign_eV_A": 1.5756385458611604,
+   "alt_force_mae_per_conf_mean_eV_A": 0.03337814945154852,
+   "alt_force_mae_vector_norm_eV_A": 0.06508164477380952
+  },
+  "gdb11_10_test500": {
+   "files": [
+    "gdb11_10_test500"
+   ],
+   "n_conf": 12000,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.9658978109538074,
+   "force_mae_eV_A": 0.03474872341515888,
+   "alt_energy_mean_signed_meV_per_atom": 0.9524311145464792,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.9165917582048908,
+   "alt_energy_total_mae_meV": 39.573786623414584,
+   "alt_force_mae_stored_sign_eV_A": 1.4846899367243869,
+   "alt_force_mae_per_conf_mean_eV_A": 0.036032307217619616,
+   "alt_force_mae_vector_norm_eV_A": 0.07014129946324946
+  },
+  "gdb11_11_test500": {
+   "files": [
+    "gdb11_11_test500"
+   ],
+   "n_conf": 11670,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 2.1210941710271234,
+   "force_mae_eV_A": 0.049377169202145174,
+   "alt_energy_mean_signed_meV_per_atom": 0.49069566439389345,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 2.0816029615734126,
+   "alt_energy_total_mae_meV": 48.72770325986503,
+   "alt_force_mae_stored_sign_eV_A": 2.7788556298462805,
+   "alt_force_mae_per_conf_mean_eV_A": 0.05036354965840763,
+   "alt_force_mae_vector_norm_eV_A": 0.09915866258460349
+  },
+  "gdb13_12_test1000": {
+   "files": [
+    "gdb13_12_test1000"
+   ],
+   "n_conf": 12000,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 2.2588035276832787,
+   "force_mae_eV_A": 0.05335646090635591,
+   "alt_energy_mean_signed_meV_per_atom": 0.5809360589239296,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 2.222451228901591,
+   "alt_energy_total_mae_meV": 56.259130408414876,
+   "alt_force_mae_stored_sign_eV_A": 2.746965239672551,
+   "alt_force_mae_per_conf_mean_eV_A": 0.05429852239463342,
+   "alt_force_mae_vector_norm_eV_A": 0.10710085508561218
+  },
+  "gdb13_13_test1000": {
+   "files": [
+    "gdb13_13_test1000"
+   ],
+   "n_conf": 12000,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 2.4358179000144484,
+   "force_mae_eV_A": 0.05615543868164084,
+   "alt_energy_mean_signed_meV_per_atom": 0.9174521794548546,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 2.3969489857499933,
+   "alt_energy_total_mae_meV": 65.53498221939057,
+   "alt_force_mae_stored_sign_eV_A": 2.760844292140327,
+   "alt_force_mae_per_conf_mean_eV_A": 0.056973086907271875,
+   "alt_force_mae_vector_norm_eV_A": 0.11266920344471978
+  },
+  "gdb11_07_test500": {
+   "files": [
+    "gdb11_07_test500"
+   ],
+   "n_conf": 12000,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.5857528725214012,
+   "force_mae_eV_A": 0.02589741973438185,
+   "alt_energy_mean_signed_meV_per_atom": 0.7105306320895478,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.5377943242948109,
+   "alt_energy_total_mae_meV": 23.479043743333175,
+   "alt_force_mae_stored_sign_eV_A": 1.749282388924172,
+   "alt_force_mae_per_conf_mean_eV_A": 0.027147117689254627,
+   "alt_force_mae_vector_norm_eV_A": 0.05220344268179747
+  },
+  "gdb11_08_test500": {
+   "files": [
+    "gdb11_08_test500"
+   ],
+   "n_conf": 12000,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.6273084831982287,
+   "force_mae_eV_A": 0.0291048652722328,
+   "alt_energy_mean_signed_meV_per_atom": 0.5990301139280093,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.575616245283581,
+   "alt_energy_total_mae_meV": 26.728753984990668,
+   "alt_force_mae_stored_sign_eV_A": 1.6506593570560462,
+   "alt_force_mae_per_conf_mean_eV_A": 0.030253589398814475,
+   "alt_force_mae_vector_norm_eV_A": 0.05867554729000967
+  }
+ },
+ "sensitivity": {
+  "gdb9to11_readingB_gdb11_07to11": {
+   "files": [
+    "gdb11_07_test500",
+    "gdb11_08_test500",
+    "gdb11_09_test500",
+    "gdb11_10_test500",
+    "gdb11_11_test500"
+   ],
+   "n_conf": 59670,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.8227522454349279,
+   "force_mae_eV_A": 0.03533237612875711,
+   "alt_energy_mean_signed_meV_per_atom": 0.7156763897945005,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.8063507578738969,
+   "alt_energy_total_mae_meV": 34.30813164924775,
+   "alt_force_mae_stored_sign_eV_A": 1.887331072278801,
+   "alt_force_mae_per_conf_mean_eV_A": 0.03535238125692079,
+   "alt_force_mae_vector_norm_eV_A": 0.07116931281944827
+  },
+  "gdb9to11_readingC_folder_GDB07to09": {
+   "files": [
+    "gdb11_07_test500",
+    "gdb11_08_test500",
+    "gdb11_09_test500"
+   ],
+   "n_conf": 36000,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 1.678324549382498,
+   "force_mae_eV_A": 0.029303011968747253,
+   "alt_energy_mean_signed_meV_per_atom": 0.7096894000278711,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 1.6389517260876172,
+   "alt_energy_total_mae_meV": 27.87856886075037,
+   "alt_force_mae_stored_sign_eV_A": 1.6525314958316892,
+   "alt_force_mae_per_conf_mean_eV_A": 0.03025961884653921,
+   "alt_force_mae_vector_norm_eV_A": 0.059098939948098755
+  },
+  "gdb12to13_readingC_folder_GDB10to13": {
+   "files": [
+    "gdb11_10_test500",
+    "gdb11_11_test500",
+    "gdb13_12_test1000",
+    "gdb13_13_test1000"
+   ],
+   "n_conf": 47670,
+   "n_failed": 0,
+   "energy_mae_meV_per_atom": 2.1959177646256545,
+   "force_mae_eV_A": 0.0492107069819427,
+   "alt_energy_mean_signed_meV_per_atom": 0.737072595732744,
+   "alt_energy_total_mae_over_mean_natoms_meV_per_atom": 2.1729981957721485,
+   "alt_energy_total_mae_meV": 52.55018015643519,
+   "alt_force_mae_stored_sign_eV_A": 2.4871700055732955,
+   "alt_force_mae_per_conf_mean_eV_A": 0.04941031304275049,
+   "alt_force_mae_vector_norm_eV_A": 0.09885981015608676
+  }
+ },
+ "claims": [
+  {
+   "claim_id": "fig4a-so3net-animd",
+   "group": "animd",
+   "metric": "energy_mae_meV_per_atom",
+   "value": 1.009413767815435,
+   "n": 1791,
+   "paper_value": 2.283,
+   "diff": -1.273586232184565,
+   "tolerance": 0.01,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "fig4a-so3net-gdb9to11",
+   "group": "gdb9to11",
+   "metric": "energy_mae_meV_per_atom",
+   "value": 1.9682335356452647,
+   "n": 35670,
+   "paper_value": 3.889,
+   "diff": -1.920766464354735,
+   "tolerance": 0.01,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "fig4a-so3net-gdb12to13",
+   "group": "gdb12to13",
+   "metric": "energy_mae_meV_per_atom",
+   "value": 2.347310713848864,
+   "n": 24000,
+   "paper_value": 1.271,
+   "diff": 1.076310713848864,
+   "tolerance": 0.01,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "fig4a-so3net-drugbank",
+   "group": "drugbank",
+   "metric": "energy_mae_meV_per_atom",
+   "value": 1.454496069608172,
+   "n": 13379,
+   "paper_value": 0.969,
+   "diff": 0.48549606960817193,
+   "tolerance": 0.01,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "fig4a-so3net-s66x8",
+   "group": "s66x8",
+   "metric": "energy_mae_meV_per_atom",
+   "value": 1.6610253435243505,
+   "n": 528,
+   "paper_value": 2.558,
+   "diff": -0.8969746564756493,
+   "tolerance": 0.01,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "fig4a-so3net-tripeptides",
+   "group": "tripeptides",
+   "metric": "energy_mae_meV_per_atom",
+   "value": 1.2425498029898163,
+   "n": 1984,
+   "paper_value": 1.245,
+   "diff": -0.0024501970101837856,
+   "tolerance": 0.01,
+   "kind": "abs",
+   "pass": true
+  },
+  {
+   "claim_id": "fig4b-so3net-animd",
+   "group": "animd",
+   "metric": "force_mae_eV_A",
+   "value": 0.03522142467918196,
+   "n": 1791,
+   "paper_value": 0.044,
+   "diff": -0.008778575320818036,
+   "tolerance": 0.0006,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "fig4b-so3net-gdb9to11",
+   "group": "gdb9to11",
+   "metric": "force_mae_eV_A",
+   "value": 0.039346078020695834,
+   "n": 35670,
+   "paper_value": 0.032,
+   "diff": 0.007346078020695833,
+   "tolerance": 0.0006,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "fig4b-so3net-gdb12to13",
+   "group": "gdb12to13",
+   "metric": "force_mae_eV_A",
+   "value": 0.05480982433535724,
+   "n": 24000,
+   "paper_value": 0.044,
+   "diff": 0.010809824335357245,
+   "tolerance": 0.0006,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "fig4b-so3net-drugbank",
+   "group": "drugbank",
+   "metric": "force_mae_eV_A",
+   "value": 0.033825636326374676,
+   "n": 13379,
+   "paper_value": 0.044,
+   "diff": -0.010174363673625321,
+   "tolerance": 0.0006,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "fig4b-so3net-s66x8",
+   "group": "s66x8",
+   "metric": "force_mae_eV_A",
+   "value": 0.015427247958378002,
+   "n": 528,
+   "paper_value": 0.011,
+   "diff": 0.004427247958378002,
+   "tolerance": 0.0006,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "fig4b-so3net-tripeptides",
+   "group": "tripeptides",
+   "metric": "force_mae_eV_A",
+   "value": 0.029099526698072066,
+   "n": 1984,
+   "paper_value": 0.029,
+   "diff": 9.952669807206452e-05,
+   "tolerance": 0.0006,
+   "kind": "abs",
+   "pass": true
+  },
+  {
+   "claim_id": "text-so3net-animd-energy",
+   "group": "animd",
+   "metric": "energy_mae_meV_per_atom",
+   "value": 1.009413767815435,
+   "n": 1791,
+   "paper_value": 2.3,
+   "diff": -1.290586232184565,
+   "tolerance": 0.05,
+   "kind": "abs",
+   "pass": false
+  },
+  {
+   "claim_id": "text-so3net-animd-force",
+   "group": "animd",
+   "metric": "force_mae_eV_A",
+   "value": 0.03522142467918196,
+   "n": 1791,
+   "paper_value": 0.044,
+   "diff": -0.008778575320818036,
+   "tolerance": 0.0005,
+   "kind": "abs",
+   "pass": false
+  }
+ ],
+ "animd_per_molecule": {
+  "crd.dat/molAcetaminophen": {
+   "n_atoms": 20,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 1.2136588812204252,
+   "energy_mean_signed_meV_per_atom": -1.2106613112983666,
+   "force_mae_eV_A": 0.018841833212644845
+  },
+  "crd.dat/molAtazanavir": {
+   "n_atoms": 103,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 0.5191849694323564,
+   "energy_mean_signed_meV_per_atom": -0.17518342436297085,
+   "force_mae_eV_A": 0.030225061203358442
+  },
+  "crd.dat/molAtomoxetine": {
+   "n_atoms": 40,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 1.28850500512101,
+   "energy_mean_signed_meV_per_atom": 1.2321388471661976,
+   "force_mae_eV_A": 0.02221611596831445
+  },
+  "crd.dat/molCaffeine": {
+   "n_atoms": 24,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 0.47575678986315023,
+   "energy_mean_signed_meV_per_atom": 0.1804041286348479,
+   "force_mae_eV_A": 0.03761451154905737
+  },
+  "crd.dat/molCapsaicin": {
+   "n_atoms": 49,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 0.8472187159733429,
+   "energy_mean_signed_meV_per_atom": 0.6590145476029741,
+   "force_mae_eV_A": 0.021727785265456732
+  },
+  "crd.dat/molChignolinNeutral": {
+   "n_atoms": 149,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 1.0433056954035609,
+   "energy_mean_signed_meV_per_atom": 1.0297513996641363,
+   "force_mae_eV_A": 0.04123788297723069
+  },
+  "crd.dat/molFentanyl": {
+   "n_atoms": 53,
+   "n_conf": 127,
+   "energy_mae_meV_per_atom": 0.6131372620935842,
+   "energy_mean_signed_meV_per_atom": -0.5066746531433778,
+   "force_mae_eV_A": 0.026679195592773777
+  },
+  "crd.dat/molLisdexamfetamine": {
+   "n_atoms": 44,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 1.0076391784608063,
+   "energy_mean_signed_meV_per_atom": 0.9439920191770635,
+   "force_mae_eV_A": 0.018099829768658465
+  },
+  "crd.dat/molOseltamivir": {
+   "n_atoms": 50,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 0.7158153631831965,
+   "energy_mean_signed_meV_per_atom": 0.6758816630821229,
+   "force_mae_eV_A": 0.03035879393051359
+  },
+  "crd.dat/molRanolazine": {
+   "n_atoms": 64,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 0.5194360775897522,
+   "energy_mean_signed_meV_per_atom": -0.14540961284748022,
+   "force_mae_eV_A": 0.026537257896699445
+  },
+  "crd.dat/molRetinol": {
+   "n_atoms": 51,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 1.1812218907501646,
+   "energy_mean_signed_meV_per_atom": 0.26166912368975154,
+   "force_mae_eV_A": 0.057383690290509506
+  },
+  "crd.dat/molSalbutamol": {
+   "n_atoms": 38,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 1.6625274203146558,
+   "energy_mean_signed_meV_per_atom": 1.6625274203146558,
+   "force_mae_eV_A": 0.023101732498474588
+  },
+  "crd.dat/molTolterodine": {
+   "n_atoms": 55,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 1.2960594567795685,
+   "energy_mean_signed_meV_per_atom": 1.295607863406448,
+   "force_mae_eV_A": 0.02648930549520903
+  },
+  "crd.dat/molTrpCage1L2Y": {
+   "n_atoms": 312,
+   "n_conf": 128,
+   "energy_mae_meV_per_atom": 1.745230133029561,
+   "energy_mean_signed_meV_per_atom": 1.745230133029561,
+   "force_mae_eV_A": 0.04445777211505724
+  }
+ }
+}

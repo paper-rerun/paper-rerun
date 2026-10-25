@@ -1,0 +1,23 @@
+{
+ "version": 2,
+ "base": "claims.json (v1), mtime 2026-10-24 16:52:08, sha256 3fc74206ee97ea33a9797d71a0717bf357bc5323b1773128350f964a489006d7. v1 is unchanged and still on disk.",
+ "provenance": "The claims-check stage (scripts in claims_check/, mtimes 2026-10-24 16:54:30 to 16:58:52) returned a corrected claim map to the workflow but did not save it. That map is not on disk and could not be copied here verbatim. This file was written on 2026-10-25 during the report revision and records only the three changes the later stages applied, with the earliest on-disk evidence for each. First model call on disk: logs/smoke_test.log, 2026-10-24 17:12:19.",
+ "corrections": [
+  {
+   "target": "definitions.force_sign_rule",
+   "change": "v1 decides the sign from Pearson r only (r > 0.9 keep, r < -0.9 flip, else stop). v2 adds a unit test: least-squares slope through the origin of model forces against COMP6 forces*Hartree; |slope| in [0.8, 1.25] on every check molecule confirms Ha/A, otherwise stop.",
+   "earliest_on_disk": "exec/comp6-m3gnet/signcheck.py, 2026-10-24 17:14:48 (after the smoke test at 17:12:19, before the first sign/unit decision in exec/comp6-m3gnet/signcheck.json at 17:16:53). The [0.8, 1.25] window is first written there; its claims-check origin cannot be checked from disk."
+  },
+  {
+   "target": "claims[data-animd-natoms]",
+   "change": "v1 text is the literal sentence 'the molecules in the ANI-MD dataset have 312 atoms'. v2 scores it as 'atoms in the largest ANI-MD molecule = 312'.",
+   "caveat": "Adopted after claims_work/animd_molecules.txt (2026-10-24 16:49:17) had already shown that only Trp-cage has 312 atoms. The literal reading fails (13 of 14 molecules have 20 to 149 atoms). exec/data-description/results.json records both readings.",
+   "earliest_on_disk": "exec/data-description/results.json (fields literal_reading_every_molecule_312 and other_molecules_atom_range)"
+  },
+  {
+   "target": "claims[data-train-maxatoms] (new, optional)",
+   "change": "Added: 'the largest molecule in the training set contains 63 atoms' (paper p.5). Marked optional, skippable without penalty because it needs the multi-GB ANI-1x release.",
+   "earliest_on_disk": "exec/data-description-optional/results.json, 2026-10-25 01:18 (status skipped)."
+  }
+ ]
+}

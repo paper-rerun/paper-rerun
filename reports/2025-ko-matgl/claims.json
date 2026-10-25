@@ -1,0 +1,607 @@
+{
+ "sources_read": [
+  "E:/Ciencia/README.md (project rules)",
+  "Journal PDF https://www.nature.com/articles/s41524-025-01742-y.pdf -> sources/paper.pdf (full text; Fig. 4 vector paths on p.7)",
+  "SI https://static-content.springer.com/esm/art%3A10.1038%2Fs41524-025-01742-y/MediaObjects/41524_2025_1742_MOESM1_ESM.pdf -> sources/si.pdf (no COMP6 content; Tables S1-S7 hyperparameters)",
+  "arXiv 2503.03837 -> sources/arxiv.pdf (Fig. 4 as raster, same values)",
+  "COMP6 README and git tree @ 79f41c15 -> sources/COMP6_README.md, sources/COMP6_tree.json; HDF5 files in data/COMP6v1 (inventory only)",
+  "matgl v1.3.0 src/matgl/utils/training.py -> sources/matgl_training_v1.3.0.py; pretrained_models/*-ANI-1x-Subset-PES/model.json -> sources/*_model.json; M3GNet-ANI-1x-Subset-PES/README.md"
+ ],
+ "definitions": [
+  {
+   "name": "energy_MAE_per_atom",
+   "value": "MAE_E = (1/N_conf) * sum_i |E_pred,i - E_DFT,i| / n_atoms,i, in meV/atom (per-conformation per-atom absolute error, averaged over conformations). Total energies, not conformer-relative energies.",
+   "source_quote": "Fig. 4a axis 'Energy (meV atom-1)'; text p.5: 'we compare the energies and forces on the molecules obtained from COMP6 benchmarks with respect to DFT'. matgl v1.3.0 src/matgl/utils/training.py line 495: e_mae = self.mae(valid_labels[0] / valid_num_atoms, valid_preds[0] / valid_num_atoms)",
+   "ambiguity_note": "The paper never defines 'meV/atom'. Alternative: MAE of total energy divided by mean atom count; not used, because MatGL's own metric (behind Table 5 of the same paper) divides each structure's error by its own atom count. Also not the COMP6 README metric (kcal/mol total and relative energies, not per atom)."
+  },
+  {
+   "name": "force_MAE",
+   "value": "MAE_F = mean of |F_pred - F_DFT| over every Cartesian component of every atom of every conformation in the group, pooled, in eV/A.",
+   "source_quote": "Fig. 4b axis 'Force (eV A-1)'. matgl v1.3.0 training.py line 496: f_mae = self.mae(valid_labels[1], valid_preds[1]) (torchmetrics MeanAbsoluteError over all components)",
+   "ambiguity_note": "Not defined in the paper. Alternatives (norm of the per-atom error vector; per-conformation mean then averaged) not used. MatGL's logged test MAE is a batch-weighted mean of per-batch component MAEs, which differs slightly from the fully pooled value; pooled is the literal MAE over the dataset."
+  },
+  {
+   "name": "units_and_conversion",
+   "value": "COMP6 'energies' are Hartree and 'forces' are Hartree/A; multiply both by ase.units.Hartree (27.211386024367243 eV in ASE >= 3.23). Coordinates in A. Accumulate MAE in float64.",
+   "source_quote": "HDF5 'lot' = b'wb97x/6-31g*'; Methods: 'All energies and forces of conformers are calculated using DFT at wB97x/6-31G level'",
+   "ambiguity_note": "The paper gives no conversion constant. CODATA variants change per-atom energies by <= 0.004 meV/atom, inside the energy tolerance. Max |F| in the files is 0.47 Ha/A (12.8 eV/A), consistent with Ha/A."
+  },
+  {
+   "name": "force_sign_rule",
+   "value": "Model forces are -dE/dR. Before the batch, on 2 molecules (one ANI-MD drug, one GDB) compute Pearson r between model forces and COMP6 forces*Hartree; r > 0.9 keeps the stored sign, r < -0.9 flips it (record it); anything else stops the run for a report.",
+   "source_quote": "Triage note: 'check unit and sign on a couple of molecules before the batch'",
+   "ambiguity_note": "No sign convention in the paper. The rule uses only correlation, never agreement with the paper's MAE."
+  },
+  {
+   "name": "energy_reference",
+   "value": "Compare the Potential's total energy output (model output * data_std + data_mean + sum of element_refs, as shipped in model.json) directly to the DFT total energy in eV. No per-dataset, per-molecule or per-element offset is fitted.",
+   "source_quote": "Text p.5: 'compare the energies ... with respect to DFT'; model.json element_refs = [-16.518, -1036.373, -1488.652, -2046.008] eV for H, C, N, O (total-energy scale)",
+   "ambiguity_note": "If the unit/sign check shows a constant offset, report it; do not remove it."
+  },
+  {
+   "name": "group_ANI-MD",
+   "value": "COMP6v1/ANI-MD/ani_md_bench.h5, all 14 trajectories, 1791 conformations, 20 to 312 atoms.",
+   "source_quote": "Text p.5: 'the ANI-MD dataset, which comprises molecular dynamics (MD) trajectories of 14 well-known drug molecules and 2 small proteins' ... 'whereas the molecules in the ANI-MD dataset have 312 atoms'",
+   "ambiguity_note": "The file has 12 drug molecules + Chignolin (149 atoms) + Trp-cage 1L2Y (312 atoms) = 14 trajectories, not 14 + 2; only one molecule has 312 atoms. Whole file used; there is nothing else to add."
+  },
+  {
+   "name": "group_GDB_9-11",
+   "value": "Primary (reading A, label = heavy-atom count 9 to 11): gdb11_09_test500.h5 + gdb11_10_test500.h5 + gdb11_11_test500.h5, pooled, 35670 conformations.",
+   "source_quote": "Fig. 4 x-axis label 'GDB 9-11'; COMP6 folders are GDB07to09 (gdb11_07/08/09) and GDB10to13 (gdb11_10/11, gdb13_12/13); file names give the heavy-atom count (gdb11_s07 molecules have 7 heavy atoms)",
+   "ambiguity_note": "The label matches no COMP6 folder. Reading B: 'GDB-11 source database' = gdb11_07..11 (59670 conf). Reading C: folder GDB07to09 (36000 conf). A was fixed as the most literal reading before any computation; under A, gdb11_07 and gdb11_08 (24000 conformations) are in no plotted group. Per-file MAEs let B and C be reported as pre-registered sensitivity only."
+  },
+  {
+   "name": "group_GDB_12-13",
+   "value": "Primary (reading A): gdb13_12_test1000.h5 + gdb13_13_test1000.h5, pooled, 24000 conformations.",
+   "source_quote": "Fig. 4 x-axis label 'GDB 12-13'",
+   "ambiguity_note": "Same set under reading B. Reading C = folder GDB10to13 (gdb11_10, gdb11_11, gdb13_12, gdb13_13; 47670 conf), sensitivity only."
+  },
+  {
+   "name": "group_Drugbank",
+   "value": "COMP6v1/DrugBank/drugbank_testset.h5, 837 molecules, 13379 conformations.",
+   "source_quote": "Fig. 4 x-axis label 'Drugbank'",
+   "ambiguity_note": "None."
+  },
+  {
+   "name": "group_S66x8",
+   "value": "COMP6v1/s66x8/s66x8_wb97x6-31gd.h5, 66 dimers x 8 separations, 528 conformations; forces present.",
+   "source_quote": "Fig. 4 x-axis label 'S66x8'",
+   "ambiguity_note": "Energies are total dimer energies, not interaction energies, consistent with energy_reference."
+  },
+  {
+   "name": "group_Tripeptides",
+   "value": "COMP6v1/Tripeptides/tripeptide_full.h5, 248 molecules, 1984 conformations.",
+   "source_quote": "Fig. 4 x-axis label 'Tripeptides'",
+   "ambiguity_note": "None."
+  },
+  {
+   "name": "pooling_within_group",
+   "value": "For multi-file groups, concatenate all conformations and compute one MAE (energy: mean over conformations; force: mean over components). Not the mean of per-file MAEs.",
+   "source_quote": "Fig. 4 shows one bar per group; no averaging rule is stated",
+   "ambiguity_note": "Mean of per-file MAEs is the alternative; files in a group have similar sizes (11670 to 12000 conf), so the gap should be small. Per-file values to be reported too."
+  },
+  {
+   "name": "conformation_inclusion",
+   "value": "Every conformation in the 11 files (101352 total; 0 NaN energies, 0 NaN forces, all have forces; elements C, H, N, O only). Nothing filtered. A conformation the model cannot evaluate is reported, not dropped silently.",
+   "source_quote": "Text p.5: 'the molecules obtained from COMP6 benchmarks'",
+   "ambiguity_note": "The paper states no filtering."
+  },
+  {
+   "name": "models_and_code",
+   "value": "matgl 1.3.0 at tag v1.3.0 (a6ebaebd); weights pretrained_models/{M3GNet,TensorNet,SO3Net}-ANI-1x-Subset-PES loaded from the local checkout (state.pt git blobs 76ed498f, 270e5fad, 9cca3b06; model.json blobs a94bcbbf, 2b5e5392, 667a0689). Cutoff 5.0 A for all; M3GNet threebody_cutoff 4.0 A with the v1.3.0 code as-is (three-body indexing bug fixed later in PR #840 left in place). float32. Molecules non-periodic.",
+   "source_quote": "Fig. 4 caption: 'errors for M3GNet, transfer-learning M3GNet (M3GNet-TL) from ANI-1xnr, TensorNet and SO3Net with respect to DFT'; Methods: 'Due to the large size of the ANI-1x dataset, only a subset was used for demonstration purposes'",
+   "ambiguity_note": "The paper does not say which matgl version produced Fig. 4. SI Tables S4-S6 list readout_type 'set2set' and TensorNet num_rbf 32, but the released model.json files use 'weighted_atom' and num_rbf 3; the released json goes with the weights and is used. M3GNet-TL out of scope (weights not released)."
+  },
+  {
+   "name": "text_ANI-MD_values",
+   "value": "The p.5 numbers are the ANI-MD bars of Fig. 4 quoted in prose; they are scored from the same ANI-MD computation. 'above 14 ... and 0.14' is a lower bound, scored for M3GNet only.",
+   "source_quote": "'Both M3GNet and M3GNet-TL perform the worst in terms of energy and force errors above 14 meV atom-1 and 0.14 eV A-1 on the ANI-MD dataset ... The TensorNet significantly reduces the error of energies and forces to 11 meV atom-1 and 0.1 eV A-1, while SO3Net further reduces to 2.3 meV atom-1 and 0.044 eV A-1.'",
+   "ambiguity_note": "Text and figure agree (readout 19.159/0.142, 11.099/0.099, 2.283/0.044)."
+  },
+  {
+   "name": "figure_readout",
+   "value": "Fig. 4 values read from the vector paths on journal PDF p.7 with PyMuPDF: bar height = (672.348 - y_top) / (pt per unit), calibrated on the y tick marks (panel a: 0 at 672.348 pt, 20 at 550.472 pt, 6.0938 pt per meV/atom; panel b: 0 at 672.348 pt, 0.14 at 558.84 pt, 810.77 pt per eV/A); bars matched by fill colour and x order. Script claims_work/readfig.py, output claims_work/fig4_values.json.",
+   "source_quote": "Fig. 4 | 'Mean absolute errors on COMP6 benchmark. The bar plot of a energy and b force errors'",
+   "ambiguity_note": "arXiv v1 carries the same figure as a raster image, visually identical. All 48 bar heights land on 3-decimal values, so the plotted numbers were rounded to 3 dp."
+  }
+ ],
+ "claims": [
+  {
+   "id": "fig4a-m3gnet-animd",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4a: M3GNet energy MAE on COMP6 ANI-MD",
+   "paper_value": 19.159,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=555.5961 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 19.15913)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-m3gnet-gdb9to11",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4a: M3GNet energy MAE on COMP6 GDB 9-11",
+   "paper_value": 8.925,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=617.96 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 8.92513)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/GDB07to09/gdb11_09_test500.h5 + COMP6v1/GDB10to13/gdb11_10_test500.h5 + COMP6v1/GDB10to13/gdb11_11_test500.h5 (35670 conformations) [primary reading A: 9 to 11 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-m3gnet-gdb12to13",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4a: M3GNet energy MAE on COMP6 GDB 12-13",
+   "paper_value": 3.655,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=650.075 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 3.65502)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/GDB10to13/gdb13_12_test1000.h5 + COMP6v1/GDB10to13/gdb13_13_test1000.h5 (24000 conformations) [primary reading A: 12 to 13 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-m3gnet-drugbank",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4a: M3GNet energy MAE on COMP6 Drugbank",
+   "paper_value": 12.01,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=599.161 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 12.01007)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/DrugBank/drugbank_testset.h5 (837 molecules, 13379 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-m3gnet-s66x8",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4a: M3GNet energy MAE on COMP6 S66x8",
+   "paper_value": 9.835,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=612.415 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 9.83507)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/s66x8/s66x8_wb97x6-31gd.h5 (66 dimers x 8, 528 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-m3gnet-tripeptides",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4a: M3GNet energy MAE on COMP6 Tripeptides",
+   "paper_value": 2.662,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=656.126 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 2.66204)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/Tripeptides/tripeptide_full.h5 (248 molecules, 1984 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-m3gnet-animd",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4b: M3GNet force MAE on COMP6 ANI-MD",
+   "paper_value": 0.142,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=557.218 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.142)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-m3gnet-gdb9to11",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4b: M3GNet force MAE on COMP6 GDB 9-11",
+   "paper_value": 0.074,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=612.351 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.074)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/GDB07to09/gdb11_09_test500.h5 + COMP6v1/GDB10to13/gdb11_10_test500.h5 + COMP6v1/GDB10to13/gdb11_11_test500.h5 (35670 conformations) [primary reading A: 9 to 11 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-m3gnet-gdb12to13",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4b: M3GNet force MAE on COMP6 GDB 12-13",
+   "paper_value": 0.118,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=576.676 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.118)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/GDB10to13/gdb13_12_test1000.h5 + COMP6v1/GDB10to13/gdb13_13_test1000.h5 (24000 conformations) [primary reading A: 12 to 13 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-m3gnet-drugbank",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4b: M3GNet force MAE on COMP6 Drugbank",
+   "paper_value": 0.126,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=570.1901 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.126)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/DrugBank/drugbank_testset.h5 (837 molecules, 13379 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-m3gnet-s66x8",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4b: M3GNet force MAE on COMP6 S66x8",
+   "paper_value": 0.029,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=648.835 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.029)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/s66x8/s66x8_wb97x6-31gd.h5 (66 dimers x 8, 528 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-m3gnet-tripeptides",
+   "block": "comp6-m3gnet",
+   "text": "Fig. 4b: M3GNet force MAE on COMP6 Tripeptides",
+   "paper_value": 0.067,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=618.026 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.067)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/Tripeptides/tripeptide_full.h5 (248 molecules, 1984 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-tensornet-animd",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4a: TensorNet energy MAE on COMP6 ANI-MD",
+   "paper_value": 11.099,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=604.713 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 11.09898)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-tensornet-gdb9to11",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4a: TensorNet energy MAE on COMP6 GDB 9-11",
+   "paper_value": 1.705,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=661.958 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 1.70501)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/GDB07to09/gdb11_09_test500.h5 + COMP6v1/GDB10to13/gdb11_10_test500.h5 + COMP6v1/GDB10to13/gdb11_11_test500.h5 (35670 conformations) [primary reading A: 9 to 11 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-tensornet-gdb12to13",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4a: TensorNet energy MAE on COMP6 GDB 12-13",
+   "paper_value": 3.252,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=652.531 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 3.25199)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/GDB10to13/gdb13_12_test1000.h5 + COMP6v1/GDB10to13/gdb13_13_test1000.h5 (24000 conformations) [primary reading A: 12 to 13 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-tensornet-drugbank",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4a: TensorNet energy MAE on COMP6 Drugbank",
+   "paper_value": 1.123,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=665.5051 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 1.12292)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/DrugBank/drugbank_testset.h5 (837 molecules, 13379 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-tensornet-s66x8",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4a: TensorNet energy MAE on COMP6 S66x8",
+   "paper_value": 6.031,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=635.5961 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 6.03104)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/s66x8/s66x8_wb97x6-31gd.h5 (66 dimers x 8, 528 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-tensornet-tripeptides",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4a: TensorNet energy MAE on COMP6 Tripeptides",
+   "paper_value": 2.248,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=658.649 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 2.24801)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/Tripeptides/tripeptide_full.h5 (248 molecules, 1984 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-tensornet-animd",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4b: TensorNet force MAE on COMP6 ANI-MD",
+   "paper_value": 0.099,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=592.0811 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.099)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-tensornet-gdb9to11",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4b: TensorNet force MAE on COMP6 GDB 9-11",
+   "paper_value": 0.056,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=626.944 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.056)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/GDB07to09/gdb11_09_test500.h5 + COMP6v1/GDB10to13/gdb11_10_test500.h5 + COMP6v1/GDB10to13/gdb11_11_test500.h5 (35670 conformations) [primary reading A: 9 to 11 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-tensornet-gdb12to13",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4b: TensorNet force MAE on COMP6 GDB 12-13",
+   "paper_value": 0.09,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=599.3781 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.09)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/GDB10to13/gdb13_12_test1000.h5 + COMP6v1/GDB10to13/gdb13_13_test1000.h5 (24000 conformations) [primary reading A: 12 to 13 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-tensornet-drugbank",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4b: TensorNet force MAE on COMP6 Drugbank",
+   "paper_value": 0.086,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=602.621 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.086)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/DrugBank/drugbank_testset.h5 (837 molecules, 13379 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-tensornet-s66x8",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4b: TensorNet force MAE on COMP6 S66x8",
+   "paper_value": 0.045,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=635.863 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.045)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/s66x8/s66x8_wb97x6-31gd.h5 (66 dimers x 8, 528 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-tensornet-tripeptides",
+   "block": "comp6-tensornet",
+   "text": "Fig. 4b: TensorNet force MAE on COMP6 Tripeptides",
+   "paper_value": 0.067,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=618.026 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.067)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/Tripeptides/tripeptide_full.h5 (248 molecules, 1984 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-so3net-animd",
+   "block": "comp6-so3net",
+   "text": "Fig. 4a: SO3Net energy MAE on COMP6 ANI-MD",
+   "paper_value": 2.283,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=658.436 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 2.28297)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-so3net-gdb9to11",
+   "block": "comp6-so3net",
+   "text": "Fig. 4a: SO3Net energy MAE on COMP6 GDB 9-11",
+   "paper_value": 3.889,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=648.649 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 3.88903)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/GDB07to09/gdb11_09_test500.h5 + COMP6v1/GDB10to13/gdb11_10_test500.h5 + COMP6v1/GDB10to13/gdb11_11_test500.h5 (35670 conformations) [primary reading A: 9 to 11 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-so3net-gdb12to13",
+   "block": "comp6-so3net",
+   "text": "Fig. 4a: SO3Net energy MAE on COMP6 GDB 12-13",
+   "paper_value": 1.271,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=664.6031 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 1.27094)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/GDB10to13/gdb13_12_test1000.h5 + COMP6v1/GDB10to13/gdb13_13_test1000.h5 (24000 conformations) [primary reading A: 12 to 13 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-so3net-drugbank",
+   "block": "comp6-so3net",
+   "text": "Fig. 4a: SO3Net energy MAE on COMP6 Drugbank",
+   "paper_value": 0.969,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=666.4431 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 0.96901)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/DrugBank/drugbank_testset.h5 (837 molecules, 13379 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-so3net-s66x8",
+   "block": "comp6-so3net",
+   "text": "Fig. 4a: SO3Net energy MAE on COMP6 S66x8",
+   "paper_value": 2.558,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=656.76 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 2.55801)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/s66x8/s66x8_wb97x6-31gd.h5 (66 dimers x 8, 528 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4a-so3net-tripeptides",
+   "block": "comp6-so3net",
+   "text": "Fig. 4a: SO3Net energy MAE on COMP6 Tripeptides",
+   "paper_value": 1.245,
+   "unit": "meV/atom",
+   "location": "Fig. 4a, journal PDF p.7; read from the vector path (bar top y=664.7611 pt, baseline 672.348 pt, 6.0938 pt per unit; raw readout 1.24502)",
+   "tolerance": 0.01,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (all 24 vector bar heights fall within 1.4e-4 of a 3-dp value), so rounding gives +-0.0005; vector readout error <= 1.6e-4; float32 total energies (up to ~2.1e5 eV for the 312-atom Trp-cage) have ulp up to 0.016 eV, i.e. up to ~0.05 meV/atom per structure, which averages to a few 1e-3 meV/atom in an MAE over >=528 conformations; Hartree->eV CODATA choice shifts per-atom energies by <=0.004 meV/atom. Sum rounded up to 0.01 meV/atom. The paper gives no error bars and the authors published no per-item values, so no bootstrap was possible.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/Tripeptides/tripeptide_full.h5 (248 molecules, 1984 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-so3net-animd",
+   "block": "comp6-so3net",
+   "text": "Fig. 4b: SO3Net force MAE on COMP6 ANI-MD",
+   "paper_value": 0.044,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=636.674 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.044)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-so3net-gdb9to11",
+   "block": "comp6-so3net",
+   "text": "Fig. 4b: SO3Net force MAE on COMP6 GDB 9-11",
+   "paper_value": 0.032,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=646.403 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.032)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/GDB07to09/gdb11_09_test500.h5 + COMP6v1/GDB10to13/gdb11_10_test500.h5 + COMP6v1/GDB10to13/gdb11_11_test500.h5 (35670 conformations) [primary reading A: 9 to 11 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-so3net-gdb12to13",
+   "block": "comp6-so3net",
+   "text": "Fig. 4b: SO3Net force MAE on COMP6 GDB 12-13",
+   "paper_value": 0.044,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=636.674 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.044)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/GDB10to13/gdb13_12_test1000.h5 + COMP6v1/GDB10to13/gdb13_13_test1000.h5 (24000 conformations) [primary reading A: 12 to 13 heavy atoms]; matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-so3net-drugbank",
+   "block": "comp6-so3net",
+   "text": "Fig. 4b: SO3Net force MAE on COMP6 Drugbank",
+   "paper_value": 0.044,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=636.674 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.044)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/DrugBank/drugbank_testset.h5 (837 molecules, 13379 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-so3net-s66x8",
+   "block": "comp6-so3net",
+   "text": "Fig. 4b: SO3Net force MAE on COMP6 S66x8",
+   "paper_value": 0.011,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=663.429 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.011)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/s66x8/s66x8_wb97x6-31gd.h5 (66 dimers x 8, 528 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "fig4b-so3net-tripeptides",
+   "block": "comp6-so3net",
+   "text": "Fig. 4b: SO3Net force MAE on COMP6 Tripeptides",
+   "paper_value": 0.029,
+   "unit": "eV/A",
+   "location": "Fig. 4b, journal PDF p.7; read from the vector path (bar top y=648.835 pt, baseline 672.348 pt, 810.77143 pt per unit; raw readout 0.029)",
+   "tolerance": 0.0006,
+   "tolerance_basis": "Plotted values are 3-decimal numbers (vector bar heights equal 3-dp values to <1e-5), so rounding gives +-0.0005; vector readout error ~6e-7; float32 force noise on a pooled MAE is <1e-5. Tolerance 0.0005 + 0.0001 margin. No error bars or per-item values from the authors, so no bootstrap.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/Tripeptides/tripeptide_full.h5 (248 molecules, 1984 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "text-m3gnet-animd-energy-gt14",
+   "block": "comp6-m3gnet",
+   "text": "Text p.5: M3GNet (and M3GNet-TL, out of scope) energy error on ANI-MD 'above 14 meV atom-1' (lower bound; the figure bar is 19.159)",
+   "paper_value": 14.0,
+   "unit": "meV/atom",
+   "location": "Journal PDF p.5, section 'Potential energy surface', paragraph starting 'To further evaluate the extrapolation abilities' (same sentence in arXiv v1 p.17)",
+   "tolerance": 0.0,
+   "tolerance_basis": "Inequality claim: passes if our value > 14; no tolerance applies.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "text-m3gnet-animd-force-gt014",
+   "block": "comp6-m3gnet",
+   "text": "Text p.5: M3GNet (and M3GNet-TL, out of scope) force error on ANI-MD 'above ... 0.14 eV A-1' (lower bound; the figure bar is 0.142)",
+   "paper_value": 0.14,
+   "unit": "eV/A",
+   "location": "Journal PDF p.5, section 'Potential energy surface', paragraph starting 'To further evaluate the extrapolation abilities' (same sentence in arXiv v1 p.17)",
+   "tolerance": 0.0,
+   "tolerance_basis": "Inequality claim: passes if our value > 0.14; no tolerance applies.",
+   "conditions": "model M3GNet; checkpoint pretrained_models/M3GNet-ANI-1x-Subset-PES (model.json + model.pt + state.pt) at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A, threebody_cutoff 4.0 A, v1.3.0 code without the PR #840 three-body fix; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "text-tensornet-animd-energy",
+   "block": "comp6-tensornet",
+   "text": "Text p.5: TensorNet reduces the ANI-MD energy error to '11 meV atom-1'",
+   "paper_value": 11.0,
+   "unit": "meV/atom",
+   "location": "Journal PDF p.5, section 'Potential energy surface', paragraph starting 'To further evaluate the extrapolation abilities' (same sentence in arXiv v1 p.17)",
+   "tolerance": 0.5,
+   "tolerance_basis": "Half a unit in the last quoted digit (11 -> [10.5, 11.5)).",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "text-tensornet-animd-force",
+   "block": "comp6-tensornet",
+   "text": "Text p.5: TensorNet reduces the ANI-MD force error to '0.1 eV A-1'",
+   "paper_value": 0.1,
+   "unit": "eV/A",
+   "location": "Journal PDF p.5, section 'Potential energy surface', paragraph starting 'To further evaluate the extrapolation abilities' (same sentence in arXiv v1 p.17)",
+   "tolerance": 0.05,
+   "tolerance_basis": "Half a unit in the last quoted digit (0.1 -> [0.05, 0.15)); the figure bar is 0.099.",
+   "conditions": "model TensorNet; checkpoint pretrained_models/TensorNet-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd (model.json from the tag, not the Hugging Face copy); cutoff 5.0 A; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "text-so3net-animd-energy",
+   "block": "comp6-so3net",
+   "text": "Text p.5: SO3Net further reduces the ANI-MD energy error to '2.3 meV atom-1'",
+   "paper_value": 2.3,
+   "unit": "meV/atom",
+   "location": "Journal PDF p.5, section 'Potential energy surface', paragraph starting 'To further evaluate the extrapolation abilities' (same sentence in arXiv v1 p.17)",
+   "tolerance": 0.05,
+   "tolerance_basis": "Half a unit in the last quoted digit (2.3 -> [2.25, 2.35)); the figure bar is 2.283.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "text-so3net-animd-force",
+   "block": "comp6-so3net",
+   "text": "Text p.5: SO3Net further reduces the ANI-MD force error to '0.044 eV A-1'",
+   "paper_value": 0.044,
+   "unit": "eV/A",
+   "location": "Journal PDF p.5, section 'Potential energy surface', paragraph starting 'To further evaluate the extrapolation abilities' (same sentence in arXiv v1 p.17)",
+   "tolerance": 0.0005,
+   "tolerance_basis": "Half a unit in the last quoted digit (0.044 -> [0.0435, 0.0445)); equals the figure bar 0.044.",
+   "conditions": "model SO3Net; checkpoint pretrained_models/SO3Net-ANI-1x-Subset-PES at matgl tag v1.3.0 a6ebaebd; cutoff 5.0 A; test set COMP6v1/ANI-MD/ani_md_bench.h5 (14 trajectories, 1791 conformations); matgl 1.3.0 Potential with calc_forces=True, float32 as shipped, molecules non-periodic, no refitting or per-dataset energy offset; reference = COMP6 v1 @ 79f41c15 'energies' (Ha) and 'forces' (Ha/A) times ase.units.Hartree; all conformations, none dropped"
+  },
+  {
+   "id": "data-animd-natoms",
+   "block": "data-description",
+   "text": "Text p.5: 'the molecules in the ANI-MD dataset have 312 atoms'",
+   "paper_value": 312,
+   "unit": "atoms",
+   "location": "Journal PDF p.5, same paragraph as the ANI-MD text claims",
+   "tolerance": 0,
+   "tolerance_basis": "Exact integer count read from the HDF5 file; no rounding involved.",
+   "conditions": "COMP6 v1 @ 79f41c156f8e19506fe951b5513b98e7c534a503, file COMP6v1/ANI-MD/ani_md_bench.h5 (git blob d168ba5e); counts from the HDF5 groups, no model"
+  },
+  {
+   "id": "data-animd-ntraj",
+   "block": "data-description",
+   "text": "Text p.5: ANI-MD 'comprises molecular dynamics (MD) trajectories of 14 well-known drug molecules and 2 small proteins' (16 trajectories)",
+   "paper_value": 16,
+   "unit": "trajectories",
+   "location": "Journal PDF p.5, same paragraph as the ANI-MD text claims",
+   "tolerance": 0,
+   "tolerance_basis": "Exact integer count read from the HDF5 file; no rounding involved.",
+   "conditions": "COMP6 v1 @ 79f41c156f8e19506fe951b5513b98e7c534a503, file COMP6v1/ANI-MD/ani_md_bench.h5 (git blob d168ba5e); counts from the HDF5 groups, no model"
+  }
+ ],
+ "issues": [
+  "The authors published no per-item or per-group numbers for COMP6 (no source data, no evaluation script in the repo); values come only from the Fig. 4 vector paths. No bootstrap tolerance is possible; tolerances come from the 3-dp plotting resolution plus a float32 and unit-conversion budget.",
+  "ANI-MD description vs file: the paper says '14 well-known drug molecules and 2 small proteins' and 'molecules ... have 312 atoms'; ani_md_bench.h5 holds 14 trajectories (12 drugs + Chignolin 149 atoms + Trp-cage 312 atoms), 1791 conformations, 20 to 312 atoms. Recorded as claims data-animd-ntraj and data-animd-natoms.",
+  "GDB label ambiguity: 'GDB 9-11' and 'GDB 12-13' match no COMP6 folder (GDB07to09, GDB10to13). Primary reading A (heavy atoms 9-11 and 12-13) was fixed before computation; under A, gdb11_07 and gdb11_08 (24000 conformations) fall in no plotted group. Readings B and C are for sensitivity only, from per-file MAEs.",
+  "The sentence 'This trend can be also found in other benchmark datasets' (M3GNet worst, SO3Net best) is contradicted by the paper's own figure: GDB 9-11 energy TensorNet 1.705 < SO3Net 3.889 < M3GNet 8.925; S66x8 force M3GNet 0.029 < TensorNet 0.045; Tripeptides force M3GNet 0.067 = TensorNet 0.067. Not scored (no number); flag in the report.",
+  "arXiv v1 says 'Table 4 shows the MAE of energies and forces' for COMP6; the journal version correctly says Figure 4.",
+  "The matgl version used for Fig. 4 is not stated. v1.3.0 still has the M3GNet three-body indexing bug (threebody_cutoff 4.0 < cutoff 5.0) fixed in PR #840; it is kept as paper-era code. A mismatch for M3GNet alone could come from this.",
+  "SI Tables S4-S6 (readout_type set2set, TensorNet num_rbf 32) disagree with the released ANI-1x model.json files (weighted_atom, num_rbf 3); the released files are used because they carry the weights.",
+  "The M3GNet-ANI-1x-Subset-PES README describes the training data as 'ANI-1x-Subset: 300K MD simulations and Materials Project ground state calculations' with a 991735/248355/248355 split, and the Table 5 caption says 0.9/0.05/0.05 while Methods says 0.2/0.05/0.05 per molecule. Out of scope (Table 5); noted only.",
+  "Energy tolerance 0.01 meV/atom and force tolerance 0.0006 eV/A are strict on purpose: same weights, same data and deterministic inference should land on the plotted 3-dp values. A miss beyond them is a real difference (code version, data handling, definitions) that the report should size in relative terms, not a reason to widen the tolerance afterwards.",
+  "COMP6 files downloaded to /mnt/e/Ciencia/pipeline/2025-ko-matgl/data/COMP6v1 and checked against the git blob SHA-1 of commit 79f41c15 (all 11 match). Inventory in claims_work/comp6_inventory.json: 101352 conformations, C/H/N/O only, no NaN, all with forces. No model was run.",
+  "M3GNet-TL bars and the TL half of the 'above 14 / 0.14' sentence are out of scope (weights not released)."
+ ]
+}

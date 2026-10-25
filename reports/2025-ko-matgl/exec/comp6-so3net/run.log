@@ -1,0 +1,128 @@
+ani_md_bench group 0/14 crd.dat/molAcetaminophen conf_done=128 13s
+FILE DONE ani_md_bench: 1791 new conformations, 0 failed, 327s
+s66x8_wb97x6-31gd group 0/66 s66x8/mol00 conf_done=8 1s
+s66x8_wb97x6-31gd group 50/66 s66x8/mol50 conf_done=408 16s
+FILE DONE s66x8_wb97x6-31gd: 528 new conformations, 0 failed, 20s
+tripeptide_full group 0/248 tripeptide-000/mol000 conf_done=8 3s
+tripeptide_full group 50/248 tripeptide-000/mol050 conf_done=408 20s
+tripeptide_full group 100/248 tripeptide-000/mol100 conf_done=808 35s
+tripeptide_full group 150/248 tripeptide-000/mol150 conf_done=1208 49s
+tripeptide_full group 200/248 tripeptide-000/mol201 conf_done=1608 64s
+FILE DONE tripeptide_full: 1984 new conformations, 0 failed, 78s
+drugbank_testset group 0/837 drugbank/mol0000 conf_done=16 9s
+drugbank_testset group 50/837 drugbank/mol0060 conf_done=816 37s
+drugbank_testset group 100/837 drugbank/mol0159 conf_done=1616 66s
+drugbank_testset group 150/837 drugbank/mol0250 conf_done=2403 107s
+drugbank_testset group 200/837 drugbank/mol0350 conf_done=3203 281s
+drugbank_testset group 250/837 drugbank/mol0457 conf_done=4003 601s
+drugbank_testset group 300/837 drugbank/mol0544 conf_done=4803 736s
+drugbank_testset group 350/837 drugbank/mol0632 conf_done=5603 838s
+drugbank_testset group 400/837 drugbank/mol0710 conf_done=6403 1290s
+drugbank_testset group 450/837 drugbank/mol0789 conf_done=7203 1369s
+drugbank_testset group 500/837 drugbank/mol0905 conf_done=8003 1418s
+drugbank_testset group 550/837 drugbank/mol0997 conf_done=8803 1465s
+drugbank_testset group 600/837 drugbank/mol1088 conf_done=9603 1530s
+drugbank_testset group 650/837 drugbank/mol1200 conf_done=10403 1688s
+drugbank_testset group 700/837 drugbank/mol1283 conf_done=11203 1744s
+drugbank_testset group 750/837 drugbank/mol1401 conf_done=12003 1803s
+drugbank_testset group 800/837 drugbank/mol1508 conf_done=12803 2086s
+FILE DONE drugbank_testset: 13379 new conformations, 0 failed, 2320s
+gdb11_09_test500 group 0/500 gdb11_s09/mol0000 conf_done=24 38s
+gdb11_09_test500 group 50/500 gdb11_s09/mol0050 conf_done=1224 179s
+gdb11_09_test500 group 100/500 gdb11_s09/mol0100 conf_done=2424 248s
+gdb11_09_test500 group 150/500 gdb11_s09/mol0150 conf_done=3624 310s
+gdb11_09_test500 group 200/500 gdb11_s09/mol0200 conf_done=4824 361s
+gdb11_09_test500 group 250/500 gdb11_s09/mol0250 conf_done=6024 406s
+gdb11_09_test500 group 300/500 gdb11_s09/mol0300 conf_done=7224 456s
+gdb11_09_test500 group 350/500 gdb11_s09/mol0350 conf_done=8424 550s
+gdb11_09_test500 group 400/500 gdb11_s09/mol0400 conf_done=9624 623s
+gdb11_09_test500 group 450/500 gdb11_s09/mol0450 conf_done=10824 668s
+FILE DONE gdb11_09_test500: 12000 new conformations, 0 failed, 713s
+gdb11_10_test500 group 0/500 gdb11_s10/mol0000 conf_done=24 6s
+gdb11_10_test500 group 50/500 gdb11_s10/mol0050 conf_done=1224 47s
+gdb11_10_test500 group 100/500 gdb11_s10/mol0100 conf_done=2424 90s
+gdb11_10_test500 group 150/500 gdb11_s10/mol0150 conf_done=3624 131s
+gdb11_10_test500 group 200/500 gdb11_s10/mol0200 conf_done=4824 172s
+gdb11_10_test500 group 250/500 gdb11_s10/mol0250 conf_done=6024 212s
+gdb11_10_test500 group 300/500 gdb11_s10/mol0300 conf_done=7224 252s
+gdb11_10_test500 group 350/500 gdb11_s10/mol0350 conf_done=8424 290s
+gdb11_10_test500 group 400/500 gdb11_s10/mol0400 conf_done=9624 327s
+gdb11_10_test500 group 450/500 gdb11_s10/mol0450 conf_done=10824 362s
+FILE DONE gdb11_10_test500: 12000 new conformations, 0 failed, 398s
+gdb11_11_test500 group 0/496 gdb11_s11-000/mol0000 conf_done=24 5s
+gdb11_11_test500 group 50/496 gdb11_s11-000/mol0051 conf_done=1181 41s
+gdb11_11_test500 group 100/496 gdb11_s11-000/mol0102 conf_done=2381 83s
+gdb11_11_test500 group 150/496 gdb11_s11-000/mol0152 conf_done=3559 121s
+gdb11_11_test500 group 200/496 gdb11_s11-000/mol0203 conf_done=4738 155s
+gdb11_11_test500 group 250/496 gdb11_s11-000/mol0253 conf_done=5874 187s
+gdb11_11_test500 group 300/496 gdb11_s11-000/mol0303 conf_done=7032 231s
+gdb11_11_test500 group 350/496 gdb11_s11-000/mol0353 conf_done=8232 278s
+gdb11_11_test500 group 400/496 gdb11_s11-000/mol0403 conf_done=9432 315s
+gdb11_11_test500 group 450/496 gdb11_s11-000/mol0454 conf_done=10590 353s
+FILE DONE gdb11_11_test500: 11670 new conformations, 0 failed, 397s
+gdb13_12_test1000 group 0/1000 gdb11_s12-000/mol0000 conf_done=12 12s
+gdb13_12_test1000 group 50/1000 gdb11_s12-000/mol0050 conf_done=612 32s
+gdb13_12_test1000 group 100/1000 gdb11_s12-000/mol0100 conf_done=1212 50s
+gdb13_12_test1000 group 150/1000 gdb11_s12-000/mol0150 conf_done=1812 71s
+gdb13_12_test1000 group 200/1000 gdb11_s12-000/mol0200 conf_done=2412 94s
+gdb13_12_test1000 group 250/1000 gdb11_s12-000/mol0250 conf_done=3012 115s
+gdb13_12_test1000 group 300/1000 gdb11_s12-000/mol0300 conf_done=3612 136s
+gdb13_12_test1000 group 350/1000 gdb11_s12-000/mol0350 conf_done=4212 155s
+gdb13_12_test1000 group 400/1000 gdb11_s12-000/mol0400 conf_done=4812 173s
+gdb13_12_test1000 group 450/1000 gdb11_s12-000/mol0450 conf_done=5412 191s
+gdb13_12_test1000 group 500/1000 gdb11_s12-000/mol0500 conf_done=6012 211s
+gdb13_12_test1000 group 550/1000 gdb11_s12-000/mol0550 conf_done=6612 230s
+gdb13_12_test1000 group 600/1000 gdb11_s12-000/mol0600 conf_done=7212 251s
+gdb13_12_test1000 group 650/1000 gdb11_s12-000/mol0650 conf_done=7812 273s
+gdb13_12_test1000 group 700/1000 gdb11_s12-000/mol0700 conf_done=8412 297s
+gdb13_12_test1000 group 750/1000 gdb11_s12-000/mol0750 conf_done=9012 317s
+gdb13_12_test1000 group 800/1000 gdb11_s12-000/mol0800 conf_done=9612 340s
+gdb13_12_test1000 group 850/1000 gdb11_s12-000/mol0850 conf_done=10212 358s
+gdb13_12_test1000 group 900/1000 gdb11_s12-000/mol0900 conf_done=10812 377s
+gdb13_12_test1000 group 950/1000 gdb11_s12-000/mol0950 conf_done=11412 395s
+FILE DONE gdb13_12_test1000: 12000 new conformations, 0 failed, 413s
+gdb13_13_test1000 group 0/1000 gdb11_s13-000/mol0000 conf_done=12 10s
+gdb13_13_test1000 group 50/1000 gdb11_s13-000/mol0050 conf_done=612 29s
+gdb13_13_test1000 group 100/1000 gdb11_s13-000/mol0100 conf_done=1212 48s
+gdb13_13_test1000 group 150/1000 gdb11_s13-000/mol0150 conf_done=1812 66s
+gdb13_13_test1000 group 200/1000 gdb11_s13-000/mol0200 conf_done=2412 84s
+gdb13_13_test1000 group 250/1000 gdb11_s13-000/mol0250 conf_done=3012 102s
+gdb13_13_test1000 group 300/1000 gdb11_s13-000/mol0300 conf_done=3612 120s
+gdb13_13_test1000 group 350/1000 gdb11_s13-000/mol0350 conf_done=4212 138s
+gdb13_13_test1000 group 400/1000 gdb11_s13-000/mol0400 conf_done=4812 156s
+gdb13_13_test1000 group 450/1000 gdb11_s13-000/mol0450 conf_done=5412 175s
+gdb13_13_test1000 group 500/1000 gdb11_s13-000/mol0500 conf_done=6012 194s
+gdb13_13_test1000 group 550/1000 gdb11_s13-000/mol0550 conf_done=6612 213s
+gdb13_13_test1000 group 600/1000 gdb11_s13-000/mol0600 conf_done=7212 234s
+gdb13_13_test1000 group 650/1000 gdb11_s13-000/mol0650 conf_done=7812 252s
+gdb13_13_test1000 group 700/1000 gdb11_s13-000/mol0700 conf_done=8412 272s
+gdb13_13_test1000 group 750/1000 gdb11_s13-000/mol0750 conf_done=9012 290s
+gdb13_13_test1000 group 800/1000 gdb11_s13-000/mol0800 conf_done=9612 310s
+gdb13_13_test1000 group 850/1000 gdb11_s13-000/mol0850 conf_done=10212 352s
+gdb13_13_test1000 group 900/1000 gdb11_s13-000/mol0900 conf_done=10812 378s
+gdb13_13_test1000 group 950/1000 gdb11_s13-000/mol0950 conf_done=11412 400s
+FILE DONE gdb13_13_test1000: 12000 new conformations, 0 failed, 422s
+gdb11_07_test500 group 0/500 gdb11_s07/mol0000 conf_done=24 6s
+gdb11_07_test500 group 50/500 gdb11_s07/mol0050 conf_done=1224 61s
+gdb11_07_test500 group 100/500 gdb11_s07/mol0100 conf_done=2424 200s
+gdb11_07_test500 group 150/500 gdb11_s07/mol0150 conf_done=3624 290s
+gdb11_07_test500 group 200/500 gdb11_s07/mol0200 conf_done=4824 341s
+gdb11_07_test500 group 250/500 gdb11_s07/mol0250 conf_done=6024 422s
+gdb11_07_test500 group 300/500 gdb11_s07/mol0300 conf_done=7224 568s
+gdb11_07_test500 group 350/500 gdb11_s07/mol0350 conf_done=8424 663s
+gdb11_07_test500 group 400/500 gdb11_s07/mol0400 conf_done=9624 716s
+gdb11_07_test500 group 450/500 gdb11_s07/mol0450 conf_done=10824 768s
+FILE DONE gdb11_07_test500: 12000 new conformations, 0 failed, 821s
+gdb11_08_test500 group 0/500 gdb11_s08/mol0000 conf_done=24 6s
+gdb11_08_test500 group 50/500 gdb11_s08/mol0050 conf_done=1224 48s
+gdb11_08_test500 group 100/500 gdb11_s08/mol0100 conf_done=2424 92s
+gdb11_08_test500 group 150/500 gdb11_s08/mol0150 conf_done=3624 135s
+gdb11_08_test500 group 200/500 gdb11_s08/mol0200 conf_done=4824 334s
+gdb11_08_test500 group 250/500 gdb11_s08/mol0250 conf_done=6024 437s
+gdb11_08_test500 group 300/500 gdb11_s08/mol0300 conf_done=7224 562s
+gdb11_08_test500 group 350/500 gdb11_s08/mol0350 conf_done=8424 701s
+gdb11_08_test500 group 400/500 gdb11_s08/mol0400 conf_done=9624 829s
+gdb11_08_test500 group 450/500 gdb11_s08/mol0450 conf_done=10824 868s
+FILE DONE gdb11_08_test500: 12000 new conformations, 0 failed, 973s
+ALL DONE
+exit 0

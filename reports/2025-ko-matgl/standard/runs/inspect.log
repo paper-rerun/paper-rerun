@@ -1,0 +1,88 @@
+ani_md_bench.h5 mols 14 confs 1791 atoms 134603 ['C', 'H', 'N', 'O']
+    ('crd.dat/molAcetaminophen', {'cm5': ((128, 21), dtype('<f4')), 'coordinates': ((128, 20, 3), dtype('<f4')), 'energies': ((128,), dtype('<f8')), 'forces': ((128, 20, 3), dtype('<f4')), 'hirdipole': ((128, 21, 3), dtype('<f4')), 'hirshfeld': ((128, 21), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((20,), dtype('S1')), 'spindensities': ((128, 21), dtype('<f4'))})
+drugbank_testset.h5 mols 837 confs 13379 atoms 594423 ['C', 'H', 'N', 'O']
+    ('drugbank/mol0000', {'cm5': ((16, 56), dtype('<f4')), 'coordinates': ((16, 55, 3), dtype('<f4')), 'energies': ((16,), dtype('<f8')), 'forces': ((16, 55, 3), dtype('<f4')), 'hirdipole': ((16, 56, 3), dtype('<f4')), 'hirshfeld': ((16, 56), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((55,), dtype('S1')), 'spindensities': ((16, 56), dtype('<f4'))})
+gdb11_07_test500.h5 mols 500 confs 12000 atoms 183216 ['C', 'H', 'N', 'O']
+    ('gdb11_s07/mol0000', {'cm5': ((24, 19), dtype('<f4')), 'coordinates': ((24, 18, 3), dtype('<f4')), 'energies': ((24,), dtype('<f8')), 'forces': ((24, 18, 3), dtype('<f4')), 'hirdipole': ((24, 19, 3), dtype('<f4')), 'hirshfeld': ((24, 19), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((18,), dtype('S1')), 'spindensities': ((24, 19), dtype('<f4'))})
+gdb11_08_test500.h5 mols 500 confs 12000 atoms 203568 ['C', 'H', 'N', 'O']
+    ('gdb11_s08/mol0000', {'cm5': ((24, 17), dtype('<f4')), 'coordinates': ((24, 16, 3), dtype('<f4')), 'energies': ((24,), dtype('<f8')), 'forces': ((24, 16, 3), dtype('<f4')), 'hirdipole': ((24, 17, 3), dtype('<f4')), 'hirshfeld': ((24, 17), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((16,), dtype('S1')), 'spindensities': ((24, 17), dtype('<f4'))})
+gdb11_09_test500.h5 mols 500 confs 12000 atoms 225576 ['C', 'H', 'N', 'O']
+    ('gdb11_s09/mol0000', {'cm5': ((24, 20), dtype('<f4')), 'coordinates': ((24, 19, 3), dtype('<f4')), 'energies': ((24,), dtype('<f8')), 'forces': ((24, 19, 3), dtype('<f4')), 'hirdipole': ((24, 20, 3), dtype('<f4')), 'hirshfeld': ((24, 20), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((19,), dtype('S1')), 'spindensities': ((24, 20), dtype('<f4'))})
+gdb11_10_test500.h5 mols 500 confs 12000 atoms 247776 ['C', 'H', 'N', 'O']
+    ('gdb11_s10/mol0000', {'cm5': ((24, 18), dtype('<f4')), 'coordinates': ((24, 17, 3), dtype('<f4')), 'energies': ((24,), dtype('<f8')), 'forces': ((24, 17, 3), dtype('<f4')), 'hirdipole': ((24, 18, 3), dtype('<f4')), 'hirshfeld': ((24, 18), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((17,), dtype('S1')), 'spindensities': ((24, 18), dtype('<f4'))})
+gdb11_11_test500.h5 mols 496 confs 11670 atoms 273180 ['C', 'H', 'N', 'O']
+    ('gdb11_s11-000/mol0000', {'cm5': ((24, 22), dtype('<f4')), 'coordinates': ((24, 21, 3), dtype('<f4')), 'energies': ((24,), dtype('<f8')), 'forces': ((24, 21, 3), dtype('<f4')), 'hirdipole': ((24, 22, 3), dtype('<f4')), 'hirshfeld': ((24, 22), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((21,), dtype('S1')), 'spindensities': ((24, 22), dtype('<f4'))})
+gdb13_12_test1000.h5 mols 1000 confs 12000 atoms 303768 ['C', 'H', 'N', 'O']
+    ('gdb11_s12-000/mol0000', {'cm5': ((12, 29), dtype('<f4')), 'coordinates': ((12, 28, 3), dtype('<f4')), 'energies': ((12,), dtype('<f8')), 'forces': ((12, 28, 3), dtype('<f4')), 'hirdipole': ((12, 29, 3), dtype('<f4')), 'hirshfeld': ((12, 29), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((28,), dtype('S1')), 'spindensities': ((12, 29), dtype('<f4'))})
+gdb13_13_test1000.h5 mols 1000 confs 12000 atoms 328092 ['C', 'H', 'N', 'O']
+    ('gdb11_s13-000/mol0000', {'cm5': ((12, 31), dtype('<f4')), 'coordinates': ((12, 30, 3), dtype('<f4')), 'energies': ((12,), dtype('<f8')), 'forces': ((12, 30, 3), dtype('<f4')), 'hirdipole': ((12, 31, 3), dtype('<f4')), 'hirshfeld': ((12, 31), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((30,), dtype('S1')), 'spindensities': ((12, 31), dtype('<f4'))})
+tripeptide_full.h5 mols 248 confs 1984 atoms 104144 ['C', 'H', 'N', 'O']
+    ('tripeptide-000/mol000', {'cm5': ((8, 59), dtype('<f4')), 'coordinates': ((8, 58, 3), dtype('<f4')), 'energies': ((8,), dtype('<f8')), 'forces': ((8, 58, 3), dtype('<f4')), 'hirdipole': ((8, 59, 3), dtype('<f4')), 'hirshfeld': ((8, 59), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((58,), dtype('S1')), 'spindensities': ((8, 59), dtype('<f4'))})
+s66x8_wb97x6-31gd.h5 mols 66 confs 528 atoms 10512 ['C', 'H', 'N', 'O']
+    ('s66x8/mol00', {'cm5': ((8, 7), dtype('<f4')), 'coordinates': ((8, 6, 3), dtype('<f4')), 'energies': ((8,), dtype('<f8')), 'forces': ((8, 6, 3), dtype('<f4')), 'hirdipole': ((8, 7, 3), dtype('<f4')), 'hirshfeld': ((8, 7), dtype('<f4')), 'lot': ((1,), dtype('S12')), 'species': ((6,), dtype('S1')), 'spindensities': ((8, 7), dtype('<f4'))})
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/matgl/ext/ase.py", line 19, in <module>
+    from ase.constraints import ExpCellFilter
+ImportError: cannot import name 'ExpCellFilter' from 'ase.constraints' (/mnt/e/Ciencia/noturno/2025-ko-matgl/env/.venv/lib/python3.11/site-packages/ase/constraints/__init__.py)
+131:class PESCalculator(Calculator):
+132-    """Potential calculator for ASE."""
+133-
+134-    implemented_properties = ["energy", "free_energy", "forces", "stress", "hessian", "magmoms"]  # noqa:RUF012
+135-
+136-    def __init__(
+137-        self,
+138-        potential: Potential,
+139-        state_attr: torch.Tensor | None = None,
+140-        stress_unit: Literal["eV/A3", "GPa"] = "GPa",
+141-        stress_weight: float = 1.0,
+142-        use_voigt: bool = False,
+143-        **kwargs,
+144-    ):
+145-        """
+146-        Init PESCalculator with a Potential from matgl.
+147-
+148-        Args:
+149-            potential (Potential): matgl.apps.pes.Potential
+150-            state_attr (tensor): State attribute
+151-            compute_stress (bool): whether to calculate the stress
+152-            stress_unit (str): stress unit. Default: "GPa"
+153-            stress_weight (float): conversion factor from GPa to eV/A^3, if it is set to 1.0, the unit is in GPa
+154-            use_voigt (bool): whether the voigt notation is used for stress output
+155-            **kwargs: Kwargs pass through to super().__init__().
+156-        """
+157-        super().__init__(**kwargs)
+158-        self.potential = potential
+159-        self.compute_stress = potential.calc_stresses
+160-        self.compute_hessian = potential.calc_hessian
+161-        self.compute_magmom = potential.calc_magmom
+162-
+163-        # Handle stress unit conversion
+164-        if stress_unit == "eV/A3":
+165-            conversion_factor = units.GPa / (units.eV / units.Angstrom**3)  # Conversion factor from GPa to eV/A^3
+166-        elif stress_unit == "GPa":
+167-            conversion_factor = 1.0  # No conversion needed if stress is already in GPa
+168-        else:
+169-            raise ValueError(f"Unsupported stress_unit: {stress_unit}. Must be 'GPa' or 'eV/A3'.")
+170-
+171-        self.stress_weight = stress_weight * conversion_factor
+172-        self.state_attr = state_attr
+173-        self.element_types = potential.model.element_types  # type: ignore
+174-        self.cutoff = potential.model.cutoff
+175-        self.use_voigt = use_voigt
+176-
+177-    def calculate(  # type:ignore[override]
+178-        self,
+179-        atoms: Atoms,
+180-        properties: list | None = None,
+181-        system_changes: list | None = None,
+182-    ):
+183-        """
+184-        Perform calculation for an input Atoms.
+185-
+186-        Args:
+187-            atoms (ase.Atoms): ase Atoms object
+188-            properties (list): list of properties to calculate
+189-            system_changes (list): monitor which properties of atoms were
+190-                changed for new calculation. If not, the previous calculation
+191-                results will be loaded.

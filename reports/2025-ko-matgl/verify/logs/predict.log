@@ -1,0 +1,49 @@
+element_types ('H', 'C', 'N', 'O') cutoff 5.0
+ani_md_bench conformations 1791 graphs built in 4.3 s
+M3GNet ani_md_bench done in 45.3 s
+TensorNet ani_md_bench done in 57.9 s
+ which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(fpaths["state.pt"], map_location=map_location)
+/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/repo/src/matgl/utils/io.py:139: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  d = torch.load(fpaths["model.pt"], map_location=map_location)
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/predict.py", line 171, in <module>
+    Main()
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/predict.py", line 136, in Main
+    Energies, Forces = RunBatch(Potential, [Records[Index][2] for Index in Batch], [Records[Index][3] for Index in Batch], Device)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/predict.py", line 63, in RunBatch
+    Result = Potential(BatchGraph, BatchLattice, StateAttr)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/repo/src/matgl/apps/pes.py", line 114, in forward
+    total_energies = self.model(g=g, state_attr=state_attr, l_g=l_g)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/repo/src/matgl/models/_so3net.py", line 244, in forward
+    dx = so3conv(x, radial_ij, Yij, cutoff_ij, idx_i, idx_j)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Ciencia/pipeline/2025-ko-matgl/verify/repo/src/matgl/layers/_so3.py", line 329, in forward
+    v = Wij * dir_ij[:, self.idx_in_1, None] * self.clebsch_gordan[None, :, None] * xj
+        ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RuntimeError: CUDA error: device not ready
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

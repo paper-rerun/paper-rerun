@@ -19,6 +19,7 @@ The work is done by AI agents (Claude, by Anthropic) on one home computer, and a
 
 | Paper | Field | Verdict | What we found |
 |---|---|---|---|
+| [MatGL](reports/2025-ko-matgl/REPORT.md), npj Computational Materials 2025 | materials / chemistry | Not reproduced | Fig. 4 (COMP6 energy and force errors of three released ML potentials) does not reproduce: 3 of 36 values match, the rest differ in both directions. Two independent runs of ours agree with each other within 0.03 meV/atom. The model ranking holds. We asked the authors how the figure was computed. |
 | [ProteinGym](reports/2023-notin-proteingym/REPORT.md), NeurIPS 2023 D&B | protein fitness | Reproduced | All five headline numbers (ESM-1b and four ESM2 sizes) match within 0.003 over all 217 assays, confirmed by a second, independent run. The paper's averages come from the script's protein-first grouping, not the text's definition; ESM-1b was scored with wt-marginals, not the masked-marginals the appendix states; and five long-protein ESM2 scores were computed on the MSA region only, unlike the released code. |
 | [LigandMPNN](reports/2025-dauparas-ligandmpnn/REPORT.md), Nature Methods 2025 | protein design | Partially reproduced | The main claim holds: atomic context raises recovery near ligands, most near metals. Three of six headline numbers match. The authors' own per-protein data show that the figure used a different neighbourhood definition than the Results text, and metal-only context on the metal split; that choice moves the metal number by about 15 points. |
 | [ACT DR6 lensing](reports/2024-madhavacheril-act-dr6/REPORT.md), ApJ 2024 | cosmology | Reproduced | All targets within 0.1σ, chains run to the paper's convergence criterion. The released setup no longer runs on CAMB 2.x; CAMB 1.3.6 works. |
@@ -44,7 +45,7 @@ Files too large for this repository (the ACT DR6 MCMC chains, about 24 MB, and a
 - **Not reproduced**: we ran it and the numbers don't match.
 - **Could not run**: data missing, code broken beyond a reasonable fix, or more hardware than we have.
 
-A "partially" is not an accusation. So far, every partial verdict came from something missing (a test split, a dataset, compute), not from a wrong result.
+A "partially" is not an accusation. So far, every partial verdict came from something missing (a test split, a dataset, compute), not from a wrong result. "Not reproduced" is also not an accusation: it means our careful rerun of the released code and data gives different numbers, and we ask the authors why.
 
 ## What a report contains
 

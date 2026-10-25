@@ -1,0 +1,34 @@
+crd.dat/molAcetaminophen                 atoms=  20 heavy=  11 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molCaffeine                      atoms=  24 heavy=  14 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molSalbutamol                    atoms=  38 heavy=  17 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molAtomoxetine                   atoms=  40 heavy=  19 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molLisdexamfetamine              atoms=  44 heavy=  19 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molCapsaicin                     atoms=  49 heavy=  22 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molOseltamivir                   atoms=  50 heavy=  22 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molRetinol                       atoms=  51 heavy=  21 conf= 128 ['C', 'H', 'O']
+crd.dat/molFentanyl                      atoms=  53 heavy=  25 conf= 127 ['C', 'H', 'N', 'O']
+crd.dat/molTolterodine                   atoms=  55 heavy=  24 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molRanolazine                    atoms=  64 heavy=  31 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molAtazanavir                    atoms= 103 heavy=  51 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molChignolinNeutral              atoms= 149 heavy=  81 conf= 128 ['C', 'H', 'N', 'O']
+crd.dat/molTrpCage1L2Y                   atoms= 312 heavy= 158 conf= 128 ['C', 'H', 'N', 'O']
+blob d168ba5e9ed0155518d911c234e3db341760e4bb bytes 6107773 top ['crd.dat']
+{
+ "data-animd-natoms": {
+  "value": 312,
+  "paper_value": 312,
+  "match": true,
+  "n_molecules_with_312_atoms": 1,
+  "literal_reading_every_molecule_312": false,
+  "other_molecules_atom_range": [
+   20,
+   149
+  ],
+  "n_other_molecules": 13
+ },
+ "data-animd-ntraj": {
+  "value": 14,
+  "paper_value": 16,
+  "match": false
+ }
+}

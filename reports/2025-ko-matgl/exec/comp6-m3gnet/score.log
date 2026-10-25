@@ -1,0 +1,29 @@
+fig4a-m3gnet-animd                 ours=7.66906 paper=19.159 diff=-11.48994 tol=0.01 FAIL
+fig4a-m3gnet-gdb9to11              ours=4.90864 paper=8.925 diff=-4.01636 tol=0.01 FAIL
+fig4a-m3gnet-gdb12to13             ours=6.51435 paper=3.655 diff=+2.85935 tol=0.01 FAIL
+fig4a-m3gnet-drugbank              ours=8.92963 paper=12.01 diff=-3.08037 tol=0.01 FAIL
+fig4a-m3gnet-s66x8                 ours=7.50396 paper=9.835 diff=-2.33104 tol=0.01 FAIL
+fig4a-m3gnet-tripeptides           ours=5.70330 paper=2.662 diff=+3.04130 tol=0.01 FAIL
+fig4b-m3gnet-animd                 ours=0.11359 paper=0.142 diff=-0.02841 tol=0.0006 FAIL
+fig4b-m3gnet-gdb9to11              ours=0.09144 paper=0.074 diff=+0.01744 tol=0.0006 FAIL
+fig4b-m3gnet-gdb12to13             ours=0.13671 paper=0.118 diff=+0.01871 tol=0.0006 FAIL
+fig4b-m3gnet-drugbank              ours=0.10654 paper=0.126 diff=-0.01946 tol=0.0006 FAIL
+fig4b-m3gnet-s66x8                 ours=0.04489 paper=0.029 diff=+0.01589 tol=0.0006 FAIL
+fig4b-m3gnet-tripeptides           ours=0.07672 paper=0.067 diff=+0.00972 tol=0.0006 FAIL
+text-m3gnet-animd-energy-gt14      ours=7.66906 paper=14.0 diff=-6.33094 tol=0.0 FAIL
+text-m3gnet-animd-force-gt014      ours=0.11359 paper=0.14 diff=-0.02641 tol=0.0 FAIL
+n_conf total 101352 failed 0
+ani_md_bench           n=  1791 E=7.6691 F=0.11359 Esigned=+7.1442
+s66x8_wb97x6-31gd      n=   528 E=7.5040 F=0.04489 Esigned=+7.0431
+tripeptide_full        n=  1984 E=5.7033 F=0.07672 Esigned=+5.4781
+drugbank_testset       n= 13379 E=8.9296 F=0.10654 Esigned=+8.1512
+gdb11_09_test500       n= 12000 E=4.1766 F=0.07277 Esigned=+0.9374
+gdb11_10_test500       n= 12000 E=5.1232 F=0.08229 Esigned=+1.3225
+gdb11_11_test500       n= 11670 E=5.4408 F=0.11515 Esigned=-0.3215
+gdb13_12_test1000      n= 12000 E=6.2275 F=0.13179 Esigned=-0.8162
+gdb13_13_test1000      n= 12000 E=6.8012 F=0.14126 Esigned=-0.3596
+gdb11_07_test500       n= 12000 E=2.9538 F=0.05456 Esigned=-0.0267
+gdb11_08_test500       n= 12000 E=3.4340 F=0.06389 Esigned=+0.4193
+gdb9to11_readingB_gdb11_07to11           n= 59670 E=4.2189 F=0.08053
+gdb9to11_readingC_folder_GDB07to09       n= 36000 E=3.5214 F=0.06437
+gdb12to13_readingC_folder_GDB10to13      n= 47670 E=5.9013 F=0.11990

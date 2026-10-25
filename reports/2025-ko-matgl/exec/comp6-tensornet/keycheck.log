@@ -1,0 +1,8 @@
+model.pt keys: {'data_mean': tensor(0.), 'data_std': tensor(3.7030), 'element_refs': tensor([  -16.5181, -1036.3730, -1488.6525, -2046.0083]), 'calc_forces': True, 'calc_stresses': False, 'calc_hessian': False, 'calc_repuls': False, 'zbl_trainable': False, 'debug_mode': False, 'calc_magmom': False}
+model.pt model init_args: {'element_types': ('H', 'C', 'N', 'O'), 'ntypes_state': None, 'dim_state_embedding': 0, 'dim_state_feats': None, 'include_state': False, 'max_n': 3, 'max_l': 3, 'rbf_type': 'SphericalBessel', 'use_smooth': True, 'activation_type': 'swish', 'width': 0.5, 'readout_type': 'weighted_atom', 'task_type': 'regression', 'niters_set2set': 3, 'nlayers_set2set': 3, 'field': 'node_feat', 'is_intensive': False, 'ntargets': 1, 'cutoff': 5.0, 'dtype': torch.float32, 'equivariance_invariance_group': 'O(3)', 'nblocks': 2, 'num_rbf': 3, 'units': 64}
+n model keys 69 n state keys 69
+missing in state: []
+unexpected in state: []
+shape mismatch: []
+max |loaded - state| over shared keys: 0.0
+data_mean tensor(0.) data_std tensor(3.7030) element_refs tensor([  -16.5181, -1036.3730, -1488.6525, -2046.0083])
