@@ -33,6 +33,7 @@ Files too large for this repository (the ACT DR6 MCMC chains, about 24 MB, and a
 ## Open Tables datasets
 
 - [Fall armyworm control trials in Brazilian maize](https://github.com/paper-rerun/fall-armyworm-maize-trials-br): 2,075 results from 20 Embrapa publications, transcribed twice independently and checked against the PDFs.
+- [Asian soybean rust control trials in Brazil](https://github.com/paper-rerun/soybean-rust-trials-br): 5,836 results from 20 Embrapa publications, including five national summaries of the cooperative fungicide trials.
 
 ## Verdicts
 
