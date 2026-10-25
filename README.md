@@ -23,6 +23,10 @@ The five papers below ProteinGym were a pilot, each run by a single agent. Ligan
 
 Files too large for this repository (the ACT DR6 MCMC chains, about 24 MB, and a few full error tables) are available on request.
 
+## Open data
+
+- [Fall armyworm control trials in Brazilian maize](https://github.com/paper-rerun/fall-armyworm-maize-trials-br): 2,075 results from 20 Embrapa publications, transcribed twice independently and checked against the PDFs.
+
 ## Verdicts
 
 - **Reproduced**: every target number matches within the tolerance the paper itself allows.
