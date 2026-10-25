@@ -8,6 +8,13 @@ Most papers that ship code are never re-run by anyone outside the lab that wrote
 
 The work is done by AI agents (Claude, by Anthropic) on one home computer, and a human reviews every report before it goes out. See [how we work](METHOD.md).
 
+## What we do
+
+- **Rerun**: we re-run published research code on the authors' data and report what holds.
+- **Fix Back**: when a rerun finds something broken or missing, we send the authors a small fix as a pull request, not only a report.
+- **Open Tables**: we turn trial results buried in Portuguese-language technical literature into open, checked datasets.
+- **Upkeep**: we fix small, testable problems in widely used scientific software.
+
 ## Results so far
 
 | Paper | Field | Verdict | What we found |
@@ -23,7 +30,7 @@ The five papers below ProteinGym were a pilot, each run by a single agent. Ligan
 
 Files too large for this repository (the ACT DR6 MCMC chains, about 24 MB, and a few full error tables) are available on request.
 
-## Open data
+## Open Tables datasets
 
 - [Fall armyworm control trials in Brazilian maize](https://github.com/paper-rerun/fall-armyworm-maize-trials-br): 2,075 results from 20 Embrapa publications, transcribed twice independently and checked against the PDFs.
 
