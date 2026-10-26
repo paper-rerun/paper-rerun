@@ -1,0 +1,796 @@
+{
+ "pred_dir": "/mnt/e/Ciencia/noturno/2022-qu-particle-transformer/runs/full_PN_fp32",
+ "model": "ParticleNet",
+ "n_total": 20000000,
+ "per_class_counts": {
+  "label_QCD": 2000000,
+  "label_Hbb": 2000000,
+  "label_Hcc": 2000000,
+  "label_Hgg": 2000000,
+  "label_H4q": 2000000,
+  "label_Hqql": 2000000,
+  "label_Zqq": 2000000,
+  "label_Wqq": 2000000,
+  "label_Tbqq": 2000000,
+  "label_Tbl": 2000000
+ },
+ "groups": {
+  "ZJetsToNuNu": {
+   "n_jets": 2000000,
+   "score_dtype": "float32",
+   "n_label_branch_mismatch_vs_onehot": 0,
+   "n_label_mismatch_vs_filename": 0
+  },
+  "HToBB": {
+   "n_jets": 2000000,
+   "score_dtype": "float32",
+   "n_label_branch_mismatch_vs_onehot": 0,
+   "n_label_mismatch_vs_filename": 0
+  },
+  "HToCC": {
+   "n_jets": 2000000,
+   "score_dtype": "float32",
+   "n_label_branch_mismatch_vs_onehot": 0,
+   "n_label_mismatch_vs_filename": 0
+  },
+  "HToGG": {
+   "n_jets": 2000000,
+   "score_dtype": "float32",
+   "n_label_branch_mismatch_vs_onehot": 0,
+   "n_label_mismatch_vs_filename": 0
+  },
+  "HToWW4Q": {
+   "n_jets": 2000000,
+   "score_dtype": "float32",
+   "n_label_branch_mismatch_vs_onehot": 0,
+   "n_label_mismatch_vs_filename": 0
+  },
+  "HToWW2Q1L": {
+   "n_jets": 2000000,
+   "score_dtype": "float32",
+   "n_label_branch_mismatch_vs_onehot": 0,
+   "n_label_mismatch_vs_filename": 0
+  },
+  "ZToQQ": {
+   "n_jets": 2000000,
+   "score_dtype": "float32",
+   "n_label_branch_mismatch_vs_onehot": 0,
+   "n_label_mismatch_vs_filename": 0
+  },
+  "WToQQ": {
+   "n_jets": 2000000,
+   "score_dtype": "float32",
+   "n_label_branch_mismatch_vs_onehot": 0,
+   "n_label_mismatch_vs_filename": 0
+  },
+  "TTBar": {
+   "n_jets": 2000000,
+   "score_dtype": "float32",
+   "n_label_branch_mismatch_vs_onehot": 0,
+   "n_label_mismatch_vs_filename": 0
+  },
+  "TTBarLep": {
+   "n_jets": 2000000,
+   "score_dtype": "float32",
+   "n_label_branch_mismatch_vs_onehot": 0,
+   "n_label_mismatch_vs_filename": 0
+  }
+ },
+ "sklearn": "1.5.1",
+ "numpy": "1.26.4",
+ "d1_counts_ok": true,
+ "accuracy": 0.84391025,
+ "n_correct": 16878205,
+ "max_abs_rowsum_minus_1": 2.5267928549510543e-07,
+ "auc_renormalized": false,
+ "auc": 0.984941175455936,
+ "rej": {
+  "ParticleNet.rej50_Hbb": {
+   "n_signal": 2000000,
+   "n_qcd": 2000000,
+   "tpr_target": 0.5,
+   "n_nan_main": 0,
+   "main_f64_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.000131,
+     "k_qcd": 262.0,
+     "rej": 7633.587786259542
+    },
+    "interpolated": {
+     "fpr": 0.000131,
+     "k_qcd": 262.0,
+     "rej": 7633.587786259542
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.000131,
+     "k_qcd": 262.0,
+     "rej": 7633.587786259542
+    },
+    "threshold": 0.999247692784456,
+    "n_jets_tied_at_threshold": 1
+   },
+   "variant_f32_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.000131,
+     "k_qcd": 262.0,
+     "rej": 7633.587786259542
+    },
+    "interpolated": {
+     "fpr": 0.000131,
+     "k_qcd": 262.0,
+     "rej": 7633.587786259542
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.000131,
+     "k_qcd": 262.0,
+     "rej": 7633.587786259542
+    },
+    "threshold": 0.9992477297782898,
+    "n_jets_tied_at_threshold": 27
+   },
+   "n_nonfinite_logdiff": 0,
+   "variant_f64_logdiff": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.000131,
+     "k_qcd": 262.0,
+     "rej": 7633.587786259542
+    },
+    "interpolated": {
+     "fpr": 0.000131,
+     "k_qcd": 262.0,
+     "rej": 7633.587786259542
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.000131,
+     "k_qcd": 262.0,
+     "rej": 7633.587786259542
+    },
+    "threshold": 7.19161319579149,
+    "n_jets_tied_at_threshold": 1
+   },
+   "implied_k_paper": 262
+  },
+  "ParticleNet.rej50_Hcc": {
+   "n_signal": 2000000,
+   "n_qcd": 2000000,
+   "tpr_target": 0.5,
+   "n_nan_main": 0,
+   "main_f64_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.000404,
+     "k_qcd": 808.0,
+     "rej": 2475.2475247524753
+    },
+    "interpolated": {
+     "fpr": 0.000404,
+     "k_qcd": 808.0,
+     "rej": 2475.2475247524753
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.000404,
+     "k_qcd": 808.0,
+     "rej": 2475.2475247524753
+    },
+    "threshold": 0.9971721453263243,
+    "n_jets_tied_at_threshold": 1
+   },
+   "variant_f32_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5000015,
+     "fpr": 0.000404,
+     "k_qcd": 808.0,
+     "rej": 2475.2475247524753
+    },
+    "interpolated": {
+     "fpr": 0.000404,
+     "k_qcd": 808.0,
+     "rej": 2475.2475247524753
+    },
+    "nearest_point": {
+     "tpr": 0.4999995,
+     "fpr": 0.000404,
+     "k_qcd": 808.0,
+     "rej": 2475.2475247524753
+    },
+    "threshold": 0.9971721172332764,
+    "n_jets_tied_at_threshold": 4
+   },
+   "n_nonfinite_logdiff": 0,
+   "variant_f64_logdiff": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.000404,
+     "k_qcd": 808.0,
+     "rej": 2475.2475247524753
+    },
+    "interpolated": {
+     "fpr": 0.000404,
+     "k_qcd": 808.0,
+     "rej": 2475.2475247524753
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.000404,
+     "k_qcd": 808.0,
+     "rej": 2475.2475247524753
+    },
+    "threshold": 5.865405060034551,
+    "n_jets_tied_at_threshold": 1
+   },
+   "implied_k_paper": 808
+  },
+  "ParticleNet.rej50_Hgg": {
+   "n_signal": 2000000,
+   "n_qcd": 2000000,
+   "tpr_target": 0.5,
+   "n_nan_main": 0,
+   "main_f64_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0096335,
+     "k_qcd": 19267.0,
+     "rej": 103.80443244926559
+    },
+    "interpolated": {
+     "fpr": 0.0096335,
+     "k_qcd": 19267.0,
+     "rej": 103.80443244926559
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0096335,
+     "k_qcd": 19267.0,
+     "rej": 103.80443244926559
+    },
+    "threshold": 0.9540488676295387,
+    "n_jets_tied_at_threshold": 1
+   },
+   "variant_f32_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0096335,
+     "k_qcd": 19267.0,
+     "rej": 103.80443244926559
+    },
+    "interpolated": {
+     "fpr": 0.0096335,
+     "k_qcd": 19267.0,
+     "rej": 103.80443244926559
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0096335,
+     "k_qcd": 19267.0,
+     "rej": 103.80443244926559
+    },
+    "threshold": 0.9540488719940186,
+    "n_jets_tied_at_threshold": 1
+   },
+   "n_nonfinite_logdiff": 0,
+   "variant_f64_logdiff": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0096335,
+     "k_qcd": 19267.0,
+     "rej": 103.80443244926559
+    },
+    "interpolated": {
+     "fpr": 0.0096335,
+     "k_qcd": 19267.0,
+     "rej": 103.80443244926559
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0096335,
+     "k_qcd": 19267.0,
+     "rej": 103.80443244926559
+    },
+    "threshold": 3.03313640203306,
+    "n_jets_tied_at_threshold": 1
+   },
+   "implied_k_paper": 19231
+  },
+  "ParticleNet.rej50_H4q": {
+   "n_signal": 2000000,
+   "n_qcd": 2000000,
+   "tpr_target": 0.5,
+   "n_nan_main": 0,
+   "main_f64_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0010485,
+     "k_qcd": 2097.0,
+     "rej": 953.7434430138293
+    },
+    "interpolated": {
+     "fpr": 0.0010485,
+     "k_qcd": 2097.0,
+     "rej": 953.7434430138293
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0010485,
+     "k_qcd": 2097.0,
+     "rej": 953.7434430138293
+    },
+    "threshold": 0.9931688120824463,
+    "n_jets_tied_at_threshold": 1
+   },
+   "variant_f32_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5000005,
+     "fpr": 0.0010485,
+     "k_qcd": 2097.0,
+     "rej": 953.7434430138293
+    },
+    "interpolated": {
+     "fpr": 0.0010485,
+     "k_qcd": 2097.0,
+     "rej": 953.7434430138293
+    },
+    "nearest_point": {
+     "tpr": 0.5000005,
+     "fpr": 0.0010485,
+     "k_qcd": 2097.0,
+     "rej": 953.7434430138293
+    },
+    "threshold": 0.993168830871582,
+    "n_jets_tied_at_threshold": 3
+   },
+   "n_nonfinite_logdiff": 120,
+   "variant_f64_logdiff": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0010485,
+     "k_qcd": 2097.0,
+     "rej": 953.7434430138293
+    },
+    "interpolated": {
+     "fpr": 0.0010485,
+     "k_qcd": 2097.0,
+     "rej": 953.7434430138293
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0010485,
+     "k_qcd": 2097.0,
+     "rej": 953.7434430138293
+    },
+    "threshold": 4.979402066798944,
+    "n_jets_tied_at_threshold": 1
+   },
+   "implied_k_paper": 2096
+  },
+  "ParticleNet.rej99_Hqql": {
+   "n_signal": 2000000,
+   "n_qcd": 2000000,
+   "tpr_target": 0.99,
+   "n_nan_main": 0,
+   "main_f64_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.99,
+     "fpr": 0.0002995,
+     "k_qcd": 599.0,
+     "rej": 3338.89816360601
+    },
+    "interpolated": {
+     "fpr": 0.0002995,
+     "k_qcd": 599.0,
+     "rej": 3338.89816360601
+    },
+    "nearest_point": {
+     "tpr": 0.99,
+     "fpr": 0.0002995,
+     "k_qcd": 599.0,
+     "rej": 3338.89816360601
+    },
+    "threshold": 0.9350511248778389,
+    "n_jets_tied_at_threshold": 1
+   },
+   "variant_f32_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.99,
+     "fpr": 0.0002995,
+     "k_qcd": 599.0,
+     "rej": 3338.89816360601
+    },
+    "interpolated": {
+     "fpr": 0.0002995,
+     "k_qcd": 599.0,
+     "rej": 3338.89816360601
+    },
+    "nearest_point": {
+     "tpr": 0.99,
+     "fpr": 0.0002995,
+     "k_qcd": 599.0,
+     "rej": 3338.89816360601
+    },
+    "threshold": 0.9350510835647583,
+    "n_jets_tied_at_threshold": 1
+   },
+   "n_nonfinite_logdiff": 0,
+   "variant_f64_logdiff": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.99,
+     "fpr": 0.0002995,
+     "k_qcd": 599.0,
+     "rej": 3338.89816360601
+    },
+    "interpolated": {
+     "fpr": 0.0002995,
+     "k_qcd": 599.0,
+     "rej": 3338.89816360601
+    },
+    "nearest_point": {
+     "tpr": 0.99,
+     "fpr": 0.0002995,
+     "k_qcd": 599.0,
+     "rej": 3338.89816360601
+    },
+    "threshold": 2.6670007829762645,
+    "n_jets_tied_at_threshold": 1
+   },
+   "implied_k_paper": 599
+  },
+  "ParticleNet.rej50_Tbqq": {
+   "n_signal": 2000000,
+   "n_qcd": 2000000,
+   "tpr_target": 0.5,
+   "n_nan_main": 0,
+   "main_f64_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 9.5e-05,
+     "k_qcd": 190.0,
+     "rej": 10526.315789473683
+    },
+    "interpolated": {
+     "fpr": 9.5e-05,
+     "k_qcd": 190.0,
+     "rej": 10526.315789473683
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 9.5e-05,
+     "k_qcd": 190.0,
+     "rej": 10526.315789473683
+    },
+    "threshold": 0.9991672328283283,
+    "n_jets_tied_at_threshold": 1
+   },
+   "variant_f32_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.500009,
+     "fpr": 9.5e-05,
+     "k_qcd": 190.0,
+     "rej": 10526.315789473683
+    },
+    "interpolated": {
+     "fpr": 9.5e-05,
+     "k_qcd": 190.0,
+     "rej": 10526.315789473683
+    },
+    "nearest_point": {
+     "tpr": 0.4999995,
+     "fpr": 9.5e-05,
+     "k_qcd": 190.0,
+     "rej": 10526.315789473683
+    },
+    "threshold": 0.9991672039031982,
+    "n_jets_tied_at_threshold": 19
+   },
+   "n_nonfinite_logdiff": 120,
+   "variant_f64_logdiff": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 9.5e-05,
+     "k_qcd": 190.0,
+     "rej": 10526.315789473683
+    },
+    "interpolated": {
+     "fpr": 9.5e-05,
+     "k_qcd": 190.0,
+     "rej": 10526.315789473683
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 9.5e-05,
+     "k_qcd": 190.0,
+     "rej": 10526.315789473683
+    },
+    "threshold": 7.089923346547858,
+    "n_jets_tied_at_threshold": 1
+   },
+   "implied_k_paper": 190
+  },
+  "ParticleNet.rej99.5_Tbl": {
+   "n_signal": 2000000,
+   "n_qcd": 2000000,
+   "tpr_target": 0.995,
+   "n_nan_main": 0,
+   "main_f64_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.995,
+     "fpr": 8.95e-05,
+     "k_qcd": 179.0,
+     "rej": 11173.1843575419
+    },
+    "interpolated": {
+     "fpr": 8.95e-05,
+     "k_qcd": 179.0,
+     "rej": 11173.1843575419
+    },
+    "nearest_point": {
+     "tpr": 0.995,
+     "fpr": 8.95e-05,
+     "k_qcd": 179.0,
+     "rej": 11173.1843575419
+    },
+    "threshold": 0.9651021108027396,
+    "n_jets_tied_at_threshold": 1
+   },
+   "variant_f32_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.995,
+     "fpr": 8.95e-05,
+     "k_qcd": 179.0,
+     "rej": 11173.1843575419
+    },
+    "interpolated": {
+     "fpr": 8.95e-05,
+     "k_qcd": 179.0,
+     "rej": 11173.1843575419
+    },
+    "nearest_point": {
+     "tpr": 0.995,
+     "fpr": 8.95e-05,
+     "k_qcd": 179.0,
+     "rej": 11173.1843575419
+    },
+    "threshold": 0.9651020765304565,
+    "n_jets_tied_at_threshold": 1
+   },
+   "n_nonfinite_logdiff": 0,
+   "variant_f64_logdiff": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.995,
+     "fpr": 8.95e-05,
+     "k_qcd": 179.0,
+     "rej": 11173.1843575419
+    },
+    "interpolated": {
+     "fpr": 8.95e-05,
+     "k_qcd": 179.0,
+     "rej": 11173.1843575419
+    },
+    "nearest_point": {
+     "tpr": 0.995,
+     "fpr": 8.95e-05,
+     "k_qcd": 179.0,
+     "rej": 11173.1843575419
+    },
+    "threshold": 3.3198075641189546,
+    "n_jets_tied_at_threshold": 1
+   },
+   "implied_k_paper": 179
+  },
+  "ParticleNet.rej50_Wqq": {
+   "n_signal": 2000000,
+   "n_qcd": 2000000,
+   "tpr_target": 0.5,
+   "n_nan_main": 0,
+   "main_f64_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0028805,
+     "k_qcd": 5761.0,
+     "rej": 347.16195105016493
+    },
+    "interpolated": {
+     "fpr": 0.0028805,
+     "k_qcd": 5761.0,
+     "rej": 347.16195105016493
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0028805,
+     "k_qcd": 5761.0,
+     "rej": 347.16195105016493
+    },
+    "threshold": 0.9805338698835788,
+    "n_jets_tied_at_threshold": 1
+   },
+   "variant_f32_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0028805,
+     "k_qcd": 5761.0,
+     "rej": 347.16195105016493
+    },
+    "interpolated": {
+     "fpr": 0.0028805,
+     "k_qcd": 5761.0,
+     "rej": 347.16195105016493
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0028805,
+     "k_qcd": 5761.0,
+     "rej": 347.16195105016493
+    },
+    "threshold": 0.9805338978767395,
+    "n_jets_tied_at_threshold": 1
+   },
+   "n_nonfinite_logdiff": 0,
+   "variant_f64_logdiff": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0028805,
+     "k_qcd": 5761.0,
+     "rej": 347.16195105016493
+    },
+    "interpolated": {
+     "fpr": 0.0028805,
+     "k_qcd": 5761.0,
+     "rej": 347.16195105016493
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0028805,
+     "k_qcd": 5761.0,
+     "rej": 347.16195105016493
+    },
+    "threshold": 3.9194211502476484,
+    "n_jets_tied_at_threshold": 1
+   },
+   "implied_k_paper": 5764
+  },
+  "ParticleNet.rej50_Zqq": {
+   "n_signal": 2000000,
+   "n_qcd": 2000000,
+   "tpr_target": 0.5,
+   "n_nan_main": 0,
+   "main_f64_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0035355,
+     "k_qcd": 7071.0,
+     "rej": 282.84542497525103
+    },
+    "interpolated": {
+     "fpr": 0.0035355,
+     "k_qcd": 7071.0,
+     "rej": 282.84542497525103
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0035355,
+     "k_qcd": 7071.0,
+     "rej": 282.84542497525103
+    },
+    "threshold": 0.9751881477059136,
+    "n_jets_tied_at_threshold": 1
+   },
+   "variant_f32_ratio": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0035355,
+     "k_qcd": 7071.0,
+     "rej": 282.84542497525103
+    },
+    "interpolated": {
+     "fpr": 0.0035355,
+     "k_qcd": 7071.0,
+     "rej": 282.84542497525103
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0035355,
+     "k_qcd": 7071.0,
+     "rej": 282.84542497525103
+    },
+    "threshold": 0.975188136100769,
+    "n_jets_tied_at_threshold": 1
+   },
+   "n_nonfinite_logdiff": 0,
+   "variant_f64_logdiff": {
+    "main_first_point_tpr_ge_X": {
+     "tpr": 0.5,
+     "fpr": 0.0035355,
+     "k_qcd": 7071.0,
+     "rej": 282.84542497525103
+    },
+    "interpolated": {
+     "fpr": 0.0035355,
+     "k_qcd": 7071.0,
+     "rej": 282.84542497525103
+    },
+    "nearest_point": {
+     "tpr": 0.5,
+     "fpr": 0.0035355,
+     "k_qcd": 7071.0,
+     "rej": 282.84542497525103
+    },
+    "threshold": 3.671308970297182,
+    "n_jets_tied_at_threshold": 1
+   },
+   "implied_k_paper": 7067
+  }
+ },
+ "verdicts": {
+  "ParticleNet.accuracy": {
+   "paper": 0.844,
+   "ours": 0.84391025,
+   "diff": -8.974999999999955e-05,
+   "status": "pass"
+  },
+  "ParticleNet.auc": {
+   "paper": 0.9849,
+   "ours": 0.984941175455936,
+   "diff": 4.117545593596006e-05,
+   "status": "pass"
+  },
+  "ParticleNet.rej50_Hbb": {
+   "paper": 7634,
+   "ours": 7633.587786259542,
+   "rel_diff": -5.399708415754212e-05,
+   "status": "pass"
+  },
+  "ParticleNet.rej50_Hcc": {
+   "paper": 2475,
+   "ours": 2475.2475247524753,
+   "rel_diff": 0.00010001000100023916,
+   "status": "pass"
+  },
+  "ParticleNet.rej50_Hgg": {
+   "paper": 104,
+   "ours": 103.80443244926559,
+   "rel_diff": -0.0018804572186000845,
+   "status": "pass"
+  },
+  "ParticleNet.rej50_H4q": {
+   "paper": 954,
+   "ours": 953.7434430138293,
+   "rel_diff": -0.0002689276584598721,
+   "status": "pass"
+  },
+  "ParticleNet.rej99_Hqql": {
+   "paper": 3339,
+   "ours": 3338.89816360601,
+   "rel_diff": -3.049906977847794e-05,
+   "status": "pass"
+  },
+  "ParticleNet.rej50_Tbqq": {
+   "paper": 10526,
+   "ours": 10526.315789473683,
+   "rel_diff": 3.0000900026916355e-05,
+   "status": "pass"
+  },
+  "ParticleNet.rej99.5_Tbl": {
+   "paper": 11173,
+   "ours": 11173.1843575419,
+   "rel_diff": 1.6500272254527104e-05,
+   "status": "pass"
+  },
+  "ParticleNet.rej50_Wqq": {
+   "paper": 347,
+   "ours": 347.16195105016493,
+   "rel_diff": 0.00046671772381823295,
+   "status": "pass"
+  },
+  "ParticleNet.rej50_Zqq": {
+   "paper": 283,
+   "ours": 282.84542497525103,
+   "rel_diff": -0.000546201500879695,
+   "status": "pass"
+  }
+ }
+}

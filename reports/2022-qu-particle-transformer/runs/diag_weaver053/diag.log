@@ -1,0 +1,17 @@
+w0417 input names ['pf_points', 'pf_features', 'pf_vectors', 'pf_mask'] shapes {'pf_points': (512, 2, 128), 'pf_features': (512, 17, 128), 'pf_vectors': (512, 4, 128), 'pf_mask': (512, 1, 128)}
+w0417 mean softmax Hbb (true class) 0.8892, accuracy 0.9238
+w053 input names ['pf_points', 'pf_features', 'pf_vectors', 'pf_mask'] shapes {'pf_points': (512, 2, 128), 'pf_features': (512, 17, 128), 'pf_vectors': (512, 4, 128), 'pf_mask': (512, 1, 128)}
+w053 mean softmax Hbb (true class) 0.0056, accuracy 0.0000
+jet_pt equal True
+pf_points (512, 2, 128) max |diff| 2.6 n entries differing 87230
+pf_features (512, 17, 128) max |diff| 5.78 n entries differing 514519
+pf_vectors (512, 4, 128) max |diff| 824 n entries differing 174460
+pf_mask (512, 1, 128) max |diff| 0 n entries differing 0
+w0417 model on diag_w053.npz inputs: accuracy 0.9238, max |score - other model score| 0.999
+w053 model on diag_w0417.npz inputs: accuracy 0.0000, max |score - other model score| 0.999
+pf_points max |diff| on real particles 0 on padded slots 2.6
+pf_features max |diff| on real particles 0 on padded slots 5.78
+pf_vectors max |diff| on real particles 0 on padded slots 824
+0.4.17 model, 0.5.3 inputs vs 0.4.17 inputs: max |score diff| 0
+0.5.3 model, 0.4.17 inputs vs 0.5.3 inputs: max |score diff| 0
+0.5.3 model argmax counts [184   0  20   1   0  26 265   0   0  16]

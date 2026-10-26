@@ -1,0 +1,100 @@
+{
+ "dir_a": "/mnt/e/Ciencia/noturno/2022-qu-particle-transformer/runs/full_ParT_fp32",
+ "dir_b": "/mnt/e/Ciencia/noturno/2022-qu-particle-transformer/runs/full_ParT_amp",
+ "groups": {
+  "HToBB": {
+   "n_a": 2000000,
+   "n_b": 2000000,
+   "aligned": true,
+   "max_abs_score_diff": 0.025126129388809204,
+   "mean_abs_score_diff": 4.0941815190559126e-05,
+   "n_identical_rows": 0,
+   "argmax_flips": 390
+  },
+  "HToCC": {
+   "n_a": 2000000,
+   "n_b": 2000000,
+   "aligned": true,
+   "max_abs_score_diff": 0.04233461618423462,
+   "mean_abs_score_diff": 6.93149957098404e-05,
+   "n_identical_rows": 0,
+   "argmax_flips": 712
+  },
+  "HToGG": {
+   "n_a": 2000000,
+   "n_b": 2000000,
+   "aligned": true,
+   "max_abs_score_diff": 0.02481570839881897,
+   "mean_abs_score_diff": 8.127676994964703e-05,
+   "n_identical_rows": 0,
+   "argmax_flips": 866
+  },
+  "HToWW2Q1L": {
+   "n_a": 2000000,
+   "n_b": 2000000,
+   "aligned": true,
+   "max_abs_score_diff": 0.01419675350189209,
+   "mean_abs_score_diff": 1.585751373166505e-05,
+   "n_identical_rows": 0,
+   "argmax_flips": 91
+  },
+  "HToWW4Q": {
+   "n_a": 2000000,
+   "n_b": 2000000,
+   "aligned": true,
+   "max_abs_score_diff": 0.01693663001060486,
+   "mean_abs_score_diff": 7.913637882807401e-05,
+   "n_identical_rows": 0,
+   "argmax_flips": 764
+  },
+  "TTBar": {
+   "n_a": 2000000,
+   "n_b": 2000000,
+   "aligned": true,
+   "max_abs_score_diff": 0.020520895719528198,
+   "mean_abs_score_diff": 3.0056369383767112e-05,
+   "n_identical_rows": 0,
+   "argmax_flips": 244
+  },
+  "TTBarLep": {
+   "n_a": 2000000,
+   "n_b": 2000000,
+   "aligned": true,
+   "max_abs_score_diff": 0.016701936721801758,
+   "mean_abs_score_diff": 9.839262454726502e-06,
+   "n_identical_rows": 0,
+   "argmax_flips": 82
+  },
+  "WToQQ": {
+   "n_a": 2000000,
+   "n_b": 2000000,
+   "aligned": true,
+   "max_abs_score_diff": 0.023538738489151,
+   "mean_abs_score_diff": 9.207913830667121e-05,
+   "n_identical_rows": 0,
+   "argmax_flips": 985
+  },
+  "ZToQQ": {
+   "n_a": 2000000,
+   "n_b": 2000000,
+   "aligned": true,
+   "max_abs_score_diff": 0.01706904172897339,
+   "mean_abs_score_diff": 0.00011005966121205101,
+   "n_identical_rows": 0,
+   "argmax_flips": 1284
+  },
+  "ZJetsToNuNu": {
+   "n_a": 2000000,
+   "n_b": 2000000,
+   "aligned": true,
+   "max_abs_score_diff": 0.02543693780899048,
+   "mean_abs_score_diff": 6.72444751899075e-05,
+   "n_identical_rows": 0,
+   "argmax_flips": 712
+  }
+ },
+ "total_jets_compared": 20000000,
+ "max_abs_score_diff": 0.04233461618423462,
+ "median_rowmax_abs_score_diff": 7.332256063818932e-05,
+ "argmax_flips": 6130
+}

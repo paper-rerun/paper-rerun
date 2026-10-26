@@ -1,0 +1,76 @@
+{
+ "issues": [
+  {
+   "severity": "major",
+   "where": "Results tables (ParT fp32, ParT AMP, ParticleNet): Paper column 'k in ...' and the Status labels 'pass, same k' / 'pass, k inside range'; the sentence 'In 5 of the 9, our k is one that gives exactly the published integer'; 'For ParticleNet, all 11 numbers ... match'",
+   "problem": "claims.json (sha256 9d2c955c... still matches claims.sha256) pre-registers each Rej 'exact' criterion as one specific k: ParT Hgg 16260, Wqq 3683, Zqq 4975; ParticleNet Hgg 19231, H4q 2096, Wqq 5764, Zqq 7067. The report swaps in a range of k worked out afterwards (runs/exact_match.py) and counts exact matches with it. Under the pre-registered rule the counts are: ParT fp32 2 of 9 (Hbb 188, Hcc 482; Hgg 16203, Wqq 3684, Zqq 4972 miss), ParT AMP 2 of 9 (Hbb, Tbqq), ParticleNet 5 of 9 (Hgg 19267, H4q 2097, Wqq 5761, Zqq 7071 miss). The report gives 5, 4 and 9. The range reading is arguably the better one, but it is a post-hoc redefinition and the tables present it as the pre-registered result. It is disclosed only further down, under 'Alternative readings'. Pass/fail status is unaffected, since it uses the Poisson band, which was applied correctly.",
+   "fix": "In each table, show the pre-registered exact result (k == the claims.json k) as its own column and state the counts 2/9, 2/9 and 5/9. Move the range-based count (5/9, 4/9, 9/9) into a column or sentence labelled 'post-hoc: any k that rounds to the published integer'. Add one sentence explaining why the single pre-registered k was a bad choice for Rej below about 550."
+  },
+  {
+   "severity": "major",
+   "where": "Notes for the authors, first paragraph and suggestion 2",
+   "problem": "The text addressed to the authors says '5 of 9 ParT rejections exactly' and 'Every number in the ParticleNet row matches exactly'. Both rely on the post-hoc range criterion and not the pre-registered one. It also says the other 4 'are within 1–4 QCD jets, which is the size of AMP rounding noise'. That is not established: the AMP run, which is the authors' own setting, also misses 5 of 9 k values (by 1–5 jets), so the residual is unexplained, and fp32-vs-AMP drift only shows that drift of this size is plausible. 'Our results show they are the ones behind Table 1' is also stronger than the evidence, since 4 ParT counts differ.",
+   "fix": "Say 'match at the printed precision' (true for all 11 ParticleNet and 7 of 9 ParT numbers... more precisely, every Rej rounds to the published integer in 5 of 9 ParT and 9 of 9 ParticleNet cases) and avoid 'exactly'. Replace 'which is the size of AMP rounding noise' with 'comparable to the 1–7 jet differences between our own fp32 and AMP runs; we cannot pin down the cause (GPU, torch/cuDNN version or old weaver)'. Change 'show' to 'strongly indicate'."
+  },
+  {
+   "severity": "minor",
+   "where": "Alternative readings, last bullet: 'Both are off by 1–5 jets ... (our fp32 and AMP runs differ from each other by the same amount)'",
+   "problem": "From score.json, fp32 and AMP k differ by 1 (Hcc, H4q, Hqql, Tbqq), 2 (Tbl), 3 (Zqq), 6 (Wqq: 3684 vs 3690) and 7 (Hgg: 16203 vs 16210). That is up to 7 jets, not 'the same amount' as 1–5.",
+   "fix": "Write 'our fp32 and AMP runs differ from each other by 0–7 jets' and give the per-column differences."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, item 4: 'Speed was about 3,000 jets/s for ParT and 2,500 jets/s for ParticleNet'",
+   "problem": "The wall times in run_all.log give: ParT fp32 15:26:15–17:40:57 (8,082 s) ≈ 2,470 jets/s; ParT AMP 17:40:57–19:28:55 (6,478 s) ≈ 3,090 jets/s; ParticleNet 19:28:55–22:05:47 (9,412 s) ≈ 2,125 jets/s. The ParticleNet figure is about 18% too high, and fp32 ParT ran nearer 2,500 than 3,000. This also contradicts 'No number in this report was estimated or typed by hand'.",
+   "fix": "State the rates from the logs (≈2,470 fp32 ParT with the variant interleaved under the lock, ≈3,090 AMP ParT, ≈2,125 ParticleNet), or drop the rates. Either way, keep only numbers that a file produces."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, item 2: 'Size: 30,370,816,000 B, equal to the server's Content-Length'",
+   "problem": "runs/download.sh compares the file size with a hard-coded 30370816000 taken from the triage notes (Zenodo listing). Neither download.log nor any other file in the folder records a Content-Length header from this run.",
+   "fix": "Write 'equal to the size listed by Zenodo (30,370,816,000 B, recorded in triage)', or capture a HEAD/Content-Length now and keep it in a log file."
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors, suggestion 1: 'We checked that the data loader is not the cause. Inputs are identical on all real particles'",
+   "problem": "The loader comparison in runs/diag_weaver053/diag.log covers only the first 512 H→bb jets of one file (HToBB_100.root), on CPU. The sentence to the authors generalises it to all inputs. The diagnosis section is also silent that padded slots differ (max |diff| 824 in pf_vectors), which points to a change in padding as well.",
+   "fix": "Say 'on the first 512 H→bb jets of HToBB_100.root the 0.5.3 loader gives the same values as 0.4.17 on every real particle (padded slots differ but are masked), and the 0.4.17 model scores are unchanged on 0.5.3 inputs'."
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors, suggestion 1: '0.5.3 (on PyPI since 2026-06-22)'",
+   "problem": "The only evidence in the folder is the v0.5.3 git tag date (comment in env/setup_variant_0.5.3.sh). No PyPI upload date was checked.",
+   "fix": "Write 'tagged 2026-06-22', or check the PyPI upload time and cite it."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took: 'The command differs from train_JetClass.sh only in how it is run'",
+   "problem": "For the ParT main run this is not true. train_JetClass.sh passes --use-amp for ParT, and the main fp32 run drops it. That was pre-registered (D9), but the sentence lists only --predict, the training args, per-group calls and --num-workers.",
+   "fix": "Add to the list: 'ParT main run without --use-amp (fp32, pre-registered D9); the AMP variant keeps it'."
+  },
+  {
+   "severity": "minor",
+   "where": "Results, ParT accuracy row: 'pass (rounds to 0.861)'",
+   "problem": "0.86050855 is only 8.6e-6 (171 jets) above the 0.8605 rounding edge, and 0.0005 below the paper value. The status follows the pre-registered rule, but a reader cannot tell how close it sits to the edge.",
+   "fix": "Add a short note: 'rounds to 0.861 by 171 jets; diff −0.00049 is half the pre-registered ±0.001 band'."
+  },
+  {
+   "severity": "minor",
+   "where": "Header: 'DOI: 10.48550/arXiv.2202.03772' and 'Hardware: ... 64 GB RAM'",
+   "problem": "The DOI given is the arXiv DOI, not a DOI of the PMLR paper. Nothing in the working folder records the 64 GB total RAM; the triage notes and the task only state 31 GB available to WSL.",
+   "fix": "Label it 'arXiv DOI' (PMLR has none). Either drop '64 GB' or source it with a logged command (e.g. systeminfo or wmic output saved in runs/)."
+  },
+  {
+   "severity": "minor",
+   "where": "Missing caveat (D10)",
+   "problem": "The report never says that Table 1 was produced with the older hqucms/weaver and not weaver-core, a known source of residual differences recorded in claims.json D10. This matters for reading the 1–5 jet residuals and the 0.5.3 result.",
+   "fix": "Add one line to 'Alternative readings' or 'What it took': 'Table 1 predates weaver-core (repo switched on 2022-12-15, commit 29ef32b5); 0.4.17 is the closest released version, not the code that made the table'."
+  },
+  {
+   "severity": "minor",
+   "where": "How this report was made",
+   "problem": "'reviewed by a human before publication' and 'a human approved publication' describe a step that has not happened at this stage. 'This was a single-agent run' also contradicts the same paragraph, which describes separate pre-registration, reviewer and reviser agents.",
+   "fix": "Keep the human-approval sentence only once it is true (or mark it pending). Rephrase to 'a single agent did the computation; there was no blind recomputation by a second agent'."
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+{
+ "dir_a": "/mnt/e/Ciencia/noturno/2022-qu-particle-transformer/runs/full_ParT_fp32",
+ "dir_b": "/mnt/e/Ciencia/noturno/2022-qu-particle-transformer/runs/full_ParT_amp",
+ "total_jets_compared": 20000000,
+ "max_abs_score_diff": 0.04233461618423462,
+ "median_rowmax_abs_score_diff": 7.332256063818932e-05,
+ "argmax_flips": 6130
+}

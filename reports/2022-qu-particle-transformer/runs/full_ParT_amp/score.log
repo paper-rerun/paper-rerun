@@ -1,0 +1,21 @@
+accuracy 0.860510  auc 0.987720
+ParT.rej50_Hbb: k=188.0 rej=10638.3 (paper 10638, k 188)
+ParT.rej50_Hcc: k=481.0 rej=4158.0 (paper 4149, k 482)
+ParT.rej50_Hgg: k=16210.0 rej=123.4 (paper 123, k 16260)
+ParT.rej50_H4q: k=1068.0 rej=1872.7 (paper 1864, k 1073)
+ParT.rej99_Hqql: k=368.0 rej=5434.8 (paper 5479, k 365)
+ParT.rej50_Tbqq: k=61.0 rej=32786.9 (paper 32787, k 61)
+ParT.rej99.5_Tbl: k=125.0 rej=16000.0 (paper 15873, k 126)
+ParT.rej50_Wqq: k=3690.0 rej=542.0 (paper 543, k 3683)
+ParT.rej50_Zqq: k=4969.0 rej=402.5 (paper 402, k 4975)
+ParT.accuracy {'paper': 0.861, 'ours': 0.8605096, 'diff': -0.0004904000000000019, 'status': 'pass'}
+ParT.auc {'paper': 0.9877, 'ours': 0.9877199386670846, 'diff': 1.9938667084606898e-05, 'status': 'pass'}
+ParT.rej50_Hbb {'paper': 10638, 'ours': 10638.297872340427, 'rel_diff': 2.800078402209749e-05, 'status': 'pass'}
+ParT.rej50_Hcc {'paper': 4149, 'ours': 4158.004158004158, 'rel_diff': 0.0021701995671625784, 'status': 'pass'}
+ParT.rej50_Hgg {'paper': 123, 'ours': 123.38062924120914, 'rel_diff': 0.003094546676497112, 'status': 'pass'}
+ParT.rej50_H4q {'paper': 1864, 'ours': 1872.6591760299627, 'rel_diff': 0.0046454807027696, 'status': 'pass'}
+ParT.rej99_Hqql {'paper': 5479, 'ours': 5434.782608695652, 'rel_diff': -0.008070339716070074, 'status': 'pass'}
+ParT.rej50_Tbqq {'paper': 32787, 'ours': 32786.88524590164, 'rel_diff': -3.4999877499553023e-06, 'status': 'pass'}
+ParT.rej99.5_Tbl {'paper': 15873, 'ours': 16000.0, 'rel_diff': 0.008001008001008003, 'status': 'pass'}
+ParT.rej50_Wqq {'paper': 543, 'ours': 542.0054200542005, 'rel_diff': -0.00183163894254057, 'status': 'pass'}
+ParT.rej50_Zqq {'paper': 402, 'ours': 402.4954719259408, 'rel_diff': 0.0012325172287084296, 'status': 'pass'}

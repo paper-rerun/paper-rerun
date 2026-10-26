@@ -1,0 +1,8 @@
+{
+ "dir_a": "/mnt/e/Ciencia/noturno/2022-qu-particle-transformer/runs/pilot_ParT_fp32",
+ "dir_b": "/mnt/e/Ciencia/noturno/2022-qu-particle-transformer/runs/pilot_ParT_fp32_weaver0.5.3",
+ "total_jets_compared": 1000000,
+ "max_abs_score_diff": 0.9999974478379272,
+ "median_rowmax_abs_score_diff": 0.9180506113916636,
+ "argmax_flips": 877019
+}

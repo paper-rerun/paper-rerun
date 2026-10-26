@@ -1,0 +1,33 @@
+== ParT_fp32 accuracy 0.86050855 (3 dp: 0.861) auc 0.98771991 (4 dp: 0.9877)
+ParT.rej50_Hbb           paper  10638  k range [188, 188]  ours k 188  rej 10638.3  exact True  dk 0
+ParT.rej50_Hcc           paper   4149  k range [482, 482]  ours k 482  rej 4149.4  exact True  dk 0
+ParT.rej50_Hgg           paper    123  k range [16195, 16326]  ours k 16203  rej 123.4  exact True  dk 0
+ParT.rej50_H4q           paper   1864  k range [1073, 1073]  ours k 1069  rej 1870.9  exact False  dk -4
+ParT.rej99_Hqql          paper   5479  k range [365, 365]  ours k 369  rej 5420.1  exact False  dk 4
+ParT.rej50_Tbqq          paper  32787  k range [61, 61]  ours k 62  rej 32258.1  exact False  dk 1
+ParT.rej99.5_Tbl         paper  15873  k range [126, 126]  ours k 123  rej 16260.2  exact False  dk -3
+ParT.rej50_Wqq           paper    543  k range [3680, 3686]  ours k 3684  rej 542.9  exact True  dk 0
+ParT.rej50_Zqq           paper    402  k range [4969, 4981]  ours k 4972  rej 402.3  exact True  dk 0
+exact matches 5 of 9
+== ParT_amp accuracy 0.86050960 (3 dp: 0.861) auc 0.98771994 (4 dp: 0.9877)
+ParT.rej50_Hbb           paper  10638  k range [188, 188]  ours k 188  rej 10638.3  exact True  dk 0
+ParT.rej50_Hcc           paper   4149  k range [482, 482]  ours k 481  rej 4158.0  exact False  dk -1
+ParT.rej50_Hgg           paper    123  k range [16195, 16326]  ours k 16210  rej 123.4  exact True  dk 0
+ParT.rej50_H4q           paper   1864  k range [1073, 1073]  ours k 1068  rej 1872.7  exact False  dk -5
+ParT.rej99_Hqql          paper   5479  k range [365, 365]  ours k 368  rej 5434.8  exact False  dk 3
+ParT.rej50_Tbqq          paper  32787  k range [61, 61]  ours k 61  rej 32786.9  exact True  dk 0
+ParT.rej99.5_Tbl         paper  15873  k range [126, 126]  ours k 125  rej 16000.0  exact False  dk -1
+ParT.rej50_Wqq           paper    543  k range [3680, 3686]  ours k 3690  rej 542.0  exact False  dk 4
+ParT.rej50_Zqq           paper    402  k range [4969, 4981]  ours k 4969  rej 402.5  exact True  dk 0
+exact matches 4 of 9
+== PN_fp32 accuracy 0.84391025 (3 dp: 0.844) auc 0.98494118 (4 dp: 0.9849)
+ParticleNet.rej50_Hbb    paper   7634  k range [262, 262]  ours k 262  rej 7633.6  exact True  dk 0
+ParticleNet.rej50_Hcc    paper   2475  k range [808, 808]  ours k 808  rej 2475.2  exact True  dk 0
+ParticleNet.rej50_Hgg    paper    104  k range [19139, 19323]  ours k 19267  rej 103.8  exact True  dk 0
+ParticleNet.rej50_H4q    paper    954  k range [2096, 2097]  ours k 2097  rej 953.7  exact True  dk 0
+ParticleNet.rej99_Hqql   paper   3339  k range [599, 599]  ours k 599  rej 3338.9  exact True  dk 0
+ParticleNet.rej50_Tbqq   paper  10526  k range [190, 190]  ours k 190  rej 10526.3  exact True  dk 0
+ParticleNet.rej99.5_Tbl  paper  11173  k range [179, 179]  ours k 179  rej 11173.2  exact True  dk 0
+ParticleNet.rej50_Wqq    paper    347  k range [5756, 5772]  ours k 5761  rej 347.2  exact True  dk 0
+ParticleNet.rej50_Zqq    paper    283  k range [7055, 7079]  ours k 7071  rej 282.8  exact True  dk 0
+exact matches 9 of 9

@@ -1,0 +1,4 @@
+torch 2.4.1+cu121 cuda True 12.1 numpy 1.26.4 uproot 5.1.2 awkward 2.6.7 sklearn 1.5.1
+exit 0
+name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]
+NVIDIA GeForce RTX 2070 SUPER, 350 MiB, 8192 MiB, 23 %

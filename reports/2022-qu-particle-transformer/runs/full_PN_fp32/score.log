@@ -1,0 +1,21 @@
+accuracy 0.843910  auc 0.984941
+ParticleNet.rej50_Hbb: k=262.0 rej=7633.6 (paper 7634, k 262)
+ParticleNet.rej50_Hcc: k=808.0 rej=2475.2 (paper 2475, k 808)
+ParticleNet.rej50_Hgg: k=19267.0 rej=103.8 (paper 104, k 19231)
+ParticleNet.rej50_H4q: k=2097.0 rej=953.7 (paper 954, k 2096)
+ParticleNet.rej99_Hqql: k=599.0 rej=3338.9 (paper 3339, k 599)
+ParticleNet.rej50_Tbqq: k=190.0 rej=10526.3 (paper 10526, k 190)
+ParticleNet.rej99.5_Tbl: k=179.0 rej=11173.2 (paper 11173, k 179)
+ParticleNet.rej50_Wqq: k=5761.0 rej=347.2 (paper 347, k 5764)
+ParticleNet.rej50_Zqq: k=7071.0 rej=282.8 (paper 283, k 7067)
+ParticleNet.accuracy {'paper': 0.844, 'ours': 0.84391025, 'diff': -8.974999999999955e-05, 'status': 'pass'}
+ParticleNet.auc {'paper': 0.9849, 'ours': 0.984941175455936, 'diff': 4.117545593596006e-05, 'status': 'pass'}
+ParticleNet.rej50_Hbb {'paper': 7634, 'ours': 7633.587786259542, 'rel_diff': -5.399708415754212e-05, 'status': 'pass'}
+ParticleNet.rej50_Hcc {'paper': 2475, 'ours': 2475.2475247524753, 'rel_diff': 0.00010001000100023916, 'status': 'pass'}
+ParticleNet.rej50_Hgg {'paper': 104, 'ours': 103.80443244926559, 'rel_diff': -0.0018804572186000845, 'status': 'pass'}
+ParticleNet.rej50_H4q {'paper': 954, 'ours': 953.7434430138293, 'rel_diff': -0.0002689276584598721, 'status': 'pass'}
+ParticleNet.rej99_Hqql {'paper': 3339, 'ours': 3338.89816360601, 'rel_diff': -3.049906977847794e-05, 'status': 'pass'}
+ParticleNet.rej50_Tbqq {'paper': 10526, 'ours': 10526.315789473683, 'rel_diff': 3.0000900026916355e-05, 'status': 'pass'}
+ParticleNet.rej99.5_Tbl {'paper': 11173, 'ours': 11173.1843575419, 'rel_diff': 1.6500272254527104e-05, 'status': 'pass'}
+ParticleNet.rej50_Wqq {'paper': 347, 'ours': 347.16195105016493, 'rel_diff': 0.00046671772381823295, 'status': 'pass'}
+ParticleNet.rej50_Zqq {'paper': 283, 'ours': 282.84542497525103, 'rel_diff': -0.000546201500879695, 'status': 'pass'}
