@@ -1,0 +1,13 @@
+S1 0.2953 (-0.187 sigma) / 0.2939 (-0.213 sigma) / 0.2920 (-0.245 sigma)
+S2 0.6112 (-0.164 sigma) / 0.6080 (-0.202 sigma) / 0.6052 (-0.236 sigma)
+S3 0.2851 (-0.346 sigma) / 0.2878 (-0.308 sigma) / 0.2909 (-0.263 sigma)
+S4 -0.9091 (-0.065 sigma) / -0.9165 (-0.118 sigma) / -0.9211 (-0.151 sigma)
+S5 0.3184 (-0.864 sigma) / 0.3115 (-0.934 sigma) / 0.3181 (-0.866 sigma)
+S6 -0.9253 (+0.031 sigma) / -0.9187 (+0.075 sigma) / -0.9374 (-0.049 sigma)
+S7 -0.7632 (-0.332 sigma) / -0.6607 (-0.280 sigma) / -0.6397 (-0.270 sigma)
+flcdm emcee: tau 95-254 steps, kept 7000 steps = 27.5-73.7 tau, effective samples ~440
+lcdm emcee: tau 116-355 steps, kept 7000 steps = 19.7-60.4 tau, effective samples ~316
+fwcdm emcee: tau 122-305 steps, kept 7000 steps = 23.0-57.2 tau, effective samples ~367
+fw0wa4 emcee: tau 160-386 steps, kept 7000 steps = 18.1-43.8 tau, effective samples ~290
+fw0wa2 emcee: tau 192-366 steps, kept 7000 steps = 19.1-36.4 tau, effective samples ~306
+sh0esflcdm emcee: tau 38-43 steps, kept 7000 steps = 161.5-185.7 tau, effective samples ~2584

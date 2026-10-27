@@ -1,0 +1,64 @@
+{
+ "issues": [
+  {
+   "severity": "major",
+   "where": "What it took, item 4 (Sampling): \"Building PolyChordLite 1.20.1 from its GitHub tag was blocked by this session's permission policy\"",
+   "problem": "Nada na pasta registra tentativa de PolyChord. grep -i polychord em env/, runs/ e logs/ não acha nada, só claims.json, gen_claims.py e o paper. O D-SAMPLER pré-registrado diz \"pypolychord if it builds in the uv environment; otherwise dynesty\", então a troca do sampler do paper pelo dynesty depende de um build que falhou ou foi barrado, e isso não tem log. O rodapé diz que todo comando e log está na pasta, e aqui não está. A parte do PyPI está certa: conferi em pypi.org/pypi/pypolychord/json e só existem 1.15 e 1.15.1, wheels de 16-17/01/2019.",
+   "fix": "Gravar a evidência em env/polychord_attempt.log: a recusa de permissão, ou a saída de `uv pip install pypolychord==1.15.1` mostrando que não há wheel cp310, mais a consulta ao PyPI com data. Se o build não foi tentado, reescrever: \"We did not build PolyChordLite from source (fetching and compiling it from GitHub was not permitted in this session; not attempted). PyPI carries only pypolychord 1.15/1.15.1 wheels from January 2019, which do not install on Python 3.10 (log in env/polychord_attempt.log). We therefore used the pre-registered dynesty fallback.\" Falar da troca de sampler também na linha Verdict ou no começo de Results, não só no item 4."
+  },
+  {
+   "severity": "minor",
+   "where": "Likelihood equivalence table and the sentence \"Our likelihood is therefore the authors' likelihood, apart from the radiation and neutrino terms\"",
+   "problem": "Desvios padrão de 0.014-0.077 e máximos de 0.17-1.27 misturam pontos de burn-in muito longe na cauda (lnL dos autores até -7760). Rodei de novo a mesma amostra (rng seed 0, mesmos índices). Dentro de 10 unidades de lnL do best fit, o std da diferença cai pra 0.011-0.013 e o máximo pra 0.035-0.052, o que bate com o Δχ² do reweighting com CAMB (std 0.029, ou seja 0.015 em lnL). Isso sustenta a atribuição a radiação e neutrinos melhor que os números atuais. O texto também esconde que no fw0wa só 999 de 1000 pontos são finitos. O ponto que falta tem lnL = -inf do lado dos autores em w0 = -1.0046, wa = +0.0023, que é w cruzando -1, exatamente o caso de falha do CAMB sem PPF que a Nota 2 levanta. A frase também omite a interpolação interp1d do D_A do CAMB que o código dos autores faz.",
+   "fix": "Adicionar uma coluna ou frase: \"Within 10 units of the best-fit ln L (976-997 of the 1000 points per chain) the difference has std 0.011-0.013 and max 0.035-0.052, consistent with the CAMB-vs-analytic background shift (Δχ² std 0.029 in runs/camb_check).\" Escrever \"999 of 1000 points (one point has ln L = -inf in the authors' chain, at w0 = -1.005, wa = +0.002, i.e. w crossing -1 where CAMB without PPF fails)\" e citar esse ponto na Nota 2. Trocar \"therefore the authors' likelihood\" por \"agrees with the authors' likelihood to ~0.01 in ln L near the posterior\". Guardar o script de conferência dentro de runs/ pra que esses números venham de código que está na pasta."
+  },
+  {
+   "severity": "minor",
+   "where": "Variants table (emcee rows) and the spread table (emcee column)",
+   "problem": "Os valores de emcee aparecem como se valessem tanto quanto o resto, sem ressalva de convergência. Os autocorr_time gravados nos json do emcee são 95/254/254 passos (flcdm), 116-355 (lcdm), 122-305 (fwcdm), 160-386 (fw0wa4) e 192-366 (fw0wa2). Com 7000 passos mantidos isso dá só 18-28 τ nos modelos de 4-5 parâmetros e 27.5 τ no flcdm, contra os ≥50 τ que o emcee recomenda. São uns 290-440 samples efetivos. A chain liberada pelos autores pro FlatLambdaCDM (3100 passos) tem uns 12 τ, e ela é a base da tolerância de 0.003 do P1.",
+   "fix": "Acrescentar: \"emcee integrated autocorrelation times are 95-386 steps, so the 7,000 kept steps are 18-74 τ (fewer than the 50 τ emcee recommends for the 4-5 parameter models) and give roughly 300-450 effective samples per run (runs/out/*_emcee_s1.json). The authors' released FlatLambdaCDM chain (3,100 steps) is about 12 τ long, so its summary values carry similar Monte Carlo noise.\""
+  },
+  {
+   "severity": "minor",
+   "where": "Results, first paragraph: \"1590 SNe for Pantheon+ only and 1657 rows for Pantheon+SH0ES\"",
+   "problem": "As 1590 linhas são curvas de luz, não supernovas. O paper fala em 1701 curvas de luz de 1550 SNe distintas, e algumas SNe têm mais de uma linha. Além disso o texto usa \"SNe\" pra uma contagem e \"rows\" pra outra.",
+   "fix": "Escrever \"1590 light curves (rows with zHD > 0.01) for Pantheon+ only and 1657 rows for Pantheon+SH0ES\"."
+  },
+  {
+   "severity": "minor",
+   "where": "Spread table, row S4, seed 2: \"−0.917\"",
+   "problem": "No results.json o seed 2 de S4 é -0.91647, que arredonda pra -0.916, não -0.917.",
+   "fix": "Trocar por \"−0.909 / −0.916 / −0.921\"."
+  },
+  {
+   "severity": "minor",
+   "where": "Variants table, CAMB row: \"Largest Δμ between CAMB and analytic at the data redshifts: 0.00022 mag\"",
+   "problem": "camb_check só mediu Δμ numa cosmologia (chave max_abs_dmu_mag_at_Om0334_h07, Om = 0.334, h = 0.7), não no posterior inteiro. A linha também não diz que o reweighting usou 1576 das 2924 amostras (99.99998% do peso), com ESS 986.",
+   "fix": "Escrever \"Largest Δμ at the data redshifts, evaluated at Om = 0.334, h = 0.7: 0.00022 mag. Reweighting used the 1576 seed-1 samples carrying 99.99998% of the weight (ESS 986 after reweighting); Δχ² mean 0.0018, std 0.029.\""
+  },
+  {
+   "severity": "minor",
+   "where": "Results: \"S7's minus-side width is 20.04% from the paper's, just outside the 20% bound, and the plus side is +53%.\"",
+   "problem": "A frase dá a entender que S7 errou por pouco. Pela regra, a média dele (-0.33σ) e o lado menos (-20.04%) cabem na banda partial. O que joga S7 pra not reproduced é o lado mais, +53%, acima do limite partial de 40%.",
+   "fix": "Escrever \"S7: the mean (−0.33σ) and the minus-side width (−20.04%) are in the partial band; the plus-side width (+53%, above the 40% partial bound) makes it not reproduced.\""
+  },
+  {
+   "severity": "minor",
+   "where": "Results / spread tables (S1, S2 seed spread)",
+   "problem": "Todos os seeds dão Reproduced, mas a folga é pequena e o texto não diz. S1 seed 3 (0.2920) fica a -0.245σ e S2 seed 3 (0.6052) a -0.236σ, os dois perto do limite reproduced de 0.25σ. Uma terceira casa decimal de ruído de Monte Carlo já levaria S1 pra partial.",
+   "fix": "Acrescentar: \"The verdict holds for each of the three seeds, but with little margin: S1 seed 3 is at −0.245σ and S2 seed 3 at −0.236σ, just inside the 0.25σ bound.\""
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, item 3: \"agrees with adaptive quadrature to better than 1e-6 in distance (self-test in runs/check_inputs.py)\"",
+   "problem": "O D-BACKGROUND exige erro relativo abaixo de 1e-6 em todo redshift dos dados. O _selftest em pp_like.py só confere 4 linhas (índices 0, 500, 1000 e a última) em 6 cosmologias, então a frase sem escopo diz mais do que foi testado.",
+   "fix": "Rodar o self-test em todas as 1590 linhas para as 6 cosmologias (custa segundos) e logar, ou escrever \"checked at 4 rows spanning the redshift range for 6 cosmologies\"."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, last paragraph: \"We changed none of the authors' code, so `patches/` is empty.\"; REPORT.md",
+   "problem": "Não existe patches/ em E:\\Ciencia\\noturno\\2022-brout-pantheonplus, e REPORT.md ainda não está em disco. O texto cita uma pasta que não existe.",
+   "fix": "Criar patches/ vazio (com um .gitkeep) ou escrever \"no patches were needed (no patches/ folder)\". Gravar o relatório em E:\\Ciencia\\noturno\\2022-brout-pantheonplus\\REPORT.md."
+  }
+ ]
+}

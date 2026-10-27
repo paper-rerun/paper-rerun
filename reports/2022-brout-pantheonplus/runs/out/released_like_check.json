@@ -1,0 +1,101 @@
+{
+ "flcdm": {
+  "chain": "Pantheon+Only/Pantheon+only_FlatLambdaCDM.txt.gz",
+  "columns": [
+   "omega_m",
+   "h0",
+   "m",
+   "prior",
+   "post"
+  ],
+  "n_points": 1000,
+  "n_finite": 1000,
+  "their_loglike_range": [
+   -3642.5096889496576,
+   -701.463100895565
+  ],
+  "diff_median": -1.915011415576373e-05,
+  "diff_std": 0.0656328895145773,
+  "diff_max_abs_minus_median": 0.7167235245522647
+ },
+ "lcdm": {
+  "chain": "Pantheon+Only/Pantheon+only_LambdaCDM.txt.gz",
+  "columns": [
+   "omega_m",
+   "h0",
+   "omega_k",
+   "m",
+   "prior",
+   "post"
+  ],
+  "n_points": 1000,
+  "n_finite": 1000,
+  "their_loglike_range": [
+   -3692.6874951693535,
+   -701.2300828587797
+  ],
+  "diff_median": -0.0007843331529215902,
+  "diff_std": 0.07726605170094418,
+  "diff_max_abs_minus_median": 0.7219891835500789
+ },
+ "fwcdm": {
+  "chain": "Pantheon+Only/Pantheon+only_FlatwCDM.txt.gz",
+  "columns": [
+   "omega_m",
+   "h0",
+   "w",
+   "m",
+   "prior",
+   "post"
+  ],
+  "n_points": 1000,
+  "n_finite": 1000,
+  "their_loglike_range": [
+   -1655.9559580690452,
+   -701.2480042366451
+  ],
+  "diff_median": 0.0002285854584442859,
+  "diff_std": 0.013783379380057201,
+  "diff_max_abs_minus_median": 0.17358452575513184
+ },
+ "fw0wa": {
+  "chain": "Pantheon+Only/Pantheon+only_Flatw0waCDM.txt.gz",
+  "columns": [
+   "omega_m",
+   "h0",
+   "w",
+   "wa",
+   "m",
+   "prior",
+   "post"
+  ],
+  "n_points": 1000,
+  "n_finite": 999,
+  "their_loglike_range": [
+   -7760.476040049389,
+   -701.2080035005089
+  ],
+  "diff_median": 0.00015126233711271198,
+  "diff_std": 0.07567098936315278,
+  "diff_max_abs_minus_median": 1.272691313337873
+ },
+ "sh0esflcdm": {
+  "chain": "Pantheon+SH0ES/Pantheon+SH0ES_FlatLambdaCDM.txt.gz",
+  "columns": [
+   "omega_m",
+   "h0",
+   "m",
+   "prior",
+   "post"
+  ],
+  "n_points": 1000,
+  "n_finite": 1000,
+  "their_loglike_range": [
+   -3779.895492698721,
+   -726.0161615565565
+  ],
+  "diff_median": 0.00018789198395552376,
+  "diff_std": 0.05303755261081441,
+  "diff_max_abs_minus_median": 0.732931157786993
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "flcdm": {
+  "n_points": 1000,
+  "n_finite": 1000,
+  "nonfinite_points": [],
+  "n_near": 985,
+  "near_diff_median": 0.00036035572327364207,
+  "near_diff_std": 0.012943495860878493,
+  "near_diff_max_abs_minus_median": 0.05209863208858678,
+  "all_diff_std": 0.06563288951458189
+ },
+ "lcdm": {
+  "n_points": 1000,
+  "n_finite": 1000,
+  "nonfinite_points": [],
+  "n_near": 976,
+  "near_diff_median": -0.0005374953480554723,
+  "near_diff_std": 0.011450376024031528,
+  "near_diff_max_abs_minus_median": 0.03786076867169186,
+  "all_diff_std": 0.07726605170093609
+ },
+ "fwcdm": {
+  "n_points": 1000,
+  "n_finite": 1000,
+  "nonfinite_points": [],
+  "n_near": 997,
+  "near_diff_median": 0.00024413549294877157,
+  "near_diff_std": 0.012306353386982128,
+  "near_diff_max_abs_minus_median": 0.041219588099579596,
+  "all_diff_std": 0.013783379380057349
+ },
+ "fw0wa": {
+  "n_points": 1000,
+  "n_finite": 999,
+  "nonfinite_points": [
+   {
+    "omega_m": 0.32884853538992603,
+    "h0": 0.6710166021904607,
+    "omega_k": 0.0,
+    "w0": -1.004634057904322,
+    "wa": 0.002277427940422072,
+    "m": -19.001806565672048,
+    "ours": -7615.08558583451,
+    "theirs": -Infinity
+   }
+  ],
+  "n_near": 991,
+  "near_diff_median": 0.00018746383125289867,
+  "near_diff_std": 0.01074132094920968,
+  "near_diff_max_abs_minus_median": 0.04205421067047155,
+  "all_diff_std": 0.07567098936315304
+ },
+ "sh0esflcdm": {
+  "n_points": 1000,
+  "n_finite": 1000,
+  "nonfinite_points": [],
+  "n_near": 990,
+  "near_diff_median": 0.0003111739889618548,
+  "near_diff_std": 0.011311281604606652,
+  "near_diff_max_abs_minus_median": 0.035266958002580395,
+  "all_diff_std": 0.05303755261081287
+ }
+}

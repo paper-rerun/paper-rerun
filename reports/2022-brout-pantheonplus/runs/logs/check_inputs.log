@@ -1,0 +1,5 @@
+selftest ok, n = 1590
+rows 1701 zHD>0.01: 1590 calibrators: 77 calibrators with zHD>0.01: 10 sh0es rows: 1657 max zHD: 2.26137
+authors loop == ours: True symmetric: True min eig: 0.0008071747751718386 C[0,0]_full: 0.03177108
+ms per chi2: 15.564
+chi2 at Om=0.334 h=0.7 M=-19.25: 2116.1998473036697

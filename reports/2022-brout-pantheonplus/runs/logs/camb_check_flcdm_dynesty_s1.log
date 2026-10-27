@@ -1,0 +1,2 @@
+{"run": "flcdm_dynesty_s1", "camb_version": "1.3.5", "max_abs_dmu_mag_at_Om0334_h07": 0.00021546063961608297, "dmu_at_lowest_and_highest_z": [-1.1213823540856538e-06, -0.00021546063961608297], "n_reweighted": 1576, "weight_kept": 0.9999999809782878, "seconds": 39.2746000289917, "dchi2_mean": 0.0017857186987461973, "dchi2_std": 0.02918399342059706, "ess_after": 986.0137907451601}
+Om analytic 0.33272 camb 0.33264

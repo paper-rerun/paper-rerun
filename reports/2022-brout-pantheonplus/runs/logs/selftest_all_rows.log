@@ -1,0 +1,7 @@
+Om=0.334 Ok=0.00 w0=-1.00 wa=0.00 rows=1590 max|dmu|=7.105e-15 mag max rel dist err=3.272e-15
+Om=0.300 Ok=-0.20 w0=-1.00 wa=0.00 rows=1590 max|dmu|=7.105e-15 mag max rel dist err=3.272e-15
+Om=0.300 Ok=0.30 w0=-1.00 wa=0.00 rows=1590 max|dmu|=7.105e-15 mag max rel dist err=3.272e-15
+Om=0.310 Ok=0.00 w0=-0.90 wa=0.00 rows=1590 max|dmu|=7.105e-15 mag max rel dist err=3.272e-15
+Om=0.400 Ok=0.00 w0=-0.93 wa=-1.50 rows=1590 max|dmu|=7.105e-15 mag max rel dist err=3.272e-15
+Om=0.200 Ok=0.00 w0=-0.80 wa=1.00 rows=1590 max|dmu|=7.105e-15 mag max rel dist err=3.272e-15
+all rows, all cosmologies: max relative distance error 3.272e-15, below 1e-6: True

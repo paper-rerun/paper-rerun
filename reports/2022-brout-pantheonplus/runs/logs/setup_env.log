@@ -1,0 +1,37 @@
+1.22.4 1.8.1 1.4.3 3.1.2 1.2.3 1.3.5
+l environment at: env/.venv
+Activate with: source env/.venv/bin/activate
+Using Python 3.10.22 environment at: env/.venv
+Resolved 19 packages in 3.98s
+   Building camb==1.3.5
+Downloading pandas (11.1MiB)
+Downloading scipy (40.2MiB)
+Downloading numpy (16.0MiB)
+Downloading matplotlib (11.3MiB)
+ Downloaded pandas
+ Downloaded numpy
+ Downloaded matplotlib
+ Downloaded scipy
+      Built camb==1.3.5
+Prepared 7 packages in 54.39s
+Installed 19 packages in 36.60s
+ + camb==1.3.5
+ + cycler==0.12.1
+ + dynesty==1.2.3
+ + emcee==3.1.2
+ + fonttools==4.65.0
+ + kiwisolver==1.5.1
+ + matplotlib==3.5.2
+ + mpmath==1.3.0
+ + numpy==1.22.4
+ + packaging==26.3
+ + pandas==1.4.3
+ + pillow==12.3.0
+ + pyparsing==3.3.3
+ + python-dateutil==3.0.0
+ + pytz==2026.5
+ + scipy==1.8.1
+ + six==1.17.0
+ + sympy==1.14.0
+ + tzdata==2026.5
+Using Python 3.10.22 environment at: env/.venv

@@ -1,0 +1,24 @@
+flcdmmargM_dynesty_s1 exit 0
+sh0esflcdm_emcee_s1 exit 0
+fw0wa2_emcee_s1 exit 0
+fw0wa4_emcee_s1 exit 0
+flcdm_emcee_s1 exit 0
+fwcdm_emcee_s1 exit 0
+fw0wa4_dynesty_s1 exit 0
+lcdm_emcee_s1 exit 0
+queue finished: sh0esflcdm_emcee_s1 fw0wa2_emcee_s1 fw0wa4_emcee_s1 fwcdm_emcee_s1 lcdm_emcee_s1
+camb_check exit 0
+flcdm_dynesty_s2 exit 0
+released_like_check exit 0
+sh0esflcdm_dynesty_s1 exit 0
+flcdm_dynesty_s3 exit 0
+lcdm_dynesty_s2 exit 0
+lcdm_dynesty_s3 exit 0
+fw0wa2_dynesty_s1 exit 0
+fwcdm_dynesty_s2 exit 0
+fw0wa4_dynesty_s3 locked by another queue, skipped
+fwcdm_dynesty_s3 exit 0
+fw0wa4_dynesty_s2 exit 0
+queue finished: flcdm_dynesty_s1 lcdm_dynesty_s1 fwcdm_dynesty_s1 fw0wa4_dynesty_s1 flcdm_emcee_s1 sh0esflcdm_dynesty_s1 flcdm_dynesty_s2 flcdm_dynesty_s3 lcdm_dynesty_s2 lcdm_dynesty_s3 fwcdm_dynesty_s2 fwcdm_dynesty_s3 fw0wa4_dynesty_s2 fw0wa4_dynesty_s3 fw0wa2_dynesty_s1 lcdm_emcee_s1 fwcdm_emcee_s1 fw0wa4_emcee_s1 fw0wa2_emcee_s1 sh0esflcdm_emcee_s1
+fw0wa4_dynesty_s3 exit 0
+queue finished: fw0wa2_dynesty_s1 fw0wa4_dynesty_s3 fw0wa4_dynesty_s2 fwcdm_dynesty_s3 fwcdm_dynesty_s2 lcdm_dynesty_s3 lcdm_dynesty_s2

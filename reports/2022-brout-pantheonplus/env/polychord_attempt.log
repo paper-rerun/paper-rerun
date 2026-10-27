@@ -1,0 +1,35 @@
+date: 2026-10-27T00:23:25Z
+python: Python 3.10.22
+--- PyPI releases of pypolychord (pypi.org/pypi/pypolychord/json)
+1.15 pypolychord-1.15-cp27-cp27m-manylinux1_i686.whl bdist_wheel cp27 2019-01-16T11:26:04
+1.15 pypolychord-1.15-cp27-cp27m-manylinux1_x86_64.whl bdist_wheel cp27 2019-01-16T11:25:33
+1.15 pypolychord-1.15-cp27-cp27mu-manylinux1_i686.whl bdist_wheel cp27 2019-01-16T11:26:06
+1.15 pypolychord-1.15-cp27-cp27mu-manylinux1_x86_64.whl bdist_wheel cp27 2019-01-16T11:25:36
+1.15 pypolychord-1.15-cp34-cp34m-manylinux1_i686.whl bdist_wheel cp34 2019-01-16T11:26:08
+1.15 pypolychord-1.15-cp34-cp34m-manylinux1_x86_64.whl bdist_wheel cp34 2019-01-16T11:25:38
+1.15 pypolychord-1.15-cp35-cp35m-manylinux1_i686.whl bdist_wheel cp35 2019-01-16T11:26:10
+1.15 pypolychord-1.15-cp35-cp35m-manylinux1_x86_64.whl bdist_wheel cp35 2019-01-16T11:25:40
+1.15 pypolychord-1.15-cp36-cp36m-manylinux1_i686.whl bdist_wheel cp36 2019-01-16T11:26:12
+1.15 pypolychord-1.15-cp36-cp36m-manylinux1_x86_64.whl bdist_wheel cp36 2019-01-16T11:25:42
+1.15 pypolychord-1.15-cp37-cp37m-manylinux1_i686.whl bdist_wheel cp37 2019-01-16T11:26:14
+1.15 pypolychord-1.15-cp37-cp37m-manylinux1_x86_64.whl bdist_wheel cp37 2019-01-16T11:25:44
+1.15.1 pypolychord-1.15.1-cp27-cp27m-manylinux1_i686.whl bdist_wheel cp27 2019-01-17T15:22:10
+1.15.1 pypolychord-1.15.1-cp27-cp27m-manylinux1_x86_64.whl bdist_wheel cp27 2019-01-17T15:21:13
+1.15.1 pypolychord-1.15.1-cp27-cp27mu-manylinux1_i686.whl bdist_wheel cp27 2019-01-17T15:22:12
+1.15.1 pypolychord-1.15.1-cp27-cp27mu-manylinux1_x86_64.whl bdist_wheel cp27 2019-01-17T15:21:15
+1.15.1 pypolychord-1.15.1-cp34-cp34m-manylinux1_i686.whl bdist_wheel cp34 2019-01-17T15:22:15
+1.15.1 pypolychord-1.15.1-cp34-cp34m-manylinux1_x86_64.whl bdist_wheel cp34 2019-01-17T15:21:17
+1.15.1 pypolychord-1.15.1-cp35-cp35m-manylinux1_i686.whl bdist_wheel cp35 2019-01-17T15:22:16
+1.15.1 pypolychord-1.15.1-cp35-cp35m-manylinux1_x86_64.whl bdist_wheel cp35 2019-01-17T15:21:19
+1.15.1 pypolychord-1.15.1-cp36-cp36m-manylinux1_i686.whl bdist_wheel cp36 2019-01-17T15:22:18
+1.15.1 pypolychord-1.15.1-cp36-cp36m-manylinux1_x86_64.whl bdist_wheel cp36 2019-01-17T15:21:21
+1.15.1 pypolychord-1.15.1-cp37-cp37m-manylinux1_i686.whl bdist_wheel cp37 2019-01-17T15:22:21
+1.15.1 pypolychord-1.15.1-cp37-cp37m-manylinux1_x86_64.whl bdist_wheel cp37 2019-01-17T15:21:24
+--- uv pip install --dry-run pypolychord==1.15.1
+Using Python 3.10.22 environment at: env/.venv
+error: No solution found when resolving dependencies
+  cause: Because pypolychord==1.15.1 has no wheels with a matching Python ABI tag (e.g., `cp310`) and you require pypolychord==1.15.1, we can conclude that your requirements are unsatisfiable.
+
+hint: You require CPython 3.10 (`cp310`), but we only found wheels for `pypolychord` (v1.15.1) with the following Python ABI tags: `cp27m`, `cp27mu`, `cp34m`, `cp35m`, `cp36m`, `cp37m`
+exit: 1
+--- PolyChordLite from GitHub: not attempted (fetching and compiling it was not permitted in this session)
