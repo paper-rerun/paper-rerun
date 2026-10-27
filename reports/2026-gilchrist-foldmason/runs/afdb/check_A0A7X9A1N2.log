@@ -1,0 +1,12 @@
+md5 of MSAs (main run, rerun 1, rerun 2):
+e7ce6d09d76ad27361ea4aa506b35e9c  /mnt/e/Ciencia/noturno/2026-gilchrist-foldmason/runs/afdb/out/A0A7X9A1N2/foldmason_aa.fa
+e7ce6d09d76ad27361ea4aa506b35e9c  /mnt/e/Ciencia/noturno/2026-gilchrist-foldmason/runs/afdb/check_A0A7X9A1N2/r1_aa.fa
+e7ce6d09d76ad27361ea4aa506b35e9c  /mnt/e/Ciencia/noturno/2026-gilchrist-foldmason/runs/afdb/check_A0A7X9A1N2/r2_aa.fa
+f13213fd92a3945b44fdf75c4465f9ba  /mnt/e/Ciencia/noturno/2026-gilchrist-foldmason/runs/afdb/out/A0A7X9A1N2/foldmason_fast_aa.fa
+f13213fd92a3945b44fdf75c4465f9ba  /mnt/e/Ciencia/noturno/2026-gilchrist-foldmason/runs/afdb/check_A0A7X9A1N2/r1_fast_aa.fa
+f13213fd92a3945b44fdf75c4465f9ba  /mnt/e/Ciencia/noturno/2026-gilchrist-foldmason/runs/afdb/check_A0A7X9A1N2/r2_fast_aa.fa
+authors' foldmason MSA on our structures: 0.541678
+authors' foldmason_fast MSA on our structures: 0.535579
+members ours/authors 20 20 same names True
+same ungapped sequences True
+identical aligned rows 0 of 20 ; MSA length ours/authors 709 709

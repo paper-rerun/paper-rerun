@@ -1,0 +1,10 @@
+=== 2026-10-27T17:33:45Z Zenodo record 17311030 files and versions
+title Data for Multiple protein structure alignment at scale with FoldMason
+version None latest https://zenodo.org/api/records/17311030/versions/latest
+foldmason_data.tar.gz 4511287230 md5:543c92bd16ab2bbdd2ab1125fcb01f91
+version record 17311030 2025-10-10T12:59:05.159256+00:00 ['foldmason_data.tar.gz']
+version record 15131366 2025-04-03T14:34:00.973394+00:00 ['foldmason_data.tar.gz']
+older version record 15131366: Data for Multiple protein structure alignment at scale with FoldMason 2025-04-03
+foldmason_data.tar.gz 4400048397 md5:dfd127e81f26df5c54498525a233a36d
+description <p>Data used for analysis in "Multiple protein structure alignment at scale with FoldMason"</p>
+<p>Protein structure is conserved beyond sequence, making multiple structural alignment (MSTA) essential for analyzing distantly related proteins. Computational prediction methods have vastly extended our repository of available proteins structures, requiring fast and accurate MSTA methods. Here, we introduce FoldMason, a progressive MSTA method that leverages the structural alphabet from Foldseek, a pairwise structural aligner, for multiple alignment of hundreds of thousands of protein structures, 

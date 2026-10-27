@@ -1,0 +1,65 @@
+{
+ "issues": [
+  {
+   "severity": "major",
+   "where": "Header 'Verdict: Could not run' and Summary point 3",
+   "problem": "For the AFDB part, the verdict comes from a local permission refusal, not from the published materials. 2,915 of the 3,200 inputs (91%) are on disk and verified. The run_all.sh job is small in light mode: default plus fast over 160 clusters is about 700 s of single-thread CPU at the authors' EPYC timings, so a few minutes on 4 processes. Under the README scale, 'Could not run' covers data that is gone, broken code or too little hardware. A run that is blocked locally and can be unblocked is none of those. A reduced-input run would fall under 'Partially reproduced' ('só rodou uma versão reduzida'). As written, the one-line verdict suggests the paper cannot be checked at all, when only HOMSTRAD truly cannot be.",
+   "fix": "Hold publication. Ask Filipe in chat to approve running env/foldmason/bin/foldmason, then run runs/afdb/run_all.sh under the existing light-mode settings and rewrite the AFDB section with real numbers. If he does not approve, change the header to something like 'Verdict: Could not run (HOMSTRAD: reference data unavailable; AFDB: not attempted in this session, local execution block, inputs 91% available)' and mark the report as provisional, not final."
+  },
+  {
+   "severity": "major",
+   "where": "What it took, step 6 ('compare.py currently asserts 160 clusters, and a run on reduced clusters has to be reported as such') and runs/afdb/compare.py",
+   "problem": "The 160-cluster assert does not catch reduced inputs. All 160 cluster folders exist under data/afdb_clusters (checked: 160 dirs), each with 13 to 20 PDBs, so FoldMason would produce an LDDT for all 160 and the assert would pass. compare.py would then print 'match' or 'outside tolerance' against C5/C6/S6-S10 as if this were the pre-registered 160x20 run, even though 128 clusters are missing 1 to 7 members. The report text implies a safeguard that does not exist.",
+   "fix": "Make compare.py read runs/v4_vs_v6/sequence_check_per_cluster.tsv and report three things separately: (a) per-cluster diffs on the 32 complete clusters against the authors' afdb_scores.tsv, (b) the 128 incomplete clusters flagged 'reduced inputs', (c) any 160-cluster mean printed as 'reduced-input, not the pre-registered quantity', with no match/outside-tolerance verdict against C5/C6. Correct the sentence in step 6 to say that the assert would pass and the split is what guards against this."
+  },
+  {
+   "severity": "major",
+   "where": "Summary points 1-3, 'What it took' steps 1, 3 and 4, and the 'How this report was made' statement that commands, logs and outputs are in this folder",
+   "problem": "Several statements about what was attempted have no log in E:\\Ciencia\\noturno\\2026-gilchrist-foldmason. (1) The permission refusal of `foldmason version` and of `sudo apt-get install t-coffee`: grep for refused/permission/apt-get/t-coffee finds only env/setup.sh and lock.txt. (2) The HOMSTRAD TCP timeout on port 443 on 2026-10-27, the Wayback CDX 429 followed by a timeout, and the web search for mirrors: no file mentions mizuguchi or wayback. (3) 'aria2c ... got HTTP 429 on 191 requests': this exists only as a comment in download_afdb.sh and fetch_afdb.py, with no aria2c log. (4) 'v1 to v6 all return 404' for the 285: check_missing.py queries only the AFDB prediction API and UniProt, and no script probes model_v1-v5. Also, 'the API returns {}' blurs two cases: the API answers HTTP 404 with body {}, and the script maps any 404 to 'none'. I spot-checked A0A2E0B1B3: API 404 '{}', and model_v1, v3 and v4 return 404 NoSuchKey. That supports the claim for one accession only, not for all 285.",
+   "fix": "Either add logs or reword. Concretely: write runs/homstrad_probe.sh/.log (curl -v --max-time 30 to homstrad.mizuguchilab.org:443 and the Wayback CDX URL, with timestamps). Write runs/afdb_download/probe_versions.py/.tsv, which tries model_v1..v5 for the 285 accessions politely (sequential, 0.3 s sleep) and records each HTTP code. Write runs/blocked_actions.log with the exact refused commands and times as the session recorded them. Whatever cannot be logged should be reworded, for example 'model_v6 returned 404 and the AFDB prediction API has no entry (HTTP 404)'. Unlogged statements should not sit under the 'logs are in this folder' boilerplate."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, opening line and step 2",
+   "problem": "The timings do not match the files. 'About 3 hours of wall time': the folder was created at 10:39, claims.json at 10:47, and the last output (compare_sequences.log, missing_status.tsv) is from about 12:14, so roughly 1.6 h. 'aria2c with 4 connections took about 40 minutes': runs/dl_zenodo.log starts at 10/27 10:50:00 and finishes at 11:20:36, which is 31 minutes, average 2.3 MiB/s (the log shows CN:1 at the end).",
+   "fix": "Write 'About 1.5 hours of wall time (10:39 to 12:15 by file timestamps)' and 'aria2c took 31 minutes (runs/dl_zenodo.log, average 2.3 MiB/s)'."
+  },
+  {
+   "severity": "minor",
+   "where": "Summary, last paragraph: 'The authors' per-cluster TSVs reproduce the pre-registered values exactly'",
+   "problem": "This is circular. The pre-registered values in claims.json were computed from these same TSVs (value_status in every claim), so the agreement shows nothing and should not appear as a check that agreed with the authors' release.",
+   "fix": "Remove the sentence. Replace it with a check that is not circular, which I ran: the GitHub copies in sources/analysis/data are byte-identical to the Zenodo tarball's results/ folder. md5 afdb_scores.tsv 1a099615a11bcfe80bdcc67355a85a04, homstrad_scores.tsv 598b22949f7c37ba1964feee7400fcb1, afdb_families.tsv 6d62a487d51d463da6b28f1025e71a69, homstrad_families.tsv a4d51503e01fe879c2d1e378cc08ea5b (extracted with tar -xzf ... results/*.tsv). Add that to the 'Input checks' table, with a script and log in runs/zenodo_inspect/."
+  },
+  {
+   "severity": "minor",
+   "where": "Results, paragraph after the input-checks table ('the complete subset is not representative of the full set')",
+   "problem": "The numbers 0.6219 and 0.6285 are right (I recomputed them), but the conclusion goes further than the data. A 32-cluster sample has an SEM of about 0.13/sqrt(32) = 0.023, so a gap of +0.017 or +0.021 is under 1 SEM. Most of the gap comes from domain imbalance: complete clusters split 7/7/10/8, and the 8 complete 4-domain clusters average 0.656 against 0.572 for all 40. The paragraph also misses the main use of these 32 clusters. They have the authors' exact inputs (same sequences, so coordinates are the only open question), so a per-cluster comparison against afdb_scores.tsv is the strongest test available, whatever their mean.",
+   "fix": "Reword: 'Over the 32 complete clusters (7/7/10/8 by domain count) the authors' mean LDDT is 0.6219 (FoldMason) and 0.6285 (Fast), within about 1 SEM of the 160-cluster means. The subset mean is not comparable to C5/C6 because the domain mix differs. A later run should compare these 32 clusters one by one with the authors' values, where a deterministic tool on unchanged inputs should match closely.'"
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors, AFDB bullet ('Depositing the ~4,000 v4 PDBs you used (roughly 1.6 GB uncompressed)')",
+   "problem": "The size is about 2x too high. The 2,915 v6 PDBs on disk total 615,113,272 B uncompressed (average 211 KB) and 137,473,444 B gzipped (sizes.tsv). For 4,000 files that is about 0.84 GB uncompressed and about 190 MB gzipped. The 1.6 GB came from the triage estimate, not from measurement.",
+   "fix": "Write 'roughly 0.85 GB uncompressed, about 190 MB gzipped (estimated from the 2,915 v6 files we downloaded)'."
+  },
+  {
+   "severity": "minor",
+   "where": "Header 'Data:' line",
+   "problem": "The forced input change is missing from the header. 'AlphaFold DB (https://alphafold.ebi.ac.uk)' does not say that model_v6 was used under the authors' v4 file names, or that 285 inputs are gone. The triage asked for this to be stated, and someone reading only the header misses it.",
+   "fix": "Change it to: 'AlphaFold DB model_v6 PDBs downloaded 2026-10-27 and saved as AF-<acc>-F1-model_v4.pdb (v4 returns 404; file name affects the alignment, issue #35); 2,915 of 3,200 benchmark members available.'"
+  }
+ ],
+ "self_check_rerun_2026-10-27": [
+  "claims.json unchanged: sha256 still 4d903d3d32da38ab1d0ef3384ca62a3c8590be910d924d0e848a4e83f5dc3714 (claims.sha256)",
+  "GitHub release binary env/foldmason/bin/foldmason not run again; no refusal circumvented (runs/blocked_actions.log)",
+  "FoldMason from bioconda: foldmason-4.dd3c235-h5021889_0, package md5 e902225dd97295d28e8fb30bd1ad034e matches anaconda.org, 'foldmason version' = 4.dd3c235 (env/bioconda/setup.log, runs/afdb/foldmason_version.txt)",
+  "Light mode: CPU only, nice 19, 4 clusters at a time, --threads 1 per call, no GPU; run 14:34:39 to 14:40:30 local, nothing left running",
+  "Missing AFDB inputs refetched: same 285 still 404, 2,915 files on disk match recorded sizes (runs/afdb_download/refetch.log)",
+  "HOMSTRAD probed again (runs/homstrad_probe_2.log): port 443 timeout, Wayback empty; Zenodo 17311030 has no HOMSTRAD reference (runs/zenodo_record_check.log); Fig. 2A not run",
+  "AFDB run complete: 320 of 320 LDDT values, 0 NaN (runs/afdb/compare_run.log)",
+  "Complete clusters: 31/32 exact to 1e-6 in both modes; A0A7X9A1N2 off by -0.0008 / -0.0089, deterministic on 2 reruns, authors' MSA on our structures 0.541678 vs 0.542104, so v6 coordinates differ (runs/afdb/check_A0A7X9A1N2.log)",
+  "C5, C6, S6-S10 computed only on reduced inputs (128 clusters short of 1-7 members): all within 1 SEM but reported without a match verdict, as compare.py and the reduced-input rule require",
+  "Verdict: Partially reproduced (AFDB reduced run plus exact per-cluster match; HOMSTRAD could not run)",
+  "OPEN: REPORT.md not updated in this session; the subagent harness refused writing the report file, so the new text went back to the coordinating agent instead of being forced through another route"
+ ]
+}

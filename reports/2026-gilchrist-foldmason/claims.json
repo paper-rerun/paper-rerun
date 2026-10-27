@@ -1,0 +1,311 @@
+{
+  "paper": {
+    "citation": "Gilchrist, C. L. M., Mirdita, M., Steinegger, M. Multiple protein structure alignment at scale with FoldMason. Science 391(6784):485-488 (2026)",
+    "doi": "10.1126/science.ads6733",
+    "pmid": "41610233",
+    "preprint": "bioRxiv 10.1101/2024.08.01.606130 (v3, 2024-08-27; a different, earlier analysis: 150 AFDB clusters, older FoldMason commit; not used for any value here)",
+    "code": "https://github.com/steineggerlab/foldmason release 4-dd3c235 = dd3c23500ce0893bc1b5f9b4a3e17c63796a5d0b (Zenodo 10.5281/zenodo.17315302, md5 725597c8c585986f8e04d4acc89c95e2)",
+    "analysis_code": "https://github.com/steineggerlab/foldmason-analysis @ d356c402458123499fa39596b9be797d95d5f593 (Zenodo 10.5281/zenodo.17314915)",
+    "data": "Zenodo 10.5281/zenodo.17311030 (foldmason_data.tar.gz, 4,511,287,230 B, md5 543c92bd16ab2bbdd2ab1125fcb01f91)"
+  },
+  "prepared": "2026-10-27",
+  "paper_text_access": "Not readable from this machine on 2026-10-27. science.org returns HTTP 403 (Cloudflare) for the article and its supplement; Europe PMC has the abstract only (isOpenAccess N, no PMC copy); bioRxiv returned HTTP 429 / Cloudflare error 1015 for the preprint full text; the Seoul National University repository copy (hdl.handle.net/10371/231064, found via OpenAlex) sits behind a JavaScript bot check. None of these checks were bypassed. As a result no claimed value below could be read from the printed paper, Fig. 2 or Tables S1/S2. Every value was derived from the authors' released per-family score tables with the aggregation in their own FoldMason_benchmarks.R (scripts/summarise_author_scores.py, output sources/author_scores_summary.txt). A human with Science access should check the values against Fig. 2 and the supplement before the report is published.",
+  "sources_downloaded": {
+    "folder": "sources/",
+    "files": {
+      "analysis/data/homstrad_scores.tsv": "md5 598b22949f7c37ba1964feee7400fcb1, 3,737,795 B (matches GitHub tree size)",
+      "analysis/data/afdb_scores.tsv": "md5 1a099615a11bcfe80bdcc67355a85a04, 570,789 B (matches GitHub tree size)",
+      "analysis/data/homstrad_families.tsv": "md5 a4d51503e01fe879c2d1e378cc08ea5b, 11,579 B",
+      "analysis/data/afdb_families.tsv": "52,412 B, byte-identical to afdb_clusters/final_clusters.tsv",
+      "analysis/FoldMason_benchmarks.R": "30,630 B, the authors' figure/summary script",
+      "analysis/align_family.sh, align_families.sh, compute_scores.sh, extractLDDT.awk, extractTime.awk, homstrad/clean_homstrad.py, homstrad/download_homstrad.sh, afdb_clusters/download.sh, READMEs": "all sizes match the GitHub tree at d356c40 (analysis_tree.json)",
+      "europepmc_41610233.json": "Europe PMC record with the abstract",
+      "author_scores_summary.txt": "aggregation of the authors' per-family scores (not our computation of any result)"
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "role": "primary",
+      "quantity": "HOMSTRAD full set, FoldMason (default mode), mean sum-of-pairs score, forward direction (sp_fwd)",
+      "paper_value": 90.014,
+      "unit": "percent (t_coffee aln_compare SP score, 0-100)",
+      "location": "Fig. 2A, panel 'HOMSTRAD Full', FoldMason point, y axis (labelled 'Specificity (%)' in the authors' R script)",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (90.014466 = mean of 1030 per-family sp_fwd values in data/homstrad_scores.tsv)",
+      "tolerance": 0.379,
+      "tolerance_basis": "1 standard error of the mean of the authors' own 1030 per-family sp_fwd values (sd 12.1617 / sqrt(1030)). FoldMason is deterministic in default mode, so with identical inputs and t_coffee the expected difference is below 0.01; anything between 0.01 and 0.379 is reported as 'within tolerance, not exact' and the per-family differences are listed.",
+      "conditions": "FoldMason release 4-dd3c235, foldmason easy-msa <family>/pdbs out tmp --threads 1; reference MSA from HOMSTRAD homstrad_with_PDB_2024_Dec_1 processed by clean_homstrad.py; families with count >= 2 in data/homstrad_families.tsv (1030 of 1032); score = t_coffee -other_pg aln_compare -al1 <HOMSTRAD ref> -al2 <foldmason_aa.fa> -compare_mode sp. Runs only if the HOMSTRAD release can be obtained (server down since 2026-05, issue #38); otherwise status 'could not run'."
+    },
+    {
+      "id": "C2",
+      "role": "primary",
+      "quantity": "HOMSTRAD full set, FoldMason (default mode), mean sum-of-pairs score, reverse direction (sp_rev)",
+      "paper_value": 89.732,
+      "unit": "percent",
+      "location": "Fig. 2A, panel 'HOMSTRAD Full', FoldMason point, x axis (labelled 'Sensitivity (%)' in the authors' R script)",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (89.731650, n = 1030)",
+      "tolerance": 0.391,
+      "tolerance_basis": "1 SEM of the authors' 1030 per-family sp_rev values (sd 12.5366). Exact-match expectation below 0.01 as in C1.",
+      "conditions": "As C1, with the alignments swapped: aln_compare -al2 <HOMSTRAD ref> -al1 <foldmason_aa.fa> -compare_mode sp."
+    },
+    {
+      "id": "C3",
+      "role": "primary",
+      "quantity": "HOMSTRAD hard subset (55 families), FoldMason (default mode), mean sp_fwd",
+      "paper_value": 77.149,
+      "unit": "percent",
+      "location": "Fig. 2A, panel 'HOMSTRAD Hard', FoldMason point, y axis",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (77.149091, n = 55)",
+      "tolerance": 1.549,
+      "tolerance_basis": "1 SEM of the authors' 55 per-family sp_fwd values (sd 11.4906). Exact-match expectation below 0.01.",
+      "conditions": "As C1, restricted to the 55 family names in homstrad.hard of FoldMason_benchmarks.R."
+    },
+    {
+      "id": "C4",
+      "role": "primary",
+      "quantity": "HOMSTRAD hard subset (55 families), FoldMason (default mode), mean sp_rev",
+      "paper_value": 77.147,
+      "unit": "percent",
+      "location": "Fig. 2A, panel 'HOMSTRAD Hard', FoldMason point, x axis",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (77.147273, n = 55)",
+      "tolerance": 1.638,
+      "tolerance_basis": "1 SEM of the authors' 55 per-family sp_rev values (sd 12.1447). Exact-match expectation below 0.01.",
+      "conditions": "As C2, restricted to the 55 hard families."
+    },
+    {
+      "id": "C5",
+      "role": "primary",
+      "quantity": "AFDB clusters benchmark, FoldMason (default mode), mean full-MSA LDDT over 160 clusters",
+      "paper_value": 0.6050,
+      "unit": "LDDT (0-1)",
+      "location": "Not a plotted point of Fig. 2B: Fig. 2B plots per-domain-count averages (claims S6-S9). The overall mean is the avg_lddt column of afdb.summary printed by FoldMason_benchmarks.R, which presumably feeds the main text or Table S2; its printed location could not be checked.",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (0.605009, n = 160)",
+      "tolerance": 0.0102,
+      "tolerance_basis": "1 SEM of the authors' 160 per-cluster LDDT values (sd 0.1292). The authors' inputs were AFDB model_v4 PDBs, which the server no longer serves; we must use model_v6 coordinates saved under the v4 file name, so an exact match is not expected. Per-cluster differences will be reported next to the count of member structures whose coordinates changed between v4 and v6 (where that can be determined).",
+      "conditions": "200 clusters of data/afdb_families.tsv minus the 40 clusters in afdb.training of FoldMason_benchmarks.R; 20 structures per cluster; foldmason easy-msa <cluster>/pdbs out tmp --threads 1; LDDT = msaLDDT field of foldmason msa2lddtreport <out_tmp/latest/structures> foldmason_aa.fa out.html --threads 1 (not --only-scoring-cols)."
+    },
+    {
+      "id": "C6",
+      "role": "primary",
+      "quantity": "AFDB clusters benchmark, FoldMason Fast (--fast), mean full-MSA LDDT over 160 clusters",
+      "paper_value": 0.6071,
+      "unit": "LDDT (0-1)",
+      "location": "As C5 (afdb.summary avg_lddt, row 'FoldMason Fast').",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (0.607056, n = 160)",
+      "tolerance": 0.0105,
+      "tolerance_basis": "1 SEM of the authors' 160 per-cluster LDDT values for foldmason_fast (sd 0.1334); same v4 to v6 caveat as C5.",
+      "conditions": "As C5 with foldmason easy-msa ... --threads 1 --fast and LDDT of foldmason_fast_aa.fa, using the structure DB of the default run (foldmason_tmp/latest/structures), as align_family.sh does."
+    },
+    {
+      "id": "S1",
+      "role": "secondary",
+      "quantity": "HOMSTRAD full, FoldMason F1 (harmonic mean of the two mean SP scores)",
+      "paper_value": 89.873,
+      "unit": "percent",
+      "location": "Printed by FoldMason_benchmarks.R ('# F1 scores'); probably main text or supplement; not checked.",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (89.872836)",
+      "tolerance": 0.385,
+      "tolerance_basis": "Mean of the C1 and C2 tolerances; F1 is a function of C1 and C2 only.",
+      "conditions": "2 * mean_fwd * mean_rev / (mean_fwd + mean_rev) on the C1/C2 means, not a mean of per-family F1."
+    },
+    {
+      "id": "S2",
+      "role": "secondary",
+      "quantity": "HOMSTRAD full, FoldMason Fast, mean sp_fwd",
+      "paper_value": 89.271,
+      "unit": "percent",
+      "location": "Fig. 2A, panel 'HOMSTRAD Full', FoldMason Fast point, y axis",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (89.271068, n = 1030)",
+      "tolerance": 0.407,
+      "tolerance_basis": "1 SEM of the authors' per-family values (sd 13.0449).",
+      "conditions": "As C1 with --fast and foldmason_fast_aa.fa."
+    },
+    {
+      "id": "S3",
+      "role": "secondary",
+      "quantity": "HOMSTRAD full, FoldMason Fast, mean sp_rev",
+      "paper_value": 89.188,
+      "unit": "percent",
+      "location": "Fig. 2A, panel 'HOMSTRAD Full', FoldMason Fast point, x axis",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (89.187864, n = 1030)",
+      "tolerance": 0.409,
+      "tolerance_basis": "1 SEM of the authors' per-family values (sd 13.1150).",
+      "conditions": "As C2 with --fast."
+    },
+    {
+      "id": "S4",
+      "role": "secondary",
+      "quantity": "HOMSTRAD hard, FoldMason Fast, mean sp_fwd",
+      "paper_value": 72.322,
+      "unit": "percent",
+      "location": "Fig. 2A, panel 'HOMSTRAD Hard', FoldMason Fast point, y axis",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (72.321818, n = 55)",
+      "tolerance": 1.795,
+      "tolerance_basis": "1 SEM of the authors' per-family values (sd 13.3119).",
+      "conditions": "As C3 with --fast."
+    },
+    {
+      "id": "S5",
+      "role": "secondary",
+      "quantity": "HOMSTRAD hard, FoldMason Fast, mean sp_rev",
+      "paper_value": 72.671,
+      "unit": "percent",
+      "location": "Fig. 2A, panel 'HOMSTRAD Hard', FoldMason Fast point, x axis",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (72.670909, n = 55)",
+      "tolerance": 1.827,
+      "tolerance_basis": "1 SEM of the authors' per-family values (sd 13.5479).",
+      "conditions": "As C4 with --fast."
+    },
+    {
+      "id": "S6",
+      "role": "secondary",
+      "quantity": "AFDB, FoldMason, mean full-MSA LDDT over the 40 one-domain clusters",
+      "paper_value": 0.7241,
+      "unit": "LDDT",
+      "location": "Fig. 2B, facet '1 domain', 'Average' column, FoldMason point",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (0.724092, n = 40)",
+      "tolerance": 0.0155,
+      "tolerance_basis": "1 SEM of the 40 per-cluster values (sd 0.0981); v4 to v6 caveat as C5.",
+      "conditions": "As C5, clusters with num_domains = 1 in data/afdb_families.tsv."
+    },
+    {
+      "id": "S7",
+      "role": "secondary",
+      "quantity": "AFDB, FoldMason, mean full-MSA LDDT over the 40 two-domain clusters",
+      "paper_value": 0.5638,
+      "unit": "LDDT",
+      "location": "Fig. 2B, facet '2 domain', 'Average' column, FoldMason point",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (0.563824, n = 40)",
+      "tolerance": 0.0186,
+      "tolerance_basis": "1 SEM of the 40 per-cluster values (sd 0.1177).",
+      "conditions": "As C5, num_domains = 2."
+    },
+    {
+      "id": "S8",
+      "role": "secondary",
+      "quantity": "AFDB, FoldMason, mean full-MSA LDDT over the 40 three-domain clusters",
+      "paper_value": 0.5604,
+      "unit": "LDDT",
+      "location": "Fig. 2B, facet '3 domain', 'Average' column, FoldMason point",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (0.560426, n = 40)",
+      "tolerance": 0.0152,
+      "tolerance_basis": "1 SEM of the 40 per-cluster values (sd 0.0960).",
+      "conditions": "As C5, num_domains = 3."
+    },
+    {
+      "id": "S9",
+      "role": "secondary",
+      "quantity": "AFDB, FoldMason, mean full-MSA LDDT over the 40 four-domain clusters",
+      "paper_value": 0.5717,
+      "unit": "LDDT",
+      "location": "Fig. 2B, facet '4 domain', 'Average' column, FoldMason point",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (0.571694, n = 40)",
+      "tolerance": 0.0199,
+      "tolerance_basis": "1 SEM of the 40 per-cluster values (sd 0.1261).",
+      "conditions": "As C5, num_domains = 4."
+    },
+    {
+      "id": "S10",
+      "role": "secondary",
+      "quantity": "AFDB, FoldMason Fast, per-domain-count mean full-MSA LDDT (1, 2, 3, 4 domains)",
+      "paper_value": [0.7280, 0.5720, 0.5610, 0.5672],
+      "unit": "LDDT",
+      "location": "Fig. 2B, 'Average' column of each facet, FoldMason Fast point",
+      "value_status": "derived from the authors' per-family scores, not confirmed in the paper text (0.727989, 0.572037, 0.561049, 0.567151; n = 40 each)",
+      "tolerance": [0.0167, 0.0191, 0.0155, 0.0207],
+      "tolerance_basis": "1 SEM of each 40-cluster subset (sd 0.1054, 0.1207, 0.0981, 0.1311).",
+      "conditions": "As C6, split by num_domains."
+    }
+  ],
+  "definitions": [
+    {
+      "id": "D1",
+      "name": "Software version",
+      "choice": "FoldMason release 4-dd3c235 (commit dd3c23500ce0893bc1b5f9b4a3e17c63796a5d0b), prebuilt foldmason-linux-avx2.tar.gz from the GitHub release, checked against the release size; the same binary computes the LDDT (msa2lddtreport). Not the current main (b4fa299, 7 commits later, with lolalign and two-pass contacts).",
+      "quote": "Paper text not accessible. The authors' scripts call whatever 'foldmason' is on PATH: \"[foldmason]=$(command -v \"foldmason\")\" (align_family.sh).",
+      "ambiguity": "The release (2025-10-08) and the analysis data commit (2025-10-10) are two days apart, and nothing states that the released TSVs were produced with exactly this binary. Triage (not the paper) links the Science version to 4-dd3c235 via Zenodo 17315302. If the default-mode HOMSTRAD scores match per family to 1e-6, that settles it; if they do not, the version is the first suspect and the report says so."
+    },
+    {
+      "id": "D2",
+      "name": "HOMSTRAD input data",
+      "choice": "homstrad_with_PDB_2024_Dec_1.tar.gz, with the authors' igV chain-order fix, split into one PDB per member plus <family>_msa.fasta (reference MSA) and sequence.fa by clean_homstrad.py, unmodified. First look inside the Zenodo 17311030 tarball for a homstrad folder; if neither it nor an identical copy of the Dec 2024 release can be found, C1-C4 and S1-S5 are 'could not run'. A different HOMSTRAD release is not a substitute.",
+      "quote": "\"curl https://homstrad.mizuguchilab.org/homstrad/data/homstrad_with_PDB_2024_Dec_1.tar.gz | tar -xz -C homstrad_db\" (homstrad/download_homstrad.sh)",
+      "ambiguity": "Server unreachable since 2026-05 (issue #38). download_homstrad.sh writes to homstrad_clean2 while the README says homstrad_clean; only the folder name differs. clean_homstrad.py hard-codes sequence replacements for 1ka5a, 1pi2 and 1m85a; keep them."
+    },
+    {
+      "id": "D3",
+      "name": "HOMSTRAD family set (full)",
+      "choice": "Families with count >= 2 in data/homstrad_families.tsv: 1030 of 1032. Tool rows only (the 'homstrad' reference row has no SP rows).",
+      "quote": "\"filter(count >= 2 & startsWith(type, \\\"sp_\\\") & tool != \\\"Homstrad\\\")\" (FoldMason_benchmarks.R, homstrad.sop_scores)",
+      "ambiguity": "The R filter compares against \"Homstrad\" while name_map produces \"HOMSTRAD\", so that clause excludes nothing; harmless because the reference has no sp rows in the TSV (checked: tools with sp rows are the 15 aligners only). Decided from the authors' released TSV."
+    },
+    {
+      "id": "D4",
+      "name": "HOMSTRAD hard subset",
+      "choice": "Exactly the 55 family names listed in homstrad.hard of FoldMason_benchmarks.R. We do not recompute identity or membership.",
+      "quote": "\"# 55 hard families (<25% identity, >=4 members)\" (FoldMason_benchmarks.R)",
+      "ambiguity": "How identity was computed is not in the code; using the authors' list removes the question. All 55 pass the count >= 2 filter (n = 55 in the authors' TSV)."
+    },
+    {
+      "id": "D5",
+      "name": "Sum-of-pairs score and its two directions",
+      "choice": "sp_fwd = t_coffee -other_pg aln_compare -al1 <ref> -al2 <test> -compare_mode sp, field 4 of output line 3; sp_rev = same with -al1/-al2 swapped. Per family, 0-100 scale. t_coffee from Ubuntu 24.04 apt; version recorded.",
+      "quote": "\"SPF=$(t_coffee -other_pg aln_compare -al1 \\\"$REF\\\" -al2 \\\"$1\\\" -compare_mode sp | awk 'NR==3 {print $4}')\" (compute_scores.sh)",
+      "ambiguity": "The authors' t_coffee version is not stated. The labels disagree inside the R script: the comment calls one direction specificity and the other accuracy, Fig. 2A plots sp_fwd on the y axis as 'Specificity (%)' and sp_rev on x as 'Sensitivity (%)', while Fig. S3 labels sp_fwd 'Sensitivity' and sp_rev 'Specificity'. We report by command direction (fwd/rev) and do not rely on the words."
+    },
+    {
+      "id": "D6",
+      "name": "FoldMason runs and output used",
+      "choice": "Default: foldmason easy-msa <family>/pdbs <family>/foldmason <family>/foldmason_tmp --threads 1, scored on foldmason_aa.fa. Fast: same plus --fast, scored on foldmason_fast_aa.fa. No other flag. Not in scope: R100 (--refine-iters 100 --refine-seed 858702543) and R100 OSC.",
+      "quote": "\"easy-msa \\\"$PDB\\\" \\\"${1}/foldmason\\\" \\\"${1}/foldmason_tmp\\\" --threads $THREADS\" (align_family.sh; THREADS defaults to 1 via TOOL_THREADS=1 in align_families.sh)",
+      "ambiguity": "Single-thread is the authors' setting. Running up to 4 families in parallel (light mode) does not change any single run. The PDB folder is passed as a directory, so file names and directory order are inputs (issue #35: renaming files changed the LDDT from 0.741 to 0.724 in one example); keep the authors' file names."
+    },
+    {
+      "id": "D7",
+      "name": "HOMSTRAD aggregation",
+      "choice": "Plain mean over families of the per-family score, per tool and direction, for the full set (D3) and hard set (D4). F1 = 2*mean_fwd*mean_rev/(mean_fwd+mean_rev) on those means.",
+      "quote": "\"summarise(mean=mean(score), sd=sd(score), .groups=\\\"drop\\\")\" and \"mutate(f1 = 2 * (mean_sp_fwd * mean_sp_rev) / (mean_sp_fwd + mean_sp_rev)\" (FoldMason_benchmarks.R)",
+      "ambiguity": "In Fig. 2A the label 'FoldMason R100' is the refine100 run scored with only-scoring-cols refinement (foldmason_refine100_rosc renamed), and plain refine100 is dropped; this does not touch the FoldMason and FoldMason Fast claims."
+    },
+    {
+      "id": "D8",
+      "name": "AFDB cluster set",
+      "choice": "The 200 clusters of data/afdb_families.tsv (identical to afdb_clusters/final_clusters.tsv): 50 each with 1, 2, 3 and 4 domains, 20 member accessions each (checked in the file). Remove the 40 accessions in afdb.training: 160 clusters, 40 per domain count.",
+      "quote": "\"# 40 clusters used for parameter optimisation, removed for benchmark\" (FoldMason_benchmarks.R)",
+      "ambiguity": "afdb_clusters/README.md and extract_clusters.awk speak of 2, 3 and 4-domain clusters, but the released list also has 50 one-domain clusters (awk filter is $4 <= 4). We follow the released list, which is what the authors' scores cover."
+    },
+    {
+      "id": "D9",
+      "name": "AFDB structures",
+      "choice": "For each member, download AF-<acc>-F1-model_v6.pdb (v4 now returns 404) and save it as AF-<acc>-F1-model_v4.pdb in <cluster>/pdbs/, the name the authors' download.sh produces. Check each download against the server Content-Length. Record, per member, whether the v6 sequence/length equals what the authors' run saw where that can be checked (e.g. against v4 files if any are found in Zenodo afdb_scaling/pdbs.tar.gz, or sequence.fa if released).",
+      "quote": "\"xargs -I{} echo \\\"https://alphafold.ebi.ac.uk/files/AF-\\\"{}\\\"-F1-model_v4.pdb\\\"\" (afdb_clusters/download.sh)",
+      "ambiguity": "This is a forced input change, not a method change, and the report must say so. v6 coordinates can differ from v4, so per-cluster LDDT can move. Triage suggested checking lengths against data/afdb_lengths.tsv, but that file holds per-tool MSA lengths (family, tool, length), not structure lengths, so it can only be compared after alignment and does not isolate the input change."
+    },
+    {
+      "id": "D10",
+      "name": "LDDT metric",
+      "choice": "foldmason msa2lddtreport <cluster>/foldmason_tmp/latest/structures <msa> <out>.html --threads 1, value = the msaLDDT field parsed by extractLDDT.awk. Full-MSA LDDT (no --only-scoring-cols) for all claims. Both default and Fast MSAs are scored against the structure DB written by the default run.",
+      "quote": "\"\\\"${paths[foldmason]}\\\" msa2lddtreport \\\"$DB\\\" \\\"$2\\\" \\\"$3\\\" --threads \\\"$THREADS\\\"\" with DB=\"${1}/foldmason_tmp/latest/structures\" (align_family.sh)",
+      "ambiguity": "Fig. 2B uses the non-OSC values (line_test_data filters !osc), the OSC variant appears in Fig. S6. The OSC numbers (0.6480, 0.6476) are not claims here. Issue #20 reports 'Found nan' in msa2lddtreport; any NaN cluster is reported, not dropped silently (the authors' TSV has 160 finite values per tool)."
+    },
+    {
+      "id": "D11",
+      "name": "AFDB aggregation",
+      "choice": "C5/C6: plain mean of per-cluster LDDT over the 160 clusters. S6-S10: plain mean within each num_domains group (40 clusters each), which is what Fig. 2B plots as 'Average'.",
+      "quote": "\"summarise(score = mean(score), .groups='drop') %>% mutate(family = \\\"Average\\\"\" (FoldMason_benchmarks.R, overall_avg_data for Fig. 2B)",
+      "ambiguity": "Fig. 2B itself does not plot the 160-cluster mean; that number comes from afdb.summary (avg_lddt). Which printed table carries it could not be checked (paper inaccessible)."
+    },
+    {
+      "id": "D12",
+      "name": "Scoring script defects to handle without changing the method",
+      "choice": "compute_scores.sh calls apply_fn compute_nirmsd, a function that is not defined; under bash -e that aborts after the SP block on HOMSTRAD families. The run stage may skip that call (environment/crash fix, logged in patches/). TC and CS are written as 0 by the script and are not claims.",
+      "quote": "\"apply_fn compute_nirmsd\" (compute_scores.sh)",
+      "ambiguity": "Removing the call does not change any SP or LDDT value; it only lets the script reach the LDDT/time extraction."
+    }
+  ],
+  "out_of_scope": [
+    "Other aligners (3DCoffee, US-align, mTM-align, MUSTANG, Matt, Caretta, MAFFT, MAFFT-3Di, MUSCLE, FAMSA2, Clustal Omega): not rerun. Their published MSAs may be rescored later only as a check of our scoring setup, not as claims.",
+    "FoldMason R100 and OSC values, runtimes and speedups (machine-dependent), Fig. 2C scaling, Fig. 2D flexible proteins, glycoprotein trees.",
+    "Any number from the bioRxiv preprint (different analysis)."
+  ]
+}

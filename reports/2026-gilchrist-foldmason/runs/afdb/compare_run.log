@@ -1,0 +1,26 @@
+clusters with our scores: 32 complete, 128 reduced inputs
+
+(a) complete clusters, per-cluster diff against the authors' afdb_scores.tsv
+  foldmason: n=32  |diff|<1e-6 in 31  mean |diff| 0.0000  max |diff| 0.0008  mean ours 0.6219 authors 0.6219
+  foldmason_fast: n=32  |diff|<1e-6 in 31  mean |diff| 0.0003  max |diff| 0.0089  mean ours 0.6282 authors 0.6285
+
+(b) reduced-input clusters (not the authors' inputs, no per-cluster comparison)
+  A0A0F9HFW2(-1) A0A0G0MVR5(-1) A0A0Q9LYH2(-2) A0A150M8U2(-1) A0A1B1NTB9(-2) A0A1F6CR99(-2) A0A1G1JTQ0(-2) A0A1G1LTA3(-5) A0A1G9C126(-1) A0A1H3Q0U3(-2) A0A1I3M533(-3) A0A1J5HL60(-1) A0A1M3NI87(-2) A0A1N7IG91(-2) A0A1W9PGV8(-3) A0A2A3AK07(-1) A0A2E5EG28(-2) A0A2E8KWW7(-1) A0A2K2FPG0(-1) A0A2N1QBZ3(-2) A0A2N2FFV9(-1) A0A2R6CQZ8(-1) A0A2R6JPP2(-1) A0A2W5JG19(-1) A0A2Z3HUZ4(-1) A0A326KFK6(-3) A0A350T754(-4) A0A352VZ14(-1) A0A357BIX1(-3) A0A3A9I9T1(-5) A0A3D8ICB5(-3) A0A3E2T6J2(-2) A0A3G9JGN5(-2) A0A3L7UVH3(-3) A0A3M2GBG4(-2) A0A3N0WSI5(-5) A0A3S0FKQ3(-1) A0A402ABK4(-1) A0A4P9TEL6(-1) A0A4Q6CJX3(-3) A0A537I120(-2) A0A554A1A5(-4) A0A558NQG3(-1) A0A5B8NA15(-2) A0A5B9YQE2(-2) A0A5C7EHW3(-3) A0A5J6VDN1(-1) A0A5Q0EJY6(-2) A0A644Y0F6(-1) A0A654D339(-3) A0A662SPR3(-1) A0A6H0CLG5(-2) A0A6H5IZH7(-5) A0A6J4UFW7(-2) A0A6L9XVA4(-4) A0A6N8G8Y2(-2) A0A7C1WGV1(-2) A0A7C2XUU5(-2) A0A7C5W3X4(-2) A0A7C6KKI9(-3) A0A7C6QFL5(-2) A0A7C6SBR4(-2) A0A7C7CLP8(-1) A0A7C7KA74(-2) A0A7J5VQD9(-4) A0A7K0JS47(-2) A0A7T8YPS0(-2) A0A7V1EGX4(-1) A0A7V2HZ10(-2) A0A7V2MEE1(-4) A0A7V2NG30(-4) A0A7V2RPF0(-2) A0A7V3QYX8(-1) A0A7W0UR24(-2) A0A7W7ZLX9(-3) A0A7X2FUC2(-1) A0A7X9B9L0(-1) A0A7X9HAB4(-1) A0A7Y0H117(-1) A0A7Y4U7C5(-2) A0A7Y4WUB0(-3) A0A7Y4YBM7(-2) A0A7Y8VRA7(-2) A0A7Z9PPG0(-2) A0A803J2S0(-7) A0A811X6M4(-2) A0A832GZM8(-4) A0A835QTZ3(-1) A0A838HGE3(-3) A0A838KLY5(-4) A0A838PZG9(-1) A0A838UTW2(-1) A0A839IJ68(-3) A0A840L1P2(-4) A0A840VNG9(-3) A0A841BX55(-3) A0A841FY34(-1) A0A841GQ48(-3) A0A842RCX9(-3) A0A845QUM5(-1) A0A847HHU4(-1) A0A848RSI4(-2) A0A849N4M5(-3) A0A849TDM4(-2) A0A850SNP2(-1) A0A851GER1(-1) A0A8A8PMA1(-2) A0A8B6D2T1(-2) A0A8B6H5Z5(-1) A5BWJ2(-1) B5IA13(-1) C0W088(-4) C6XR92(-3) D1CBK0(-2) D3JVD5(-4) D3SA45(-2) E3J717(-4) E6TTB4(-2) E8QX60(-2) F5YND8(-2) F7V756(-1) G0QJD1(-3) G8R5C8(-3) H3BGA4(-5) J3LE19(-1) K2AHI6(-4) L0IAI9(-5) Q0HSW5(-1)
+
+(c) means over all clusters we ran: REDUCED-INPUT, not the pre-registered quantity, no verdict
+  C5	n=160	ours 0.6119	pre-registered 0.6050	(reduced-input, not comparable)
+  C6	n=160	ours 0.6134	pre-registered 0.6071	(reduced-input, not comparable)
+  S6 (1 dom)	n=40	ours 0.7279	pre-registered 0.7241	(reduced-input, not comparable)
+  S7 (2 dom)	n=40	ours 0.5713	pre-registered 0.5638	(reduced-input, not comparable)
+  S8 (3 dom)	n=40	ours 0.5680	pre-registered 0.5604	(reduced-input, not comparable)
+  S9 (4 dom)	n=40	ours 0.5805	pre-registered 0.5717	(reduced-input, not comparable)
+  S10[1 dom]	n=40	ours 0.7344	pre-registered 0.7280	(reduced-input, not comparable)
+  S10[2 dom]	n=40	ours 0.5743	pre-registered 0.5720	(reduced-input, not comparable)
+  S10[3 dom]	n=40	ours 0.5683	pre-registered 0.5610	(reduced-input, not comparable)
+  S10[4 dom]	n=40	ours 0.5767	pre-registered 0.5672	(reduced-input, not comparable)
+
+lddt rows: 320, nan rows: 0
+foldmason: 160 runs, sum 583.0 s, mean 3.64 s
+foldmason_fast: 160 runs, sum 507.6 s, mean 3.17 s
+2026-10-27T14:34:39-0300
+2026-10-27T14:40:30-0300

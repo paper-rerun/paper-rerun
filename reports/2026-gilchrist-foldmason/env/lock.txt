@@ -1,0 +1,28 @@
+# Frozen environment for the FoldMason reproduction (2026-10-27)
+# Rebuild: bash env/setup.sh (downloads and checks the binary); t-coffee only needed for HOMSTRAD, which could not be obtained
+
+foldmason      release 4-dd3c235 (commit dd3c23500ce0893bc1b5f9b4a3e17c63796a5d0b), prebuilt linux-avx2
+  url          https://github.com/steineggerlab/foldmason/releases/download/4-dd3c235/foldmason-linux-avx2.tar.gz
+  size         53805347 B (matches server Content-Length)
+  sha256       7e6f6bd264defda742882ec167eedaad1185c0a83a32646b1ec83fa6c5b86f05
+  binary       env/foldmason/bin/foldmason, 146506368 B
+
+os             Ubuntu 24.04.1 LTS (WSL2)
+python3        3.12.3 (stdlib only, run with -I)
+aria2c         1.37.0
+GNU tar        1.35
+GNU awk        5.2.1 (authors' extractLDDT.awk)
+t-coffee       not installed (not needed: HOMSTRAD reference unavailable)
+
+data
+  zenodo 17311030 foldmason_data.tar.gz  4511287230 B, md5 543c92bd16ab2bbdd2ab1125fcb01f91 (matches record)
+  AFDB model_v6 PDBs saved as AF-<acc>-F1-model_v4.pdb; every file checked against x-goog-stored-content-length and x-goog-hash md5 (runs/afdb_download/sizes.tsv)
+
+# Rerun, 2026-10-27 afternoon: the GitHub binary above was refused by the local permission system (runs/blocked_actions.log)
+# and was not run. The AFDB results come from the bioconda build of the same release. Rebuild: bash env/bioconda/setup.sh
+foldmason      bioconda foldmason-4.dd3c235-h5021889_0.conda (linux-64, uploaded 2025-10-11)
+  md5          e902225dd97295d28e8fb30bd1ad034e (package in the local cache; matches anaconda.org)
+  binary       env/bioconda/mamba/envs/foldmason/bin/foldmason, sha256 318a74841855548dee59cfee34479322fd318599ed12ff00a1ba42f0c7d3b9ab
+  version      "4.dd3c235" (runs/afdb/foldmason_version.txt)
+  env          micromamba 2.0.5-0 (copied from 2023-shaw-skani/env, sha256 checked), conda-forge + bioconda, strict priority
+  full list    env/bioconda/foldmason.explicit.txt (with md5), env/bioconda/foldmason.list.txt

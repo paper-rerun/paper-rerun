@@ -1,0 +1,13 @@
+=== 2026-10-27T17:33:01Z HEAD https://homstrad.mizuguchilab.org/
+http_code 000
+curl: (28) Failed to connect to homstrad.mizuguchilab.org port 443 after 21223 ms: Couldn't connect to server
+=== 2026-10-27T17:33:22Z curl exit 28
+=== 2026-10-27T17:33:22Z HEAD https://homstrad.mizuguchilab.org/homstrad/data/homstrad_with_PDB_2024_Dec_1.tar.gz
+http_code 000
+curl: (28) Failed to connect to homstrad.mizuguchilab.org port 443 after 21041 ms: Couldn't connect to server
+=== 2026-10-27T17:33:43Z curl exit 28
+=== 2026-10-27T17:33:43Z GET https://web.archive.org/cdx/search/cdx?url=homstrad.mizuguchilab.org/homstrad/data/homstrad_with_PDB_2024_Dec_1.tar.gz&output=json&limit=5
+[]
+
+http_code 200
+=== 2026-10-27T17:33:45Z curl exit 0

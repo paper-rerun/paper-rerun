@@ -1,0 +1,3 @@
+{'members': 3200, 'v6_missing': 285, 'same_seq': 2915, 'diff_seq': 0}
+clusters with all 20 members present and unchanged sequence: 32
+clusters with at least one missing member: 128
