@@ -1,0 +1,16 @@
+/mnt/e/Ciencia/noturno/2024-dimitrov-liana-slidetags/runs/evaluate.py:96: RuntimeWarning: invalid value encountered in double_scalars
+SCP2167 __scSeqComm; f1:0.0; f1_norm:nan
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+/mnt/e/Ciencia/noturno/2024-dimitrov-liana-slidetags/runs/evaluate.py:96: RuntimeWarning: invalid value encountered in double_scalars
+SCP2169 __scSeqComm; f1:0.0; f1_norm:nan
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+/mnt/e/Ciencia/noturno/2024-dimitrov-liana-slidetags/runs/evaluate.py:96: RuntimeWarning: invalid value encountered in double_scalars
+SCP2170 __scSeqComm; f1:0.0; f1_norm:nan
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+/mnt/e/Ciencia/noturno/2024-dimitrov-liana-slidetags/runs/evaluate.py:96: RuntimeWarning: invalid value encountered in double_scalars
+SCP2171 __scSeqComm; f1:0.0; f1_norm:nan
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+/mnt/e/Ciencia/noturno/2024-dimitrov-liana-slidetags/runs/evaluate.py:96: RuntimeWarning: invalid value encountered in double_scalars
+SCP2176 __scSeqComm; f1:0.0; f1_norm:nan
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+wrote V3_figshare

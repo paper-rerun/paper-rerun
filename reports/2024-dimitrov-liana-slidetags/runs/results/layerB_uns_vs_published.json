@@ -1,0 +1,807 @@
+{
+ "humancortex|CellPhoneDB": {
+  "rows_published": 13663,
+  "rows_ours": 13663,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_means": 0.0,
+   "cellphone_pvals": 0.0
+  },
+  "identical": false
+ },
+ "humancortex|Connectome": {
+  "rows_published": 13663,
+  "rows_ours": 13663,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "ligand_zscores": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "receptor_zscores": 0.0,
+   "expr_prod": 0.0,
+   "scaled_weight": 0.0
+  },
+  "identical": false
+ },
+ "humancortex|CellChat": {
+  "rows_published": 13663,
+  "rows_ours": 13663,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "ligand_trimean": 0.0,
+   "mat_max": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "receptor_trimean": 0.0,
+   "lr_probs": 0.0,
+   "cellchat_pvals": 0.0
+  },
+  "identical": false
+ },
+ "humancortex|scSeqComm": {
+  "rows_published": 13663,
+  "rows_ours": 13663,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_cdf": 0.0,
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_cdf": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "inter_score": 0.0
+  },
+  "identical": false
+ },
+ "humancortex|SingleCellSignalR": {
+  "rows_published": 13663,
+  "rows_ours": 13663,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "mat_mean": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lrscore": 0.0
+  },
+  "identical": false
+ },
+ "humancortex|NATMI": {
+  "rows_published": 13663,
+  "rows_ours": 13663,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_means_sums": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_means": 0.0,
+   "receptor_means_sums": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "expr_prod": 0.0,
+   "spec_weight": 0.0
+  },
+  "identical": false
+ },
+ "humancortex|log2FC": {
+  "rows_published": 13663,
+  "rows_ours": 13663,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_logfc": 0.0,
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_logfc": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_logfc": 0.0
+  },
+  "identical": false
+ },
+ "humancortex|Rank_Aggregate": {
+  "rows_published": 13663,
+  "rows_ours": 13663,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "lr_means": 0.0,
+   "cellphone_pvals": 0.0,
+   "expr_prod": 0.0,
+   "scaled_weight": 0.0,
+   "lr_logfc": 0.0,
+   "spec_weight": 0.0,
+   "lrscore": 0.0,
+   "specificity_rank": 0.0,
+   "magnitude_rank": 0.0
+  },
+  "identical": true
+ },
+ "humancortex|Geometric Mean": {
+  "rows_published": 13663,
+  "rows_ours": 13663,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_gmeans": 0.0,
+   "gmean_pvals": 0.0
+  },
+  "identical": false
+ },
+ "HumanTonsil|CellPhoneDB": {
+  "rows_published": 32246,
+  "rows_ours": 32246,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_means": 0.0,
+   "cellphone_pvals": 0.0
+  },
+  "identical": false
+ },
+ "HumanTonsil|Connectome": {
+  "rows_published": 32246,
+  "rows_ours": 32246,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "ligand_zscores": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "receptor_zscores": 0.0,
+   "expr_prod": 0.0,
+   "scaled_weight": 0.0
+  },
+  "identical": false
+ },
+ "HumanTonsil|CellChat": {
+  "rows_published": 32246,
+  "rows_ours": 32246,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "ligand_trimean": 0.0,
+   "mat_max": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "receptor_trimean": 0.0,
+   "lr_probs": 0.0,
+   "cellchat_pvals": 0.0
+  },
+  "identical": false
+ },
+ "HumanTonsil|scSeqComm": {
+  "rows_published": 32246,
+  "rows_ours": 32246,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_cdf": 0.0,
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_cdf": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "inter_score": 0.0
+  },
+  "identical": false
+ },
+ "HumanTonsil|SingleCellSignalR": {
+  "rows_published": 32246,
+  "rows_ours": 32246,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "mat_mean": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lrscore": 0.0
+  },
+  "identical": false
+ },
+ "HumanTonsil|NATMI": {
+  "rows_published": 32246,
+  "rows_ours": 32246,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_means_sums": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_means": 0.0,
+   "receptor_means_sums": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "expr_prod": 0.0,
+   "spec_weight": 0.0
+  },
+  "identical": false
+ },
+ "HumanTonsil|log2FC": {
+  "rows_published": 32246,
+  "rows_ours": 32246,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_logfc": 0.0,
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_logfc": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_logfc": 0.0
+  },
+  "identical": false
+ },
+ "HumanTonsil|Rank_Aggregate": {
+  "rows_published": 32246,
+  "rows_ours": 32246,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "lr_means": 0.0,
+   "cellphone_pvals": 0.0,
+   "expr_prod": 0.0,
+   "scaled_weight": 0.0,
+   "lr_logfc": 0.0,
+   "spec_weight": 0.0,
+   "lrscore": 0.0,
+   "specificity_rank": 0.0,
+   "magnitude_rank": 0.0
+  },
+  "identical": true
+ },
+ "HumanTonsil|Geometric Mean": {
+  "rows_published": 32246,
+  "rows_ours": 32246,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_gmeans": 0.0,
+   "gmean_pvals": 0.0
+  },
+  "identical": false
+ },
+ "mouseembryo|CellPhoneDB": {
+  "rows_published": 113796,
+  "rows_ours": 113796,
+  "same_row_order": false,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 1.1102230246251565e-16,
+   "lr_means": 0.0,
+   "cellphone_pvals": 0.0
+  },
+  "identical": false
+ },
+ "mouseembryo|Connectome": {
+  "rows_published": 113796,
+  "rows_ours": 113796,
+  "same_row_order": false,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "ligand_zscores": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 1.1102230246251565e-16,
+   "receptor_zscores": 0.0,
+   "expr_prod": 0.0,
+   "scaled_weight": 0.0
+  },
+  "identical": false
+ },
+ "mouseembryo|CellChat": {
+  "rows_published": 113796,
+  "rows_ours": 113796,
+  "same_row_order": false,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "ligand_trimean": 0.0,
+   "mat_max": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 1.1102230246251565e-16,
+   "receptor_trimean": 0.0,
+   "lr_probs": 0.0,
+   "cellchat_pvals": 0.0
+  },
+  "identical": false
+ },
+ "mouseembryo|scSeqComm": {
+  "rows_published": 113796,
+  "rows_ours": 113796,
+  "same_row_order": false,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_cdf": 0.0,
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "receptor_cdf": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 1.1102230246251565e-16,
+   "inter_score": 0.0
+  },
+  "identical": false
+ },
+ "mouseembryo|SingleCellSignalR": {
+  "rows_published": 113796,
+  "rows_ours": 113796,
+  "same_row_order": false,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "mat_mean": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 1.1102230246251565e-16,
+   "lrscore": 0.0
+  },
+  "identical": false
+ },
+ "mouseembryo|NATMI": {
+  "rows_published": 113796,
+  "rows_ours": 113796,
+  "same_row_order": false,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_means_sums": 1.9073486328125e-06,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "receptor_means": 0.0,
+   "receptor_means_sums": 1.9073486328125e-06,
+   "receptor_props": 0.0,
+   "receptor_pvals": 1.1102230246251565e-16,
+   "expr_prod": 0.0,
+   "spec_weight": 2.9802322387695312e-08
+  },
+  "identical": false
+ },
+ "mouseembryo|log2FC": {
+  "rows_published": 113796,
+  "rows_ours": 113796,
+  "same_row_order": false,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_logfc": 0.0,
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "receptor_logfc": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 1.1102230246251565e-16,
+   "lr_logfc": 0.0
+  },
+  "identical": false
+ },
+ "mouseembryo|Rank_Aggregate": {
+  "rows_published": 113796,
+  "rows_ours": 113796,
+  "same_row_order": false,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "lr_means": 0.0,
+   "cellphone_pvals": 0.0,
+   "expr_prod": 0.0,
+   "scaled_weight": 0.0,
+   "lr_logfc": 0.0,
+   "spec_weight": 2.9802322387695312e-08,
+   "lrscore": 0.0,
+   "specificity_rank": 4.879793344447769e-05,
+   "magnitude_rank": 0.0
+  },
+  "identical": false
+ },
+ "mouseembryo|Geometric Mean": {
+  "rows_published": 113796,
+  "rows_ours": 113796,
+  "same_row_order": false,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 1.1102230246251565e-16,
+   "lr_gmeans": 0.0,
+   "gmean_pvals": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaRNA|CellPhoneDB": {
+  "rows_published": 27682,
+  "rows_ours": 27682,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_means": 0.0,
+   "cellphone_pvals": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaRNA|Connectome": {
+  "rows_published": 27682,
+  "rows_ours": 27682,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "ligand_zscores": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "receptor_zscores": 0.0,
+   "expr_prod": 0.0,
+   "scaled_weight": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaRNA|CellChat": {
+  "rows_published": 27682,
+  "rows_ours": 27682,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "ligand_trimean": 0.0,
+   "mat_max": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "receptor_trimean": 0.0,
+   "lr_probs": 0.0,
+   "cellchat_pvals": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaRNA|scSeqComm": {
+  "rows_published": 27682,
+  "rows_ours": 27682,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_cdf": 0.0,
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "receptor_cdf": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "inter_score": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaRNA|SingleCellSignalR": {
+  "rows_published": 27682,
+  "rows_ours": 27682,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "mat_mean": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lrscore": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaRNA|NATMI": {
+  "rows_published": 27682,
+  "rows_ours": 27682,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_means_sums": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "receptor_means": 0.0,
+   "receptor_means_sums": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "expr_prod": 0.0,
+   "spec_weight": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaRNA|log2FC": {
+  "rows_published": 27682,
+  "rows_ours": 27682,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_logfc": 0.0,
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "receptor_logfc": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_logfc": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaRNA|Rank_Aggregate": {
+  "rows_published": 27682,
+  "rows_ours": 27682,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "lr_means": 0.0,
+   "cellphone_pvals": 0.0,
+   "expr_prod": 0.0,
+   "scaled_weight": 0.0,
+   "lr_logfc": 0.0,
+   "spec_weight": 0.0,
+   "lrscore": 0.0,
+   "specificity_rank": 0.0,
+   "magnitude_rank": 0.0
+  },
+  "identical": true
+ },
+ "HumanMelanomaRNA|Geometric Mean": {
+  "rows_published": 27682,
+  "rows_ours": 27682,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 1.1102230246251565e-16,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_gmeans": 0.0,
+   "gmean_pvals": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaMultiome|CellPhoneDB": {
+  "rows_published": 28113,
+  "rows_ours": 28113,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_means": 0.0,
+   "cellphone_pvals": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaMultiome|Connectome": {
+  "rows_published": 28113,
+  "rows_ours": 28113,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "ligand_zscores": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "receptor_zscores": 0.0,
+   "expr_prod": 0.0,
+   "scaled_weight": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaMultiome|CellChat": {
+  "rows_published": 28113,
+  "rows_ours": 28113,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "ligand_trimean": 0.0,
+   "mat_max": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "receptor_trimean": 0.0,
+   "lr_probs": 0.0,
+   "cellchat_pvals": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaMultiome|scSeqComm": {
+  "rows_published": 28113,
+  "rows_ours": 28113,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_cdf": 0.0,
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_cdf": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "inter_score": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaMultiome|SingleCellSignalR": {
+  "rows_published": 28113,
+  "rows_ours": 28113,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "mat_mean": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lrscore": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaMultiome|NATMI": {
+  "rows_published": 28113,
+  "rows_ours": 28113,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_means_sums": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_means": 0.0,
+   "receptor_means_sums": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "expr_prod": 0.0,
+   "spec_weight": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaMultiome|log2FC": {
+  "rows_published": 28113,
+  "rows_ours": 28113,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_logfc": 0.0,
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_logfc": 0.0,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_logfc": 0.0
+  },
+  "identical": false
+ },
+ "HumanMelanomaMultiome|Rank_Aggregate": {
+  "rows_published": 28113,
+  "rows_ours": 28113,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "lr_means": 0.0,
+   "cellphone_pvals": 0.0,
+   "expr_prod": 0.0,
+   "scaled_weight": 0.0,
+   "lr_logfc": 0.0,
+   "spec_weight": 0.0,
+   "lrscore": 0.0,
+   "specificity_rank": 0.0,
+   "magnitude_rank": 0.0
+  },
+  "identical": true
+ },
+ "HumanMelanomaMultiome|Geometric Mean": {
+  "rows_published": 28113,
+  "rows_ours": 28113,
+  "same_row_order": true,
+  "rows_only_one_side": 0,
+  "max_abs_diff": {
+   "ligand_means": 0.0,
+   "ligand_props": 0.0,
+   "ligand_pvals": 5.551115123125783e-17,
+   "receptor_means": 0.0,
+   "receptor_props": 0.0,
+   "receptor_pvals": 5.551115123125783e-17,
+   "lr_gmeans": 0.0,
+   "gmean_pvals": 0.0
+  },
+  "identical": false
+ }
+}

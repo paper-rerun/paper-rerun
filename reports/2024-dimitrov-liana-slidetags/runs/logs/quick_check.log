@@ -1,0 +1,15 @@
+CellPhoneDB lr_means 9567 1364 ours 0.545031 paper 0.545031
+CellPhoneDB cellphone_pvals 9567 1364 ours 0.540120 paper 0.540120
+Connectome Product* 9567 1364 ours 0.542286 paper 0.542286
+Connectome scaled_weight 9567 1364 ours 0.545357 paper 0.545357
+CellChat lr_probs 9567 1364 ours 0.532553 paper 0.532553
+CellChat cellchat_pvals 9567 1364 ours 0.532861 paper 0.532861
+scSeqComm inter_score 9567 1364 ours 0.528519 paper 0.528519
+SingleCellSignalR lrscore 9567 1364 ours 0.542286 paper 0.542286
+NATMI Product✳ 9567 1364 ours 0.542286 paper 0.542286
+NATMI spec_weight 9567 1364 ours 0.562594 paper 0.562594
+log2FC lr_logfc 9567 1364 ours 0.534618 paper 0.534618
+Rank_Aggregate magnitude_rank 9567 1364 ours 0.548051 paper 0.548051
+Rank_Aggregate specificity_rank 9567 1364 ours 0.563810 paper 0.563810
+Geometric Mean lr_gmeans 9567 1364 ours 0.542286 paper 0.542286
+Geometric Mean gmean_pvals 9567 1364 ours 0.542778 paper 0.542778

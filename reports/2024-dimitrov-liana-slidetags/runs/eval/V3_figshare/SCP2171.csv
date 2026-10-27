@@ -1,0 +1,2 @@
+Dataset,Method,Score,AUROC,Balanced Accuracy,Precision,Recall,F1,F1*,F1 (normalised),F1* (normalised),Positive Calls,n_rows,n_truth
+HumanMelanomaRNA,scSeqComm,inter_score,0.5377367664273427,0.5,0.0,0.0,0.0,0.18275461040039873,,0.5736995274802074,0.0,16805,2011

@@ -1,0 +1,100 @@
+{
+ "issues": [
+  {
+   "severity": "major",
+   "where": "Results, first paragraph: \"57 of 57 claims pass, all at the exact tier (|diff| <= 0.0005)\"",
+   "problem": "This is false. Q4 differs from its paper value (SI 0.765) by -0.0194, which is about 39 times the exact tier. It passes only the 0.02 tolerance, with 0.0006 to spare (compare_R0_figshare.log: diff_vs_SI -0.01936). Q1-Q3 and the four orderings have no exact tier in claims.json at all. The same report later says Q4 'passes ... by a small margin', so it contradicts itself. claims.sha256 still matches (a5008e24...be31ad), so the tolerances in claims.json are the binding ones.",
+   "fix": "Rewrite as: '57 of 57 claims pass. The 48 medians and all 675 R75 cells agree at the exact tier (max |diff| 5.6e-16). The orderings and Q1-Q3 pass their own rules. Q4 passes its 0.02 tolerance with diff -0.0194 against the SI value 0.765.'"
+  },
+  {
+   "severity": "major",
+   "where": "Alternative readings table, row V3: \"BA falls to 0.5000, which moves scSeqComm from 3rd to last in Fig. 4b\"",
+   "problem": "scSeqComm does not come last. With BA 0.5000 it still sits above CellPhoneDB (0.4987, unchanged in V3). compare_variants.log for V3 lists the broken OB pairs as scSeqComm vs SingleCellSignalR, Rank_Aggregate, Geometric Mean and NATMI, which puts it 8th of 9. The row also leaves out that Q4 fails under V3 (rho 0.802, diff +0.037) and that OF's tau-b is NaN because the F1n value is 0/0.",
+   "fix": "Change to 'moves scSeqComm from 3rd to 8th of 9 in Fig. 4b (OB fails, tau-b 0.72)'. Add 'Q4 rho becomes 0.802 (fails)'. The V3 failures are B03, F06, OB, Q4 and R75 = 52/57."
+  },
+  {
+   "severity": "major",
+   "where": "Alternative readings table, row V1: \"Only R75 misses the exact tier\"",
+   "problem": "This is wrong. Under V1, 12 median claims miss the exact tier: S01 -0.0186, S02 +0.0080, S08, S09, S10, S12, S13, and F01-F05 (compare_variants.log lines 1-58, 'exact False'). R75 is the one claim that fails outright (573/675 cells within 0.0005), and that is why the count is 56/57.",
+   "fix": "Rewrite as: '56/57 pass. R75 fails (573/675 cells within 0.0005; F1*n rows up to 0.0186 off). 12 S/F medians pass their tolerance but miss the exact tier. AUROC, BA and the four orderings are unchanged.'"
+  },
+  {
+   "severity": "minor",
+   "where": "V4 paragraph: \"every median balanced accuracy stays within 0.035 of 0.5\" and \"The paper's main message does survive\"; Notes for the authors #1: \"It does not change the 'weak association' conclusion\"",
+   "problem": "The largest deviation under V4 is 0.0352 (Geometric Mean BA 0.5352; Q2 'ours' 0.03517), so 'within 0.035' is false. Under V4, Q2 also fails its pre-registered 0.03 rule. The report never says so, and it describes the 'closely aligned with random' statement as surviving without that qualification. Q1 under V4 is 14/15 above 0.5.",
+   "fix": "Say: 'the largest |median BA - 0.5| is 0.035 (Q2 fails its 0.03 tolerance under V4); 14 of 15 median AUROCs exceed 0.5, max 0.5432'. Then soften 'does survive' to 'the weak-association reading holds, but Q2-Q4 all fail under V4'."
+  },
+  {
+   "severity": "minor",
+   "where": "Results, Layer B paragraph: \"Every method score ... identical ... with three small exceptions. In 40 of 45 tables the scanpy t-test ligand_pvals/receptor_pvals differ by at most 1.1e-16\"",
+   "problem": "The counts do not match the files. compare_uns.log reports 'identical pairs: 4 / 45', meaning Rank_Aggregate in 4 datasets. Of the other 41 tables, 39 differ only in ligand_pvals/receptor_pvals by <=1.1e-16 (not 40), and 2 are the mouseembryo NATMI/Rank_Aggregate tables. layerB_uns_vs_published.json also shows that mouseembryo NATMI ligand_means_sums and receptor_means_sums differ by 1.9e-6, which goes unmentioned (the report only cites spec_weight 3.0e-8). 'Identical with three exceptions' does not fit 41/45 tables flagged DIFF.",
+   "fix": "Rewrite as: '4 of 45 tables identical; 39 differ only in the t-test ligand/receptor p-values (max 1.1e-16); in mouseembryo, NATMI ligand/receptor_means_sums differ by 1.9e-6 and spec_weight by 3.0e-8, Rank_Aggregate specificity_rank by 4.9e-5; all 9 mouseembryo tables come back in a different row order.'"
+  },
+  {
+   "severity": "minor",
+   "where": "Results table row R75 (layer B column) and Layer B paragraph",
+   "problem": "The report never gives the layer B claim count. compare_R0_layerB.log says '56/57 claims pass': R75 fails its 0.0005 tolerance on 2 cells, mouseembryo CellChat F1 (normalised) +0.000528 on both score rows. The layer B AUROC rows also differ from Source Data by up to 5.3e-10, which conflicts with 'identical'. 'Every median still sits within 0.0005' is true but hides the failed claim.",
+   "fix": "Add: 'Layer B: 56/57 claims pass; R75 fails on 2 cells (mouseembryo CellChat F1n, +0.00053, a row-order effect of the baseline permutation); AUROC rows within 5.3e-10.'"
+  },
+  {
+   "severity": "minor",
+   "where": "Results, Q4 row and the sentence after the table",
+   "problem": "The report does not disclose that the 0.0194 gap was already known when the tolerance was set. claims.json Q4 tolerance_basis records Source Data rho = 0.7456 and the notebook's 'F1: 0.746' before any run, and gives a 0.02 tolerance justified as a 'two-decimal claim', but the SI prints three decimals (0.765). Because layer A is deterministic re-evaluation, the pass was close to certain from the start, and the SI number itself is not reproduced.",
+   "fix": "Add one sentence: 'The 0.02 tolerance was set with the Source Data value 0.7456 already known (claims.json), so this pass shows that our run equals the authors' data, not that the SI figure 0.765 is reproduced.'"
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, item 3: \"The authors' notebook shows the same loops running 7 to 8 times faster on their machine (n_jobs=10)\"",
+   "problem": "The notebook's cell 10 progress bars add up to about 1045 s. The same bars in our truth logs add up to about 3750 s, so overall ours is about 3.6x slower (2.4x to 9x per dataset), not 7-8x. Also, lr_bivar in cell 10 takes no n_jobs argument. n_jobs=10 belongs to cell 8, the methods.",
+   "fix": "Replace with 'The authors' cell 10 progress bars total about 17 min, about 3.6x faster than our 4-thread run (2.4x to 9x per dataset)' and drop '(n_jobs=10)'."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, item 4: \"utils.py imported unchanged from sources/ (sha256 checked against the pre-registration)\"",
+   "problem": "No script or log checks this hash. common.py and evaluate.py only put sources/ on sys.path and import. Only compare.py checks a hash, and that one is claims.json. Re-hashed during this review, sources/utils.py = 6265b159...52ea3, which matches claims.json, so the statement is true but nothing on record shows it was checked during the run.",
+   "fix": "Either add a logged sha256 check of sources/utils.py and the notebook to run_all.sh, or reword to 'its sha256 matches the value pre-registered in claims.json (checked after the run)'."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, item 2: \"(expm1 row sums 9999.3 to 10000.6)\"",
+   "problem": "inspect_data.log computes these sums only for the first 200 cells of each dataset ('expm1 rowsum[0:200]'). The report reads as if all cells were checked.",
+   "fix": "Write 'expm1 row sums of the first 200 cells: 9999.3 to 10000.6', or rerun inspect_data.py over all cells."
+  },
+  {
+   "severity": "minor",
+   "where": "Results, first paragraph: \"In practice that is the authors' own table, bit for bit\"",
+   "problem": "The same sentence reports a maximum difference of 5.6e-16, so the values are not bit for bit.",
+   "fix": "Use 'identical up to floating-point rounding (max 5.6e-16)'."
+  },
+  {
+   "severity": "minor",
+   "where": "Results table header 'Paper' and Target line",
+   "problem": "Fig. 4 prints no numbers. Every 'Paper' value except Q4 is a median we computed from Source Data Fig. 4 (claims.json paper_value_origin). Layer A also reuses the authors' own method outputs from figshare. So an agreement of about 1e-16 shows that the evaluation code plus our recomputed truth regenerate the Source Data. The method step is covered only by layer B. The report does not make this clear to readers.",
+   "fix": "Rename the column to 'Paper (Source Data median)' and add one sentence: 'Fig. 4 prints no numbers; paper values are medians of the authors' Source Data; layer A re-runs the evaluation on the authors' published method outputs, and layer B re-runs the methods.'"
+  },
+  {
+   "severity": "minor",
+   "where": "Hardware line ('capped at 4 threads') vs What it took, item 4 (quick check)",
+   "problem": "quick_check.log was written at 11:15, while truth for SCP2169 was running (11:14-11:44, 4 threads), and run_quick.sh uses 1 thread, so at least 5 threads ran at once. Layer B runs joblib n_jobs=4 workers that inherit OMP/MKL=4 each. The measured average was only 192% CPU, but the 4-thread cap was not enforced per worker.",
+   "fix": "Disclose it: 'a 1-thread quick check briefly overlapped the 4-thread truth run (5 threads); layer B used 4 joblib workers (average 192% CPU)'. Or say the cap applied per process."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, last paragraph: \"so `patches/` is empty\"",
+   "problem": "There is no patches/ folder in E:\\Ciencia\\noturno\\2024-dimitrov-liana-slidetags.",
+   "fix": "Create an empty patches/ folder (with a README line saying no patches were needed), or write 'no patches were needed, so there is no patches/ folder'."
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors #1: \"Moving the comparison outside, `p_adjust_fdr(pvals) <= 0.05`\"",
+   "problem": "The V4 run used a strict '< 0.05' (evaluate.py V4 join_pred_truth; claims.json D07/V4, which follow the Methods' 'FDR < 0.05'). The fix suggested to the authors is therefore not the one we ran and report numbers for.",
+   "fix": "Write `p_adjust_fdr(pvals) < 0.05`, which matches the text and our V4 run."
+  },
+  {
+   "severity": "minor",
+   "where": "Alternative readings table, row V2",
+   "problem": "The row says only that Rank_Aggregate keeps first place in Fig. 4d. It leaves out that Fig. 4b changes: OB tau-b is 0.944 because Rank_Aggregate BA 0.5035 overtakes SingleCellSignalR 0.5027 (still a tie under the 2x0.005 rule). It also does not name the two failing claims, Q4 and R75 (617/675).",
+   "fix": "Add 'Fig. 4b: Rank_Aggregate moves above SingleCellSignalR (tau-b 0.94, within the tie rule). Failing claims: Q4 (rho 0.697) and R75 (617/675).'"
+  }
+ ]
+}

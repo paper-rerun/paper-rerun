@@ -1,0 +1,169 @@
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2167 humancortex CellPhoneDB (13663, 14) seconds 16
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:256: ImplicitModificationWarning: Setting element `.layers['scaled']` of view, initializing view as actual.
+SCP2167 humancortex Connectome (13663, 16) seconds 5
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2167 humancortex CellChat (13663, 15) seconds 64
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2167 humancortex scSeqComm (13663, 15) seconds 7
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2167 humancortex SingleCellSignalR (13663, 14) seconds 6
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2167 humancortex NATMI (13663, 16) seconds 5
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:266: ImplicitModificationWarning: Setting element `.layers['normcounts']` of view, initializing view as actual.
+SCP2167 humancortex log2FC (13663, 15) seconds 6
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:256: ImplicitModificationWarning: Setting element `.layers['scaled']` of view, initializing view as actual.
+SCP2167 humancortex Rank_Aggregate (13663, 13) seconds 19
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2167 humancortex Geometric Mean (13663, 14) seconds 15
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2169 HumanTonsil CellPhoneDB (32246, 14) seconds 19
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:256: ImplicitModificationWarning: Setting element `.layers['scaled']` of view, initializing view as actual.
+SCP2169 HumanTonsil Connectome (32246, 16) seconds 8
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2169 HumanTonsil CellChat (32246, 15) seconds 90
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2169 HumanTonsil scSeqComm (32246, 15) seconds 11
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2169 HumanTonsil SingleCellSignalR (32246, 14) seconds 9
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2169 HumanTonsil NATMI (32246, 16) seconds 8
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:266: ImplicitModificationWarning: Setting element `.layers['normcounts']` of view, initializing view as actual.
+SCP2169 HumanTonsil log2FC (32246, 15) seconds 7
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:256: ImplicitModificationWarning: Setting element `.layers['scaled']` of view, initializing view as actual.
+SCP2169 HumanTonsil Rank_Aggregate (32246, 13) seconds 27
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2169 HumanTonsil Geometric Mean (32246, 14) seconds 27
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:429: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:431: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:434: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:444: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:455: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+SCP2170 mouseembryo CellPhoneDB (113796, 14) seconds 39
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:256: ImplicitModificationWarning: Setting element `.layers['scaled']` of view, initializing view as actual.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:429: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:431: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:434: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:444: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:455: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+SCP2170 mouseembryo Connectome (113796, 16) seconds 14
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:429: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:431: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:434: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:444: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:455: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+SCP2170 mouseembryo CellChat (113796, 15) seconds 71
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:429: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:431: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:434: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:444: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:455: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+SCP2170 mouseembryo scSeqComm (113796, 15) seconds 14
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:429: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:431: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:434: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:444: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:455: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+SCP2170 mouseembryo SingleCellSignalR (113796, 14) seconds 11
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:429: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:431: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:434: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:444: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:455: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+SCP2170 mouseembryo NATMI (113796, 16) seconds 14
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:266: ImplicitModificationWarning: Setting element `.layers['normcounts']` of view, initializing view as actual.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:429: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:431: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:434: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:444: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:455: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+SCP2170 mouseembryo log2FC (113796, 15) seconds 15
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:256: ImplicitModificationWarning: Setting element `.layers['scaled']` of view, initializing view as actual.
+SCP2170 mouseembryo Rank_Aggregate (113796, 13) seconds 50
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:429: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:431: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:434: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:444: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/scanpy/tools/_rank_genes_groups.py:455: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+SCP2170 mouseembryo Geometric Mean (113796, 14) seconds 51
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2171 HumanMelanomaRNA CellPhoneDB (27682, 14) seconds 19
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:256: ImplicitModificationWarning: Setting element `.layers['scaled']` of view, initializing view as actual.
+SCP2171 HumanMelanomaRNA Connectome (27682, 16) seconds 10
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2171 HumanMelanomaRNA CellChat (27682, 15) seconds 71
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2171 HumanMelanomaRNA scSeqComm (27682, 15) seconds 9
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2171 HumanMelanomaRNA SingleCellSignalR (27682, 14) seconds 7
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2171 HumanMelanomaRNA NATMI (27682, 16) seconds 7
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:266: ImplicitModificationWarning: Setting element `.layers['normcounts']` of view, initializing view as actual.
+SCP2171 HumanMelanomaRNA log2FC (27682, 15) seconds 6
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:256: ImplicitModificationWarning: Setting element `.layers['scaled']` of view, initializing view as actual.
+SCP2171 HumanMelanomaRNA Rank_Aggregate (27682, 13) seconds 19
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2171 HumanMelanomaRNA Geometric Mean (27682, 14) seconds 22
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2176 HumanMelanomaMultiome CellPhoneDB (28113, 14) seconds 15
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:256: ImplicitModificationWarning: Setting element `.layers['scaled']` of view, initializing view as actual.
+SCP2176 HumanMelanomaMultiome Connectome (28113, 16) seconds 5
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2176 HumanMelanomaMultiome CellChat (28113, 15) seconds 36
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2176 HumanMelanomaMultiome scSeqComm (28113, 15) seconds 9
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2176 HumanMelanomaMultiome SingleCellSignalR (28113, 14) seconds 7
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2176 HumanMelanomaMultiome NATMI (28113, 16) seconds 6
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:266: ImplicitModificationWarning: Setting element `.layers['normcounts']` of view, initializing view as actual.
+SCP2176 HumanMelanomaMultiome log2FC (28113, 15) seconds 5
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/liana/method/sc/_liana_pipe.py:256: ImplicitModificationWarning: Setting element `.layers['scaled']` of view, initializing view as actual.
+SCP2176 HumanMelanomaMultiome Rank_Aggregate (28113, 13) seconds 15
+/root/venvs/liana-slidetags/lib/python3.10/site-packages/anndata/_core/anndata.py:430: FutureWarning: The dtype argument is deprecated and will be removed in late 2024.
+SCP2176 HumanMelanomaMultiome Geometric Mean (28113, 14) seconds 17
+layerB done
+	Command being timed: "nice -n 19 /root/venvs/liana-slidetags/bin/python layerB.py"
+	User time (seconds): 1654.49
+	System time (seconds): 149.78
+	Percent of CPU this job got: 192%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 15:36.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10451380
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 17
+	Minor (reclaiming a frame) page faults: 26378806
+	Voluntary context switches: 285103
+	Involuntary context switches: 2216
+	Swaps: 0
+	File system inputs: 5616
+	File system outputs: 296
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,2 @@
+Dataset,Method,Score,AUROC,Balanced Accuracy,Precision,Recall,F1,F1*,F1 (normalised),F1* (normalised),Positive Calls,n_rows,n_truth
+HumanTonsil,scSeqComm,inter_score,0.5039378474964176,0.5,0.0,0.0,0.0,0.22490507253431993,,0.48138599154261086,0.0,21539,4416

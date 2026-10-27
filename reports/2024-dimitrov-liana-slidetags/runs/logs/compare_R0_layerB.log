@@ -1,0 +1,58 @@
+=== R0_layerB: 56/57 claims pass
+R75 673 / 675 cells within 0.0005; {'AUROC': (5.297700056416943e-10, 0), 'Balanced Accuracy': (4.996003610813204e-16, 0), 'Precision': (4.996003610813204e-16, 0), 'Recall': (5.551115123125783e-16, 0), 'F1': (4.996003610813204e-16, 0), 'F1*': (4.996003610813204e-16, 0), 'F1 (normalised)': (0.0005275259187268455, 0), 'F1* (normalised)': (0.0004441934383052626, 0), 'Positive Calls': (4.996003610813204e-16, 0)}
+A01  paper 0.5427 ours 0.5427 diff +0.0000 pass True exact True
+A02  paper 0.5361 ours 0.5361 diff +0.0000 pass True exact True
+A03  paper 0.5292 ours 0.5292 diff +0.0000 pass True exact True
+A04  paper 0.5292 ours 0.5292 diff +0.0000 pass True exact True
+A05  paper 0.5292 ours 0.5292 diff +0.0000 pass True exact True
+A06  paper 0.5292 ours 0.5292 diff +0.0000 pass True exact True
+A07  paper 0.5189 ours 0.5189 diff +0.0000 pass True exact True
+A08  paper 0.5130 ours 0.5130 diff +0.0000 pass True exact True
+A09  paper 0.5123 ours 0.5123 diff -0.0000 pass True exact True
+A10  paper 0.4967 ours 0.4967 diff +0.0000 pass True exact True
+A11  paper 0.4965 ours 0.4965 diff -0.0000 pass True exact True
+A12  paper 0.4947 ours 0.4947 diff -0.0000 pass True exact True
+A13  paper 0.4926 ours 0.4926 diff +0.0000 pass True exact True
+A14  paper 0.4916 ours 0.4916 diff +0.0000 pass True exact True
+A15  paper 0.4884 ours 0.4884 diff -0.0000 pass True exact True
+B01  paper 0.5157 ours 0.5157 diff +0.0000 pass True exact True
+B02  paper 0.5148 ours 0.5148 diff -0.0000 pass True exact True
+B03  paper 0.5129 ours 0.5129 diff +0.0000 pass True exact True
+B04  paper 0.5094 ours 0.5094 diff -0.0000 pass True exact True
+B05  paper 0.5027 ours 0.5027 diff +0.0000 pass True exact True
+B06  paper 0.5017 ours 0.5017 diff +0.0000 pass True exact True
+B07  paper 0.5014 ours 0.5014 diff +0.0000 pass True exact True
+B08  paper 0.5010 ours 0.5010 diff +0.0000 pass True exact True
+B09  paper 0.4987 ours 0.4987 diff +0.0000 pass True exact True
+S01  paper 0.6565 ours 0.6565 diff -0.0000 pass True exact True
+S02  paper 0.6207 ours 0.6207 diff -0.0000 pass True exact True
+S03  paper 0.5788 ours 0.5789 diff +0.0000 pass True exact True
+S04  paper 0.5768 ours 0.5768 diff +0.0000 pass True exact True
+S05  paper 0.5768 ours 0.5769 diff +0.0001 pass True exact True
+S06  paper 0.5768 ours 0.5768 diff +0.0000 pass True exact True
+S07  paper 0.5768 ours 0.5768 diff +0.0000 pass True exact True
+S08  paper 0.5348 ours 0.5348 diff +0.0000 pass True exact True
+S09  paper 0.5182 ours 0.5182 diff +0.0000 pass True exact True
+S10  paper 0.5167 ours 0.5167 diff +0.0000 pass True exact True
+S11  paper 0.5132 ours 0.5132 diff +0.0000 pass True exact True
+S12  paper 0.5074 ours 0.5074 diff +0.0000 pass True exact True
+S13  paper 0.4874 ours 0.4874 diff -0.0000 pass True exact True
+S14  paper 0.4822 ours 0.4822 diff +0.0000 pass True exact True
+S15  paper 0.4505 ours 0.4505 diff +0.0000 pass True exact True
+F01  paper 0.5595 ours 0.5595 diff +0.0000 pass True exact True
+F02  paper 0.5483 ours 0.5483 diff +0.0000 pass True exact True
+F03  paper 0.5417 ours 0.5417 diff +0.0000 pass True exact True
+F04  paper 0.5268 ours 0.5268 diff +0.0000 pass True exact True
+F05  paper 0.5167 ours 0.5167 diff +0.0000 pass True exact True
+F06  paper 0.5159 ours 0.5159 diff +0.0000 pass True exact True
+F07  paper 0.5025 ours 0.5025 diff +0.0000 pass True exact True
+F08  paper 0.5019 ours 0.5019 diff +0.0000 pass True exact True
+F09  paper 0.4981 ours 0.4981 diff -0.0000 pass True exact True
+OA {'pass': True, 'broken_pairs': [], 'kendall_tau_b_vs_paper_medians': 1.0}
+OB {'pass': True, 'broken_pairs': [], 'kendall_tau_b_vs_paper_medians': 1.0}
+OS {'pass': True, 'broken_pairs': [], 'kendall_tau_b_vs_paper_medians': 0.985184366143778}
+OF {'pass': True, 'broken_pairs': [], 'kendall_tau_b_vs_paper_medians': 1.0}
+Q1 {'paper': 9, 'ours': 9, 'max_median_auroc': 0.5427272981186824, 'pass': True}
+Q2 {'paper': 0.015667747894892003, 'ours': 0.015667747894892337, 'pass': True}
+Q3 {'paper': [6, 6], 'ours': [6, 6], 'pass': True}
+Q4 {'paper_SI': 0.765, 'paper_source_data': 0.7456, 'ours': 0.7456382524548169, 'diff_vs_SI': -0.01936174754518316, 'diff_vs_source_data': 3.825245481681172e-05, 'pass': True}

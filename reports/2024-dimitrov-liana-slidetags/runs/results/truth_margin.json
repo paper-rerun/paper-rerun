@@ -1,0 +1,62 @@
+{
+ "humancortex": {
+  "lrdata": {
+   "n": 762,
+   "n_true_code": 318,
+   "n_near_cut": 7
+  },
+  "cpdata": {
+   "n": 42,
+   "n_true_code": 14,
+   "n_near_cut": 0
+  }
+ },
+ "HumanTonsil": {
+  "lrdata": {
+   "n": 355,
+   "n_true_code": 158,
+   "n_near_cut": 4
+  },
+  "cpdata": {
+   "n": 156,
+   "n_true_code": 70,
+   "n_near_cut": 0
+  }
+ },
+ "mouseembryo": {
+  "lrdata": {
+   "n": 467,
+   "n_true_code": 207,
+   "n_near_cut": 3
+  },
+  "cpdata": {
+   "n": 420,
+   "n_true_code": 116,
+   "n_near_cut": 0
+  }
+ },
+ "HumanMelanomaRNA": {
+  "lrdata": {
+   "n": 484,
+   "n_true_code": 190,
+   "n_near_cut": 4
+  },
+  "cpdata": {
+   "n": 132,
+   "n_true_code": 50,
+   "n_near_cut": 0
+  }
+ },
+ "HumanMelanomaMultiome": {
+  "lrdata": {
+   "n": 873,
+   "n_true_code": 319,
+   "n_near_cut": 8
+  },
+  "cpdata": {
+   "n": 90,
+   "n_true_code": 18,
+   "n_near_cut": 4
+  }
+ }
+}

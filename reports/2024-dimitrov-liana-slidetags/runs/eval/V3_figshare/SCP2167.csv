@@ -1,0 +1,2 @@
+Dataset,Method,Score,AUROC,Balanced Accuracy,Precision,Recall,F1,F1*,F1 (normalised),F1* (normalised),Positive Calls,n_rows,n_truth
+humancortex,scSeqComm,inter_score,0.5285191330830613,0.5,0.0,0.0,0.0,0.22720281256866623,,0.568395453715899,0.0,9567,1364

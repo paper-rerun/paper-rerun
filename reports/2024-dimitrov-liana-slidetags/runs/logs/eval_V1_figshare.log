@@ -1,0 +1,69 @@
+SCP2167 __CellPhoneDB; f1:0.26; f1_norm:0.56
+SCP2167 __Connectome; f1:0.24; f1_norm:0.54
+SCP2167 __CellChat; f1:0.22; f1_norm:0.62
+SCP2167 __scSeqComm; f1:0.25; f1_norm:0.51
+SCP2167 __SingleCellSignalR; f1:0.25; f1_norm:0.5
+SCP2167 __NATMI; f1:0.14; f1_norm:0.94
+SCP2167 __log2FC; f1:0.24; f1_norm:0.57
+SCP2167 __Rank_Aggregate; f1:0.08; f1_norm:0.83
+SCP2167 __Geometric Mean; f1:0.26; f1_norm:0.57
+SCP2169 __CellPhoneDB; f1:0.28; f1_norm:0.49
+SCP2169 __Connectome; f1:0.21; f1_norm:0.43
+SCP2169 __CellChat; f1:0.22; f1_norm:0.48
+SCP2169 __scSeqComm; f1:0.32; f1_norm:0.52
+SCP2169 __SingleCellSignalR; f1:0.33; f1_norm:0.5
+SCP2169 __NATMI; f1:0.08; f1_norm:0.52
+SCP2169 __log2FC; f1:0.2; f1_norm:0.43
+SCP2169 __Rank_Aggregate; f1:0.03; f1_norm:0.41
+SCP2169 __Geometric Mean; f1:0.28; f1_norm:0.48
+SCP2170 __CellPhoneDB; f1:0.21; f1_norm:0.57
+SCP2170 __Connectome; f1:0.18; f1_norm:0.63
+SCP2170 __CellChat; f1:0.19; f1_norm:0.62
+SCP2170 __scSeqComm; f1:0.21; f1_norm:0.52
+SCP2170 __SingleCellSignalR; f1:0.21; f1_norm:0.51
+SCP2170 __NATMI; f1:0.13; f1_norm:0.94
+SCP2170 __log2FC; f1:0.17; f1_norm:0.64
+SCP2170 __Rank_Aggregate; f1:0.06; f1_norm:0.61
+SCP2170 __Geometric Mean; f1:0.21; f1_norm:0.59
+SCP2171 __CellPhoneDB; f1:0.19; f1_norm:0.5
+SCP2171 __Connectome; f1:0.19; f1_norm:0.54
+SCP2171 __CellChat; f1:0.18; f1_norm:0.53
+SCP2171 __scSeqComm; f1:0.22; f1_norm:0.53
+SCP2171 __SingleCellSignalR; f1:0.21; f1_norm:0.5
+SCP2171 __NATMI; f1:0.05; f1_norm:0.35
+SCP2171 __log2FC; f1:0.18; f1_norm:0.55
+SCP2171 __Rank_Aggregate; f1:0.05; f1_norm:0.51
+SCP2171 __Geometric Mean; f1:0.2; f1_norm:0.5
+SCP2176 __CellPhoneDB; f1:0.11; f1_norm:0.46
+SCP2176 __Connectome; f1:0.11; f1_norm:0.51
+SCP2176 __CellChat; f1:0.1; f1_norm:0.43
+SCP2176 __scSeqComm; f1:0.12; f1_norm:0.51
+SCP2176 __SingleCellSignalR; f1:0.13; f1_norm:0.51
+SCP2176 __NATMI; f1:0.03; f1_norm:0.31
+SCP2176 __log2FC; f1:0.1; f1_norm:0.5
+SCP2176 __Rank_Aggregate; f1:0.04; f1_norm:0.56
+SCP2176 __Geometric Mean; f1:0.1; f1_norm:0.42
+wrote V1_figshare
+	Command being timed: "nice -n 19 /root/venvs/liana-slidetags/bin/python evaluate.py --reading V1"
+	User time (seconds): 299.29
+	System time (seconds): 4.94
+	Percent of CPU this job got: 93%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:26.53
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2990904
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 653140
+	Voluntary context switches: 61857
+	Involuntary context switches: 282
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
