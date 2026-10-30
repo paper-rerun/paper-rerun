@@ -38,10 +38,33 @@ Files too large for this repository (the ACT DR6 MCMC chains, about 24 MB, and a
 
 ## Open Tables datasets
 
-- [Fall armyworm control trials in Brazilian maize](https://github.com/paper-rerun/fall-armyworm-maize-trials-br): 2,075 results from 20 Embrapa publications, transcribed twice independently and checked against the PDFs.
-- [Asian soybean rust control trials in Brazil](https://github.com/paper-rerun/soybean-rust-trials-br): 5,836 results from 20 Embrapa publications, including five national summaries of the cooperative fungicide trials.
-- [Common bean disease management trials in Brazil](https://github.com/paper-rerun/bean-disease-trials-br): 1,562 results from 52 trials in 20 Embrapa publications.
-- [Cassava management trials in Brazil](https://github.com/paper-rerun/cassava-trials-br): 3,311 results from 77 trials in 20 Embrapa publications.
+Results that exist only in Portuguese-language PDFs, turned into open tables. Every entry was transcribed twice independently and checked against the PDF.
+
+Crop trials, each from 20 Embrapa publications:
+
+- [Asian soybean rust control trials](https://github.com/paper-rerun/soybean-rust-trials-br): 5,836 results, including five national summaries of the cooperative fungicide trials.
+- [Cassava management trials](https://github.com/paper-rerun/cassava-trials-br): 3,311 results from 77 trials.
+- [Rice blast management trials](https://github.com/paper-rerun/rice-blast-trials-br): 2,990 results.
+- [Wheat management trials](https://github.com/paper-rerun/wheat-trials-br): 2,851 results.
+- [Cowpea (feijão-caupi) trials](https://github.com/paper-rerun/cowpea-trials-br): 2,541 results.
+- [Fall armyworm control trials in maize](https://github.com/paper-rerun/fall-armyworm-maize-trials-br): 2,075 results.
+- [Tomato management trials](https://github.com/paper-rerun/tomato-trials-br): 2,068 results.
+- [Potato management trials](https://github.com/paper-rerun/potato-trials-br): 1,874 results.
+- [Common bean disease management trials](https://github.com/paper-rerun/bean-disease-trials-br): 1,562 results from 52 trials.
+
+Other fields:
+
+- [Historical public health results, 1960 to 1985](https://github.com/paper-rerun/public-health-historical-br): 2,619 aggregated results from 8 Brazilian studies.
+- [Fish landings and aquaculture trials](https://github.com/paper-rerun/fisheries-aquaculture-br): 1,672 results from 8 publications that exist only as PDF.
+- [Fauna and flora inventories](https://github.com/paper-rerun/biodiversity-inventories-br): 1,152 species occurrences from 8 Embrapa inventories not yet in GBIF.
+
+## After the report
+
+A rerun changes something only once the authors hear about it. [FOLLOWUP.md](FOLLOWUP.md) tracks the note each report sends to the authors, where it goes and what happened after. Some problems we find also keep changing: a new release of a dependency breaks the code, or a data server goes offline. [tools/drift_watch.py](tools/drift_watch.py) re-checks those every week, so a report can say whether its finding is still true today.
+
+## How to help
+
+Point us to a paper, pass a note to authors you know, use the datasets, or run a rerun in your own field. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Verdicts
 

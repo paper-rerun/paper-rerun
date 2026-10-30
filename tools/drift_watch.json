@@ -1,0 +1,50 @@
+{
+	"packages": [
+		{
+			"report": "2022-qu-particle-transformer",
+			"package": "weaver-core",
+			"install_spec": ">=0.4",
+			"bad_range": ">=0.5",
+			"tested": {"good": "0.4.17", "bad": "0.5.3"},
+			"finding": "The README installs weaver-core>=0.4. With 0.5.3 the released ParT checkpoint runs without error but scores 0.123 accuracy instead of 0.860."
+		},
+		{
+			"report": "2024-madhavacheril-act-dr6",
+			"package": "camb",
+			"install_spec": "",
+			"bad_range": ">=2.0",
+			"tested": {"good": "1.3.6", "bad": "2.0.5"},
+			"finding": "CAMB is not pinned. With CAMB 2.x every Cobaya run with the recommended settings fails: lens_margin is no longer a CAMB argument."
+		},
+		{
+			"report": "2024-madhavacheril-act-dr6",
+			"package": "pandas",
+			"install_spec": "",
+			"bad_range": ">=3.0",
+			"tested": {"good": "2.0.3", "bad": "3.0.6"},
+			"finding": "With pandas 3, the Cobaya 3.2.2 BAO likelihoods crash on assert self.has_type."
+		},
+		{
+			"report": "2025-dauparas-ligandmpnn",
+			"package": "setuptools",
+			"install_spec": "",
+			"bad_range": ">=84",
+			"tested": {"good": "80.10.2", "bad": "84"},
+			"finding": "setuptools 84 removed pkg_resources, so import prody (ProDy 2.4.1) fails. We held setuptools below 81."
+		}
+	],
+	"urls": [
+		{
+			"report": "2026-gilchrist-foldmason",
+			"url": "https://alphafold.ebi.ac.uk/files/AF-A0A010YRJ8-F1-model_v4.pdb",
+			"broken_if": ["404"],
+			"finding": "The benchmark expects AlphaFold DB model_v4 file names; v4 now returns 404 and only v6 is served."
+		},
+		{
+			"report": "2026-gilchrist-foldmason",
+			"url": "https://homstrad.mizuguchilab.org/homstrad/data/homstrad_with_PDB_2024_Dec_1.tar.gz",
+			"broken_if": ["no", "404", "500", "502", "503", "504"],
+			"finding": "The HOMSTRAD release behind Fig. 2A is offline since about May 2026 and not archived anywhere we could find."
+		}
+	]
+}
