@@ -1,0 +1,114 @@
+[
+ {
+  "kind": "Pull request",
+  "paper": "Particle Transformer",
+  "repository": "jet-universe/particle_transformer",
+  "ask": "README: pip install 'weaver-core>=0.4,<0.5'. With 0.5.x the released checkpoint gives near-random scores without any error.",
+  "status": "ready"
+ },
+ {
+  "kind": "Pull request",
+  "paper": "ACT DR6 lensing",
+  "repository": "ACTCollaboration/act_dr6_lenslike",
+  "ask": "README: say that the recommended settings need camb<2 (lens_margin was removed in CAMB 2).",
+  "status": "ready"
+ },
+ {
+  "kind": "Pull request",
+  "paper": "LigandMPNN",
+  "repository": "dauparas/LigandMPNN",
+  "ask": "requirements.txt: add setuptools<81, because ProDy 2.4.1 imports pkg_resources.",
+  "status": "ready"
+ },
+ {
+  "kind": "Pull request",
+  "paper": "FoldMason",
+  "repository": "steineggerlab/foldmason-analysis",
+  "ask": "compute_scores.sh calls an undefined compute_nirmsd; FoldMason_benchmarks.R filters \"Homstrad\" while name_map produces \"HOMSTRAD\".",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "Pantheon+",
+  "repository": "PantheonPlusSH0ES/DataRelease",
+  "ask": "Which prior and settings gave the w0waCDM row; whether the PolyChord chains behind Table 3 can be released.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "Particle Transformer",
+  "repository": "jet-universe/particle_transformer",
+  "ask": "Confirm that the released *_full.pt files are the Table 1 models (can go in the PR above).",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "CHGNet",
+  "repository": "CederGroupHub/chgnet",
+  "ask": "Publish the MPtrj train/val/test mp-ids used for model 0.2.0.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "miniprot",
+  "repository": "lh3/miniprot",
+  "ask": "The test protein lists and the evaluation command lines behind Table 1.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "ProteinGym",
+  "repository": "OATML-Markslab/ProteinGym",
+  "ask": "ESM2 scores on 5 long-protein assays; the ESM-1b scoring rule (same point as their issue #99); the averaging used for the headline numbers.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "LIANA+",
+  "repository": "saezlab/lianaplus_manuscript",
+  "ask": "The FDR correction in utils.join_pred_truth has no effect as written; which was intended. Plus the scSeqComm cutoff and the Spearman value in Supplementary Note 5.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "ACT DR6 lensing",
+  "repository": "ACTCollaboration/act_dr6_lenslike",
+  "ask": "Cobaya 3.6 data path error (may be their #19/#27); pandas 3 breaks the BAO likelihoods.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "LigandMPNN",
+  "repository": "dauparas/LigandMPNN",
+  "ask": "Six questions on the neighbourhood definition, metal context and checkpoint behind Fig. 2a.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "MatGL",
+  "repository": "materialyzeai/matgl",
+  "ask": "How Fig. 4 was computed; the COMP6 force sign; the ANI-MD description.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "Cellpose3",
+  "repository": "MouseLand/cellpose",
+  "ask": "Release the noisy test sets behind Fig. 1, 3 and 4.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "PlantCAD",
+  "repository": "plantcad/plantcad",
+  "ask": "float16 loading returns a float32 model with the pinned transformers.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "FoldMason",
+  "repository": "steineggerlab/foldmason",
+  "ask": "Deposit the HOMSTRAD release used for Fig. 2A (server offline, see their #38); 285 AFDB members deleted.",
+  "status": "ready"
+ }
+]
