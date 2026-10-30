@@ -44,7 +44,7 @@ A paper is split by **claim**: a number the paper reports, with its conditions a
 
 ## Code
 
-`tools/garimpo.py` builds the ranked list of candidate papers. `tools/reproduce-standard.js` (standard mode) and `tools/reproduce-paper-pipeline-v2.js` (full pipeline) are the orchestration scripts with every agent prompt, run with Claude Code's workflow tool. `tools/reproduce-paper-pipeline.js` is the first version of the pipeline, used for LigandMPNN.
+`tools/garimpo.py` builds the ranked list of candidate papers. `tools/reproduce-standard.js` (standard mode) and `tools/reproduce-paper-pipeline-v2.js` (full pipeline) are the orchestration scripts with every agent prompt, run with Claude Code's workflow tool. `tools/reproduce-paper-pipeline.js` is the first version of the pipeline, used for LigandMPNN. `templates/REPORT.md` is the report structure every rerun follows. `tools/drift_watch.py` re-checks, every week, whether the dependency and data problems our reports found are still live.
 
 ## Hardware
 
