@@ -1,0 +1,74 @@
+[
+ {
+  "dataset": "Asian soybean rust control trials",
+  "url": "https://github.com/paper-rerun/soybean-rust-trials-br",
+  "group": "Crop trials",
+  "records": 5836
+ },
+ {
+  "dataset": "Cassava management trials",
+  "url": "https://github.com/paper-rerun/cassava-trials-br",
+  "group": "Crop trials",
+  "records": 3311
+ },
+ {
+  "dataset": "Rice blast management trials",
+  "url": "https://github.com/paper-rerun/rice-blast-trials-br",
+  "group": "Crop trials",
+  "records": 2990
+ },
+ {
+  "dataset": "Wheat management trials",
+  "url": "https://github.com/paper-rerun/wheat-trials-br",
+  "group": "Crop trials",
+  "records": 2851
+ },
+ {
+  "dataset": "Cowpea (feijão-caupi) trials",
+  "url": "https://github.com/paper-rerun/cowpea-trials-br",
+  "group": "Crop trials",
+  "records": 2541
+ },
+ {
+  "dataset": "Fall armyworm control trials in maize",
+  "url": "https://github.com/paper-rerun/fall-armyworm-maize-trials-br",
+  "group": "Crop trials",
+  "records": 2075
+ },
+ {
+  "dataset": "Tomato management trials",
+  "url": "https://github.com/paper-rerun/tomato-trials-br",
+  "group": "Crop trials",
+  "records": 2068
+ },
+ {
+  "dataset": "Potato management trials",
+  "url": "https://github.com/paper-rerun/potato-trials-br",
+  "group": "Crop trials",
+  "records": 1874
+ },
+ {
+  "dataset": "Common bean disease management trials",
+  "url": "https://github.com/paper-rerun/bean-disease-trials-br",
+  "group": "Crop trials",
+  "records": 1562
+ },
+ {
+  "dataset": "Historical public health results, 1960 to 1985",
+  "url": "https://github.com/paper-rerun/public-health-historical-br",
+  "group": "Other fields",
+  "records": 2619
+ },
+ {
+  "dataset": "Fish landings and aquaculture trials",
+  "url": "https://github.com/paper-rerun/fisheries-aquaculture-br",
+  "group": "Other fields",
+  "records": 1672
+ },
+ {
+  "dataset": "Fauna and flora inventories",
+  "url": "https://github.com/paper-rerun/biodiversity-inventories-br",
+  "group": "Other fields",
+  "records": 1152
+ }
+]

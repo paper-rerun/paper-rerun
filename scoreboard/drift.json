@@ -1,0 +1,30 @@
+[
+ {
+  "report": "2022-qu-particle-transformer",
+  "package": "weaver-core",
+  "finding": "The README installs weaver-core>=0.4. With 0.5.3 the released ParT checkpoint runs without error but scores 0.123 accuracy instead of 0.860.",
+  "today": "installs weaver-core 0.5.4",
+  "status": "still in broken range, untested"
+ },
+ {
+  "report": "2024-madhavacheril-act-dr6",
+  "package": "camb",
+  "finding": "CAMB is not pinned. With CAMB 2.x every Cobaya run with the recommended settings fails: lens_margin is no longer a CAMB argument.",
+  "today": "installs camb 2.0.5",
+  "status": "still broken"
+ },
+ {
+  "report": "2024-madhavacheril-act-dr6",
+  "package": "pandas",
+  "finding": "With pandas 3, the Cobaya 3.2.2 BAO likelihoods crash on assert self.has_type.",
+  "today": "installs pandas 3.1.0",
+  "status": "still in broken range, untested"
+ },
+ {
+  "report": "2025-dauparas-ligandmpnn",
+  "package": "setuptools",
+  "finding": "setuptools 84 removed pkg_resources, so import prody (ProDy 2.4.1) fails. We held setuptools below 81.",
+  "today": "installs setuptools 84.2.1",
+  "status": "still in broken range, untested"
+ }
+]
