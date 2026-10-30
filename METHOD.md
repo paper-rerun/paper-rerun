@@ -8,7 +8,9 @@ We start from code, because without public code there is nothing to re-run. A sc
 - **Use (30%)**: stars, forks, and whether the repository is still maintained.
 - **Doubt (30%)**: issues where people ask about reproducing the paper's results, with extra weight on those nobody answered.
 
-Health, food, energy and climate get a 10% bonus. The top of the list then goes through triage before anything runs.
+A wrong result costs most where papers feed decisions, so papers on health, food, water, energy and climate get a bonus of up to 20%. Its size comes from how strongly OpenAlex links the paper to the matching UN Sustainable Development Goals (hunger, health, water, energy, climate); a repository tagged with one of those topics gets at least 10%. The top of the list then goes through triage before anything runs.
+
+The same search can be limited to one country: `--country BR` keeps only papers with at least one author at a Brazilian institution. Groups outside the largest labs have fewer stars, so this goes with a lower cutoff, for example `--country BR --min-stars 10`.
 
 ## Standard mode
 
