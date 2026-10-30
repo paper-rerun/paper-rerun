@@ -3,16 +3,20 @@
 Starts from science repos on GitHub, finds the paper DOI in the README or CITATION.cff,
 pulls citations from OpenAlex and counts reproduction issues. Writes ranking.csv and TOP.md.
 
-Usage: python -I garimpo.py [max_repos_for_issue_check]
+Usage: python -I garimpo.py [max_repos_for_issue_check] [max_topics] [--country BR] [--min-stars 80]
+  --country    keep only papers with at least one author at an institution in that country
+               (ISO code, as OpenAlex gives it). Repos from smaller groups have fewer stars,
+               so pair it with a lower --min-stars, e.g. --country BR --min-stars 10.
+  --min-stars  GitHub stars a repo needs to enter the candidate list (default 80).
 Needs: gh logged in. No other dependencies.
 """
 
+import argparse
 import csv
 import json
 import math
 import re
 import subprocess
-import sys
 import time
 import urllib.parse
 import urllib.request
@@ -49,6 +53,15 @@ SKIP_DOI_PREFIXES = ("10.5281/zenodo", "10.5281/", "10.6084/m9.figshare")
 REPRODUCTION_QUERY = "reproduce paper"
 CITATION_HEADING_PATTERN = re.compile(r"(^#+\s*cit|^\s*@(article|inproceedings|misc)|please cite|if you use)", re.IGNORECASE | re.MULTILINE)
 CURRENT_YEAR = 2026
+PAPER_FIELDS = "id,doi,title,cited_by_count,publication_year,counts_by_year,type,primary_location,sustainable_development_goals,authorships"
+
+# A wrong result costs most where papers feed decisions about health, food, water, energy and
+# climate. OpenAlex tags each paper with UN Sustainable Development Goals and a score from 0 to 1
+STAKES_GOALS = {2: "Zero hunger", 3: "Good health", 6: "Clean water", 7: "Clean energy", 13: "Climate action"}
+# The bonus goes up to 20% for a paper OpenAlex links strongly to those goals; a repo topic in
+# WELFARE_TOPICS alone still counts as a score of 0.5, which is the old flat 10%
+MAX_STAKES_BONUS = 0.2
+WELFARE_TOPIC_STAKES = 0.5
 
 
 def run_gh(arguments):
@@ -68,7 +81,7 @@ def gh_search(endpoint, query, per_page):
 
 
 def fetch_openalex_work(doi):
-	url = "https://api.openalex.org/works/doi:" + urllib.parse.quote(doi) + "?select=id,title,cited_by_count,publication_year,counts_by_year,type,primary_location"
+	url = "https://api.openalex.org/works/doi:" + urllib.parse.quote(doi) + "?select=" + PAPER_FIELDS
 	try:
 		with urllib.request.urlopen(url, timeout=30) as response:
 			return json.loads(response.read().decode("utf-8"))
@@ -76,10 +89,10 @@ def fetch_openalex_work(doi):
 		return None
 
 
-def find_candidate_repos(topics):
+def find_candidate_repos(topics, min_stars):
 	repos_by_name = {}
 	for topic in topics:
-		query = f"topic:{topic} created:>2022-01-01 stars:>80"
+		query = f"topic:{topic} created:>2022-01-01 stars:>{min_stars}"
 		search_result = gh_search("repositories", query, 50)
 		if not search_result:
 			continue
@@ -125,7 +138,7 @@ def normalize(text):
 
 
 def search_openalex_by_title(name):
-	url = "https://api.openalex.org/works?filter=title.search:" + urllib.parse.quote(name) + ",from_publication_date:2021-01-01&sort=cited_by_count:desc&per_page=5&select=id,doi,title,cited_by_count,publication_year,counts_by_year,type,primary_location"
+	url = "https://api.openalex.org/works?filter=title.search:" + urllib.parse.quote(name) + ",from_publication_date:2021-01-01&sort=cited_by_count:desc&per_page=5&select=" + PAPER_FIELDS
 	try:
 		with urllib.request.urlopen(url, timeout=30) as response:
 			return json.loads(response.read().decode("utf-8")).get("results", [])
@@ -174,13 +187,42 @@ def scale_log(value, max_value):
 	return math.log1p(value) / math.log1p(max_value)
 
 
+def stakes(paper):
+	"""Strongest link (0 to 1) to the goals in STAKES_GOALS, and their names."""
+	best, names = 0.0, []
+	for goal in paper.get("sustainable_development_goals") or []:
+		number = int(str(goal.get("id", "")).rstrip("/").rsplit("/", 1)[-1] or 0)
+		if number in STAKES_GOALS:
+			best = max(best, float(goal.get("score") or 0))
+			names.append(STAKES_GOALS[number])
+	return best, names
+
+
+def author_countries(paper):
+	countries = set()
+	for authorship in paper.get("authorships") or []:
+		countries.update(authorship.get("countries") or [])
+		countries.update(i["country_code"] for i in authorship.get("institutions") or [] if i.get("country_code"))
+	return countries
+
+
+def parse_arguments():
+	parser = argparse.ArgumentParser(description="Build the ranked queue of papers worth reproducing.")
+	parser.add_argument("max_repos_for_issue_check", nargs="?", type=int, default=80)
+	# Limits topics, for a quick test run
+	parser.add_argument("max_topics", nargs="?", type=int, default=len(SCIENCE_TOPICS))
+	parser.add_argument("--country", help="keep only papers with an author at an institution in this country (ISO code)")
+	parser.add_argument("--min-stars", type=int, default=80)
+	return parser.parse_args()
+
+
 def main():
-	max_repos_for_issue_check = int(sys.argv[1]) if len(sys.argv) > 1 else 80
-	# Second argument limits topics, for a quick test run
-	max_topics = int(sys.argv[2]) if len(sys.argv) > 2 else len(SCIENCE_TOPICS)
+	arguments = parse_arguments()
+	max_repos_for_issue_check = arguments.max_repos_for_issue_check
+	country = arguments.country.upper() if arguments.country else None
 	cache = json.loads(CACHE_FILE.read_text(encoding="utf-8")) if CACHE_FILE.exists() else {}
 
-	repos = find_candidate_repos(SCIENCE_TOPICS[:max_topics])
+	repos = find_candidate_repos(SCIENCE_TOPICS[:arguments.max_topics], arguments.min_stars)
 	print(f"{len(repos)} candidate repos")
 
 	# Attach the paper behind each repo, skipping repos with no peer-reviewed-looking paper
@@ -194,12 +236,20 @@ def main():
 		paper = cache[full_name]["paper"]
 		if not paper:
 			continue
+		# Papers cached before goals and authorships were requested get them now
+		if "authorships" not in paper:
+			refreshed = fetch_openalex_work(paper["doi"])
+			if refreshed:
+				paper.update({"sustainable_development_goals": refreshed.get("sustainable_development_goals"), "authorships": refreshed.get("authorships")})
+				CACHE_FILE.write_text(json.dumps(cache), encoding="utf-8")
+		if country and country not in author_countries(paper):
+			continue
 		# Under 20 recent citations nobody is building on it yet (and it was letting library papers in)
 		if recent_citations(paper) < 20:
 			continue
 		repo["paper"] = paper
 		candidates.append(repo)
-	print(f"{len(candidates)} with a paper found")
+	print(f"{len(candidates)} with a paper found" + (f" and an author in {country}" if country else ""))
 
 	# Preliminary score without issues, to spend the slow issue search on the best ones
 	max_recent_citations = max((recent_citations(c["paper"]) for c in candidates), default=1)
@@ -217,28 +267,34 @@ def main():
 			CACHE_FILE.write_text(json.dumps(cache), encoding="utf-8")
 		candidate["repro_issues"], candidate["repro_unanswered"] = cache[full_name]["issues"]
 
-	# Final score: impact 40%, usage 30%, doubt 30%, welfare bonus 10%
+	# Final score: impact 40%, usage 30%, doubt 30%, then a stakes bonus of up to 20%
 	checked = candidates[:max_repos_for_issue_check]
 	max_doubt = max((c["repro_issues"] + 2 * c["repro_unanswered"] for c in checked), default=1)
 	for candidate in checked:
 		doubt = scale_log(candidate["repro_issues"] + 2 * candidate["repro_unanswered"], max_doubt)
-		welfare_bonus = 1.1 if candidate["topics"] & WELFARE_TOPICS else 1.0
-		candidate["score"] = round((0.4 * candidate["impact"] + 0.3 * candidate["usage"] + 0.3 * doubt) * welfare_bonus, 3)
+		goal_score, candidate["stakes_goals"] = stakes(candidate["paper"])
+		topic_score = WELFARE_TOPIC_STAKES if candidate["topics"] & WELFARE_TOPICS else 0.0
+		candidate["stakes"] = round(max(goal_score, topic_score), 3)
+		bonus = 1 + MAX_STAKES_BONUS * candidate["stakes"]
+		candidate["score"] = round((0.4 * candidate["impact"] + 0.3 * candidate["usage"] + 0.3 * doubt) * bonus, 3)
 	checked.sort(key=lambda c: c["score"], reverse=True)
 
 	with open(OUTPUT_FOLDER / "ranking.csv", "w", newline="", encoding="utf-8") as csv_file:
 		writer = csv.writer(csv_file)
-		writer.writerow(["score", "repo", "stars", "pushed_at", "recent_citations", "total_citations", "repro_issues", "repro_unanswered", "year", "venue", "doi", "title", "topics"])
+		writer.writerow(["score", "repo", "stars", "pushed_at", "recent_citations", "total_citations", "repro_issues", "repro_unanswered", "stakes", "stakes_goals", "author_countries", "year", "venue", "doi", "title", "topics"])
 		for c in checked:
 			paper = c["paper"]
 			venue = ((paper.get("primary_location") or {}).get("source") or {}).get("display_name", "")
 			writer.writerow([c["score"], c["repo"], c["stars"], c["pushed_at"], recent_citations(paper), paper["cited_by_count"],
-				c["repro_issues"], c["repro_unanswered"], paper["publication_year"], venue, paper["doi"], paper["title"], " ".join(sorted(c["topics"]))])
+				c["repro_issues"], c["repro_unanswered"], c["stakes"], "; ".join(c["stakes_goals"]), " ".join(sorted(author_countries(paper))),
+				paper["publication_year"], venue, paper["doi"], paper["title"], " ".join(sorted(c["topics"]))])
 
-	lines = ["# Fila de candidatos", "", "| # | Nota | Repo | Citações (ano+atual) | Issues de reprodução (sem resposta) | Artigo |", "|---|---|---|---|---|---|"]
+	title = "# Fila de candidatos" + (f" com autores em {country}" if country else "")
+	lines = [title, "", "| # | Nota | Repo | Citações (ano+atual) | Issues de reprodução (sem resposta) | Metas da ONU | Artigo |", "|---|---|---|---|---|---|---|"]
 	for position, c in enumerate(checked[:30], start=1):
 		paper = c["paper"]
-		lines.append(f"| {position} | {c['score']} | {c['repo']} | {recent_citations(paper)} | {c['repro_issues']} ({c['repro_unanswered']}) | {paper['title'][:80]} ({paper['publication_year']}) |")
+		goals = ", ".join(c["stakes_goals"]) or "-"
+		lines.append(f"| {position} | {c['score']} | {c['repo']} | {recent_citations(paper)} | {c['repro_issues']} ({c['repro_unanswered']}) | {goals} | {paper['title'][:80]} ({paper['publication_year']}) |")
 	(OUTPUT_FOLDER / "TOP.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 	print("wrote ranking.csv and TOP.md")
 
