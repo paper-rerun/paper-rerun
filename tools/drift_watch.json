@@ -4,8 +4,9 @@
 			"report": "2022-qu-particle-transformer",
 			"package": "weaver-core",
 			"install_spec": ">=0.4",
-			"bad_range": ">=0.5",
+			"bad_range": ">=0.5,<0.5.4",
 			"tested": {"good": "0.4.17", "bad": "0.5.3"},
+			"fixed_in": "0.5.4 (author fix after our issue jet-universe/particle_transformer#6)",
 			"finding": "The README installs weaver-core>=0.4. With 0.5.3 the released ParT checkpoint runs without error but scores 0.123 accuracy instead of 0.860."
 		},
 		{
