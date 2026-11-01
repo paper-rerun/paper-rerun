@@ -4,7 +4,7 @@
   "paper": "Particle Transformer",
   "repository": "jet-universe/particle_transformer",
   "ask": "README: pip install 'weaver-core>=0.4,<0.5'. With 0.5.x the released checkpoint gives near-random scores without any error.",
-  "status": "posted"
+  "status": "fixed"
  },
  {
   "kind": "Pull request",
@@ -39,7 +39,7 @@
   "paper": "Particle Transformer",
   "repository": "jet-universe/particle_transformer",
   "ask": "Confirm that the released *_full.pt files are the Table 1 models (can go in the PR above).",
-  "status": "posted"
+  "status": "answered"
  },
  {
   "kind": "Issue",
@@ -88,7 +88,7 @@
   "paper": "MatGL",
   "repository": "materialyzeai/matgl",
   "ask": "How Fig. 4 was computed; the COMP6 force sign; the ANI-MD description.",
-  "status": "posted"
+  "status": "closed without change"
  },
  {
   "kind": "Issue",
