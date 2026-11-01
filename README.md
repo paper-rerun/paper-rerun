@@ -68,7 +68,7 @@ Other fields:
 
 - [Historical public health results, 1960 to 1985](https://github.com/paper-rerun/public-health-historical-br): 2,619 aggregated results from 8 Brazilian studies.
 - [Fish landings and aquaculture trials](https://github.com/paper-rerun/fisheries-aquaculture-br): 1,672 results from 8 publications that exist only as PDF.
-- [Fauna and flora inventories](https://github.com/paper-rerun/biodiversity-inventories-br): 1,152 species occurrences from 8 Embrapa inventories not yet in GBIF.
+- [Fauna and flora inventories](https://github.com/paper-rerun/biodiversity-inventories-br): 2,850 species occurrences from 28 Brazilian inventories (Embrapa and university dissertations) not yet in GBIF.
 
 ## After the report
 
