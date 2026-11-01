@@ -8,6 +8,18 @@ Most papers that ship code are never re-run by anyone outside the lab that wrote
 
 The work is done by AI agents (Claude, by Anthropic) on one home computer, and a human reviews every report before it goes out. See [how we work](METHOD.md).
 
+## Why this exists
+
+I am a game developer, not a scientist. I pay for an AI plan that sits idle part of the week, and I wanted that time to do something useful for people outside my work.
+
+Checking published results is a good fit. It is slow work that nobody gets credit for, so it rarely happens. But it matters: other studies, tools and decisions are built on top of these papers. An agent can spend hours setting up someone else's code without getting bored, and a single home computer can run most of it.
+
+The Open Tables datasets started from the same idea, with food in mind. Years of Brazilian field trials on beans, rice, cassava and other staples sit in PDFs that are hard to search. Making them open and checked is a small contribution to people who work on feeding others.
+
+I also want to show that AI can make science stronger when it is used in the open: every report says how it was made, and every step can be checked. If you have idle compute or an AI plan, you can do the same in your own field. The method and scripts are public.
+
+Filipe Tessaro
+
 ## What we do
 
 - **Rerun**: we re-run published research code on the authors' data and report what holds.
