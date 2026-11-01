@@ -54,7 +54,7 @@ Results that exist only in Portuguese-language PDFs, turned into open tables. Ev
 
 Crop trials, each from 20 Embrapa publications:
 
-- [Asian soybean rust control trials](https://github.com/paper-rerun/soybean-rust-trials-br): 5,836 results, including five national summaries of the cooperative fungicide trials.
+- [Asian soybean rust control trials](https://github.com/paper-rerun/soybean-rust-trials-br): 17,845 results, including the national summaries of the cooperative fungicide trials for 22 seasons (2003/04 to 2025/26) and an analysis of efficacy over time.
 - [Cassava management trials](https://github.com/paper-rerun/cassava-trials-br): 3,311 results from 77 trials.
 - [Rice blast management trials](https://github.com/paper-rerun/rice-blast-trials-br): 2,990 results.
 - [Wheat management trials](https://github.com/paper-rerun/wheat-trials-br): 2,851 results.
