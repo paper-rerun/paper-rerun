@@ -54,10 +54,10 @@
   "records": 1562
  },
  {
-  "dataset": "Historical public health results, 1960 to 1985",
+  "dataset": "Historical public health results, 1960 to 1989",
   "url": "https://github.com/paper-rerun/public-health-historical-br",
   "group": "Other fields",
-  "records": 2619
+  "records": 7467
  },
  {
   "dataset": "Fish landings and aquaculture trials",
