@@ -18,14 +18,14 @@
   "paper": "LigandMPNN",
   "repository": "dauparas/LigandMPNN",
   "ask": "requirements.txt: add setuptools<81, because ProDy 2.4.1 imports pkg_resources.",
-  "status": "ready"
+  "status": "posted"
  },
  {
   "kind": "Pull request",
   "paper": "FoldMason",
   "repository": "steineggerlab/foldmason-analysis",
   "ask": "compute_scores.sh calls an undefined compute_nirmsd; FoldMason_benchmarks.R filters \"Homstrad\" while name_map produces \"HOMSTRAD\".",
-  "status": "ready"
+  "status": "posted"
  },
  {
   "kind": "Issue",
