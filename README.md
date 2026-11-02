@@ -59,6 +59,7 @@ Crop trials, each from 20 Embrapa publications:
 - [Rice blast management trials](https://github.com/paper-rerun/rice-blast-trials-br): 2,990 results.
 - [Wheat management trials](https://github.com/paper-rerun/wheat-trials-br): 2,851 results.
 - [Cowpea (feijão-caupi) trials](https://github.com/paper-rerun/cowpea-trials-br): 2,541 results.
+- [Coffee trials](https://github.com/paper-rerun/coffee-trials-br): 2,108 results from 27 trials.
 - [Fall armyworm control trials in maize](https://github.com/paper-rerun/fall-armyworm-maize-trials-br): 2,075 results.
 - [Tomato management trials](https://github.com/paper-rerun/tomato-trials-br): 2,068 results.
 - [Potato management trials](https://github.com/paper-rerun/potato-trials-br): 1,874 results.

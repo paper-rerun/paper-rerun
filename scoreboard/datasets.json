@@ -30,6 +30,12 @@
   "records": 2541
  },
  {
+  "dataset": "Coffee trials",
+  "url": "https://github.com/paper-rerun/coffee-trials-br",
+  "group": "Crop trials",
+  "records": 2108
+ },
+ {
   "dataset": "Fall armyworm control trials in maize",
   "url": "https://github.com/paper-rerun/fall-armyworm-maize-trials-br",
   "group": "Crop trials",
