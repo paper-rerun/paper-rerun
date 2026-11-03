@@ -1,0 +1,18 @@
+cmd: nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta0.1_Train.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1
+cwd: /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/runs/jobs/Darcy-beta0.1-FNO
+FNO
+Epochs = 500, learning rate = 0.001, scheduler step = 100, scheduler gamma = 0.5
+FNODatasetSingle
+.HDF5 file extension is assumed hereafter
+.HDF5 file extension is assumed hereafter
+Spatial Dimension 2
+Total parameters = 465377
+RMSE: 0.00623
+normalized RMSE: 0.22124
+RMSE of conserved variables: 0.00766
+Maximum value of rms error: 0.08897
+RMSE at boundaries: 0.00502
+RMSE in Fourier space: [3.5964190e-03 2.6032329e-04 4.5007917e-05]
+Done.
+
+returncode 0 wall 56.5 s

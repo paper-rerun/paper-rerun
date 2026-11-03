@@ -1,0 +1,9 @@
+# compleasm version is: 0.2.10
+# The lineage dataset is: liliopsida_odb10 (Creation date: 2024-01-08, number of genomes: 15, number of BUSCOs: 3236)
+## lineage: liliopsida_odb10
+S:83.99%, 2718
+D:15.42%, 499
+F:0.34%, 11
+I:0.00%, 0
+M:0.25%, 8
+N:3236

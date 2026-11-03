@@ -1,0 +1,18 @@
+cmd: nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Bgs.yaml ++args.filename=1D_Burgers_Sols_Nu0.01.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+cwd: /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/runs/jobs/Burgers-nu0.01-FNO
+FNO
+Epochs = 500, learning rate = 0.001, scheduler step = 100, scheduler gamma = 0.5
+FNODatasetSingle
+.HDF5 file extension is assumed hereafter
+.HDF5 file extension is assumed hereafter
+Spatial Dimension 1
+Total parameters = 23937
+RMSE: 0.00608
+normalized RMSE: 0.01819
+RMSE of conserved variables: 0.00067
+Maximum value of rms error: 0.14229
+RMSE at boundaries: 0.00657
+RMSE in Fourier space: [0.00069469 0.00087897 0.00026977]
+Done.
+
+returncode 0 wall 151.3 s

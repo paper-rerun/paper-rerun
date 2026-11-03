@@ -1,0 +1,40 @@
+start 2026-11-03T16:59:51-03:00 tag=dmel asm=GCF_000001215.4_Release_6_plus_ISO1_MT lineage=diptera_odb10 outs=0.95
+[M::mp_ntseq_read@12.603*0.08] read 143726002 bases in 1870 contigs
+[M::mp_idx_build@12.603*0.08] 1124796 blocks
+[M::mp_idx_build@13.749*0.56] collected syncmers
+[M::mp_idx_build@14.668*0.59] 74591866 kmer-block pairs
+[M::mp_mapopt_set_max_intron] set max intron size to 43159
+[M::mp_idx_print_stat] 2284812 distinct k-mers; mean occ of infrequent k-mers: 32.65; 0 frequent k-mers accounting for 0 occurrences
+[M::worker_pipeline::23.245*3.30] mapped 1901 sequences
+[M::worker_pipeline::31.036*4.48] mapped 2205 sequences
+[M::worker_pipeline::38.002*5.13] mapped 2384 sequences
+[M::worker_pipeline::44.583*5.55] mapped 2576 sequences
+[M::worker_pipeline::53.127*5.92] mapped 2786 sequences
+[M::worker_pipeline::61.944*6.21] mapped 2935 sequences
+[M::worker_pipeline::70.083*6.42] mapped 3312 sequences
+[M::worker_pipeline::79.073*6.60] mapped 3649 sequences
+[M::worker_pipeline::92.463*6.80] mapped 4225 sequences
+[M::worker_pipeline::99.949*6.89] mapped 5201 sequences
+[M::worker_pipeline::106.449*6.96] mapped 3081 sequences
+[M::worker_pipeline::110.798*6.78] mapped 810 sequences
+[M::main] Version: 0.11-r234
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot --trans -u -I --outs=0.95 -t 8 --gff /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/genomes/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/mb_downloads/diptera_odb10/refseq_db.faa.gz
+[M::main] Real time: 110.815 sec; CPU: 751.698 sec; Peak RSS: 1.992 GB
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot
+lineage: diptera_odb10
+hmmsearch execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/hmmsearch
+
+S:99.63%, 3273
+D:0.30%, 10
+F:0.00%, 0
+I:0.00%, 0
+M:0.06%, 2
+N:3285
+
+## Download lineage: 0.00(s)
+## Run miniprot: 110.85(s)
+## Analyze miniprot: 262.81(s)
+## Total runtime: 373.66(s)
+end 2026-11-03T17:06:14-03:00 rc=0

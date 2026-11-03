@@ -1,0 +1,20 @@
+.HDF5 file extension is assumed hereafter
+reader equals authors loader on beta4.0: True
+beta4.0 file t-coordinate[::5][:3] [0.         0.05       0.09999999]
+FNO ckpt beta 0.1 on test data beta 0.1 nRMSE 0.0092796
+FNO ckpt beta 0.4 on test data beta 0.1 nRMSE 0.63087
+FNO ckpt beta 1.0 on test data beta 0.1 nRMSE 0.6264
+FNO ckpt beta 4.0 on test data beta 0.1 nRMSE 0.64028
+FNO ckpt beta 0.1 on test data beta 0.4 nRMSE 0.85991
+FNO ckpt beta 0.4 on test data beta 0.4 nRMSE 0.010931
+FNO ckpt beta 1.0 on test data beta 0.4 nRMSE 0.011786
+FNO ckpt beta 4.0 on test data beta 0.4 nRMSE 0.60337
+FNO ckpt beta 0.1 on test data beta 1.0 nRMSE 0.68879
+FNO ckpt beta 0.4 on test data beta 1.0 nRMSE 0.771
+FNO ckpt beta 1.0 on test data beta 1.0 nRMSE 0.62654
+FNO ckpt beta 4.0 on test data beta 1.0 nRMSE 0.33989
+FNO ckpt beta 0.1 on test data beta 4.0 nRMSE 0.81862
+FNO ckpt beta 0.4 on test data beta 4.0 nRMSE 0.88075
+FNO ckpt beta 1.0 on test data beta 4.0 nRMSE 0.70856
+FNO ckpt beta 4.0 on test data beta 4.0 nRMSE 0.010004
+exit 0

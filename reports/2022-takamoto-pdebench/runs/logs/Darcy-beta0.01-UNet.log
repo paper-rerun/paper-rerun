@@ -1,0 +1,15 @@
+cmd: nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta0.01_Train.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1 ++args.ar_mode=True ++args.pushforward=True ++args.unroll_step=1
+cwd: /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/runs/jobs/Darcy-beta0.01-UNet
+Unet
+Epochs = 500, learning rate = 0.001, scheduler step = 100, scheduler gamma = 0.5
+Spatial Dimension 2
+Total parameters = 7762465
+RMSE: 0.00397
+normalized RMSE: 1.06353
+RMSE of conserved variables: 0.00578
+Maximum value of rms error: 0.06817
+RMSE at boundaries: 0.00063
+RMSE in Fourier space: [2.468273e-03 1.271727e-04 2.124568e-05]
+Done.
+
+returncode 0 wall 142.4 s

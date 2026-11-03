@@ -1,0 +1,19 @@
+start 2026-11-03T17:57:00-03:00 tag=hsap asm=GCF_009914755.1_T2T-CHM13v2.0 lineage=primates_odb10 outs=0.95
+[M::mp_ntseq_read@69.790*0.26] read 3117275501 bases in 24 contigs
+[M::mp_idx_build@69.790*0.26] 24353736 blocks
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot
+lineage: primates_odb10
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 2538, in <module>
+    main()
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 2534, in main
+    args.func(args)
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 2426, in run
+    mr.Run()
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 2118, in Run
+    miniprot_output_path = self.miniprot_runner.run_miniprot(self.assembly_path,
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 304, in run_miniprot
+    raise Exception("miniprot exited with non-zero exit code: {}".format(exitcode))
+Exception: miniprot exited with non-zero exit code: -9
+end 2026-11-03T17:58:42-03:00 rc=1

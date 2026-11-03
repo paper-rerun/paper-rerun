@@ -1,0 +1,45 @@
+start 2026-11-03T19:20:58-03:00 tag=outs097_zmay asm=GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0 lineage=liliopsida_odb10 outs=0.97
+[M::mp_ntseq_read@24.732*0.50] read 2182786008 bases in 687 contigs
+[M::mp_idx_build@24.733*0.50] 17053702 blocks
+[M::mp_idx_build@39.441*3.07] collected syncmers
+[M::mp_idx_build@49.994*2.63] 1178526706 kmer-block pairs
+[M::mp_mapopt_set_max_intron] set max intron size to 168194
+[M::mp_idx_print_stat] 2395936 distinct k-mers; mean occ of infrequent k-mers: 462.13; 2240 frequent k-mers accounting for 72331750 occurrences
+[M::worker_pipeline::76.461*4.42] mapped 2992 sequences
+[M::worker_pipeline::100.304*5.28] mapped 3065 sequences
+[M::worker_pipeline::126.210*5.84] mapped 3226 sequences
+[M::worker_pipeline::153.075*6.21] mapped 3491 sequences
+[M::worker_pipeline::178.205*6.47] mapped 4007 sequences
+[M::worker_pipeline::205.780*6.66] mapped 4007 sequences
+[M::worker_pipeline::232.571*6.81] mapped 4183 sequences
+[M::worker_pipeline::261.016*6.94] mapped 4424 sequences
+[M::worker_pipeline::302.968*7.08] mapped 5280 sequences
+[M::worker_pipeline::333.428*7.16] mapped 5202 sequences
+[M::worker_pipeline::368.210*7.24] mapped 6042 sequences
+[M::worker_pipeline::401.051*7.30] mapped 5976 sequences
+[M::worker_pipeline::421.621*7.34] mapped 2433 sequences
+[M::worker_pipeline::443.689*7.37] mapped 2592 sequences
+[M::worker_pipeline::465.023*7.39] mapped 2726 sequences
+[M::worker_pipeline::488.360*7.42] mapped 2867 sequences
+[M::worker_pipeline::488.429*7.42] mapped 148 sequences
+[M::main] Version: 0.11-r234
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot --trans -u -I --outs=0.97 -t 8 --gff /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/genomes/GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/mb_downloads/liliopsida_odb10/refseq_db.faa.gz
+[M::main] Real time: 488.514 sec; CPU: 3624.356 sec; Peak RSS: 25.367 GB
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot
+lineage: liliopsida_odb10
+hmmsearch execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/hmmsearch
+
+S:85.78%, 2776
+D:13.63%, 441
+F:0.34%, 11
+I:0.00%, 0
+M:0.25%, 8
+N:3236
+
+## Download lineage: 0.00(s)
+## Run miniprot: 488.54(s)
+## Analyze miniprot: 241.10(s)
+## Total runtime: 729.64(s)
+end 2026-11-03T19:33:28-03:00 rc=0

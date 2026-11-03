@@ -1,0 +1,15 @@
+cmd: nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Bgs.yaml ++args.filename=1D_Burgers_Sols_Nu0.001.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+cwd: /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/runs/jobs/Burgers-nu0.001-UNet
+Unet
+Epochs = 500, learning rate = 0.001, scheduler step = 100, scheduler gamma = 0.5
+Spatial Dimension 1
+Total parameters = 2708673
+RMSE: 0.11173
+normalized RMSE: 0.34209
+RMSE of conserved variables: 0.05913
+Maximum value of rms error: 0.56915
+RMSE at boundaries: 0.10322
+RMSE in Fourier space: [0.04073565 0.0109521  0.00149008]
+Done.
+
+returncode 0 wall 211.4 s

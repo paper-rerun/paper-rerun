@@ -1,0 +1,4 @@
+9f35d8f3945f6a0b911437c52bb2662a  /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin_head/_version.py
+5928137fa2d05e6caa4ef0f6cc20fcda  /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin_head/compleasm.py
+545731ff2f562f7e69b1c97f4c25b602  /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin_head/hmmsearch
+df70b4a91be3d92679dd70c94a865b5d  /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin_head/miniprot

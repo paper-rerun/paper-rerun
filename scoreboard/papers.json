@@ -1,5 +1,31 @@
 [
  {
+  "paper": "compleasm",
+  "report": "2023-huang-compleasm",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2023-huang-compleasm/REPORT.md",
+  "venue": "Bioinformatics",
+  "year": 2023,
+  "field": "genomics",
+  "area": "Biology",
+  "verdict": "Not reproduced",
+  "main_issue": "Reference data re-released",
+  "finding": "Table 1 (compleasm rows) with the v0.2.2 release: six of seven genomes agree within 0.3 points on every category, but maize gives 99.4% complete against 96.7%. The same counts come out of v0.2.10, so the likely cause is the 2024 re-release of the BUSCO odb10 lineages; the 2023 files are no longer served. v0.2.2 also crashes on today's lineage index. We asked the authors for the 2023 lineage files.",
+  "rerun_date": "2026-11-03"
+ },
+ {
+  "paper": "PDEBench",
+  "report": "2022-takamoto-pdebench",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2022-takamoto-pdebench/REPORT.md",
+  "venue": "NeurIPS",
+  "year": 2022,
+  "field": "machine learning",
+  "area": "Computing",
+  "verdict": "Partially reproduced",
+  "main_issue": "Released checkpoints differ from the paper",
+  "finding": "2022 tables with the 2022 data and checkpoints: 21 of 26 nRMSE values match at the printed 2 significant figures, including all 10 Darcy Flow values. The released 2022 Advection β=1.0 FNO checkpoint behaves like a β=0.4 model (nRMSE 0.63 against 5.9e-03), and three Burgers FNOs come out 1-9% lower. We told the authors.",
+  "rerun_date": "2026-11-03"
+ },
+ {
   "paper": "FoldMason",
   "report": "2026-gilchrist-foldmason",
   "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2026-gilchrist-foldmason/REPORT.md",

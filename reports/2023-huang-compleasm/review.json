@@ -1,0 +1,70 @@
+{
+ "issues": [
+  {
+   "severity": "major",
+   "where": "Alternative readings, bullet 'Using the tool's two-decimal output instead of the raw counts'",
+   "problem": "A frase \"No cell lies on an x.x5 boundary\" é falsa. Dois valores impressos caem exatamente num x.x5. S. cerevisiae S sai como \"S:97.85%\" (runs/scer/summary.txt): arredondando half-up dá 97.9, e pela contagem crua 2091/2137 = 97.8474 dá 97.8. Z. mays M sai como \"M:0.25%\" (runs/zmay/summary.txt): dá 0.3 pelo valor impresso e 0.2 pela contagem crua 8/3236 = 0.2472. Ou seja, o caminho pelas duas casas decimais muda dois números de uma casa. Nenhum dos dois muda status nem veredito: o S do levedo fica em +0.3, exatamente no limite, e o M do milho passa a bater com o 0.3 do artigo.",
+   "fix": "Trocar o bullet por: \"Rounding the tool's two-decimal print instead of the raw counts changes two one-decimal values: S. cerevisiae S (printed 97.85%) becomes 97.9 instead of 97.8, so the diff is +0.3, at the edge of the tolerance, and Z. mays M (printed 0.25%) becomes 0.3 instead of 0.2, matching the paper. Neither changes a status or the verdict.\""
+  },
+  {
+   "severity": "major",
+   "where": "Opening summary paragraph and the Results table (C rows)",
+   "problem": "\"Six of the seven genomes match\" esconde que nenhum dos 7 valores de C bate na casa decimal do artigo. Nossos C são 99.4/99.9/100.0/99.9/99.9/99.8, contra 99.2/99.8/99.9/99.7/99.7/99.6 no artigo. Todo C fica 0.10 a 0.24 acima e todo F fica abaixo, e o F do levedo (0 de 2137 contra 6-7 no artigo) está exatamente no limite de 0.30. A concordância vem inteira da tolerância de 0.3 escolhida pra absorver a troca de lineage. Além disso, \"every N is exact, including the human 99.6% from the abstract (we get 99.84%)\" emenda N com C e dá a entender que o 99.6 é exato, quando o nosso arredonda pra 99.8.",
+   "fix": "Reescrever a abertura assim: \"In six of the seven genomes, all 30 percentages fall within the pre-registered 0.3-point tolerance, but the agreement depends on that tolerance: none of the seven C values equals the paper at one decimal. C is 0.10 to 0.24 points higher and F 0.10 to 0.30 points lower in every genome (S. cerevisiae F is 0 against the paper's 0.3, exactly at the tolerance edge). All seven N are exact. The human C, the abstract's 99.6%, is 99.84% here (99.8 at one decimal), within tolerance but not exact.\""
+  },
+  {
+   "severity": "major",
+   "where": "Variants table and bullet 'The 0.97 threshold'; Notes for the authors item 2",
+   "problem": "A variante --outs 0.97 só rodou nos quatro genomas pequenos (runs/outs097_{scer,cele,atha,dmel}). Não rodou em Z. mays, que é o único genoma que falha, nem em camundongo ou humano. Mesmo assim o relatório conclui que \"The shipped default of 0.95 fits the paper better\" e diz aos autores \"On our runs, 0.95 matches Table 1 better\". Além disso, \"moves D away from the paper\" não vale pra todos: em C. elegans o D vai de 0.13 para 0.10, ou seja, em direção ao 0.1 do artigo. O argumento mais forte nem aparece: com 0.97, S fica fora da tolerância em S. cerevisiae (98.22 contra 97.6, +0.62) e em A. thaliana (99.39 contra 98.9, +0.49).",
+   "fix": "Dizer: \"The 0.97 variant was run on the four small genomes only, not on Z. mays, M. musculus or H. sapiens.\" Restringir as duas conclusões a \"on the four small genomes\", trocar \"moves D away\" por \"moves D away from the paper in S. cerevisiae and A. thaliana (and S outside tolerance: +0.62 and +0.49)\" e registrar que em C. elegans o D vai para 0.10. Se der pra rodar dentro do light mode, fazer o variant outs097_zmay (uns 14 min a -t 8, abaixo de 27 GB) sem nota e informar o resultado. Senão, registrar como não testado."
+  },
+  {
+   "severity": "major",
+   "where": "Why maize differs: bullet on 141 sigma = 0 genes, and Notes for the authors ('many maize genes sit just above the cutoff')",
+   "problem": "O argumento do sigma = 0 vai na direção errada. No v0.2.2, sigma 0 vira 1 (load_length_cutoff, linha 724), então o limiar fica length - 2, quase o comprimento inteiro. Isso torna o corte de hoje mais exigente e empurraria genes para Fragmented. Nós temos menos F que o artigo (11 contra cerca de 97), então esses 141 genes não ajudam a explicar a diferença. Conferido: 141 genes com sigma 0 e 305 com sigma <= 1 em liliopsida_odb10/lengths_cutoff, contra 0 em saccharomycetes e primates. A margem (runs/margin.py, rodado de novo: zmay 729 de 3217 a menos de 5%, scer 5, hsap 6) mostra só sensibilidade, que vale nas duas direções. Pra o artigo ter cerca de 86 F a mais, o corte de 2023 teria de ser maior ou as proteínas de 2023 mais curtas, e nenhuma das duas coisas foi verificada.",
+   "fix": "Trocar o bullet do sigma = 0 por: \"liliopsida_odb10 also has 141 genes with sigma = 0 (305 with sigma <= 1; none in saccharomycetes or primates). The code turns sigma 0 into 1, which makes today's threshold stricter, so these genes do not by themselves explain why we see fewer Fragmented genes than the paper.\" Na última frase, dizer que a sensibilidade vale nos dois sentidos e que, pra explicar o resultado, os cortes ou as proteínas de 2023 teriam de ser mais exigentes, coisa que não dá pra verificar sem o tar de 2023. Nas notas aos autores, usar \"sit close to the cutoff\" no lugar de \"just above\" e tirar qualquer menção ao sigma 0 como causa."
+  },
+  {
+   "severity": "major",
+   "where": "Opening ('The likely cause is the input data rather than the code') and 'Why maize differs' ('The code is not the cause.' / 'The input changed.')",
+   "problem": "\"The code is not the cause\" é afirmado como fato. O que se testou foi só compleasm.py v0.2.2 contra v0.2.10. Os dois rodaram no mesmo venv (pandas 2.0.2; D-ENV avisa que o sort_values sem estabilidade pode desempatar diferente), com o mesmo binário de hmmsearch (md5 545731ff…) e o mesmo arquivo de genoma. Ficam de fora fatores comuns às duas execuções: versão do pandas, versão do HMMER e o FASTA de milho servido hoje. O registro RefSeq foi re-anotado (data/genomes/…Zm-B73….md5checksums.txt lista GCF_902167145.1-RS_2025_02) e o md5 só pôde ser comparado com o de hoje. Por outro lado, o relatório deixa de citar um dado que reforça a tese: o HEAD rodou com outro miniprot, 0.12-r237 (env/kit_head_md5.txt: df70b4a9…; runs/head_zmay/run.log), e deu as mesmas contagens. Também não diz que o HEAD usou a biblioteca mb_downloads_head com o índice completo de 1.248 linhas.",
+   "fix": "Trocar \"The code is not the cause.\" por \"We found no code cause: compleasm v0.2.2 (miniprot 0.11-r234) and v0.2.10 (miniprot 0.12-r237) give identical maize counts.\" Trocar \"The input changed.\" por \"The one input we know changed is the lineage.\" Listar os fatores não testados e comuns às duas execuções: pandas 2.0.2 (same venv), o mesmo binário de HMMER 3.3.2 e o genoma de milho como servido hoje (o registro RefSeq hoje traz a anotação RS_2025_02; não temos o md5 de 2023). Na tabela de variantes, anotar nas linhas do HEAD: \"miniprot 0.12-r237 bundled with v0.2.10; library with the full 1,248-line index\"."
+  },
+  {
+   "severity": "minor",
+   "where": "Variants section, bullet 'v0.2.1 was not run'",
+   "problem": "O claims.json (D-CODE) pré-registrou rodar a v0.2.1 \"if v0.2.2 misses\", e a v0.2.2 errou no milho. Pular essa execução é um desvio do plano, mas o texto não o chama de desvio. A justificativa confere: o diff do compleasm.py tem 208 linhas, todas na busca dos executáveis (search_miniprot/search_hmmsearch/search_sepp passam para CheckDependency) mais um comentário, e miniprot 340998cb… e hmmsearch 545731ff… são iguais. Só que nada disso ficou salvo na pasta: dl/v021 existe, mas não há md5 nem diff gravados.",
+   "fix": "Escrever \"Deviation from the pre-registration: v0.2.1 was planned if v0.2.2 missed, and was not run because…\". Salvar a prova em env/kit_v021_md5.txt (md5 de compleasm.py 57ba4938…, miniprot e hmmsearch) e em runs/v021_vs_v022.diff, e citar os dois arquivos."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, step 5 (human OOM)",
+   "problem": "\"log in runs/hsap_retry.sh\" aponta para um script, não para um log. O log da tentativa está em runs/hsap_attempt1_oom/run.log e time.txt, e o da nova execução em runs/hsap_retry.log. Os números \"20.4 GB anonymous RSS\" e \"killed by the kernel OOM killer\" só aparecem num comentário do hsap_retry.sh. O que está gravado é miniprot com exit code -9 (SIGKILL) e Maximum RSS de 20.639.044 KiB (19.7 GiB) em 1:41. Nenhum log do kernel foi salvo, e nenhum arquivo registra o 'another job sharing WSL memory'.",
+   "fix": "Escrever: \"The first attempt's miniprot was killed with SIGKILL (exit -9) during index building, at 20,639,044 KiB (19.7 GiB) max RSS per GNU time (runs/hsap_attempt1_oom/run.log, time.txt); we attribute it to the OOM killer, but the kernel log was not saved. The retry log is runs/hsap_retry.log (free -m before the retry: 31,048 MiB available).\" Tirar o '20.4 GB anonymous RSS' ou citar a fonte."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, step 4 (Peak RSS) and step 6 (compute and download times)",
+   "problem": "(a) O GNU time dá o Maximum RSS em KiB. 24.542.972 / 26.600.012 / 28.447.072 KiB dão 23.4 / 25.4 / 27.1 GiB, ou 25.1 / 27.2 / 29.1 GB. Os '24.5 / 26.6 / 28.4 GB' do relatório não são nem uma unidade nem a outra. (b) \"about 40 minutes for the variants\": a soma dos time.txt dá 31.9 min (scer_rep 2:08, os quatro outs097 14:30, head_zmay mais head_scer 15:15). (c) \"Downloads took about 55 minutes\": pelos mtimes, o primeiro genoma termina às 16:33 e o humano às 17:41, com verificação até 17:44, ou seja, uns 70 min. Nenhum log registra '0.3 MB/s per connection' nem as '49 seconds' de dois curl ao mesmo tempo. Só existe runs/helpers/kill_main_dl.sh.",
+   "fix": "Dar o RSS como \"23.4 / 25.4 / 27.1 GiB (GNU time, KiB)\". Trocar 40 por \"about 32 minutes\". Trocar o tempo de download por \"about 70 minutes (file times 16:33 to 17:41)\". Tirar o '0.3 MB/s' e as '49 seconds' ou dizer que vêm de observação e não de log. Manter que a checagem final de md5 passou (data/download_verify.log, fail=0)."
+  },
+  {
+   "severity": "minor",
+   "where": "Results, paragraph after the main table ('The differences go the same way…')",
+   "problem": "\"S and C are higher by about the same amount\" não vale para o milho: S +1.79, D +0.92, C +2.71. O ganho em C se divide entre S e D. \"Some genes the paper called Fragmented come out Complete in our runs\" é dito como fato, mas o artigo não publica dados por gene (claims.json: supplementary_and_author_per_item_data = None). Isso é inferência a partir dos totais.",
+   "fix": "Escrever: \"In the six small-offset genomes S and C rise by about the same amount as F falls; in Z. mays the 2.7-point gain in C splits into +1.8 S and +0.9 D. This is consistent with genes the paper counted as Fragmented being Complete here, but without the paper's per-gene tables we cannot confirm it.\""
+  },
+  {
+   "severity": "minor",
+   "where": "Why maize differs / Notes for the authors (missing caveats)",
+   "problem": "Faltam contextos que estão no próprio artigo. (1) A seção 3.1 apresenta os 96.7% de maize do compleasm como próximos da completude da anotação, 96.8% (Tabela S3). O nosso 99.4 passa dessa anotação em 2.6 pontos, o que pesa contra o nosso número e não contra o do artigo. (2) A seção 3.2 dá uma contagem exata pro humano, 13.622 single-copy no CHM13 inteiro. Nós temos 13.659 (+37, runs/hsap/summary.txt), uma checagem cruzada sem nota que confirma o desvio pequeno pra cima. (3) O relatório não diz que as linhas opcionais do BUSCO (D-BUSCO) não rodaram, nem lista o que ficou excluído (tempos da Fig. 1a, Tabela S4 etc.).",
+   "fix": "Na seção do milho, acrescentar: \"The paper reports maize annotation completeness of 96.8% (Table S3) as agreeing with compleasm's 96.7%; our 99.4% exceeds it by 2.6 points.\" Nos resultados, acrescentar uma linha sem nota: \"Section 3.2 gives 13,622 complete single-copy genes on the whole CHM13; we get 13,659 (+37, 0.27 points).\" Acrescentar: \"Optional BUSCO rows were not run; Fig. 1a times, Section 3.1 annotation checks and Tables S4-S7 were excluded in claims.json.\""
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, step 4 ('with every other option at its default')",
+   "problem": "O comando registrado em todos os time.txt passa --outs 0.95, --miniprot_execute_path e --hmmsearch_execute_path de forma explícita. O resultado é o mesmo, porque 0.95 já é o padrão e os binários são os do kit, mas a linha de comando do relatório não é a que rodou.",
+   "fix": "Citar o comando de verdade: \"compleasm.py run -a <genome>.fna.gz -o runs/<tag> -t 8 -l <lineage> -L data/mb_downloads --outs 0.95 --miniprot_execute_path env/bin/miniprot --hmmsearch_execute_path env/bin/hmmsearch (0.95 is the default; all other options at defaults, mode busco)\"."
+  }
+ ]
+}

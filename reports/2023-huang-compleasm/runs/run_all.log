@@ -1,0 +1,24 @@
+scer already done
+start 2026-11-03T16:51:20-03:00 tag=cele asm=GCF_000002985.6_WBcel235 lineage=nematoda_odb10 outs=0.95
+end 2026-11-03T16:54:45-03:00 rc=0
+start 2026-11-03T16:54:45-03:00 tag=atha asm=GCF_000001735.4_TAIR10.1 lineage=brassicales_odb10 outs=0.95
+end 2026-11-03T16:59:51-03:00 rc=0
+start 2026-11-03T16:59:51-03:00 tag=dmel asm=GCF_000001215.4_Release_6_plus_ISO1_MT lineage=diptera_odb10 outs=0.95
+end 2026-11-03T17:06:14-03:00 rc=0
+start 2026-11-03T17:25:17-03:00 tag=mmus asm=GCF_000001635.27_GRCm39 lineage=glires_odb10 outs=0.95
+end 2026-11-03T17:57:00-03:00 rc=0
+start 2026-11-03T17:57:00-03:00 tag=hsap asm=GCF_009914755.1_T2T-CHM13v2.0 lineage=primates_odb10 outs=0.95
+end 2026-11-03T17:58:42-03:00 rc=1
+start 2026-11-03T17:58:42-03:00 tag=zmay asm=GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0 lineage=liliopsida_odb10 outs=0.95
+end 2026-11-03T18:12:29-03:00 rc=0
+start 2026-11-03T18:12:29-03:00 tag=scer_rep asm=GCF_000146045.2_R64 lineage=saccharomycetes_odb10 outs=0.95
+end 2026-11-03T18:14:36-03:00 rc=0
+start 2026-11-03T18:14:36-03:00 tag=outs097_scer asm=GCF_000146045.2_R64 lineage=saccharomycetes_odb10 outs=0.97
+end 2026-11-03T18:16:48-03:00 rc=0
+start 2026-11-03T18:16:48-03:00 tag=outs097_cele asm=GCF_000002985.6_WBcel235 lineage=nematoda_odb10 outs=0.97
+end 2026-11-03T18:19:45-03:00 rc=0
+start 2026-11-03T18:19:45-03:00 tag=outs097_atha asm=GCF_000001735.4_TAIR10.1 lineage=brassicales_odb10 outs=0.97
+end 2026-11-03T18:23:48-03:00 rc=0
+start 2026-11-03T18:23:48-03:00 tag=outs097_dmel asm=GCF_000001215.4_Release_6_plus_ISO1_MT lineage=diptera_odb10 outs=0.97
+end 2026-11-03T18:29:07-03:00 rc=0
+ALL_RUNS_FINISHED

@@ -1,0 +1,82 @@
+{
+ "issues": [
+  {
+   "severity": "major",
+   "where": "Results, paragraph 'Two values sit right at a rounding edge'",
+   "problem": "D13 in claims.json says: 'If a value lands within 1% of a rounding boundary, the report says so'. The report flags only 2 values, but 14 of the 26 nRMSE values are within 1% of a rounding edge. runs/results.json marks all 14 with within_1pct_of_rounding_edge=true: Advection β=0.1 U-Net (0.059551, 0.09% above 0.0595), β=0.1 FNO, β=0.4 U-Net (0.66675, 0.26%), β=1.0 U-Net, Burgers ν=0.001 U-Net (0.34209, 0.84% below 0.345), ν=0.001 FNO, ν=0.01 U-Net (0.30294, 0.68%), ν=1.0 FNO (0.0030544, 0.14%), Darcy β=0.01 FNO (2.4581, 0.33%), β=1.0 U-Net, β=1.0 FNO, β=10 U-Net, β=100 U-Net and β=100 FNO. Saying 'two' understates how much the 21/26 count depends on float noise.",
+   "fix": "Replace the paragraph with the full list of the 14 flagged values and their distance to the edge, generated from results.json. Keep the two tightest cases (Burgers ν=0.001 FNO at 0.012%, Darcy β=1.0 U-Net at 0.025%) as the highlighted ones. Add one line to the Verdict that one of the 5 misses is 0.012% from the rounding edge."
+  },
+  {
+   "severity": "major",
+   "where": "Header 'Target' and Notes for the authors 1-3",
+   "problem": "The report never says that the authors themselves replaced every Advection and Burgers number in arXiv v7 (26/08/2024). They regenerated the Advection data after a time-scaling bug (issue #46) and retrained the models in 2023. claims.json D1 and the triage notes both record this. Without it, a reader sees the Advection and Burgers misses (β=1.0 FNO, β=4.0 U-Net, three Burgers FNOs) and the questions to the authors with no context. The authors' first reply would be 'see v7'.",
+   "fix": "Add one sentence under Target: the 2022 Advection and Burgers table values were superseded in arXiv v7 after the 2023 data fix (#46) and retraining; this check targets the published 2022 version with the 2022 data and weights, and v7 is out of scope (claims.json D1). Mention the same in Notes 1-3 so the questions are explicitly about the 2022 release."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, step 4 (wall time)",
+   "problem": "The 1D run times are wrong. runs/pipeline.log gives 126 s (Advection β=1.0 FNO, 125.9 s) to 270 s (Burgers ν=1.0 U-Net), not 134-254 s. The Darcy range of 42-142 s is right. The claim that the time was 'mostly spent reading the HDF5 file' is not backed by any profiling or log.",
+   "fix": "Change the range to '126-270 s (1D)'. Either drop 'mostly spent reading the HDF5 file' or support it with a timing log."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, step 1 (downloads)",
+   "problem": "'About 9 MB/s' does not match the log. download.log runs from 16:33:19 to 17:23:58 (50 min 39 s) for about 22.16 GB (tars 0.79 GB + Darcy 6.55 GB + full Advection β=4.0 8.23 GB + 8 head/tail pieces 6.59 GB), which is about 7.3 MB/s. The full β=4.0 file alone ran at about 6.3 MB/s. The log also shows a restart (the 'skip' lines), which the report does not mention.",
+   "fix": "Write 'about 22 GB in 51 min, about 7.3 MB/s on average', or remove the rate."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, step 4 (overrides) and Notes for the authors, note 5",
+   "problem": "The override list is incomplete. pipeline.py also passes ++args.filename and ++args.model_name on every run, and ++args.reduced_resolution_t=1 for Darcy. ++args.t_train=2 differs from config_Darcy.yaml (t_train: 1) and has no effect on evaluation: metrics() loops to yy.shape[-2] and does not use t_train. Note 5 still says re-evaluation 'requires' t_train=2. It also lists reduced_resolution=2 as required, but config/args/config_Darcy.yaml already has reduced_resolution: 2; the conflicting value of 1 is in config/config_darcy.yaml.",
+   "fix": "List every override that was passed. Add that t_train=2 (taken from the triage) is inert when if_training=False. In note 5, keep only initial_step=1 and the U-Net rename as real requirements, and say the reduced_resolution conflict is with config/config_darcy.yaml (#48)."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, step 5 ('There is nothing in patches/')",
+   "problem": "There is no patches/ folder in the working directory. The supporting evidence is that `git -C repo status` is clean at b5b646f, and the report does not cite it.",
+   "fix": "Write: 'No patches were needed: repo/ is at b5b646f with a clean git status, so no patches/ folder was created.'"
+  },
+  {
+   "severity": "minor",
+   "where": "Results, secondary metrics ('The rest are single misses at 1-3%')",
+   "problem": "The 10 remaining misses are not single misses and are not all within 1-3%. They are spread over 6 settings: Advection β=0.4 FNO (3 misses: max error, cRMSE, fRMSE low), Advection β=4.0 FNO (2), Darcy β=10 U-Net (2), plus Advection β=0.4 U-Net max error, Burgers ν=0.1 U-Net cRMSE and Darcy β=0.1 U-Net bRMSE. They range from 0.6% to 3.1%.",
+   "fix": "Write: 'The other 10 misses are spread over 6 settings and range from 0.6% to 3.1%.' Optionally list them."
+  },
+  {
+   "severity": "minor",
+   "where": "Results, 'Comparison with the authors' own rerun'",
+   "problem": "There is a missing caveat that supports the report's own result. All 40 Darcy U-Net values match the maintainer's #39 output to his printed precision. That includes the 3 Darcy U-Net secondary misses (β=0.1 bRMSE 0.000855 vs his 0.00085; β=10 fRMSE low 0.0057452 vs 0.00574524; β=10 fRMSE high 0.00035455 vs 0.00035455). So the author-side rerun misses Table 8 in the same places. This also contradicts the claims.json tolerance_basis statement that his 8 metrics x 5 betas all round to Table 8.",
+   "fix": "Add: 'All 40 Darcy U-Net values equal the maintainer's to his printed precision, including the three that miss Table 8 (β=0.1 bRMSE, β=10 fRMSE low/high). His rerun misses the table there too, so the pre-registration's statement that all 40 of his values round to Table 8 is not correct.'"
+  },
+  {
+   "severity": "minor",
+   "where": "Alternative readings, V2",
+   "problem": "'The values are much larger' is not true across the board. For 5 of the 26 values, V2 is smaller than ours or within 10% of it: Advection β=0.4 U-Net 0.664 vs 0.667, Advection β=1.0 FNO 0.663 vs 0.627, Burgers ν=1.0 U-Net 0.396 vs 0.360, Darcy β=0.01 U-Net 0.674 vs 1.064, and Darcy β=0.01 FNO 1.017 vs 2.458. The '0 of 26 match' claim is correct for both V2 variants in results.json.",
+   "fix": "Write 'The values are usually much larger (for example 0.205 instead of 0.0596), though smaller for both Darcy β=0.01 models', and keep '0 of 26 match'."
+  },
+  {
+   "severity": "minor",
+   "where": "Alternative readings, Advection β=1.0 FNO cross-check",
+   "problem": "'We checked our direct reader against the authors' loader: the two give identical arrays' is broader than the evidence. logs/xcheck_adv_fno.log only checks the β=4.0 file. For the other three test sets the script reads the raw head pieces directly.",
+   "fix": "Write: 'checked on the full β=4.0 file (identical arrays); the other three test sets were read from the same byte layout in the downloaded head pieces, and the diagonal reproduces the pipeline values to about 1e-7.'"
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors, note 2 and 'By PDE' (Burgers)",
+   "problem": "Note 2 groups ν=0.001, 0.01 and 0.1 and then says 'most of their secondary metrics are 5-57% lower'. But all 7 secondary metrics of the Burgers ν=0.001 FNO match, and the 21 secondary misses come from ν=0.01, 0.1 and 1.0. 'Every U-Net matches' is only true for nRMSE: the Burgers ν=0.1 U-Net cRMSE misses (-1.8%).",
+   "fix": "Rephrase: 'nRMSE of the ν=0.001/0.01/0.1 FNOs is 1-9% below Table 7; all 7 secondary metrics of the ν=0.01, 0.1 and 1.0 FNOs are 5-57% below, while ν=0.001 FNO secondary metrics match. Every Burgers U-Net nRMSE matches.'"
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, step 4, or Results (Darcy FNO)",
+   "problem": "claims.json D5 states that reduced_resolution=2 for the Darcy FNO was an assumption 'not independently confirmed for FNO'. The report does not carry this caveat. All 5 FNO values match, so the risk is low, but the caveat was pre-registered.",
+   "fix": "Add one line: 'reduced_resolution=2 for the Darcy FNO was assumed from the U-Net case (D5); all five FNO values match under it.'"
+  },
+  {
+   "severity": "minor",
+   "where": "How this report was made",
+   "problem": "The paragraph states as done that 'A reviewer agent and a reviser agent checked the report against the logs, and a human approved publication.' At this stage only the adversarial review is running. Revision and human approval have not happened. The report also points readers to runs/logs rather than the logs/ folder the README layout specifies.",
+   "fix": "Keep the sentence only once those steps have actually taken place (check this before publishing), or phrase it conditionally until then. Mention that logs live in runs/logs/."
+  }
+ ]
+}

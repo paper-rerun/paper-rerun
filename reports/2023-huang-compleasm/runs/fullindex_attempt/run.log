@@ -1,0 +1,18 @@
+start 2026-11-03T16:47:38-03:00 tag=fullindex_attempt asm=GCF_000146045.2_R64 lineage=saccharomycetes_odb10 outs=0.95
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 2538, in <module>
+    main()
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 2534, in main
+    args.func(args)
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 2409, in run
+    mr = CompleasmRunner(assembly_path=assembly_path,
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 2092, in __init__
+    self.downloader = Downloader(library_path)
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 90, in __init__
+    self.download_placement()  # download placement files
+  File "/mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py", line 264, in download_placement
+    prefix, version, sufix = strain.split(".")
+ValueError: too many values to unpack (expected 3)
+end 2026-11-03T16:48:03-03:00 rc=1

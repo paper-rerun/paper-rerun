@@ -1,0 +1,52 @@
+start 2026-11-03T18:29:26-03:00 tag=hsap asm=GCF_009914755.1_T2T-CHM13v2.0 lineage=primates_odb10 outs=0.95
+[M::mp_ntseq_read@99.354*0.18] read 3117275501 bases in 24 contigs
+[M::mp_idx_build@99.354*0.18] 24353736 blocks
+[M::mp_idx_build@115.470*1.23] collected syncmers
+[M::mp_idx_build@128.999*1.21] 1429829404 kmer-block pairs
+[M::mp_mapopt_set_max_intron] set max intron size to 200998
+[M::mp_idx_print_stat] 2413325 distinct k-mers; mean occ of infrequent k-mers: 532.71; 3067 frequent k-mers accounting for 145866744 occurrences
+[M::worker_pipeline::154.112*2.26] mapped 1663 sequences
+[M::worker_pipeline::176.231*2.96] mapped 2291 sequences
+[M::worker_pipeline::201.578*3.55] mapped 2124 sequences
+[M::worker_pipeline::225.736*4.01] mapped 2363 sequences
+[M::worker_pipeline::248.453*4.37] mapped 2617 sequences
+[M::worker_pipeline::272.936*4.69] mapped 2665 sequences
+[M::worker_pipeline::295.227*4.94] mapped 2828 sequences
+[M::worker_pipeline::316.597*5.14] mapped 2810 sequences
+[M::worker_pipeline::338.453*5.32] mapped 3203 sequences
+[M::worker_pipeline::362.598*5.50] mapped 3216 sequences
+[M::worker_pipeline::383.679*5.63] mapped 3599 sequences
+[M::worker_pipeline::404.603*5.76] mapped 3603 sequences
+[M::worker_pipeline::430.728*5.89] mapped 3862 sequences
+[M::worker_pipeline::455.879*6.01] mapped 3830 sequences
+[M::worker_pipeline::478.295*6.10] mapped 4372 sequences
+[M::worker_pipeline::501.597*6.19] mapped 4792 sequences
+[M::worker_pipeline::527.406*6.28] mapped 5140 sequences
+[M::worker_pipeline::553.970*6.36] mapped 5603 sequences
+[M::worker_pipeline::580.449*6.43] mapped 4570 sequences
+[M::worker_pipeline::601.579*6.49] mapped 1616 sequences
+[M::worker_pipeline::628.055*6.53] mapped 1766 sequences
+[M::worker_pipeline::649.428*6.58] mapped 1769 sequences
+[M::worker_pipeline::671.150*6.63] mapped 1939 sequences
+[M::worker_pipeline::682.111*6.64] mapped 992 sequences
+[M::main] Version: 0.11-r234
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot --trans -u -I --outs=0.95 -t 8 --gff /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/genomes/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/mb_downloads/primates_odb10/refseq_db.faa.gz
+[M::main] Real time: 682.476 sec; CPU: 4530.111 sec; Peak RSS: 27.129 GB
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot
+lineage: primates_odb10
+hmmsearch execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/hmmsearch
+
+S:99.12%, 13659
+D:0.72%, 99
+F:0.07%, 10
+I:0.00%, 0
+M:0.09%, 12
+N:13780
+
+## Download lineage: 0.00(s)
+## Run miniprot: 682.57(s)
+## Analyze miniprot: 723.57(s)
+## Total runtime: 1406.15(s)
+end 2026-11-03T18:52:58-03:00 rc=0

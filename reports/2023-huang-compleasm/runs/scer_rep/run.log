@@ -1,0 +1,35 @@
+start 2026-11-03T18:12:29-03:00 tag=scer_rep asm=GCF_000146045.2_R64 lineage=saccharomycetes_odb10 outs=0.95
+[M::mp_ntseq_read@0.256*0.27] read 12157105 bases in 17 contigs
+[M::mp_idx_build@0.256*0.27] 94996 blocks
+[M::mp_idx_build@0.302*1.15] collected syncmers
+[M::mp_idx_build@0.466*1.10] 5608100 kmer-block pairs
+[M::mp_mapopt_set_max_intron] set max intron size to 12553
+[M::mp_idx_print_stat] 1202011 distinct k-mers; mean occ of infrequent k-mers: 4.67; 0 frequent k-mers accounting for 0 occurrences
+[M::worker_pipeline::5.562*7.31] mapped 3029 sequences
+[M::worker_pipeline::9.339*7.58] mapped 3464 sequences
+[M::worker_pipeline::12.983*7.71] mapped 4189 sequences
+[M::worker_pipeline::17.082*7.79] mapped 5291 sequences
+[M::worker_pipeline::20.207*7.82] mapped 4286 sequences
+[M::worker_pipeline::22.733*7.57] mapped 2414 sequences
+[M::worker_pipeline::23.200*7.41] mapped 813 sequences
+[M::main] Version: 0.11-r234
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot --trans -u -I --outs=0.95 -t 8 --gff /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/genomes/GCF_000146045.2_R64_genomic.fna.gz /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/mb_downloads/saccharomycetes_odb10/refseq_db.faa.gz
+[M::main] Real time: 23.207 sec; CPU: 172.030 sec; Peak RSS: 0.715 GB
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot
+lineage: saccharomycetes_odb10
+hmmsearch execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/hmmsearch
+
+S:97.85%, 2091
+D:1.59%, 34
+F:0.00%, 0
+I:0.00%, 0
+M:0.56%, 12
+N:2137
+
+## Download lineage: 0.00(s)
+## Run miniprot: 23.24(s)
+## Analyze miniprot: 96.67(s)
+## Total runtime: 119.91(s)
+end 2026-11-03T18:14:36-03:00 rc=0

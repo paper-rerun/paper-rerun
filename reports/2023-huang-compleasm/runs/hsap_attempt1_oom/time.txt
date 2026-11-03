@@ -1,0 +1,24 @@
+Command exited with non-zero status 1
+	Command being timed: "nice -n 19 /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/.venv/bin/python /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/compleasm.py run -a /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/genomes/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz -o /mnt/e/Ciencia/noturno/2023-huang-compleasm/runs/hsap -t 8 -l primates_odb10 -L /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/mb_downloads --outs 0.95 --miniprot_execute_path /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot --hmmsearch_execute_path /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/hmmsearch"
+	User time (seconds): 135.38
+	System time (seconds): 33.64
+	Percent of CPU this job got: 166%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:41.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 20639044
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4754
+	Minor (reclaiming a frame) page faults: 644527
+	Voluntary context switches: 180567
+	Involuntary context switches: 5449
+	Swaps: 0
+	File system inputs: 188240
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

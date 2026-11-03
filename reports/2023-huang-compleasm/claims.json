@@ -1,0 +1,1567 @@
+{
+ "stage": "pre-registration",
+ "created": "2026-11-03T16:40:00-03:00",
+ "paper": {
+  "citation": "Huang, N. & Li, H. compleasm: a faster and more accurate reimplementation of BUSCO. Bioinformatics 39(10), btad595 (2023)",
+  "doi": "10.1093/bioinformatics/btad595",
+  "pmcid": "PMC10558035",
+  "license": "CC BY 4.0",
+  "dates": "received 2023-06-04, revised 2023-08-21, accepted 2023-09-26; preprint bioRxiv 10.1101/2023.06.03.543588 as 'miniBUSCO' (2023-06-06)",
+  "code": "https://github.com/huangnengCSU/compleasm @ v0.2.2 = 8d33fa183483550c6113f84f8deace71807e9a74, release kit compleasm-0.2.2_x64-linux.tar.bz2 (671,502 B, md5 cefe5b8d17c3758add056af1cf4e40a5, sha256 9c28fd0ebf0986475c4e567038b8bffc93ef795e76982401e84531885227e8a5)"
+ },
+ "target": "Table 1, compleasm rows (Completed, Single-copy, Duplicated, Fragmented, Missing in %, and N) for the 7 reference genomes with the lineages named in the table. Run order: S. cerevisiae, C. elegans, A. thaliana, D. melanogaster, then M. musculus, H. sapiens (alone, ~28 GB RAM), Z. mays. Optional: Table 1 BUSCO rows for the 4 small genomes only.",
+ "sources_read": [
+  {
+   "file": "paper/PMC10558035.xml",
+   "what": "Europe PMC fullTextXML of the published article (46,676 B, same as triage)",
+   "sha256": "f84044eee513e149a28f52c7b992d4b4f3325f691471f3283dd91c532377be9b"
+  },
+  {
+   "file": "paper/paper.txt",
+   "what": "plain text of the XML; Table 1 values typed from here",
+   "sha256": "d1b6d5086c10ff78f390efb062a1b32a1a6c096e2317e6970256d26af70ccf52"
+  },
+  {
+   "file": "paper/supp/btad595_supplementary_data.pdf",
+   "what": "Supplementary Tables S1-S7, Figs S1-S2 (4 pages). Read with pdftotext -raw for row order (the -layout text in paper/supp.txt has shifted columns)",
+   "sha256": "86f380493ed2d5c60d60f7394404b8da4ec5a4e430c2c62a72a05e752d7a6961"
+  },
+  {
+   "file": "paper/supp/btad595f1.jpg",
+   "what": "Figure 1 (run times, not a target)",
+   "sha256": "628530107cd4d3f7743e553c48c246cba292ee81b8b72aeac95a6b51ac021459"
+  },
+  {
+   "file": "../triagem-2026-10-26b/dl/compleasm/x022/compleasm_kit/compleasm.py",
+   "what": "v0.2.2 source from the release kit (144,119 B): read for defaults, the miniprot command line, the busco-mode classification and the summary format. Read only, nothing run."
+  },
+  {
+   "file": "sources/file_versions.tsv",
+   "what": "BUSCO data bucket index as of triage 2026-10-26 (106,586 B, md5 dadbe48e909083f816eab8efb874bc34): every odb10 lineage exists only as the 2024-01-08 re-release",
+   "sha256": "c2615b6ec8b7a65d70ab5c995180e16d5d8b9898b8ff69e620cddb8e9e7f91f5"
+  },
+  {
+   "file": "sources/busco_CHANGELOG",
+   "what": "BUSCO changelog: 5.4.7 is the last release before submission; 5.6.0 notes 'Datasets updated, including links to OrthoDB v10.1'",
+   "sha256": "67be1dd7d80ff963af3f435fe48bffd5162f8250438a0bbc180df761a1703efd"
+  }
+ ],
+ "supplementary_and_author_per_item_data": "None for Table 1. The repository tree at v0.2.2 (LICENSE, LICENSE-BUSCO, README.md, _version.py, compleasm.py, setup.py) and at HEAD (same plus Dockerfile) has no results, no full_table.tsv and no gene lists, checked through the GitHub API on 2026-11-03. The supplement gives per-assembly percentages only for other datasets (Tables S5, S6, S7). So sources/ holds only the lineage index and the BUSCO changelog, and no definition below was decided from per-item data. Cross-check from the paper itself: the compleasm values of Table S7 rows 'A. thaliana-reference', 'C. elegans-reference' and 'D. melanogaster-reference' equal the Table 1 compleasm rows, and Table S4 repeats the T2T-CHM13 rows. In every compleasm row of Table 1, C = S + D and C + F + M = 100.0 exactly at one decimal.",
+ "definitions": [
+  {
+   "id": "D-CODE",
+   "choice": "compleasm v0.2.2 from the release kit compleasm-0.2.2_x64-linux.tar.bz2 (md5 cefe5b8d17c3758add056af1cf4e40a5): compleasm.py (__version__ 0.2.2) with the bundled miniprot (version string 0.11-r234) and hmmsearch (HMMER 3.3.2), passed explicitly with --miniprot_execute_path and --hmmsearch_execute_path. The binaries are copied out of the download folder into env/ after their md5 is checked, never run from dl/.",
+   "quote": "It reimplements some logic behind BUSCO but replaces the core protein-to-genome alignment algorithm with miniprot (Li 2023). (Section 1)",
+   "ambiguity": "The paper names no compleasm, miniprot or HMMER version. v0.2.2 (2023-06-09) is the first release named compleasm; between 2023-06-12 and 2023-10-18, which covers the revision of 2023-08-21, only docker/conda/README commits landed and compleasm.py did not change (triage). Not graded variants, run only after the primary: v0.2.1 (2023-05-18, still 'miniBUSCO') if v0.2.2 misses, and HEAD v0.2.10 with --odb odb10 to show how much the newer code moves the numbers."
+  },
+  {
+   "id": "D-ENV",
+   "choice": "Python 3.10 with pandas 2.0.2 and numpy 1.24.x (versions current on the submission date 2023-06-04), in a uv environment inside env/. Only pandas is imported beyond the standard library.",
+   "quote": "Compleasm is developed on python3. ... Dependencies: pandas (v0.2.2 README; the paper says nothing)",
+   "ambiguity": "Not stated. The classification sorts alignments with DataFrame.sort_values(by=['I+L'], ascending=False), the default non-stable sort, so ties could in principle resolve differently across pandas versions; grouping uses groupby(['Target_species']).get_group(scalar), which pandas 2.2+ deprecates. If pandas 2.0.2 cannot be installed, the closest 2.0.x is used and recorded."
+  },
+  {
+   "id": "D-MODE",
+   "choice": "compleasm run in its default mode, -m busco (miniprot, then hmmsearch on every translated alignment, then classification). Not lite.",
+   "quote": "Like BUSCO, we employ HMMER3 (Mistry et al. 2013) to confirm orthology. Only matches above the score cutoff defined in lineage files will be retained. (Section 2)",
+   "ambiguity": "The paper describes the hmmsearch filter, which only the busco mode has; it is also the v0.2.2 default."
+  },
+  {
+   "id": "D-OUTS",
+   "choice": "Primary: the v0.2.2 default, which runs 'miniprot --trans -u -I --outs=0.95 -t 8 --gff <genome> <lineage>/refseq_db.faa.gz'. Variant, reported and never graded: --outs 0.97.",
+   "quote": "...suppressed by miniprot as miniprot was tuned to ignore alignments whose scores were below 97% of the best alignment scores. (Section 3.2)",
+   "ambiguity": "The text says 97%, the v0.2.2 code default is 0.95 (help text even says [0.99]). The paper does not say the option was changed, so the shipped default is the primary condition. If the 0.97 variant matches and 0.95 does not, the report says so but the verdict follows the primary."
+  },
+  {
+   "id": "D-THRESH",
+   "choice": "All other thresholds at v0.2.2 defaults: --min_diff 0.2, --min_rise 0.5, --min_identity 0.4, --min_length_percent 0.6, --min_complete 0.9. In busco mode the code ignores min_identity, min_length_percent and min_complete and uses, per gene, the lineage lengths_cutoff: complete if the hmmsearch-aligned length >= length - 2*sigma (sigma 0 replaced by 1).",
+   "quote": "It is fragmented if all its alignments are shorter than a length threshold defined by BUSCO. The rest of genes are considered complete. A complete gene is considered to have a single-copy in the assembly if it only has one alignment, or duplicated if it has multiple alignments. (Section 2)",
+   "ambiguity": "The paper gives no numbers; the code is the definition. The length threshold comes from the lineage's lengths_cutoff file, which the 2024-01-08 re-release may have changed (D-LINEAGE)."
+  },
+  {
+   "id": "D-GENOME",
+   "choice": "The seven NCBI RefSeq assemblies of Table S1, <asm>_genomic.fna.gz from https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/..., checked against the server size and the md5 in NCBI's md5checksums.txt: GCF_000146045.2_R64 (3,843,460 B, 88c38b957b721dfc50e6c4df03b6242e), GCF_000002985.6_WBcel235 (31,710,738 B, 177a91ec15063e305188306b7e709cb1), GCF_000001735.4_TAIR10.1 (37,482,399 B, 0fed2d7901bf1488f20e7ef6842cd84c), GCF_000001215.4_Release_6_plus_ISO1_MT (44,235,956 B, 869cf40e4f5c7ca27d04ca9ae7baee4f), GCF_000001635.27_GRCm39 (834,262,758 B, c0b0c4c3f54d2b480efe68a18bf7e42b), GCF_009914755.1_T2T-CHM13v2.0 (932,691,275 B, 9e6bf6b586bc8954208d1cc1d5f2fc99), GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0 (650,091,408 B, 3fe51a7a675eb0ac410814a41d50c775). Sizes and md5 are the triage values and are re-checked at download.",
+   "quote": "The details of the datasets can be found in Supplementary Table S1. (Section 3)",
+   "ambiguity": "In the -layout text of the supplement the accession column is shifted, but pdftotext -raw puts each accession on its species row and the assembly names agree (R64 yeast, WBcel235 worm, TAIR10.1, Release 6 fly, GRCm39 mouse, T2T-CHM13v2.0 human, B73 NAM-5.0 maize). The paper does not say whether the gz file or an uncompressed copy was given; miniprot reads both and the sequence order is the same, so the .fna.gz is passed as downloaded. If a server size or md5 differs from the triage values, stop and report: the assembly may have been updated."
+  },
+  {
+   "id": "D-ORDER",
+   "choice": "Contigs used in the NCBI file order, nothing sorted, filtered, renamed or masked. T2T-CHM13v2.0 is used whole, including chrY and chrM as NCBI ships them; Z. mays and others likewise keep organelle and unplaced sequences.",
+   "quote": "We subsequently evaluated these compleasm-specific genes using the annotation of T2T-CHM13 from NCBI. (Section 3.1; the paper names only the NCBI accession, no preprocessing)",
+   "ambiguity": "compleasm issue #59 shows the result changes with contig order (miniprot behaviour, lh3/miniprot#79), so any preprocessing would be a change of input. The paper mentions none."
+  },
+  {
+   "id": "D-LINEAGE",
+   "choice": "Lineage per Table 1: saccharomycetes_odb10, nematoda_odb10, brassicales_odb10, diptera_odb10, glires_odb10, primates_odb10, liliopsida_odb10. Only the 2024-01-08 re-release exists today: <lineage>.2024-01-08.tar.gz from https://busco-data.s3.amazonaws.com/v5/data/lineages/ (busco-data.ezlab.org/v5/data redirects there), checked against the server size and the md5 in file_versions.tsv (saccharomycetes 112,472,557 B 8b6e1a7e088592717f9677fdf15da697; nematoda 142,000,477 B ec87bb045e2a81868518b1071029d759; brassicales 160,970,411 B 7f96488b36e2f391dd594a099b31ea24; diptera 189,996,676 B da520a013d41c04d92a4b18b59803628; glires 558,066,669 B e556d8cd17fc9ed1ee6ffd1275809268; primates 455,350,926 B 321262a9dd0dcb01b92680e90ec6f344; liliopsida 158,654,239 B 154552d116896e02c282a7d91791cb7d). Downloaded with curl and extracted into the -L library folder the way v0.2.2's download_lineage does (refseq_db.faa.gz, links_to_ODB10.txt, hmms/, scores_cutoff, lengths_cutoff, plus the <lineage>.done marker), because v0.2.2's own downloader can fail the file_versions.tsv hash check (issue #23); this is an environment fix, not a method change. The md5 and the dataset.cfg content of each tar are recorded.",
+   "quote": "Compleasm first downloads the corresponding BUSCO lineage dataset from https://busco-data.ezlab.org/v5/data (Section 2)",
+   "ambiguity": "The paper used the 2023 odb10 tars, which are no longer served (bucket listing has only the 2024-01-08 odb10 files; busco-archive.ezlab.org answers 403/404; no Zenodo copy). In the re-release the hmms and scores_cutoff keep 2019 dates, but refseq_db.faa.gz (the proteins miniprot aligns) is new and lengths_cutoff may be new too. So the run uses different input proteins from the paper's, and every number below carries that caveat. This is the main reason the tolerance is wider than rounding (D-TOL-COMPLEASM)."
+  },
+  {
+   "id": "D-THREADS",
+   "choice": "compleasm run -t 8 (miniprot -t 8 and an 8-process hmmsearch pool, each hmmsearch --cpu 1), with OMP/MKL/OPENBLAS/NUMEXPR_NUM_THREADS=8 and nice -n 19. H. sapiens runs alone with nothing else of ours running. If a run would need more than 8 threads or exceeds the 31 GB of WSL RAM, stop and report.",
+   "quote": "All experiments were conducted on a single server with 40 threads. (Section 3.3)",
+   "ambiguity": "40 threads in the paper, 8 here (light mode). Thread count should not change miniprot or hmmsearch output; it only changes run time. Run times are logged, never compared (Fig. 1a excluded)."
+  },
+  {
+   "id": "D-METRIC-S",
+   "choice": "S = 100 * (count of genes labelled Single) / N, from the counts in the run's summary.txt line 'S:xx.xx%, <count>'.",
+   "quote": "A complete gene is considered to have a single-copy in the assembly if it only has one alignment, or duplicated if it has multiple alignments. Compleasm reports the proportion of genes falling into each of the four categories (Section 2)",
+   "ambiguity": "None beyond D-ROUND."
+  },
+  {
+   "id": "D-METRIC-D",
+   "choice": "D = 100 * (count labelled Duplicated) / N, from summary.txt 'D:'.",
+   "quote": "...or duplicated if it has multiple alignments. (Section 2)",
+   "ambiguity": "None beyond D-ROUND."
+  },
+  {
+   "id": "D-METRIC-C",
+   "choice": "C = 100 * (Single count + Duplicated count) / N. v0.2.2 does not print C, so it is computed from the counts, not by adding the two-decimal percentages.",
+   "quote": "the results of compleasm and BUSCO shows a difference of completeness (single-copy and duplicated) <1% (Section 3.1)",
+   "ambiguity": "The paper defines completeness as single-copy plus duplicated, and every compleasm row of Table 1 satisfies C = S + D at one decimal."
+  },
+  {
+   "id": "D-METRIC-F",
+   "choice": "Primary: F = 100 * (Fragmented count + Interspaced count) / N. Also reported, not graded: Fragmented alone and Interspaced alone.",
+   "quote": "the remaining matches are categorized into one of four types: complete and single-copy, complete and duplicated, fragmented, or missing. (Section 2)",
+   "ambiguity": "v0.2.2 busco mode has a fifth label, Interspaced (line 'I:' in summary.txt), which refine_fragmented() gives to a gene first labelled Fragmented when several pieces of the same protein together beat the best single alignment. The paper has four categories and its rows add to 100.0 (C + F + M), so I must be zero or folded into one of them; since an Interspaced gene starts as a fragmented one and BUSCO has no such class, the primary rule folds it into F. Decided from the code and the paper text only, before any run. If I is nonzero and F alone matches while F + I does not, the report says so."
+  },
+  {
+   "id": "D-METRIC-M",
+   "choice": "M = 100 * (Missing count + d) / N, exactly the 'M:' line of summary.txt, where d = N minus all labelled genes (the code adds unlabelled genes to Missing).",
+   "quote": "A gene is considered missing if it has no alignment after HMMER filtration. (Section 2)",
+   "ambiguity": "None; this is what the tool prints."
+  },
+  {
+   "id": "D-N",
+   "choice": "N = the 'N:' line of summary.txt, which is the number of distinct BUSCO gene ids in the miniprot output (miniprot -u also writes unmapped proteins, so every gene group in refseq_db.faa.gz counts). Also recorded: the number of lines in the lineage's scores_cutoff.",
+   "quote": "Table 1 column N (13 780 for primates_odb10, the same N in the BUSCO rows)",
+   "ambiguity": "The paper's N equals the BUSCO N in every row, so it is the lineage gene count. Triage found 13,780 lines in today's primates_odb10 scores_cutoff, matching the paper. A different N in another re-released lineage is recorded as a lineage difference."
+  },
+  {
+   "id": "D-ROUND",
+   "choice": "Each percentage is computed unrounded from the integer counts and compared to the paper's one-decimal value with the tolerance. It is also rounded to one decimal, half away from zero, for the 'exact' tier and the report table. The 'implied_count_range' of each claim is the set of integer counts whose percentage rounds to the paper value; it comes from the paper's numbers only.",
+   "quote": "Table 1 reports one decimal (e.g. 99.6 / 98.9 / 0.7 / 0.3 / 0.1, N 13 780)",
+   "ambiguity": "The tool writes two decimals; the paper does not say how it went to one (rounding the two-decimal print or the raw fraction). The two can differ by 0.1 only at an exact x.x5 boundary, which the 0.3 tolerance covers."
+  },
+  {
+   "id": "D-REPEAT",
+   "choice": "One primary run per genome. S. cerevisiae is run twice (same input, same -t 8) to check that the output is deterministic; the two full_table.tsv files are compared. Not graded.",
+   "quote": "(The paper reports a single run per genome and no spread.)",
+   "ambiguity": "If the two yeast runs differ, the report says so and the tolerance stands."
+  },
+  {
+   "id": "D-TOL-COMPLEASM",
+   "choice": "For C, S, D, F, M: within tolerance if |ours - paper| <= 0.3 percentage points; 'exact' if ours rounded to one decimal equals the paper. 0.3 < |diff| <= 1.0 is reported as 'close, outside tolerance', never hidden. N must match exactly.",
+   "quote": "(The paper reports one decimal and no uncertainty.)",
+   "ambiguity": "With fixed inputs compleasm is deterministic and the honest tolerance would be the rounding half-unit, 0.05. But the 2023 lineage proteins are gone (D-LINEAGE) and the Python stack is unstated (D-ENV), so the run cannot use the paper's exact inputs. 0.3 points was set at triage, before anything ran, as the expected effect of the lineage re-release on C/F/M; it is 6 genes of 2137 for yeast and 41 of 13,780 for human. Fixed here before any of our numbers exist."
+  },
+  {
+   "id": "D-BUSCO",
+   "choice": "Optional, only for the 4 small genomes and only if time allows: BUSCO 5.4.7 (last release before submission), 'busco -m genome -i <genome> -l <lineage dir> --offline -c 8' with the default MetaEuk gene predictor and the same 2024-01-08 lineage folders, run as a separate environment (BUSCO's own dependency versions as pinned by its 5.4.7 bioconda recipe).",
+   "quote": "For BUSCO, we used the option \"-m genome\" and the default gene predictor MetaEuk. (Section 3)",
+   "ambiguity": "BUSCO version not given (5.4.x in mid-2023; 5.5.0 added a miniprot pipeline in Aug 2023 but MetaEuk stayed the default). BUSCO results are graded with D-TOL-BUSCO and never change the compleasm verdict. Note: Table S7 'A. thaliana-reference' BUSCO row reads 99.2/97.9/1.0/0.1/0.0, which disagrees with Table 1 (99.2/97.9/1.3/0.1/0.7) and is not internally consistent (97.9 + 1.0 != 99.2); Table 1 is used because its row is consistent."
+  },
+  {
+   "id": "D-TOL-BUSCO",
+   "choice": "Optional BUSCO rows: |ours - paper| <= 0.5 percentage points for C, S, D, F, M; N exact.",
+   "quote": "(No uncertainty reported.)",
+   "ambiguity": "Wider than compleasm's because the BUSCO version is a guess on top of the lineage change, and BUSCO runs two MetaEuk rounds whose output depends on more versioned tools (MetaEuk, HMMER, BBTools). Set before any run."
+  }
+ ],
+ "variants_not_graded": [
+  "compleasm v0.2.2 with --outs 0.97 (D-OUTS)",
+  "compleasm v0.2.1 (only if v0.2.2 misses) and HEAD v0.2.10 with --odb odb10 (D-CODE)",
+  "second S. cerevisiae run for determinism (D-REPEAT)",
+  "Fragmented and Interspaced reported separately (D-METRIC-F)"
+ ],
+ "excluded": [
+  {
+   "what": "Figure 1a run times (compleasm 244-2154 s, BUSCO 828-24,287 s) and the 3.4-14.5x / 6.7 h to 0.4 h speed-up",
+   "why": "Measured on 40 threads; light mode caps us at 8 and the machine is shared. Our times are logged, not compared."
+  },
+  {
+   "what": "Section 3.1: 562 compleasm-only complete genes, 557 supported by annotation; Table S2/S3 annotation completeness (99.5%, 96.8%)",
+   "why": "Outside the Table 1 target; needs BUSCO on the human genome (~7 h at 40 threads) and the NCBI annotation."
+  },
+  {
+   "what": "Table S4 and Section 3.2 (CHM13 without chr1: 89.9/89.2/0.7/0.4/9.7; 13,622 / 1,435 / 93 single-copy genes)",
+   "why": "Outside the target. Could reuse the human run plus one more human run; left for a later stage if the owner asks."
+  },
+  {
+   "what": "Tables S5, S6, S7 and Fig. 1b-d (103 DToL HiFi assemblies, Flye/hifiasm assemblies, frameshift proportions)",
+   "why": "Outside the target; Fig. 1d also depends on miniprot <= 0.10 (issue #28)."
+  },
+  {
+   "what": "BUSCO rows of Table 1 for mouse, human and maize",
+   "why": "About 22 h of BUSCO at 8 threads; outside light mode."
+  }
+ ],
+ "verdict_rule": "Graded on the compleasm rows of Table 1 only. Reproduced: all 7 genomes run, all 35 percentages within 0.3 points and all 7 N equal. Partially reproduced: every C within 0.3 points but some S/D/F/M outside; or C outside 0.3 for one or two genomes but within 1.0; or fewer than 7 genomes could be run (the ones run judged as above); or the human C (the abstract's 99.6) is outside 0.3 even if the rest match, which caps the verdict here. Not reproduced: any C off by more than 1.0 point, or C outside 0.3 points in 3 or more genomes. Could not run: no genome completes. The lineage re-release caveat (D-LINEAGE) is stated in the report whatever the verdict. BUSCO rows are reported apart and never change this verdict.",
+ "claims": [
+  {
+   "id": "t1.scer.compleasm.C",
+   "role": "primary",
+   "quantity": "Completed (%) reported by compleasm for S. cerevisiae with saccharomycetes_odb10",
+   "paper_value": 99.2,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'S. cerevisiae' / saccharomycetes_odb10 / compleasm",
+   "implied_count_range": [
+    2119,
+    2120
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000146045.2_R64_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.scer.compleasm.S",
+   "role": "primary",
+   "quantity": "Single-copy (%) reported by compleasm for S. cerevisiae with saccharomycetes_odb10",
+   "paper_value": 97.6,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'S. cerevisiae' / saccharomycetes_odb10 / compleasm",
+   "implied_count_range": [
+    2085,
+    2086
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000146045.2_R64_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.scer.compleasm.D",
+   "role": "primary",
+   "quantity": "Duplicated (%) reported by compleasm for S. cerevisiae with saccharomycetes_odb10",
+   "paper_value": 1.6,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'S. cerevisiae' / saccharomycetes_odb10 / compleasm",
+   "implied_count_range": [
+    34,
+    35
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000146045.2_R64_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.scer.compleasm.F",
+   "role": "primary",
+   "quantity": "Fragmented (%) reported by compleasm for S. cerevisiae with saccharomycetes_odb10",
+   "paper_value": 0.3,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'S. cerevisiae' / saccharomycetes_odb10 / compleasm",
+   "implied_count_range": [
+    6,
+    7
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000146045.2_R64_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.scer.compleasm.M",
+   "role": "primary",
+   "quantity": "Missing (%) reported by compleasm for S. cerevisiae with saccharomycetes_odb10",
+   "paper_value": 0.5,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'S. cerevisiae' / saccharomycetes_odb10 / compleasm",
+   "implied_count_range": [
+    10,
+    11
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000146045.2_R64_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.scer.compleasm.N",
+   "role": "primary",
+   "quantity": "N, number of BUSCO genes in saccharomycetes_odb10 as counted by compleasm",
+   "paper_value": 2137,
+   "unit": "genes",
+   "location": "Table 1, column N, S. cerevisiae row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  },
+  {
+   "id": "t1.scer.busco.C",
+   "role": "optional",
+   "quantity": "Completed (%) reported by BUSCO for S. cerevisiae with saccharomycetes_odb10",
+   "paper_value": 99.5,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'S. cerevisiae' / saccharomycetes_odb10 / BUSCO",
+   "implied_count_range": [
+    2126,
+    2127
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000146045.2_R64_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.scer.busco.S",
+   "role": "optional",
+   "quantity": "Single-copy (%) reported by BUSCO for S. cerevisiae with saccharomycetes_odb10",
+   "paper_value": 97.3,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'S. cerevisiae' / saccharomycetes_odb10 / BUSCO",
+   "implied_count_range": [
+    2079,
+    2080
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000146045.2_R64_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.scer.busco.D",
+   "role": "optional",
+   "quantity": "Duplicated (%) reported by BUSCO for S. cerevisiae with saccharomycetes_odb10",
+   "paper_value": 2.2,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'S. cerevisiae' / saccharomycetes_odb10 / BUSCO",
+   "implied_count_range": [
+    46,
+    48
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000146045.2_R64_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.scer.busco.F",
+   "role": "optional",
+   "quantity": "Fragmented (%) reported by BUSCO for S. cerevisiae with saccharomycetes_odb10",
+   "paper_value": 0.1,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'S. cerevisiae' / saccharomycetes_odb10 / BUSCO",
+   "implied_count_range": [
+    2,
+    3
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000146045.2_R64_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.scer.busco.M",
+   "role": "optional",
+   "quantity": "Missing (%) reported by BUSCO for S. cerevisiae with saccharomycetes_odb10",
+   "paper_value": 0.4,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'S. cerevisiae' / saccharomycetes_odb10 / BUSCO",
+   "implied_count_range": [
+    8,
+    9
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000146045.2_R64_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.scer.busco.N",
+   "role": "optional",
+   "quantity": "N, number of BUSCO genes in saccharomycetes_odb10 as counted by BUSCO",
+   "paper_value": 2137,
+   "unit": "genes",
+   "location": "Table 1, column N, S. cerevisiae row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "saccharomycetes_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  },
+  {
+   "id": "t1.cele.compleasm.C",
+   "role": "primary",
+   "quantity": "Completed (%) reported by compleasm for C. elegans with nematoda_odb10",
+   "paper_value": 99.8,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'C. elegans' / nematoda_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    3124,
+    3126
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000002985.6_WBcel235_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.cele.compleasm.S",
+   "role": "primary",
+   "quantity": "Single-copy (%) reported by compleasm for C. elegans with nematoda_odb10",
+   "paper_value": 99.7,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'C. elegans' / nematoda_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    3121,
+    3123
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000002985.6_WBcel235_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.cele.compleasm.D",
+   "role": "primary",
+   "quantity": "Duplicated (%) reported by compleasm for C. elegans with nematoda_odb10",
+   "paper_value": 0.1,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'C. elegans' / nematoda_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    2,
+    4
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000002985.6_WBcel235_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.cele.compleasm.F",
+   "role": "primary",
+   "quantity": "Fragmented (%) reported by compleasm for C. elegans with nematoda_odb10",
+   "paper_value": 0.2,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'C. elegans' / nematoda_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    5,
+    7
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000002985.6_WBcel235_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.cele.compleasm.M",
+   "role": "primary",
+   "quantity": "Missing (%) reported by compleasm for C. elegans with nematoda_odb10",
+   "paper_value": 0.0,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'C. elegans' / nematoda_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    0,
+    1
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000002985.6_WBcel235_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.cele.compleasm.N",
+   "role": "primary",
+   "quantity": "N, number of BUSCO genes in nematoda_odb10 as counted by compleasm",
+   "paper_value": 3131,
+   "unit": "genes",
+   "location": "Table 1, column N, C. elegans row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  },
+  {
+   "id": "t1.cele.busco.C",
+   "role": "optional",
+   "quantity": "Completed (%) reported by BUSCO for C. elegans with nematoda_odb10",
+   "paper_value": 98.8,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'C. elegans' / nematoda_odb10 / BUSCO",
+   "implied_count_range": [
+    3092,
+    3094
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000002985.6_WBcel235_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.cele.busco.S",
+   "role": "optional",
+   "quantity": "Single-copy (%) reported by BUSCO for C. elegans with nematoda_odb10",
+   "paper_value": 98.3,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'C. elegans' / nematoda_odb10 / BUSCO",
+   "implied_count_range": [
+    3077,
+    3079
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000002985.6_WBcel235_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.cele.busco.D",
+   "role": "optional",
+   "quantity": "Duplicated (%) reported by BUSCO for C. elegans with nematoda_odb10",
+   "paper_value": 0.5,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'C. elegans' / nematoda_odb10 / BUSCO",
+   "implied_count_range": [
+    15,
+    17
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000002985.6_WBcel235_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.cele.busco.F",
+   "role": "optional",
+   "quantity": "Fragmented (%) reported by BUSCO for C. elegans with nematoda_odb10",
+   "paper_value": 0.6,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'C. elegans' / nematoda_odb10 / BUSCO",
+   "implied_count_range": [
+    18,
+    20
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000002985.6_WBcel235_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.cele.busco.M",
+   "role": "optional",
+   "quantity": "Missing (%) reported by BUSCO for C. elegans with nematoda_odb10",
+   "paper_value": 0.6,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'C. elegans' / nematoda_odb10 / BUSCO",
+   "implied_count_range": [
+    18,
+    20
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000002985.6_WBcel235_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.cele.busco.N",
+   "role": "optional",
+   "quantity": "N, number of BUSCO genes in nematoda_odb10 as counted by BUSCO",
+   "paper_value": 3131,
+   "unit": "genes",
+   "location": "Table 1, column N, C. elegans row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "nematoda_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  },
+  {
+   "id": "t1.atha.compleasm.C",
+   "role": "primary",
+   "quantity": "Completed (%) reported by compleasm for A. thaliana with brassicales_odb10",
+   "paper_value": 99.9,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'A. thaliana' / brassicales_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    4590,
+    4593
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001735.4_TAIR10.1_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.atha.compleasm.S",
+   "role": "primary",
+   "quantity": "Single-copy (%) reported by compleasm for A. thaliana with brassicales_odb10",
+   "paper_value": 98.9,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'A. thaliana' / brassicales_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    4544,
+    4547
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001735.4_TAIR10.1_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.atha.compleasm.D",
+   "role": "primary",
+   "quantity": "Duplicated (%) reported by compleasm for A. thaliana with brassicales_odb10",
+   "paper_value": 1.0,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'A. thaliana' / brassicales_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    44,
+    48
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001735.4_TAIR10.1_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.atha.compleasm.F",
+   "role": "primary",
+   "quantity": "Fragmented (%) reported by compleasm for A. thaliana with brassicales_odb10",
+   "paper_value": 0.1,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'A. thaliana' / brassicales_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    3,
+    6
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001735.4_TAIR10.1_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.atha.compleasm.M",
+   "role": "primary",
+   "quantity": "Missing (%) reported by compleasm for A. thaliana with brassicales_odb10",
+   "paper_value": 0.0,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'A. thaliana' / brassicales_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    0,
+    2
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001735.4_TAIR10.1_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.atha.compleasm.N",
+   "role": "primary",
+   "quantity": "N, number of BUSCO genes in brassicales_odb10 as counted by compleasm",
+   "paper_value": 4596,
+   "unit": "genes",
+   "location": "Table 1, column N, A. thaliana row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  },
+  {
+   "id": "t1.atha.busco.C",
+   "role": "optional",
+   "quantity": "Completed (%) reported by BUSCO for A. thaliana with brassicales_odb10",
+   "paper_value": 99.2,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'A. thaliana' / brassicales_odb10 / BUSCO",
+   "implied_count_range": [
+    4557,
+    4561
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001735.4_TAIR10.1_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.atha.busco.S",
+   "role": "optional",
+   "quantity": "Single-copy (%) reported by BUSCO for A. thaliana with brassicales_odb10",
+   "paper_value": 97.9,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'A. thaliana' / brassicales_odb10 / BUSCO",
+   "implied_count_range": [
+    4498,
+    4501
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001735.4_TAIR10.1_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.atha.busco.D",
+   "role": "optional",
+   "quantity": "Duplicated (%) reported by BUSCO for A. thaliana with brassicales_odb10",
+   "paper_value": 1.3,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'A. thaliana' / brassicales_odb10 / BUSCO",
+   "implied_count_range": [
+    58,
+    62
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001735.4_TAIR10.1_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.atha.busco.F",
+   "role": "optional",
+   "quantity": "Fragmented (%) reported by BUSCO for A. thaliana with brassicales_odb10",
+   "paper_value": 0.1,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'A. thaliana' / brassicales_odb10 / BUSCO",
+   "implied_count_range": [
+    3,
+    6
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001735.4_TAIR10.1_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.atha.busco.M",
+   "role": "optional",
+   "quantity": "Missing (%) reported by BUSCO for A. thaliana with brassicales_odb10",
+   "paper_value": 0.7,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'A. thaliana' / brassicales_odb10 / BUSCO",
+   "implied_count_range": [
+    30,
+    34
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001735.4_TAIR10.1_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.atha.busco.N",
+   "role": "optional",
+   "quantity": "N, number of BUSCO genes in brassicales_odb10 as counted by BUSCO",
+   "paper_value": 4596,
+   "unit": "genes",
+   "location": "Table 1, column N, A. thaliana row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "brassicales_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  },
+  {
+   "id": "t1.dmel.compleasm.C",
+   "role": "primary",
+   "quantity": "Completed (%) reported by compleasm for D. melanogaster with diptera_odb10",
+   "paper_value": 99.7,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'D. melanogaster' / diptera_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    3274,
+    3276
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.dmel.compleasm.S",
+   "role": "primary",
+   "quantity": "Single-copy (%) reported by compleasm for D. melanogaster with diptera_odb10",
+   "paper_value": 99.4,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'D. melanogaster' / diptera_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    3264,
+    3266
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.dmel.compleasm.D",
+   "role": "primary",
+   "quantity": "Duplicated (%) reported by compleasm for D. melanogaster with diptera_odb10",
+   "paper_value": 0.3,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'D. melanogaster' / diptera_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    9,
+    11
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.dmel.compleasm.F",
+   "role": "primary",
+   "quantity": "Fragmented (%) reported by compleasm for D. melanogaster with diptera_odb10",
+   "paper_value": 0.2,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'D. melanogaster' / diptera_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    5,
+    8
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.dmel.compleasm.M",
+   "role": "primary",
+   "quantity": "Missing (%) reported by compleasm for D. melanogaster with diptera_odb10",
+   "paper_value": 0.1,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'D. melanogaster' / diptera_odb10 / compleasm; same value in Table S7 '<species>-reference' row",
+   "implied_count_range": [
+    2,
+    4
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.dmel.compleasm.N",
+   "role": "primary",
+   "quantity": "N, number of BUSCO genes in diptera_odb10 as counted by compleasm",
+   "paper_value": 3285,
+   "unit": "genes",
+   "location": "Table 1, column N, D. melanogaster row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  },
+  {
+   "id": "t1.dmel.busco.C",
+   "role": "optional",
+   "quantity": "Completed (%) reported by BUSCO for D. melanogaster with diptera_odb10",
+   "paper_value": 98.6,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'D. melanogaster' / diptera_odb10 / BUSCO",
+   "implied_count_range": [
+    3238,
+    3240
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.dmel.busco.S",
+   "role": "optional",
+   "quantity": "Single-copy (%) reported by BUSCO for D. melanogaster with diptera_odb10",
+   "paper_value": 98.4,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'D. melanogaster' / diptera_odb10 / BUSCO",
+   "implied_count_range": [
+    3231,
+    3234
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.dmel.busco.D",
+   "role": "optional",
+   "quantity": "Duplicated (%) reported by BUSCO for D. melanogaster with diptera_odb10",
+   "paper_value": 0.2,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'D. melanogaster' / diptera_odb10 / BUSCO",
+   "implied_count_range": [
+    5,
+    8
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.dmel.busco.F",
+   "role": "optional",
+   "quantity": "Fragmented (%) reported by BUSCO for D. melanogaster with diptera_odb10",
+   "paper_value": 0.5,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'D. melanogaster' / diptera_odb10 / BUSCO",
+   "implied_count_range": [
+    15,
+    18
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.dmel.busco.M",
+   "role": "optional",
+   "quantity": "Missing (%) reported by BUSCO for D. melanogaster with diptera_odb10",
+   "paper_value": 0.9,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'D. melanogaster' / diptera_odb10 / BUSCO",
+   "implied_count_range": [
+    28,
+    31
+   ],
+   "tolerance": "|ours - paper| <= 0.5 percentage points",
+   "tolerance_basis": "See D-TOL-BUSCO. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "BUSCO 5.4.7, -m genome, MetaEuk (D-BUSCO)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.dmel.busco.N",
+   "role": "optional",
+   "quantity": "N, number of BUSCO genes in diptera_odb10 as counted by BUSCO",
+   "paper_value": 3285,
+   "unit": "genes",
+   "location": "Table 1, column N, D. melanogaster row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "diptera_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  },
+  {
+   "id": "t1.mmus.compleasm.C",
+   "role": "primary",
+   "quantity": "Completed (%) reported by compleasm for M. musculus with glires_odb10",
+   "paper_value": 99.7,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'M. musculus' / glires_odb10 / compleasm",
+   "implied_count_range": [
+    13750,
+    13763
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001635.27_GRCm39_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "glires_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.mmus.compleasm.S",
+   "role": "primary",
+   "quantity": "Single-copy (%) reported by compleasm for M. musculus with glires_odb10",
+   "paper_value": 97.8,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'M. musculus' / glires_odb10 / compleasm",
+   "implied_count_range": [
+    13488,
+    13501
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001635.27_GRCm39_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "glires_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.mmus.compleasm.D",
+   "role": "primary",
+   "quantity": "Duplicated (%) reported by compleasm for M. musculus with glires_odb10",
+   "paper_value": 1.9,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'M. musculus' / glires_odb10 / compleasm",
+   "implied_count_range": [
+    256,
+    269
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001635.27_GRCm39_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "glires_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.mmus.compleasm.F",
+   "role": "primary",
+   "quantity": "Fragmented (%) reported by compleasm for M. musculus with glires_odb10",
+   "paper_value": 0.3,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'M. musculus' / glires_odb10 / compleasm",
+   "implied_count_range": [
+    35,
+    48
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001635.27_GRCm39_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "glires_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.mmus.compleasm.M",
+   "role": "primary",
+   "quantity": "Missing (%) reported by compleasm for M. musculus with glires_odb10",
+   "paper_value": 0.0,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'M. musculus' / glires_odb10 / compleasm",
+   "implied_count_range": [
+    0,
+    6
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_000001635.27_GRCm39_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "glires_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.mmus.compleasm.N",
+   "role": "primary",
+   "quantity": "N, number of BUSCO genes in glires_odb10 as counted by compleasm",
+   "paper_value": 13798,
+   "unit": "genes",
+   "location": "Table 1, column N, M. musculus row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "glires_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  },
+  {
+   "id": "t1.hsap.compleasm.C",
+   "role": "primary (headline: abstract '99.6% than BUSCO's 95.7%')",
+   "quantity": "Completed (%) reported by compleasm for H. sapiens (T2T-CHM13) with primates_odb10",
+   "paper_value": 99.6,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'H. sapiens' / primates_odb10 / compleasm, also abstract and Table S4",
+   "implied_count_range": [
+    13718,
+    13731
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "primates_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.hsap.compleasm.S",
+   "role": "primary (headline: abstract '99.6% than BUSCO's 95.7%')",
+   "quantity": "Single-copy (%) reported by compleasm for H. sapiens (T2T-CHM13) with primates_odb10",
+   "paper_value": 98.9,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'H. sapiens' / primates_odb10 / compleasm; also Table S4",
+   "implied_count_range": [
+    13622,
+    13635
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "primates_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.hsap.compleasm.D",
+   "role": "primary (headline: abstract '99.6% than BUSCO's 95.7%')",
+   "quantity": "Duplicated (%) reported by compleasm for H. sapiens (T2T-CHM13) with primates_odb10",
+   "paper_value": 0.7,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'H. sapiens' / primates_odb10 / compleasm; also Table S4",
+   "implied_count_range": [
+    90,
+    103
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "primates_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.hsap.compleasm.F",
+   "role": "primary (headline: abstract '99.6% than BUSCO's 95.7%')",
+   "quantity": "Fragmented (%) reported by compleasm for H. sapiens (T2T-CHM13) with primates_odb10",
+   "paper_value": 0.3,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'H. sapiens' / primates_odb10 / compleasm; also Table S4",
+   "implied_count_range": [
+    35,
+    48
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "primates_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.hsap.compleasm.M",
+   "role": "primary (headline: abstract '99.6% than BUSCO's 95.7%')",
+   "quantity": "Missing (%) reported by compleasm for H. sapiens (T2T-CHM13) with primates_odb10",
+   "paper_value": 0.1,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'H. sapiens' / primates_odb10 / compleasm; also Table S4",
+   "implied_count_range": [
+    7,
+    20
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "primates_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.hsap.compleasm.N",
+   "role": "primary",
+   "quantity": "N, number of BUSCO genes in primates_odb10 as counted by compleasm",
+   "paper_value": 13780,
+   "unit": "genes",
+   "location": "Table 1, column N, H. sapiens row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "primates_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  },
+  {
+   "id": "t1.zmay.compleasm.C",
+   "role": "primary",
+   "quantity": "Completed (%) reported by compleasm for Z. mays with liliopsida_odb10",
+   "paper_value": 96.7,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'Z. mays' / liliopsida_odb10 / compleasm",
+   "implied_count_range": [
+    3128,
+    3130
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "liliopsida_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-C, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.zmay.compleasm.S",
+   "role": "primary",
+   "quantity": "Single-copy (%) reported by compleasm for Z. mays with liliopsida_odb10",
+   "paper_value": 82.2,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'Z. mays' / liliopsida_odb10 / compleasm",
+   "implied_count_range": [
+    2659,
+    2661
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "liliopsida_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-S, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.zmay.compleasm.D",
+   "role": "primary",
+   "quantity": "Duplicated (%) reported by compleasm for Z. mays with liliopsida_odb10",
+   "paper_value": 14.5,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'Z. mays' / liliopsida_odb10 / compleasm",
+   "implied_count_range": [
+    468,
+    470
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "liliopsida_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-D, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.zmay.compleasm.F",
+   "role": "primary",
+   "quantity": "Fragmented (%) reported by compleasm for Z. mays with liliopsida_odb10",
+   "paper_value": 3.0,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'Z. mays' / liliopsida_odb10 / compleasm",
+   "implied_count_range": [
+    96,
+    98
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "liliopsida_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-F, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.zmay.compleasm.M",
+   "role": "primary",
+   "quantity": "Missing (%) reported by compleasm for Z. mays with liliopsida_odb10",
+   "paper_value": 0.3,
+   "unit": "percent of N BUSCO genes (one decimal in the paper)",
+   "location": "Table 1, row 'Z. mays' / liliopsida_odb10 / compleasm",
+   "implied_count_range": [
+    9,
+    11
+   ],
+   "tolerance": "|ours - paper| <= 0.3 percentage points",
+   "tolerance_basis": "See D-TOL-COMPLEASM. Exact tier: ours rounded to one decimal equals the paper value.",
+   "conditions": {
+    "genome": "GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz, NCBI RefSeq, used as downloaded (D-GENOME, D-ORDER)",
+    "lineage": "liliopsida_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "tool": "compleasm v0.2.2 release kit, mode busco, default thresholds (D-CODE, D-MODE, D-OUTS, D-THRESH)",
+    "metric": "D-METRIC-M, D-ROUND",
+    "threads": "-t 8 under nice -n 19 (D-THREADS)",
+    "seed": "not applicable (deterministic for a fixed input, D-REPEAT)"
+   }
+  },
+  {
+   "id": "t1.zmay.compleasm.N",
+   "role": "primary",
+   "quantity": "N, number of BUSCO genes in liliopsida_odb10 as counted by compleasm",
+   "paper_value": 3236,
+   "unit": "genes",
+   "location": "Table 1, column N, Z. mays row",
+   "tolerance": "exact",
+   "tolerance_basis": "Integer count of gene groups in the lineage (D-N). A different N means the re-released lineage has a different gene set; that is recorded as a lineage difference and the percentages are still graded.",
+   "conditions": {
+    "lineage": "liliopsida_odb10 2024-01-08 re-release (D-LINEAGE)",
+    "metric": "D-N"
+   }
+  }
+ ]
+}

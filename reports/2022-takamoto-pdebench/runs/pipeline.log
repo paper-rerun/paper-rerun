@@ -1,0 +1,97 @@
+2026-11-03T16:52:58 run Darcy-beta0.01-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta0.01_Train.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1 ++args.ar_mode=True ++args.pushforward=True ++args.unroll_step=1
+2026-11-03T16:55:21 done Darcy-beta0.01-UNet 142 s
+2026-11-03T16:55:21 run Darcy-beta0.01-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta0.01_Train.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1
+2026-11-03T16:56:18 done Darcy-beta0.01-FNO 57 s
+2026-11-03T16:56:18 diag 2D_DarcyFlow_beta0.01_Train.hdf5
+2026-11-03T16:57:36 run Darcy-beta0.1-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta0.1_Train.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1 ++args.ar_mode=True ++args.pushforward=True ++args.unroll_step=1
+2026-11-03T16:59:11 done Darcy-beta0.1-UNet 94 s
+2026-11-03T16:59:11 run Darcy-beta0.1-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta0.1_Train.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1
+2026-11-03T17:00:07 done Darcy-beta0.1-FNO 57 s
+2026-11-03T17:00:07 diag 2D_DarcyFlow_beta0.1_Train.hdf5
+2026-11-03T17:01:02 run Darcy-beta1.0-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta1.0_Train.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1 ++args.ar_mode=True ++args.pushforward=True ++args.unroll_step=1
+2026-11-03T17:02:25 done Darcy-beta1.0-UNet 83 s
+2026-11-03T17:02:25 run Darcy-beta1.0-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta1.0_Train.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1
+2026-11-03T17:03:26 done Darcy-beta1.0-FNO 60 s
+2026-11-03T17:03:26 diag 2D_DarcyFlow_beta1.0_Train.hdf5
+2026-11-03T17:04:35 run Darcy-beta10.0-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta10.0_Train.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1 ++args.ar_mode=True ++args.pushforward=True ++args.unroll_step=1
+2026-11-03T17:06:02 done Darcy-beta10.0-UNet 87 s
+2026-11-03T17:06:02 run Darcy-beta10.0-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta10.0_Train.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1
+2026-11-03T17:06:48 done Darcy-beta10.0-FNO 46 s
+2026-11-03T17:06:48 diag 2D_DarcyFlow_beta10.0_Train.hdf5
+2026-11-03T17:07:28 run Darcy-beta100.0-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta100.0_Train.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1 ++args.ar_mode=True ++args.pushforward=True ++args.unroll_step=1
+2026-11-03T17:08:25 done Darcy-beta100.0-UNet 57 s
+2026-11-03T17:08:25 run Darcy-beta100.0-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Darcy.yaml ++args.filename=2D_DarcyFlow_beta100.0_Train.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/ ++args.initial_step=1 ++args.t_train=2 ++args.reduced_resolution=2 ++args.reduced_resolution_t=1
+2026-11-03T17:09:08 done Darcy-beta100.0-FNO 42 s
+2026-11-03T17:09:08 diag 2D_DarcyFlow_beta100.0_Train.hdf5
+2026-11-03T17:09:48 waiting for /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/1D_Advection_Sols_beta4.0.hdf5.done
+2026-11-03T17:11:48 run Advection-beta4.0-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta4.0.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/
+2026-11-03T17:14:37 done Advection-beta4.0-UNet 169 s
+2026-11-03T17:14:37 run Advection-beta4.0-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta4.0.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/
+2026-11-03T17:16:55 done Advection-beta4.0-FNO 138 s
+2026-11-03T17:16:55 diag 1D_Advection_Sols_beta4.0.hdf5
+2026-11-03T17:19:01 assemble 1D_Advection_Sols_beta4.0.hdf5
+-rwxrwxrwx 1 root root 8232968312 Nov  3 17:20 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/1D_Advection_Sols_beta4.0.hdf5
+2026-11-03T17:20:22 run Advection-beta4.0-UNet-sparse : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta4.0.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T17:23:39 done Advection-beta4.0-UNet-sparse 197 s
+2026-11-03T17:23:39 run Advection-beta4.0-FNO-sparse : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta4.0.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T17:25:53 done Advection-beta4.0-FNO-sparse 134 s
+2026-11-03T17:25:53 diag SPARSECHECK
+2026-11-03T17:28:42 removed assembled 1D_Advection_Sols_beta4.0.hdf5
+2026-11-03T17:28:42 assemble 1D_Advection_Sols_beta0.1.hdf5
+-rwxrwxrwx 1 root root 8232968312 Nov  3 17:29 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/1D_Advection_Sols_beta0.1.hdf5
+2026-11-03T17:29:57 run Advection-beta0.1-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta0.1.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T17:34:11 done Advection-beta0.1-UNet 254 s
+2026-11-03T17:34:11 run Advection-beta0.1-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta0.1.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T17:36:55 done Advection-beta0.1-FNO 165 s
+2026-11-03T17:36:55 diag 1D_Advection_Sols_beta0.1.hdf5
+2026-11-03T17:39:35 removed assembled 1D_Advection_Sols_beta0.1.hdf5
+2026-11-03T17:39:35 assemble 1D_Advection_Sols_beta0.4.hdf5
+-rwxrwxrwx 1 root root 8232968312 Nov  3 17:40 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/1D_Advection_Sols_beta0.4.hdf5
+2026-11-03T17:40:50 run Advection-beta0.4-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta0.4.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T17:44:31 done Advection-beta0.4-UNet 221 s
+2026-11-03T17:44:31 run Advection-beta0.4-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta0.4.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T17:47:10 done Advection-beta0.4-FNO 159 s
+2026-11-03T17:47:10 diag 1D_Advection_Sols_beta0.4.hdf5
+2026-11-03T17:49:44 removed assembled 1D_Advection_Sols_beta0.4.hdf5
+2026-11-03T17:49:44 assemble 1D_Advection_Sols_beta1.0.hdf5
+-rwxrwxrwx 1 root root 8232968312 Nov  3 17:51 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/1D_Advection_Sols_beta1.0.hdf5
+2026-11-03T17:51:08 run Advection-beta1.0-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta1.0.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T17:55:20 done Advection-beta1.0-UNet 253 s
+2026-11-03T17:55:20 run Advection-beta1.0-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta1.0.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T17:57:26 done Advection-beta1.0-FNO 126 s
+2026-11-03T17:57:26 diag 1D_Advection_Sols_beta1.0.hdf5
+2026-11-03T17:59:37 removed assembled 1D_Advection_Sols_beta1.0.hdf5
+2026-11-03T17:59:37 assemble 1D_Burgers_Sols_Nu0.001.hdf5
+-rwxrwxrwx 1 root root 8232968312 Nov  3 18:00 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/1D_Burgers_Sols_Nu0.001.hdf5
+2026-11-03T18:00:53 run Burgers-nu0.001-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Bgs.yaml ++args.filename=1D_Burgers_Sols_Nu0.001.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T18:04:25 done Burgers-nu0.001-UNet 211 s
+2026-11-03T18:04:25 run Burgers-nu0.001-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Bgs.yaml ++args.filename=1D_Burgers_Sols_Nu0.001.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T18:06:48 done Burgers-nu0.001-FNO 144 s
+2026-11-03T18:06:48 diag 1D_Burgers_Sols_Nu0.001.hdf5
+2026-11-03T18:08:46 removed assembled 1D_Burgers_Sols_Nu0.001.hdf5
+2026-11-03T18:08:46 assemble 1D_Burgers_Sols_Nu0.01.hdf5
+-rwxrwxrwx 1 root root 8232968312 Nov  3 18:10 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/1D_Burgers_Sols_Nu0.01.hdf5
+2026-11-03T18:10:22 run Burgers-nu0.01-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Bgs.yaml ++args.filename=1D_Burgers_Sols_Nu0.01.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T18:13:58 done Burgers-nu0.01-UNet 216 s
+2026-11-03T18:13:59 run Burgers-nu0.01-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Bgs.yaml ++args.filename=1D_Burgers_Sols_Nu0.01.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T18:16:30 done Burgers-nu0.01-FNO 151 s
+2026-11-03T18:16:30 diag 1D_Burgers_Sols_Nu0.01.hdf5
+2026-11-03T18:18:31 removed assembled 1D_Burgers_Sols_Nu0.01.hdf5
+2026-11-03T18:18:31 assemble 1D_Burgers_Sols_Nu0.1.hdf5
+-rwxrwxrwx 1 root root 8232968312 Nov  3 18:19 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/1D_Burgers_Sols_Nu0.1.hdf5
+2026-11-03T18:19:53 run Burgers-nu0.1-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Bgs.yaml ++args.filename=1D_Burgers_Sols_Nu0.1.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T18:23:27 done Burgers-nu0.1-UNet 214 s
+2026-11-03T18:23:27 run Burgers-nu0.1-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Bgs.yaml ++args.filename=1D_Burgers_Sols_Nu0.1.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T18:25:40 done Burgers-nu0.1-FNO 133 s
+2026-11-03T18:25:40 diag 1D_Burgers_Sols_Nu0.1.hdf5
+2026-11-03T18:27:46 removed assembled 1D_Burgers_Sols_Nu0.1.hdf5
+2026-11-03T18:27:46 assemble 1D_Burgers_Sols_Nu1.0.hdf5
+-rwxrwxrwx 1 root root 8232968312 Nov  3 18:29 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/1D_Burgers_Sols_Nu1.0.hdf5
+2026-11-03T18:29:11 run Burgers-nu1.0-UNet : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Bgs.yaml ++args.filename=1D_Burgers_Sols_Nu1.0.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T18:33:41 done Burgers-nu1.0-UNet 270 s
+2026-11-03T18:33:41 run Burgers-nu1.0-FNO : nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Bgs.yaml ++args.filename=1D_Burgers_Sols_Nu1.0.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+2026-11-03T18:36:33 done Burgers-nu1.0-FNO 172 s
+2026-11-03T18:36:33 diag 1D_Burgers_Sols_Nu1.0.hdf5
+2026-11-03T18:38:53 removed assembled 1D_Burgers_Sols_Nu1.0.hdf5
+2026-11-03T18:38:53 PIPELINE DONE
+exit 0

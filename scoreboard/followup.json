@@ -29,6 +29,20 @@
  },
  {
   "kind": "Issue",
+  "paper": "compleasm",
+  "repository": "huangnengCSU/compleasm",
+  "ask": "The 2023 odb10 lineage files or the paper's full_table.tsv for maize; v0.2.2 crashes on today's lineage index; which --outs value the paper used.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "PDEBench",
+  "repository": "pdebench/PDEBench",
+  "ask": "The 2022 Advection β=1.0 FNO checkpoint looks mislabelled; the 2022 Burgers FNO checkpoints differ from Table 7; configs for the pre-trained Darcy models.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
   "paper": "Pantheon+",
   "repository": "PantheonPlusSH0ES/DataRelease",
   "ask": "Which prior and settings gave the w0waCDM row; whether the PolyChord chains behind Table 3 can be released.",

@@ -1,0 +1,43 @@
+[M::mp_ntseq_read@49.075*0.25] read 2182786008 bases in 687 contigs
+[M::mp_idx_build@49.075*0.25] 17053702 blocks
+[M::mp_idx_build@62.868*1.80] collected syncmers
+[M::mp_idx_build@72.802*1.69] 1178526706 kmer-block pairs
+[M::mp_mapopt_set_max_intron] set max intron size to 168194
+[M::mp_idx_print_stat] 2395936 distinct k-mers; mean occ of infrequent k-mers: 462.13; 2240 frequent k-mers accounting for 72331750 occurrences
+[M::worker_pipeline::99.513*3.34] mapped 2992 sequences
+[M::worker_pipeline::123.902*4.26] mapped 3065 sequences
+[M::worker_pipeline::152.056*4.95] mapped 3226 sequences
+[M::worker_pipeline::180.214*5.42] mapped 3491 sequences
+[M::worker_pipeline::207.059*5.76] mapped 4007 sequences
+[M::worker_pipeline::236.571*6.03] mapped 4007 sequences
+[M::worker_pipeline::265.871*6.24] mapped 4183 sequences
+[M::worker_pipeline::296.405*6.42] mapped 4424 sequences
+[M::worker_pipeline::343.703*6.64] mapped 5280 sequences
+[M::worker_pipeline::376.793*6.75] mapped 5202 sequences
+[M::worker_pipeline::414.679*6.87] mapped 6042 sequences
+[M::worker_pipeline::450.274*6.96] mapped 5976 sequences
+[M::worker_pipeline::472.057*7.00] mapped 2433 sequences
+[M::worker_pipeline::495.700*7.04] mapped 2592 sequences
+[M::worker_pipeline::518.226*7.08] mapped 2726 sequences
+[M::worker_pipeline::543.201*7.12] mapped 2867 sequences
+[M::worker_pipeline::543.274*7.12] mapped 148 sequences
+[M::main] Version: 0.12-r237
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin_head/miniprot --trans -u -I --outs=0.95 -t 8 --gff /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/genomes/GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/mb_downloads_head/liliopsida_odb10/refseq_db.faa.gz
+[M::main] Real time: 543.352 sec; CPU: 3869.853 sec; Peak RSS: 25.383 GB
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin_head/miniprot
+lineage: liliopsida_odb10
+hmmsearch execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin_head/hmmsearch
+
+S:83.99%, 2718
+D:15.42%, 499
+F:0.34%, 11
+I:0.00%, 0
+M:0.25%, 8
+N:3236
+
+## Download lineage: 0.00(s)
+## Run miniprot: 543.37(s)
+## Analyze miniprot: 240.28(s)
+## Total runtime: 783.66(s)

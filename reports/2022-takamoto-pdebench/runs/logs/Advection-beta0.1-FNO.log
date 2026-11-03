@@ -1,0 +1,18 @@
+cmd: nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta0.1.hdf5 ++args.model_name=FNO ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+cwd: /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/runs/jobs/Advection-beta0.1-FNO
+FNO
+Epochs = 500, learning rate = 0.001, scheduler step = 100, scheduler gamma = 0.5
+FNODatasetSingle
+.HDF5 file extension is assumed hereafter
+.HDF5 file extension is assumed hereafter
+Spatial Dimension 1
+Total parameters = 23937
+RMSE: 0.00491
+normalized RMSE: 0.00928
+RMSE of conserved variables: 0.00050
+Maximum value of rms error: 0.13996
+RMSE at boundaries: 0.00428
+RMSE in Fourier space: [0.00040607 0.0004424  0.00029084]
+Done.
+
+returncode 0 wall 164.5 s

@@ -26,10 +26,13 @@ AREAS = {
 	"protein fitness": "Biology", "protein design": "Biology", "cell imaging": "Biology",
 	"plant genomics": "Biology", "cosmology": "Physics", "particle physics": "Physics",
 	"materials / chemistry": "Materials and chemistry", "materials": "Materials and chemistry",
+	"machine learning": "Computing",
 }
 
 # The main thing each rerun found, in one category, read from the report
 MAIN_ISSUE = {
+	"2023-huang-compleasm": "Reference data re-released",
+	"2022-takamoto-pdebench": "Released checkpoints differ from the paper",
 	"2026-gilchrist-foldmason": "Reference data offline or deleted",
 	"2024-dimitrov-liana-slidetags": "Code differs from the Methods",
 	"2022-brout-pantheonplus": "Settings behind one result not published",

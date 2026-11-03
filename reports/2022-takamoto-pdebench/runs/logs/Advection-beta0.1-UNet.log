@@ -1,0 +1,15 @@
+cmd: nice -n 19 taskset -c 8-11 /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/env/.venv/bin/python /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/repo/pdebench/models/train_models_forward.py +args=config_Adv.yaml ++args.filename=1D_Advection_Sols_beta0.1.hdf5 ++args.model_name=Unet ++args.if_training=False ++args.data_path=/mnt/e/Ciencia/noturno/2022-takamoto-pdebench/data/sparse/
+cwd: /mnt/e/Ciencia/noturno/2022-takamoto-pdebench/runs/jobs/Advection-beta0.1-UNet
+Unet
+Epochs = 500, learning rate = 0.001, scheduler step = 100, scheduler gamma = 0.5
+Spatial Dimension 1
+Total parameters = 2708673
+RMSE: 0.03778
+normalized RMSE: 0.05955
+RMSE of conserved variables: 0.01534
+Maximum value of rms error: 0.49039
+RMSE at boundaries: 0.06406
+RMSE in Fourier space: [0.01200308 0.00563932 0.00085858]
+Done.
+
+returncode 0 wall 253.5 s

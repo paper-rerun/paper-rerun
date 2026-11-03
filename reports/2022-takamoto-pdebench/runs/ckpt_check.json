@@ -1,0 +1,306 @@
+{
+ "Advection-beta0.1-UNet-nRMSE": {
+  "file": "1D_Advection_Sols_beta0.1_Unet-PF-20.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   10,
+   3
+  ],
+  "epoch": 388,
+  "loss": 0.09741329285316169,
+  "n_params": 2714579
+ },
+ "Advection-beta0.1-FNO-nRMSE": {
+  "file": "1D_Advection_Sols_beta0.1_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   11
+  ],
+  "epoch": 498,
+  "loss": 0.002677472268260317,
+  "n_params": 23937
+ },
+ "Advection-beta0.4-UNet-nRMSE": {
+  "file": "1D_Advection_Sols_beta0.4_Unet-PF-20.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   10,
+   3
+  ],
+  "epoch": 217,
+  "loss": 1.2034340538084507,
+  "n_params": 2714579
+ },
+ "Advection-beta0.4-FNO-nRMSE": {
+  "file": "1D_Advection_Sols_beta0.4_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   11
+  ],
+  "epoch": 499,
+  "loss": 0.003355851898959372,
+  "n_params": 23937
+ },
+ "Advection-beta1.0-UNet-nRMSE": {
+  "file": "1D_Advection_Sols_beta1.0_Unet-PF-20.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   10,
+   3
+  ],
+  "epoch": 331,
+  "loss": 0.038165373174706474,
+  "n_params": 2714579
+ },
+ "Advection-beta1.0-FNO-nRMSE": {
+  "file": "1D_Advection_Sols_beta1.0_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   11
+  ],
+  "epoch": 362,
+  "loss": 0.004431023851793725,
+  "n_params": 23937
+ },
+ "Advection-beta4.0-UNet-nRMSE": {
+  "file": "1D_Advection_Sols_beta4.0_Unet-PF-20.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   10,
+   3
+  ],
+  "epoch": 345,
+  "loss": 0.04479480747249909,
+  "n_params": 2714579
+ },
+ "Advection-beta4.0-FNO-nRMSE": {
+  "file": "1D_Advection_Sols_beta4.0_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   11
+  ],
+  "epoch": 493,
+  "loss": 0.001463480501115555,
+  "n_params": 23937
+ },
+ "Burgers-nu0.001-UNet-nRMSE": {
+  "file": "1D_Burgers_Sols_Nu0.001_Unet-PF-20.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   10,
+   3
+  ],
+  "epoch": 485,
+  "loss": 0.4372104248031974,
+  "n_params": 2714579
+ },
+ "Burgers-nu0.001-FNO-nRMSE": {
+  "file": "1D_Burgers_Sols_Nu0.001_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   11
+  ],
+  "epoch": 497,
+  "loss": 0.005129004828631878,
+  "n_params": 23937
+ },
+ "Burgers-nu0.01-UNet-nRMSE": {
+  "file": "1D_Burgers_Sols_Nu0.01_Unet-PF-20.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   10,
+   3
+  ],
+  "epoch": 381,
+  "loss": 0.4974569361656904,
+  "n_params": 2714579
+ },
+ "Burgers-nu0.01-FNO-nRMSE": {
+  "file": "1D_Burgers_Sols_Nu0.01_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   11
+  ],
+  "epoch": 498,
+  "loss": 0.0014408426504814997,
+  "n_params": 23937
+ },
+ "Burgers-nu0.1-UNet-nRMSE": {
+  "file": "1D_Burgers_Sols_Nu0.1_Unet-PF-20.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   10,
+   3
+  ],
+  "epoch": 496,
+  "loss": 0.25171417789533734,
+  "n_params": 2714579
+ },
+ "Burgers-nu0.1-FNO-nRMSE": {
+  "file": "1D_Burgers_Sols_Nu0.1_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   11
+  ],
+  "epoch": 484,
+  "loss": 0.00011331564940064709,
+  "n_params": 23937
+ },
+ "Burgers-nu1.0-UNet-nRMSE": {
+  "file": "1D_Burgers_Sols_Nu1.0_Unet-PF-20.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   10,
+   3
+  ],
+  "epoch": 423,
+  "loss": 0.1469121037516743,
+  "n_params": 2714579
+ },
+ "Burgers-nu1.0-FNO-nRMSE": {
+  "file": "1D_Burgers_Sols_Nu1.0_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   11
+  ],
+  "epoch": 495,
+  "loss": 2.935568545581191e-05,
+  "n_params": 23937
+ },
+ "Darcy-beta0.01-UNet-nRMSE": {
+  "file": "2D_DarcyFlow_beta0.01_Train_Unet-PF-1.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   1,
+   3,
+   3
+  ],
+  "epoch": 480,
+  "loss": 0.002663029412360629,
+  "n_params": 7768371
+ },
+ "Darcy-beta0.01-FNO-nRMSE": {
+  "file": "2D_DarcyFlow_beta0.01_Train_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   3
+  ],
+  "epoch": 0,
+  "loss": 0.010677665464754682,
+  "n_params": 465377
+ },
+ "Darcy-beta0.1-UNet-nRMSE": {
+  "file": "2D_DarcyFlow_beta0.1_Train_Unet-PF-1.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   1,
+   3,
+   3
+  ],
+  "epoch": 474,
+  "loss": 0.0031455026983167045,
+  "n_params": 7768371
+ },
+ "Darcy-beta0.1-FNO-nRMSE": {
+  "file": "2D_DarcyFlow_beta0.1_Train_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   3
+  ],
+  "epoch": 308,
+  "loss": 0.004411756493936991,
+  "n_params": 465377
+ },
+ "Darcy-beta1.0-UNet-nRMSE": {
+  "file": "2D_DarcyFlow_beta1.0_Train_Unet-PF-1.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   1,
+   3,
+   3
+  ],
+  "epoch": 478,
+  "loss": 0.005095231470477302,
+  "n_params": 7768371
+ },
+ "Darcy-beta1.0-FNO-nRMSE": {
+  "file": "2D_DarcyFlow_beta1.0_Train_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   3
+  ],
+  "epoch": 488,
+  "loss": 0.009073777357116342,
+  "n_params": 465377
+ },
+ "Darcy-beta10.0-UNet-nRMSE": {
+  "file": "2D_DarcyFlow_beta10.0_Train_Unet-PF-1.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   1,
+   3,
+   3
+  ],
+  "epoch": 484,
+  "loss": 0.01647497114026919,
+  "n_params": 7768371
+ },
+ "Darcy-beta10.0-FNO-nRMSE": {
+  "file": "2D_DarcyFlow_beta10.0_Train_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   3
+  ],
+  "epoch": 446,
+  "loss": 0.025693872768897563,
+  "n_params": 465377
+ },
+ "Darcy-beta100.0-UNet-nRMSE": {
+  "file": "2D_DarcyFlow_beta100.0_Train_Unet-PF-1.pt",
+  "key": "encoder1.enc1conv1.weight",
+  "shape": [
+   32,
+   1,
+   3,
+   3
+  ],
+  "epoch": 496,
+  "loss": 0.3917504036799073,
+  "n_params": 7768371
+ },
+ "Darcy-beta100.0-FNO-nRMSE": {
+  "file": "2D_DarcyFlow_beta100.0_Train_FNO.pt",
+  "key": "fc0.weight",
+  "shape": [
+   20,
+   3
+  ],
+  "epoch": 490,
+  "loss": 0.8107831217348576,
+  "n_params": 465377
+ }
+}

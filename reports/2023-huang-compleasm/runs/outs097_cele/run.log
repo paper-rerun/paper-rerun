@@ -1,0 +1,33 @@
+start 2026-11-03T18:16:48-03:00 tag=outs097_cele asm=GCF_000002985.6_WBcel235 lineage=nematoda_odb10 outs=0.97
+[M::mp_ntseq_read@2.277*0.26] read 100286401 bases in 7 contigs
+[M::mp_idx_build@2.277*0.26] 783494 blocks
+[M::mp_idx_build@2.925*1.47] collected syncmers
+[M::mp_idx_build@3.386*1.40] 46039162 kmer-block pairs
+[M::mp_mapopt_set_max_intron] set max intron size to 36052
+[M::mp_idx_print_stat] 1986599 distinct k-mers; mean occ of infrequent k-mers: 23.17; 0 frequent k-mers accounting for 0 occurrences
+[M::worker_pipeline::10.793*5.83] mapped 3292 sequences
+[M::worker_pipeline::16.653*6.59] mapped 2905 sequences
+[M::worker_pipeline::22.753*6.97] mapped 3649 sequences
+[M::worker_pipeline::29.552*7.21] mapped 4318 sequences
+[M::worker_pipeline::34.670*6.83] mapped 3830 sequences
+[M::main] Version: 0.11-r234
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot --trans -u -I --outs=0.97 -t 8 --gff /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/genomes/GCF_000002985.6_WBcel235_genomic.fna.gz /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/mb_downloads/nematoda_odb10/refseq_db.faa.gz
+[M::main] Real time: 34.681 sec; CPU: 236.716 sec; Peak RSS: 1.171 GB
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot
+lineage: nematoda_odb10
+hmmsearch execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/hmmsearch
+
+S:99.84%, 3126
+D:0.10%, 3
+F:0.03%, 1
+I:0.00%, 0
+M:0.03%, 1
+N:3131
+
+## Download lineage: 0.00(s)
+## Run miniprot: 34.71(s)
+## Analyze miniprot: 135.49(s)
+## Total runtime: 170.20(s)
+end 2026-11-03T18:19:45-03:00 rc=0

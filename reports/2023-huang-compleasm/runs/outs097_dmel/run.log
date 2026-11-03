@@ -1,0 +1,40 @@
+start 2026-11-03T18:23:48-03:00 tag=outs097_dmel asm=GCF_000001215.4_Release_6_plus_ISO1_MT lineage=diptera_odb10 outs=0.97
+[M::mp_ntseq_read@3.082*0.28] read 143726002 bases in 1870 contigs
+[M::mp_idx_build@3.082*0.28] 1124796 blocks
+[M::mp_idx_build@4.105*1.64] collected syncmers
+[M::mp_idx_build@4.877*1.54] 74591866 kmer-block pairs
+[M::mp_mapopt_set_max_intron] set max intron size to 43159
+[M::mp_idx_print_stat] 2284812 distinct k-mers; mean occ of infrequent k-mers: 32.65; 0 frequent k-mers accounting for 0 occurrences
+[M::worker_pipeline::13.526*5.54] mapped 1901 sequences
+[M::worker_pipeline::20.420*6.37] mapped 2205 sequences
+[M::worker_pipeline::26.968*6.76] mapped 2384 sequences
+[M::worker_pipeline::33.785*7.01] mapped 2576 sequences
+[M::worker_pipeline::40.454*7.14] mapped 2786 sequences
+[M::worker_pipeline::48.463*7.28] mapped 2935 sequences
+[M::worker_pipeline::56.500*7.38] mapped 3312 sequences
+[M::worker_pipeline::64.767*7.46] mapped 3649 sequences
+[M::worker_pipeline::74.122*7.53] mapped 4225 sequences
+[M::worker_pipeline::83.983*7.58] mapped 5201 sequences
+[M::worker_pipeline::89.650*7.61] mapped 3081 sequences
+[M::worker_pipeline::91.177*7.57] mapped 810 sequences
+[M::main] Version: 0.11-r234
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot --trans -u -I --outs=0.97 -t 8 --gff /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/genomes/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna.gz /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/mb_downloads/diptera_odb10/refseq_db.faa.gz
+[M::main] Real time: 91.192 sec; CPU: 690.101 sec; Peak RSS: 1.991 GB
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot
+lineage: diptera_odb10
+hmmsearch execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/hmmsearch
+
+S:99.67%, 3274
+D:0.27%, 9
+F:0.00%, 0
+I:0.00%, 0
+M:0.06%, 2
+N:3285
+
+## Download lineage: 0.00(s)
+## Run miniprot: 91.22(s)
+## Analyze miniprot: 220.88(s)
+## Total runtime: 312.11(s)
+end 2026-11-03T18:29:07-03:00 rc=0

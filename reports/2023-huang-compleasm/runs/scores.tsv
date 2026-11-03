@@ -1,0 +1,42 @@
+t1.scer.compleasm.C	99.2	99.4385	99.4	2125	2137	0.2385	within 0.3
+t1.scer.compleasm.S	97.6	97.8474	97.8	2091	2137	0.2474	within 0.3
+t1.scer.compleasm.D	1.6	1.591	1.6	34	2137	-0.009	exact
+t1.scer.compleasm.F	0.3	0.0	0.0	0	2137	-0.3	within 0.3
+t1.scer.compleasm.M	0.5	0.5615	0.6	12	2137	0.0615	within 0.3
+t1.scer.compleasm.N	2137	2137		2137		0	exact
+t1.cele.compleasm.C	99.8	99.9361	99.9	3129	3131	0.1361	within 0.3
+t1.cele.compleasm.S	99.7	99.8084	99.8	3125	3131	0.1084	within 0.3
+t1.cele.compleasm.D	0.1	0.1278	0.1	4	3131	0.0278	exact
+t1.cele.compleasm.F	0.2	0.0319	0.0	1	3131	-0.1681	within 0.3
+t1.cele.compleasm.M	0.0	0.0319	0.0	1	3131	0.0319	exact
+t1.cele.compleasm.N	3131	3131		3131		0	exact
+t1.atha.compleasm.C	99.9	100.0	100.0	4596	4596	0.1	within 0.3
+t1.atha.compleasm.S	98.9	98.9556	99.0	4548	4596	0.0556	within 0.3
+t1.atha.compleasm.D	1.0	1.0444	1.0	48	4596	0.0444	exact
+t1.atha.compleasm.F	0.1	0.0	0.0	0	4596	-0.1	within 0.3
+t1.atha.compleasm.M	0.0	0.0	0.0	0	4596	0.0	exact
+t1.atha.compleasm.N	4596	4596		4596		0	exact
+t1.dmel.compleasm.C	99.7	99.9391	99.9	3283	3285	0.2391	within 0.3
+t1.dmel.compleasm.S	99.4	99.6347	99.6	3273	3285	0.2347	within 0.3
+t1.dmel.compleasm.D	0.3	0.3044	0.3	10	3285	0.0044	exact
+t1.dmel.compleasm.F	0.2	0.0	0.0	0	3285	-0.2	within 0.3
+t1.dmel.compleasm.M	0.1	0.0609	0.1	2	3285	-0.0391	exact
+t1.dmel.compleasm.N	3285	3285		3285		0	exact
+t1.mmus.compleasm.C	99.7	99.8913	99.9	13783	13798	0.1913	within 0.3
+t1.mmus.compleasm.S	97.8	97.9635	98.0	13517	13798	0.1635	within 0.3
+t1.mmus.compleasm.D	1.9	1.9278	1.9	266	13798	0.0278	exact
+t1.mmus.compleasm.F	0.3	0.058	0.1	8	13798	-0.242	within 0.3
+t1.mmus.compleasm.M	0.0	0.0507	0.1	7	13798	0.0507	within 0.3
+t1.mmus.compleasm.N	13798	13798		13798		0	exact
+t1.hsap.compleasm.C	99.6	99.8403	99.8	13758	13780	0.2403	within 0.3
+t1.hsap.compleasm.S	98.9	99.1219	99.1	13659	13780	0.2219	within 0.3
+t1.hsap.compleasm.D	0.7	0.7184	0.7	99	13780	0.0184	exact
+t1.hsap.compleasm.F	0.3	0.0726	0.1	10	13780	-0.2274	within 0.3
+t1.hsap.compleasm.M	0.1	0.0871	0.1	12	13780	-0.0129	exact
+t1.hsap.compleasm.N	13780	13780		13780		0	exact
+t1.zmay.compleasm.C	96.7	99.4129	99.4	3217	3236	2.7129	OUTSIDE
+t1.zmay.compleasm.S	82.2	83.9926	84.0	2718	3236	1.7926	OUTSIDE
+t1.zmay.compleasm.D	14.5	15.4203	15.4	499	3236	0.9203	close, outside tolerance
+t1.zmay.compleasm.F	3.0	0.3399	0.3	11	3236	-2.6601	OUTSIDE
+t1.zmay.compleasm.M	0.3	0.2472	0.2	8	3236	-0.0528	within 0.3
+t1.zmay.compleasm.N	3236	3236		3236		0	exact

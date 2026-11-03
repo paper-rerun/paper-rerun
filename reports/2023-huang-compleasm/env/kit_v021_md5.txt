@@ -1,0 +1,4 @@
+57ba49384b9654471ca171efcb4ab136 dl/v021/compleasm_kit/compleasm.py
+340998cb432920bdad07cd68209ed061 dl/v021/compleasm_kit/miniprot
+545731ff2f562f7e69b1c97f4c25b602 dl/v021/compleasm_kit/hmmsearch
+b48a383d5c8715fef17a68e0b7a57d47 dl/v021/k.tar.bz2

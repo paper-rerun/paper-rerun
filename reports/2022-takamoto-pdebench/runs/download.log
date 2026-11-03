@@ -1,0 +1,55 @@
+2026-11-03T16:33:19-03:00 start ckpt/advection_FNO.tar (full)
+2026-11-03T16:33:33-03:00 done ckpt/advection_FNO.tar
+2026-11-03T16:33:33-03:00 start ckpt/burgers_FNO.tar (full)
+2026-11-03T16:33:37-03:00 done ckpt/burgers_FNO.tar
+2026-11-03T16:33:37-03:00 start ckpt/DarcyFlow_FNO.tar (full)
+2026-11-03T16:33:45-03:00 done ckpt/DarcyFlow_FNO.tar
+2026-11-03T16:33:45-03:00 start ckpt/advection_Unet.tar (full)
+2026-11-03T16:34:09-03:00 done ckpt/advection_Unet.tar
+2026-11-03T16:34:09-03:00 start ckpt/burgers_Unet.tar (full)
+skip ckpt/advection_FNO.tar
+skip ckpt/burgers_FNO.tar
+skip ckpt/DarcyFlow_FNO.tar
+skip ckpt/advection_Unet.tar
+2026-11-03T16:34:36-03:00 start ckpt/burgers_Unet.tar (full)
+2026-11-03T16:35:00-03:00 done ckpt/burgers_Unet.tar
+2026-11-03T16:35:00-03:00 start ckpt/DarcyFlow_Unet.tar (full)
+2026-11-03T16:36:28-03:00 done ckpt/DarcyFlow_Unet.tar
+2026-11-03T16:36:28-03:00 start 2D_DarcyFlow_beta0.01_Train.hdf5 (full)
+2026-11-03T16:38:47-03:00 done 2D_DarcyFlow_beta0.01_Train.hdf5
+2026-11-03T16:38:47-03:00 start 2D_DarcyFlow_beta0.1_Train.hdf5 (full)
+2026-11-03T16:41:10-03:00 done 2D_DarcyFlow_beta0.1_Train.hdf5
+2026-11-03T16:41:10-03:00 start 2D_DarcyFlow_beta1.0_Train.hdf5 (full)
+2026-11-03T16:43:13-03:00 done 2D_DarcyFlow_beta1.0_Train.hdf5
+2026-11-03T16:43:13-03:00 start 2D_DarcyFlow_beta10.0_Train.hdf5 (full)
+2026-11-03T16:45:45-03:00 done 2D_DarcyFlow_beta10.0_Train.hdf5
+2026-11-03T16:45:45-03:00 start 2D_DarcyFlow_beta100.0_Train.hdf5 (full)
+2026-11-03T16:48:59-03:00 done 2D_DarcyFlow_beta100.0_Train.hdf5
+2026-11-03T16:48:59-03:00 start 1D_Advection_Sols_beta4.0.hdf5 (full)
+2026-11-03T17:10:40-03:00 done 1D_Advection_Sols_beta4.0.hdf5
+2026-11-03T17:10:40-03:00 start sparse/1D_Advection_Sols_beta4.0.hdf5 (sparse)
+content-range: bytes 8232962048-8232968311/8232968312
+2026-11-03T17:11:46-03:00 done sparse/1D_Advection_Sols_beta4.0.hdf5
+2026-11-03T17:11:46-03:00 start sparse/1D_Advection_Sols_beta0.1.hdf5 (sparse)
+content-range: bytes 8232962048-8232968311/8232968312
+2026-11-03T17:13:02-03:00 done sparse/1D_Advection_Sols_beta0.1.hdf5
+2026-11-03T17:13:02-03:00 start sparse/1D_Advection_Sols_beta0.4.hdf5 (sparse)
+content-range: bytes 8232962048-8232968311/8232968312
+2026-11-03T17:14:27-03:00 done sparse/1D_Advection_Sols_beta0.4.hdf5
+2026-11-03T17:14:27-03:00 start sparse/1D_Advection_Sols_beta1.0.hdf5 (sparse)
+content-range: bytes 8232962048-8232968311/8232968312
+2026-11-03T17:15:53-03:00 done sparse/1D_Advection_Sols_beta1.0.hdf5
+2026-11-03T17:15:53-03:00 start sparse/1D_Burgers_Sols_Nu0.001.hdf5 (sparse)
+content-range: bytes 8232962048-8232968311/8232968312
+2026-11-03T17:18:21-03:00 done sparse/1D_Burgers_Sols_Nu0.001.hdf5
+2026-11-03T17:18:21-03:00 start sparse/1D_Burgers_Sols_Nu0.01.hdf5 (sparse)
+content-range: bytes 8232962048-8232968311/8232968312
+2026-11-03T17:20:29-03:00 done sparse/1D_Burgers_Sols_Nu0.01.hdf5
+2026-11-03T17:20:29-03:00 start sparse/1D_Burgers_Sols_Nu0.1.hdf5 (sparse)
+content-range: bytes 8232962048-8232968311/8232968312
+2026-11-03T17:21:42-03:00 done sparse/1D_Burgers_Sols_Nu0.1.hdf5
+2026-11-03T17:21:42-03:00 start sparse/1D_Burgers_Sols_Nu1.0.hdf5 (sparse)
+content-range: bytes 8232962048-8232968311/8232968312
+2026-11-03T17:23:58-03:00 done sparse/1D_Burgers_Sols_Nu1.0.hdf5
+ALLDONE
+exit 0

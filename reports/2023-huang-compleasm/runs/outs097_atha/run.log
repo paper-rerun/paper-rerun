@@ -1,0 +1,37 @@
+start 2026-11-03T18:19:45-03:00 tag=outs097_atha asm=GCF_000001735.4_TAIR10.1 lineage=brassicales_odb10 outs=0.97
+[M::mp_ntseq_read@5.773*0.13] read 119668634 bases in 7 contigs
+[M::mp_idx_build@5.773*0.13] 934918 blocks
+[M::mp_idx_build@6.561*0.73] collected syncmers
+[M::mp_idx_build@7.030*0.75] 49792781 kmer-block pairs
+[M::mp_mapopt_set_max_intron] set max intron size to 39382
+[M::mp_idx_print_stat] 1997423 distinct k-mers; mean occ of infrequent k-mers: 24.93; 0 frequent k-mers accounting for 0 occurrences
+[M::worker_pipeline::11.719*3.61] mapped 4020 sequences
+[M::worker_pipeline::15.077*4.56] mapped 4265 sequences
+[M::worker_pipeline::19.745*5.35] mapped 5206 sequences
+[M::worker_pipeline::24.502*5.85] mapped 6201 sequences
+[M::worker_pipeline::26.597*6.02] mapped 2945 sequences
+[M::worker_pipeline::28.343*6.14] mapped 2761 sequences
+[M::worker_pipeline::31.524*6.33] mapped 3203 sequences
+[M::worker_pipeline::34.233*6.35] mapped 3208 sequences
+[M::worker_pipeline::34.687*6.26] mapped 1149 sequences
+[M::main] Version: 0.11-r234
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot --trans -u -I --outs=0.97 -t 8 --gff /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/genomes/GCF_000001735.4_TAIR10.1_genomic.fna.gz /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/mb_downloads/brassicales_odb10/refseq_db.faa.gz
+[M::main] Real time: 34.694 sec; CPU: 217.288 sec; Peak RSS: 1.317 GB
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot
+lineage: brassicales_odb10
+hmmsearch execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/hmmsearch
+
+S:99.39%, 4568
+D:0.61%, 28
+F:0.00%, 0
+I:0.00%, 0
+M:0.00%, 0
+N:4596
+
+## Download lineage: 0.00(s)
+## Run miniprot: 34.72(s)
+## Analyze miniprot: 203.86(s)
+## Total runtime: 238.58(s)
+end 2026-11-03T18:23:48-03:00 rc=0

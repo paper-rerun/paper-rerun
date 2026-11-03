@@ -1,0 +1,5 @@
+               total        used        free      shared  buff/cache   available
+Mem:           32049        1001       31185           2         233       31048
+start 2026-11-03T18:29:26-03:00 tag=hsap asm=GCF_009914755.1_T2T-CHM13v2.0 lineage=primates_odb10 outs=0.95
+end 2026-11-03T18:52:58-03:00 rc=0
+HSAP_RETRY_FINISHED rc=0

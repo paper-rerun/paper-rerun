@@ -1,0 +1,11 @@
+# Versions from repo pyproject.toml at b5b646f (torch~=1.13.0); CPU wheel since today is CPU-only.
+# deepxde and pyro-ppl are only for PINN / inverse problem, not imported by the forward FNO/U-Net path
+torch==1.13.1+cpu
+numpy<2
+scipy
+matplotlib
+h5py
+pandas
+python-dotenv
+hydra-core
+tqdm
