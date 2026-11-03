@@ -44,6 +44,10 @@ A paper is split by **claim**: a number the paper reports, with its conditions a
 - There is no time limit on computation; we run to the criterion the paper used. If the same failure survives three different fixes, we stop and report it.
 - Issues to authors are questions backed by something they can re-run, not verdicts.
 
+## Checking the datasets
+
+Open Tables datasets are transcribed twice, independently, and every disagreement is settled against the PDF. What that cannot catch is an error both transcriptions make the same way, so we measure it with a blind reread: a third reader reads a random sample of published records again from the PDF, without seeing them, and every difference is checked on the page. The first one, in November 2026, read 1,297 records from 13 datasets and found 1.5 value errors and 10 context errors per 1,000 records, with no number misread; the errors it found were fixed for the whole table ([details](measurements/blind-reread-2026-11.md)).
+
 ## Code
 
 `tools/garimpo.py` builds the ranked list of candidate papers. `tools/reproduce-standard.js` (standard mode) and `tools/reproduce-paper-pipeline-v2.js` (full pipeline) are the orchestration scripts with every agent prompt, run with Claude Code's workflow tool. `tools/reproduce-paper-pipeline.js` is the first version of the pipeline, used for LigandMPNN. `templates/REPORT.md` is the report structure every rerun follows. `tools/drift_watch.py` re-checks, every week, whether the dependency and data problems our reports found are still live.
