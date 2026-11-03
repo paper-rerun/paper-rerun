@@ -34,7 +34,7 @@ No number was misread. The 2 value errors are a Dunnett marker ("*" or "ns") pri
 
 ## What was fixed
 
-Because a shared error repeats across a table, each one was fixed for the whole table, not only for the sampled record: 497 cells in 5 datasets, released as new versions.
+Because a shared error repeats across a table, each one was fixed for the whole table, not only for the sampled record: 497 cells in 5 datasets, released as new versions; every changed cell is listed in [blind-reread-2026-11-fixes.csv](blind-reread-2026-11-fixes.csv).
 
 - Rice blast (v1.0.1): the Dunnett marker moved to `significance_letter` in the 36 records of prabhu1983.
 - Cowpea (v1.0.1): the harvest stage of Table 3 of marinho2014 (112 records), and the cultivar of the cultivar rows of santos1978 Table 1 (24) and cardoso1997 Table 2 (42).

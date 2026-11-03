@@ -1,0 +1,498 @@
+repo,file,record,field,before,after
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0003,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0004,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0005,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0006,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0007,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0010,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0011,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0012,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0013,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0014,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0017,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0018,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0019,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0020,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0021,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0022,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0023,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0026,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0027,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0028,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0029,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0030,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0033,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0034,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0035,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0036,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0037,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0040,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0041,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0042,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0043,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0044,significance_letter,,*
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0047,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0048,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0051,significance_letter,,ns
+publico-arroz,rice_blast_trials.csv,prabhu1983-fungicidas-sequeiro-go#0052,significance_letter,,ns
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0228,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0228,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0228,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0229,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0229,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0229,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0230,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0230,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0230,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0231,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0231,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0231,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0232,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0232,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0232,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0233,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0233,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0233,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0234,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0234,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0234,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0235,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0235,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0235,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0236,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0236,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0236,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0237,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0237,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0237,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0238,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0238,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0238,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0239,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0239,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0239,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0240,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0240,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0240,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0241,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0241,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0241,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0242,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0242,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0242,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0243,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0243,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0243,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0244,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0244,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0244,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0245,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0245,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0245,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0246,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0246,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0246,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0247,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0247,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0247,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0248,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0248,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0248,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0249,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0249,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0249,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0250,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0250,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0250,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0251,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0251,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0251,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0252,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0252,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0252,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0253,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0253,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0253,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0254,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0254,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0254,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0255,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0255,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0255,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0256,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0256,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0256,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0257,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0257,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0257,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0258,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0258,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0258,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0259,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0259,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0259,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0260,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0260,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0260,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0261,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0261,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0261,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0262,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0262,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0262,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0263,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0263,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0263,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0264,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0264,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0264,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0265,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0265,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0265,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0266,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0266,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0266,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0267,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0267,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0267,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0268,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0268,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0268,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0269,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0269,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0269,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0270,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0270,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0270,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0271,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0271,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0271,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0272,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0272,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0272,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0273,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0273,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0273,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0274,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0274,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0274,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0275,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0275,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0275,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0276,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0276,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0276,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0277,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0277,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0277,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0278,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0278,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0278,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0279,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0279,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0279,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0280,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0280,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0280,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0281,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0281,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0281,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0282,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0282,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0282,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0283,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0283,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0283,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0284,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0284,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0284,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0285,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0285,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0285,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0286,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0286,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0286,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0287,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0287,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0287,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0288,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0288,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0288,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0289,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0289,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0289,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0290,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0290,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0290,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0291,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0291,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0291,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0292,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0292,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0292,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0293,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0293,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0293,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0294,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0294,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0294,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0295,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0295,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0295,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0296,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0296,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0296,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0297,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0297,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0297,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0298,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0298,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0298,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0299,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0299,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0299,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0300,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0300,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0300,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0301,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0301,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0301,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0302,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0302,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0302,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0303,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0303,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0303,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0304,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0304,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0304,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0305,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0305,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0305,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0306,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0306,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0306,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0307,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0307,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0307,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0308,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0308,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0308,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0309,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0309,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0309,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0310,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0310,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0310,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0311,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0311,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0311,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0312,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0312,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0312,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0313,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0313,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0313,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0314,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0314,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0314,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0315,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0315,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0315,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0316,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0316,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0316,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0317,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0317,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0317,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0318,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0318,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0318,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0319,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0319,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0319,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0320,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0320,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0320,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0321,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0321,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0321,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0322,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0322,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0322,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0323,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0323,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0323,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0324,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0324,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0324,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0325,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0325,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0325,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0326,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0326,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0326,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0327,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0327,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0327,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0328,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0328,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0328,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0329,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0329,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0329,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0330,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0330,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0330,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0331,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0331,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0331,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0332,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0332,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0332,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0333,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0333,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0333,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0334,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0334,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0334,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0335,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0335,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0335,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0336,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0336,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0336,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0337,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0337,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0337,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0338,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0338,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0338,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0339,crop_stage,,at harvest (second assessment)
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0339,crop_stage_source_page,,3
+publico-caupi,cowpea_trials.csv,marinho2014-cultivares-estirpes-juazeiro-ba-petrolina-pe#0339,crop_stage_status,not_printed,filled
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0012,cultivar,,TVu-408
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0013,cultivar,,TVu-408
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0014,cultivar,,TVu-408
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0015,cultivar,,TVu-397
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0016,cultivar,,TVu-397
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0017,cultivar,,TVu-397
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0018,cultivar,,TVu-410
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0019,cultivar,,TVu-410
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0020,cultivar,,TVu-410
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0021,cultivar,,TVu-59
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0022,cultivar,,TVu-59
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0023,cultivar,,TVu-59
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0057,cultivar,,CE-279
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0058,cultivar,,CE-279
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0059,cultivar,,CE-279
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0063,cultivar,,CE-140
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0064,cultivar,,CE-140
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0065,cultivar,,CE-140
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0072,cultivar,,CE-253
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0073,cultivar,,CE-253
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0074,cultivar,,CE-253
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0081,cultivar,,TVu-310
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0082,cultivar,,TVu-310
+publico-caupi,cowpea_trials.csv,santos1978-mosaico-resistencia-varietal-teresina-pi#0083,cultivar,,TVu-310
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0251,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0252,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0253,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0254,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0255,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0256,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0257,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0258,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0259,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0260,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0261,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0262,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0263,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0264,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0265,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0266,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0267,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0268,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0269,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0270,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0271,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0272,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0273,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0274,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0275,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0276,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0277,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0278,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0279,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0280,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0281,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0282,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0283,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0284,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0285,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0286,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0287,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0288,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0289,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0290,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0291,cultivar,,IT 82D-784
+publico-caupi,cowpea_trials.csv,cardoso1997-densidade-irrigado-teresina-pi#0292,cultivar,,IT 82D-784
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0001,unit,,vagens/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0008,unit,,vagens/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0015,unit,,vagens/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0022,unit,,vagens/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0029,unit,,vagens/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0036,unit,,vagens/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0002,unit,,sementes/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0009,unit,,sementes/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0016,unit,,sementes/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0023,unit,,sementes/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0030,unit,,sementes/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0037,unit,,sementes/planta
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0006,crop_stage,,"última avaliação, 61 DAS (10 dias após a 4ª aplicação)"
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0013,crop_stage,,"última avaliação, 61 DAS (10 dias após a 4ª aplicação)"
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0020,crop_stage,,"última avaliação, 61 DAS (10 dias após a 4ª aplicação)"
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0027,crop_stage,,"última avaliação, 61 DAS (10 dias após a 4ª aplicação)"
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0034,crop_stage,,"última avaliação, 61 DAS (10 dias após a 4ª aplicação)"
+publico-feijao,bean_disease_trials.csv,sartorato2006-mancha-angular-misturas#0041,crop_stage,,"última avaliação, 61 DAS (10 dias após a 4ª aplicação)"
+publico-cafe,coffee_trials.csv,miranda1999-linhagens-sombreamento-pleno-sol-rio-branco-ac#0084,harvest_year,,1995 e 1996
+publico-cafe,coffee_trials.csv,miranda1999-linhagens-sombreamento-pleno-sol-rio-branco-ac#0084,harvest_year_status,not_printed,filled
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0231,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0232,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0233,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0234,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0235,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0236,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0237,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0238,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0239,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0240,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0241,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0242,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0243,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0348,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0349,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0350,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0351,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0352,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0353,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0354,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0355,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0356,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0357,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0358,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0359,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0360,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0465,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0466,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0467,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0468,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0469,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0470,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0471,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0472,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0473,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0474,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0475,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0476,species_common_as_printed,,Outros
+publico-pesca,landings.csv,castro2009-producao-pesqueira-billings-sp#0477,species_common_as_printed,,Outros
