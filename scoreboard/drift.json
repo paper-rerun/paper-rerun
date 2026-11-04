@@ -17,7 +17,7 @@
   "report": "2024-madhavacheril-act-dr6",
   "package": "pandas",
   "finding": "With pandas 3, the Cobaya 3.2.2 BAO likelihoods crash on assert self.has_type.",
-  "today": "installs pandas 3.1.0",
+  "today": "installs pandas 3.1.1",
   "status": "still in broken range, untested"
  },
  {

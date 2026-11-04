@@ -1,0 +1,59 @@
+start 2026-11-04T14:46:43-03:00 lineage md5 04fe88de47726ab0304a0d5d39b3a7c0
+[M::mp_ntseq_read@50.075*0.26] read 2182786008 bases in 687 contigs
+[M::mp_idx_build@50.075*0.26] 17053702 blocks
+[M::mp_idx_build@64.924*1.89] collected syncmers
+[M::mp_idx_build@75.625*1.77] 1178526706 kmer-block pairs
+[M::mp_mapopt_set_max_intron] set max intron size to 168194
+[M::mp_idx_print_stat] 2395936 distinct k-mers; mean occ of infrequent k-mers: 462.13; 2240 frequent k-mers accounting for 72331750 occurrences
+[M::worker_pipeline::118.247*3.97] mapped 3859 sequences
+[M::worker_pipeline::155.681*4.88] mapped 3805 sequences
+[M::worker_pipeline::178.742*5.28] mapped 3743 sequences
+[M::worker_pipeline::206.388*5.64] mapped 3777 sequences
+[M::worker_pipeline::246.361*6.02] mapped 3947 sequences
+[M::worker_pipeline::275.854*6.23] mapped 3798 sequences
+[M::worker_pipeline::299.767*6.37] mapped 3710 sequences
+[M::worker_pipeline::337.598*6.56] mapped 3846 sequences
+[M::worker_pipeline::372.709*6.69] mapped 3831 sequences
+[M::worker_pipeline::405.455*6.79] mapped 3727 sequences
+[M::worker_pipeline::463.052*6.93] mapped 5266 sequences
+[M::worker_pipeline::491.284*6.99] mapped 3929 sequences
+[M::worker_pipeline::521.158*7.04] mapped 3777 sequences
+[M::worker_pipeline::563.027*7.12] mapped 3846 sequences
+[M::worker_pipeline::608.181*7.18] mapped 3758 sequences
+[M::worker_pipeline::655.099*7.23] mapped 3863 sequences
+[M::worker_pipeline::676.469*7.24] mapped 2884 sequences
+[M::main] Version: 0.11-r234
+[M::main] CMD: /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot --trans -u -I --outs=0.95 -t 8 --gff /mnt/e/Ciencia/noturno/2023-huang-compleasm/data/genomes/GCF_902167145.1_Zm-B73-REFERENCE-NAM-5.0_genomic.fna.gz /mnt/e/Ciencia/noturno/2023-huang-compleasm/author_lineage_2020/mb/liliopsida_odb10/refseq_db.faa.gz
+[M::main] Real time: 676.571 sec; CPU: 4900.779 sec; Peak RSS: 25.366 GB
+miniprot execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/miniprot
+Success download from https://busco-data.ezlab.org/v5/data/placement_files/list_of_reference_markers.eukaryota_odb10.2019-12-16.txt.tar.gz
+Placement file extraction path: /mnt/e/Ciencia/noturno/2023-huang-compleasm/author_lineage_2020/mb/placement_files/list_of_reference_markers.eukaryota_odb10.2019-12-16.txt
+Success download from https://busco-data.ezlab.org/v5/data/placement_files/mapping_taxid-lineage.eukaryota_odb10.2019-12-16.txt.tar.gz
+Placement file extraction path: /mnt/e/Ciencia/noturno/2023-huang-compleasm/author_lineage_2020/mb/placement_files/mapping_taxid-lineage.eukaryota_odb10.2019-12-16.txt
+Success download from https://busco-data.ezlab.org/v5/data/placement_files/mapping_taxids-busco_dataset_name.eukaryota_odb10.2019-12-16.txt.tar.gz
+Placement file extraction path: /mnt/e/Ciencia/noturno/2023-huang-compleasm/author_lineage_2020/mb/placement_files/mapping_taxids-busco_dataset_name.eukaryota_odb10.2019-12-16.txt
+Success download from https://busco-data.ezlab.org/v5/data/placement_files/supermatrix.aln.eukaryota_odb10.2019-12-16.faa.tar.gz
+Placement file extraction path: /mnt/e/Ciencia/noturno/2023-huang-compleasm/author_lineage_2020/mb/placement_files/supermatrix.aln.eukaryota_odb10.2019-12-16.faa
+Success download from https://busco-data.ezlab.org/v5/data/placement_files/tree.eukaryota_odb10.2019-12-16.nwk.tar.gz
+Placement file extraction path: /mnt/e/Ciencia/noturno/2023-huang-compleasm/author_lineage_2020/mb/placement_files/tree.eukaryota_odb10.2019-12-16.nwk
+Success download from https://busco-data.ezlab.org/v5/data/placement_files/tree_metadata.eukaryota_odb10.2019-12-16.txt.tar.gz
+Placement file extraction path: /mnt/e/Ciencia/noturno/2023-huang-compleasm/author_lineage_2020/mb/placement_files/tree_metadata.eukaryota_odb10.2019-12-16.txt
+Success download from https://busco-data.ezlab.org/v5/data/lineages/eukaryota_odb10.2024-01-08.tar.gz
+Lineage file extraction path: /mnt/e/Ciencia/noturno/2023-huang-compleasm/author_lineage_2020/mb/eukaryota_odb10
+lineage: liliopsida_odb10
+hmmsearch execute command:
+ /mnt/e/Ciencia/noturno/2023-huang-compleasm/env/bin/hmmsearch
+
+S:82.23%, 2661
+D:14.49%, 469
+F:3.03%, 98
+I:0.00%, 0
+M:0.25%, 8
+N:3236
+
+## Download lineage: 0.00(s)
+## Run miniprot: 676.60(s)
+## Analyze miniprot: 437.15(s)
+## Total runtime: 1113.76(s)
+end 2026-11-04T15:06:35-03:00 rc=0

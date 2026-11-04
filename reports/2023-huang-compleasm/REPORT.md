@@ -4,13 +4,15 @@
 - Code: https://github.com/huangnengCSU/compleasm @ v0.2.2 = 8d33fa183483550c6113f84f8deace71807e9a74. We ran the release kit compleasm-0.2.2_x64-linux.tar.bz2 (671,502 B, md5 cefe5b8d17c3758add056af1cf4e40a5), which bundles miniprot 0.11-r234 and HMMER 3.3.2 hmmsearch. HEAD was not used for the graded runs.
 - Data: the seven NCBI RefSeq assemblies listed in Table S1 (https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/...), and the BUSCO odb10 lineages from https://busco-data.ezlab.org/v5/data (now served from https://busco-data.s3.amazonaws.com). Only the 2024-01-08 re-release of each odb10 lineage is still available.
 - Target: Table 1, compleasm rows. For each of the 7 reference genomes: Completed, Single-copy, Duplicated, Fragmented and Missing (%), plus N.
-- Verdict: Not reproduced
-- Date: 2026-11-03
+- Verdict: Reproduced with the 2020 lineage the author shared after our report (Not reproduced with the lineage files served today)
+- Date: 2026-11-03, updated 2026-11-04
 - Hardware: Ryzen 9 3900X, WSL2 Ubuntu 24.04 with 31 GB RAM. CPU only, 8 threads, nice 19. The RTX 2070 SUPER 8 GB was not used.
 
 In six of the seven genomes, all 30 percentages fall within the pre-registered 0.3-point tolerance, but the agreement depends on that tolerance: none of the seven C values equals the paper at one decimal. In each of those six genomes C is 0.10 to 0.24 points higher and F 0.10 to 0.30 points lower than in the paper (*S. cerevisiae* F is 0 against the paper's 0.3, exactly at the tolerance edge). All seven N are exact. The human C, the abstract's 99.6%, is 99.84% here (99.8 at one decimal), within tolerance but not exact.
 
 *Z. mays* does not match. We get C = 99.4% where the paper reports 96.7%, a difference of 2.7 points, and F = 0.3% where the paper reports 3.0%. The pre-registered rule says any C more than 1.0 point off means "Not reproduced", so that is the verdict.
+
+**Update 2026-11-04.** In compleasm#70 the author shared the oldest `liliopsida_odb10` he still had, dated 2020-09-10. With it and the same command, maize gives C 96.72, S 82.23, D 14.49, F 3.03, M 0.25, N 3236 against the paper's 96.7, 82.2, 14.5, 3.0, 0.3, 3236. All six values are within the pre-registered tolerance. With the lineage files public today, maize is still Not reproduced. See "Update: the 2020 lineage".
 
 We found no code cause for the maize gap: v0.2.2 and the current v0.2.10, which bundle different miniprot builds, give the same maize counts on the lineage that exists today. The one input we know changed is the lineage (the 2023 odb10 files are gone), but we could not test it directly, and a few inputs shared by both runs were not varied (listed under "Why maize differs").
 
@@ -133,6 +135,23 @@ The one input we know changed is the lineage.
 - `liliopsida_odb10` also has 141 genes with sigma = 0 (305 with sigma <= 1; none in saccharomycetes or primates). The code turns sigma 0 into 1, which makes today's threshold stricter, so these genes do not by themselves explain why we see fewer Fragmented genes than the paper.
 - For the paper to have about 86 more Fragmented maize genes than we do, the 2023 cutoffs would have to be stricter or the 2023 reference proteins would have to align shorter. Neither can be checked without the 2023 liliopsida_odb10 tar.
 - The paper reports maize annotation completeness of 96.8% (Table S3) as agreeing with compleasm's 96.7%; our 99.4% exceeds it by 2.6 points. This counts against our number, not the paper's.
+
+## Update: the 2020 lineage
+
+On 2026-11-04 the author answered compleasm#70 with a Google Drive link to `liliopsida_odb10.2020-09-10.tar.gz` (163 MB, md5 04fe88de47726ab0304a0d5d39b3a7c0), the oldest copy on his server. He could not promise it is the exact file behind the paper. We reran maize with it, changing only `-L` (`runs/run_author2020.sh`, output in `runs/zmay_author2020/`, 1,114 s).
+
+| Category | Paper | 2020 lineage | 2024 lineage (served today) |
+|---|---|---|---|
+| C | 96.7 | 96.72 | 99.41 |
+| S | 82.2 | 82.23 | 83.99 |
+| D | 14.5 | 14.49 | 15.42 |
+| F | 3.0 | 3.03 | 0.34 |
+| M | 0.3 | 0.25 | 0.25 |
+| N | 3236 | 3236 | 3236 |
+
+All six match within 0.3 points, and C, S, D and F match at the paper's one decimal. The two lineages have the same 3,236 HMMs and the same `scores_cutoff`. They differ in `refseq_db.faa.gz` (65,366 proteins in 2020, 62,661 in 2024) and in every line of `lengths_cutoff`. compleasm aligns the `refseq_db` proteins with miniprot and uses `lengths_cutoff` to call fragmented genes, which fits the 98 fragmented BUSCOs with the 2020 file against 11 with the 2024 one.
+
+This confirms the diagnosis in "Why maize differs": the maize gap comes from the 2024 re-release of the lineage, not from compleasm. The lineage file was not part of the pre-registration, and it came from the author after he read our report, so we keep both verdicts in the header.
 
 ## Alternative readings
 

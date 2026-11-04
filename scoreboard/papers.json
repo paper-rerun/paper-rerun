@@ -33,9 +33,9 @@
   "year": 2023,
   "field": "genomics",
   "area": "Biology",
-  "verdict": "Not reproduced",
+  "verdict": "Reproduced (with the author's 2020 lineage)",
   "main_issue": "Reference data re-released",
-  "finding": "Table 1 (compleasm rows) with the v0.2.2 release: six of seven genomes agree within 0.3 points on every category, but maize gives 99.4% complete against 96.7%. The same counts come out of v0.2.10, so the likely cause is the 2024 re-release of the BUSCO odb10 lineages; the 2023 files are no longer served. v0.2.2 also crashes on today's lineage index. We asked the authors for the 2023 lineage files.",
+  "finding": "Table 1 (compleasm rows) with the v0.2.2 release: six of seven genomes agree within 0.3 points on every category. Maize gives 99.4% complete against 96.7% with today's BUSCO odb10 lineage, re-released in 2024. With the 2020 lineage the author sent us, maize matches too: 96.72 complete, 82.23 single, 14.49 duplicated, 3.03 fragmented. v0.2.2 also crashes on today's lineage index.",
   "rerun_date": "2026-11-03"
  },
  {
