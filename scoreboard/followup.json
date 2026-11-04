@@ -29,6 +29,20 @@
  },
  {
   "kind": "Issue",
+  "paper": "WeatherBench 2",
+  "repository": "google-research/weatherbench2",
+  "ask": "Say in the docs that the paper's T850 values use the below-ground mask (0.8-3.2% effect); why the 2026 GraphCast benchmark files differ from evaluate.py by up to 0.58%; small fixes to the paper text.",
+  "status": "posted"
+ },
+ {
+  "kind": "Issue",
+  "paper": "GWTC-3 population",
+  "repository": "ColmTalbot/gwpopulation",
+  "ask": "compute_rate_posterior in gwpopulation_pipe skips convert_to_beta_parameters; ship the exact ini and prior files of the release runs; tag the 0.6.3 used.",
+  "status": "posted"
+ },
+ {
+  "kind": "Issue",
   "paper": "compleasm",
   "repository": "huangnengCSU/compleasm",
   "ask": "The 2023 odb10 lineage files or the paper's full_table.tsv for maize; v0.2.2 crashes on today's lineage index; which --outs value the paper used.",
