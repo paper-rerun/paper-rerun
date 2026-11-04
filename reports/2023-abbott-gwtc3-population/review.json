@@ -1,0 +1,82 @@
+{
+ "issues": [
+  {
+   "severity": "major",
+   "where": "What it took, items 2, 5, 6, 7; and 'How this report was made' ('each one comes from code that ran on this machine, and the commands, logs and outputs are in this folder')",
+   "problem": "Several statements have no log anywhere in the folder: 'cupy then ran on the WSL driver (CUDA 13.5 UMD)' (runs/check_gpu.sh and env/test_cupy.sh exist but their output was never saved); 'The GPU path worked on the second attempt (the first failed on the missing libraries)' (no log of the failed attempt); 'each process was CPU-bound ... GPU use stayed around 25%' (no nvidia-smi or top capture; the 29 ms figure comes from the single-process timing in check_setup.log, taken before the runs, not from the runs); 'Peak RAM was under 2 GB per run' (status.sh prints RAM to the terminal only); 'cloning that repository was blocked by this machine's permission settings'; 'confirmed that import tables, deepdish works' (fix_tables.sh output not saved). The closing section says every number comes from logs in the folder, so as written that statement is false.",
+   "fix": "Either add the evidence (save the output of check_gpu.sh and test_cupy.sh to runs/*.log; run fix_tables.sh with output redirected to runs/fix_tables.log; note in a log or patches/README.md that the 5cd44c2012 clone was refused by the harness) or rewrite each item as an unlogged observation, e.g. 'GPU use and RAM were watched by hand and not logged'. Drop 'CPU-bound' and '~25%' unless a log backs them. Say that 29 ms comes from the timing in check_setup.log. That figure fits the runs: 19,275 s / 649,359 calls = 29.7 ms per call."
+  },
+  {
+   "severity": "minor",
+   "where": "Results, 'Check before sampling': 'The published selection column differed from ours by 0.1 to 2.6%'",
+   "problem": "runs/check_setup.log gives relative differences from 5.86e-04 (sample 6776) to 2.553e-02, so the lower end is 0.06%, not 0.1%.",
+   "fix": "Write 'by 0.06 to 2.6%'."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took item 7 ('bit-for-bit likelihood match') and Notes for the authors item 3 ('reproduces the published log-likelihood bit for bit')",
+   "problem": "check_setup.log shows MAX |dlogL| = 5.684e-14. Two of the 20 samples (5398, 6776) are not bitwise identical. The 20 picks also include two duplicated posterior rows (11183/11182 and 11181/11180 have identical logL), so only 18 points are distinct. The Results section correctly says 'largest difference of 5.7e-14', which contradicts 'bit for bit'.",
+   "fix": "Replace 'bit for bit' with 'to within 6e-14 (18 of 20 samples bitwise identical, 18 distinct points)', and give the same count in the Results paragraph."
+  },
+  {
+   "severity": "minor",
+   "where": "Results table, rows alpha / beta_q / kappa, columns 'Diff vs released' and 'Within tolerance'",
+   "problem": "claims.json pre-registers tolerances for S1-S3 only against the paper values (sigma taken from the paper). The vs-released pass that the table shows comes from an ad hoc 'same tolerances vs released' check in evaluate.py. The pre-registered vs-paper differences and tolerances (e.g. alpha median +0.024/+0.013, tol 0.09; edges tol 0.14) do not appear at all, and the 'yes / yes' sits under a header that implies a pre-registered vs-released test.",
+   "fix": "For S1-S3, give the vs-paper differences from runs/evaluation.log with their pre-registered tolerances (alpha 0.09/0.14, beta_q 0.23/0.36, kappa 0.27/0.43), and label the vs-released check as informal, using the paper-derived tolerances."
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors item 1: 'so every row of the published selection, pdet_n_effective and rate columns used that one shape'",
+   "problem": "runs/check_selection_column.py fits the pair on 6 rows and tests it on 6 held-out rows out of 11,184. That supports the claim strongly, together with the code path (no convert_to_beta_parameters in the loop), but 'every row' is an extrapolation and not something we checked.",
+   "fix": "Write 'reproduces the published selection column to 3e-15 on 6 held-out rows (12 random rows checked in total); together with the code path this indicates that all rows used that one shape'."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took item 5: 'np.random.seed(seed) before main(), which fixes both dynesty ... and the Gamma draw'",
+   "problem": "No run was repeated with the same seed, so the claim that the seed makes the run deterministic is untested. sampler_kwargs shows rstate None, so the mechanism is plausible, but nothing was verified.",
+   "fix": "Write 'which is meant to fix both ... (not verified by repeating a seed)'."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took item 5: 'The sampler settings stored in our result files are identical to the published ones (... runs/sampler_kwargs_compare.log ...)'",
+   "problem": "runs/sampler_kwargs_compare.log covers only seed 101. It also mixes the output of two scripts (sk.sh and pd.sh), and sk.sh alone does not print the per-prior lines. I re-ran the comparison: seed 202 also has no sampler_kwargs differences and differs only in the alpha/beta prior labels, so the claim holds, but no log supports it for 202.",
+   "fix": "Extend sk.sh to loop over both result files, regenerate runs/sampler_kwargs_compare.log from that one script, and cite it."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took item 5, 'the stored priors differ only in two LaTeX label strings'; data/pp_published.prior",
+   "problem": "The label difference is a bug in our own prior file: data/pp_published.prior uses single backslashes ('$\\alpha$', '$\\beta_{q}$'), which Python reads as the escape characters BEL and backspace ('$\\x07lpha$', '$\\x08eta_{q}$' in the result). It is cosmetic, but the report does not say the cause is ours and not the authors'.",
+   "fix": "Add a clause: 'caused by single backslashes in our data/pp_published.prior; no effect on the numbers'. Optionally double the backslashes for future runs."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took item 1 (env/requirements.lock) and item 6",
+   "problem": "env/requirements.lock was regenerated at 03:36 by env/fix_tables.sh, after both runs had finished, with setuptools 59.8.0 added. The lockfile therefore does not describe the exact environment the runs used.",
+   "fix": "State in item 1 or 6 that the lockfile includes setuptools 59.8.0, added after the runs, and that the run environment was this lockfile minus setuptools."
+  },
+  {
+   "severity": "minor",
+   "where": "Header 'Verdict' / Results intro",
+   "problem": "Scope caveat missing near the verdict. The rerun starts from the authors' own downsampled per-event arrays (the 'original' group of _samples.hdf5) and their injection file, so it checks the hierarchical inference and rate post-processing, not event selection or PE downsampling. This appears only in item 4 of 'What it took'.",
+   "fix": "Add one sentence after the verdict or at the start of Results: 'Scope: the hierarchical inference and rate step, run on the authors' released per-event arrays and injection set; event selection and PE downsampling were not redone.'"
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors item 2",
+   "problem": "The list of differences between example/gwtc3-bbh.prior and the published priors leaves out delta_m: the example has no boundary, while the published result (and our run) uses boundary='reflective' (sampler_kwargs reflective [7]). 'The results are not affected' is also stated for the mass-prior differences without any check.",
+   "fix": "Add 'and delta_m has no reflective boundary in the example file'. Limit 'not affected' to kappa, where the posterior [1.1, 4.6] is checked against both ranges, or say the mass-prior effect was not tested."
+  },
+  {
+   "severity": "minor",
+   "where": "Alternative readings: 'The shift is 0.1 to 0.2 on the median'",
+   "problem": "From runs/alt_selection_fix.log the median shifts are -0.128 (published), -0.218 (seed 101) and -0.090 (seed 202), i.e. 0.09 to 0.22.",
+   "fix": "Write 'The shift is 0.09 to 0.22 on the median (under 1%)'."
+  },
+  {
+   "severity": "minor",
+   "where": "E:\\Ciencia\\noturno\\2023-abbott-gwtc3-population\\REPORT.md",
+   "problem": "There is no REPORT.md in the working folder. The report exists only as the text passed to this review stage.",
+   "fix": "After the fixes above, write the revised text to E:\\Ciencia\\noturno\\2023-abbott-gwtc3-population\\REPORT.md."
+  }
+ ]
+}

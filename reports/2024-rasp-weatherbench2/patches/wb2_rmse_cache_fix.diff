@@ -1,0 +1,13 @@
+# Our own script, not the authors' code. The "before" side is rebuilt from runs/scripts/__pycache__/wb2_rmse.cpython-311.pyc (21:42),
+# the only earlier copy kept; runs/logs/pyc_diff.log shows the bytecode comparison. Edited at 22:46:01 on 2026-11-03.
+# The same bytecode diff also shows the WB2_DATA_DIR / WB2_MAX_INITS smoke-test options (added between 21:42 and the run, no-ops by default).
+--- a/runs/scripts/wb2_rmse.py
++++ b/runs/scripts/wb2_rmse.py
+@@ load_truth
+ 	if os.path.exists(cache_path):
+ 		cached = np.load(cache_path)
+ 		times = pd.to_datetime(cached['times'])
+-		return {t: cached['fields'][i] for i, t in enumerate(times)}, cached['latitude']
++		# Read the array once: every cached['fields'] access re-reads the whole array (that cost 65 GB of RAM and killed the first GraphCast run)
++		fields = cached['fields']
++		return {t: fields[i] for i, t in enumerate(times)}, cached['latitude']

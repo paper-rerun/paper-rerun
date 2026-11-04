@@ -1,0 +1,32 @@
+21:53 bilby INFO    : Using SinglePeakSmoothedMassDistribution.
+21:53 bilby INFO    : Using iid_spin_magnitude.
+21:53 bilby INFO    : Using iid_spin_orientation.
+21:53 bilby INFO    : Using PowerLawRedshift from gwpopulation.models.redshift.
+21:53 bilby INFO    : Using SinglePeakSmoothedMassDistribution.
+21:53 bilby INFO    : Using PowerLawRedshift from gwpopulation.models.redshift.
+21:53 bilby INFO    : Using iid_spin_orientation.
+21:53 bilby INFO    : Using iid_spin_magnitude.
+21:53 bilby INFO    : Loading VT data from /mnt/e/Ciencia/noturno/2023-abbott-gwtc3-population/data/o1+o2+o3_bbhpop_real+semianalytic-LIGO-T2100377-v2.hdf5.
+backend cupy n_events 69 n found injections 41972 analysis_time 2.000455579638502 total_generated 73280198
+sample 11183  logL ours 107.909312 published 107.909312  diff 0.00e+00 | selection rel diff 2.17e-03 | volume rel diff 0.00e+00
+sample 11182  logL ours 107.909312 published 107.909312  diff 0.00e+00 | selection rel diff 2.17e-03 | volume rel diff 0.00e+00
+sample 11181  logL ours 107.877236 published 107.877236  diff 0.00e+00 | selection rel diff 4.09e-03 | volume rel diff 0.00e+00
+sample 11180  logL ours 107.877236 published 107.877236  diff 0.00e+00 | selection rel diff 4.09e-03 | volume rel diff 0.00e+00
+sample 11179  logL ours 107.871029 published 107.871029  diff 0.00e+00 | selection rel diff -3.49e-03 | volume rel diff 0.00e+00
+sample  9106  logL ours 104.216768 published 104.216768  diff 0.00e+00 | selection rel diff -3.41e-03 | volume rel diff 0.00e+00
+sample  6055  logL ours 102.446593 published 102.446593  diff 0.00e+00 | selection rel diff 9.62e-03 | volume rel diff 0.00e+00
+sample 10958  logL ours 106.287241 published 106.287241  diff 0.00e+00 | selection rel diff 4.93e-03 | volume rel diff 0.00e+00
+sample 10902  logL ours 106.153169 published 106.153169  diff 0.00e+00 | selection rel diff 3.42e-03 | volume rel diff 0.00e+00
+sample  4984  logL ours 101.848169 published 101.848169  diff 0.00e+00 | selection rel diff 6.36e-03 | volume rel diff 0.00e+00
+sample 11011  logL ours 106.413208 published 106.413208  diff 0.00e+00 | selection rel diff 3.18e-03 | volume rel diff 0.00e+00
+sample 10602  logL ours 105.643618 published 105.643618  diff 0.00e+00 | selection rel diff -2.92e-03 | volume rel diff 0.00e+00
+sample 10967  logL ours 106.305667 published 106.305667  diff 0.00e+00 | selection rel diff 5.62e-03 | volume rel diff 0.00e+00
+sample  5900  logL ours 102.380398 published 102.380398  diff 0.00e+00 | selection rel diff 6.87e-03 | volume rel diff 0.00e+00
+sample  2082  logL ours 99.556007 published 99.556007  diff 0.00e+00 | selection rel diff -7.58e-03 | volume rel diff 0.00e+00
+sample  4792  logL ours 101.736211 published 101.736211  diff 0.00e+00 | selection rel diff 1.20e-02 | volume rel diff 0.00e+00
+sample  5398  logL ours 102.074581 published 102.074581  diff 5.68e-14 | selection rel diff 2.55e-02 | volume rel diff 0.00e+00
+sample  4257  logL ours 101.377794 published 101.377794  diff 0.00e+00 | selection rel diff 6.92e-03 | volume rel diff 0.00e+00
+sample  7771  logL ours 103.383766 published 103.383766  diff 0.00e+00 | selection rel diff -1.49e-03 | volume rel diff 0.00e+00
+sample  6776  logL ours 102.844904 published 102.844904  diff -5.68e-14 | selection rel diff 5.86e-04 | volume rel diff 0.00e+00
+MAX |dlogL| 5.684e-14  MAX rel selection 2.553e-02  MAX rel volume 0.000e+00
+seconds per likelihood evaluation (random prior draws): 0.0292

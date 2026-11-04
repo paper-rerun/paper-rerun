@@ -1,0 +1,5 @@
+rel diff with each row's own alpha_chi/beta_chi: [-0.00131 -0.00561  0.00373  0.00348  0.00147  0.00867  0.01089 -0.00235
+  0.00512 -0.0024   0.01204 -0.00018]
+best single pair alpha_chi 1.427883 beta_chi 4.139973
+held-out rows rel diff with that single pair: [-1.88737914e-15  0.00000000e+00 -2.77555756e-15 -1.66533454e-15
+  3.10862447e-15 -2.77555756e-15]

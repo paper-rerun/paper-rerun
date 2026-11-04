@@ -1,0 +1,201 @@
+{
+  "paper": {
+    "title": "Population of Merging Compact Binaries Inferred Using Gravitational Waves through GWTC-3",
+    "authors": "R. Abbott et al. (LIGO Scientific Collaboration, Virgo Collaboration and KAGRA Collaboration)",
+    "venue": "Phys. Rev. X 13, 011048 (2023)",
+    "doi": "10.1103/PhysRevX.13.011048",
+    "arxiv": "2111.03634v5 (PDF identical to the PRX version, 11,436,130 bytes, saved as sources/paper_arxiv_2111.03634v5.pdf)",
+    "code": "gwpopulation_pipe @ 83c9bb97a755690a2d42930ff4ae43f239254cc2 (https://git.ligo.org/RatesAndPopulations/gwpopulation_pipe) with gwpopulation 0.6.3, as recorded in meta_data.loaded_modules of the published result",
+    "data": "Zenodo 11254021 (GWTC-3 population data release v3): analyses_PowerLawPeak.tar.gz md5 85c3b6599287e8083005e2a18778cb36; injections Zenodo 5636816: o1+o2+o3_bbhpop_real+semianalytic-LIGO-T2100377-v2.hdf5 md5 c21337a25b7318fdfd471cce549a547e. Both downloaded and verified (size and md5), see logs/download_big.log"
+  },
+  "target_run": {
+    "model": "POWER LAW+PEAK (PP) mass model + DEFAULT spin model (iid beta magnitudes, iid isotropic + truncated Gaussian tilts) + POWER LAW redshift evolution",
+    "label": "o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift",
+    "published_result_file": "sources/analyses/PowerLawPeak/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json (16,395,549 B, from analyses_PowerLawPeak.tar.gz)",
+    "published_samples_file": "sources/analyses/PowerLawPeak/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_samples.hdf5 (24,795,119 B, from the same tar)",
+    "what_we_rerun": "The full hierarchical inference (dynesty over the 13 hyper-parameters) with the authors' code, followed by the authors' rate post-processing (compute_rate_posterior), using the released per-event samples and the released injection file."
+  },
+  "claims": [
+    {
+      "id": "C1_mu_m",
+      "quantity": "Location (mean) of the Gaussian peak of the primary-mass distribution, mu_m (parameter 'mpp'), median and symmetric 90% credible interval",
+      "paper_value": {"median": 34, "plus": 2.6, "minus": 4.0},
+      "paper_value_text": "34 +2.6 -4.0 Msun",
+      "unit": "Msun",
+      "location": "Sec. VI.A, p. 011048-22 ('supplemented by a Gaussian peak at 34 +2.6 -4.0 Msun'); same value in the release file postproc/PowerLawPeakObsOneTwoThree.json (mpp: median 34, 5th 30, 95th 36, +2.6/-4.0). Not printed in Table IV/XVI, which hold only rates; the PP row of those tables is the same run.",
+      "released_result_value": {"median": 33.563, "plus": 2.644, "minus": 4.049, "p05": 29.515, "p95": 36.207, "source": "numpy.percentile(linear) [5,50,95] of the 11,184 'mpp' posterior samples in the published result.json; logs/inspect_published.log. This only re-reads the published posterior, it is not a result of ours."},
+      "comparison_rule": "Take the 5th, 50th and 95th percentiles of our equal-weight posterior samples of 'mpp' (numpy.percentile, linear interpolation). Compare median, p05 and p95.",
+      "tolerance": {
+        "vs_released_result": {"median": 0.5, "p05": 0.8, "p95": 0.8},
+        "vs_paper": {"median": 1.0, "p05_paper_value": 30.0, "p05": 0.85, "p95_paper_value": 36.6, "p95": 0.85}
+      },
+      "tolerance_basis": "Sampler stochasticity. The original run used dynesty with no seed (rstate None, nlive 500, rwalk, walks 5, nact 3); a re-run differs by nested-sampling noise. The posterior width for mu_m is sigma ~ (2.6+4.0)/3.29 = 2.0 Msun. A typical run-to-run scatter of a dynesty median at nlive 500 is ~0.1-0.2 sigma, so we allow 0.25 sigma = 0.5 Msun on the median and 0.4 sigma = 0.8 Msun on the 5%/95% edges (tails carry fewer effective samples; neffsamples was 4,765 in the original run). Against the paper we add the rounding half-width of the printed digit: the median is printed as an integer (+-0.5) and the errors to 0.1 (+-0.05). The released median 33.56 sits 0.06 above the rounding boundary 33.5, so a correct re-run can print as 33 instead of 34; that is why the paper comparison uses an absolute tolerance and not the printed digit. Fixed before any run; if our own two seeds differ from each other by more than these numbers we will report that the tolerance was too tight, not change it.",
+      "conditions": "Power Law + Peak run on the 69 BBH events with FAR < 1/yr excluding GW190814 and GW190917, redshift-evolving rate, injections thresholded at IFAR > 1 yr (O3) and network SNR > 10 (O1/O2 semianalytic), gwpopulation 0.6.3 in float64, same priors and sampler settings as the published result (see definitions).",
+      "primary": true
+    },
+    {
+      "id": "C2_rate_z0.2",
+      "quantity": "BBH merger rate density at z = 0.2 for the whole BBH population, R(z=0.2), median and symmetric 90% credible interval",
+      "paper_value": {"median": 28.3, "plus": 13.9, "minus": 9.1},
+      "paper_value_text": "28.3 +13.9 -9.1 Gpc^-3 yr^-1",
+      "unit": "Gpc^-3 yr^-1",
+      "location": "Table IV, row PP, column 'All BBHs' (p. 011048-21) and Table XVI, row PP (p. 011048-49); identical in the release CSVs table_data/gwtc-3_pop_bbh_rates_short_table_4.csv and gwtc-3_pop_bbh_full_rates_table_16.csv (28.3, 13.9, 9.1).",
+      "released_result_value": {"median": 28.221, "plus": 13.829, "minus": 8.935, "p05": 19.287, "p95": 42.051, "source": "rate * 1.2**lamb from the 11,184 published posterior samples (columns 'rate' and 'lamb'), numpy.percentile [5,50,95]; logs/inspect_published.log. Also in the release: postproc/PowerLawPeakObsOneTwoThree.json rate_best_measured 28 +14 -8.9 (5th 19, 95th 42). Re-read of published numbers only."},
+      "comparison_rule": "For each of our posterior samples compute R(0.2) = rate * (1 + 0.2)**lamb, where 'rate' is the z = 0 rate written by gwpopulation_pipe compute_rate_posterior; take numpy.percentile [5,50,95].",
+      "tolerance": {
+        "vs_released_result": {"median": 2.0, "p05": 1.5, "p95": 3.0},
+        "vs_paper": {"median": 2.05, "p05_paper_value": 19.2, "p05": 1.55, "p95_paper_value": 42.2, "p95": 3.05}
+      },
+      "tolerance_basis": "Two noise sources: (1) dynesty run-to-run noise on the hyper-posterior, sigma ~ (13.9+9.1)/3.29 = 7.0, 0.25 sigma ~ 1.75 on the median; (2) the unseeded Gamma(69) draw in compute_rate_posterior, visible in the authors' own outputs: the same run gives 28.3 +13.9/-9.1 in Tables IV/XVI, 28 +14/-8.9 in postproc, and 28.22 +13.83/-8.94 when re-read from result.json, i.e. ~0.1-0.3 on the median and edges. Sum rounded to 2.0 on the median. Edges: the lower edge is on the short side of a right-skewed distribution (1.5), the upper edge on the long tail (3.0, ~0.4 sigma). Paper tolerance adds the 0.05 rounding half-width of the printed values.",
+      "conditions": "Same run as C1; rate in Gpc^-3 yr^-1 from the injection analysis_time and the surveyed hypervolume of PowerLawRedshift; z = 0.2 chosen by the paper as the redshift where the relative rate error is smallest.",
+      "primary": true
+    },
+    {
+      "id": "S1_alpha",
+      "quantity": "Power-law slope of the primary mass distribution, alpha, median and 90% CI",
+      "paper_value": {"median": 3.5, "plus": 0.6, "minus": 0.56},
+      "paper_value_text": "3.5 +0.6 -0.56",
+      "unit": "dimensionless",
+      "location": "Sec. VI.A, p. 011048-22; postproc/PowerLawPeakObsOneTwoThree.json",
+      "comparison_rule": "numpy.percentile [5,50,95] of 'alpha'",
+      "tolerance": {"rule": "median within 0.25 sigma, 5%/95% edges within 0.4 sigma, sigma = (plus+minus)/3.29 = 0.35", "median": 0.09, "edges": 0.14},
+      "tolerance_basis": "Same sampler-noise rule as C1, stated before any run.",
+      "conditions": "Same run as C1.",
+      "primary": false
+    },
+    {
+      "id": "S2_beta_q",
+      "quantity": "Mass-ratio power-law index beta_q (parameter 'beta'), median and 90% CI",
+      "paper_value": {"median": 1.1, "plus": 1.7, "minus": 1.3},
+      "paper_value_text": "1.1 +1.7 -1.3",
+      "unit": "dimensionless",
+      "location": "Sec. VI.A, p. 011048-22; postproc/PowerLawPeakObsOneTwoThree.json",
+      "comparison_rule": "numpy.percentile [5,50,95] of 'beta'",
+      "tolerance": {"rule": "median within 0.25 sigma, edges within 0.4 sigma, sigma = 3.0/3.29 = 0.91", "median": 0.23, "edges": 0.36},
+      "tolerance_basis": "Same sampler-noise rule as C1.",
+      "conditions": "Same run as C1.",
+      "primary": false
+    },
+    {
+      "id": "S3_kappa",
+      "quantity": "Redshift-evolution index kappa of R(z) = R0 (1+z)^kappa (parameter 'lamb'), median and 90% CI",
+      "paper_value": {"median": 2.9, "plus": 1.7, "minus": 1.8},
+      "paper_value_text": "2.9 +1.7 -1.8",
+      "unit": "dimensionless",
+      "location": "Abstract, Sec. II (p. 4), Sec. VI.D; postproc/PowerLawPeakObsOneTwoThree.json (lamb 2.9 +1.7/-1.8, KappaAboveZero 99.6)",
+      "comparison_rule": "numpy.percentile [5,50,95] of 'lamb'",
+      "tolerance": {"rule": "median within 0.25 sigma, edges within 0.4 sigma, sigma = 3.5/3.29 = 1.06", "median": 0.27, "edges": 0.43},
+      "tolerance_basis": "Same sampler-noise rule as C1.",
+      "conditions": "Same run as C1.",
+      "primary": false
+    }
+  ],
+  "out_of_scope": [
+    "The abstract range 17.9-44 Gpc^-3 yr^-1 is the union of the FM, PS and PP intervals (MERGED row of Table XVI); a single PP run cannot reproduce it.",
+    "Per-mass-bin rates (23.6, 4.5, 0.2) and m_99%: they need a mass-distribution integral whose grid and script are not part of gwpopulation_pipe; not pre-registered.",
+    "Evidence / Bayes factors: log_evidence in the published result is NaN."
+  ],
+  "definitions": [
+    {
+      "name": "event_set",
+      "choice": "The 69 events in meta_data.event_ids of the published result (10 GWTC-1 + 59 O3 superevent names), used through the 'original' group of the published _samples.hdf5 (69 x 3194 samples each of mass_1, mass_ratio, a_1, a_2, cos_tilt_1, cos_tilt_2, redshift, plus 'prior').",
+      "paper_quote": "\"given our large BBH sample, we adopt a FAR threshold of 1 yr-1, but we do not include the previously identified outliers GW190917 (likely a NSBH) and GW190814 (a q ~ 0.11 binary) in the BBH population\" (Sec. VI)",
+      "ambiguity_note": "The paper gives the selection rule, not the list. The authors published the exact per-event arrays the likelihood used: gwpopulation_pipe@83c9bb97 data_analysis.resample_single_event_posteriors writes likelihood.data as 'original' and likelihood.sampling_prior as 'prior'. We use those arrays instead of rebuilding from the PE releases, so the 3194-sample downsample is the authors' own. Decided from the published file, not from anything we computed. Rebuilding from PE releases (ini regexes, preferred-labels) is a fallback only if the file cannot be loaded, and would be flagged as a deviation."
+    },
+    {
+      "name": "sampling_prior",
+      "choice": "original/prior from the published samples file, used as likelihood.sampling_prior (pi(theta) in Eq. 5).",
+      "paper_quote": "\"where the factor of pi(theta) serves to divide out the prior used for initial parameter estimation\" (Sec. III, Eq. 5)",
+      "ambiguity_note": "The ini states distance-prior euclidean, mass-prior flat-detector, spin-prior component; the published 'prior' column already encodes this. No recomputation."
+    },
+    {
+      "name": "population_models",
+      "choice": "Model([SinglePeakSmoothedMassDistribution(mmin=2, mmax=100), iid_spin_magnitude_beta, iid_spin_orientation_gaussian_isotropic, PowerLawRedshift(z_max=Z)]), exactly the list in result.json meta_data.models: ['SinglePeakSmoothedMassDistribution', 'iid_spin_magnitude', 'iid_spin_orientation', 'gwpopulation.models.redshift.PowerLawRedshift']. The selection function uses the same four models (vt-parameters mass, redshift, spin).",
+      "paper_quote": "\"p(m1 | ...) = [(1 - lambda_peak) P(m1 | -alpha, mmax) + lambda_peak G(m1 | mu_m, sigma_m)] S(m1 | mmin, delta_m)\" (Eq. B4) and \"pi(q | beta, m1, mmin, delta_m) ~ q^beta_q S(q m1 | mmin, delta_m)\" (Eq. B7)",
+      "ambiguity_note": "Mass model 'c' in the ini maps to SinglePeakSmoothedMassDistribution; the pipe passes minimum-mass 2 and maximum-mass 100 to its constructor (_load_model). Confirmed by meta_data.models."
+    },
+    {
+      "name": "gwpopulation_version",
+      "choice": "Primary: gwpopulation 0.6.3 from PyPI (sdist sha256 61f521e8f5dbbb9bcd360ecd67fe2f5bb547cf9870a03968b8ef81d961b28895). Sensitivity run, if time allows: GitHub commit 5cd44c2012 ('Mass bounds fix (#37)', still VERSION 0.6.3). Both reported; only the primary decides the verdict.",
+      "paper_quote": "\"The likelihoods are implemented in a variety of software including GWPOPULATION [147,148]\" (Sec. III B)",
+      "ambiguity_note": "meta_data.loaded_modules records 'gwpopulation 0.6.3:' with an empty git field, while gwpopulation_pipe in the same field carries '(CLEAN) 83c9bb9 2021-11-07'. An empty git field means it was not a git checkout, which points to the released package; that is why PyPI is primary. Two codebases carry the same number (triage note), so the alternative is run as a check, not chosen by which one matches."
+    },
+    {
+      "name": "gwpopulation_pipe_version",
+      "choice": "gwpopulation_pipe at commit 83c9bb97a755690a2d42930ff4ae43f239254cc2 (version string 0.2.0), unmodified except for environment/path fixes recorded in patches/.",
+      "paper_quote": "No version in the paper; taken from meta_data.loaded_modules: \"0.2.0: (CLEAN) 83c9bb9 2021-11-07 14:45:15 -0500\".",
+      "ambiguity_note": "None: the commit hash is recorded in the published result."
+    },
+    {
+      "name": "hyper_priors",
+      "choice": "Exactly the priors stored in the published result.json: alpha U(-4,12); beta U(-2,7); mmax U(30,100); mmin U(2,10); lam U(0,1); mpp U(20,50); sigpp U(1,10); delta_m U(0,10); mu_chi U(0,1); sigma_chi U(0.005,0.25); amax = 1 fixed; Constraint alpha_chi, beta_chi in [1, 1e5]; xi_spin U(0,1); sigma_spin U(0.1,4); lamb U(-10,10).",
+      "paper_quote": "Table VI: alpha U(-4,12), beta_q U(-2,7), mmin U(2,10), mmax U(30,100), lambda_peak U(0,1), mu_m U(20,50), sigma_m U(1,10), delta_m U(0,10); Table XII: mu_chi U(0,1), sigma^2_chi U(0.005,0.25), zeta U(0,1), sigma_t U(0.1,4), with \"alpha, beta > 1\"; App. B 3: \"a uniform prior on kappa ... kappa in [-6, 6]\"",
+      "ambiguity_note": "Three sources disagree on two priors. example/gwtc3-bbh.prior at 83c9bb97 has mmax U(60,100), mmin U(2,7), lamb U(-2,8); the paper says kappa U(-6,6); the published result.json (what actually ran) has mmax U(30,100), mmin U(2,10), lamb U(-10,10). Mass priors in result.json match the paper tables; the kappa prior differs from the paper. We use the result.json priors because they are the run being reproduced; the kappa posterior (2.9 +1.7/-1.8) lies well inside both ranges. Decided from the published result file, not from our numbers. The example .prior file is not used."
+    },
+    {
+      "name": "sampler_settings",
+      "choice": "bilby run_sampler with dynesty: nlive 500, bound 'multi', sample 'rwalk', walks 5, nact 3, maxmcmc 5000, dlogz 0.1, enlarge 1.5, update_interval 300, reflective boundary on delta_m (index 7), queue_size 1. Two independent runs with fixed, recorded seeds (different from each other); the original used no seed.",
+      "paper_quote": "\"building a posterior with one of the EMCEE, DYNESTY, or STAN packages [151-154]\" (Sec. III B)",
+      "ambiguity_note": "The paper does not give sampler settings. The ini says {nlive:500, walks:5, nact:3}; the full kwargs are in result.json sampler_kwargs and match. bilby 1.1.3 and the dynesty version of late 2021 (dynesty version not recorded, 'None' in loaded_modules) are the target; if the dynesty version must be guessed it is recorded in env/. Seeding is our addition for traceability, not a method change."
+    },
+    {
+      "name": "likelihood_class",
+      "choice": "MinimumEffectiveSamplesLikelihood from gwpopulation_pipe.utils (enforce-minimum-neffective-per-event True): per-event ln BF set to -inf when n_eff <= 69. Selection: vt_helper.injection_resampling_vt -> gwpopulation ResamplingVT with n_events = 69. conversion_function convert_to_beta_parameters. max_samples default 1e10 (no extra downsampling beyond the published 3194).",
+      "paper_quote": "\"we assign only non-zero likelihoods to points in parameter space with an effective sample size of at least the number of observed events in our event list\" (App. B) and \"ensure that the effective number of found injections remaining after population reweighting is sufficiently high (Neff > 4Ndet)\" (App. A)",
+      "ambiguity_note": "The 4*Ndet injection cut is inside gwpopulation 0.6.3 ResamplingVT; nothing to choose. No Monte Carlo variance penalty is added (gwpopulation 1.x options are not used)."
+    },
+    {
+      "name": "injections",
+      "choice": "o1+o2+o3_bbhpop_real+semianalytic-LIGO-T2100377-v2.hdf5 (Zenodo 5636816, md5 c21337a25b7318fdfd471cce549a547e); found = any '*ifar*' field > 1.0 yr, or (name in {o1,o2} and optimal_snr_net > 10.0); prior = sampling_pdf * mass1_source * (2 pi a1^2)(2 pi a2^2); analysis_time and total_generated from the file attributes (vt_helper.load_injection_data at 83c9bb97).",
+      "paper_quote": "\"we characterize the found injections as those recovered with a FAR below the corresponding thresholds used in population analyses described in this paper (1 and 0.25 yr-1) in either PYCBC, GSTLAL, or MBTA\" and \"based on a network signal-to-noise ratio threshold rho = 10\" (App. A)",
+      "ambiguity_note": "The thresholds (vt-ifar-threshold 1.0, vt-snr-threshold 10.0) come from example/gwtc3-bbh.ini at 83c9bb97 and match App. A. The parser default for SNR is 11, so the ini value must be passed explicitly. The ifar loop takes all *ifar* fields in the file (including cWB if present); the paper says cWB was omitted from the volume estimate. We keep the authors' code as is and only note this."
+    },
+    {
+      "name": "max_redshift",
+      "choice": "2.3: used both to cut per-event samples (redshift < max_redshift; no-op here since the published samples go up to z = 2.226) and as z_max of PowerLawRedshift (normalisation and surveyed hypervolume).",
+      "paper_quote": "\"We adopt zmax = 2.3 as this is a conservative upper bound on the redshift at which we could detect BBH systems during O3, for both detection thresholds used in this work.\" (App. B 3, Eq. B25)",
+      "ambiguity_note": "example/gwtc3-bbh.ini at 83c9bb97 says max-redshift=1.9, the parser default is 2.3, and the paper says 2.3. The published 'original' per-event samples contain redshifts up to 2.226 (logs/inspect_published_meta.log), which is impossible if the run had cut at 1.9, since main() drops samples with redshift >= max_redshift before building the likelihood. So the published run used a value above 2.226, consistent with the paper's 2.3. Decided from the paper text and the published samples file, not from a computation of ours. z_max affects the rate normalisation, so a wrong value would bias C2."
+    },
+    {
+      "name": "mass_bounds",
+      "choice": "minimum-mass 2, maximum-mass 100 passed to SinglePeakSmoothedMassDistribution.",
+      "paper_quote": "\"These injections cover a component mass range from 1 to 100Msun and redshifts up to z ~ 1.9\" (Sec. III B)",
+      "ambiguity_note": "From the ini; equal to the pipe defaults. Not stated as such in the paper."
+    },
+    {
+      "name": "rate_definition",
+      "choice": "gwpopulation_pipe compute_rate_posterior: for each posterior sample, rate = N / (V_tot(Lambda) * mu(Lambda)) with N ~ Gamma(a = 69) (scipy.stats.gamma, unseeded in the original; seeded and recorded by us), V_tot = surveyed_hypervolume of PowerLawRedshift times analysis_time, mu = selection.detection_efficiency. This is R0 at z = 0. R(0.2) = rate * 1.2**lamb.",
+      "paper_quote": "\"R(z) = dN/(dVc dt) = R0 (1 + z)^kappa\" (Eq. 7) and \"The merger rate for PP, FM, and PS is quoted at a redshift value of 0.2, the value where the relative error in merger rate is smallest.\" (Table IV caption)",
+      "ambiguity_note": "The paper does not say how R(0.2) was computed from the run. The published posterior carries 'rate' and 'lamb', and rate*1.2**lamb re-read from it gives 28.22 +13.83/-8.94, against 28.3 +13.9/-9.1 in the tables and 28 +14/-8.9 in postproc. The ~0.1 spread is consistent with independent Gamma draws; we take rate*1.2**lamb as the definition, checked against the published file only."
+    },
+    {
+      "name": "summary_statistic",
+      "choice": "Median and symmetric 90% credible interval = 5th, 50th, 95th percentiles (numpy.percentile, linear) of the equal-weight posterior samples written by bilby (result.posterior). Errors are p95 - p50 and p50 - p05.",
+      "paper_quote": "\"Merger rates in Gpc-3 yr-1 ... quoted at the 90% credible interval\" (Table IV caption); intervals throughout are median and 90% symmetric",
+      "ambiguity_note": "Percentile interpolation method is not stated; the difference between methods on ~10^4 samples is far below the tolerances."
+    },
+    {
+      "name": "numerics_and_backend",
+      "choice": "float64 throughout. Backend cupy on the RTX 2070 SUPER as the authors did (cupy 8.4.0 in the original; the closest version that works with the installed CUDA driver). If the GPU path fails after 3 attempts, numpy on CPU, same code, reported as a deviation in environment only.",
+      "paper_quote": "No statement in the paper; cupy 8.4.0, numpy 1.19.5, scipy 1.6.3, astropy 4.0, bilby 1.1.3 from meta_data.loaded_modules.",
+      "ambiguity_note": "gwpopulation 0.6.3 supports numpy and cupy only (no JAX). Changing backend changes floating-point order, which is covered by the sampler-noise tolerance."
+    },
+    {
+      "name": "cosmology",
+      "choice": "Whatever gwpopulation 0.6.3 PowerLawRedshift uses internally (astropy Planck15), with astropy pinned as close to 4.0 as the environment allows.",
+      "paper_quote": "No explicit cosmology statement found for the population run in the text we read.",
+      "ambiguity_note": "Fixed by the code, not by us. A different astropy version could shift dVc/dz slightly; recorded in env/."
+    }
+  ],
+  "verdict_rule": "Reproduced if C1 and C2 are within the 'vs_released_result' tolerances for median, p05 and p95 in the primary run (PyPI gwpopulation 0.6.3). Paper comparison is reported next to it with the 'vs_paper' tolerances. Partially reproduced if only one of C1/C2 passes, or only a reduced run finishes. Not reproduced if a completed run misses either primary claim. Secondary claims S1-S3 are reported but do not change the verdict.",
+  "sources_used": [
+    "sources/paper_arxiv_2111.03634v5.pdf (paper.txt via pdftotext)",
+    "sources/gwtc3-bbh.ini and sources/gwtc3-bbh.prior (example/ at 83c9bb97)",
+    "sources/pipe_83c9bb97/*.py (gwpopulation_pipe source at 83c9bb97)",
+    "sources/table_data/ (release CSVs of Tables IV and XVI)",
+    "sources/popdata/GWTC-3-population-data/postproc/PowerLawPeakObsOneTwoThree.json",
+    "sources/analyses/PowerLawPeak/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json and _samples.hdf5",
+    "logs/inspect_published.log, logs/inspect_published_meta.log (read-only inspection of the published files)"
+  ],
+  "prepared": "2026-11-03, pre-registration stage, before any model run"
+}

@@ -1,0 +1,50 @@
+{
+ "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+ "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+ "variable": "geopotential",
+ "level": 500,
+ "inits_present": 732,
+ "inits_missing": [],
+ "leads": {
+  "24": {
+   "n_inits": 732,
+   "rmse_v1": 39.775178131800715,
+   "rmse_v2": 39.775160467129574,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "72": {
+   "n_inits": 732,
+   "rmse_v1": 124.21451857204768,
+   "rmse_v2": 124.21464255209406,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "120": {
+   "n_inits": 732,
+   "rmse_v1": 274.3602273141293,
+   "rmse_v2": 274.360580944996,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "168": {
+   "n_inits": 732,
+   "rmse_v1": 468.0295809021968,
+   "rmse_v2": 468.03021693554706,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "240": {
+   "n_inits": 732,
+   "rmse_v1": 731.6539506211177,
+   "rmse_v2": 731.6549870428405,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  }
+ }
+}

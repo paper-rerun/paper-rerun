@@ -27,10 +27,13 @@ AREAS = {
 	"plant genomics": "Biology", "cosmology": "Physics", "particle physics": "Physics",
 	"materials / chemistry": "Materials and chemistry", "materials": "Materials and chemistry",
 	"machine learning": "Computing",
+	"weather and climate": "Earth sciences", "gravitational waves": "Physics",
 }
 
 # The main thing each rerun found, in one category, read from the report
 MAIN_ISSUE = {
+	"2024-rasp-weatherbench2": "Code differs from the Methods",
+	"2023-abbott-gwtc3-population": "Settings behind one result not published",
 	"2023-huang-compleasm": "Reference data re-released",
 	"2022-takamoto-pdebench": "Released checkpoints differ from the paper",
 	"2026-gilchrist-foldmason": "Reference data offline or deleted",

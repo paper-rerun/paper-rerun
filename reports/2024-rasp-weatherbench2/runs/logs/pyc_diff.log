@@ -1,0 +1,443 @@
+module-level identical: False
+DIFFERS: ChunkReader
+    --- 
+    +++ 
+    @@ -4,8 +4,8 @@
+     LOAD_CONST 'ChunkReader'
+     STORE_NAME '__qualname__'
+    -LOAD_CONST <code object __init__ at 0x7f1b8a11c800, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 85>
+    +LOAD_CONST <code object __init__ at 0x7f1b8a11cfd0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 86>
+     MAKE_FUNCTION 0
+     STORE_NAME '__init__'
+    -LOAD_CONST <code object read at 0x55b8f9c8fde0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 92>
+    +LOAD_CONST <code object read at 0x55b8f9d1f290, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 93>
+     MAKE_FUNCTION 0
+     STORE_NAME 'read'
+DIFFERS: ChunkReader.read
+    --- 
+    +++ 
+    @@ -3,5 +3,5 @@
+     LOAD_ATTR 'separator'
+     LOAD_METHOD 'join'
+    -LOAD_CONST <code object <genexpr> at 0x7f1b8a0ab1e0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 93>
+    +LOAD_CONST <code object <genexpr> at 0x7f1b8a0aba50, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 94>
+     MAKE_FUNCTION 0
+     LOAD_FAST 'chunk_index'
+DIFFERS: fetch
+    --- 
+    +++ 
+    @@ -60,5 +60,5 @@
+     BUILD_LIST 0
+     STORE_FAST 'goog_hash'
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a18c1b0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 45>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a18e430, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 46>
+     MAKE_FUNCTION 0
+     LOAD_FAST 'goog_hash'
+DIFFERS: load_truth
+    --- 
+    +++ 
+    @@ -1,3 +1,2 @@
+    -MAKE_CELL 'cached'
+     MAKE_CELL 'fields'
+     MAKE_CELL 'level_chunk'
+    @@ -46,5 +45,5 @@
+     PRECALL 1
+     CALL 1
+    -POP_JUMP_FORWARD_IF_FALSE 462
+    +POP_JUMP_FORWARD_IF_FALSE 476
+     LOAD_GLOBAL 'np'
+     LOAD_ATTR 'load'
+    @@ -52,8 +51,8 @@
+     PRECALL 1
+     CALL 1
+    -STORE_DEREF 'cached'
+    +STORE_FAST 'cached'
+     LOAD_GLOBAL 'pd'
+     LOAD_ATTR 'to_datetime'
+    -LOAD_DEREF 'cached'
+    +LOAD_FAST 'cached'
+     LOAD_CONST 'times'
+     BINARY_SUBSCR None
+    @@ -61,7 +60,11 @@
+     CALL 1
+     STORE_FAST 'times'
+    -LOAD_CLOSURE 'cached'
+    +LOAD_FAST 'cached'
+    +LOAD_CONST 'fields'
+    +BINARY_SUBSCR None
+    +STORE_DEREF 'fields'
+    +LOAD_CLOSURE 'fields'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <dictcomp> at 0x7f1b8a0ab2d0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 118>
+    +LOAD_CONST <code object <dictcomp> at 0x7f1b8a0cdd10, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 121>
+     MAKE_FUNCTION 8
+     LOAD_GLOBAL 'enumerate'
+    @@ -72,5 +75,5 @@
+     PRECALL 0
+     CALL 0
+    -LOAD_DEREF 'cached'
+    +LOAD_FAST 'cached'
+     LOAD_CONST 'latitude'
+     BINARY_SUBSCR None
+    @@ -134,5 +137,5 @@
+     CALL 1
+     STORE_DEREF 'level_index'
+    -LOAD_CONST <code object <dictcomp> at 0x7f1b8a1ca170, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 126>
+    +LOAD_CONST <code object <dictcomp> at 0x7f1b8a0cdb50, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 129>
+     MAKE_FUNCTION 0
+     LOAD_GLOBAL 'enumerate'
+    @@ -147,5 +150,5 @@
+     LOAD_CLOSURE 'time_positions'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <genexpr> at 0x7f1b8a0cd290, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 127>
+    +LOAD_CONST <code object <genexpr> at 0x7f1b8a0cda70, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 130>
+     MAKE_FUNCTION 8
+     LOAD_FAST 'valid_times'
+    @@ -160,5 +163,5 @@
+     LOAD_CLOSURE 'time_chunk'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <genexpr> at 0x7f1b8a0cd530, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 128>
+    +LOAD_CONST <code object <genexpr> at 0x7f1b8a0cdc30, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 131>
+     MAKE_FUNCTION 8
+     LOAD_FAST 'needed_positions'
+    @@ -175,5 +178,5 @@
+     LOAD_CLOSURE 'reader'
+     BUILD_TUPLE 3
+    -LOAD_CONST <code object read_one at 0x7f1b8a0b3330, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 130>
+    +LOAD_CONST <code object read_one at 0x7f1b8a0b3110, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 133>
+     MAKE_FUNCTION 8
+     STORE_FAST 'read_one'
+    @@ -193,5 +196,5 @@
+     CALL 2
+     GET_ITER None
+    -FOR_ITER 1314
+    +FOR_ITER 1328
+     UNPACK_SEQUENCE 3
+     STORE_FAST 'chunk_id'
+    @@ -199,5 +202,5 @@
+     STORE_FAST 'missing'
+     LOAD_FAST 'missing'
+    -POP_JUMP_FORWARD_IF_FALSE 1118
+    +POP_JUMP_FORWARD_IF_FALSE 1132
+     LOAD_GLOBAL 'RuntimeError'
+     LOAD_CONST 'truth chunk missing %s %d'
+    @@ -214,5 +217,5 @@
+     CALL 1
+     GET_ITER None
+    -FOR_ITER 1312
+    +FOR_ITER 1326
+     STORE_FAST 'offset'
+     LOAD_FAST 'chunk_id'
+    @@ -228,5 +231,5 @@
+     CALL 1
+     COMPARE_OP '<'
+    -POP_JUMP_FORWARD_IF_FALSE 1310
+    +POP_JUMP_FORWARD_IF_FALSE 1324
+     LOAD_FAST 'times'
+     LOAD_FAST 'position'
+    @@ -234,5 +237,5 @@
+     LOAD_FAST 'valid_times'
+     CONTAINS_OP 0
+    -POP_JUMP_FORWARD_IF_FALSE 1310
+    +POP_JUMP_FORWARD_IF_FALSE 1324
+     LOAD_GLOBAL 'np'
+     LOAD_ATTR 'array'
+    @@ -253,6 +256,6 @@
+     BINARY_SUBSCR None
+     STORE_SUBSCR None
+    -JUMP_BACKWARD 1148
+    -JUMP_BACKWARD 1062
+    +JUMP_BACKWARD 1162
+    +JUMP_BACKWARD 1076
+     NOP None
+     LOAD_CONST None
+    @@ -262,8 +265,8 @@
+     CALL 2
+     POP_TOP None
+    -JUMP_FORWARD 1362
+    +JUMP_FORWARD 1376
+     PUSH_EXC_INFO None
+     WITH_EXCEPT_START None
+    -POP_JUMP_FORWARD_IF_TRUE 1354
+    +POP_JUMP_FORWARD_IF_TRUE 1368
+     RERAISE 2
+     COPY 3
+    @@ -293,5 +296,5 @@
+     LOAD_CLOSURE 'fields'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a0cd1b0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 144>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a0cd610, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 147>
+     MAKE_FUNCTION 8
+     LOAD_FAST 'ordered'
+DIFFERS: main
+    --- 
+    +++ 
+    @@ -159,5 +159,5 @@
+     CALL 3
+     STORE_FAST 'wanted_inits'
+    -LOAD_CONST <code object <dictcomp> at 0x7f1b8a0ccff0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 188>
+    +LOAD_CONST <code object <dictcomp> at 0x7f1b8a0cdfb0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 191>
+     MAKE_FUNCTION 0
+     LOAD_GLOBAL 'enumerate'
+    @@ -171,5 +171,5 @@
+     LOAD_CLOSURE 'init_positions'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a0cce30, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 189>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a0cded0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 192>
+     MAKE_FUNCTION 8
+     LOAD_FAST 'wanted_inits'
+    @@ -180,5 +180,5 @@
+     LOAD_CLOSURE 'init_positions'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a0cd0d0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 190>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a0cddf0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 193>
+     MAKE_FUNCTION 8
+     LOAD_FAST 'wanted_inits'
+    @@ -186,6 +186,19 @@
+     PRECALL 0
+     CALL 0
+    +LOAD_CONST None
+    +LOAD_GLOBAL 'int'
+    +LOAD_GLOBAL 'os'
+    +LOAD_ATTR 'environ'
+    +LOAD_METHOD 'get'
+    +LOAD_CONST 'WB2_MAX_INITS'
+    +LOAD_CONST '100000'
+    +PRECALL 2
+    +CALL 2
+    +PRECALL 1
+    +CALL 1
+    +BUILD_SLICE 2
+    +BINARY_SUBSCR None
+     STORE_FAST 'present_inits'
+    -LOAD_CONST <code object <dictcomp> at 0x7f1b8a0d4150, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 192>
+    +LOAD_CONST <code object <dictcomp> at 0x7f1b8a0d5110, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 195>
+     MAKE_FUNCTION 0
+     LOAD_GLOBAL 'enumerate'
+    @@ -199,5 +212,5 @@
+     LOAD_CLOSURE 'lead_positions'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <dictcomp> at 0x7f1b8a0ab3c0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 193>
+    +LOAD_CONST <code object <dictcomp> at 0x7f1b8a0abb40, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 196>
+     MAKE_FUNCTION 8
+     LOAD_GLOBAL 'TARGET_LEADS_HOURS'
+    @@ -210,5 +223,5 @@
+     LOAD_CLOSURE 'lead_chunk'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <genexpr> at 0x7f1b8a0cd450, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 194>
+    +LOAD_CONST <code object <genexpr> at 0x7f1b8a0ce410, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 197>
+     MAKE_FUNCTION 8
+     LOAD_DEREF 'target_lead_positions'
+    @@ -236,5 +249,5 @@
+     CALL 1
+     LOAD_CONST 'missing'
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a0ab4b0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 195>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a0abc30, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 198>
+     MAKE_FUNCTION 0
+     LOAD_FAST 'missing_inits'
+    @@ -254,5 +267,5 @@
+     LOAD_CLOSURE 'target_lead_positions'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <genexpr> at 0x7f1b8a0b3440, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 198>
+    +LOAD_CONST <code object <genexpr> at 0x7f1b8a0b3550, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 201>
+     MAKE_FUNCTION 8
+     LOAD_FAST 'present_inits'
+    @@ -279,5 +292,5 @@
+     PRECALL 2
+     CALL 2
+    -POP_JUMP_FORWARD_IF_TRUE 1436
+    +POP_JUMP_FORWARD_IF_TRUE 1538
+     LOAD_ASSERTION_ERROR None
+     RAISE_VARARGS 1
+    @@ -326,5 +339,5 @@
+     PRECALL 1
+     CALL 1
+    -POP_JUMP_FORWARD_IF_FALSE 1868
+    +POP_JUMP_FORWARD_IF_FALSE 1970
+     LOAD_GLOBAL 'open'
+     LOAD_FAST 'out_path'
+    @@ -332,5 +345,5 @@
+     CALL 1
+     GET_ITER None
+    -FOR_ITER 1868
+    +FOR_ITER 1970
+     STORE_FAST 'line'
+     LOAD_GLOBAL 'json'
+    @@ -352,9 +365,9 @@
+     CALL 1
+     POP_TOP None
+    -JUMP_BACKWARD 1752
+    +JUMP_BACKWARD 1854
+     LOAD_CLOSURE 'done'
+     LOAD_CLOSURE 'lead_chunks'
+     BUILD_TUPLE 2
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a108630, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 211>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a108c30, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 214>
+     MAKE_FUNCTION 8
+     LOAD_FAST 'present_inits'
+    @@ -391,5 +404,5 @@
+     LOAD_CLOSURE 'truth'
+     BUILD_TUPLE 11
+    -LOAD_CONST <code object work at 0x55b8f9c19940, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 214>
+    +LOAD_CONST <code object work at 0x55b8f9d10750, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 217>
+     MAKE_FUNCTION 8
+     STORE_FAST 'work'
+    @@ -418,5 +431,5 @@
+     CALL 2
+     GET_ITER None
+    -FOR_ITER 2488
+    +FOR_ITER 2590
+     UNPACK_SEQUENCE 2
+     STORE_FAST 'count'
+    @@ -424,5 +437,5 @@
+     LOAD_FAST 'records'
+     GET_ITER None
+    -FOR_ITER 2272
+    +FOR_ITER 2374
+     STORE_FAST 'record'
+     LOAD_FAST 'out_file'
+    @@ -438,5 +451,5 @@
+     CALL 1
+     POP_TOP None
+    -JUMP_BACKWARD 2182
+    +JUMP_BACKWARD 2284
+     LOAD_FAST 'out_file'
+     LOAD_METHOD 'flush'
+    @@ -449,5 +462,5 @@
+     LOAD_CONST 0
+     COMPARE_OP '=='
+    -POP_JUMP_FORWARD_IF_FALSE 2486
+    +POP_JUMP_FORWARD_IF_FALSE 2588
+     LOAD_GLOBAL 'time'
+     LOAD_ATTR 'time'
+    @@ -479,5 +492,5 @@
+     CALL 2
+     POP_TOP None
+    -JUMP_BACKWARD 2168
+    +JUMP_BACKWARD 2270
+     NOP None
+     LOAD_CONST None
+    @@ -487,8 +500,8 @@
+     CALL 2
+     POP_TOP None
+    -JUMP_FORWARD 2536
+    +JUMP_FORWARD 2638
+     PUSH_EXC_INFO None
+     WITH_EXCEPT_START None
+    -POP_JUMP_FORWARD_IF_TRUE 2528
+    +POP_JUMP_FORWARD_IF_TRUE 2630
+     RERAISE 2
+     COPY 3
+    @@ -505,8 +518,8 @@
+     CALL 2
+     POP_TOP None
+    -JUMP_FORWARD 2582
+    +JUMP_FORWARD 2684
+     PUSH_EXC_INFO None
+     WITH_EXCEPT_START None
+    -POP_JUMP_FORWARD_IF_TRUE 2574
+    +POP_JUMP_FORWARD_IF_TRUE 2676
+     RERAISE 2
+     COPY 3
+    @@ -517,5 +530,5 @@
+     POP_TOP None
+     POP_TOP None
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a0ab5a0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 245>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a0abd20, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 248>
+     MAKE_FUNCTION 0
+     LOAD_GLOBAL 'open'
+    @@ -527,5 +540,5 @@
+     CALL 0
+     STORE_FAST 'records'
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a108830, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 246>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a108f30, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 249>
+     MAKE_FUNCTION 0
+     LOAD_FAST 'records'
+    @@ -542,5 +555,5 @@
+     PRECALL 1
+     CALL 1
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a0ab690, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 248>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a0abe10, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 251>
+     MAKE_FUNCTION 0
+     LOAD_FAST 'missing_inits'
+    @@ -555,9 +568,9 @@
+     GET_ITER None
+     EXTENDED_ARG 1
+    -FOR_ITER 3448
+    +FOR_ITER 3550
+     STORE_DEREF 'hours'
+     LOAD_CLOSURE 'hours'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <dictcomp> at 0x7f1b8a108930, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 250>
+    +LOAD_CONST <code object <dictcomp> at 0x7f1b8a109030, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 253>
+     MAKE_FUNCTION 8
+     LOAD_FAST 'records'
+    @@ -570,5 +583,5 @@
+     LOAD_CLOSURE 'rows'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a0ab780, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 251>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a0abf00, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 254>
+     MAKE_FUNCTION 8
+     LOAD_GLOBAL 'sorted'
+    @@ -586,5 +599,5 @@
+     LOAD_CLOSURE 'rows'
+     BUILD_TUPLE 1
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a0ab870, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 252>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a148030, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 255>
+     MAKE_FUNCTION 8
+     LOAD_GLOBAL 'sorted'
+    @@ -625,5 +638,5 @@
+     CALL 1
+     LOAD_GLOBAL 'any'
+    -LOAD_CONST <code object <genexpr> at 0x7f1b8a0cd370, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 254>
+    +LOAD_CONST <code object <genexpr> at 0x7f1b8a0ce250, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 257>
+     MAKE_FUNCTION 0
+     LOAD_DEREF 'rows'
+    @@ -637,5 +650,5 @@
+     CALL 1
+     LOAD_GLOBAL 'any'
+    -LOAD_CONST <code object <genexpr> at 0x7f1b8a0cd990, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 254>
+    +LOAD_CONST <code object <genexpr> at 0x7f1b8a0ce170, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 257>
+     MAKE_FUNCTION 0
+     LOAD_DEREF 'rows'
+    @@ -649,5 +662,5 @@
+     CALL 1
+     LOAD_GLOBAL 'all'
+    -LOAD_CONST <code object <genexpr> at 0x7f1b8a0cd7d0, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 255>
+    +LOAD_CONST <code object <genexpr> at 0x7f1b8a0ce330, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 258>
+     MAKE_FUNCTION 0
+     LOAD_DEREF 'rows'
+    @@ -668,5 +681,5 @@
+     STORE_SUBSCR None
+     EXTENDED_ARG 1
+    -JUMP_BACKWARD 2726
+    +JUMP_BACKWARD 2828
+     LOAD_GLOBAL 'json'
+     LOAD_ATTR 'dump'
+DIFFERS: read_coord
+    --- 
+    +++ 
+    @@ -43,5 +43,5 @@
+     LOAD_CLOSURE 'zarray'
+     BUILD_TUPLE 4
+    -LOAD_CONST <code object <listcomp> at 0x7f1b8a0b8d30, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 73>
+    +LOAD_CONST <code object <listcomp> at 0x7f1b8a0b9210, file "/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/runs/scripts/wb2_rmse.py", line 74>
+     MAKE_FUNCTION 8
+     LOAD_GLOBAL 'range'
+--- 
++++ 
+@@ -53,3 +53,9 @@
+ STORE_NAME 'BASE'
++LOAD_NAME 'os'
++LOAD_ATTR 'environ'
++LOAD_METHOD 'get'
++LOAD_CONST 'WB2_DATA_DIR'
+ LOAD_CONST '/mnt/e/Ciencia/noturno/2024-rasp-weatherbench2/data'
++PRECALL 2
++CALL 2
+ STORE_NAME 'DATA_DIR'
+@@ -106,3 +112,3 @@
+ COMPARE_OP '=='
+-POP_JUMP_FORWARD_IF_FALSE 306
++POP_JUMP_FORWARD_IF_FALSE 356
+ PUSH_NULL None

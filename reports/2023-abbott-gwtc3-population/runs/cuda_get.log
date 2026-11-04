@@ -1,0 +1,30 @@
+OK cuda-cudart-11-1_11.1.74-1_amd64.deb 133248 49c6e14a1eeedaf6cc2c3c9b056e27b2bd4833fcd21313516ce8a48a37038d53
+OK cuda-nvrtc-11-1_11.1.105-1_amd64.deb 11080338 9518665aeaa577b4d532859e2cb93fccb2a9b83652eec3faaadfdb9fad568013
+OK cuda-nvtx-11-1_11.1.74-1_amd64.deb 51068 cc92923349bc7e4b7ba9e5090fa8619534e10e5e7ef9ec729f1da53c601b8886
+OK libcublas-11-1_11.3.0.106-1_amd64.deb 170437312 a9f6db0a321394bb21e195e6cc155a8d48bc28c1f9155a5db0392cd475bf3354
+OK libcufft-11-1_10.3.0.105-1_amd64.deb 128921676 fe683105ea27399ced6d9301173597e36c840736b70f9c2ad1a9cee671ad0749
+OK libcurand-11-1_10.2.2.105-1_amd64.deb 39619036 e01411b7dc89104e0bbafd0466960e651eacbef4a5f4a39da776c6fcfc72d8ea
+OK libcusparse-11-1_11.3.0.10-1_amd64.deb 103299770 27a9789427cfc3ad969090dfc765240ef19eff86c07f8ef5f165a788d9b2aa08
+OK libcusolver-11-1_11.0.1.105-1_amd64.deb 398991298 3fc5cf9cd78d60344b1c8c7b658bd4249073f286b3ab17001ba5230be77887f0
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcublas.so.11
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcublas.so.11.3.0.106
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcublasLt.so.11
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcublasLt.so.11.3.0.106
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcudart.so.11.0
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcudart.so.11.1.74
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcufft.so.10
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcufft.so.10.3.0.105
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcufftw.so.10
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcufftw.so.10.3.0.105
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcurand.so.10
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcurand.so.10.2.2.105
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcusparse.so.11
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcusparse.so.11.3.0.10
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libnvrtc-builtins.so
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libnvrtc-builtins.so.11.1
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libnvrtc-builtins.so.11.1.105
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libnvrtc.so.11.1
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libnvrtc.so.11.1.105
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libnvToolsExt.so
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libnvToolsExt.so.1
+../root/usr/local/cuda-11.1/targets/x86_64-linux/lib/libnvToolsExt.so.1.0.0

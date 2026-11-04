@@ -1,0 +1,24 @@
+runs/official/hres_vs_analysis_2020jan_z500_deterministic.nc {'lead_time': 41, 'metric': 4, 'region': 1, 'level': 1}
+  lead  24 h  official 43.474845  ours 43.474845  rel diff 1.40e-09
+  lead  72 h  official 130.380264  ours 130.380264  rel diff -1.82e-10
+  lead 120 h  official 283.875051  ours 283.875050  rel diff -1.80e-10
+  lead 168 h  official 487.014288  ours 487.014288  rel diff -1.41e-10
+  lead 240 h  official 787.601938  ours 787.601938  rel diff -8.74e-11
+runs/official/pangu_vs_era_2020jan_t850_deterministic.nc {'lead_time': 40, 'metric': 4, 'region': 1, 'level': 1}
+  lead  24 h  official 0.614560  ours 0.614560  rel diff 7.64e-11
+  lead  72 h  official 1.030281  ours 1.030281  rel diff -1.93e-10
+  lead 120 h  official 1.659354  ours 1.659354  rel diff -2.17e-10
+  lead 168 h  official 2.424182  ours 2.424182  rel diff -2.09e-10
+  lead 240 h  official 3.592461  ours 3.592461  rel diff -1.07e-10
+runs/official/graphcast_vs_era_2020jan_z500_deterministic.nc {'lead_time': 40, 'metric': 4, 'region': 1, 'level': 1}
+  lead  24 h  official 39.562942  ours 39.562942  rel diff 1.64e-09
+  lead  72 h  official 119.585331  ours 119.585331  rel diff -1.19e-10
+  lead 120 h  official 255.233463  ours 255.233463  rel diff -2.00e-10
+  lead 168 h  official 431.763843  ours 431.763843  rel diff -1.20e-10
+  lead 240 h  official 696.047390  ours 696.047390  rel diff -8.35e-11
+runs/official/graphcastoper_vs_analysis_2020jan_z500_deterministic.nc {'lead_time': 40, 'metric': 4, 'region': 1, 'level': 1}
+  lead  24 h  official 40.028199  ours 40.028199  rel diff 1.63e-09
+  lead  72 h  official 120.900381  ours 120.900381  rel diff -1.47e-10
+  lead 120 h  official 261.438932  ours 261.438932  rel diff -1.83e-10
+  lead 168 h  official 443.772502  ours 443.772502  rel diff -1.39e-10
+  lead 240 h  official 726.729305  ours 726.729305  rel diff -1.01e-10

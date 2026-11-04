@@ -1,0 +1,13 @@
+# weatherbench2 @ 156e5dc base + gcp extras (setup.py at that commit)
+apache_beam[gcp]>=2.31.0
+jax[cpu]
+numpy
+pandas==2.0.3
+scipy
+scikit-learn
+xarray==2023.7.0
+xarray-beam
+zarr
+gcsfs
+absl-py
+numcodecs

@@ -1,0 +1,43 @@
+era5 {'time/.zattrs': {'_ARRAY_DIMENSIONS': ['time'], 'calendar': 'proleptic_gregorian', 'units': 'hours since 1959-01-01'}}
+    time 92040 False ['1959-01-02T00:00:00.000000000' '1959-01-02T06:00:00.000000000'] 2021-12-31T18:00:00.000000000
+    level 13 True [ 50 100] 1000
+    latitude 121 True [-90.  -88.5] 90.0
+2020 {'prediction_timedelta/.zattrs': {'_ARRAY_DIMENSIONS': ['prediction_timedelta'], 'units': 'hours'}, 'time/.zattrs': {'_ARRAY_DIMENSIONS': ['time'], 'calendar': 'proleptic_gregorian', 'units': 'hours since 2019-11-16'}}
+    time 886 True ['2019-11-16T00:00:00.000000000' '2019-11-16T12:00:00.000000000'] 2021-01-31T12:00:00.000000000
+    prediction_timedelta 40 True [21600000000000 43200000000000] 864000000000000 nanoseconds
+    level 37 True [1 2] 1000
+    latitude 121 True [-90.  -88.5] 90.0
+2020 {'prediction_timedelta/.zattrs': {'_ARRAY_DIMENSIONS': ['prediction_timedelta'], 'units': 'hours'}, 'time/.zattrs': {'_ARRAY_DIMENSIONS': ['time'], 'calendar': 'proleptic_gregorian', 'units': 'hours since 2020-01-01'}}
+    time 732 True ['2020-01-01T00:00:00.000000000' '2020-01-01T12:00:00.000000000'] 2020-12-31T12:00:00.000000000
+    prediction_timedelta 40 True [21600000000000 43200000000000] 864000000000000 nanoseconds
+    level 13 True [ 50 100] 1000
+    latitude 121 True [-90.  -88.5] 90.0
+hres {'prediction_timedelta/.zattrs': {'_ARRAY_DIMENSIONS': ['prediction_timedelta'], 'long_name': 'time since forecast_reference_time', 'standard_name': 'forecast_period', 'units': 'hours'}, 'time/.zattrs': {'_ARRAY_DIMENSIONS': ['time'], 'calendar': 'proleptic_gregorian', 'long_name': 'initial time of forecast', 'standard_name': 'forecast_reference_time', 'units': 'hours since 2016-01-01'}}
+    time 5114 True ['2016-01-01T00:00:00.000000000' '2016-01-01T12:00:00.000000000'] 2022-12-31T12:00:00.000000000
+    prediction_timedelta 41 True [             0 21600000000000] 864000000000000 nanoseconds
+    level 13 True [ 50 100] 1000
+    latitude 121 True [-90.  -88.5] 90.0
+hres_t0 {'time/.zattrs': {'_ARRAY_DIMENSIONS': ['time'], 'calendar': 'proleptic_gregorian', 'long_name': 'initial time of forecast', 'standard_name': 'forecast_reference_time', 'units': 'hours since 2016-01-01'}}
+    time 10228 True ['2016-01-01T00:00:00.000000000' '2016-01-01T06:00:00.000000000'] 2022-12-31T18:00:00.000000000
+    level 13 True [ 50 100] 1000
+    latitude 121 True [-90.  -88.5] 90.0
+neuralgcm_deterministic {'prediction_timedelta/.zattrs': {'_ARRAY_DIMENSIONS': ['prediction_timedelta'], 'units': 'hours'}, 'time/.zattrs': {'_ARRAY_DIMENSIONS': ['time'], 'calendar': 'proleptic_gregorian', 'units': 'hours since 2019-12-15'}}
+    time 732 True ['2020-01-01T00:00:00.000000000' '2020-01-01T12:00:00.000000000'] 2020-12-31T12:00:00.000000000
+    prediction_timedelta 31 True [             0 43200000000000] 1296000000000000 nanoseconds
+    level 37 True [1 2] 1000
+    latitude 121 True [-90.  -88.5] 90.0
+pangu {'prediction_timedelta/.zattrs': {'_ARRAY_DIMENSIONS': ['prediction_timedelta'], 'units': 'hours'}, 'time/.zattrs': {'_ARRAY_DIMENSIONS': ['time'], 'calendar': 'proleptic_gregorian', 'units': 'hours since 2018-01-01'}}
+    time 3652 True ['2018-01-01T00:00:00.000000000' '2018-01-01T12:00:00.000000000'] 2022-12-31T12:00:00.000000000
+    prediction_timedelta 40 True [21600000000000 43200000000000] 864000000000000 nanoseconds
+    level 13 True [1000  925] 50
+    latitude 121 True [-90.  -88.5] 90.0
+pangu_hres_init {'prediction_timedelta/.zattrs': {'_ARRAY_DIMENSIONS': ['prediction_timedelta'], 'units': 'hours'}, 'time/.zattrs': {'_ARRAY_DIMENSIONS': ['time'], 'calendar': 'proleptic_gregorian', 'units': 'hours since 2020-01-01'}}
+    time 732 True ['2020-01-01T00:00:00.000000000' '2020-01-01T12:00:00.000000000'] 2020-12-31T12:00:00.000000000
+    prediction_timedelta 40 True [21600000000000 43200000000000] 864000000000000 nanoseconds
+    level 13 True [1000  925] 50
+    latitude 121 True [-90.  -88.5] 90.0
+era5-hourly-climatology {'dayofyear/.zattrs': {'_ARRAY_DIMENSIONS': ['dayofyear']}, 'hour/.zattrs': {'_ARRAY_DIMENSIONS': ['hour']}}
+    level 13 True [ 50 100] 1000
+    latitude 121 True [-90.  -88.5] 90.0
+    hour 4 True [0 6] 18
+    dayofyear 366 True [1 2] 366

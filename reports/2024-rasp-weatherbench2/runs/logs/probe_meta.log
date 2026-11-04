@@ -1,0 +1,71 @@
+gs://weatherbench2/datasets/era5-hourly-climatology/1990-2019_6h_240x121_equiangular_with_poles_conservative.zarr
+   above_ground [4, 366, 13, 240, 121] [4, 30, 3, 240, 121] ['hour', 'dayofyear', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   dayofyear [366] [366] ['dayofyear'] <i8 lz4 None None None
+   geopotential [4, 366, 13, 240, 121] [4, 30, 3, 240, 121] ['hour', 'dayofyear', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   hour [4] [4] ['hour'] <i8 lz4 None None None
+   latitude [121] [121] ['latitude'] <f8 lz4 None NaN None
+   level [13] [13] ['level'] <i8 lz4 None None None
+   longitude [240] [240] ['longitude'] <f8 lz4 None NaN None
+   temperature [4, 366, 13, 240, 121] [4, 30, 3, 240, 121] ['hour', 'dayofyear', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr
+   geopotential [92040, 13, 240, 121] [8, 13, 240, 121] ['time', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   latitude [121] [121] ['latitude'] <f8 lz4 None NaN None
+   level [13] [13] ['level'] <i8 lz4 None None None
+   longitude [240] [240] ['longitude'] <f8 lz4 None NaN None
+   temperature [92040, 13, 240, 121] [8, 13, 240, 121] ['time', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   time [92040] [23010] ['time'] <i8 lz4 None None None
+gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr
+   geopotential [886, 40, 37, 240, 121] [1, 8, 37, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   latitude [121] [121] ['latitude'] <f8 lz4 None NaN None
+   level [37] [37] ['level'] <i8 lz4 None None None
+   longitude [240] [240] ['longitude'] <f8 lz4 None NaN None
+   prediction_timedelta [40] [40] ['prediction_timedelta'] <i8 lz4 None None None
+   temperature [886, 40, 37, 240, 121] [1, 8, 37, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   time [886] [886] ['time'] <i8 lz4 None None None
+gs://weatherbench2/datasets/graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr
+   geopotential [732, 40, 13, 240, 121] [1, 8, 13, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   latitude [121] [121] ['latitude'] <f8 lz4 None NaN None
+   level [13] [13] ['level'] <i4 lz4 None None None
+   longitude [240] [240] ['longitude'] <f8 lz4 None NaN None
+   prediction_timedelta [40] [40] ['prediction_timedelta'] <i8 lz4 None None None
+   temperature [732, 40, 13, 240, 121] [1, 8, 13, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   time [732] [732] ['time'] <i8 lz4 None None None
+gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr
+   geopotential [5114, 41, 13, 240, 121] [1, 8, 13, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   latitude [121] [121] ['latitude'] <f8 lz4 None NaN None
+   level [13] [13] ['level'] <i4 lz4 None None None
+   longitude [240] [240] ['longitude'] <f8 lz4 None NaN None
+   prediction_timedelta [41] [41] ['prediction_timedelta'] <i8 lz4 None None None
+   temperature [5114, 41, 13, 240, 121] [1, 8, 13, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   time [5114] [5114] ['time'] <i8 lz4 None None None
+gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr
+   geopotential [10228, 13, 240, 121] [8, 13, 240, 121] ['time', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   latitude [121] [121] ['latitude'] <f8 lz4 None NaN None
+   level [13] [13] ['level'] <i4 lz4 None None None
+   longitude [240] [240] ['longitude'] <f8 lz4 None NaN None
+   temperature [10228, 13, 240, 121] [8, 13, 240, 121] ['time', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   time [10228] [10228] ['time'] <i8 lz4 None None None
+gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr
+   geopotential [732, 31, 37, 240, 121] [1, 8, 37, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   latitude [121] [121] ['latitude'] <f8 lz4 None NaN None
+   level [37] [37] ['level'] <i8 lz4 None None None
+   longitude [240] [240] ['longitude'] <f8 lz4 None NaN None
+   prediction_timedelta [31] [31] ['prediction_timedelta'] <i8 lz4 None None None
+   temperature [732, 31, 37, 240, 121] [1, 8, 37, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   time [732] [732] ['time'] <i8 lz4 None None None
+gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr
+   geopotential [3652, 40, 13, 240, 121] [1, 8, 13, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   latitude [121] [121] ['latitude'] <f8 lz4 None NaN None
+   level [13] [13] ['level'] <i8 lz4 None None None
+   longitude [240] [240] ['longitude'] <f8 lz4 None NaN None
+   prediction_timedelta [40] [40] ['prediction_timedelta'] <i8 lz4 None None None
+   temperature [3652, 40, 13, 240, 121] [1, 8, 13, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   time [3652] [3652] ['time'] <i8 lz4 None None None
+gs://weatherbench2/datasets/pangu_hres_init/2020_0012_240x121_equiangular_with_poles_conservative.zarr
+   geopotential [732, 40, 13, 240, 121] [1, 8, 13, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   latitude [121] [121] ['latitude'] <f8 lz4 None NaN None
+   level [13] [13] ['level'] <i8 lz4 None None None
+   longitude [240] [240] ['longitude'] <f8 lz4 None NaN None
+   prediction_timedelta [40] [40] ['prediction_timedelta'] <i8 lz4 None None None
+   temperature [732, 40, 13, 240, 121] [1, 8, 13, 240, 121] ['time', 'prediction_timedelta', 'level', 'longitude', 'latitude'] <f4 lz4 None NaN None
+   time [732] [732] ['time'] <i8 lz4 None None None

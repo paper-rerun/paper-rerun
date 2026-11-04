@@ -1,0 +1,73 @@
+top keys: ['label', 'outdir', 'sampler', 'log_evidence', 'log_evidence_err', 'log_noise_evidence', 'log_bayes_factor', 'priors', 'posterior', 'injection_parameters', 'meta_data', 'search_parameter_keys', 'fixed_parameter_keys', 'constraint_parameter_keys', 'sampling_time', 'sampler_kwargs', 'use_ratio', 'information_gain', 'log_likelihood_evaluations', 'log_prior_evaluations', 'num_likelihood_evaluations', 'samples', 'nested_samples', 'parameter_labels', 'parameter_labels_with_unit', 'version']
+priors:
+   alpha {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': -4, 'maximum': 12, 'name': 'alpha', 'latex_label': '$\\alpha$', 'unit': None, 'boundary': 
+   beta {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': -2, 'maximum': 7, 'name': 'beta', 'latex_label': '$\\beta_{q}$', 'unit': None, 'boundary':
+   mmax {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': 30, 'maximum': 100, 'name': 'mmax', 'latex_label': '$m_{\\max}$', 'unit': None, 'boundary'
+   mmin {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': 2, 'maximum': 10, 'name': 'mmin', 'latex_label': '$m_{\\min}$', 'unit': None, 'boundary': 
+   lam {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': 0, 'maximum': 1, 'name': 'lambda', 'latex_label': '$\\lambda_{m}$', 'unit': None, 'boundar
+   mpp {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': 20, 'maximum': 50, 'name': 'mpp', 'latex_label': '$\\mu_{m}$', 'unit': None, 'boundary': N
+   sigpp {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': 1, 'maximum': 10, 'name': 'sigpp', 'latex_label': '$\\sigma_{m}$', 'unit': None, 'boundary
+   delta_m {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': 0, 'maximum': 10, 'name': 'delta_m', 'latex_label': '$\\delta_{m}$', 'unit': None, 'bounda
+   amax {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'DeltaFunction', 'kwargs': {'peak': 1.0, 'name': None, 'latex_label': None, 'unit': None}}
+   mu_chi {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': 0, 'maximum': 1, 'name': 'mu_chi', 'latex_label': '$\\mu_{\\chi}$', 'unit': None, 'boundar
+   sigma_chi {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': 0.005, 'maximum': 0.25, 'name': 'sigma_chi', 'latex_label': '$\\sigma^{2}_{\\chi}$', 'unit
+   alpha_chi {'__prior__': True, '__module__': 'bilby.core.prior.base', '__name__': 'Constraint', 'kwargs': {'minimum': 1, 'maximum': 100000.0, 'name': None, 'latex_label': None, 'unit': None}}
+   alpha_chi_1 {'__prior__': True, '__module__': 'bilby.core.prior.base', '__name__': 'Constraint', 'kwargs': {'minimum': 1, 'maximum': 100000.0, 'name': None, 'latex_label': None, 'unit': None}}
+   alpha_chi_2 {'__prior__': True, '__module__': 'bilby.core.prior.base', '__name__': 'Constraint', 'kwargs': {'minimum': 1, 'maximum': 100000.0, 'name': None, 'latex_label': None, 'unit': None}}
+   beta_chi {'__prior__': True, '__module__': 'bilby.core.prior.base', '__name__': 'Constraint', 'kwargs': {'minimum': 1, 'maximum': 100000.0, 'name': None, 'latex_label': None, 'unit': None}}
+   beta_chi_1 {'__prior__': True, '__module__': 'bilby.core.prior.base', '__name__': 'Constraint', 'kwargs': {'minimum': 1, 'maximum': 100000.0, 'name': None, 'latex_label': None, 'unit': None}}
+   beta_chi_2 {'__prior__': True, '__module__': 'bilby.core.prior.base', '__name__': 'Constraint', 'kwargs': {'minimum': 1, 'maximum': 100000.0, 'name': None, 'latex_label': None, 'unit': None}}
+   xi_spin {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': 0, 'maximum': 1, 'name': 'xi_spin', 'latex_label': '$\\zeta$', 'unit': None, 'boundary': N
+   sigma_spin {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': 0.1, 'maximum': 4.0, 'name': 'sigma_t', 'latex_label': '$\\sigma_t$', 'unit': None, 'bound
+   lamb {'__prior__': True, '__module__': 'bilby.core.prior.analytical', '__name__': 'Uniform', 'kwargs': {'minimum': -10, 'maximum': 10, 'name': 'lamb', 'latex_label': '$\\lambda_z$', 'unit': None, 'boundary
+   __prior_dict__ True
+   __module__ bilby.core.prior.dict
+   __name__ PriorDict
+meta keys: ['likelihood', 'loaded_modules', 'run_statistics', 'models', 'event_ids']
+models ['SinglePeakSmoothedMassDistribution', 'iid_spin_magnitude', 'iid_spin_orientation', 'gwpopulation.models.redshift.PowerLawRedshift']
+event_ids ['GW170809', 'GW170608', 'GW170814', 'GW170729', 'GW150914', 'GW151226', 'GW170104', 'GW170823', 'GW151012', 'GW170818', 'S190708ap', 'S190915ak', 'S190828l', 'S190408an', 'S190519bj', 'S190910s', 'S190602aq', 'S190725t', 'S190413ac', 'S190707q', 'S190828j', 'S190727h', 'S190706ai', 'S190503bf', 'S190412m', 'S190413i', 'S190731aa', 'S190805bq', 'S190630ag', 'S190803e', 'S190512at', 'S190929d', 'S190517h', 'S190513bm', 'S190719an', 'S190728q', 'S190720a', 'S190521r', 'S190421ar', 'S190925ad', 'S190521g', 'S190620e', 'S190930s', 'S190924h', 'S190701ah', 'S190527w', 'S191105e', 'S191204r', 'S191216ap', 'S191103a', 'S200112r', 'S191129u', 'S200302c', 'S191230an', 'S191127p', 'S200224ca', 'S191222n', 'S200202ac', 'S191215w', 'S200128d', 'S200316bj', 'S191109d', 'S200311bg', 'S200129m', 'S200225q', 'S200219ac', 'S200209ab', 'S200216br', 'S200208q']
+n events 69
+module gwpopulation 0.6.3:
+module gwpopulation_pipe 0.2.0: (CLEAN) 83c9bb9 2021-11-07 14:45:15 -0500
+
+module bilby 1.1.3: release
+module dynesty None
+module cupy 8.4.0
+module numpy 1.19.5
+module scipy 1.6.3
+module astropy 4.0
+sampler_kwargs {'bound': 'multi', 'sample': 'rwalk', 'verbose': True, 'periodic': [], 'reflective': [7], 'check_point_delta_t': 1800, 'nlive': 500, 'first_update': None, 'walks': 5, 'npdim': None, 'rstate': None, 'queue_size': 1, 'pool': None, 'use_pool': None, 'live_points': [{'__array__': True, 'content': [[0.47470905124238744, 0.3707245799582811, 0.8964497072080329, 0.3802578396320121, 0.037438270554890386, 0.5000214744262779, 0.3192435646767263, 0.3919207151974804, 0.24851301977638376, 0.11795295831360308, 0.8265275517019713, 0.37715729357116107, 0.6400539719578235], [0.47596793795874975, 0.3020677689784
+sampling_time 27301.864982
+num_likelihood_evaluations 621358
+log_evidence nan
+log_evidence_err 0.24054944029451047
+version bilby=1.1.3: release
+label o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift
+posterior cols ['alpha', 'beta', 'mmax', 'mmin', 'lam', 'mpp', 'sigpp', 'delta_m', 'mu_chi', 'sigma_chi', 'xi_spin', 'sigma_spin', 'lamb', 'amax', 'log_likelihood', 'log_prior', 'selection', 'pdet_n_effective', 'surveyed_hypervolume', 'log_10_rate', 'rate', 'min_event_n_effective'] n 11184
+mpp median 33.563 +2.644 -4.049  [5% 29.515, 95% 36.207]
+rate z=0 median 16.872 +10.121 -6.575  [5% 10.297, 95% 26.993]
+rate z=0.2 median 28.221 +13.829 -8.935  [5% 19.287, 95% 42.051]
+lamb median 2.875 +1.740 -1.767  [5% 1.108, 95% 4.615]
+min_event_n_effective min 69.00196577204015 pdet_n_effective min 984.4906498753651
+names/ {'CLASS': np.bytes_(b'GROUP'), 'TITLE': np.bytes_(b'list:69'), 'VERSION': np.bytes_(b'1.0'), 'i0': np.bytes_(b'GW170809'), 'i1': np.bytes_(b'GW170608'), 'i10': np.bytes_(b'S190708ap'), 'i11': np.bytes_(b'S190915ak'), 'i12': np.bytes_(b'S190828l'), 'i13': np.bytes_(b'S190408an'), 'i14': np.bytes_(b'S190519bj'), 'i15': np.bytes_(b'S190910s'), 'i16': np.bytes_(b'S190602aq'), 'i17': np.bytes_(b'S190725t'), 'i18': np.bytes_(b'S190413ac'), 'i19': np.bytes_(b'S190707q'), 'i2': np.bytes_(b'GW170814'), 'i20': np.bytes_(b'S190828j'), 'i21': np.bytes_(b'S190727h'), 'i22': np.bytes_(b'S190706ai'), 'i23': np.bytes_(b'S190503bf'), 'i24': np.bytes_(b'S190412m'), 'i25': np.bytes_(b'S190413i'), 'i26': np.bytes_(b'S190731aa'), 'i27': np.bytes_(b'S190805bq'), 'i28': np.bytes_(b'S190630ag'), 'i29': np.bytes_(b'S190803e'), 'i3': np.bytes_(b'GW170729'), 'i30': np.bytes_(b'S190512at'), 'i31': np.bytes_(b'S190929d'), 'i32': np.bytes_(b'S190517h'), 'i33': np.bytes_(b'S190513bm'), 'i34': np.bytes_(b'S190719an'), 'i35': np.bytes_(b'S190728q'), 'i36': np.bytes_(b'S190720a'), 'i37': np.bytes_(b'S190521r'), 'i38': np.bytes_(b'S190421ar'), 'i39': np.bytes_(b'S190925ad'), 'i4': np.bytes_(b'GW150914'), 'i40': np.bytes_(b'S190521g'), 'i41': np.bytes_(b'S190620e'), 'i42': np.bytes_(b'S190930s'), 'i43': np.bytes_(b'S190924h'), 'i44': np.bytes_(b'S190701ah'), 'i45': np.bytes_(b'S190527w'), 'i46': np.bytes_(b'S191105e'), 'i47': np.bytes_(b'S191204r'), 'i48': np.bytes_(b'S191216ap'), 'i49': np.bytes_(b'S191103a'), 'i5': np.bytes_(b'GW151226'), 'i50': np.bytes_(b'S200112r'), 'i51': np.bytes_(b'S191129u'), 'i52': np.bytes_(b'S200302c'), 'i53': np.bytes_(b'S191230an'), 'i54': np.bytes_(b'S191127p'), 'i55': np.bytes_(b'S200224ca'), 'i56': np.bytes_(b'S191222n'), 'i57': np.bytes_(b'S200202ac'), 'i58': np.bytes_(b'S191215w'), 'i59': np.bytes_(b'S200128d'), 'i6': np.bytes_(b'GW170104'), 'i60': np.bytes_(b'S200316bj'), 'i61': np.bytes_(b'S191109d'), 'i62': np.bytes_(b'S200311bg'), 'i63': np.bytes_(b'S200129m'), 'i64': np.bytes_(b'S200225q'), 'i65': np.bytes_(b'S200219ac'), 'i66': np.bytes_(b'S200209ab'), 'i67': np.bytes_(b'S200216br'), 'i68': np.bytes_(b'S200208q'), 'i7': np.bytes_(b'GW170823'), 'i8': np.bytes_(b'GW151012'), 'i9': np.bytes_(b'GW170818')}
+original/ {'CLASS': np.bytes_(b'GROUP'), 'TITLE': np.bytes_(b'dict:10'), 'VERSION': np.bytes_(b'1.0')}
+original/a_1 (69, 3194) float64 None
+original/a_2 (69, 3194) float64 None
+original/cos_tilt_1 (69, 3194) float64 None
+original/cos_tilt_2 (69, 3194) float64 None
+original/mass_1 (69, 3194) float64 None
+original/mass_2 (69, 3194) float64 None
+original/mass_ratio (69, 3194) float64 None
+original/prior (69, 3194) float64 None
+original/redshift (69, 3194) float64 None
+original/weights (69, 3194) float64 None
+reweighted/ {'CLASS': np.bytes_(b'GROUP'), 'TITLE': np.bytes_(b'dict:8'), 'VERSION': np.bytes_(b'1.0')}
+reweighted/a_1 (69, 3194) float64 None
+reweighted/a_2 (69, 3194) float64 None
+reweighted/cos_tilt_1 (69, 3194) float64 None
+reweighted/cos_tilt_2 (69, 3194) float64 None
+reweighted/mass_1 (69, 3194) float64 None
+reweighted/mass_2 (69, 3194) float64 None
+reweighted/mass_ratio (69, 3194) float64 None
+reweighted/redshift (69, 3194) float64 None
+root attrs {'CLASS': np.bytes_(b'GROUP'), 'DEEPDISH_IO_VERSION': np.int64(12), 'PYTABLES_FORMAT_VERSION': np.bytes_(b'2.1'), 'TITLE': Empty(dtype=dtype('S1')), 'VERSION': np.bytes_(b'1.0'), 'label': np.bytes_(b'o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift')}

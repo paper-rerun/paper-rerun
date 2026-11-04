@@ -1,0 +1,89 @@
+store gs://weatherbench2/datasets/graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr var geopotential 500 inits present 732 missing [] leads {24: 3, 72: 11, 120: 19, 168: 27, 240: 39} lead chunks [0, 1, 2, 3, 4]
+jobs to do 3660 already done 0
+100/3660 chunks, 0.8 GB, 31.7 MB/s
+200/3660 chunks, 1.5 GB, 34.0 MB/s
+300/3660 chunks, 2.3 GB, 35.1 MB/s
+400/3660 chunks, 3.1 GB, 35.9 MB/s
+500/3660 chunks, 3.8 GB, 35.9 MB/s
+600/3660 chunks, 4.6 GB, 36.2 MB/s
+700/3660 chunks, 5.3 GB, 36.2 MB/s
+800/3660 chunks, 6.1 GB, 36.3 MB/s
+900/3660 chunks, 6.9 GB, 36.6 MB/s
+1000/3660 chunks, 7.6 GB, 36.6 MB/s
+1100/3660 chunks, 8.4 GB, 36.6 MB/s
+1200/3660 chunks, 9.2 GB, 36.7 MB/s
+1300/3660 chunks, 9.9 GB, 36.6 MB/s
+1400/3660 chunks, 10.7 GB, 36.8 MB/s
+1500/3660 chunks, 11.4 GB, 36.7 MB/s
+1600/3660 chunks, 12.2 GB, 36.7 MB/s
+1700/3660 chunks, 13.0 GB, 36.7 MB/s
+1800/3660 chunks, 13.7 GB, 36.7 MB/s
+1900/3660 chunks, 14.5 GB, 36.7 MB/s
+2000/3660 chunks, 15.3 GB, 36.7 MB/s
+2100/3660 chunks, 16.0 GB, 36.7 MB/s
+2200/3660 chunks, 16.8 GB, 36.6 MB/s
+2300/3660 chunks, 17.5 GB, 36.7 MB/s
+2400/3660 chunks, 18.3 GB, 36.7 MB/s
+2500/3660 chunks, 19.1 GB, 36.7 MB/s
+2600/3660 chunks, 19.8 GB, 36.7 MB/s
+2700/3660 chunks, 20.6 GB, 36.7 MB/s
+2800/3660 chunks, 21.4 GB, 36.7 MB/s
+2900/3660 chunks, 22.1 GB, 36.7 MB/s
+3000/3660 chunks, 22.9 GB, 36.7 MB/s
+3100/3660 chunks, 23.6 GB, 36.7 MB/s
+3200/3660 chunks, 24.4 GB, 36.7 MB/s
+3300/3660 chunks, 25.2 GB, 36.7 MB/s
+3400/3660 chunks, 25.9 GB, 36.7 MB/s
+3500/3660 chunks, 26.7 GB, 36.7 MB/s
+3600/3660 chunks, 27.5 GB, 36.8 MB/s
+{
+ "forecast_store": "gs://weatherbench2/datasets/graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+ "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+ "variable": "geopotential",
+ "level": 500,
+ "inits_present": 732,
+ "inits_missing": [],
+ "leads": {
+  "24": {
+   "n_inits": 732,
+   "rmse_v1": 40.29640430908908,
+   "rmse_v2": 40.29638767771113,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "72": {
+   "n_inits": 732,
+   "rmse_v1": 124.13901261596241,
+   "rmse_v2": 124.1391276739528,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "120": {
+   "n_inits": 732,
+   "rmse_v1": 277.1195702437765,
+   "rmse_v2": 277.1199100766236,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "168": {
+   "n_inits": 732,
+   "rmse_v1": 477.28402329847336,
+   "rmse_v2": 477.284646000746,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "240": {
+   "n_inits": 732,
+   "rmse_v1": 751.5207667113217,
+   "rmse_v2": 751.5217944286181,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  }
+ }
+}
+downloaded this run 27.91 GB in 760 s

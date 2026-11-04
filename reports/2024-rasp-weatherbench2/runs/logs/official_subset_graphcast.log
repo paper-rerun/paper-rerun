@@ -1,0 +1,126 @@
+2026-11-04T00:39:35-03:00 start graphcast_vs_era_2020jan_z500_
+W1104 00:40:03.168997 140393639774016 _metadata.py:139] Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+W1104 00:40:06.172666 140393639774016 _metadata.py:139] Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+W1104 00:40:09.176434 140393639774016 _metadata.py:139] Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+W1104 00:40:09.176926 140393639774016 _default.py:338] Authentication failed using Compute Engine authentication due to unavailable metadata server.
+W1104 00:40:09.183214 140393639774016 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 1 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fafb4b1bed0>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1104 00:40:09.188533 140393639774016 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 2 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fafb4b2d3d0>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1104 00:40:09.193189 140393639774016 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 3 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fafb4b2ee50>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1104 00:40:09.197687 140393639774016 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 4 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fafb4b348d0>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1104 00:40:09.202056 140393639774016 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 5 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fafb4b35ed0>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+I1104 00:40:14.184621 140393639774016 evaluation.py:311] Loading data
+I1104 00:40:16.348351 140393639774016 evaluation.py:400] Logging metric: mse
+I1104 00:40:16.349238 140393639774016 evaluation.py:410] Logging region: global
+I1104 00:40:16.383897 140393639774016 evaluation.py:418] Logging region done: global
+I1104 00:40:16.385239 140393639774016 evaluation.py:425] Logging metric done: mse
+I1104 00:40:16.385442 140393639774016 evaluation.py:400] Logging metric: acc
+I1104 00:40:16.385837 140393639774016 evaluation.py:410] Logging region: global
+I1104 00:40:19.995358 140393639774016 evaluation.py:418] Logging region done: global
+I1104 00:40:19.997168 140393639774016 evaluation.py:425] Logging metric done: acc
+I1104 00:40:19.997504 140393639774016 evaluation.py:400] Logging metric: bias
+I1104 00:40:19.998008 140393639774016 evaluation.py:410] Logging region: global
+I1104 00:40:20.019322 140393639774016 evaluation.py:418] Logging region done: global
+I1104 00:40:20.020863 140393639774016 evaluation.py:425] Logging metric done: bias
+I1104 00:40:20.021096 140393639774016 evaluation.py:400] Logging metric: mae
+I1104 00:40:20.021446 140393639774016 evaluation.py:410] Logging region: global
+I1104 00:40:20.043018 140393639774016 evaluation.py:418] Logging region done: global
+I1104 00:40:20.044377 140393639774016 evaluation.py:425] Logging metric done: mae
+I1104 00:46:45.356321 140393639774016 evaluation.py:467] Logging Evaluation complete:
+<xarray.Dataset>
+Dimensions:       (metric: 4, region: 1, level: 1, lead_time: 40)
+Coordinates:
+  * metric        (metric) object 'acc' 'bias' 'mae' 'mse'
+  * region        (region) object 'global'
+  * level         (level) int64 500
+  * lead_time     (lead_time) timedelta64[ns] 0 days 06:00:00 ... 10 days 00:...
+Data variables:
+    geopotential  (metric, region, lead_time, level) float64 dask.array<chunksize=(4, 1, 8, 1), meta=np.ndarray>
+I1104 00:48:21.348611 140393639774016 evaluation.py:471] Logging Saved results to runs/official/graphcast_vs_era_2020jan_z500_deterministic.nc
+	Command being timed: "env/.venv/bin/python repo/weatherbench2/scripts/evaluate.py --forecast_path=gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr --obs_path=gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr --climatology_path=gs://weatherbench2/datasets/era5-hourly-climatology/1990-2019_6h_240x121_equiangular_with_poles_conservative.zarr --output_dir=runs/official/ --output_file_prefix=graphcast_vs_era_2020jan_z500_ --input_chunks=init_time=1 --regions=global --eval_configs=deterministic --evaluate_climatology=False --evaluate_persistence=False --time_start=2020-01-01 --time_stop=2020-01-31 --variables=geopotential --levels=500 --use_beam=False"
+	User time (seconds): 172.20
+	System time (seconds): 62.33
+	Percent of CPU this job got: 44%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:46.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2956404
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1194
+	Minor (reclaiming a frame) page faults: 669407
+	Voluntary context switches: 1524452
+	Involuntary context switches: 1106
+	Swaps: 0
+	File system inputs: 224056
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2026-11-04T00:48:22-03:00 end graphcast_vs_era_2020jan_z500_ rc=0
+2026-11-04T00:48:22-03:00 start graphcastoper_vs_analysis_2020jan_z500_
+W1104 00:48:47.848606 140057408063296 _metadata.py:139] Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+W1104 00:48:50.851143 140057408063296 _metadata.py:139] Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+W1104 00:48:53.852275 140057408063296 _metadata.py:139] Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+W1104 00:48:53.852648 140057408063296 _default.py:338] Authentication failed using Compute Engine authentication due to unavailable metadata server.
+W1104 00:48:53.857557 140057408063296 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 1 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f616be8bc50>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1104 00:48:53.862130 140057408063296 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 2 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f616bb7d010>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1104 00:48:53.865935 140057408063296 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 3 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f616bb7ea90>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1104 00:48:53.869795 140057408063296 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 4 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f616bb84510>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1104 00:48:53.873648 140057408063296 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 5 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f616bb85b10>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+I1104 00:48:56.413427 140057408063296 evaluation.py:311] Loading data
+I1104 00:48:59.649897 140057408063296 evaluation.py:400] Logging metric: mse
+I1104 00:48:59.650637 140057408063296 evaluation.py:410] Logging region: global
+I1104 00:48:59.684460 140057408063296 evaluation.py:418] Logging region done: global
+I1104 00:48:59.685819 140057408063296 evaluation.py:425] Logging metric done: mse
+I1104 00:48:59.686043 140057408063296 evaluation.py:400] Logging metric: acc
+I1104 00:48:59.686407 140057408063296 evaluation.py:410] Logging region: global
+I1104 00:49:03.054679 140057408063296 evaluation.py:418] Logging region done: global
+I1104 00:49:03.056065 140057408063296 evaluation.py:425] Logging metric done: acc
+I1104 00:49:03.056289 140057408063296 evaluation.py:400] Logging metric: bias
+I1104 00:49:03.056687 140057408063296 evaluation.py:410] Logging region: global
+I1104 00:49:03.154162 140057408063296 evaluation.py:418] Logging region done: global
+I1104 00:49:03.155478 140057408063296 evaluation.py:425] Logging metric done: bias
+I1104 00:49:03.155683 140057408063296 evaluation.py:400] Logging metric: mae
+I1104 00:49:03.156105 140057408063296 evaluation.py:410] Logging region: global
+I1104 00:49:03.179071 140057408063296 evaluation.py:418] Logging region done: global
+I1104 00:49:03.180794 140057408063296 evaluation.py:425] Logging metric done: mae
+I1104 00:51:57.123314 140057408063296 evaluation.py:467] Logging Evaluation complete:
+<xarray.Dataset>
+Dimensions:       (metric: 4, region: 1, level: 1, lead_time: 40)
+Coordinates:
+  * metric        (metric) object 'acc' 'bias' 'mae' 'mse'
+  * region        (region) object 'global'
+  * level         (level) int32 500
+  * lead_time     (lead_time) timedelta64[ns] 0 days 06:00:00 ... 10 days 00:...
+Data variables:
+    geopotential  (metric, region, lead_time, level) float64 dask.array<chunksize=(4, 1, 8, 1), meta=np.ndarray>
+I1104 00:52:33.754708 140057408063296 evaluation.py:471] Logging Saved results to runs/official/graphcastoper_vs_analysis_2020jan_z500_deterministic.nc
+No land_sea_mask found.
+	Command being timed: "env/.venv/bin/python repo/weatherbench2/scripts/evaluate.py --forecast_path=gs://weatherbench2/datasets/graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr --obs_path=gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr --climatology_path=gs://weatherbench2/datasets/era5-hourly-climatology/1990-2019_6h_240x121_equiangular_with_poles_conservative.zarr --output_dir=runs/official/ --output_file_prefix=graphcastoper_vs_analysis_2020jan_z500_ --input_chunks=init_time=1 --regions=global --eval_configs=deterministic --evaluate_climatology=False --evaluate_persistence=False --time_start=2020-01-01 --time_stop=2020-01-31 --variables=geopotential --levels=500 --use_beam=False"
+	User time (seconds): 78.26
+	System time (seconds): 28.00
+	Percent of CPU this job got: 42%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:11.51
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2404488
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1186
+	Minor (reclaiming a frame) page faults: 327341
+	Voluntary context switches: 861029
+	Involuntary context switches: 481
+	Swaps: 0
+	File system inputs: 216856
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2026-11-04T00:52:34-03:00 end graphcastoper_vs_analysis_2020jan_z500_ rc=0
+2026-11-04T00:52:34-03:00 all done

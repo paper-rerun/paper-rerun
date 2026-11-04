@@ -1,5 +1,31 @@
 [
  {
+  "paper": "WeatherBench 2",
+  "report": "2024-rasp-weatherbench2",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2024-rasp-weatherbench2/REPORT.md",
+  "venue": "JAMES",
+  "year": 2024,
+  "field": "weather and climate",
+  "area": "Earth sciences",
+  "verdict": "Reproduced",
+  "main_issue": "Code differs from the Methods",
+  "finding": "Fig. 1 (global RMSE, 2020) for IFS HRES, GraphCast, Pangu-Weather, the two operational-start rows and NeuralGCM 0.7°: all 50 pre-registered Z500 and T850 cells match on the full 732 initialisations. Z500 matches with the public code as it is; T850 only matches with the below-ground mask of Section 4.2.1, which is not in the public code. We pointed the authors to it.",
+  "rerun_date": "2026-11-04"
+ },
+ {
+  "paper": "GWTC-3 population",
+  "report": "2023-abbott-gwtc3-population",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2023-abbott-gwtc3-population/REPORT.md",
+  "venue": "Phys Rev X",
+  "year": 2023,
+  "field": "gravitational waves",
+  "area": "Physics",
+  "verdict": "Reproduced",
+  "main_issue": "Settings behind one result not published",
+  "finding": "Power Law + Peak run, rerun twice from the released event arrays and injections: mass peak 33.5-33.6 Msun (paper 34 +2.6/-4.0) and BBH rate at z=0.2 of 28.3-28.4 Gpc^-3 yr^-1 (paper 28.3 +13.9/-9.1). The rate step reuses a stale spin shape, which moves the median by about 0.13, and the example config differs from the published run.",
+  "rerun_date": "2026-11-04"
+ },
+ {
   "paper": "compleasm",
   "report": "2023-huang-compleasm",
   "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2023-huang-compleasm/REPORT.md",

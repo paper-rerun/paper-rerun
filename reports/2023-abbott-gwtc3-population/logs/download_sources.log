@@ -1,0 +1,4 @@
+table_data.tar.gz size=4888 expected=4888 md5=4fed132ca7fcdbb7bfb9b1a1448b4df0 expected=4fed132ca7fcdbb7bfb9b1a1448b4df0 OK
+README_zenodo.md size=11143 expected=11143 md5=b41d172c27e32ac81c5e50c5dd05e42a expected=b41d172c27e32ac81c5e50c5dd05e42a OK
+GWTC-3-population_py_requirements.txt size=267 expected=267 md5=0e307a6ef64788a2999ea9e780257398 expected=0e307a6ef64788a2999ea9e780257398 OK
+GWTC-3-population-data.tar.gz size=40257247 expected=40257247 md5=01197cae2dd3abf7280307fd35a883a9 expected=01197cae2dd3abf7280307fd35a883a9 OK

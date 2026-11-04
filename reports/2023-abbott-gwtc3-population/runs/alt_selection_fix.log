@@ -1,0 +1,12 @@
+/mnt/e/Ciencia/noturno/2023-abbott-gwtc3-population/sources/analyses/PowerLawPeak/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json
+selection stale/own: median 0.9958, 5% 0.9845, 95% 1.0040
+R(0.2) as run   p05 19.287 p50 28.221 p95 42.051
+R(0.2) own spin p05 19.146 p50 28.093 p95 41.834
+/mnt/e/Ciencia/noturno/2023-abbott-gwtc3-population/runs/pp_seed101/result/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json
+selection stale/own: median 0.9935, 5% 0.9790, 95% 1.0036
+R(0.2) as run   p05 19.375 p50 28.391 p95 41.379
+R(0.2) own spin p05 19.173 p50 28.173 p95 41.150
+/mnt/e/Ciencia/noturno/2023-abbott-gwtc3-population/runs/pp_seed202/result/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json
+selection stale/own: median 0.9978, 5% 0.9877, 95% 1.0078
+R(0.2) as run   p05 19.179 p50 28.297 p95 41.648
+R(0.2) own spin p05 19.169 p50 28.207 p95 41.564

@@ -1,0 +1,1391 @@
+{
+ "paper": "Rasp, S. et al. \"WeatherBench 2: A Benchmark for the Next Generation of Data-Driven Global Weather Models\". JAMES 16(6), e2023MS004019 (2024). DOI 10.1029/2023MS004019. Numbers from arXiv 2308.15560v2.",
+ "code": "https://github.com/google-research/weatherbench2 @ 156e5dc9eafc18b8f8b215abc3a36b6305c266b8 (variant v0.2.0 = 81f1993ee6a1a156611c32dd85deeb3f3059b486)",
+ "stage": "pre-registration; no model run and no result computed on our side",
+ "claim_counts": {
+  "primary": 9,
+  "secondary": 21,
+  "optional": 20
+ },
+ "sources_downloaded": {
+  "arxiv-2308.15560v2.pdf": "28,480,050 B, HTTP 200 (size matches server)",
+  "benchmark_results/*.nc": "8 files from https://storage.googleapis.com/weatherbench2/benchmark_results/, each size and md5 checked against the GCS object metadata (x-goog-hash / JSON API md5Hash); values in sources/published_values.txt",
+  "code files at 156e5dc": "official-evaluation.md, metrics.py, evaluate.py, init-vs-valid-time.md, data-guide.ipynb (raw.githubusercontent.com, HTTP 200)"
+ },
+ "claims": [
+  {
+   "id": "HRES_Z500_3d",
+   "tier": "primary",
+   "quantity": "Global RMSE of Z500, IFS HRES vs HRES analysis (IFS HRES forecast at t=0), lead 3 days (72 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 135,
+   "paper_value_as_printed": "135",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"IFS HRES\", column group Pressure (500hPa geopotential), lead time 3",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 72,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 135.5835,
+   "authors_published_value_note": "From sources/hres_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "HRES_Z500_5d",
+   "tier": "primary",
+   "quantity": "Global RMSE of Z500, IFS HRES vs HRES analysis (IFS HRES forecast at t=0), lead 5 days (120 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 304,
+   "paper_value_as_printed": "304",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"IFS HRES\", column group Pressure (500hPa geopotential), lead time 5",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 120,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 304.3541,
+   "authors_published_value_note": "From sources/hres_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "HRES_Z500_10d",
+   "tier": "primary",
+   "quantity": "Global RMSE of Z500, IFS HRES vs HRES analysis (IFS HRES forecast at t=0), lead 10 days (240 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 801,
+   "paper_value_as_printed": "801",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"IFS HRES\", column group Pressure (500hPa geopotential), lead time 10",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 240,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 801.499,
+   "authors_published_value_note": "From sources/hres_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCast_Z500_3d",
+   "tier": "primary",
+   "quantity": "Global RMSE of Z500, GraphCast vs ERA5, lead 3 days (72 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 124,
+   "paper_value_as_printed": "124",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast\", column group Pressure (500hPa geopotential), lead time 3",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 72,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 124.1922,
+   "authors_published_value_note": "From sources/graphcast_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCast_Z500_5d",
+   "tier": "primary",
+   "quantity": "Global RMSE of Z500, GraphCast vs ERA5, lead 5 days (120 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 274,
+   "paper_value_as_printed": "274",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast\", column group Pressure (500hPa geopotential), lead time 5",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 120,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 274.2509,
+   "authors_published_value_note": "From sources/graphcast_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCast_Z500_10d",
+   "tier": "primary",
+   "quantity": "Global RMSE of Z500, GraphCast vs ERA5, lead 10 days (240 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 731,
+   "paper_value_as_printed": "731",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast\", column group Pressure (500hPa geopotential), lead time 10",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 240,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 731.903,
+   "authors_published_value_note": "From sources/graphcast_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "Pangu_Z500_3d",
+   "tier": "primary",
+   "quantity": "Global RMSE of Z500, Pangu-Weather vs ERA5, lead 3 days (72 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 133,
+   "paper_value_as_printed": "133",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather\", column group Pressure (500hPa geopotential), lead time 3",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 72,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 133.8486,
+   "authors_published_value_note": "From sources/pangu_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "Pangu_Z500_5d",
+   "tier": "primary",
+   "quantity": "Global RMSE of Z500, Pangu-Weather vs ERA5, lead 5 days (120 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 294,
+   "paper_value_as_printed": "294",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather\", column group Pressure (500hPa geopotential), lead time 5",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 120,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 294.3081,
+   "authors_published_value_note": "From sources/pangu_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "Pangu_Z500_10d",
+   "tier": "primary",
+   "quantity": "Global RMSE of Z500, Pangu-Weather vs ERA5, lead 10 days (240 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 778,
+   "paper_value_as_printed": "778",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather\", column group Pressure (500hPa geopotential), lead time 10",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 240,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 778.2308,
+   "authors_published_value_note": "From sources/pangu_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "HRES_Z500_1d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of Z500, IFS HRES vs HRES analysis (IFS HRES forecast at t=0), lead 1 days (24 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 42,
+   "paper_value_as_printed": "42",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"IFS HRES\", column group Pressure (500hPa geopotential), lead time 1",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 24,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 42.2966,
+   "authors_published_value_note": "From sources/hres_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "HRES_Z500_7d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of Z500, IFS HRES vs HRES analysis (IFS HRES forecast at t=0), lead 7 days (168 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 521,
+   "paper_value_as_printed": "521",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"IFS HRES\", column group Pressure (500hPa geopotential), lead time 7",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 168,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 521.1854,
+   "authors_published_value_note": "From sources/hres_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "HRES_T850_1d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, IFS HRES vs HRES analysis (IFS HRES forecast at t=0), lead 1 days (24 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 0.62,
+   "paper_value_as_printed": "0.62",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"IFS HRES\", column group Temperature (850hPa temperature), lead time 1",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 24,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 0.625,
+   "authors_published_value_note": "From sources/hres_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "HRES_T850_3d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, IFS HRES vs HRES analysis (IFS HRES forecast at t=0), lead 3 days (72 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 1.15,
+   "paper_value_as_printed": "1.15",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"IFS HRES\", column group Temperature (850hPa temperature), lead time 3",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 72,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 1.1686,
+   "authors_published_value_note": "From sources/hres_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "HRES_T850_5d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, IFS HRES vs HRES analysis (IFS HRES forecast at t=0), lead 5 days (120 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 1.79,
+   "paper_value_as_printed": "1.79",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"IFS HRES\", column group Temperature (850hPa temperature), lead time 5",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 120,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 1.8275,
+   "authors_published_value_note": "From sources/hres_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "HRES_T850_7d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, IFS HRES vs HRES analysis (IFS HRES forecast at t=0), lead 7 days (168 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 2.59,
+   "paper_value_as_printed": "2.59",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"IFS HRES\", column group Temperature (850hPa temperature), lead time 7",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 168,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 2.6353,
+   "authors_published_value_note": "From sources/hres_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "HRES_T850_10d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, IFS HRES vs HRES analysis (IFS HRES forecast at t=0), lead 10 days (240 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 3.59,
+   "paper_value_as_printed": "3.59",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"IFS HRES\", column group Temperature (850hPa temperature), lead time 10",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/hres/2016-2022-0012-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 240,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 3.6374,
+   "authors_published_value_note": "From sources/hres_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCast_Z500_1d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of Z500, GraphCast vs ERA5, lead 1 days (24 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 39,
+   "paper_value_as_printed": "39",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast\", column group Pressure (500hPa geopotential), lead time 1",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 24,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 39.7692,
+   "authors_published_value_note": "From sources/graphcast_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCast_Z500_7d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of Z500, GraphCast vs ERA5, lead 7 days (168 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 468,
+   "paper_value_as_printed": "468",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast\", column group Pressure (500hPa geopotential), lead time 7",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 168,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 467.9166,
+   "authors_published_value_note": "From sources/graphcast_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCast_T850_1d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, GraphCast vs ERA5, lead 1 days (24 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 0.51,
+   "paper_value_as_printed": "0.51",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast\", column group Temperature (850hPa temperature), lead time 1",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 24,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 0.5189,
+   "authors_published_value_note": "From sources/graphcast_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCast_T850_3d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, GraphCast vs ERA5, lead 3 days (72 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 0.93,
+   "paper_value_as_printed": "0.93",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast\", column group Temperature (850hPa temperature), lead time 3",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 72,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 0.9484,
+   "authors_published_value_note": "From sources/graphcast_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCast_T850_5d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, GraphCast vs ERA5, lead 5 days (120 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 1.53,
+   "paper_value_as_printed": "1.53",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast\", column group Temperature (850hPa temperature), lead time 5",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 120,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 1.5592,
+   "authors_published_value_note": "From sources/graphcast_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCast_T850_7d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, GraphCast vs ERA5, lead 7 days (168 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 2.29,
+   "paper_value_as_printed": "2.29",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast\", column group Temperature (850hPa temperature), lead time 7",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 168,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 2.3361,
+   "authors_published_value_note": "From sources/graphcast_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCast_T850_10d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, GraphCast vs ERA5, lead 10 days (240 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 3.3,
+   "paper_value_as_printed": "3.30",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast\", column group Temperature (850hPa temperature), lead time 10",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 240,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 3.3619,
+   "authors_published_value_note": "From sources/graphcast_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "Pangu_Z500_1d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of Z500, Pangu-Weather vs ERA5, lead 1 days (24 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 44,
+   "paper_value_as_printed": "44",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather\", column group Pressure (500hPa geopotential), lead time 1",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 24,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 44.3158,
+   "authors_published_value_note": "From sources/pangu_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "Pangu_Z500_7d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of Z500, Pangu-Weather vs ERA5, lead 7 days (168 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 501,
+   "paper_value_as_printed": "501",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather\", column group Pressure (500hPa geopotential), lead time 7",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 168,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 501.1036,
+   "authors_published_value_note": "From sources/pangu_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "Pangu_T850_1d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, Pangu-Weather vs ERA5, lead 1 days (24 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 0.61,
+   "paper_value_as_printed": "0.61",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather\", column group Temperature (850hPa temperature), lead time 1",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 24,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 0.6201,
+   "authors_published_value_note": "From sources/pangu_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "Pangu_T850_3d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, Pangu-Weather vs ERA5, lead 3 days (72 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 1.03,
+   "paper_value_as_printed": "1.03",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather\", column group Temperature (850hPa temperature), lead time 3",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 72,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 1.0556,
+   "authors_published_value_note": "From sources/pangu_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "Pangu_T850_5d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, Pangu-Weather vs ERA5, lead 5 days (120 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 1.68,
+   "paper_value_as_printed": "1.68",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather\", column group Temperature (850hPa temperature), lead time 5",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 120,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 1.7133,
+   "authors_published_value_note": "From sources/pangu_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "Pangu_T850_7d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, Pangu-Weather vs ERA5, lead 7 days (168 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 2.47,
+   "paper_value_as_printed": "2.47",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather\", column group Temperature (850hPa temperature), lead time 7",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 168,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 2.5166,
+   "authors_published_value_note": "From sources/pangu_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "Pangu_T850_10d",
+   "tier": "secondary",
+   "quantity": "Global RMSE of T850, Pangu-Weather vs ERA5, lead 10 days (240 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 3.5,
+   "paper_value_as_printed": "3.50",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather\", column group Temperature (850hPa temperature), lead time 10",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu/2018-2022_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 240,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 3.5485,
+   "authors_published_value_note": "From sources/pangu_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "PanguOper_Z500_1d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, Pangu-Weather (oper.) vs HRES analysis (see definition truth_per_model, decided from the authors' published files), lead 1 days (24 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 45,
+   "paper_value_as_printed": "45",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather (oper.)\", column group Pressure (500hPa geopotential), lead time 1",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu_hres_init/2020_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 24,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 45.4468,
+   "authors_published_value_note": "From sources/pangu_hres_init_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "PanguOper_Z500_3d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, Pangu-Weather (oper.) vs HRES analysis (see definition truth_per_model, decided from the authors' published files), lead 3 days (72 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 136,
+   "paper_value_as_printed": "136",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather (oper.)\", column group Pressure (500hPa geopotential), lead time 3",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu_hres_init/2020_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 72,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 136.4913,
+   "authors_published_value_note": "From sources/pangu_hres_init_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "PanguOper_Z500_5d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, Pangu-Weather (oper.) vs HRES analysis (see definition truth_per_model, decided from the authors' published files), lead 5 days (120 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 300,
+   "paper_value_as_printed": "300",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather (oper.)\", column group Pressure (500hPa geopotential), lead time 5",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu_hres_init/2020_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 120,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 300.2748,
+   "authors_published_value_note": "From sources/pangu_hres_init_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "PanguOper_Z500_7d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, Pangu-Weather (oper.) vs HRES analysis (see definition truth_per_model, decided from the authors' published files), lead 7 days (168 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 510,
+   "paper_value_as_printed": "510",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather (oper.)\", column group Pressure (500hPa geopotential), lead time 7",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu_hres_init/2020_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 168,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 510.0939,
+   "authors_published_value_note": "From sources/pangu_hres_init_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "PanguOper_Z500_10d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, Pangu-Weather (oper.) vs HRES analysis (see definition truth_per_model, decided from the authors' published files), lead 10 days (240 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 785,
+   "paper_value_as_printed": "785",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"Pangu-Weather (oper.)\", column group Pressure (500hPa geopotential), lead time 10",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/pangu_hres_init/2020_0012_240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 240,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 785.7491,
+   "authors_published_value_note": "From sources/pangu_hres_init_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCastOper_Z500_1d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, GraphCast (oper.) vs HRES analysis (see definition truth_per_model, decided from the authors' published files), lead 1 days (24 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 40,
+   "paper_value_as_printed": "40",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast (oper.)\", column group Pressure (500hPa geopotential), lead time 1",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 24,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 40.5333,
+   "authors_published_value_note": "From sources/graphcast_hres_init_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCastOper_Z500_3d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, GraphCast (oper.) vs HRES analysis (see definition truth_per_model, decided from the authors' published files), lead 3 days (72 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 124,
+   "paper_value_as_printed": "124",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast (oper.)\", column group Pressure (500hPa geopotential), lead time 3",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 72,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 124.4117,
+   "authors_published_value_note": "From sources/graphcast_hres_init_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCastOper_Z500_5d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, GraphCast (oper.) vs HRES analysis (see definition truth_per_model, decided from the authors' published files), lead 5 days (120 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 277,
+   "paper_value_as_printed": "277",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast (oper.)\", column group Pressure (500hPa geopotential), lead time 5",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 120,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 276.7414,
+   "authors_published_value_note": "From sources/graphcast_hres_init_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCastOper_Z500_7d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, GraphCast (oper.) vs HRES analysis (see definition truth_per_model, decided from the authors' published files), lead 7 days (168 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 477,
+   "paper_value_as_printed": "477",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast (oper.)\", column group Pressure (500hPa geopotential), lead time 7",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 168,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 477.1722,
+   "authors_published_value_note": "From sources/graphcast_hres_init_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "GraphCastOper_Z500_10d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, GraphCast (oper.) vs HRES analysis (see definition truth_per_model, decided from the authors' published files), lead 10 days (240 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 751,
+   "paper_value_as_printed": "751",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"GraphCast (oper.)\", column group Pressure (500hPa geopotential), lead time 10",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/hres_t0/2016-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 240,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 754.0177,
+   "authors_published_value_note": "From sources/graphcast_hres_init_vs_hres_t0_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "NeuralGCM_Z500_1d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, NeuralGCM 0.7° vs ERA5, lead 1 days (24 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 37,
+   "paper_value_as_printed": "37",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"NeuralGCM 0.7°\", column group Pressure (500hPa geopotential), lead time 1",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 24,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 37.9377,
+   "authors_published_value_note": "From sources/neuralgcm_hres_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "NeuralGCM_Z500_3d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, NeuralGCM 0.7° vs ERA5, lead 3 days (72 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 115,
+   "paper_value_as_printed": "115",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"NeuralGCM 0.7°\", column group Pressure (500hPa geopotential), lead time 3",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 72,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 115.6961,
+   "authors_published_value_note": "From sources/neuralgcm_hres_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "NeuralGCM_Z500_5d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, NeuralGCM 0.7° vs ERA5, lead 5 days (120 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 267,
+   "paper_value_as_printed": "267",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"NeuralGCM 0.7°\", column group Pressure (500hPa geopotential), lead time 5",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 120,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 267.1336,
+   "authors_published_value_note": "From sources/neuralgcm_hres_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "NeuralGCM_Z500_7d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, NeuralGCM 0.7° vs ERA5, lead 7 days (168 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 469,
+   "paper_value_as_printed": "469",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"NeuralGCM 0.7°\", column group Pressure (500hPa geopotential), lead time 7",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 168,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 469.0978,
+   "authors_published_value_note": "From sources/neuralgcm_hres_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "NeuralGCM_Z500_10d",
+   "tier": "optional",
+   "quantity": "Global RMSE of Z500, NeuralGCM 0.7° vs ERA5, lead 10 days (240 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 751,
+   "paper_value_as_printed": "751",
+   "unit": "m^2/s^2 (geopotential, not geopotential height; the figure axis label prints \"[kg^2/m^2]\", read as a typo for m^2/s^2)",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"NeuralGCM 0.7°\", column group Pressure (500hPa geopotential), lead time 10",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.5, paper + 1.0) m^2/s^2, i.e. our value rounds OR truncates to the integer printed in the figure",
+    "basis": "Fig. 1 prints Z500 as integers with no stated rounding rule. The authors' own published per-lead results (sources/*_240x121_2020.nc, recomputed 2026-03-03) match the figure by truncation in 8 of 9 primary cells (e.g. 135.58 -> 135, 124.19 -> 124, 778.23 -> 778) and by rounding in GraphCast 7 d (467.92 -> 468), so both readings are admitted. Same data and same formula should give the same number up to float32 summation order, so no wider statistical tolerance is justified. The % difference is always reported as well."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "geopotential",
+    "level_hPa": 500,
+    "lead_time_hours": 240,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 751.413,
+   "authors_published_value_note": "From sources/neuralgcm_hres_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "NeuralGCM_T850_1d",
+   "tier": "optional",
+   "quantity": "Global RMSE of T850, NeuralGCM 0.7° vs ERA5, lead 1 days (24 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 0.53,
+   "paper_value_as_printed": "0.53",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"NeuralGCM 0.7°\", column group Temperature (850hPa temperature), lead time 1",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 24,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 0.547,
+   "authors_published_value_note": "From sources/neuralgcm_hres_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "NeuralGCM_T850_3d",
+   "tier": "optional",
+   "quantity": "Global RMSE of T850, NeuralGCM 0.7° vs ERA5, lead 3 days (72 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 0.95,
+   "paper_value_as_printed": "0.95",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"NeuralGCM 0.7°\", column group Temperature (850hPa temperature), lead time 3",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 72,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 0.9715,
+   "authors_published_value_note": "From sources/neuralgcm_hres_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "NeuralGCM_T850_5d",
+   "tier": "optional",
+   "quantity": "Global RMSE of T850, NeuralGCM 0.7° vs ERA5, lead 5 days (120 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 1.56,
+   "paper_value_as_printed": "1.56",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"NeuralGCM 0.7°\", column group Temperature (850hPa temperature), lead time 5",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 120,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 1.5873,
+   "authors_published_value_note": "From sources/neuralgcm_hres_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "NeuralGCM_T850_7d",
+   "tier": "optional",
+   "quantity": "Global RMSE of T850, NeuralGCM 0.7° vs ERA5, lead 7 days (168 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 2.34,
+   "paper_value_as_printed": "2.34",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"NeuralGCM 0.7°\", column group Temperature (850hPa temperature), lead time 7",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 168,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 2.3804,
+   "authors_published_value_note": "From sources/neuralgcm_hres_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  },
+  {
+   "id": "NeuralGCM_T850_10d",
+   "tier": "optional",
+   "quantity": "Global RMSE of T850, NeuralGCM 0.7° vs ERA5, lead 10 days (240 h), all 00/12 UTC initializations of 2020, 240x121 grid",
+   "paper_value": 3.38,
+   "paper_value_as_printed": "3.38",
+   "unit": "K",
+   "location": "Fig. 1 (Deterministic headline scorecards for upper-level variables), page 15 of arXiv 2308.15560v2, row \"NeuralGCM 0.7°\", column group Temperature (850hPa temperature), lead time 10",
+   "tolerance": {
+    "rule": "display_consistent",
+    "accept_interval": "[paper - 0.005, paper + 0.01) K, i.e. our value rounds OR truncates to the 2 decimals printed in the figure",
+    "basis": "Fig. 1 prints T850 with 2 decimals; same reasoning as Z500. Note: the authors' 2026 published files (no below-ground mask, see definition below_ground_mask) are 1.5-3% ABOVE the figure for T850 in all four models, so a mismatch under variant V1 is expected and is not by itself evidence of an error; variant V2 tests whether the paper-described mask explains it."
+   },
+   "conditions": {
+    "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+    "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+    "store_variable": "temperature",
+    "level_hPa": 850,
+    "lead_time_hours": 240,
+    "init_times": "2020-01-01T00 to 2020-12-31T12, every 12 h (732 inits expected)",
+    "grid": "240x121 equiangular with poles (1.5 deg), conservative regridding already applied by the authors in the store",
+    "region": "global, all grid points"
+   },
+   "authors_published_value_2026": 3.428,
+   "authors_published_value_note": "From sources/neuralgcm_hres_vs_era5_240x121_2020.nc (WeatherBench-X recomputation by the authors, 2026-03-03, no below-ground mask). Used only to decide ambiguities and as an auxiliary check, never as the target."
+  }
+ ],
+ "definitions": [
+  {
+   "id": "evaluation_period",
+   "choice": "All 00 and 12 UTC initializations from 2020-01-01T00 to 2020-12-31T12 (732 forecasts). Selection is on init time; verifying truth therefore extends to 2021-01-10T12.",
+   "quote": "Evaluation is done on all 00 and 12 UTC initialization times for 2020, i.e. from January 1 2020 00UTC to December 31 12 UTC. This means that some forecasts will extend into 2021.",
+   "ambiguity": "Low. The official commands use --time_start=2020-01-01 --time_stop=2020-12-31 on init time (docs/source/init-vs-valid-time.md at 156e5dc: \"For all official WB2 evaluation, the init-time convention is used\"). If any store lacks an init in this range, use the inits present, log the count and the missing dates, and do not fill them."
+  },
+  {
+   "id": "lead_times",
+   "choice": "Leads 24, 72, 120, 168, 240 h for 1/3/5/7/10 days, selected by value of prediction_timedelta, never by index (HRES starts at 0 h, GraphCast and Pangu at 6 h).",
+   "quote": "Figure 1: Deterministic headline scorecards for upper-level variables. Values show absolute RMSE.",
+   "ambiguity": "Low. The figure axis is \"Lead time [days]\" with ticks 1, 3, 5, 7, 10; days = 24 h multiples. Pangu text says \"The maximum lead time for the data used here is 7 days\" (Section 3.6) but the figure prints a 10-day Pangu value and the store has leads up to 240 h, so the sentence is taken as stale and the 240 h lead is used."
+  },
+  {
+   "id": "variables_and_units",
+   "choice": "Z500 = store variable \"geopotential\" at level 500 (m^2/s^2, not divided by g). T850 = store variable \"temperature\" at level 850 (K).",
+   "quote": "500hPa geopotential RMSE [kg²/m²] ... 850hPa temperature RMSE [K] (Fig. 1 column labels)",
+   "ambiguity": "The Z500 unit label in the figure is a typo; the values (~800 at 10 d, climatology 820) are of geopotential in m^2/s^2, consistent with the stores and the authors' published files."
+  },
+  {
+   "id": "truth_per_model",
+   "choice": "IFS HRES vs hres_t0 (HRES t=0 used as analysis). GraphCast, Pangu-Weather and NeuralGCM (ERA5-initialized) vs ERA5. Optional operational rows (Pangu-Weather (oper.), GraphCast (oper.)) vs hres_t0.",
+   "quote": "For evaluating IFS forecasts, we use operational analyses as ground truth rather than ERA5. ... Here, as in Lam et al. (2023) we use the initial conditions, i.e. the IFS HRES forecasts at t=0 as our \"analysis\".",
+   "ambiguity": "For HRES and the ERA5-initialized models the official commands at 156e5dc agree (hres_vs_analysis uses hres_t0; pangu_vs_era uses era5). For the operational rows the paper does not say which truth is used, and official-evaluation.md lists pangu_hres_init against both. Decided from the authors' published per-lead files: pangu_hres_init_vs_hres_t0 gives 45.4/136.5/300.3/510.1/785.7, matching the figure 45/136/300/510/785, while vs_era5 gives 48.8/137.5/301.0/510.9/786.9 (no match at 1 and 3 d). GraphCast (oper.) vs hres_t0 gives 40.5/124.4/276.7/477.2/754.0 against the figure 40/124/277/477/751; the 10 d cell does not match either truth (vs_era5 755.1), recorded as a pre-existing discrepancy between figure and published file."
+  },
+  {
+   "id": "forecast_and_truth_stores",
+   "choice": "Use the pre-regridded 240x121 zarr stores listed per claim (conditions.forecast_store / truth_store). ERA5 truth is 1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr, as in the official commands; the newer 1959-2023_01_10 store is not used.",
+   "quote": "Before the computation of the metrics, all forecasts and ground truths are first-order conservatively regridded to 1.5 resolution.",
+   "ambiguity": "GraphCast has no command in docs/source/official-evaluation.md at 156e5dc nor at v0.2.0; its store is taken from the bucket listing (datasets/graphcast/2020/, the only 240x121 store there) and the data guide. Regridding was done by the authors; we do not regrid. Stores are read selectively (only the variable, level and lead chunks needed)."
+  },
+  {
+   "id": "latitude_weights",
+   "choice": "w(i) = (sin(lat_upper) - sin(lat_lower)) normalized to mean 1 over the 121 latitudes; cell bounds are midpoints between grid latitudes, clipped to -90 and +90 at the pole rows (as _latitude_cell_bounds/_cell_area_from_latitude in weatherbench2/metrics.py at 156e5dc). Uniform weight in longitude.",
+   "quote": "All metrics are computed using an area-weighting over grid points. ... The latitude weights w(i) are computed as: [Eq. (1)] where θiu and θil indicate upper and lower latitude bounds, respectively, for the grid cell with latitude index i.",
+   "ambiguity": "Low. Eq. (1) and the code agree; the pole rows of the \"with_poles\" grid get half-width cells."
+  },
+  {
+   "id": "rmse_definition",
+   "choice": "For each init t, spatially weighted mean of squared error (forecast minus truth at valid time = init + lead); average over the 732 inits; then square root. Time mean inside the square root.",
+   "quote": "The RMSE is defined for each variable and level as [Eq. (2): sqrt of (1/TIJ) sum over t,i,j of w(i)(f - o)^2]. Note that this agrees with the definition of the RMSE used by the WMO and ECMWF. In WB1, the time mean was taken outside the square root.",
+   "ambiguity": "Low. The official deterministic config computes \"mse\" per chunk and averages in time; RMSE = sqrt(mean MSE). The rmse_sqrt_before_time_avg metric (WB1 style) belongs to deterministic_temporal and is NOT the figure quantity."
+  },
+  {
+   "id": "below_ground_mask",
+   "choice": "Compute two variants and report both. V1 (public code at 156e5dc and v0.2.0): no below-ground mask. V2 (paper Section 4.2.1, implemented by us): extra spatial weight = ERA5 climatological above_ground fraction from gs://weatherbench2/datasets/era5-hourly-climatology/1990-2019_6h_240x121_equiangular_with_poles_conservative.zarr, selected by the valid time's day of year and hour, at the same level; spatial mean = sum(w(i) * a * err^2) / sum(w(i) * a). A claim counts as reproduced if it is display-consistent under V1 or V2, and the report says which. Hypothesis written before computing: Z500 matches under both; T850 matches only under V2.",
+   "quote": "Here, we exclude below ground grid points from the computation of all metrics. To do so, we compute the climatological fraction of above-ground grid points (defined by geopotential > geopotential at surface) for each pressure level using the same doy-tod dependent method described in Section 3.2. We then use this fraction as an additional weight when computing spatial averages.",
+   "ambiguity": "High for T850, low for Z500. The public code never contained the mask (issue #254, author reply: the code was not uploaded and the mask was removed from the website later). Unspecified details fixed here: doy/tod taken from the valid time (truth time), normalization by the combined weight sum, climatology store as above. The authors' 2026 published files are without the mask and sit 1.5-3% above the figure for T850 and within display rounding for Z500, which is what motivates V2; the files were not used to choose any V2 detail."
+  },
+  {
+   "id": "figure_rounding_and_tolerance",
+   "choice": "A computed value matches if it rounds or truncates to the printed value (Z500 integer, T850 two decimals). Also report the absolute and % difference to the printed value and to the authors' 2026 published value. Auxiliary (not verdict) check: V1 should agree with the authors' 2026 published value within 0.1% relative; a larger gap is reported as a finding.",
+   "quote": "Values show absolute RMSE. Colors denote % difference to the IFS HRES baseline. (Fig. 1 caption)",
+   "ambiguity": "The rounding rule is not stated. The published files show truncation in most cells and rounding in GraphCast 7 d Z500 (467.92 -> 468) and GraphCast (oper.) 5 d (276.74 -> 277), so both are admitted. The 0.1% auxiliary threshold is set because WeatherBench-X on the same stores and formula should only differ by float32 summation order."
+  },
+  {
+   "id": "missing_values",
+   "choice": "No skipping of NaN (skipna=False as in metrics._spatial_average). If a NaN appears in a needed chunk, stop that model, log the init, lead and level, and report it rather than dropping it.",
+   "quote": "Evaluation is done on all 00 and 12 UTC initialization times for 2020",
+   "ambiguity": "The paper does not discuss missing data. Not expected for these stores; any deviation is reported."
+  },
+  {
+   "id": "code_version",
+   "choice": "Reference code google-research/weatherbench2 at 156e5dc9eafc18b8f8b215abc3a36b6305c266b8 (arXiv v2 date), variant v0.2.0 (81f1993). Main computation by an own selective-chunk script implementing the definitions above; cross-check with scripts/evaluate.py (official deterministic config) on a subset (one month) for agreement.",
+   "quote": "A regridding tool is available on the WB2 GitHub page.",
+   "ambiguity": "The official command lists are identical at both commits for the forecast/obs paths. The website now uses WeatherBench-X (issue #254), which produced the 2026 published files. Running evaluate.py over the full year would read ~143 GB for Z500 alone, so the full run uses the selective script; the subset cross-check establishes equivalence."
+  },
+  {
+   "id": "paper_version",
+   "choice": "Target numbers are read from arXiv 2308.15560v2 (2024-01-26), Fig. 1, page 15 (sources/arxiv-2308.15560v2.pdf, sources/fig1_p15-15.png).",
+   "quote": "Figure 1: Deterministic headline scorecards for upper-level variables. Values show absolute RMSE. Colors denote % difference to the IFS HRES baseline.",
+   "ambiguity": "The JAMES version (2024-06) could not be read (publisher PDF behind Cloudflare; not bypassed). Its Fig. 1 may have been regenerated; the report must say the target is the arXiv v2 figure."
+  }
+ ]
+}

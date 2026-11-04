@@ -1,0 +1,76 @@
+W1103 21:46:12.407648 140242272040768 _metadata.py:139] ComputeNo land_sea_mask found.
+2026-11-03T21:51:05-03:00 end hres_vs_analysis_2020jan_z500_ exit 0
+2026-11-03T21:51:05-03:00 start pangu_vs_era_2020jan_t850_
+2026-11-03T21:55:57-03:00 end pangu_vs_era_2020jan_t850_ exit 0
+21:46:18.422526 140242272040768 _metadata.py:139] Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+W1103 21:46:18.422700 140242272040768 _default.py:338] Authentication failed using Compute Engine authentication due to unavailable metadata server.
+W1103 21:46:18.428857 140242272040768 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 1 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f8c80d19d50>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1103 21:46:18.432973 140242272040768 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 2 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f8c767fb790>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1103 21:46:18.440461 140242272040768 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 3 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f8c7680d250>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1103 21:46:18.444598 140242272040768 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 4 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f8c7680ec90>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1103 21:46:18.449042 140242272040768 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 5 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f8c768142d0>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+I1103 21:46:25.805360 140242272040768 evaluation.py:311] Loading data
+I1103 21:46:30.641871 140242272040768 evaluation.py:400] Logging metric: mse
+I1103 21:46:30.642206 140242272040768 evaluation.py:410] Logging region: global
+I1103 21:46:30.696359 140242272040768 evaluation.py:418] Logging region done: global
+I1103 21:46:30.697682 140242272040768 evaluation.py:425] Logging metric done: mse
+I1103 21:46:30.697751 140242272040768 evaluation.py:400] Logging metric: acc
+I1103 21:46:30.697984 140242272040768 evaluation.py:410] Logging region: global
+I1103 21:46:35.204243 140242272040768 evaluation.py:418] Logging region done: global
+I1103 21:46:35.205484 140242272040768 evaluation.py:425] Logging metric done: acc
+I1103 21:46:35.205551 140242272040768 evaluation.py:400] Logging metric: bias
+I1103 21:46:35.205776 140242272040768 evaluation.py:410] Logging region: global
+I1103 21:46:35.229132 140242272040768 evaluation.py:418] Logging region done: global
+I1103 21:46:35.230415 140242272040768 evaluation.py:425] Logging metric done: bias
+I1103 21:46:35.230486 140242272040768 evaluation.py:400] Logging metric: mae
+I1103 21:46:35.230730 140242272040768 evaluation.py:410] Logging region: global
+I1103 21:46:35.255902 140242272040768 evaluation.py:418] Logging region done: global
+I1103 21:46:35.257061 140242272040768 evaluation.py:425] Logging metric done: mae
+I1103 21:50:14.559487 140242272040768 evaluation.py:467] Logging Evaluation complete:
+<xarray.Dataset>
+Dimensions:       (metric: 4, region: 1, level: 1, lead_time: 41)
+Coordinates:
+  * metric        (metric) object 'acc' 'bias' 'mae' 'mse'
+  * region        (region) object 'global'
+  * level         (level) int32 500
+  * lead_time     (lead_time) timedelta64[ns] 0 days 00:00:00 ... 10 days 00:...
+Data variables:
+    geopotential  (metric, region, lead_time, level) float64 dask.array<chunksize=(4, 1, 8, 1), meta=np.ndarray>
+I1103 21:51:05.198662 140242272040768 evaluation.py:471] Logging Saved results to runs/official/hres_vs_analysis_2020jan_z500_deterministic.nc
+W1103 21:51:30.927750 140094765188928 _metadata.py:139] Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+W1103 21:51:33.930025 140094765188928 _metadata.py:139] Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+W1103 21:51:36.933406 140094765188928 _metadata.py:139] Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+W1103 21:51:36.933581 140094765188928 _default.py:338] Authentication failed using Compute Engine authentication due to unavailable metadata server.
+W1103 21:51:36.937376 140094765188928 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 1 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6a1e607190>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1103 21:51:36.941590 140094765188928 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 2 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6a1e615650>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1103 21:51:36.943864 140094765188928 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 3 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6a1e6170d0>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1103 21:51:36.946362 140094765188928 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 4 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6a1e620b50>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+W1103 21:51:36.949579 140094765188928 _metadata.py:208] Compute Engine Metadata server unavailable on attempt 5 of 5. Reason: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/?recursive=true (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6a1e622150>: Failed to resolve 'metadata.google.internal' ([Errno -2] Name or service not known)"))
+I1103 21:51:41.804216 140094765188928 evaluation.py:311] Loading data
+I1103 21:51:44.226287 140094765188928 evaluation.py:400] Logging metric: mse
+I1103 21:51:44.226669 140094765188928 evaluation.py:410] Logging region: global
+I1103 21:51:44.267261 140094765188928 evaluation.py:418] Logging region done: global
+I1103 21:51:44.268409 140094765188928 evaluation.py:425] Logging metric done: mse
+I1103 21:51:44.268483 140094765188928 evaluation.py:400] Logging metric: acc
+I1103 21:51:44.268697 140094765188928 evaluation.py:410] Logging region: global
+I1103 21:51:47.794588 140094765188928 evaluation.py:418] Logging region done: global
+I1103 21:51:47.795669 140094765188928 evaluation.py:425] Logging metric done: acc
+I1103 21:51:47.795734 140094765188928 evaluation.py:400] Logging metric: bias
+I1103 21:51:47.795953 140094765188928 evaluation.py:410] Logging region: global
+I1103 21:51:47.817028 140094765188928 evaluation.py:418] Logging region done: global
+I1103 21:51:47.818124 140094765188928 evaluation.py:425] Logging metric done: bias
+I1103 21:51:47.818189 140094765188928 evaluation.py:400] Logging metric: mae
+I1103 21:51:47.818393 140094765188928 evaluation.py:410] Logging region: global
+I1103 21:51:47.840562 140094765188928 evaluation.py:418] Logging region done: global
+I1103 21:51:47.841638 140094765188928 evaluation.py:425] Logging metric done: mae
+I1103 21:55:06.142050 140094765188928 evaluation.py:467] Logging Evaluation complete:
+<xarray.Dataset>
+Dimensions:      (metric: 4, region: 1, level: 1, lead_time: 40)
+Coordinates:
+  * metric       (metric) object 'acc' 'bias' 'mae' 'mse'
+  * region       (region) object 'global'
+  * level        (level) int64 850
+  * lead_time    (lead_time) timedelta64[ns] 0 days 06:00:00 ... 10 days 00:0...
+Data variables:
+    temperature  (metric, region, lead_time, level) float64 dask.array<chunksize=(4, 1, 8, 1), meta=np.ndarray>
+I1103 21:55:57.008795 140094765188928 evaluation.py:471] Logging Saved results to runs/official/pangu_vs_era_2020jan_t850_deterministic.nc

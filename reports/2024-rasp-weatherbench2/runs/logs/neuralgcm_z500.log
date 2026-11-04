@@ -1,0 +1,74 @@
+store gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr var geopotential 500 inits present 732 missing [] leads {24: 2, 72: 6, 120: 10, 168: 14, 240: 20} lead chunks [0, 1, 2]
+jobs to do 2196 already done 0
+100/2196 chunks, 2.2 GB, 60.2 MB/s
+200/2196 chunks, 4.4 GB, 64.6 MB/s
+300/2196 chunks, 6.6 GB, 65.7 MB/s
+400/2196 chunks, 8.7 GB, 66.3 MB/s
+500/2196 chunks, 10.9 GB, 67.1 MB/s
+600/2196 chunks, 13.2 GB, 67.4 MB/s
+700/2196 chunks, 15.3 GB, 67.4 MB/s
+800/2196 chunks, 17.5 GB, 67.8 MB/s
+900/2196 chunks, 19.6 GB, 68.1 MB/s
+1000/2196 chunks, 21.8 GB, 68.3 MB/s
+1100/2196 chunks, 24.0 GB, 68.3 MB/s
+1200/2196 chunks, 26.2 GB, 68.3 MB/s
+1300/2196 chunks, 28.3 GB, 68.5 MB/s
+1400/2196 chunks, 30.5 GB, 68.6 MB/s
+1500/2196 chunks, 32.7 GB, 68.8 MB/s
+1600/2196 chunks, 34.9 GB, 69.0 MB/s
+1700/2196 chunks, 37.1 GB, 68.9 MB/s
+1800/2196 chunks, 39.2 GB, 69.0 MB/s
+1900/2196 chunks, 41.4 GB, 68.9 MB/s
+2000/2196 chunks, 43.6 GB, 68.9 MB/s
+2100/2196 chunks, 45.8 GB, 69.1 MB/s
+{
+ "forecast_store": "gs://weatherbench2/datasets/neuralgcm_deterministic/2020-240x121_equiangular_with_poles_conservative.zarr",
+ "truth_store": "gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+ "variable": "geopotential",
+ "level": 500,
+ "inits_present": 732,
+ "inits_missing": [],
+ "leads": {
+  "24": {
+   "n_inits": 732,
+   "rmse_v1": 37.937659065729825,
+   "rmse_v2": 37.93766331409338,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "72": {
+   "n_inits": 732,
+   "rmse_v1": 115.69606981307219,
+   "rmse_v2": 115.69620263510093,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "120": {
+   "n_inits": 732,
+   "rmse_v1": 267.13359802741417,
+   "rmse_v2": 267.1339537379383,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "168": {
+   "n_inits": 732,
+   "rmse_v1": 469.0977758631138,
+   "rmse_v2": 469.0984205788821,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  },
+  "240": {
+   "n_inits": 732,
+   "rmse_v1": 751.4130216302822,
+   "rmse_v2": 751.4140663312329,
+   "any_nan": false,
+   "any_chunk_missing": false,
+   "all_md5_checked": true
+  }
+ }
+}
+downloaded this run 47.87 GB in 693 s

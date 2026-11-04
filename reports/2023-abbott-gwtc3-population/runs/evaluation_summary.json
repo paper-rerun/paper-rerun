@@ -1,0 +1,116 @@
+{
+ "/mnt/e/Ciencia/noturno/2023-abbott-gwtc3-population/runs/pp_seed101/result/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json": {
+  "C1_mu_m": {
+   "ours": {
+    "p05": 29.163703057828947,
+    "p50": 33.56257198435743,
+    "p95": 36.15656270232789
+   },
+   "pass_": {
+    "released": true,
+    "paper": true
+   }
+  },
+  "C2_rate_z0.2": {
+   "ours": {
+    "p05": 19.374987669209673,
+    "p50": 28.390743593404387,
+    "p95": 41.37911274968269
+   },
+   "pass_": {
+    "released": true,
+    "paper": true
+   }
+  },
+  "S1_alpha": {
+   "ours": {
+    "p05": 2.9779728175114704,
+    "p50": 3.5240480344690344,
+    "p95": 4.115363459577333
+   },
+   "pass_": {
+    "paper": 1.0,
+    "released": 1.0
+   }
+  },
+  "S2_beta_q": {
+   "ours": {
+    "p05": -0.26894375157286765,
+    "p50": 1.0666438466005617,
+    "p95": 2.6977355361640054
+   },
+   "pass_": {
+    "paper": 1.0,
+    "released": 1.0
+   }
+  },
+  "S3_kappa": {
+   "ours": {
+    "p05": 1.0824837172062534,
+    "p50": 2.8571019287414607,
+    "p95": 4.643194051048347
+   },
+   "pass_": {
+    "paper": 1.0,
+    "released": 1.0
+   }
+  }
+ },
+ "/mnt/e/Ciencia/noturno/2023-abbott-gwtc3-population/runs/pp_seed202/result/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json": {
+  "C1_mu_m": {
+   "ours": {
+    "p05": 29.292950498237797,
+    "p50": 33.490719942190886,
+    "p95": 36.204253949220316
+   },
+   "pass_": {
+    "released": true,
+    "paper": true
+   }
+  },
+  "C2_rate_z0.2": {
+   "ours": {
+    "p05": 19.179083514597146,
+    "p50": 28.29658324204303,
+    "p95": 41.648020989956784
+   },
+   "pass_": {
+    "released": true,
+    "paper": true
+   }
+  },
+  "S1_alpha": {
+   "ours": {
+    "p05": 2.974600300930968,
+    "p50": 3.5130934724958784,
+    "p95": 4.089298659202344
+   },
+   "pass_": {
+    "paper": 1.0,
+    "released": 1.0
+   }
+  },
+  "S2_beta_q": {
+   "ours": {
+    "p05": -0.18330418033087081,
+    "p50": 1.070193184704793,
+    "p95": 2.782656049590596
+   },
+   "pass_": {
+    "paper": 1.0,
+    "released": 1.0
+   }
+  },
+  "S3_kappa": {
+   "ours": {
+    "p05": 1.0379054193007449,
+    "p50": 2.8621192029963627,
+    "p95": 4.696713630933772
+   },
+   "pass_": {
+    "paper": 1.0,
+    "released": 1.0
+   }
+  }
+ }
+}

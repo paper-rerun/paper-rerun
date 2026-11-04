@@ -1,0 +1,70 @@
+{
+ "issues": [
+  {
+   "severity": "major",
+   "where": "What it took, passo 2 (primeira frase) e a definicao code_version citada",
+   "problem": "A justificativa pra nao rodar o evaluate.py no ano inteiro ('reads every lead time, about 286 GB... So we wrote a script that fetches only the zarr chunks holding the 24...240 h leads') e contrariada pelos logs. Cada chunk guarda 8 leads, entao o script seletivo leu 5 de 5 lead chunks no Pangu e no GraphCast ('lead chunks [0, 1, 2, 3, 4]' em graphcast_z500.log) e 5 de 6 no HRES ([0,1,2,3,5]). Ou seja, leu praticamente a variavel inteira: 266,5 GB nas 6 rodadas primarias (24,60+25,21+29,40+29,41+78,44+79,47), contra os 286 GB estimados pro evaluate.py, uma economia de uns 7%. Alem disso, o evaluate.py levou cerca de 5 min por mes no subset (official_subset.log: 21:46 a 21:51 e 21:51 a 21:55). O leitor fica com a impressao de que rodar o codigo oficial no ano inteiro era inviavel, e nao era.",
+   "fix": "Reescrever: 'Each zarr chunk holds 8 lead times, so selecting leads saved little: the script read 5 of 5 lead chunks for Pangu-Weather and GraphCast and 5 of 6 for HRES (266.5 GB for the six primary runs, against an estimated 286 GB for evaluate.py). What the script added was per-chunk size/md5 checks, restartability and no forecast data on disk. We did not run evaluate.py on the full year; it is checked only on January 2020 (below).' Outra saida e rodar o evaluate.py no ano inteiro pelo menos pra um caso primario e citar o log."
+  },
+  {
+   "severity": "major",
+   "where": "Cross-check with the official code (ultima frase) e Notes for the authors, itens 2 e 3",
+   "problem": "O cross-check com o evaluate.py cobre so dois casos: HRES Z500 e Pangu T850 (crosscheck.py CASES), os dois em stores de 13 niveis por chunk. Os stores do GraphCast (37 niveis por chunk), do GraphCast (oper.), do Pangu (oper.) e do NeuralGCM nunca foram conferidos com o codigo oficial. Mesmo assim o relatorio generaliza ('The selective-chunk script gives the same V1 numbers as the authors' code') e atribui aos stores dos autores a diferenca de 0,015 a 0,061% no GraphCast e de ate 0,58% no GraphCast (oper.) ('hints that the GraphCast stores WeatherBench-X reads may not be exactly the ones in the docs'). Justamente o GraphCast, o unico store que difere dos arquivos de 2026, e o que nao foi conferido. Uma causa do nosso lado (layout de 37 niveis, selecao de init num store de 886 tempos) nao esta descartada.",
+   "fix": "Rodar runs/scripts/official_subset.sh pra GraphCast Z500 vs ERA5 e GraphCast (oper.) Z500 vs hres_t0 em janeiro de 2020 (uns 7 GB e 13 GB de leitura, 5 a 10 min cada), juntar os dois em crosscheck.py e citar o crosscheck.log. Se nao rodar, limitar a frase a 'matches evaluate.py for HRES Z500 and Pangu-Weather T850 on January 2020' e, nas notas 2 e 3, dizer que o lado do GraphCast nao foi conferido com o evaluate.py, sem sugerir que o store dos autores e a causa."
+  },
+  {
+   "severity": "major",
+   "where": "What it took, passo 6 e passo 5 ('RAM stayed under 2.5 GB', 'CPU use stayed low')",
+   "problem": "Os numeros do incidente e de uso de recurso nao tem log que sustente. (a) 'memory grew towards about 65 GB' nao pode ter sido medido numa maquina com 31 GB: e a projecao 750 tempos x 87 MB. (b) 'WSL swapped about 1 GB and stopped responding', 'A second attempt hit the same problem and we stopped it', 'RAM stayed under 2.5 GB' e 'CPU use stayed low' nao aparecem em log nenhum. O run_one.sh gravava /usr/bin/time -v em runs/logs/graphcast_z500.log, mas o run_all.sh sobrescreveu esse arquivo com '>' as 00:10, e o run_one.log so tem a linha 'start' de 22:31:56, sem 'end'. O unico rastro e a linha 'Killed' no run_all.log.",
+   "fix": "Escrever o 65 GB como projecao ('each of the 750 accesses re-read the whole 87 MB array, i.e. up to ~65 GB; the process was OOM-killed'). Marcar a troca de swap, a segunda tentativa interrompida e os numeros de RAM/CPU como observacao ao vivo nao registrada ('not logged; the /usr/bin/time output was overwritten when the driver re-ran graphcast_z500'). Outra opcao e cortar o que nao tem fonte. Nas proximas rodadas, gravar o pico de RSS (por exemplo /usr/bin/time -v com append) num log que nao seja sobrescrito."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, passo 6 (incidente)",
+   "problem": "Faltam duas ressalvas. (1) O limite de threads tambem foi estourado: a segunda tentativa do GraphCast Z500 (run_one.sh, 22:31:56, THREADS=8) rodou ao mesmo tempo que o run_all (hres_t850 de 22:24 a 22:38 e pangu_t850 a partir de 22:38), ou seja, dois processos de 8 threads. (2) O wb2_rmse.py foi editado as 22:46:01, no meio da rodada. hres_t850 (inicio 22:24) e pangu_t850 (inicio 22:38) rodaram com a versao anterior a correcao, e nao ficou copia nem diff dessa versao, entao 'one-line change' nao da pra verificar.",
+   "fix": "Acrescentar: 'During 22:31-22:46 two 8-thread processes overlapped, so the 8-thread limit was also exceeded. The script was edited at 22:46; hres_t850 and pangu_t850 ran on the earlier version, which only differs in the cache-loading path (they built their caches, so the edited lines never ran for them). No copy of the earlier version was kept.' Se der, recuperar a versao antiga a partir de runs/scripts/__pycache__/wb2_rmse.cpython-311.pyc (21:42) ou registrar o diff em patches/."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, passo 4 (driver) e runs/logs/run_all.log",
+   "problem": "O run_all.log nao serve como registro da rodada. Ele comeca com 'bash: .../run_all.sh: No such file or directory', perdeu as linhas de inicio de hres_z500, pangu_z500 e da primeira tentativa do graphcast_z500, e registra 'end graphcast_z500 exit 0' logo depois de 'Killed'. Isso acontece porque em echo \"$(date -Is) end $name exit $?\" o $(date) zera o $?, entao todo 'exit 0' do log e falso. O wait_step.sh, que procura 'exit [1-9]', nunca ia pegar uma falha.",
+   "fix": "Acrescentar no passo 4: 'Exit codes in run_all.log are not meaningful (the $(date) substitution resets $?); completion is shown by each runs/out/*.summary.json and the per-model log. The start of the run (21:45) is taken from hres_z500.log (999 s ending 22:02:03), since the head of run_all.log was lost.' Corrigir o driver pra gravar rc=$? antes do echo, que nem o run_one.sh faz."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, passo 5 ('Free space on E: went from 112 GB to 107 GB')",
+   "problem": "O valor de 112 GB nao esta em log nenhum. O run_all.log registra 'free on E: 107 GB' as 22:24 e 'free on E: 106 GB' as 00:28:59. Nao ha medicao depois de apagar o data/.",
+   "fix": "Trocar por 'Free space on E: was 107 GB after the Z500 runs and 106 GB at the end of the last run (run_all.log); the drive is shared with another job.' Se o 112 GB vier de outra fonte, citar a fonte."
+  },
+  {
+   "severity": "minor",
+   "where": "Totals, 'Data checks' e passo 5 ('About 6 GB more')",
+   "problem": "'Every chunk passed the size and md5 checks' vai alem do que foi registrado. So os chunks de previsao gravam se tinham md5 (all_md5_checked). Os chunks de truth e de climatologia passam pelo mesmo fetch(), mas a presenca do md5 nao fica registrada, e as leituras do subset oficial (evaluate.py via gcsfs) nao tem checagem nenhuma. Os ~6 GB de truth, climatologia e subset tambem nao aparecem em log.",
+   "fix": "Escrever: 'Every forecast chunk carried an md5 in x-goog-hash and passed it, plus the Content-Length check. Truth and climatology chunks went through the same check, which fails on mismatch, but whether an md5 was present was not logged. The evaluate.py subset read through gcsfs without our checks.' Marcar os 6 GB como estimativa ou cortar."
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors, item 1 ('Our reading of the mask reproduced every T850 cell') e Results/Tolerance",
+   "problem": "O relatorio nao diz qual das duas leituras pre-registradas deu o match. Recalculando: os 50 casos batem por truncamento, mas 16 so por truncamento (9 de Z500 em V1, como HRES 3 d 135,58 e NeuralGCM 1 d 37,94, e 7 de T850 em V2, como HRES 5 d 1,7984, Pangu 10 d 3,5088 e NeuralGCM 1 d 0,5358 com +1,09%). Os 20 valores V2 de T850 ficam todos acima do valor impresso (+0,01% a +1,09%). Isso e coerente com o truncamento, mas mostra que o casamento da mascara depende dele: so com arredondamento, 7 das 18 celulas 'V2 only' falhariam.",
+   "fix": "Acrescentar em Results: 'All 50 cells match under truncation; under rounding alone 16 would not (9 Z500, 7 T850 V2), so the figure appears to truncate. Every V2 T850 value sits 0.01-1.09% above the printed number, consistent with truncation, so our mask matches the figure at its printed precision but cannot be shown to be identical to the authors' implementation.' Suavizar o item 1 das notas no mesmo sentido."
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors (paragrafo de abertura) e Target/Optional",
+   "problem": "'the whole Fig. 1 scorecard for Z500 and T850 came out' exagera o alcance. Foram calculadas 6 das 12 linhas de modelo (faltam IFS ENS Mean, ERA5 Forecasts, Keisler, FuXi, SphericalCNN e NeuralGCM ENS Mean), e nas linhas Pangu-Weather (oper.) e GraphCast (oper.) so o Z500 (o T850 0.63/1.07/... e 0.52/0.91/... ficou de fora). O Target tambem nao diz que as duas linhas oper. sao so Z500.",
+   "fix": "Trocar por 'the 50 pre-registered Z500 and T850 cells of Fig. 1 (6 of its 12 model rows) came out...' e, no Target, escrever 'Optional: Z500 for the Pangu-Weather (oper.) and GraphCast (oper.) rows, Z500 and T850 for NeuralGCM 0.7° (20 cells)'."
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors, item 2 ('For every other row, the files and our values agree within 0.06%')",
+   "problem": "O GraphCast (ERA5) chega a 0,061% (T850 5 d: 0,0610%; 3 d: 0,0578%), entao 'within 0.06%' esta errado por pouco e contradiz o item 3, que da 0,015 a 0,061%. Alem disso, o claims.json pre-registrou um limiar auxiliar de 0,1% de V1 contra o arquivo de 2026, e quatro casos do GraphCast (oper.) passam dele (1 d -0,584%, 3 d -0,219%, 5 d +0,137%, 10 d -0,331%). O relatorio nao diz que essas sao as excecoes ao limiar de 0,1%.",
+   "fix": "Trocar por 'within 0.061%' (ou 'below 0.1%, the pre-registered auxiliary threshold') e acrescentar: '4 of the 5 GraphCast (oper.) cells exceed the pre-registered 0.1% auxiliary threshold (1/3/5/10 d: -0.58/-0.22/+0.14/-0.33%); all other 45 cells are within it.'"
+  },
+  {
+   "severity": "minor",
+   "where": "How this report was made",
+   "problem": "O texto diz que 'a reviewer agent and a reviser agent then checked the report... and a human approved publication' e que 'a separate agent' fez o pre-registro. Nesta etapa a revisao esta em andamento e o Filipe ainda nao aprovou nada. Nenhum log na pasta mostra que o claims.json foi feito por outro agente; so o hash e o horario (00:34:26Z, 11 min antes da primeira rodada) estao registrados.",
+   "fix": "Manter a frase de aprovacao humana so depois que o Filipe ler e aprovar, como manda o README. Ate la, escrever 'will be read by a human before publication'. Pro pre-registro, citar o que existe: 'claims.json was frozen at 2026-11-04T00:34:26Z (claims.sha256), before the first run at 00:45Z; its SHA-256 still matched after the run.'"
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+Wed Nov  4 03:44:43 -03 2026
+Wed Nov  4 03:44:43 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 620.67.01              KMD Version: 621.01        CUDA UMD Version: 13.5     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2070 ...    On  |   00000000:09:00.0  On |                  N/A |
+|  0%   51C    P8             36W /  215W |    1079MiB /   8192MiB |     13%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A              27      G   /Xwayland                             N/A      |
++-----------------------------------------------------------------------------------------+
+libcuda.so
+libcuda.so.1
+libcuda.so.1.1
+libcudadebugger.so.1
+libd3d12.so
+libd3d12core.so
+libdxcore.so
+libnvcuvid.so
+libnvcuvid.so.1
+libnvdxdlkernels.so
+libnvidia-encode.so
+libnvidia-encode.so.1
+libnvidia-gpucomp.so
+libnvidia-gpucomp.so.620.67.01
+libnvidia-ml.so.1
+libnvidia-ngx.so.1
+libnvidia-opticalflow.so
+libnvidia-opticalflow.so.1
+libnvoptix.so.1
+libnvoptix_loader.so.1
+libnvwgf2umx.so
+nvidia-ngx-updater
+nvidia-smi
+               total        used        free      shared  buff/cache   available
+Mem:              31           0          30           0           0          30
+Swap:              8           0           8
+24
+uv 0.13.4 (x86_64-unknown-linux-gnu)
+cpython-3.16.0a1-linux-x86_64-gnu                 <download available>
+cpython-3.16.0a1+freethreaded-linux-x86_64-gnu    <download available>
+cpython-3.15.0-linux-x86_64-gnu                   <download available>
+cpython-3.15.0+freethreaded-linux-x86_64-gnu      <download available>
+cpython-3.14.8-linux-x86_64-gnu                   <download available>
+cpython-3.14.8+freethreaded-linux-x86_64-gnu      <download available>
+cpython-3.13.16-linux-x86_64-gnu                  <download available>
+cpython-3.13.16+freethreaded-linux-x86_64-gnu     <download available>
+cpython-3.12.15-linux-x86_64-gnu                  /root/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python3.12
+cpython-3.12.3-linux-x86_64-gnu                   /usr/bin/python3.12
+cpython-3.12.3-linux-x86_64-gnu                   /usr/bin/python3 -> python3.12
+cpython-3.11.17-linux-x86_64-gnu                  /root/.local/share/uv/python/cpython-3.11-linux-x86_64-gnu/bin/python3.11
+cpython-3.10.22-linux-x86_64-gnu                  /root/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10
+cpython-3.10.14-linux-x86_64-gnu                  /root/.local/share/uv/python/cpython-3.10.14-linux-x86_64-gnu/bin/python3.10
+cpython-3.10.13-linux-x86_64-gnu                  /root/.local/share/uv/python/cpython-3.10.13-linux-x86_64-gnu/bin/python3.10
+cpython-3.9.25-linux-x86_64-gnu                   /root/.local/share/uv/python/cpython-3.9-linux-x86_64-gnu/bin/python3.9
+cpython-3.8.20-linux-x86_64-gnu                   /root/.local/share/uv/python/cpython-3.8-linux-x86_64-gnu/bin/python3.8
+pypy-3.12.15-linux-x86_64-gnu                     <download available>
+pypy-3.11.17-linux-x86_64-gnu                     <download available>
+pypy-3.10.16-linux-x86_64-gnu                     <download available>
+pypy-3.9.19-linux-x86_64-gnu                      <download available>
+pypy-3.8.16-linux-x86_64-gnu                      <download available>
+graalpy-3.13.0-linux-x86_64-gnu                   <download available>
+graalpy-3.12.0-linux-x86_64-gnu                   <download available>
+graalpy-3.11.0-linux-x86_64-gnu                   <download available>
+graalpy-3.10.0-linux-x86_64-gnu                   <download available>
+graalpy-3.8.5-linux-x86_64-gnu                    <download available>
