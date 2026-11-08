@@ -1,0 +1,65 @@
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+[15:00:35] WARNING: not removing hydrogen atom without neighbors
+  0%|          | 0/2039 [00:00<?, ?it/s] 39%|███▊      | 786/2039 [00:00<00:00, 7859.20it/s] 77%|███████▋  | 1572/2039 [00:00<00:00, 6997.74it/s]100%|██████████| 2039/2039 [00:00<00:00, 7336.08it/s]
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+split=test rows_from_split=205 rows_after_selfies=205
+split sizes train/val/test = 1631/203/205
+{
+ "task": "bbbp_gpu",
+ "split": "test",
+ "device": "cuda",
+ "n_from_split": 205,
+ "n_scored": 205,
+ "n_positive": 155,
+ "roc_auc_hard_pred": 0.8912903225806452,
+ "prc_auc_hard_pred": 0.9672252819302387,
+ "roc_auc_probability": 0.929483870967742,
+ "accuracy": 0.9073170731707317,
+ "precision": 0.9533333333333334,
+ "recall": 0.9225806451612903,
+ "f1": 0.9377049180327869,
+ "split_sizes": [
+  1631,
+  203,
+  205
+ ]
+}

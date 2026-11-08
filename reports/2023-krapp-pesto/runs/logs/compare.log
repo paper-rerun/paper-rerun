@@ -1,0 +1,17 @@
+MaSIF set: items built and selected: 53 | with MaSIF length match (enter the median): 53
+authors' items: 53 | authors' keys found in ours (len match): 53
+our items not in authors' list: []
+authors' items missing from our median: []
+C1 PeSTo median ROC AUC = 0.9247 (paper 0.92, interval [0.915, 0.930)) -> inside
+C2 MaSIF-site median ROC AUC = 0.8002 (paper 0.80, interval [0.795, 0.810)) -> inside
+means: PeSTo 0.8565 (notebook 0.86), MaSIF-site 0.7853 (notebook 0.79)
+per item vs authors (n=53): |diff|<=0.0005 53, <=0.001 53, <=0.01 53, max 0.0005
+C5 Source Data rows: 53, PeSTo strictly best of 4: 38, 'best' column == PeSTo: 38 (paper 38)
+   notebook cell 9 'best' over 5 methods incl. ScanNet: PeSTo 33 of 53
+   ours: PeSTo > MaSIF-site on 42 of 53 items
+C4 Source Data ScanNet-noMSA median = 0.8693 (paper 0.87, interval [0.865, 0.880)) -> inside; Source Data PeSTo median = 0.9294, ScanNet (MSA) median = 0.8973
+C3 sids built: 416 of 417, duplicated sids: 0, with defined AUC: 416
+   sids missing: ['1FSS_A']
+C3 PeSTo median ROC AUC = 0.9299 (paper 0.93, SI 0.929, interval [0.925, 0.940)) -> inside
+   per sid vs Source Data PeSTo_auc (n=416): |diff|<=0.001 415, <=0.01 415, <=0.05 415, max 0.0518
+   median over the same sids: ours 0.9299, Source Data PeSTo 0.9296, Source Data ScanNet-noMSA 0.8703

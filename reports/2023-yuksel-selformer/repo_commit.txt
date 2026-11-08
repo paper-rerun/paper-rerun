@@ -1,0 +1,1 @@
+4969ca14dc403ccb6c478ad83e719c0f6bc35d22 2026-05-06 22:09:47 +0200 Update conda channels and dependency pins so the SELFormer environment resolves reliably. Use conda-forge/pytorch with nodefaults, pin Python and pyarrow for compatibility, and document env creation with conda env create.

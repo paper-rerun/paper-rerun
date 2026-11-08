@@ -1,0 +1,35 @@
+# Table captions and the SELFormer rows, from the two PDFs (pdftotext -layout)
+## MLST published version (mlst_acdb30.pdf)
+387:                 Table 1. Information about molecular property prediction tasks that were used in model fine-tuning.
+532:                              Table 2. Hyperparameter configurations of the chosen SELFormer models.
+546:Table 3. Classification-based molecular property prediction task (i.e. BACE, BBBP, HIV, Tox21 and SIDER) performance results of
+575:Table 4. Classification-based molecular property prediction task (i.e. BACE, BBBP, HIV, Tox21 and SIDER) performance results of
+610:Table 5. Regression-based molecular property prediction task (i.e. ESOL, FreeSolv, Lipophilicity, and PDBbind) performance results of
+680:Table 6. Regression-based molecular property prediction task (i.e. ESOL, FreeSolv, Lipophilicity, and PDBbind) performance results of
+700:Table 7. The ablation study results. Performance of pre-trained and fine-tuned (for 25 and 50 epochs) SELFormer models on
+754:Table 8. The ablation study results. Performance of pre-trained and fine-tuned (for 25 and 50 epochs) SELFormer models on
+
+                         SELFormer (ours)                  0.832           0.902             0.681             0.653             0.745
+                         MolBERT                           0.866           0.762             0.783              —                 —
+Text-based
+denoted with ‘—’.
+
+Model type               Model name                       ESOL              FreeSolv            Lipophilicity             PDBbind
+
+
+## arXiv v2 (arxiv_2304.04662v2.pdf)
+466:Table 3: The ablation study results. Performance of pre-trained and fine-tuned (for 25 and 50 epochs)
+482:Table 4: The ablation study results. Performance of pre-trained and fine-tuned (for 25 and 50 epochs)
+581:Table 6: Classification-based molecular property prediction task (i.e., BACE, BBBP, HIV, Tox21 and SIDER)
+647:Table 8: Regression-based molecular property prediction task (i.e., ESOL, FreeSolv, Lipophilicity, and
+
+                                          BACE      BBBP     HIV      Tox21     SIDER
+                                          ROC       ROC      ROC      ROC       ROC
+                       SELFormer          0.832     0.902    0.681    0.653     0.745
+                                        ESOL      FreeSolv    Lipophilicity    pdbbind
+                                        RMSE      RMSE        RMSE             RMSE
+                     SELFormer          0.682     2.797       0.735            1.488
+
+## arXiv v2: the two captions the grep above missed (leading space)
+508:Table 5: Classification-based molecular property prediction task (i.e., BACE, BBBP, HIV, Tox21 and SIDER)
+626:Table 7: Regression-based molecular property prediction task (i.e., ESOL, FreeSolv, Lipophilicity, and

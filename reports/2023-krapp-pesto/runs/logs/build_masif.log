@@ -1,0 +1,104 @@
+OK 2ayo.pdb1.gz items=2
+OK 2ayo.pdb2.gz items=4
+OK 3bh6.pdb1.gz items=3
+SKIP too_many_atoms 4bkx.pdb1.gz 8524
+OK 2c0l.pdb1.gz items=2
+OK 4c9b.pdb1.gz items=3
+OK 4dvg.pdb1.gz items=3
+OK 4etp.pdb1.gz items=4
+OK 1ewy.pdb1.gz items=4
+OK 1ewy.pdb2.gz items=2
+OK 2f4m.pdb1.gz items=4
+OK 2f4m.pdb2.gz items=8
+OK 1f6m.pdb1.gz items=6
+OK 1f6m.pdb2.gz items=6
+OK 3fhc.pdb1.gz items=2
+OK 3h6g.pdb1.gz items=12
+OK 4hdo.pdb1.gz items=3
+OK 1i2m.pdb1.gz items=3
+OK 1i2m.pdb2.gz items=3
+SKIP too_many_atoms 1i2m.pdb3.gz 8984
+OK 2i3t.pdb1.gz items=2
+OK 2i3t.pdb2.gz items=2
+OK 2i3t.pdb3.gz items=2
+OK 2i3t.pdb4.gz items=2
+OK 5j57.pdb1.gz items=10
+OK 1jtd.pdb1.gz items=7
+OK 4lvn.pdb1.gz items=9
+OK 4m0w.pdb1.gz items=4
+OK 3mca.pdb1.gz items=2
+SKIP too_many_atoms 1nca.pdb1.gz 26308
+SKIP too_many_atoms 1nca.pdb2.gz 45940
+OK 3nvn.pdb1.gz items=8
+SKIP too_many_atoms 3o5t.pdb1.gz 10347
+OK 2pms.pdb1.gz items=8
+OK 2pms.pdb2.gz items=8
+OK 3qml.pdb1.gz items=9
+OK 3qml.pdb2.gz items=6
+OK 2qxv.pdb1.gz items=2
+OK 3rt0.pdb1.gz items=3
+OK 3rt0.pdb2.gz items=3
+OK 3sja.pdb1.gz items=9
+OK 3sja.pdb2.gz items=7
+OK 3sja.pdb3.gz items=7
+OK 5tih.pdb1.gz items=6
+OK 4v0o.pdb1.gz items=4
+OK 4v0o.pdb2.gz items=4
+OK 4v0o.pdb3.gz items=4
+OK 4v0o.pdb4.gz items=4
+OK 2v3b.pdb1.gz items=4
+OK 2v9t.pdb1.gz items=2
+OK 3vv2.pdb1.gz items=11
+OK 3vyr.pdb1.gz items=2
+OK 1w1w.pdb1.gz items=3
+OK 1w1w.pdb2.gz items=3
+OK 1w1w.pdb3.gz items=3
+OK 1w1w.pdb4.gz items=3
+OK 1w1w.pdb5.gz items=6
+OK 1w1w.pdb6.gz items=6
+SKIP too_many_atoms 1wdw.pdb1.gz 9822
+SKIP too_many_atoms 1wdw.pdb2.gz 9912
+SKIP too_many_atoms 1wdw.pdb3.gz 9829
+OK 3wn7.pdb1.gz items=3
+OK 3wn7.pdb2.gz items=3
+OK 2wus.pdb1.gz items=2
+OK 2wus.pdb2.gz items=2
+OK 4x33.pdb1.gz items=12
+OK 1xg2.pdb1.gz items=2
+OK 4xl5.pdb1.gz items=2
+OK 1xqs.pdb1.gz items=3
+OK 1xqs.pdb2.gz items=3
+OK 2xwt.pdb1.gz items=11
+OK 4y61.pdb1.gz items=6
+OK 4yc7.pdb1.gz items=3
+OK 4yeb.pdb1.gz items=4
+OK 4zgy.pdb1.gz items=4
+OK 1zhh.pdb1.gz items=2
+OK 4zrj.pdb1.gz items=2
+OK 3zwl.pdb1.gz items=2
+OK 3zwl.pdb2.gz items=2
+done 602 contact records
+	Command being timed: "nice -n 19 env/.venv/bin/python -I scripts/build_subset.py repo data/list_masif.txt data/masif_subset.h5"
+	User time (seconds): 920.03
+	System time (seconds): 25.06
+	Percent of CPU this job got: 518%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:02.26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1322168
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1245
+	Minor (reclaiming a frame) page faults: 415785
+	Voluntary context switches: 68519
+	Involuntary context switches: 1206
+	Swaps: 0
+	File system inputs: 222360
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+exit 0

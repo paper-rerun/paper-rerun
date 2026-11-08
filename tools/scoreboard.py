@@ -26,12 +26,14 @@ AREAS = {
 	"protein fitness": "Biology", "protein design": "Biology", "cell imaging": "Biology",
 	"plant genomics": "Biology", "cosmology": "Physics", "particle physics": "Physics",
 	"materials / chemistry": "Materials and chemistry", "materials": "Materials and chemistry",
-	"machine learning": "Computing",
+	"machine learning": "Computing", "chemistry": "Materials and chemistry",
 	"weather and climate": "Earth sciences", "gravitational waves": "Physics",
 }
 
 # The main thing each rerun found, in one category, read from the report
 MAIN_ISSUE = {
+	"2023-krapp-pesto": "Test lists or evaluation commands not published",
+	"2023-yuksel-selformer": "Released checkpoints differ from the paper",
 	"2024-rasp-weatherbench2": "Code differs from the Methods",
 	"2023-abbott-gwtc3-population": "Settings behind one result not published",
 	"2023-huang-compleasm": "Reference data re-released",

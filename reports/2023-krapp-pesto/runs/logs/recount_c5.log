@@ -1,0 +1,5 @@
+n 53 nan {'key': 0, 'PeSTo': 0, 'MaSIF-site': 0, 'SPPIDER': 0, 'PSIVER': 0}
+medians {'PeSTo': 0.9247, 'MaSIF-site': 0.8002, 'SPPIDER': 0.7345, 'PSIVER': 0.6411}
+PeSTo strictly best of 4 (unrounded): 38
+argmax of rounded (notebook tie rule): 38
+exit 0

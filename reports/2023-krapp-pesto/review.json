@@ -1,0 +1,70 @@
+{
+ "issues": [
+  {
+   "severity": "major",
+   "where": "Results, MaSIF-site section: '51 ids give 53 items' and the list of ids with no item",
+   "problem": "Four ids give no item, not three, and the count is misstated. masif_pred_per_res.json holds 51 ids and masif_per_item.csv holds 47 unique sids. The ones with no item are 1NCA_N, 1WDW_H, 3O5T_A and 4BKX_B (build_masif.log: 'SKIP too_many_atoms 4bkx.pdb1.gz 8524', and 4bkx has only pdb1). So the 53 items come from 47 ids: 2AYO and 2F4M give three each, 1W1W and 3SJA two each. The report does mention 4bkx.pdb1 as also skipped, but it does not count 4BKX_B among the lost ids.",
+   "fix": "Applied: the section now reads '51 benchmark ids give 53 items from 47 ids' and lists all four missing ids, with the 8192-atom filter and runs/logs/build_masif.log as the evidence (1nca.pdb1-2, 1wdw.pdb1-3, 3o5t.pdb1, 4bkx.pdb1; the same filter also skipped 1i2m.pdb3, and 1I2M_A keeps its item from pdb1)."
+  },
+  {
+   "severity": "major",
+   "where": "Results, C5: 'We did not rerun SPPIDER or PSIVER, so we did not recount the 38', and the comment in compare.py saying the count is not possible",
+   "problem": "The recount is possible without running any model. The SPPIDER and PSIVER predictions ship in the repo (masif-site_benchmark/sppider_pred/*.pdb and psiver_pred/psiver_pdbs/*.pdb) and the notebook only reads their B-factor (cell 6). Scoring those predictions against the labels in our masif_subset.h5, with the same selection and the same bc_scoring, gives 53 items with no NaN, medians 0.7345 for SPPIDER and 0.6411 for PSIVER (0.73 and 0.64 in cell 7), and PeSTo strictly best of the four methods on 38 of 53, with both the full and the rounded values (argmax tie-break as in cell 9). PeSTo beats MaSIF-site alone on 42 of 53.",
+   "fix": "Applied: the section now reports our own count of 38 of 53 from the shipped predictions, with the two medians and the note that no model was run. Left for the next run: move the recount into compare.py or a separate script with a log under runs/logs/ so the number is traceable, and drop the 'not possible' comment."
+  },
+  {
+   "severity": "major",
+   "where": "Notes for the authors, note 4, and the '33 or 38' bullet",
+   "problem": "The note points at an inconsistency that does not exist. The report says the 38 'excludes ScanNet, although Fig. 2b compares against ScanNet too'. The Fig. 2b caption evaluates 'on two different testing datasets for ScanNet and MaSIF-site': ScanNet is on the other set, the 417. On the 53-structure set the text cites only MaSIF-site, SPPIDER and PSIVER, and the Fig2b-comparison sheet has only those four columns. The 33 comes from a ScanNet column that exists in the notebook (cell 9) and was never published for this set. So 'all other methods benchmarked here' is correct in context, and the note sends the authors an error they did not make.",
+   "fix": "Applied: note 4 is gone as a request for a change; what is left is a neutral flag that the notebook also scores ScanNet on the 53 MaSIF-site structures (best on 9), which the paper does not report and which does not affect the 38. The '33 or 38' bullet now says the notebook's 'best' column includes a ScanNet column the paper does not show, and that the paper and the Source Data count over MaSIF-site, SPPIDER and PSIVER only."
+  },
+  {
+   "severity": "major",
+   "where": "Results, the 1FSS and 4DX0 explanation ('and of 1FSS in 2024-10, all after the authors built their data') and note 5 ('Both entries were revised after 2023')",
+   "problem": "The 1FSS explanation cites the wrong revision, and the 4DX0 one leaves out its best evidence. From sources/rcsb_entry_*.json, field pdbx_audit_revision_category: for 4DX0, revision 3 (1.2, 2023-12-13) touched pdbx_struct_assembly, pdbx_struct_assembly_gen and pdbx_struct_oper_list, that is the biounit definition, which explains the label change; the report says only 'likely cause' without that detail. For 1FSS, the 2024-10-23 revision (1.5) touched only chem_comp_atom, chem_comp_bond, database_2, pdbx_entry_details and pdbx_modification_feature, no coordinates and no assembly. The assembly change was revision 1.4, 2021-06-02. Today's biounit 1 has 9482 atoms, twice the 4741 deposited (runs/logs/rcsb_revisions.log), so it became two copies of the asymmetric unit. The i_v3 models are from 2021-05-27, so the authors' dataset is probably older than 2021-06-02, but that is inference.",
+   "fix": "Applied: the paragraph now dates the 4DX0 assembly change to revision 1.2 (2023-12-13, with the three categories) and the 1FSS one to revision 1.4 (2021-06-02, biounit 1 at 9482 atoms against 4741 deposited), says both changes probably postdate the dataset build because the earliest checkpoints in the repo are from 2021-05-27, and says that was not proven. Note 5 now reads '1FSS in 2021-06, 4DX0 in 2023-12' instead of 'after 2023'."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, download step: '478 files' and '3 entries in both lists'",
+   "problem": "data/biounits_manifest.tsv has 478 lines with status 200, but 11 names appear twice with identical md5 (1f6m, 1jtd, 2v3b, 3bh6, 3nvn, 3qml, 3sja, 3vyr, 3zwl, 4x33, 4y61, all pdb1), and there are 467 .gz on disk. Those 11 entries are in both lists, the MaSIF one and the ScanNet one. data/list_masif.txt still has 2 duplicated lines (1f6m, 1jtd), which sorted(set()) removes. The '3 entries' given for the failed attempt appears in no file.",
+   "fix": "Applied: the line now reads '467 distinct files, 56 MB (478 downloads: the pdb1 of 11 entries was in both lists and was fetched twice, with identical md5)', and the failed first MaSIF build is explained by duplicated lines in the file list (h5 'name already exists'), with the script now removing duplicates."
+  },
+  {
+   "severity": "minor",
+   "where": "Results, ScanNet agreement paragraph",
+   "problem": "The agreement is stronger than the report states. Of the 416 sids, 410 match the Source Data to floating-point precision (|diff| < 1e-15, the same float). Five more differ by 1.5e-4 to 6.1e-4: 4L9L_A 0.00061, 1DXT_B 0.00025, 1QPN_A 0.00022, 1BJO_A 0.00017, 3BP8_A 0.00015. Saying this matters because it shows the labels are the same and that those five probably come from a small file drift.",
+   "fix": "Applied: the paragraph now says 410 of 416 sids reproduce the Source Data PeSTo_auc to floating-point precision, five differ by 1.5e-4 to 6.1e-4 (named), and 4DX0_A is the one real exception."
+  },
+  {
+   "severity": "minor",
+   "where": "Results, C3 against the SI",
+   "problem": "Our 0.9299 prints as 0.930 at three decimals and the SI says 0.929. The verdict uses the 0.93 from the paper text, which is what claims.json asks for, but a reader sees 0.930 against 0.929. Substituting the authors' value for 4DX0_A, our median over the same 416 sids falls to 0.9296, equal to the Source Data on those sids. The gap comes from 4DX0 and the missing 1FSS, not from the method.",
+   "fix": "Applied: the section now states the three-decimal comparison (0.930 against 0.929), the 0.9296 median with the authors' 4DX0_A value, and that the remaining gap to 0.9294 is the missing 1FSS_A."
+  },
+  {
+   "severity": "minor",
+   "where": "Tolerance section, 'Rounding of C1', and the tolerance method against PIPELINE.md",
+   "problem": "Two things. First, the 'round or truncate' rule was written after seeing that the authors' median at three decimals is exactly 0.925; truncation pushes the C1 ceiling from 0.925 to 0.930, but the notebook formats with ':.2f', which rounds, so truncation has no basis. It changes nothing: with rounding alone everything still passes (C1 0.9247 < 0.925, C3 0.9299 in [0.925, 0.935), C4 0.8693 in [0.865, 0.875)). Second, PIPELINE.md asks that, where there is Source Data, the tolerance come from a bootstrap of the median of the authors' values. That was not done. The band used is narrower, so it inflates nothing, but the deviation has to be on record.",
+   "fix": "Applied: 'Rounding of C1' now says the notebook rounds, so the truncation branch has no basis and every claim passes under rounding alone, and the report records that the bootstrap-based tolerance PIPELINE.md asks for was not computed, with the narrower band used instead."
+  },
+  {
+   "severity": "minor",
+   "where": "Pre-registration section, the freeze evidence",
+   "problem": "The time order rests on mtime alone, and the hash sits in the same folder it protects. Everything is consistent, but nothing outside the folder confirms it.",
+   "fix": "Left for the next run: commit claims.json and its hash to a repository before running. The report now states that the freeze evidence is internal."
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors, optional items",
+   "problem": "Three small things that may help the authors are missing. build_dataset.py writes contacts_rr5A_64nn_8192_wat.h5 and the notebook reads contacts_rr5A_64nn_8192.h5; the 410-sid agreement shows it is the same data, but the different name is confusing. The Methods says 'Subunits with a maximum of 8192 atoms', while the code discards the whole assembly at 8192 atoms or more (structure['xyz'].shape[0]); that filter is what removes 1NCA, 1WDW, 3O5T, 4BKX and, today, 1FSS. To build the sid, evaluate.py uses the whole chain (split(':')[0]) and the notebook uses only the first character ([3][0]); it changes nothing here, since all 53 items matched, but it is worth a line under 'Scoring'.",
+   "fix": "Applied: the three points are in the notes to the authors, and the sid construction difference is now a line in 'Scoring'."
+  },
+  {
+   "severity": "minor",
+   "where": "How this report was made, 'There has been no review by a second agent'",
+   "problem": "That sentence stopped being true once this review was done.",
+   "fix": "Applied: the section now says an adversarial review by a second agent (REVIEW.md) checked the hash, recomputed every number from the output files and recounted C5, that its corrections are applied, and that there has been no blind recomputation."
+  }
+ ]
+}

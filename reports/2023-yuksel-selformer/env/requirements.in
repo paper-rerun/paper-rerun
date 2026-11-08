@@ -1,0 +1,14 @@
+# Versions pinned to data/requirements.yml of the repo (conda env SELFormer_env).
+# torch goes in separately, from the PyTorch CPU index.
+transformers==4.26.1
+tokenizers==0.13.2
+datasets==2.9.0
+scikit-learn==1.2.1
+chemprop==1.5.2
+selfies==2.1.1
+pandarallel==1.6.4
+simpletransformers==0.63.9
+seqeval==1.2.2
+pyyaml==6.0
+# rdkit comes from conda-forge in the authors' env; chemprop does not declare it on PyPI
+rdkit==2023.3.1

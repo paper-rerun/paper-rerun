@@ -1,0 +1,51 @@
+[14:53:03] WARNING: not removing hydrogen atom without neighbors
+  0%|          | 0/7831 [00:00<?, ?it/s] 13%|█▎        | 1017/7831 [00:00<00:00, 10155.58it/s] 26%|██▌       | 2055/7831 [00:00<00:00, 10279.22it/s] 39%|███▉      | 3087/7831 [00:00<00:00, 10284.29it/s] 53%|█████▎    | 4155/7831 [00:00<00:00, 10438.62it/s] 66%|██████▋   | 5199/7831 [00:00<00:00, 10244.45it/s] 79%|███████▉  | 6225/7831 [00:00<00:00, 10207.46it/s] 93%|█████████▎| 7247/7831 [00:00<00:00, 10148.99it/s]100%|██████████| 7831/7831 [00:00<00:00, 10207.35it/s]
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+task=tox21 num_labels=12 rows_from_split=784 rows_after_selfies=784
+split sizes train/val/test = 6264/783/784
+{
+ "task": "tox21",
+ "split": "test",
+ "num_labels": 12,
+ "device": "cpu",
+ "n_from_split": 784,
+ "n_scored": 784,
+ "n_label_cells": 9408,
+ "n_positive_cells": 621,
+ "roc_auc_hard_pred": 0.6130683283220876,
+ "prc_auc_hard_pred": 0.371356214098412,
+ "roc_auc_probability": 0.7410499920556773,
+ "accuracy": 0.9299532312925171,
+ "precision": 0.44508670520231214,
+ "recall": 0.24798711755233493,
+ "f1": 0.31851085832471554,
+ "split_sizes": [
+  6264,
+  783,
+  784
+ ]
+}
+	Command being timed: "/mnt/e/Ciencia/noturno/2023-yuksel-selformer/env/.venv/bin/python -u /mnt/e/Ciencia/noturno/2023-yuksel-selformer/scripts/evaluate_multilabel.py --repo /mnt/e/Ciencia/noturno/2023-yuksel-selformer/repo --task tox21 --dataset /mnt/e/Ciencia/noturno/2023-yuksel-selformer/repo/data/finetuning_datasets/classification/tox21/tox21.csv --model /mnt/e/Ciencia/noturno/2023-yuksel-selformer/data/extracted/classification_models/SELFormer_tox21_scaffold_optimized --split test --use_cuda 0 --out /mnt/e/Ciencia/noturno/2023-yuksel-selformer/runs/out/tox21_test.csv"
+	User time (seconds): 315.71
+	System time (seconds): 18.78
+	Percent of CPU this job got: 294%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:53.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1441096
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4384
+	Minor (reclaiming a frame) page faults: 1040765
+	Voluntary context switches: 348409
+	Involuntary context switches: 537
+	Swaps: 0
+	File system inputs: 805032
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

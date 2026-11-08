@@ -1,0 +1,78 @@
+{
+ "paper": "Krapp, L. F., Abriata, L. A., Cortes Rodriguez, F., Dal Peraro, M. \"PeSTo: parameter-free geometric deep learning for accurate prediction of protein binding interfaces\". Nature Communications 14, 2175 (2023). DOI 10.1038/s41467-023-37701-8. Text read from Europe PMC PMC10113261 (sources/PMC10113261.xml); Supplementary Information = dl/MOESM1_ESM.pdf; Source Data = dl/MOESM6_ESM.xlsx.",
+ "code": "https://github.com/LBM-EPFL/PeSTo @ ba651aa29aaa839d0ee2c458dee90ca1f934d90a (licence CC BY-NC-SA 4.0). The 159 files under pdbs_test/ have ':' in their names and cannot be checked out on Windows; they are outputs of a disabled branch of the notebook and are not used.",
+ "stage": "pre-registration; no structure processed by the model, no dataset built, no AUC computed on our side. Only the authors' saved notebook outputs and Source Data were read (sources/authors_*.csv, sources/source_data_*.csv).",
+ "model": {
+  "weights": "repo/model/save/i_v4_1_2021-09-07_11-21/model_ckpt.pt (the file the notebook loads; README says i_v4_1 is the paper model)",
+  "code": "config.py, model.py, data_handler.py of that same folder, plus repo/src (as interface_ppi_benchmark.ipynb cells 2-4)",
+  "device": "CPU (the notebook uses cuda; changing the device is environment, not method). torch threads capped at 6."
+ },
+ "definitions_fixed_before_running": {
+  "structures": "PDB-format biological assembly files <id>.pdb<N>.gz from https://files.wwpdb.org/pub/pdb/data/biounit/PDB/divided/<mid>/, downloaded 2026-11-08. These are today's remediated files, not the 2021-2022 files the authors used.",
+  "dataset_build": "processing/build_dataset.py logic unchanged (r_thr 5.0 A, max_num_atoms 8192, max_num_nn 64, same molecule_ids, same order of clean_structure / tag_hetatm_chains / split_by_chain / filter_non_atomic_subunits / monomer skip / remove_duplicate_tagged_subunits / extract_all_contacts / pack / store), run on our downloaded files only, device cpu, no DataLoader workers, files in sorted order. Output h5 keeps the authors' layout.",
+  "interface_label": "residue in contact (any atom pair within 5 A) with another protein subunit of the same assembly; column 0 of the 5 interface types set by config_data l_types/r_types, exactly as notebook cell 5 (Dataset.set_types) and cell 6 (bc_scoring(y, p)[:,0], index 6 = ROC AUC via sklearn roc_auc_score).",
+  "masif_set": "items selected as notebook cell 5: select_by_sid on the 51 ids of masif-site_benchmark/masif_pred_per_res.json, AND select_by_interface_types(protein, all r_types). All PDB-format biounits of the 51 entries (pdb1 .. pdbN, N found by HTTP 404) are downloaded and built, so one id can give several items (other biounit, other model copy), as in the authors' 53 items. An item enters the median only if its residue count equals the length of the MaSIF-site prediction (notebook cell 6 condition). Duplicated items are kept, as in the notebook. Median by pandas (NaN skipped).",
+  "scannet_set": "the 417 sids (PDBID_CHAIN) in Source Data sheet Fig2b-ScanNet. The repo has no code or list for this benchmark, so we fix: biounit 1 only (Methods: 'We trained only on the first bioassembly'), model copy ':0', same build, same selection by interface types, same label and AUC as the MaSIF set. One item per sid. Median over sids with a defined AUC (NaN skipped).",
+  "rounding": "the paper prints two decimals. 'display consistent' = our value rounds OR truncates to the printed value."
+ },
+ "claims": [
+  {
+   "id": "C1_pesto_masif_median_auc",
+   "tier": "primary",
+   "quantity": "median per-item ROC AUC of PeSTo i_v4_1 for protein-protein interface residues on the MaSIF-site benchmark",
+   "paper_value": 0.92,
+   "location": "Results text ('PeSTo reaches a median ... ROC AUC of 0.92 against 0.8 for MaSIF-site') and Fig. 2b; notebook cell 7 '[PeSTo] mean=0.86, median=0.92'",
+   "n_paper": 53,
+   "tolerance": {
+    "accept_interval": "[0.915, 0.930)",
+    "basis": "display consistent with 0.92. The authors' own per-item values (cell 6, 3 decimals) have median 0.925, so their unrounded median sits just under 0.925; a small label drift from remediated PDB files can move it either way. No wider statistical tolerance: same weights, same code, deterministic inference."
+   },
+   "coverage_rule": "if fewer than 48 of the authors' 53 item keys (sources/authors_cell6_pesto_auc_per_item.csv) are rebuilt and enter the median, the claim can be at most 'partially reproduced', whatever the median."
+  },
+  {
+   "id": "C2_masif_site_median_auc",
+   "tier": "secondary",
+   "quantity": "median per-item ROC AUC of the MaSIF-site predictions shipped in masif_pred_per_res.json, scored against our rebuilt labels on the same items as C1",
+   "paper_value": 0.80,
+   "location": "Results text ('0.8 for MaSIF-site'), Fig. 2b; notebook cell 7 median=0.80",
+   "tolerance": {"accept_interval": "[0.795, 0.810)", "basis": "display consistent with 0.80"}
+  },
+  {
+   "id": "C3_pesto_scannet_median_auc",
+   "tier": "secondary",
+   "quantity": "median per-sid ROC AUC of PeSTo i_v4_1 on the 417 structures shared with the ScanNet benchmark",
+   "paper_value": 0.93,
+   "paper_value_si": 0.929,
+   "location": "Results text ('median ... ROC AUC of 0.93 against 0.87'), Fig. 2b, Supplementary Table 1 row Test (All): PeSTo 0.929, ScanNet-noMSA 0.869",
+   "n_paper": 417,
+   "tolerance": {
+    "accept_interval": "[0.925, 0.940)",
+    "basis": "display consistent with the text value 0.93. The SI value 0.929 is reported next to ours, not used for the verdict."
+   },
+   "coverage_rule": "if fewer than 396 of 417 sids (95%) give a defined AUC, at most 'partially reproduced'."
+  },
+  {
+   "id": "C4_scannet_nomsa_median_auc_from_source_data",
+   "tier": "check of the authors' data (not a rerun of ScanNet)",
+   "quantity": "median of column ScanNet-noMSA_auc in Source Data sheet Fig2b-ScanNet",
+   "paper_value": 0.87,
+   "tolerance": {"accept_interval": "[0.865, 0.880)", "basis": "display consistent with 0.87"},
+   "note": "ScanNet is not run. We only check that the authors' per-structure data gives the printed median."
+  },
+  {
+   "id": "C5_best_on_38_of_53",
+   "tier": "check of the authors' data",
+   "quantity": "number of the 53 MaSIF-benchmark rows where PeSTo has the highest ROC AUC among PeSTo, MaSIF-site, SPPIDER, PSIVER",
+   "paper_value": 38,
+   "location": "Results text ('higher ROC AUC than all other methods benchmarked here for 38 out of 53 structures')",
+   "tolerance": {"accept_interval": "exactly 38 from Source Data sheet Fig2b-comparison; the same count is also computed on our rebuilt values and reported, not used for the verdict"}
+  }
+ ],
+ "informational_not_for_verdict": [
+  "per-item agreement with the authors' cell 6 AUCs: number of items within 0.001 and within 0.01",
+  "per-sid agreement with Source Data PeSTo_auc on the 417 set",
+  "mean AUCs (notebook: PeSTo 0.86, MaSIF-site 0.79)"
+ ],
+ "verdict_rule": "Reproduced if C1 and C3 are inside their intervals with their coverage rules met. Partially if only one of them is, or a coverage rule fails. Not reproduced if C1 is outside its interval with coverage met. C2, C4, C5 are reported and can add notes, not change the verdict.",
+ "resource_limits": "medium mode: <= 6 CPU threads, nice 19, disk < 30 GB"
+}

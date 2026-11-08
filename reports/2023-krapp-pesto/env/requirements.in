@@ -1,0 +1,12 @@
+# Top-level deps from repo requirements.txt (no versions there; pesto.yml lists names only).
+# Versions resolved with --exclude-newer 2022-07-12 (last commit touching interface_ppi_benchmark.ipynb, kernel python 3.9.12)
+# torch==1.11.0+cpu is installed separately from https://download.pytorch.org/whl/cpu (that index has no upload dates)
+gemmi
+h5py
+numpy
+scipy
+pandas
+scikit-learn
+tqdm
+matplotlib
+openpyxl

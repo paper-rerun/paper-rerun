@@ -1,0 +1,9 @@
+claim                              task   tier         paper     ours      diff  prob-AUC  result
+C1_bbbp_scaffold_roc_auc           bbbp   primary      0.902   0.8913   -0.0107    0.9295  inside band
+C2_bace_scaffold_roc_auc           bace   secondary    0.832   0.7104   -0.1216    0.7628  outside band
+C3_hiv_scaffold_roc_auc            hiv    secondary    0.681        -         -         -  no published fine-tuned model
+C4_tox21_scaffold_roc_auc          tox21  secondary    0.653   0.6131   -0.0399    0.7410  outside band
+C5_sider_scaffold_roc_auc          sider  secondary    0.745   0.7180   -0.0270    0.7801  outside band
+
+primary claim C1_bbbp_scaffold_roc_auc: inside band
+bands fixed before the runs: display |d| < 0.001, accept |d| <= 0.02

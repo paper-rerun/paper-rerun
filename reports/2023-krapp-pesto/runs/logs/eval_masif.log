@@ -1,0 +1,79 @@
+items after selection: 53
+AY/2AYO/1/A:0 n_res=355 auc=0.909 masif=0.726
+AY/2AYO/2/A:0 n_res=355 auc=0.949 masif=0.812
+AY/2AYO/2/A:1 n_res=355 auc=0.949 masif=0.812
+BH/3BH6/1/B:0 n_res=314 auc=0.977 masif=0.809
+C0/2C0L/1/A:0 n_res=292 auc=0.906 masif=0.683
+C9/4C9B/1/B:0 n_res=277 auc=0.747 masif=0.591
+DV/4DVG/1/B:0 n_res=294 auc=0.980 masif=0.732
+ET/4ETP/1/A:0 n_res=379 auc=0.995 masif=0.947
+ET/4ETP/1/B:0 n_res=287 auc=0.993 masif=0.932
+EW/1EWY/1/A:0 n_res=303 auc=0.675 masif=0.799
+F4/2F4M/1/A:0 n_res=295 auc=0.982 masif=0.932
+F4/2F4M/2/A:0 n_res=295 auc=0.911 masif=0.764
+F4/2F4M/2/A:1 n_res=295 auc=0.911 masif=0.764
+F6/1F6M/1/A:0 n_res=320 auc=0.942 masif=0.792
+FH/3FHC/1/A:0 n_res=381 auc=0.380 masif=0.501
+H6/3H6G/1/B:0 n_res=383 auc=0.996 masif=0.947
+HD/4HDO/1/A:0 n_res=310 auc=0.891 masif=0.682
+I2/1I2M/1/B:0 n_res=388 auc=0.962 masif=0.631
+I3/2I3T/1/A:0 n_res=334 auc=0.972 masif=0.894
+J5/5J57/1/A:0 n_res=264 auc=0.551 masif=0.393
+JT/1JTD/1/B:0 n_res=273 auc=0.988 masif=0.972
+LV/4LVN/1/A:0 n_res=336 auc=0.860 masif=0.938
+M0/4M0W/1/A:0 n_res=317 auc=0.986 masif=0.842
+MC/3MCA/1/B:0 n_res=341 auc=0.922 masif=0.738
+NV/3NVN/1/A:0 n_res=383 auc=0.773 masif=0.797
+PM/2PMS/1/A:0 n_res=331 auc=0.745 masif=0.643
+QM/3QML/2/D:0 n_res=273 auc=0.891 masif=0.653
+QX/2QXV/1/A:0 n_res=352 auc=0.475 masif=0.962
+RT/3RT0/1/A:0 n_res=328 auc=0.936 masif=0.593
+SJ/3SJA/3/I:0 n_res=339 auc=0.932 masif=0.800
+SJ/3SJA/3/I:1 n_res=339 auc=0.932 masif=0.800
+TI/5TIH/1/A:0 n_res=326 auc=0.621 masif=0.393
+V0/4V0O/1/F:0 n_res=309 auc=0.950 masif=0.995
+V3/2V3B/1/A:0 n_res=381 auc=0.656 masif=0.901
+V9/2V9T/1/B:0 n_res=210 auc=0.948 masif=0.935
+VV/3VV2/1/A:0 n_res=320 auc=0.856 masif=0.752
+VY/3VYR/1/B:0 n_res=371 auc=0.978 masif=0.888
+W1/1W1W/1/B:0 n_res=327 auc=0.986 masif=0.940
+W1/1W1W/5/B:0 n_res=327 auc=0.933 masif=0.847
+WN/3WN7/1/A:0 n_res=286 auc=0.982 masif=0.677
+WU/2WUS/1/A:0 n_res=335 auc=0.501 masif=0.863
+X3/4X33/1/B:0 n_res=324 auc=0.973 masif=0.917
+XG/1XG2/1/A:0 n_res=317 auc=0.591 masif=0.793
+XL/4XL5/1/C:0 n_res=245 auc=0.949 masif=0.915
+XQ/1XQS/1/A:0 n_res=264 auc=0.934 masif=0.831
+XW/2XWT/1/C:0 n_res=234 auc=0.906 masif=0.926
+Y6/4Y61/1/B:0 n_res=235 auc=0.829 masif=0.706
+YC/4YC7/1/B:0 n_res=291 auc=0.925 masif=0.785
+YE/4YEB/1/A:0 n_res=267 auc=0.611 masif=0.533
+ZG/4ZGY/1/A:0 n_res=383 auc=0.960 masif=0.774
+ZH/1ZHH/1/A:0 n_res=344 auc=0.699 masif=0.646
+ZR/4ZRJ/1/A:0 n_res=302 auc=0.730 masif=0.906
+ZW/3ZWL/1/B:0 n_res=339 auc=0.860 masif=0.811
+rows: 53
+	Command being timed: "nice -n 19 env/.venv/bin/python -I scripts/evaluate.py /mnt/e/Ciencia/noturno/2023-krapp-pesto/repo /mnt/e/Ciencia/noturno/2023-krapp-pesto/data/masif_subset.h5 masif /mnt/e/Ciencia/noturno/2023-krapp-pesto/runs/out/masif_per_item.csv"
+	User time (seconds): 4415.40
+	System time (seconds): 288.83
+	Percent of CPU this job got: 568%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:48.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1127672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2258
+	Minor (reclaiming a frame) page faults: 4620905
+	Voluntary context switches: 115404
+	Involuntary context switches: 4893
+	Swaps: 0
+	File system inputs: 384816
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+exit 0

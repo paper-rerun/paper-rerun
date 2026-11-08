@@ -1,0 +1,4 @@
+classification_models/SELFormer_bace_scaffold_optimized/
+classification_models/SELFormer_bbbp_scaffold_optimized/
+classification_models/SELFormer_sider_scaffold_optimized/
+classification_models/SELFormer_tox21_scaffold_optimized/

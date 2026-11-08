@@ -1,0 +1,22 @@
+{
+ "task": "tox21",
+ "split": "test",
+ "num_labels": 12,
+ "device": "cpu",
+ "n_from_split": 784,
+ "n_scored": 784,
+ "n_label_cells": 9408,
+ "n_positive_cells": 621,
+ "roc_auc_hard_pred": 0.6130683283220876,
+ "prc_auc_hard_pred": 0.371356214098412,
+ "roc_auc_probability": 0.7410499920556773,
+ "accuracy": 0.9299532312925171,
+ "precision": 0.44508670520231214,
+ "recall": 0.24798711755233493,
+ "f1": 0.31851085832471554,
+ "split_sizes": [
+  6264,
+  783,
+  784
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "paper": "Yuksel, A., Ulusoy, E., Unlu, A., Dogan, T. \"SELFormer: molecular representation learning via SELFIES language models\". Machine Learning: Science and Technology 4, 025035 (2023), published 29 June 2023. DOI 10.1088/2632-2153/acdb30. Numbers are read from the published MLST PDF (sources/mlst_acdb30.pdf, sha256 0a50e3958d2b8d740638bf8b347ada89653143d8774611368c5129c782399917). arXiv v2 (sources/arxiv_2304.04662v2.pdf) is kept for the record: it carries the same values under different table numbers.",
+ "table_numbering": "In the published MLST version the classification results on scaffold splits are Table 3 and the regression results on scaffold splits are Table 5. The triage note used the arXiv v2 numbering, where the same two tables are Table 5 and Table 7. Both PDFs were read here with pdftotext (runs/logs/read_tables.log); the SELFormer rows are identical in both: BACE 0.832, BBBP 0.902, HIV 0.681, Tox21 0.653, SIDER 0.745; ESOL 0.682, FreeSolv 2.797, Lipophilicity 0.735, PDBbind 1.488.",
+ "code": "https://github.com/HUBioDataLab/SELFormer @ 4969ca14dc403ccb6c478ad83e719c0f6bc35d22 (2026-05-06, HEAD on 2026-11-08). Licence GPLv3. The evaluation-relevant files train_classification_model.py and prepare_finetuning_data.py are byte-identical to commit 8ae5618 (2023-06-17, 'updated fine-tuned model prediction scripts and readme'), the first commit after publication; only binary_class_pred.py, multilabel_class_pred.py and train_classification_multilabel_model.py changed after that, in ways that do not touch the split or the metric.",
+ "stage": "pre-registration; at the time of freezing no split had been rebuilt, no model loaded and no AUC computed. Only the repo, the two paper PDFs and the Drive archive listing had been read, and the classification archive download had been started.",
+ "model": {
+  "weights": "data/finetuned_models/SELFormer_<task>_scaffold_optimized from classification_models.zip (3.0 GB), Google Drive file id 14jLOvTQxzJfkhpY1j9OAzT1qgv8v8CFd, the 'finetuned models' folder linked in the README. Downloaded over plain HTTPS with no Google account. regression_models.zip (4.8 GB, id 1O1LfFaisE029wuGY3ajR9mkpGMt04vLz) is not downloaded.",
+  "device": "CPU, torch threads capped at 6, nice 19. If a GPU run is added it is reported per number, and the CPU value is the one used for the verdict.",
+  "inference": "deterministic: no dropout at eval, no sampling, fixed weights."
+ },
+ "definitions_fixed_before_running": {
+  "split": "the repo's own code, unchanged: prepare_finetuning_data.train_val_test_split (binary) and train_val_test_split_multilabel (multi-label), with scaffold_split=True, which calls chemprop.data.scaffold.scaffold_split(sizes=(0.8, 0.1, 0.1), seed=42, balanced=True). chemprop is pinned to 1.5.2, the version in the repo's current data/requirements.yml. The paper-era requirements file (commit 8ae5618) pinned chemprop 1.4.1 instead; if 1.4.1 gives a different test set, that is reported as an alternative reading and does not change the verdict.",
+  "dataset_files": "the CSVs shipped in the repo: data/finetuning_datasets/classification/{bbbp,bace,hiv,tox21,sider}/<name>.csv. target_column_id as in the README (1 for bbbp, bace, hiv).",
+  "selfies_conversion": "prepare_finetuning_data.smiles_to_selfies unchanged, which drops every row whose SELFIES string equals its SMILES string (conversion failure), as in training.",
+  "metric_primary": "exactly what the authors' code reports: sklearn.metrics.roc_auc_score(y_true=test targets, y_score=argmax(logits, axis=1)) on the scaffold test split. This is the ROC AUC of hard 0/1 predictions, not of scores. For the two multi-label tasks it is roc_auc_score over the flattened label matrix against the flattened 0/1 predictions of simpletransformers' MultiLabelClassificationModel (threshold 0.5), as in train_classification_multilabel_model.py.",
+  "metric_informational": "the same test sets scored the standard way, with the class-1 softmax probability (binary) or the per-label sigmoid output (multi-label), reported next to the primary number and never used for the verdict.",
+  "max_len": 128,
+  "no_training": "nothing is fine-tuned here. The published fine-tuned checkpoints are used as they are."
+ },
+ "claims": [
+  {
+   "id": "C1_bbbp_scaffold_roc_auc",
+   "tier": "primary",
+   "quantity": "ROC AUC of the published fine-tuned SELFormer model on the rebuilt BBBP scaffold test split",
+   "paper_value": 0.902,
+   "location": "MLST Table 3, row 'SELFormer (ours)', column BBBP (arXiv v2 Table 5)",
+   "n_dataset": 2039,
+   "tolerance": {
+    "display_consistent": "|ours - 0.902| < 0.001, i.e. our value rounds or truncates to the printed 0.902",
+    "accept_interval": "[0.882, 0.922]",
+    "basis": "the weights and the code are the authors' own and inference is deterministic, so a display-consistent match is what a clean reproduction looks like. The 0.02 band is allowed only because we rebuild the split ourselves: a package-version difference in chemprop's scaffold grouping can move a few molecules between splits, and the BBBP test split holds about 204 molecules, where one molecule is worth roughly 0.005 of AUC. A value inside the wider band but outside the display band counts as partially reproduced, not reproduced."
+   },
+   "coverage_rule": "the rebuilt test split must keep at least 90% of the expected rows (about 204 for BBBP, 10% of 2039, minus SELFIES conversion failures). If it keeps fewer, the claim is at most partially reproduced whatever the AUC."
+  },
+  {
+   "id": "C2_bace_scaffold_roc_auc",
+   "tier": "secondary",
+   "quantity": "same as C1 on BACE",
+   "paper_value": 0.832,
+   "location": "MLST Table 3, column BACE",
+   "n_dataset": 1513,
+   "tolerance": {"display_consistent": "|ours - 0.832| < 0.001", "accept_interval": "[0.812, 0.852]", "basis": "as C1"}
+  },
+  {
+   "id": "C3_hiv_scaffold_roc_auc",
+   "tier": "secondary",
+   "quantity": "same as C1 on HIV",
+   "paper_value": 0.681,
+   "location": "MLST Table 3, column HIV",
+   "n_dataset": 41127,
+   "tolerance": {"display_consistent": "|ours - 0.681| < 0.001", "accept_interval": "[0.661, 0.701]", "basis": "as C1, though the HIV test split is about 4100 molecules, so split drift matters less"}
+  },
+  {
+   "id": "C4_tox21_scaffold_roc_auc",
+   "tier": "secondary",
+   "quantity": "same as C1 on Tox21, multi-label, micro over the flattened 12-label matrix",
+   "paper_value": 0.653,
+   "location": "MLST Table 3, column Tox21",
+   "n_dataset": 7831,
+   "tolerance": {"display_consistent": "|ours - 0.653| < 0.001", "accept_interval": "[0.633, 0.673]", "basis": "as C1"}
+  },
+  {
+   "id": "C5_sider_scaffold_roc_auc",
+   "tier": "secondary",
+   "quantity": "same as C1 on SIDER, multi-label, micro over the flattened 27-label matrix",
+   "paper_value": 0.745,
+   "location": "MLST Table 3, column SIDER",
+   "n_dataset": 1427,
+   "tolerance": {"display_consistent": "|ours - 0.745| < 0.001", "accept_interval": "[0.725, 0.765]", "basis": "as C1"}
+  },
+  {
+   "id": "C6_regression_scaler_reading",
+   "tier": "code reading, no run",
+   "quantity": "whether the regression RMSE of MLST Table 5 (arXiv v2 Table 7) is computed on targets standardized with statistics taken from the test set itself",
+   "paper_value": "ESOL 0.682, FreeSolv 2.797, Lipophilicity 0.735, PDBbind 1.488",
+   "expected_finding": "train_regression_model.py with --scaler=2 fits the scaler on each split separately, including the test split, so the reported RMSE is in units of the test split's own standard deviation and is not comparable with an RMSE in the original units. This is read from the code and quoted in the report. It is not fixed, not rerun, and the regression models are not downloaded.",
+   "not_for_verdict": true
+  }
+ ],
+ "informational_not_for_verdict": [
+  "the probability-based ROC AUC on the same test splits",
+  "accuracy, precision, recall and F1 on the test splits",
+  "the same metric on the rebuilt train split, as an indication of whether the published checkpoint saw our test molecules during fine-tuning",
+  "the test-split AUC under chemprop 1.4.1 (the paper-era pin), if that split differs",
+  "a CPU-versus-GPU check of one dataset"
+ ],
+ "verdict_rule": "Reproduced if C1 is display-consistent with 0.902 and its coverage rule is met. Partially reproduced if C1 lands inside [0.882, 0.922] but not display-consistent, or if the coverage rule fails. Not reproduced if C1 falls outside [0.882, 0.922] with coverage met. C2 to C5 are reported and can add notes; they do not change the verdict. C6 is a finding, not a claim about our numbers.",
+ "resource_limits": "medium mode: at most 6 CPU threads, nice 19, under 30 GB in this folder, GPU at most half of the 8 GB and only one process at a time."
+}

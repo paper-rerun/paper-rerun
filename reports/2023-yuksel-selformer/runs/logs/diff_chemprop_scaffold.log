@@ -1,0 +1,76 @@
+1.4.1 -> https://files.pythonhosted.org/packages/01/6c/332059382c562cdfbd8daef3682c87331fbb5f205f82e18335323d4e9e6e/chemprop-1.4.1.tar.gz
+1.5.2 -> https://files.pythonhosted.org/packages/55/ca/9a346541df7fc06d2ef1dca87ff3aa25e8dee34420a954d219211d42cd7c/chemprop-1.5.2.tar.gz
+=== diff of chemprop/data/scaffold.py, 1.4.1 vs 1.5.2 ===
+--- x1.4.1/chemprop-1.4.1/chemprop/data/scaffold.py	2022-01-20 23:26:15.000000000 -0300
++++ x1.5.2/chemprop-1.5.2/chemprop/data/scaffold.py	2022-06-23 14:15:47.000000000 -0300
+@@ -70,7 +70,8 @@
+     :return: A tuple of :class:`~chemprop.data.MoleculeDataset`\ s containing the train,
+              validation, and test splits of the data.
+     """
+-    assert sum(sizes) == 1
++    if not (len(sizes) == 3 and np.isclose(sum(sizes), 1)):
++        raise ValueError(f"Invalid train/val/test splits! got: {sizes}")
+ 
+     # Split
+     train_size, val_size, test_size = sizes[0] * len(data), sizes[1] * len(data), sizes[2] * len(data)
+=== scaffold_split signature in 1.5.2 ===
+def scaffold_split(data: MoleculeDataset,
+                   sizes: Tuple[float, float, float] = (0.8, 0.1, 0.1),
+                   balanced: bool = False,
+                   key_molecule_index: int = 0,
+                   seed: int = 0,
+                   logger: logging.Logger = None) -> Tuple[MoleculeDataset,
+                                                           MoleculeDataset,
+                                                           MoleculeDataset]:
+    r"""
+    Splits a :class:`~chemprop.data.MoleculeDataset` by scaffold so that no molecules sharing a scaffold are in different splits.
+
+    :param data: A :class:`MoleculeDataset`.
+    :param sizes: A length-3 tuple with the proportions of data in the train, validation, and test sets.
+    :param balanced: Whether to balance the sizes of scaffolds in each set rather than putting the smallest in test set.
+    :param key_molecule_index: For data with multiple molecules, this sets which molecule will be considered during splitting.
+    :param seed: Random seed for shuffling when doing balanced splitting.
+    :param logger: A logger for recording output.
+    :return: A tuple of :class:`~chemprop.data.MoleculeDataset`\ s containing the train,
+             validation, and test splits of the data.
+    """
+    if not (len(sizes) == 3 and np.isclose(sum(sizes), 1)):
+        raise ValueError(f"Invalid train/val/test splits! got: {sizes}")
+
+    # Split
+    train_size, val_size, test_size = sizes[0] * len(data), sizes[1] * len(data), sizes[2] * len(data)
+    train, val, test = [], [], []
+    train_scaffold_count, val_scaffold_count, test_scaffold_count = 0, 0, 0
+
+    # Map from scaffold to index in the data
+    key_mols = [m[key_molecule_index] for m in data.mols(flatten=False)]
+    scaffold_to_indices = scaffold_to_smiles(key_mols, use_indices=True)
+
+    # Seed randomness
+    random = Random(seed)
+
+    if balanced:  # Put stuff that's bigger than half the val/test size into train, rest just order randomly
+        index_sets = list(scaffold_to_indices.values())
+        big_index_sets = []
+        small_index_sets = []
+        for index_set in index_sets:
+            if len(index_set) > val_size / 2 or len(index_set) > test_size / 2:
+                big_index_sets.append(index_set)
+            else:
+                small_index_sets.append(index_set)
+        random.seed(seed)
+        random.shuffle(big_index_sets)
+        random.shuffle(small_index_sets)
+        index_sets = big_index_sets + small_index_sets
+    else:  # Sort from largest to smallest scaffold sets
+        index_sets = sorted(list(scaffold_to_indices.values()),
+                            key=lambda index_set: len(index_set),
+                            reverse=True)
+
+    for index_set in index_sets:
+        if len(train) + len(index_set) <= train_size:
+            train += index_set
+            train_scaffold_count += 1
+        elif len(val) + len(index_set) <= val_size:
+            val += index_set
+            val_scaffold_count += 1

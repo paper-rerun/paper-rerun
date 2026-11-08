@@ -1,0 +1,38 @@
+===== bbbp
+scalar tags:
+    221 train/epoch
+    200 eval/steps_per_second
+    200 eval/samples_per_second
+    200 eval/runtime
+    200 eval/roc-auc
+    200 eval/recall
+    200 eval/precision
+    200 eval/prc-auc
+    200 eval/loss
+    200 eval/accuracy
+eval/roc-auc: n=200 max=0.804365 min=0.586207 last=0.784234
+eval/prc-auc: n=200 max=0.967405 min=0.939086 last=0.964014
+eval/accuracy: n=200 max=0.900990 min=0.801980 last=0.876238
+eval/f1: n=200 max=0.942857 min=0.875776 last=0.926686
+eval/loss: n=200 max=1.457060 min=0.335053 last=1.277201
+===== bace
+scalar tags:
+    104 train/epoch
+    100 eval/steps_per_second
+    100 eval/samples_per_second
+    100 eval/runtime
+    100 eval/roc-auc
+    100 eval/recall
+    100 eval/precision
+    100 eval/prc-auc
+    100 eval/loss
+    100 eval/accuracy
+eval/roc-auc: n=100 max=0.839568 min=0.665701 last=0.790745
+eval/prc-auc: n=100 max=0.879765 min=0.780758 last=0.852587
+eval/accuracy: n=100 max=0.841060 min=0.675497 last=0.794702
+eval/f1: n=100 max=0.840764 min=0.524272 last=0.759690
+eval/loss: n=100 max=1.814975 min=0.390693 last=1.646554
+===== sider
+scalar tags:
+===== tox21
+scalar tags:

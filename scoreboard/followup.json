@@ -29,6 +29,20 @@
  },
  {
   "kind": "Issue",
+  "paper": "PeSTo",
+  "repository": "LBM-EPFL/PeSTo",
+  "ask": "Ship or document the benchmark subset of contacts_rr5A_64nn_8192.h5 (issue #3); publish the 417-structure ScanNet list and state \"biounit 1, first model copy\" in the Methods; rename the pdbs_test/ files that hold \":\" and break git clone on Windows; say that the \"38 out of 53\" counts MaSIF-site, SPPIDER and PSIVER only; pin versions.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
+  "paper": "SELFormer",
+  "repository": "HUBioDataLab/SELFormer",
+  "ask": "The published checkpoints score below Table 3 on all four tasks we can check, while matching the authors' own TensorBoard logs on validation: which run produced the table? train_classification_model.py --use_scaffold=1 crashes as released (string labels into torch.tensor(..., dtype=torch.long)); no HIV model in the download; which scaler setting produced the Table 5 RMSE; which versions produced the published weights.",
+  "status": "ready"
+ },
+ {
+  "kind": "Issue",
   "paper": "WeatherBench 2",
   "repository": "google-research/weatherbench2",
   "ask": "Say in the docs that the paper's T850 values use the below-ground mask (0.8-3.2% effect); why the 2026 GraphCast benchmark files differ from evaluate.py by up to 0.58%; small fixes to the paper text.",

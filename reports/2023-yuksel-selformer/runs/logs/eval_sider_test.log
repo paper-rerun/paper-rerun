@@ -1,0 +1,63 @@
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+[14:51:54] WARNING: not removing hydrogen atom without neighbors
+  0%|          | 0/1427 [00:00<?, ?it/s]  3%|▎         | 48/1427 [00:00<00:05, 264.96it/s] 14%|█▍        | 198/1427 [00:00<00:01, 647.22it/s] 22%|██▏       | 310/1427 [00:00<00:01, 783.99it/s] 28%|██▊       | 394/1427 [00:00<00:01, 651.04it/s] 63%|██████▎   | 900/1427 [00:00<00:00, 1837.62it/s] 84%|████████▍ | 1200/1427 [00:00<00:00, 2155.97it/s]100%|██████████| 1427/1427 [00:01<00:00, 1138.30it/s]
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+task=sider num_labels=27 rows_from_split=144 rows_after_selfies=144
+split sizes train/val/test = 1141/142/144
+{
+ "task": "sider",
+ "split": "test",
+ "num_labels": 27,
+ "device": "cpu",
+ "n_from_split": 144,
+ "n_scored": 144,
+ "n_label_cells": 3888,
+ "n_positive_cells": 2359,
+ "roc_auc_hard_pred": 0.718012171633844,
+ "prc_auc_hard_pred": 0.8459349993963292,
+ "roc_auc_probability": 0.7800569517795143,
+ "accuracy": 0.7325102880658436,
+ "precision": 0.7760569275847635,
+ "recall": 0.7859262399321747,
+ "f1": 0.780960404380792,
+ "split_sizes": [
+  1141,
+  142,
+  144
+ ]
+}
+	Command being timed: "/mnt/e/Ciencia/noturno/2023-yuksel-selformer/env/.venv/bin/python -u /mnt/e/Ciencia/noturno/2023-yuksel-selformer/scripts/evaluate_multilabel.py --repo /mnt/e/Ciencia/noturno/2023-yuksel-selformer/repo --task sider --dataset /mnt/e/Ciencia/noturno/2023-yuksel-selformer/repo/data/finetuning_datasets/classification/sider/sider.csv --model /mnt/e/Ciencia/noturno/2023-yuksel-selformer/data/extracted/classification_models/SELFormer_sider_scaffold_optimized --split test --use_cuda 0 --out /mnt/e/Ciencia/noturno/2023-yuksel-selformer/runs/out/sider_test.csv"
+	User time (seconds): 62.30
+	System time (seconds): 7.85
+	Percent of CPU this job got: 82%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:24.56
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1352920
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4427
+	Minor (reclaiming a frame) page faults: 372353
+	Voluntary context switches: 419425
+	Involuntary context switches: 307
+	Swaps: 0
+	File system inputs: 813152
+	File system outputs: 224
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

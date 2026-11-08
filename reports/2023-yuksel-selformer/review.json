@@ -1,0 +1,124 @@
+{
+ "issues": [
+  {
+   "severity": "major",
+   "where": "What it took, step 3 (Environment), including 'transformers is the authors' exact version'",
+   "problem": "The environment the report follows is the 2026 one, not the one from publication. repo/data/requirements.yml was rewritten in commit 4969ca1 (2026-05-06), 'Update conda channels and dependency pins'. The paper-era file, at 8ae5618 (June 2023), pins python 3.8.12, pytorch 1.10.1, transformers 4.15.0, datasets 1.18.3, simpletransformers 0.63.6, chemprop 1.4.1, numpy 1.21.2, pandas 1.3.4. HEAD pins python 3.10, pytorch 1.13.1, transformers 4.26.1, datasets 2.9.0, simpletransformers 0.63.9, chemprop 1.5.2, and our env uses torch 2.0.1 with numpy 1.25.0 and pandas 2.0.3. So the section describes as 'the authors' pins' a file the authors changed three years after the paper, and the sentence 'transformers is the authors' exact version' is wrong on five packages, not on one (the report declares only the torch deviation). claims.json already knew the paper-era file pinned chemprop 1.4.1, but looked only at chemprop. No number changes, and the match with the authors' own logs is the empirical control showing the version drift does not move these logits, but as published it is a false statement of fact.",
+   "fix": "Applied: step 3 now lists both pin files with their commits, says plainly that we followed the current file plus rdkit 2023.3.1 and torch 2.0.1, names the six packages where our stack is newer than the one that produced the published weights, and adds why that does not sink the result (the validation run reproduces the authors' March 2023 logs bit for bit on three metrics per task). The 'authors' exact version' sentence is removed."
+  },
+  {
+   "severity": "major",
+   "where": "Notes for the authors, note 4, and the conclusion paragraph of the C6 section",
+   "problem": "The code reading is right (a scaler per split, no inverse_transform), but the conclusion that 'the Table 5 RMSE is in units of the test split's standard deviation' does not follow from it, and the published numbers contradict it. Target standard deviation from the repo CSVs against the published RMSE: ESOL 2.096 and 0.682 (0.33), FreeSolv 3.848 and 2.797 (0.73), Lipophilicity 1.203 and 0.735 (0.61), PDBbind 1.722 and 1.488 (0.86). All four are below 1 std. If Table 5 were in units of the test std, FreeSolv would be 2.8 standard deviations of error, nearly three times worse than predicting the test mean, and in original units 2.797 x 3.848 is about 10.8 kcal/mol. The 2.797 also sits next to D-MPNN's 2.082 and 'Hu et al' 2.830, which are in kcal/mol. The simpler reading is that the published values are in the property's own units and did not come from that code path. As written, the note sends the authors a defect that probably is not in the table, and PIPELINE.md step 9 asks for the issue to be raised as a question.",
+   "fix": "Applied: note 4 now asks which scaler setting produced the Table 5 RMSE, states the code reading, gives the four RMSE-over-std ratios and the D-MPNN comparison, says Table 5 is probably in the properties' own units and came from a different path, and records that the regression weights were not downloaded and nothing was rerun. The C6 conclusion paragraph carries the same caveat; the claim that the values are 'not comparable to the graph methods' is gone."
+  },
+  {
+   "severity": "major",
+   "where": "Materials, the weights line: zip size and sha256",
+   "problem": "The size is the uncompressed total, not the file. runs/logs/download_models.log shows 'classification_models.zip' at 3,231,394,364 bytes, and stat agrees. The 3,491,196,013 in the report is the sum of uncompressed sizes printed by 'unzip -l | tail -5' ('3491196013  114 files'). The published sha256 is of the 3,231,394,364-byte file, so the size and hash pair does not close.",
+   "fix": "Applied: the line now gives 3,231,394,364 bytes (3.0 GiB) with the sha256, and says the archive holds 114 entries uncompressing to 3,491,196,013 bytes across four model folders (BACE, BBBP, SIDER, Tox21)."
+  },
+  {
+   "severity": "major",
+   "where": "Device check, 'bit-identical' on GPU",
+   "problem": "The GPU run is not bit-identical. runs/out/bbbp_test.csv and bbbp_test_gpu.csv differ in size (52,463 and 52,424 bytes) and diverge at line 2. Column by column: logit0 differs on 171 of 205 rows (max 1.07e-4), logit1 on 174 (max 1.20e-4), prob1 on 51 (max 3.5e-5). The 0/1 predictions are all equal, which is why both AUCs come out the same: the hard-prediction AUC only reads the confusion table and the probability AUC only the ordering.",
+   "fix": "Applied: the Device check now reports the same two AUC values on GPU, states that 171 of 205 logit0 and 174 logit1 values differ by at most 1.2e-4, that no prediction flips and no rank changes, and that every number in the tables was produced on CPU."
+  },
+  {
+   "severity": "major",
+   "where": "Pre-registration and code sections, the description of commit 8ae5618",
+   "problem": "8ae5618 is the last commit before publication, not the first after it. git log --date=short puts 8ae5618 on 2023-06-17 and the paper on 2023-06-29; the next commit is 3fb4428, 2023-09-18, which only touches produce_embeddings.py. The error is in REPORT.md and also in the 'code' field of claims.json. It actually strengthens the argument: the evaluation files are the paper-era ones and nobody has touched them since before publication.",
+   "fix": "Applied: the sentence now reads that train_classification_model.py and prepare_finetuning_data.py are byte-identical to commit 8ae5618 (2023-06-17), the last commit before publication (29 June 2023), and to today's HEAD, so the split and the metric are the published ones."
+  },
+  {
+   "severity": "major",
+   "where": "Pre-registration section, the list of files changed after 8ae5618",
+   "problem": "claims.json lists three changed files; git diff --stat 8ae5618 HEAD gives seven: README.md, binary_class_pred.py, data/requirements.yml (362 lines), get_embeddings.py, multilabel_class_pred.py, produce_embeddings.py, train_classification_multilabel_model.py. The one left out is exactly the file the environment section leaned on (finding 1).",
+   "fix": "Applied: a line in the pre-registration section says the pre-registration lists three changed files while the full diff has seven, including data/requirements.yml rewritten in 2026, and that this omission is why the environment section first described the current pin file as the authors' own. The hash is frozen, so claims.json is left as it is and the correction is recorded in the report."
+  },
+  {
+   "severity": "major",
+   "where": "What it took, step 4 (what the evaluation script changes), and a missing note to the authors",
+   "problem": "The binary evaluation script changes more than the forward pass, and without that change the authors' code does not run. On the scaffold path, np.column_stack([smiles, targets]) produces a string array, so train_df.iloc[:, 1].tolist() returns ['1.0', '0.0', ...]. Tested in the project env: torch.tensor(['1.0','0.0'], dtype=torch.long) raises ValueError: too many dimensions 'str', which is what SELFIESTransfomers_Dataset.__init__ does. Our evaluate_binary.py escapes it with pd.to_numeric(df['target']).astype(int); the authors' roc_auc_score accepts the strings (it label_binarizes over np.unique), so the final number is the same, but the cast is a deviation and has to be declared. It is also a missing finding for the authors: train_classification_model.py --use_scaffold=1, the command on README line 109, does not run as published. That supports the report's conclusion, because Table 3 cannot have come from this file exactly as it stands in the repo. The multi-label script is fine, since it converts with dtype=np.float32.",
+   "fix": "Applied: step 4 now declares the pd.to_numeric cast alongside the plain torch loop and the fixed max_length=128 padding, and points at the new note. New note 7 to the authors states that the published scaffold command does not run, names the cast chain and the ValueError, says we had to add a numeric cast to score anything, notes the multi-label script is unaffected, and observes that whatever produced Table 3 therefore differs from the published file."
+  },
+  {
+   "severity": "major",
+   "where": "Results, the chemprop version bullet",
+   "problem": "The conclusion holds but the report claims more than the log shows. runs/logs/diff_chemprop_scaffold.log compares one file. Between 1.4.1 and 1.5.2 chemprop/data/data.py also changed a fair amount (MoleculeDatapoint gained gt_targets and lt_targets, and the is_reaction flags became per-molecule lists). We checked that chemprop/rdkit.py and the make_mols function are byte-identical and that the data.py changes do not alter how a plain SMILES becomes a mol, so the conclusion stands. Separately, claims.json lists under informational_not_for_verdict the 'test-split AUC under chemprop 1.4.1, if that split differs', and that was neither produced nor declared as skipped.",
+   "fix": "Applied: the bullet now names the single scaffold.py change (an assert becoming a raise ValueError), states that chemprop/rdkit.py and make_mols are byte-identical and that the data.py changes do not affect plain-SMILES mol construction, and says we did not install 1.4.1 and rerun the split because the pre-registration made that check conditional on the split differing and nothing indicates it does."
+  },
+  {
+   "severity": "major",
+   "where": "The one-line verdict",
+   "problem": "The claims.json rule is explicit and binding: C1 inside the band and outside the display band gives 'Partially reproduced', and C2 to C5 do not move the verdict, so the verdict stands. But PIPELINE.md says, under 'A ideia', that the paper verdict is the sum of the block verdicts, and here 3 of the 4 checkable secondary claims fell outside their bands, one of them by 0.12. The two rules do not agree, and a reader who sees only 'Partially reproduced' learns less than the report found.",
+   "fix": "Applied: the verdict line now reads 'Partially reproduced' with the qualifier that the primary claim (BBBP) lands inside the pre-registered band but not on the printed digits, that three of the four secondary claims with published weights fall outside their bands, and that the fifth has no model to score. Left for the next run: claims.json has to fix, before running, how the blocks add up to the paper verdict, not just the primary rule."
+  },
+  {
+   "severity": "minor",
+   "where": "Tolerance section, the per-molecule AUC figure ('roughly 0.005')",
+   "problem": "The verdict metric is (sensitivity + specificity)/2. The BBBP test split has 155 positives and 50 negatives, so one negative molecule moving between splits is worth 1/(2x50) = 0.01 and one positive 1/(2x155) = 0.0032. claims.json and the report say roughly 0.005. The 0.02 band is about two negative molecules, not four molecules. Nothing in the result changes, but the published justification carries the wrong number.",
+   "fix": "Applied: the section now gives 0.01 per negative and 0.0032 per positive on the BBBP test split (155 positives, 50 negatives) and says the band is about two negative molecules. The frozen claims.json text is left as it is."
+  },
+  {
+   "severity": "minor",
+   "where": "Results, the checkpoint comparison",
+   "problem": "The comparison is tautological. SELFormer_bbbp_scaffold_optimized/pytorch_model.bin and checkpoint-10200/pytorch_model.bin have the same sha256 (5074048a7449ff7a...), and so does the BACE pair (0d0c1eaef4cfc5ad...). So 'scoring the checkpoint gives the same number' was guaranteed: they are the same bytes. The point that matters, save_total_limit=1 and therefore no better checkpoint in the download, the report already makes.",
+   "fix": "Applied: the bullet now states that the folder root and the final checkpoint hold the same bytes, with both sha256 prefixes, and keeps the save_total_limit=1 and commented-out load_best_model_at_end argument plus the last logged eval step (10200 and 1900) as the step those weights come from."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, download timing ('about 6 minutes')",
+   "problem": "The curl progress bar in runs/logs/download_models.log closes at 0:01:49, at 28.2 MB/s. Between probe_drive.sh (14:33:47) and the finished zip (14:36:35) there are 2 min 48 s, counting the confirmation page.",
+   "fix": "Applied: the line now reads that the 3.0 GiB download took 1 min 49 s at 28 MB/s and the environment install about 25 minutes, most of it writing torch and the CUDA wheels onto the project drive."
+  },
+  {
+   "severity": "minor",
+   "where": "C6 section, '--scaler=2 for every regression task'",
+   "problem": "repo/README.md line 150 has a single regression command, the ESOL one, with --scaler=2; line 158 describes the flag and says the default is 0. There is no per-task command.",
+   "fix": "Applied: the sentence now says --scaler=2 is the value in the README's single regression example command."
+  },
+  {
+   "severity": "minor",
+   "where": "Materials, the licence line",
+   "problem": "There is no LICENSE or COPYING at the repo root. GPLv3 is stated in README.md, in the badge on line 5 and in the 'License' section (lines 222-229, 'Copyright (C) 2023 HUBioDataLab'). Also, scripts/evaluate_binary.py and scripts/evaluate_multilabel.py are the authors' test block with the training removed, so they are derivative work and have to be published under GPLv3.",
+   "fix": "Applied: the licence line now says GPLv3 as stated in the README, that there is no LICENSE file in the repo, and that our scripts/evaluate_*.py adapt the authors' code and are GPLv3 too."
+  },
+  {
+   "severity": "minor",
+   "where": "Notes for the authors, note 1",
+   "problem": "'the usual score-based ROC AUC that the competing methods in Table 3 report' is a statement about D-MPNN, MolCLR, KPGT and the others that nobody checked here. It is almost certainly true, but in a note to the authors it should be marked as an assumption.",
+   "fix": "Applied: the note now reads 'which is presumably what the competing methods in Table 3 report'."
+  },
+  {
+   "severity": "minor",
+   "where": "What it took, the CPU runs, and scripts/evaluate_binary.py",
+   "problem": "The script on disk was edited after the four CPU runs. Its mtime is 14:58:58, after the tests (14:49:34 to 14:54:03) and before the GPU run (15:00:57). From what the script holds today, the edit was the torch.cuda.set_per_process_memory_fraction(0.5) block, and the prints and JSON keys in the older logs match the current script. The GPU run with the edited script gives the same AUC, so nothing changes, but the file on disk is not literally what produced the CPU numbers and that has to be written down.",
+   "fix": "Applied: the report records that evaluate_binary.py was edited at 14:58:58, after the CPU runs and before the GPU run, that the edit was the GPU memory-fraction block, and that the file on disk is not literally the one that produced the CPU numbers."
+  },
+  {
+   "severity": "minor",
+   "where": "Pre-registration section, the claims.json 'table_numbering' field",
+   "problem": "The field says 'Both PDFs were read here with pdftotext (runs/logs/read_tables.log)'. That file's mtime is 15:03:06, well after the 14:37 freeze. The reading itself did happen before (the pdftotext .txt files are from 14:36:16 and 14:36:18), so the content is true; what did not exist was the log.",
+   "fix": "Applied: the report notes that the cited log was created 26 minutes after the freeze while the reading itself predates it. Left for the next run: cite only files that already exist, or write the log before freezing."
+  },
+  {
+   "severity": "minor",
+   "where": "Pre-registration section, the freeze evidence",
+   "problem": "The time order rests on mtime alone, and the hash sits in the same folder it protects. Everything is consistent and nothing was found out of order, but nothing outside the folder confirms it.",
+   "fix": "Left for the next run, same as the PeSTo review: commit claims.json and its hash to a repository before running. The report now states that the freeze evidence is internal."
+  },
+  {
+   "severity": "minor",
+   "where": "Alternative readings (three cheap ones not tested)",
+   "problem": "Three readings cost one line each and were not reported. The Table 3 BACE (0.832) is close to the Table 4 random-split value (0.836) and near its own validation peak (0.839568), while the Table 3 BBBP (0.902) has no such pair: random gives 0.863 and the validation peak 0.804365. SIDER appears as 0.745 in both tables, scaffold (Table 3) and random (Table 4), which may or may not be a three-decimal coincidence. The README trains BBBP with --num_epochs=25, while the published model has 200 evaluations at one per epoch, the last at step 10200 (51 steps per epoch); the SIDER model_args.json also says 200 and the Tox21 one says 25, so the README command does not rebuild the published model on three of the four tasks.",
+   "fix": "Applied: the three readings are in the report, one line each, with a neutral question to the authors about the repeated SIDER 0.745."
+  },
+  {
+   "severity": "minor",
+   "where": "How this report was made",
+   "problem": "'A single agent then built the environment...' and the paragraph after it do not mention any review, which stopped being true once this review was done.",
+   "fix": "Applied: the section now says an adversarial review by a second agent (REVIEW.md) checked the hash and the time order, recomputed every number from the output files, re-read the TensorBoard logs with an independent reader, hashed the checkpoints and the archive, and compared the paper-era and current pin files, that its corrections are applied, and that there has been no blind recomputation by a third agent."
+  }
+ ]
+}

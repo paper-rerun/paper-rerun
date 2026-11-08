@@ -1,0 +1,48 @@
+  0%|          | 0/1513 [00:00<?, ?it/s] 27%|██▋       | 402/1513 [00:00<00:00, 4015.15it/s] 58%|█████▊    | 871/1513 [00:00<00:00, 4407.43it/s] 91%|█████████▏| 1384/1513 [00:00<00:00, 4732.97it/s]100%|██████████| 1513/1513 [00:00<00:00, 4667.97it/s]
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+split=val rows_from_split=151 rows_after_selfies=151
+split sizes train/val/test = 1210/151/152
+{
+ "task": "bace",
+ "split": "val",
+ "device": "cpu",
+ "n_from_split": 151,
+ "n_scored": 151,
+ "n_positive": 73,
+ "roc_auc_hard_pred": 0.7907446434843696,
+ "prc_auc_hard_pred": 0.852586637031661,
+ "roc_auc_probability": 0.8836494555672637,
+ "accuracy": 0.7947019867549668,
+ "precision": 0.875,
+ "recall": 0.6712328767123288,
+ "f1": 0.7596899224806201,
+ "split_sizes": [
+  1210,
+  151,
+  152
+ ]
+}
+	Command being timed: "/mnt/e/Ciencia/noturno/2023-yuksel-selformer/env/.venv/bin/python -u /mnt/e/Ciencia/noturno/2023-yuksel-selformer/scripts/evaluate_binary.py --repo /mnt/e/Ciencia/noturno/2023-yuksel-selformer/repo --task bace --dataset /mnt/e/Ciencia/noturno/2023-yuksel-selformer/repo/data/finetuning_datasets/classification/bace/bace.csv --model /mnt/e/Ciencia/noturno/2023-yuksel-selformer/data/extracted/classification_models/SELFormer_bace_scaffold_optimized --tokenizer /mnt/e/Ciencia/noturno/2023-yuksel-selformer/repo/data/RobertaFastTokenizer --target_column_id 1 --split val --device cpu --batch_size 32 --out /mnt/e/Ciencia/noturno/2023-yuksel-selformer/runs/out/bace_val.csv"
+	User time (seconds): 67.48
+	System time (seconds): 7.57
+	Percent of CPU this job got: 112%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:06.84
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1249228
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4285
+	Minor (reclaiming a frame) page faults: 348306
+	Voluntary context switches: 279332
+	Involuntary context switches: 220
+	Swaps: 0
+	File system inputs: 787912
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

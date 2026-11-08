@@ -1,0 +1,89 @@
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+[14:55:04] WARNING: not removing hydrogen atom without neighbors
+  0%|          | 0/2039 [00:00<?, ?it/s] 39%|███▉      | 803/2039 [00:00<00:00, 8023.94it/s] 79%|███████▉  | 1606/2039 [00:00<00:00, 7437.35it/s]100%|██████████| 2039/2039 [00:00<00:00, 7733.31it/s]
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+EncoderError in to_selfies()
+split=val rows_from_split=203 rows_after_selfies=202
+split sizes train/val/test = 1631/203/205
+{
+ "task": "bbbp",
+ "split": "val",
+ "device": "cpu",
+ "n_from_split": 203,
+ "n_scored": 202,
+ "n_positive": 173,
+ "roc_auc_hard_pred": 0.7842336057404823,
+ "prc_auc_hard_pred": 0.964014206953313,
+ "roc_auc_probability": 0.8285828184173809,
+ "accuracy": 0.8762376237623762,
+ "precision": 0.9404761904761905,
+ "recall": 0.9132947976878613,
+ "f1": 0.9266862170087976,
+ "split_sizes": [
+  1631,
+  203,
+  205
+ ]
+}
+	Command being timed: "/mnt/e/Ciencia/noturno/2023-yuksel-selformer/env/.venv/bin/python -u /mnt/e/Ciencia/noturno/2023-yuksel-selformer/scripts/evaluate_binary.py --repo /mnt/e/Ciencia/noturno/2023-yuksel-selformer/repo --task bbbp --dataset /mnt/e/Ciencia/noturno/2023-yuksel-selformer/repo/data/finetuning_datasets/classification/bbbp/bbbp.csv --model /mnt/e/Ciencia/noturno/2023-yuksel-selformer/data/extracted/classification_models/SELFormer_bbbp_scaffold_optimized --tokenizer /mnt/e/Ciencia/noturno/2023-yuksel-selformer/repo/data/RobertaFastTokenizer --target_column_id 1 --split val --device cpu --batch_size 32 --out /mnt/e/Ciencia/noturno/2023-yuksel-selformer/runs/out/bbbp_val.csv"
+	User time (seconds): 80.62
+	System time (seconds): 8.73
+	Percent of CPU this job got: 137%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:04.81
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1245884
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4285
+	Minor (reclaiming a frame) page faults: 359296
+	Voluntary context switches: 279319
+	Involuntary context switches: 228
+	Swaps: 0
+	File system inputs: 787912
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

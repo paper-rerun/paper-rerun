@@ -1,0 +1,20 @@
+{
+ "task": "bbbp",
+ "split": "val",
+ "device": "cpu",
+ "n_from_split": 203,
+ "n_scored": 202,
+ "n_positive": 173,
+ "roc_auc_hard_pred": 0.7842336057404823,
+ "prc_auc_hard_pred": 0.964014206953313,
+ "roc_auc_probability": 0.8285828184173809,
+ "accuracy": 0.8762376237623762,
+ "precision": 0.9404761904761905,
+ "recall": 0.9132947976878613,
+ "f1": 0.9266862170087976,
+ "split_sizes": [
+  1631,
+  203,
+  205
+ ]
+}

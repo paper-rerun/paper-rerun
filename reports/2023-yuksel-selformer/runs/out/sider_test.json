@@ -1,0 +1,22 @@
+{
+ "task": "sider",
+ "split": "test",
+ "num_labels": 27,
+ "device": "cpu",
+ "n_from_split": 144,
+ "n_scored": 144,
+ "n_label_cells": 3888,
+ "n_positive_cells": 2359,
+ "roc_auc_hard_pred": 0.718012171633844,
+ "prc_auc_hard_pred": 0.8459349993963292,
+ "roc_auc_probability": 0.7800569517795143,
+ "accuracy": 0.7325102880658436,
+ "precision": 0.7760569275847635,
+ "recall": 0.7859262399321747,
+ "f1": 0.780960404380792,
+ "split_sizes": [
+  1141,
+  142,
+  144
+ ]
+}
