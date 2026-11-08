@@ -32,14 +32,14 @@
   "paper": "PeSTo",
   "repository": "LBM-EPFL/PeSTo",
   "ask": "Ship or document the benchmark subset of contacts_rr5A_64nn_8192.h5 (issue #3); publish the 417-structure ScanNet list and state \"biounit 1, first model copy\" in the Methods; rename the pdbs_test/ files that hold \":\" and break git clone on Windows; say that the \"38 out of 53\" counts MaSIF-site, SPPIDER and PSIVER only; pin versions; and the 53 prediction files in pdbs_test/ match no released checkpoint (median 0.90 instead of 0.92), so anyone measuring them concludes the paper overstates Fig. 2b.",
-  "status": "ready, blind rerun agrees"
+  "status": "posted"
  },
  {
   "kind": "Issue",
   "paper": "SELFormer",
   "repository": "HUBioDataLab/SELFormer",
   "ask": "The published checkpoints score below Table 3 on all four tasks we can check, while matching the authors' own TensorBoard logs on validation: which run produced the table? train_classification_model.py --use_scaffold=1 crashes as released (string labels into torch.tensor(..., dtype=torch.long)); no HIV model in the download; which scaler setting produced the Table 5 RMSE; which versions produced the published weights.",
-  "status": "ready, blind rerun agrees"
+  "status": "posted"
  },
  {
   "kind": "Issue",
