@@ -1,0 +1,24 @@
+{
+  "model": "/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/downloads/models/classification_models/SELFormer_bbbp_scaffold_optimized",
+  "dataset": "/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/repo/SELFormer/data/finetuning_datasets/classification/bbbp/bbbp.csv",
+  "target_column_id": 1,
+  "split_sizes_before_selfies_filter": {
+    "train": 1631,
+    "val": 203,
+    "test": 205
+  },
+  "n_test_scored": 202,
+  "n_test_dropped_by_selfies_filter": 3,
+  "n_train_scored": 1629,
+  "test_positives": 173,
+  "authors_roc_line_runs_unpatched": false,
+  "authors_roc_line_error": "ValueError: unknown format is not supported",
+  "roc_frozen_C1_hardlabels": 0.7842336057404823,
+  "prc_frozen_hardlabels": 0.964014206953313,
+  "roc_E1_probabilities": 0.8285828184173809,
+  "prc_E1_probabilities": 0.961277648546342,
+  "accuracy": 0.8762376237623762,
+  "eval_batch_size": 8,
+  "torch": "1.13.1+cu117",
+  "cuda": true
+}

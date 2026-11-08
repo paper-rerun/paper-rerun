@@ -1,0 +1,53 @@
+[16:45:14] WARNING: nINFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+{
+  "model": "/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/downloads/models/classification_models/SELFormer_sider_scaffold_optimized",
+  "dataset": "/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/repo/SELFormer/data/finetuning_datasets/classification/sider/sider.csv",
+  "num_labels": 27,
+  "split_sizes_before_selfies_filter": {
+    "train": 1141,
+    "val": 142,
+    "test": 144
+  },
+  "n_test_scored": 144,
+  "n_test_dropped_by_selfies_filter": 0,
+  "roc_frozen_C2_hardlabels_micro": 0.718012171633844,
+  "prc_frozen_hardlabels_micro": 0.8459349993963292,
+  "roc_E1_probabilities_micro": 0.7781472844769388,
+  "roc_E2_probabilities_macro": 0.5492505903353916,
+  "roc_E2_labels_usable": 27,
+  "per_label_roc_probabilities": [
+    0.6690865093768905,
+    0.5236631016042781,
+    0.275,
+    0.5770850040096231,
+    0.6150995831403427,
+    0.5416785612332287,
+    0.6714154411764707,
+    0.5345486111111111,
+    0.5540865384615384,
+    0.6228804902962207,
+    0.6481971153846154,
+    0.6449426485922837,
+    0.6721698113207547,
+    0.5139716840536512,
+    0.5236145236145237,
+    0.6053419295417914,
+    0.4740740740740741,
+    0.4681701398801028,
+    0.47416500142734797,
+    0.49729938271604934,
+    0.5381016042780749,
+    0.5268028846153846,
+    0.4818865345181134,
+    0.5232850241545894,
+    0.5356951871657755,
+    0.5815217391304348,
+    0.535982814178303
+  ],
+  "accuracy_flat": 0.7325102880658436,
+  "eval_batch_size": 8
+}
+EVAL_DONE sider

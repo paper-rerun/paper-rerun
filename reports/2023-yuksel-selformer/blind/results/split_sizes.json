@@ -1,0 +1,72 @@
+{
+  "bace": {
+    "train": {
+      "raw": 1210,
+      "after_selfies_filter": 1210
+    },
+    "val": {
+      "raw": 151,
+      "after_selfies_filter": 151
+    },
+    "test": {
+      "raw": 152,
+      "after_selfies_filter": 152
+    }
+  },
+  "bbbp": {
+    "train": {
+      "raw": 1631,
+      "after_selfies_filter": 1629
+    },
+    "val": {
+      "raw": 203,
+      "after_selfies_filter": 202
+    },
+    "test": {
+      "raw": 205,
+      "after_selfies_filter": 205
+    }
+  },
+  "hiv": {
+    "train": {
+      "raw": 32901,
+      "after_selfies_filter": 32866
+    },
+    "val": {
+      "raw": 4112,
+      "after_selfies_filter": 4107
+    },
+    "test": {
+      "raw": 4114,
+      "after_selfies_filter": 4102
+    }
+  },
+  "tox21": {
+    "train": {
+      "raw": 6264,
+      "after_selfies_filter": 6249
+    },
+    "val": {
+      "raw": 783,
+      "after_selfies_filter": 783
+    },
+    "test": {
+      "raw": 784,
+      "after_selfies_filter": 784
+    }
+  },
+  "sider": {
+    "train": {
+      "raw": 1141,
+      "after_selfies_filter": 1123
+    },
+    "val": {
+      "raw": 142,
+      "after_selfies_filter": 142
+    },
+    "test": {
+      "raw": 144,
+      "after_selfies_filter": 144
+    }
+  }
+}

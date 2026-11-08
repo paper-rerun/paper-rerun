@@ -1,0 +1,38 @@
+[16:46:46] WARNING: nINFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+{
+  "model": "/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/downloads/models/classification_models/SELFormer_tox21_scaffold_optimized",
+  "dataset": "/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/repo/SELFormer/data/finetuning_datasets/classification/tox21/tox21.csv",
+  "num_labels": 12,
+  "split_sizes_before_selfies_filter": {
+    "train": 6264,
+    "val": 783,
+    "test": 784
+  },
+  "n_test_scored": 784,
+  "n_test_dropped_by_selfies_filter": 0,
+  "roc_frozen_C2_hardlabels_micro": 0.6130683283220876,
+  "prc_frozen_hardlabels_micro": 0.371356214098412,
+  "roc_E1_probabilities_micro": 0.7410590634275822,
+  "roc_E2_probabilities_macro": 0.7057487445151923,
+  "roc_E2_labels_usable": 12,
+  "per_label_roc_probabilities": [
+    0.6584420516486462,
+    0.7666541962838259,
+    0.7482205760839628,
+    0.7115163572060124,
+    0.6369928599679427,
+    0.7500708616780045,
+    0.6653662765496315,
+    0.7037223823246878,
+    0.6720822281167109,
+    0.7178190574475405,
+    0.7675250357653791,
+    0.6705730511099639
+  ],
+  "accuracy_flat": 0.9299532312925171,
+  "eval_batch_size": 8
+}
+EVAL_DONE tox21

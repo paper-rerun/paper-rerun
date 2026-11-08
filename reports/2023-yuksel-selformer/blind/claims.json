@@ -1,0 +1,105 @@
+{
+  "paper": {
+    "title": "SELFormer: molecular representation learning via SELFIES language models",
+    "authors": "Yuksel A, Ulusoy E, Unlu A, Dogan T",
+    "venue": "Machine Learning: Science and Technology 4 (2023) 025035",
+    "doi": "10.1088/2632-2153/acdb30",
+    "code": "https://github.com/HUBioDataLab/SELFormer",
+    "code_commit_used": "4969ca14dc403ccb6c478ad83e719c0f6bc35d22",
+    "table_identification": {
+      "published_mlst_version": "Table 3 (classification, scaffold split) and Table 4 (random split)",
+      "arxiv_version_2304.04662v2": "same classification/scaffold table is Table 5; random split is Table 6",
+      "how_checked": "pdftotext -layout on both PDFs; the MLST PDF prints 'Table 3. Classification-based ... on scaffold split datasets' and the arXiv PDF prints 'Table 5: Classification-based ... on scaffold split datasets'"
+    }
+  },
+  "pre_registration": {
+    "written_before": "any model download/load, any split construction, any metric computation",
+    "frozen_definitions": [
+      "C1. METRIC. The number to reproduce is exactly what the authors' train_classification_model.py prints as 'ROC-AUC' for the test fold: roc_auc_score(y_true=test_y, y_score=np.argmax(raw_pred, axis=1)). Note this feeds HARD 0/1 predicted labels as y_score, not probabilities; for a binary problem that quantity equals (sensitivity+specificity)/2, i.e. balanced accuracy, NOT the usual area under the ROC curve. This literal reading is the frozen definition.",
+      "C2. METRIC (multi-label tasks Tox21, SIDER). The number is what train_classification_multilabel_model.py prints under 'Test Scores' as 'roc-auc': roc_auc_score(y_true=np.ravel(test_labels), y_score=np.ravel(preds)) where preds are simpletransformers MultiLabelClassificationModel hard 0/1 predictions (sigmoid thresholded at 0.5). Again hard labels, flattened over all molecules x all labels (micro).",
+      "C3. SPLIT. chemprop.data.scaffold.scaffold_split(dataset, sizes=(0.8,0.1,0.1), seed=42, balanced=True) over the authors' CSV in data/finetuning_datasets/classification/<task>/<task>.csv, with main_df.fillna(0) applied first, exactly as prepare_finetuning_data.train_val_test_split / train_val_test_split_multilabel do. Test fold only.",
+      "C4. SELFIES FILTER. After the split, smiles_to_selfies() is applied and every row whose SELFIES string equals its SMILES string is DROPPED. This drop is part of the frozen pipeline, so the scored test set may be smaller than the split test fold.",
+      "C5. MODEL. The paper's own released fine-tuned classification checkpoints, downloaded by plain HTTPS from the Google Drive folder linked in the README ('Fine-tuned SELFormer models are available for download here' -> folders/1LVw1YZBL1AUAGCxIkavz0KMJNVyzxAXG). For each task the directory whose name matches the README prediction command, i.e. SELFormer_<task>_scaffold_optimized where it exists. No further training, no fine-tuning by us.",
+      "C6. TOKENIZATION. RobertaTokenizerFast from data/RobertaFastTokenizer (binary tasks) / from the model directory (multi-label, per README), truncation=True, padding='max_length', max_length=128, as in the authors' Dataset class.",
+      "C7. NO HYPERPARAMETER OR CHECKPOINT SEARCH. If the download contains several checkpoints for a task, the top-level task directory named in the README is the frozen choice. Any other checkpoint is reported only as an extra analysis and cannot change the verdict."
+    ],
+    "extra_analyses_allowed_but_not_verdict_changing": [
+      "E1. Standard ROC AUC computed from predicted probabilities (softmax/sigmoid scores) instead of hard labels.",
+      "E2. Per-label macro-averaged ROC AUC for Tox21/SIDER.",
+      "E3. Any alternative checkpoint, batch size, padding, or split seed."
+    ],
+    "tolerance": {
+      "basis": "The paper reports three decimals with no standard deviation and no number of repeats. Its own table caption treats a difference below 1% as a tie ('multiple methods are marked if the difference in-between is less than %1'). We adopt that as the reproduced band.",
+      "reproduced": "|ours - paper| <= 0.010 absolute ROC",
+      "partially_reproduced": "0.010 < |ours - paper| <= 0.030 absolute ROC",
+      "not_reproduced": "|ours - paper| > 0.030 absolute ROC",
+      "blocked": "number cannot be computed with what is published (missing model, missing split, code does not run)"
+    }
+  },
+  "claims": [
+    {
+      "id": "CLS-BACE",
+      "text": "SELFormer test ROC = 0.832 on the BACE scaffold split",
+      "value": 0.832,
+      "unit": "ROC (as defined in C1)",
+      "table": "MLST Table 3 / arXiv Table 5, column BACE, row 'SELFormer (ours)'",
+      "dataset": "data/finetuning_datasets/classification/bace/bace.csv",
+      "target_column_id": 2,
+      "script": "train_classification_model.py",
+      "cost_estimate": "minutes on CPU/GPU (inference only, ~150 test molecules)"
+    },
+    {
+      "id": "CLS-BBBP",
+      "text": "SELFormer test ROC = 0.902 on the BBBP scaffold split",
+      "value": 0.902,
+      "unit": "ROC (as defined in C1)",
+      "table": "MLST Table 3 / arXiv Table 5, column BBBP, row 'SELFormer (ours)'",
+      "dataset": "data/finetuning_datasets/classification/bbbp/bbbp.csv",
+      "target_column_id": 1,
+      "script": "train_classification_model.py",
+      "cost_estimate": "minutes (inference only, ~200 test molecules)"
+    },
+    {
+      "id": "CLS-HIV",
+      "text": "SELFormer test ROC = 0.681 on the HIV scaffold split",
+      "value": 0.681,
+      "unit": "ROC (as defined in C1)",
+      "table": "MLST Table 3 / arXiv Table 5, column HIV, row 'SELFormer (ours)'",
+      "dataset": "data/finetuning_datasets/classification/hiv/hiv.csv",
+      "target_column_id": 1,
+      "script": "train_classification_model.py",
+      "cost_estimate": "~10-30 min GPU (inference only, ~4100 test molecules)"
+    },
+    {
+      "id": "CLS-TOX21",
+      "text": "SELFormer test ROC = 0.653 on the Tox21 scaffold split",
+      "value": 0.653,
+      "unit": "ROC (as defined in C2)",
+      "table": "MLST Table 3 / arXiv Table 5, column Tox21, row 'SELFormer (ours)'",
+      "dataset": "data/finetuning_datasets/classification/tox21/tox21.csv",
+      "script": "train_classification_multilabel_model.py",
+      "cost_estimate": "~10 min GPU (inference only, ~780 test molecules x 12 labels)"
+    },
+    {
+      "id": "CLS-SIDER",
+      "text": "SELFormer test ROC = 0.745 on the SIDER scaffold split",
+      "value": 0.745,
+      "unit": "ROC (as defined in C2)",
+      "table": "MLST Table 3 / arXiv Table 5, column SIDER, row 'SELFormer (ours)'",
+      "dataset": "data/finetuning_datasets/classification/sider/sider.csv",
+      "script": "train_classification_multilabel_model.py",
+      "cost_estimate": "minutes (inference only, ~145 test molecules x 27 labels)"
+    }
+  ],
+  "secondary_questions": [
+    "Q2. Are the rebuilt scaffold splits identical to the authors'? Planned evidence: the released fine-tuned checkpoints must have been trained on the authors' train fold; if our rebuilt train fold is the same set, a model evaluated on it will show near-memorised accuracy while the test fold will not. Also compare split sizes against the dataset sizes, and look for any split id file inside the download.",
+    "Q3. Does 'python train_classification_model.py --use_scaffold=1 ...' from the README run as released in a pinned environment matching data/requirements.yml? Record exact error and the offending line if not.",
+    "Q4. Is every column of the table checkable from what is published? Checked by: does a released fine-tuned checkpoint exist for each of the 5 tasks, and are the per-task fine-tuning hyperparameters stated anywhere in the paper or repo?"
+  ],
+  "resource_limits": {
+    "cpu_threads": 6,
+    "nice": 19,
+    "gpu": "RTX 2070 SUPER, torch.cuda.set_per_process_memory_fraction(0.5), small batches",
+    "folder_budget_gb": 30
+  }
+}

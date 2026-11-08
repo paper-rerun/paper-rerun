@@ -1,0 +1,149 @@
+Some weights of the model checkpoint at data/saved_models/SELFormer were not used when initializing SELFIESTransformers_For_Classification: ['lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing SELFIESTransformers_For_Classification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing SELFIESTransformers_For_Classification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of SELFIESTransformers_For_Classification were not initialized from the model checkpoint at data/saved_models/SELFormer and are newly initialized: ['classifier.dense.bias', 'roberta.pooler.dense.bias', 'classifier.out_proj.bias', 'classifier.dense.weight', 'roberta.pooler.dense.weight', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+[16:18:16] WARNING: not removing hydrogen atom without neighbors
+Using scaffold split
+  0%|          | 0/2039 [00:00<?, ?it/s] 21%|##        | 423/2039 [00:00<00:00, 4207.43it/s] 41%|####1     | 844/2039 [00:00<00:00, 3698.95it/s] 60%|#####9    | 1218/2039 [00:00<00:00, 3521.00it/s] 78%|#######8  | 1593/2039 [00:00<00:00, 3549.09it/s]100%|##########| 2039/2039 [00:00<00:00, 3849.92it/s]
+Some weights of the model checkpoint at data/saved_models/SELFormer were not used when initializing SELFIESTransformers_For_Classification: ['lm_head.bias', 'lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing SELFIESTransformers_For_Classification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing SELFIESTransformers_For_Classification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of SELFIESTransformers_For_Classification were not initialized from the model checkpoint at data/saved_models/SELFormer and are newly initialized: ['roberta.pooler.dense.bias', 'classifier.dense.bias', 'classifier.dense.weight', 'roberta.pooler.dense.weight', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:23] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+[16:18:24] WARNING: not removing hydrogen atom without neighbors
+Using scaffold split
+  0%|          | 0/2039 [00:00<?, ?it/s] 25%|##4       | 504/2039 [00:00<00:00, 4694.34it/s] 48%|####7     | 974/2039 [00:00<00:00, 3940.88it/s] 70%|#######   | 1431/2039 [00:00<00:00, 4184.94it/s] 94%|#########4| 1917/2039 [00:00<00:00, 4432.05it/s]100%|##########| 2039/2039 [00:00<00:00, 4377.03it/s]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\spawn.py", line 236, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\spawn.py", line 287, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\Ciencia\noturno\2023-yuksel-selformer-cego\repo\SELFormer\train_classification_model.py", line 115, in <module>
+    train_df = smiles_to_selfies(train_df)
+  File "E:\Ciencia\noturno\2023-yuksel-selformer-cego\repo\SELFormer\prepare_finetuning_data.py", line 11, in smiles_to_selfies
+    df.selfies = df.selfies.parallel_apply(to_selfies.to_selfies)
+  File "E:\Ciencia\noturno\2023-yuksel-selformer-cego\env\.venv\lib\site-packages\pandarallel\core.py", line 367, in closure
+    manager: SyncManager = CONTEXT.Manager()
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\context.py", line 57, in Manager
+    m.start()
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\managers.py", line 562, in start
+    self._process.start()
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\context.py", line 336, in _Popen
+    return Popen(process_obj)
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\popen_spawn_win32.py", line 45, in __init__
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "C:\Users\tessa\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\lib\multiprocessing\spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use standard multiprocessing data transfer (pipe) to transfer data between the main process and workers.
+
+WARNING: You are on Windows. If you detect any issue with pandarallel, be sure you checked out the Troubleshooting page:
+https://nalepae.github.io/pandarallel/troubleshooting/

@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "paper": "Krapp LF, Abriata LA, Cortes Rodriguez F, Dal Peraro M. PeSTo: parameter-free geometric deep learning for accurate prediction of protein binding interfaces. Nature Communications 14:2175 (2023).",
+    "doi": "10.1038/s41467-023-37701-8",
+    "code": "https://github.com/LBM-EPFL/PeSTo",
+    "code_commit": "ba651aa29aaa839d0ee2c458dee90ca1f934d90a",
+    "licence": "CC BY-NC-SA 4.0 (authors code and weights); this reproduction and its scripts carry the same licence; non-commercial use",
+    "run": "blind independent rerun, folder E:/Ciencia/noturno/2023-krapp-pesto-cego",
+    "date_preregistered": "2026-11-08",
+    "hardware": "CPU only, 4 threads (OMP/MKL/torch), nice 19, no GPU",
+    "pipeline": "E:/Ciencia/PIPELINE.md, padrao meio-termo com pre-registro; this file is hashed with SHA-256 before any dataset is built or any model weight is loaded"
+  },
+
+  "fixed_definitions": {
+    "model": "model/save/i_v4_1_2021-09-07_11-21/model_ckpt.pt, config_model from the same folder (32 geometric transformers, element-only features)",
+    "features": "features_flags = (True, False, False), i.e. one-hot atomic element only (30 channels), as in the authors data_handler.Dataset default",
+    "topology": "64 nearest neighbours per atom (extract_topology(X, 64)); batch of one structure packed with collate_batch_features so that index 0 is the sink node",
+    "prediction": "sigmoid of the model output, column 0 (protein-protein interface), one value per residue",
+    "label": "a residue of the target subunit is positive iff it has a residue-residue contact within 5.0 A with any atom of another subunit whose residue names are in categ_to_resnames[protein] (the r_types[0] column of the authors label construction). Computed by me from the bioassembly, not read from the authors files",
+    "metric": "sklearn.metrics.roc_auc_score per structure, on residue-level label vs residue-level prediction",
+    "aggregate": "numpy.median over structures; a structure whose label has no positive or no negative residue is dropped from the median (same rule as the authors roc_auc in src/scoring.py, which returns NaN there)",
+    "dataset_build": "my own reimplementation of processing/build_dataset.py: read the legacy RCSB biological-assembly PDB file (files.rcsb.org/pub/pdb/data/biounit/PDB/divided/xx/pdbid.pdbN.gz) with gemmi, chain name tagged with the model index, drop the assembly if the raw atom count (before any cleaning, waters and hydrogens included) is >= 8192, then clean_structure (drop water/H/D), tag_hetatm_chains, split_by_chain, filter_non_atomic_subunits, require >= 2 subunits, remove_duplicate_tagged_subunits, and keep a subunit only if it has at least one 5 A contact with another subunit",
+    "masif_set": "start from the 53 names in masif-site_benchmark/testing_transient.txt; keep only names that have a per-residue MaSIF-site prediction in masif-site_benchmark/masif_pred_per_res.json (51 names); build every bioassembly of those PDB entries; keep every subunit entry whose sid (PDBID_chain) is in those 51 names AND whose residue count equals the length of the MaSIF-site per-residue prediction for that sid. The residue-count filter is the authors own filter in interface_ppi_benchmark.ipynb. The count of entries obtained is itself a claim (C5)",
+    "scannet_set": "the 417 sids listed in column A of sheet Fig2b-ScanNet of the Source Data file (41467_2023_37701_MOESM6_ESM.xlsx). The bioassembly and model tag of each are NOT published, so: use bioassembly 1; among the subunit entries of assembly 1 whose sid matches, take the one with the lowest model tag; if assembly 1 yields no entry for that sid, try assemblies 2,3,... in order and take the first that does, and report how many sids needed that fallback",
+    "scannet_sampling_fallback": "if a timing measurement on 10 structures implies more than 6 h of wall clock for the full 417, run a random sample instead: numpy.random.default_rng(20261108).choice(417, 150, replace=False), and report the sample median together with its bootstrap 95 percent interval",
+    "ambiguity_rule": "any definition not fixed here that turns out to matter is reported as an extra analysis and does not change the verdict"
+  },
+
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Median ROC AUC of PeSTo on the MaSIF-site benchmark subunits",
+      "where": "Fig. 2b and main text (PeSTo reaches a median ROC AUC of 0.92 against 0.8 for MaSIF-site)",
+      "paper_value": 0.92,
+      "unit": "ROC AUC",
+      "n_expected": 53,
+      "tolerance": "abs(mine - 0.92) <= 0.03, AND mine inside the bootstrap 95 percent interval of the median of the authors own per-structure values, [0.891, 0.948] (20000 resamples, seed 0, computed from sheet Fig2b-comparison before this file was hashed)",
+      "cost": "53 CPU inferences"
+    },
+    {
+      "id": "C2",
+      "text": "Median ROC AUC of PeSTo on the set of structures shared with the ScanNet benchmark",
+      "where": "Fig. 2b and main text (a benchmark dataset of 417 structures commonly shared by the two methods ... a median ROC AUC of 0.93 against 0.87)",
+      "paper_value": 0.93,
+      "unit": "ROC AUC",
+      "n_expected": 417,
+      "tolerance": "abs(mine - 0.93) <= 0.02, AND mine inside the bootstrap 95 percent interval of the median of the authors own per-structure values, [0.909, 0.940]",
+      "cost": "417 CPU inferences (or the pre-registered sample of 150)"
+    },
+    {
+      "id": "C3",
+      "text": "PeSTo has a higher ROC AUC than every other method benchmarked on the MaSIF-site set for 38 of 53 structures",
+      "where": "main text (higher ROC AUC than all other methods benchmarked here for 38 out of 53 structures)",
+      "paper_value": 38,
+      "unit": "structures out of 53",
+      "tolerance": "abs(mine - 38) <= 3. Computed with MY PeSTo AUC against the authors published per-structure AUCs for MaSIF-site, SPPIDER and PSIVER (sheet Fig2b-comparison), because the SPPIDER and PSIVER per-residue predictions are not in the repository",
+      "cost": "free once C1 is done"
+    },
+    {
+      "id": "C4",
+      "text": "Median ROC AUC of MaSIF-site on the same 53 structures",
+      "where": "Fig. 2b (against 0.8 for MaSIF-site)",
+      "paper_value": 0.80,
+      "unit": "ROC AUC",
+      "tolerance": "abs(mine - 0.80) <= 0.03. Computed from the authors released per-residue MaSIF-site predictions (masif_pred_per_res.json) scored against MY labels. This is a check of my label reconstruction, not of MaSIF-site",
+      "cost": "free"
+    },
+    {
+      "id": "C5",
+      "text": "The MaSIF-site benchmark set, as defined by the paper and the authors code, contains 53 subunit entries",
+      "where": "main text (38 out of 53 structures), Methods (the 53 subunits from the MaSIF-site benchmark dataset)",
+      "paper_value": 53,
+      "unit": "entries",
+      "tolerance": "exact: my set must have 53 entries and the same multiset of sids as column A of sheet Fig2b-comparison of the Source Data. Any difference is reported structure by structure",
+      "cost": "free"
+    }
+  ],
+
+  "what_counts_as_reproduced": "C1, C2, C3 inside tolerance -> Reproduced. One of them outside -> Partially reproduced, with the cause investigated (todays PDB files vs 2023s, the 8192-atom limit, choice of bioassembly, my own bug). C5 failing does not by itself break the verdict but is reported."
+}

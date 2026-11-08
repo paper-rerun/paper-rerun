@@ -9,7 +9,7 @@
   "area": "Biology",
   "verdict": "Reproduced",
   "main_issue": "Test lists or evaluation commands not published",
-  "finding": "Fig. 2b with the released weights: median ROC AUC 0.9247 against 0.92 on the 53 MaSIF-site subunits, and all 53 match the authors' own notebook outputs to three decimals. On the 417-structure ScanNet set, 0.9299 against 0.93, with 415 of 416 structures matching the Source Data to 0.001. Neither the benchmark dataset file nor the ScanNet structure list is in the repo, so we rebuilt both. Two entries drifted with PDB revisions: 4DX0 gives 0.961 instead of 0.909, and 1FSS now exceeds the code's atom limit and drops out.",
+  "finding": "Fig. 2b with the released weights: median ROC AUC 0.9247 against 0.92 on the 53 MaSIF-site subunits, and all 53 match the authors' own notebook outputs to three decimals. On the 417-structure ScanNet set, 0.9299 against 0.93, with 415 of 416 structures matching the Source Data to 0.001. Neither the benchmark dataset file nor the ScanNet structure list is in the repo, so we rebuilt both. Two entries drifted with PDB revisions: 4DX0 gives 0.961 instead of 0.909, and 1FSS now exceeds the code’s atom limit and drops out. An independent blind rerun, by an agent with no access to the first one, reached the same values.",
   "rerun_date": "2026-11-08"
  },
  {
@@ -22,7 +22,7 @@
   "area": "Materials and chemistry",
   "verdict": "Partially reproduced",
   "main_issue": "Released checkpoints differ from the paper",
-  "finding": "Table 3 (scaffold splits) with the published fine-tuned weights: BBBP 0.8913 against 0.902, BACE 0.7104 against 0.832, Tox21 0.6131 against 0.653, SIDER 0.7180 against 0.745, and no model is published for the HIV column. Our validation run matches the authors' own TensorBoard logs, which ship inside the model folders, bit for bit on three metrics per task, so the split, the metric and the weights are theirs. The published scaffold training command also crashes as released.",
+  "finding": "Table 3 (scaffold splits) with the published fine-tuned weights: BBBP 0.8913 against 0.902, BACE 0.7104 against 0.832, Tox21 0.6131 against 0.653, SIDER 0.7180 against 0.745, and no model is published for the HIV column. Our validation run matches the authors' own TensorBoard logs, which ship inside the model folders, bit for bit on three metrics per task, so the split, the metric and the weights are theirs. The published scaffold training command also crashes as released, on the line that prints the number. An independent blind rerun, by an agent with no access to the first one, reached the same values.",
   "rerun_date": "2026-11-08"
  },
  {

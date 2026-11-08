@@ -1,2 +1,8 @@
 __pycache__/
 *.pyc
+
+# Build caches and virtual environments a copy step may drag in. The blind runs
+# ship their lockfiles, which is what someone else needs to rebuild them.
+.uvcache/
+reports/*/blind/env/
+reports/*/blind/biounits/

@@ -20,9 +20,12 @@ Most papers go through a lighter version of the full pipeline below:
 2. **Pre-registration.** One agent writes the claims, every definition (with quotes from the paper) and the tolerances to `claims.json`, then records its SHA-256 hash. Nothing has been computed on our side at that point. Where the paper is ambiguous, the authors' own per-item results decide, never ours.
 3. **Reproduction.** A single agent builds the environment from the versions the authors used and runs the full test set. It cannot edit `claims.json`; alternatives it thinks matter go in a separate section and never change the verdict.
 4. **Adversarial review.** Another agent checks that the hash still matches and attacks the report.
-5. **Revision** and **human approval**, as in steps 8 and 9 below.
+5. **Blind recomputation**, as in step 5 below.
+6. **Revision** and **human approval**, as in steps 8 and 9 below.
 
-We picked this after running ProteinGym both ways. Both runs reached the same numbers and the same findings. The full pipeline cost about twice as much and added a blind second computation. The lighter mode without a separate pre-registration step had written its definitions after computing three models. That is the gap step 2 closes. The full pipeline is kept for very widely used papers, and for any paper the standard mode finds does not reproduce.
+We picked this after running ProteinGym both ways. Both runs reached the same numbers and the same findings. The lighter mode without a separate pre-registration step had written its definitions after computing three models. That is the gap step 2 closes. The full pipeline is kept for very widely used papers, and for any paper the standard mode finds does not reproduce.
+
+Step 5 was added to the standard mode in November 2026, after a report was ready to tell a peer-reviewed paper that its published weights do not give its published table. Until then only the full pipeline recomputed blind. It now applies to every paper, whether or not the result contradicts the paper, and nothing is published before it: not the report, not the note to the authors.
 
 ## The full pipeline
 

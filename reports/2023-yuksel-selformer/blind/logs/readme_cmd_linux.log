@@ -1,0 +1,95 @@
+Using scaffold split
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+INFO: Pandarallel will run on 12 workers.
+INFO: Pandarallel will use Memory file system to transfer data between the main process and workers.
+{'eval_loss': 0.3982572555541992, 'eval_accuracy': 0.8118811881188119, 'eval_precision': 0.9354838709677419, 'eval_recall': 0.838150289017341, 'eval_f1': 0.8841463414634145, 'eval_roc-auc': 0.7466613514052222, 'eval_prc-auc': 0.9561240106856108, 'eval_runtime': 1.0748, 'eval_samples_per_second': 187.948, 'eval_steps_per_second': 24.191, 'epoch': 1.0}
+{'train_runtime': 42.5066, 'train_samples_per_second': 38.323, 'train_steps_per_second': 2.4, 'train_loss': 0.4277219585343903, 'epoch': 1.0}
+Metrics
+TrainOutput(global_step=102, training_loss=0.4277219585343903, metrics={'train_runtime': 42.5066, 'train_samples_per_second': 38.323, 'train_steps_per_second': 2.4, 'train_loss': 0.4277219585343903, 'epoch': 1.0})
+ble to use it for predictions and inference.
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:38] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+[16:51:39] WARNING: not removing hydrogen atom without neighbors
+  0%|          | 0/2039 [00:00<?, ?it/s] 40%|███▉      | 811/2039 [00:00<00:00, 8088.70it/s] 79%|███████▉  | 1620/2039 [00:00<00:00, 7500.47it/s]100%|██████████| 2039/2039 [00:00<00:00, 7791.04it/s]
+/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/repo/SELFormer/train_classification_model.py:136: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate
+  acc = load_metric("accuracy")
+Downloading builder script:   0%|          | 0.00/1.65k [00:00<?, ?B/s]Downloading builder script: 4.21kB [00:00, 15.2MB/s]                   
+Downloading builder script:   0%|          | 0.00/2.58k [00:00<?, ?B/s]Downloading builder script: 7.55kB [00:00, 18.6MB/s]                   
+Downloading builder script:   0%|          | 0.00/2.52k [00:00<?, ?B/s]Downloading builder script: 7.38kB [00:00, 24.8MB/s]                   
+Downloading builder script:   0%|          | 0.00/2.32k [00:00<?, ?B/s]Downloading builder script: 6.50kB [00:00, 23.3MB/s]                   
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/env/venv-linux/lib/python3.10/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 1629
+  Num Epochs = 1
+  Instantaneous batch size per device = 16
+  Total train batch size (w. parallel, distributed & accumulation) = 16
+  Gradient Accumulation steps = 1
+  Total optimization steps = 102
+  Number of trainable parameters = 87248642
+***** Running Evaluation *****
+  Num examples = 202
+  Batch size = 8
+Saving model checkpoint to /mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/tmp/readme_run/checkpoint-102
+Configuration saved in /mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/tmp/readme_run/checkpoint-102/config.json
+Model weights saved in /mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/tmp/readme_run/checkpoint-102/pytorch_model.bin
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Saving model checkpoint to /mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/tmp/readme_run
+Configuration saved in /mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/tmp/readme_run/config.json
+Model weights saved in /mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/tmp/readme_run/pytorch_model.bin
+***** Running Prediction *****
+  Num examples = 205
+  Batch size = 8
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/repo/SELFormer/train_classification_model.py", line 200, in <module>
+    roc_auc_score_result = roc_auc_score(y_true=test_y, y_score=y_pred)
+  File "/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/env/venv-linux/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 580, in roc_auc_score
+    return _average_binary_score(
+  File "/mnt/e/Ciencia/noturno/2023-yuksel-selformer-cego/env/venv-linux/lib/python3.10/site-packages/sklearn/metrics/_base.py", line 72, in _average_binary_score
+    raise ValueError("{0} format is not supported".format(y_type))
+ValueError: unknown format is not supported

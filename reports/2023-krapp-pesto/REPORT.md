@@ -49,8 +49,27 @@ On the MaSIF set the means are 0.8565 for PeSTo and 0.7853 for MaSIF-site, again
   - The missing sid is 1FSS_A. Today's 1fss.pdb1 has 9482 atoms, so the build skips it (`runs/logs/build_scannet.log`).
 - **Agreement.** 415 of 416 sids are within 0.001 of the Source Data `PeSTo_auc` (`runs/out/scannet_vs_source_data.csv`). 410 are identical to floating-point precision (difference below 1e-15), and 5 differ by 1.5e-4 to 6.1e-4.
 - **The one exception: 4DX0_A.** We get 0.961, the authors 0.909, a difference of 0.0518.
-- **Revisions.** 4DX0 revision 1.2 (2023-12-13) redefined the biological assembly (`pdbx_struct_assembly` and the operator list), after the paper. That is a likely cause of the 4DX0 difference, but we did not prove it. For 1FSS the assembly changed earlier, in revision 1.4 (2021-06-02): biounit 1 now has 9482 atoms, twice the 4741 deposited. The 2024-10 revision of 1FSS touched metadata only. We cannot tell which version the authors downloaded (`runs/logs/rcsb_revisions.log`).
+- **Revisions, and the proof for 4DX0.** 4DX0 revision 1.2 (2023-12-13) redefined the biological assembly (`pdbx_struct_assembly` and the operator list), after the paper. The blind rerun below closed this one: scoring today's chain A against a label built only from the partner peptide chain P of the *same* model copy gives 27 positive residues and an AUC of 0.909058, against the authors' 0.909057557582855. So the network output is identical to theirs, and only the label moved: today's assembly holds two copies of A and two of P, chain A now also touches the second copies, and the positive count goes from 27 to 51. For 1FSS the cause is the atom filter rather than the label: today's assembly 1 has 9482 raw atoms, over the code's 8192 limit, so the whole assembly is discarded and chain A never enters the dataset. 1FSS was revised on 2024-10-23, also after publication (`runs/logs/rcsb_revisions.log`).
 - **Medians on the same 416 sids:** ours 0.9299, Source Data PeSTo 0.9296, Source Data ScanNet-noMSA 0.8703. With the authors' value for 4DX0_A our median becomes 0.9296, equal to the Source Data on the same sids. The rest of the gap to Supplementary Table 1 (0.929) is the missing 1FSS_A. To three decimals we get 0.930 against 0.929.
+
+### Independent blind rerun
+
+The paper was then reproduced a second time, from scratch, by an agent that was not allowed to see this report, its scripts, its pre-registration or its review. It was given the paper, the authors' repository address and the published numbers, nothing else. It cloned the repository again, rebuilt the dataset with its own reimplementation of `build_dataset.py`, wrote its own scoring code, pinned a different stack (torch 2.2.2, numpy 1.26.4, python 3.11, against our torch 1.11.0 and python 3.9) and froze its own pre-registration (`claims.json.sha256` `570c7fab…46221`, 2026-11-08T19:31:09Z). Its folder is `noturno/2023-krapp-pesto-cego`.
+
+| Claim | Paper | This run | Blind rerun |
+|---|---|---|---|
+| C1 median ROC AUC, MaSIF-site, n=53 | 0.92 | 0.9247 | 0.9247 |
+| C2 median ROC AUC, ScanNet set | 0.93 | 0.9299 (n=416) | 0.9299 (n=416) |
+| C4 MaSIF-site median, same 53 | 0.80 | 0.8002 | 0.8002 |
+| C5 PeSTo best of the four methods | 38 of 53 | 38 of 53 | 38 of 53 |
+| Set composition | — | 53 entries, 47 ids | 53 entries, 47 ids |
+
+Both runs lost the same structure (1FSS_A) and found the same single disagreement (4DX0_A). Two things the blind run added:
+
+- **It proved the 4DX0 explanation** instead of leaving it likely, as described above.
+- **The 53 prediction files in `pdbs_test/` are not the paper's predictions.** Scored against their own `_T` labels they give a median of 0.9007, and per structure they are far from the Source Data in both directions (3BH6_B 0.700 against 0.977 published, 2V3B_A 0.924 against 0.656). They are not the output of any of the four released checkpoints: the blind run tried `i_v3_0`, `i_v3_1`, `i_v4_0` and `i_v4_1` on three of them and none matches. The `_T` and `_M` files in the same folder are correct. So that folder is leftover output from an earlier model state, and nothing in the repository says so. Anyone who takes those b-factors as the paper's predictions gets 0.90 and concludes the paper overstates its result. It does not: the published checkpoint gives 0.92. This goes to the authors as note 7.
+
+One error in the blind report, corrected in its own file: it states that the SPPIDER and PSIVER per-residue predictions are missing from the repository, so it verified the 38 using the authors' columns for those two methods. The files are there (57 and 55 of them, in its own checkout). This run scored both directly and got medians of 0.7345 and 0.6411 against the notebook's 0.73 and 0.64, with the same 38 of 53.
 
 ### Checks of the authors' data
 
@@ -109,7 +128,8 @@ Thanks for leaving the weights, the MaSIF-site predictions and the notebook outp
 3. **The ScanNet benchmark.** The 417-structure benchmark has no list or notebook in the repo. The Source Data sheet was enough to rebuild it. Stating "biounit 1, first model copy" in the Methods would remove the guesswork.
 4. **Drift in today's PDB files.** Against today's PDB files, 4DX0_A gives 0.961 instead of 0.909; its assembly was redefined in December 2023. 1FSS_A biounit 1 now has 9482 atoms and is dropped by the 8192-atom filter. The medians do not move.
 5. **Pinned versions.** No version is pinned in `requirements.txt` or `pesto.yml`. The versions we used are in our lockfile, if that helps.
-6. **Small mismatches between code and text.** `build_dataset.py` writes `contacts_rr5A_64nn_8192_wat.h5`, while the notebook reads `contacts_rr5A_64nn_8192.h5`. The Methods describe a limit of 8192 atoms per subunit, but the code drops the whole assembly when it passes 8192 atoms. That filter is what removes 1NCA, 1WDW, 3O5T and 4BKX from the MaSIF-site benchmark. None of this changes the results.
+6. **The prediction files in `pdbs_test/` do not match the paper, or any released checkpoint.** Scored against the `_T` ground-truth files in the same folder, the 53 `*.pdb` prediction files give a median ROC AUC of 0.9007, and per structure they are far from the Source Data in both directions (3BH6_B 0.700 against the published 0.977, 2V3B_A 0.924 against 0.656). Running `i_v3_0`, `i_v3_1`, `i_v4_0` and `i_v4_1` on three of those structures reproduces none of them, so they are not the output of any released checkpoint. The `_T` and `_M` files are correct. They look like leftovers from an earlier model state, and the folder does not say so. Someone taking those b-factors as the paper's predictions would measure 0.90 and conclude the paper overstates Fig. 2b; with the released `i_v4_1` we measure 0.9247. Deleting the folder, or a line in its README, would prevent that.
+7. **Small mismatches between code and text.** `build_dataset.py` writes `contacts_rr5A_64nn_8192_wat.h5`, while the notebook reads `contacts_rr5A_64nn_8192.h5`. The Methods describe a limit of 8192 atoms per subunit, but the code drops the whole assembly when it passes 8192 atoms. That filter is what removes 1NCA, 1WDW, 3O5T and 4BKX from the MaSIF-site benchmark. None of this changes the results.
 
 ## How this report was made
 
@@ -127,6 +147,8 @@ A single agent then did the rest of the work:
 - wrote this report.
 
 A second agent then reviewed the report adversarially (REVIEW.md). It recomputed every number from the logs and output tables, checked the hash and the order in time, and compared the scripts with the authors' code. It found no change to the verdict. It corrected the count of missing ids (4, not 3), recounted the 38 from the SPPIDER and PSIVER predictions in the repo, removed a note to the authors that pointed at an inconsistency that does not exist, and fixed the PDB revision history of 1FSS and 4DX0. Those corrections are in this version. The order in time rests on file times in this folder; from the next reproduction on, the hash is committed before the run.
+
+A third agent then reproduced the paper blind, as described above: new folder, new clone, its own reimplementation of the dataset build, its own scoring code, a different pinned stack, its own pre-registration, and no access to this report or anything derived from it. Both runs agree on every claim. Blind recomputation before publication became a fixed step of our method on this round's account, and it now applies to every paper, not only the ones whose result contradicts the paper.
 
 We do this because most published code is never re-run by anyone else, and AI agents make that check cheap. The method, prompts and scripts are public at https://github.com/paper-rerun/paper-rerun/blob/main/METHOD.md, so anyone can run the same checks on papers in their own field.
 

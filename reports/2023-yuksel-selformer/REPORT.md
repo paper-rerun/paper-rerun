@@ -34,7 +34,9 @@ The split and the metric are not in doubt. On both binary tasks our pipeline rep
 
 Source: `runs/logs/compare.log`. Per-molecule predictions and the full metric set are in `runs/out/<task>_test.csv` and `.json`.
 
-**The metric is the authors' own.** `train_classification_model.py` computes `roc_auc_score(y_true=test_y, y_score=np.argmax(raw_pred, axis=1))`, that is the ROC AUC of the hard 0/1 prediction, not of a score. The column above uses exactly that, because it is what produced the published table. Scored the standard way, with the class-1 probability, the same test sets give BBBP 0.9295, BACE 0.7628, Tox21 0.7410 and SIDER 0.7801. On three of the four tasks the printed value sits between our two readings; on BACE it sits above both.
+**The metric is the authors' own.** `train_classification_model.py` computes `roc_auc_score(y_true=test_y, y_score=np.argmax(raw_pred, axis=1))`, that is the ROC AUC of the hard 0/1 prediction, not of a score. With binary input there is a single operating point, so the value is (sensitivity + specificity)/2, which is balanced accuracy, not the area under a curve. The column above uses exactly that, because it is what produced the published table. Scored the standard way, with the class-1 probability, the same test sets give BBBP 0.9295, BACE 0.7628, Tox21 about 0.741 and SIDER about 0.779. On three of the four tasks the printed value sits between our two readings; on BACE it sits above both.
+
+The two binary tasks are exact. The multi-label probability figures are given to three decimals because they depend on the precision the scores are kept at: our run and the blind rerun below agree to 16 digits on the hard-label metric, but differ by 0.002 on SIDER's probability variant, because one run's stored scores saturate in float32 (2,382 of 3,888 cells tie) and the other's do not. Ties cost AUC. Nothing about the verdict depends on this.
 
 ### The splits are the authors' splits
 
@@ -68,6 +70,29 @@ Two further checks:
 
 - **The shipped weights are the last epoch.** The folder root and the final checkpoint hold the same bytes: sha256 `5074048a7449ff7a…` for both BBBP files and `0d0c1eaef4cfc5ad…` for both BACE files. With `save_total_limit=1` and `load_best_model_at_end` commented out, there is no better-scoring checkpoint in the download, and the last logged eval step (10200 and 1900) is the step those weights come from.
 - **The chemprop version does not move the split.** The paper-era requirements file pinned chemprop 1.4.1 and the current one pins 1.5.2. In `chemprop/data/scaffold.py` the only change is an `assert` becoming a `raise ValueError` (`runs/logs/diff_chemprop_scaffold.log`). `chemprop/rdkit.py` and `make_mols` are byte-identical between the two releases, and `chemprop/data/data.py`, which did change, does not change how a plain SMILES becomes a mol. So the scaffold grouping is the same code. We did not install 1.4.1 and rerun the split: the pre-registration made that check conditional on the split differing, and nothing indicates it does.
+
+### Independent blind rerun
+
+The paper was then reproduced a second time, from scratch, by an agent that was not allowed to see this report, its scripts, its pre-registration or its review. It was given the paper, the authors' repository address and the five published numbers, nothing else. It downloaded the archive again, built its own environment, wrote its own evaluation code from the authors' training scripts and froze its own pre-registration (`claims.sha256` `11c9f4eb…bbbc5`, 2026-11-08T19:10:46Z). Its folder is `noturno/2023-yuksel-selformer-cego`.
+
+| Task | This run | Blind rerun |
+|---|---|---|
+| BBBP | 0.8913 | 0.8913 |
+| BACE | 0.7104 | 0.7104 |
+| Tox21 | 0.6131 | 0.6131 |
+| SIDER | 0.718012171633844 | 0.718012171633844 |
+
+The archive hash matched (`4a9bed3e…2bb69`), the four model folders and the missing HIV model matched, and the split sizes matched. The blind run reached the same conclusion about the metric being balanced accuracy, and it reproduced the authors' recorded validation metrics to 16 digits as well, by reading `trainer_state.json` rather than the TensorBoard files.
+
+It added three things this run had not done:
+
+- **The README command fails on line 200**, after training, on four scikit-learn versions including the authors' pinned one. See note 7 to the authors.
+- **The best model was never saved.** BACE's `trainer_state.json` has its best validation at 0.8396 in epoch 53, while the shipped weights are epoch 100 with validation 0.7907. If the table reported the test score of the best epoch, that number is not recoverable from the download. This is not proof: 0.832 does not appear anywhere in BACE's validation history, nor 0.902 in BBBP's, so the table is not simply a validation score either.
+- **No threshold saves SIDER.** Sweeping the multi-label threshold from 0.05 to 0.95, SIDER's best is 0.718 against the published 0.745. Tox21 reaches 0.656 only at 0.05, and the authors' own `model_args.json` says 0.5.
+
+It also recovered the per-task fine-tuning hyperparameters from `training_args.bin` and `model_args.json`, which the paper gives only for pre-training and for SIDER: BACE 5e-5 / batch 32 per device / 100 epochs, BBBP 1e-5 / 16 / 200, Tox21 5e-5 / 8 / 25, SIDER 5e-5 / 8 / 200.
+
+One difference between the two runs: the probability-variant AUC for SIDER, 0.7801 here against 0.7781 blind. The stored scores differ by up to 0.003 because one set saturates in float32, which creates ties. The frozen metric, the one that decides the verdict, is identical to 16 digits.
 
 ### Validation peaks, for context
 
@@ -123,7 +148,7 @@ Thanks for publishing the fine-tuned weights, the datasets and, as it turns out,
 4. **Which scaler produced the Table 5 RMSE?** In `train_regression_model.py`, `--scaler=2` (the value in the README's example command) fits a separate `StandardScaler` on each split, the test split included, and nothing is inverted before the RMSE is printed. Read literally, that RMSE would be in units of the test split's own standard deviation. The published values look like they are not: 0.682, 2.797, 0.735 and 1.488 are 0.33, 0.73, 0.61 and 0.86 of each dataset's raw target standard deviation, and FreeSolv 2.797 sits next to D-MPNN's 2.082 kcal/mol. So Table 5 is probably in the properties' own units and came from a different path. Could you say which scaler setting produced it? We did not download the regression weights and did not rerun this.
 5. **Pinned versions moved.** `data/requirements.yml` was rewritten in May 2026: at publication it pinned python 3.8.12, pytorch 1.10.1, transformers 4.15.0 and chemprop 1.4.1, and it now pins python 3.10, pytorch 1.13.1, transformers 4.26.1 and chemprop 1.5.2. Anyone reading the repo today gets the newer stack, as we did. It would help to say in the README which versions produced the published weights and splits.
 6. **`simpletransformers` has no `__version__`.** Not your code, just a note for anyone scripting the environment check.
-7. **The published scaffold command does not run.** In `train_classification_model.py`, the scaffold branch builds the dataframes with `np.column_stack`, which casts the targets to strings, and `SELFIESTransfomers_Dataset` then calls `torch.tensor(labels, dtype=torch.long)` on them. In the pinned environment that raises `ValueError: too many dimensions 'str'`. We had to add a numeric cast to score anything. The multi-label script is fine, because it converts with `dtype=np.float32`. Whatever produced Table 3 must therefore differ from this file as published — which may be the same difference that explains the gap.
+7. **The published scaffold command does not run, and it fails on the line that prints the table's number.** In `train_classification_model.py`, the scaffold branch builds the dataframes with `np.column_stack([test_smiles, test.targets()])`, which makes the `target` column `dtype=object`. Two things then break. `SELFIESTransfomers_Dataset` calls `torch.tensor(labels, dtype=torch.long)` on string labels, which raises `ValueError: too many dimensions 'str'`. And after training completes, line 200, `roc_auc_score(y_true=test_y, y_score=y_pred)`, raises `ValueError: unknown format is not supported`, because `type_of_target` returns `'unknown'` for an object column. We ran the README command end to end to see it: it trains, prints "Training completed", runs prediction on 205 examples and dies at line 200. The same frame raises the same error on scikit-learn 1.0.2, 1.1.3, 1.2.1 (the version the authors pin) and 1.3.2, so this is not version drift: the scaffold branch of this script has never been able to print a test ROC AUC. The random-split branch does not go through `column_stack` and works. The multi-label script is also fine, because it converts with `dtype=np.float32`. So whatever produced the scaffold column of Table 3 differs from this file as published, and that difference may be the same one behind the gap.
 
 ## How this report was made
 
@@ -135,7 +160,9 @@ Two defects of the pre-registration are worth recording, since the file itself i
 
 A single agent then built the environment, downloaded the weights, rebuilt the splits, scored the four published models, read the authors' own training logs, and wrote this report. The checks against those logs, the checkpoint comparison, the chemprop diff and the device comparison were all added after the first result came in, to test explanations for the gap rather than to change the target.
 
-An adversarial review by a second agent (`REVIEW.md`) then checked the hash and the time order, recomputed every number from the output files, re-read the TensorBoard logs with an independent reader, hashed the checkpoints and the archive, and compared the paper-era and current pin files. Its corrections are applied here: the environment section, the archive size, the device check, the commit date, the regression note, the label cast and the verdict line all changed. There has been no blind recomputation by a third agent.
+An adversarial review by a second agent (`REVIEW.md`) then checked the hash and the time order, recomputed every number from the output files, re-read the TensorBoard logs with an independent reader, hashed the checkpoints and the archive, and compared the paper-era and current pin files. Its corrections are applied here: the environment section, the archive size, the device check, the commit date, the regression note, the label cast and the verdict line all changed.
+
+A third agent then reproduced the paper blind, as described above: new folder, new download, its own environment, its own scoring code, its own pre-registration, and no access to this report or anything derived from it. Both runs agree. Blind recomputation before publication became a fixed step of our method on this paper's account, and it now applies to every paper, not only the ones whose result contradicts the paper.
 
 We do this because most published code is never re-run by anyone else, and AI agents make that check cheap. The method, prompts and scripts are public at https://github.com/paper-rerun/paper-rerun/blob/main/METHOD.md, so anyone can run the same checks on papers in their own field.
 
