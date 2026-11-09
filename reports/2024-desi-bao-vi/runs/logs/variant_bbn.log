@@ -1,0 +1,13 @@
+[A:d] cached
+[B] cached
+paper_eq_2_8 (pre-registered)      omega_b prior 0.022180 +/- 0.000550
+                                   -> H0 = 68.6912 +/- 0.8127  (paper 68.53 +/- 0.80, shift +0.202 sigma, edge mass 3.5e-13)
+                                      Omega_m = 0.29519 +/- 0.01467, omega_b marginal = 0.022186 +/- 0.000550
+authors_chain_measured             omega_b prior 0.021976 +/- 0.000534
+                                   -> H0 = 68.5256 +/- 0.8033  (paper 68.53 +/- 0.80, shift -0.006 sigma, edge mass 8.1e-14)
+                                      Omega_m = 0.29518 +/- 0.01467, omega_b marginal = 0.021981 +/- 0.000534
+paper_eq_2_9 (LCDM+Neff value)     omega_b prior 0.021960 +/- 0.000630
+                                   -> H0 = 68.5151 +/- 0.8466  (paper 68.53 +/- 0.80, shift -0.019 sigma, edge mass 3.9e-13)
+                                      Omega_m = 0.29518 +/- 0.01467, omega_b marginal = 0.021969 +/- 0.000627
+
+written /mnt/e/Ciencia/noturno/2024-desi-bao-vi/runs/out/variant_bbn.json

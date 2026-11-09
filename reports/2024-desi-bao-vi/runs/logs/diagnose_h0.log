@@ -1,0 +1,23 @@
+rows per chain: [26448, 33397, 34080, 34360]
+combined: 89800 rows, weight sum 242801
+
+-- Q1: their chain against the published numbers --
+  H0       chain 68.52995 +/- 0.80466 | paper 68.53 +/- 0.8 | shift -0.000 sigma
+  omegam   chain 0.29514 +/- 0.01479 | paper 0.295 +/- 0.015 | shift +0.009 sigma
+  r_d h    chain 101.87110 +/- 1.27503 Mpc  (H0*rdrag/100; this run has BBN, so not the BAO-alone 101.8)
+
+-- Q2: the BBN term they actually used --
+  parabola fit to chi2__bbn(omega_b): mean 0.021976, sigma 0.000534
+  paper Eq. (2.8):                    mean 0.022180, sigma 0.000550
+  residual of the parabola fit: rms 1.078e-06, max |.| 8.225e-06  (small rms means it is Gaussian)
+  their omega_b marginal: 0.021979 +/- 0.000533
+  ours (grid):             0.022186 +/- 0.000550
+
+-- Q3: our CAMB r_drag at their own parameter values --
+  200 samples: our r_drag / their r_drag - 1 = -9.610e-06 +/- 5.7e-07  (min -1.25e-05, max -7.08e-06)
+  that would move H0 by +0.0007 km/s/Mpc
+  their r_drag range in these samples: 141.461 .. 158.415 Mpc
+
+-- Q4: does their likelihood give our chi2? --
+  their chi2__BAO at the posterior maximum of the chain: 12.6620
+  our grid chi2_min (BAO term only, BAO+BBN fit): see runs/out/results.json

@@ -1,0 +1,3 @@
+DESI best: omm 0.293507 hrdrag 101.95254 their chi2 12.660972
+our chi2 at that point (H0=67.36, ombh2=0.02237 as in their yaml): 12.737740
+our exact minimum (h=0.68): [  0.29360702 101.9453747 ] 12.737749723673957

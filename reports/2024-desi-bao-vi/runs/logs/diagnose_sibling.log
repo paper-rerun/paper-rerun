@@ -1,0 +1,9 @@
+2 of 4 chains, 43221 rows, weight sum 116551
+bbn chi2 columns: ['chi2__bbn', 'chi2__desi_y1_cosmo_bindings.cobaya_likelihoods.bbn_likelihoods.schoneberg2024_fixed_nnu']
+  H0       68.669398 +/- 0.806080
+  omegam   0.295116 +/- 0.014705
+  ombh2    0.022180 +/- 0.000553
+
+  parabola fit to chi2__bbn: mean 0.022180, sigma 0.000550
+  paper Eq. (2.8) for LCDM:  mean 0.022180, sigma 0.000550
+  paper Eq. (2.9) for +Neff: mean 0.021960, sigma 0.000630

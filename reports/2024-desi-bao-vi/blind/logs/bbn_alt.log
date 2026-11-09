@@ -1,0 +1,55 @@
+2026-11-08T22:26:35-03:00 start: python -I scripts/desi_bao.py bbn 8000
+wall s 548.7538108825684
+{
+ "nsteps": 8000,
+ "nwalkers": 24,
+ "burn": 192,
+ "tau": [
+  37.717867899519185,
+  38.43878219679857,
+  38.045712713172975
+ ],
+ "steps_over_tau": [
+  212.1010662986595,
+  208.12313873633312,
+  210.27336405318738
+ ],
+ "ess": [
+  4968.2553769798005,
+  4875.076401759867,
+  4925.443279581861
+ ],
+ "acceptance": 0.6475260416666666,
+ "Omega_m_mean": 0.29542796860615694,
+ "Omega_m_sd": 0.014627373794955994,
+ "H0_mean": 68.56472055953542,
+ "H0_sd": 0.8074058484801412,
+ "ombh2_mean": 0.02199208532602465,
+ "ombh2_sd": 0.0005299270761754763,
+ "H0_mean_first_half": 68.56245559142168,
+ "H0_mean_second_half": 68.56698552764921
+}
+	Command being timed: "env/venv/bin/python -I scripts/desi_bao.py bbn 8000"
+	User time (seconds): 2520.94
+	System time (seconds): 364.96
+	Percent of CPU this job got: 520%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:14.57
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 99080
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 505
+	Minor (reclaiming a frame) page faults: 181116214
+	Voluntary context switches: 1330980
+	Involuntary context switches: 3357
+	Swaps: 0
+	File system inputs: 89200
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2026-11-08T22:35:50-03:00 end rc=0

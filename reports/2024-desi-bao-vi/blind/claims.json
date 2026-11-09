@@ -1,0 +1,61 @@
+{
+  "paper": "DESI Collaboration, DESI 2024 VI: cosmological constraints from BAO, JCAP 02(2025)021, arXiv:2404.03002 (PDF sha256 8e603ac88d861803cbd0004a6a4717934f7252fd057257fd6fa1ceb4b487cd36, 71 pages, built 2024-11-04)",
+  "frozen_before": "any likelihood, distance or posterior has been computed from the BAO data. At freeze time only the PDF text and the file names of CobayaSampler/bao_data have been looked at.",
+  "data": {
+    "source": "https://github.com/CobayaSampler/bao_data @ bb0c1c9009dc76d1391300e169e8df38fd1096db",
+    "files": ["desi_2024_gaussian_bao_ALL_GCcomb_mean.txt", "desi_2024_gaussian_bao_ALL_GCcomb_cov.txt"],
+    "check_before_use": "the 12 means and the diagonal errors must round to Table 1 of the paper (page 10) at its printed precision, and the DM/DH correlations must round to the r column. If not, stop and report; no other file is substituted silently."
+  },
+  "model": {
+    "cosmology": "flat LCDM, Omega_K = 0, Omega_Lambda = 1 - Omega_m - Omega_r (CAMB)",
+    "neutrinos": "one massive neutrino, sum m_nu = 0.06 eV, N_eff = 3.044 (CAMB: mnu=0.06, num_massive_neutrinos=1, nnu=3.044). Omega_m includes the massive neutrino (Table 2 caption): omch2 = Omega_m h^2 - ombh2 - omnuh2",
+    "T_cmb": "CAMB default 2.7255 K",
+    "distances": "D_M(z) and H(z) from CAMB background; D_H = c/H, D_V = (z D_M^2 D_H)^(1/3), c = 299792.458 km/s",
+    "r_d": "CAMB derived rdrag (BAO+BBN case only)",
+    "bao_only_h": "BAO-only depends on (Omega_m, r_d h) only, up to the radiation term. We fix h = 0.68 and ombh2 = 0.02218 for the CAMB background in the BAO-only case, and define r_d h = h * r_d with r_d = (r_d h)/h. Sensitivity check (does not change verdict): h = 0.60 and 0.76."
+  },
+  "likelihood": "Gaussian, chi2 = (d - m)^T C^-1 (d - m) with the 12-point mean vector and 12x12 covariance above, m = model D_V/r_d, D_M/r_d, D_H/r_d at each z_eff as labelled in the mean file",
+  "priors": {
+    "source": "Table 2, page 16",
+    "bao_only": {"Omega_m": "U[0.01, 0.99]", "rdh_Mpc": "U[10, 1000]"},
+    "bao_bbn": {"Omega_m": "U[0.01, 0.99]", "H0": "U[20, 100]", "ombh2": "U[0.005, 0.1] times Gaussian N(0.02218, 0.00055) (Eq. 2.8, LCDM BBN prior, Schoeneberg 2024)"}
+  },
+  "inference": {
+    "bao_only": "deterministic grid. Omega_m on a uniform grid over [0.15, 0.50] (prior mass outside is negligible, checked by the posterior at the edges being < 1e-8 of the peak), r_d h analytic on a fine grid over [90, 115] Mpc, same edge check. CAMB is called once per Omega_m node.",
+    "bao_bbn": "emcee ensemble sampler over (Omega_m, H0, ombh2) calling CAMB at every point (no interpolation). Convergence: chain length > 50 integrated autocorrelation times for every parameter and ESS > 10^4 after burn-in (paper asks for ESS >~ 10^3 and R-1 < 0.01).",
+    "reporting": "marginal posterior mean and standard deviation (paper Sec 2.5: symmetric 1D posteriors are reported as mean and std of the samples)",
+    "seed": 20241108
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "text": "DESI BAO alone, flat LCDM: Omega_m = 0.295 +/- 0.015",
+      "where": "Eq. 4.1, page 21; also Table 3 row DESI",
+      "published": {"mean": 0.295, "sd": 0.015},
+      "band": {"mean": [0.2915, 0.2985], "sd": [0.01305, 0.01705]},
+      "reasoning": "mean: 0.2 x published sd (0.003) for Monte Carlo noise in the published chains plus implementation differences (CAMB version, our fixed h), plus half of the last printed digit (0.0005). sd: +/-10% around the printed interval [0.0145, 0.0155). A wrong prior range, a missing data point or a dropped correlation would move these well outside."
+    },
+    {
+      "id": "C2",
+      "text": "DESI BAO alone, flat LCDM: r_d h = (101.8 +/- 1.3) Mpc",
+      "where": "Eq. 4.1, page 21",
+      "published": {"mean": 101.8, "sd": 1.3},
+      "band": {"mean": [101.49, 102.11], "sd": [1.125, 1.485]},
+      "reasoning": "mean: 0.2 x 1.3 = 0.26 plus half digit 0.05. sd: +/-10% around [1.25, 1.35)."
+    },
+    {
+      "id": "C3",
+      "text": "DESI BAO + BBN, flat LCDM: H0 = (68.53 +/- 0.80) km/s/Mpc",
+      "where": "Eq. 4.4, page 22; Table 3 row DESI+BBN",
+      "published": {"mean": 68.53, "sd": 0.80},
+      "band": {"mean": [68.365, 68.695], "sd": [0.7155, 0.8855]},
+      "reasoning": "mean: 0.2 x 0.80 = 0.16 plus half digit 0.005. sd: +/-10% around [0.795, 0.805). Using a much tighter BBN prior (e.g. 0.00015 width) or omitting the neutrino mass should show up as an sd or mean outside this band."
+    }
+  ],
+  "verdict_rule": "Reproduced if all three claims have mean and sd inside their band. Partially if one or two do. Not reproduced if none does. A claim that could not be computed is 'not tested'.",
+  "extra_not_verdict": [
+    "cobaya cross-check with its bundled DESI 2024 likelihood, if it installs without accepting any terms",
+    "h sensitivity of the BAO-only result",
+    "DESI public chains (data.desi.lbl.gov) only as a labelled diagnostic after our numbers exist, if reachable without login"
+  ]
+}

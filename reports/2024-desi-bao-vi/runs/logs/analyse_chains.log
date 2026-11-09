@@ -1,0 +1,17 @@
+columns: weight minuslogpost H0 omegam ombh2 omch2 As rdrag rdh chi2__BAO minuslogprior minuslogprior__0 minuslogprior__bbn chi2 chi2__bao.generic
+post-burn-in rows: [9744, 7392, 4788, 3108]
+
+-- marginals of our MCMC, per parameter --
+  H0          68.702297 +/- 0.819306   R-1 0.00038   ESS 6279
+  omegam       0.295359 +/- 0.014532   R-1 0.00025   ESS 6735
+  ombh2        0.022186 +/- 0.000557   R-1 0.00012   ESS 6484
+  rdrag      148.270652 +/- 2.395767   R-1 0.00034   ESS 6410
+  rdh        101.852441 +/- 1.248125   R-1 0.00013   ESS 6770
+
+  combined weight sum: 85283
+
+-- our MCMC against our grid and against the paper --
+  H0  MCMC 68.7023 +/- 0.8193
+      grid 68.6912 +/- 0.8127   (MCMC - grid = +0.0111)
+      paper 68.53 +/- 0.80      (MCMC - paper = +0.1723 = +0.215 sigma)
+  Omega_m MCMC 0.29536 +/- 0.01453   grid 0.29519 +/- 0.01467

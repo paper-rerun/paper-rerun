@@ -1,0 +1,152 @@
+theory:
+  camb:
+    version: 1.5.4
+    path: null
+    speed: 0.3
+    stop_at_error: false
+    extra_args:
+      num_massive_neutrinos: 1
+      nnu: 3.044
+      mnu: 0.06
+      TCMB: 2.7255
+    ignore_obsolete: false
+    use_renames: false
+    external_primordial_pk: false
+    renames:
+      omegabh2: ombh2
+      omegach2: omch2
+      omegal: omega_de
+      omegak: omk
+      yhe: YHe
+      yheused: YHe
+      YpBBN: Y_p
+    input_params:
+    - ns
+    - As
+    - H0
+    - ombh2
+    - omch2
+    - omk
+    - tau
+    output_params:
+    - rdrag
+likelihood:
+  bao.generic:
+    measurements_file: /mnt/e/Ciencia/noturno/2024-desi-bao-vi/data/bao_data/desi_2024_gaussian_bao_ALL_GCcomb_mean.txt
+    cov_file: /mnt/e/Ciencia/noturno/2024-desi-bao-vi/data/bao_data/desi_2024_gaussian_bao_ALL_GCcomb_cov.txt
+    invcov_file: /full/path/to/myBAO_inv.cov
+    rs_fid: 1.0
+    speed: 2500
+    type: BAO
+    rs_rescale: null
+    prob_dist: null
+    redshift: null
+    observable_1: null
+    observable_2: null
+    observable_3: null
+    grid_file: null
+    stop_at_error: false
+    version: null
+    input_params: []
+    output_params: []
+prior:
+  bbn: 'lambda ombh2: -0.5*((ombh2-0.02218)/0.00055)**2'
+params:
+  H0:
+    prior:
+      min: 20
+      max: 100
+    ref:
+      dist: norm
+      loc: 68.5
+      scale: 1.0
+    proposal: 0.8
+    latex: H_0
+  omegam:
+    prior:
+      min: 0.01
+      max: 0.99
+    ref:
+      dist: norm
+      loc: 0.295
+      scale: 0.02
+    proposal: 0.015
+    latex: \Omega_\mathrm{m}
+  ombh2:
+    prior:
+      min: 0.005
+      max: 0.1
+    ref:
+      dist: norm
+      loc: 0.02218
+      scale: 0.0006
+    proposal: 0.00055
+    latex: \omega_\mathrm{b}
+    renames:
+    - omegabh2
+  omch2:
+    value: 'lambda omegam, ombh2, H0: omegam*(H0/100)**2 - ombh2 - 0.00064487'
+    derived: true
+    renames:
+    - omegach2
+  omk:
+    value: 0.0
+    renames:
+    - omegak
+  tau:
+    value: 0.055
+  ns:
+    value: 0.965
+  logA:
+    value: 3.05
+  As:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+    derived: true
+  rdrag:
+    latex: r_\mathrm{drag}
+    derived: true
+  rdh:
+    derived: 'lambda rdrag, H0: rdrag*H0/100.0'
+    latex: r_\mathrm{d}h
+  chi2__BAO:
+    latex: \chi^2_\mathrm{BAO}
+    derived: true
+sampler:
+  mcmc:
+    burn_in: 500
+    max_tries: 10000
+    covmat: null
+    covmat_params: null
+    proposal_scale: 2.4
+    output_every: 60s
+    learn_every: 40d
+    temperature: 1
+    learn_proposal: true
+    learn_proposal_Rminus1_max: 2.0
+    learn_proposal_Rminus1_max_early: 30.0
+    learn_proposal_Rminus1_min: 0.0
+    max_samples: .inf
+    Rminus1_stop: 0.005
+    Rminus1_cl_stop: 0.2
+    Rminus1_cl_level: 0.95
+    Rminus1_single_split: 4
+    measure_speeds: true
+    oversample_power: 0.4
+    oversample_thin: true
+    drag: false
+    blocking:
+    - - 1
+      - - H0
+        - omegam
+        - ombh2
+    callback_function: null
+    callback_every: null
+    seed: 1003
+    check_every: null
+    oversample: null
+    drag_limits: null
+    fallback_covmat_scale: 4
+    version: '3.5'
+output: c3
+stop_at_error: true
+version: '3.5'

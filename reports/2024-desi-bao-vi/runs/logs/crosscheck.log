@@ -1,0 +1,14 @@
+== 1. our chi2 vs cobaya's own DESI DR1 likelihood ==
+[camb] `camb` module loaded successfully from /mnt/e/Ciencia/noturno/2024-desi-bao-vi/env/venv/lib/python3.11/site-packages/camb
+[bao.generic] Initialized.
+  cobaya  chi2 = 12.751088
+  ours    chi2 = 12.751089
+  difference   = -8.44e-07
+  our r_drag   = 148.25548 Mpc
+
+== 2. r_drag against CAMB settings ==
+  default (what the fit used)    r_drag = 148.25548 Mpc  (+0.0000%)  would move H0 by +0.0000
+  AccuracyBoost=2                r_drag = 148.25546 Mpc  (-0.0000%)  would move H0 by +0.0000
+  AccuracyBoost=3                r_drag = 148.25546 Mpc  (-0.0000%)  would move H0 by +0.0000
+  recombination CosmoRec         not available: CAMBValueError: Class not found: CosmoRec
+  recombination HyRec            not available: CAMBValueError: Class not found: HyRec

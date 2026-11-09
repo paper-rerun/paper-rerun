@@ -1,0 +1,68 @@
+theory:
+  camb:
+    extra_args:
+      num_massive_neutrinos: 1
+      nnu: 3.044
+      mnu: 0.06
+      TCMB: 2.7255
+likelihood:
+  bao.generic:
+    measurements_file: /mnt/e/Ciencia/noturno/2024-desi-bao-vi/data/bao_data/desi_2024_gaussian_bao_ALL_GCcomb_mean.txt
+    cov_file: /mnt/e/Ciencia/noturno/2024-desi-bao-vi/data/bao_data/desi_2024_gaussian_bao_ALL_GCcomb_cov.txt
+    rs_fid: 1.0
+prior:
+  bbn: 'lambda ombh2: -0.5*((ombh2-0.02218)/0.00055)**2'
+params:
+  H0:
+    prior:
+      min: 20
+      max: 100
+    ref:
+      dist: norm
+      loc: 68.5
+      scale: 1.0
+    proposal: 0.8
+    latex: H_0
+  omegam:
+    prior:
+      min: 0.01
+      max: 0.99
+    ref:
+      dist: norm
+      loc: 0.295
+      scale: 0.02
+    proposal: 0.015
+    latex: \Omega_\mathrm{m}
+  ombh2:
+    prior:
+      min: 0.005
+      max: 0.1
+    ref:
+      dist: norm
+      loc: 0.02218
+      scale: 0.0006
+    proposal: 0.00055
+    latex: \omega_\mathrm{b}
+  omch2:
+    value: 'lambda omegam, ombh2, H0: omegam*(H0/100)**2 - ombh2 - 0.00064487'
+    derived: true
+  omk: 0.0
+  tau: 0.055
+  ns: 0.965
+  logA: 3.05
+  As:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+    derived: true
+  rdrag:
+    latex: r_\mathrm{drag}
+  rdh:
+    derived: 'lambda rdrag, H0: rdrag*H0/100.0'
+    latex: r_\mathrm{d}h
+sampler:
+  mcmc:
+    Rminus1_stop: 0.005
+    max_tries: 10000
+    burn_in: 500
+    seed: 1002
+output: c2
+stop_at_error: true

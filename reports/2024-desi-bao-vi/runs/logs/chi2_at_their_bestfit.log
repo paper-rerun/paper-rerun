@@ -1,0 +1,11 @@
+their best sample: omm=0.293519, r_d h=101.94885, their chi2__BAO=12.66096
+our chi2 at that exact point: 12.73777  (difference +0.07681)
+
+our true minimum: chi2=12.73770 at omm=0.293600, r_d h=101.94554
+our grid minimum was 12.7383, so the grid is off by 0.00060 in chi2
+gap to their chain's best chi2__BAO: +0.07674
+
+-- is the gap a constant offset? their chi2__BAO vs ours on 300 random samples --
+  ours - theirs: mean +0.07584, sd 0.01092, min +0.04311, max +0.09789
+  a near-constant offset with tiny scatter means the same theory but a different data vector or covariance;
+  a scatter that grows with chi2 would mean a theory difference.

@@ -1,0 +1,42 @@
+nproc=6
+[A:c] 2103 CAMB calls in 5.9 s, nan=0
+[C] main     chi2_min=12.7383  Omega_m=0.29468+/-0.01463 (edge 1.3e-26)  rd_h=101.8953+/-1.2672 (edge 2.5e-21)
+[C] h=0.64   chi2_min=12.7381  Omega_m=0.29464+/-0.01463 (edge 1.3e-26)  rd_h=101.8964+/-1.2673 (edge 2.5e-21)
+[C] h=0.72   chi2_min=12.7385  Omega_m=0.29471+/-0.01463 (edge 1.3e-26)  rd_h=101.8944+/-1.2672 (edge 2.5e-21)
+[A:d] 123201 CAMB calls in 285.6 s, nan=0
+[B] 5400 CAMB calls in 13.2 s, nan=0, r_d range 124.77..175.65 Mpc
+[B] spline vs direct CAMB on 40 unseen points: worst relative error 3.951e-06, median 7.646e-08
+[D] chi2_min=12.7392
+[D] H0        68.691241 +/- 0.812695  (edge mass 3.5e-13)
+[D] Omega_m   0.295186 +/- 0.014666  (edge mass 4.0e-13)
+[D] omega_b   0.022186 +/- 0.000550  (edge mass 3.6e-05)
+
+== verdict against the pre-registered bands ==
+  C1: ours 0.2947 +/- 0.0146 | paper 0.295 +/- 0.015 | shift -0.021 sigma | mean in | sigma in
+  C2: ours 101.8953 +/- 1.2672 | paper 101.8 +/- 1.3 | shift +0.073 sigma | mean in | sigma in
+  C3: ours 68.6912 +/- 0.8127 | paper 68.53 +/- 0.8 | shift +0.202 sigma | mean OUT | sigma in
+
+written /mnt/e/Ciencia/noturno/2024-desi-bao-vi/runs/out/results.json
+	Command being timed: "env/venv/bin/python -I runs/scripts/fit.py"
+	User time (seconds): 1826.83
+	System time (seconds): 8.30
+	Percent of CPU this job got: 571%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:21.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2967244
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 648
+	Minor (reclaiming a frame) page faults: 1971075
+	Voluntary context switches: 58855
+	Involuntary context switches: 902
+	Swaps: 0
+	File system inputs: 85304
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

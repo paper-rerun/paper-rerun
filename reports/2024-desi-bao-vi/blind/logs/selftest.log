@@ -1,0 +1,32 @@
+2026-11-08T21:48:24-03:00 start: python -I scripts/desi_bao.py selftest
+z=0.51 CAMB D_M 1977.678 simple 1977.763 rel -4.34e-05
+z=0.706 CAMB D_M 2597.156 simple 2597.313 rel -6.02e-05
+z=0.93 CAMB D_M 3221.844 simple 3222.097 rel -7.85e-05
+z=1.317 CAMB D_M 4126.760 simple 4127.203 rel -1.07e-04
+z=2.33 CAMB D_M 5787.153 simple 5788.129 rel -1.69e-04
+rdrag 148.41322045650432
+selftest ok
+	Command being timed: "env/venv/bin/python -I scripts/desi_bao.py selftest"
+	User time (seconds): 0.41
+	System time (seconds): 0.46
+	Percent of CPU this job got: 15%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.76
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 75456
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 403
+	Minor (reclaiming a frame) page faults: 11471
+	Voluntary context switches: 24569
+	Involuntary context switches: 11
+	Swaps: 0
+	File system inputs: 72720
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2026-11-08T21:48:30-03:00 end rc=0

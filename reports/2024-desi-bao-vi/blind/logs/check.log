@@ -1,0 +1,46 @@
+2026-11-08T21:48:18-03:00 start: python -I scripts/desi_bao.py check
+0.295 DV_over_rs  file 7.9251 +/- 0.1507  table 7.93 +/- 0.15  ok
+0.510 DM_over_rs  file 13.6200 +/- 0.2519  table 13.62 +/- 0.25  ok
+0.510 DH_over_rs  file 20.9833 +/- 0.6107  table 20.98 +/- 0.61  ok
+0.706 DM_over_rs  file 16.8465 +/- 0.3193  table 16.85 +/- 0.32  ok
+0.706 DH_over_rs  file 20.0787 +/- 0.5954  table 20.08 +/- 0.6  ok
+0.930 DM_over_rs  file 21.7084 +/- 0.2821  table 21.71 +/- 0.28  ok
+0.930 DH_over_rs  file 17.8761 +/- 0.3463  table 17.88 +/- 0.35  ok
+1.317 DM_over_rs  file 27.7872 +/- 0.6903  table 27.79 +/- 0.69  ok
+1.317 DH_over_rs  file 13.8237 +/- 0.4222  table 13.82 +/- 0.42  ok
+1.491 DV_over_rs  file 26.0722 +/- 0.6687  table 26.07 +/- 0.67  ok
+2.330 DM_over_rs  file 39.7084 +/- 0.9433  table 39.71 +/- 0.94  ok
+2.330 DH_over_rs  file 8.5226 +/- 0.1708  table 8.52 +/- 0.17  ok
+r(0.510) file -0.4454 table -0.445 ok
+r(0.706) file -0.4205 table -0.42 ok
+r(0.930) file -0.3891 table -0.389 ok
+r(1.317) file -0.4440 table -0.444 ok
+r(2.330) file -0.4775 table -0.477 MISMATCH
+max |cov| between different z: 0.0
+CHECK FAILED
+Command exited with non-zero status 1
+	Command being timed: "env/venv/bin/python -I scripts/desi_bao.py check"
+	User time (seconds): 0.47
+	System time (seconds): 0.30
+	Percent of CPU this job got: 15%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 72432
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 385
+	Minor (reclaiming a frame) page faults: 10197
+	Voluntary context switches: 23539
+	Involuntary context switches: 6
+	Swaps: 0
+	File system inputs: 71432
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+2026-11-08T21:48:23-03:00 end rc=1
+-0.47750000038781876

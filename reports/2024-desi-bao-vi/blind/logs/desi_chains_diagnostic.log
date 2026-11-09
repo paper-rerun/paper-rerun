@@ -1,0 +1,75 @@
+#        weight    minuslogpost          hrdrag             omm              As           omch2          omegam        omegamh2          omegal            zrei             YHe             Y_p           DHBBN               A           clamp             age           rdrag           zdrag         H0rdrag       chi2__BAO   minuslogprior minuslogprior__0            chi2 chi2__desi_y1_cosmo_bindings.cobaya_likelihoods.bao_likelihoods.desi_bao_all
+data/desi_chains/cobaya/base/desi-bao-all_schoneberg2024-bbn/chain burn 0.3 rows 89800 sum weights 242801.0
+omegam: 0.29514 +/- 0.01479
+H0: 68.52995 +/- 0.80466
+ombh2: 0.02198 +/- 0.00053
+rdrag: 148.66958 +/- 2.37886
+data/desi_chains/cobaya/base/desi-bao-all_schoneberg2024-bbn-fixed-nnu/chain burn 0.3 rows 84194 sum weights 227087.0
+omegam: 0.29522 +/- 0.01467
+H0: 68.68010 +/- 0.80987
+ombh2: 0.02218 +/- 0.00055
+rdrag: 148.31709 +/- 2.36841
+data/desi_chains/cobaya/base/desi-bao-all/chain burn 0.3 rows 30546 sum weights 40350.0
+omegam: 0.29504 +/- 0.01457
+omm: 0.29504 +/- 0.01457
+hrdrag: 101.86625 +/- 1.26546
+rdh not in chain
+H0rdrag: 10186.62549 +/- 126.54563
+likelihood:
+  desi_y1_cosmo_bindings.cobaya_likelihoods.bao_likelihoods.desi_bao_all:
+    path: /global/u2/a/adematti/cosmodesi/desi-y1-kp/desi_y1_cosmo_bindings/cobaya_likelihoods
+    measurements_file: bao_data/desi_gaussian_bao_ALL_GCcomb_mean.txt
+    cov_file: bao_data/desi_gaussian_bao_ALL_GCcomb_cov.txt
+    rs_fid: 1
+    aliases:
+    - BAO
+    speed: 2000
+    - rdrag
+    output_params: []
+params:
+  logA:
+    latex: \ln(10^{10} A_\mathrm{s})
+    drop: true
+    value: 3.036
+--
+  H0:
+    latex: H_0
+    value: 67.36
+  ombh2:
+    latex: \Omega_\mathrm{b} h^2
+    value: 0.02237
+    renames:
+--
+    value: 'lambda omm, mnu, ombh2, H0: omm*(H0/100)**2 - mnu / 93.14 - ombh2'
+    latex: \Omega_\mathrm{c} h^2
+    derived: true
+    renames:
+    - omegach2
+  tau:
+    latex: \tau_\mathrm{reio}
+--
+    derived: 'lambda omegam, H0: omegam*(H0/100)**2'
+    latex: \Omega_\mathrm{m} h^2
+  omegal:
+    latex: \Omega_\Lambda
+    derived: true
+    renames:
+    - omega_de
+--
+  rdrag:
+    value: 'lambda hrdrag, H0: 100 * hrdrag / H0'
+    latex: r_\mathrm{d}
+    derived: true
+  zdrag:
+    latex: z_\mathrm{d}
+    derived: true
+  H0rdrag:
+    derived: 'lambda H0, rdrag: H0 * rdrag'
+    latex: H_0 r_\mathrm{d}
+  hrdrag:
+    prior:
+      min: 10.0
+      max: 1000.0
+    ref:
+      dist: norm
+      loc: 99.079

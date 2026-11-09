@@ -1,0 +1,24 @@
+-- (b) are the two chi2 columns identical? --
+  max |chi2__BAO - chi2__<full name>| = 0.000e+00
+  max |chi2 - chi2__BAO|              = 0.000e+00
+
+-- (a) dark energy model --
+  default fluid          chi2 = 12.737773  (theirs 12.660959, diff +0.076814)
+  ppf (what they used)   chi2 = 12.737773  (theirs 12.660959, diff +0.076814)
+
+-- (c) how big a data difference would close the gap? --
+  our residuals in units of the diagonal error:
+    z=0.295 DV_over_rs  resid  +0.0457  sigma  0.1507   +0.30 sd
+    z=0.510 DM_over_rs  resid  +0.3986  sigma  0.2519   +1.58 sd
+    z=0.510 DH_over_rs  resid  -1.4557  sigma  0.6107   -2.38 sd
+    z=0.706 DM_over_rs  resid  -0.5286  sigma  0.3193   -1.66 sd
+    z=0.706 DH_over_rs  resid  +0.0910  sigma  0.5954   +0.15 sd
+    z=0.930 DM_over_rs  resid  +0.1395  sigma  0.2821   +0.49 sd
+    z=0.930 DH_over_rs  resid  +0.3577  sigma  0.3463   +1.03 sd
+    z=1.317 DM_over_rs  resid  +0.1354  sigma  0.6903   +0.20 sd
+    z=1.317 DH_over_rs  resid  -0.2597  sigma  0.4222   -0.62 sd
+    z=1.491 DV_over_rs  resid  +0.2498  sigma  0.6687   +0.37 sd
+    z=2.330 DM_over_rs  resid  +0.8784  sigma  0.9433   +0.93 sd
+    z=2.330 DH_over_rs  resid  -0.1283  sigma  0.1708   -0.75 sd
+  a covariance scaled by 0.99397 would reproduce their chi2 exactly
+  i.e. their errors larger by +0.303% on average, which is at the level of a late covariance update

@@ -1,0 +1,49 @@
+n_data = 12, cov shape = (12, 12)
+cov eigenvalues: min 2.235990e-02 max 8.965791e-01
+
+-- check 1: data vector against Table 1 of the paper --
+  z=0.295 DV_over_rs  file   7.92513  table    7.93  ok
+  z=0.510 DM_over_rs  file  13.62003  table   13.62  ok
+  z=0.510 DH_over_rs  file  20.98335  table   20.98  ok
+  z=0.706 DM_over_rs  file  16.84645  table   16.85  ok
+  z=0.706 DH_over_rs  file  20.07873  table   20.08  ok
+  z=0.930 DM_over_rs  file  21.70842  table   21.71  ok
+  z=0.930 DH_over_rs  file  17.87613  table   17.88  ok
+  z=1.317 DM_over_rs  file  27.78721  table   27.79  ok
+  z=1.317 DH_over_rs  file  13.82372  table   13.82  ok
+  z=1.491 DV_over_rs  file  26.07217  table   26.07  ok
+  z=2.330 DM_over_rs  file  39.70838  table   39.71  ok
+  z=2.330 DH_over_rs  file   8.52257  table    8.52  ok
+  mismatches: 0
+
+-- check 2: our distance definitions against CAMB --
+  omnuh2 from CAMB for mnu=0.06: 0.00064487
+  requested Omega_m 0.295000, CAMB pars.omegam 0.295000, diff +5.55e-17
+  r_drag = 148.4615 Mpc, r_d h = 101.7406 Mpc
+  z=0.295  D_M chi  1202.4902  (1+z)D_A  1202.4902  rel 0.00e+00
+  z=0.510  D_M chi  1965.8555  (1+z)D_A  1965.8555  rel 0.00e+00
+  z=0.706  D_M chi  2583.0392  (1+z)D_A  2583.0392  rel 0.00e+00
+  z=0.930  D_M chi  3206.0088  (1+z)D_A  3206.0088  rel 0.00e+00
+  z=1.317  D_M chi  4109.3263  (1+z)D_A  4109.3263  rel 0.00e+00
+  z=1.491  D_M chi  4456.7188  (1+z)D_A  4456.7188  rel 0.00e+00
+  z=2.330  D_M chi  5768.7200  (1+z)D_A  5768.7200  rel 0.00e+00
+  worst relative difference: 0.000e+00
+
+-- check 3: chi-square at the reference cosmology --
+  chi2 = 12.784 for 12 data points and 2 fitted parameters (dof ~ 10)
+  z=0.295 DV_over_rs  data    7.9251  theory    7.8922  (-0.42%)
+  z=0.510 DM_over_rs  data   13.6200  theory   13.2415  (-2.78%)
+  z=0.510 DH_over_rs  data   20.9833  theory   22.4614  (+7.04%)
+  z=0.706 DM_over_rs  data   16.8465  theory   17.3987  (+3.28%)
+  z=0.706 DH_over_rs  data   20.0787  theory   20.0016  (-0.38%)
+  z=0.930 DM_over_rs  data   21.7084  theory   21.5949  (-0.52%)
+  z=0.930 DH_over_rs  data   17.8761  theory   17.5259  (-1.96%)
+  z=1.317 DM_over_rs  data   27.7872  theory   27.6794  (-0.39%)
+  z=1.317 DH_over_rs  data   13.8237  theory   14.0851  (+1.89%)
+  z=1.491 DV_over_rs  data   26.0722  theory   25.8384  (-0.90%)
+  z=2.330 DM_over_rs  data   39.7084  theory   38.8567  (-2.14%)
+  z=2.330 DH_over_rs  data    8.5226  theory    8.6488  (+1.48%)
+
+-- timing --
+  background only, no rdrag: 12.1 ms/call
+  with rdrag: 11.3 ms/call

@@ -1,0 +1,118 @@
+{
+  "paper": {
+    "title": "DESI 2024 VI: cosmological constraints from the measurements of baryon acoustic oscillations",
+    "authors": "DESI Collaboration (A. G. Adame et al.)",
+    "journal": "JCAP 02 (2025) 021",
+    "doi": "10.1088/1475-7516/2025/02/021",
+    "arxiv": "2404.03002",
+    "pdf_local": "paper/2404.03002.pdf",
+    "pdf_sha256": "8e603ac88d861803cbd0004a6a4717934f7252fd057257fd6fa1ceb4b487cd36",
+    "pdf_note": "arXiv PDF downloaded 2026-11-08. Equation and table numbers below are the arXiv numbering. The brief refers to 'Eq. (15)' which is the JCAP numbering of the same equation (arXiv Eq. 4.3 block, line 1245 of our pdftotext dump)."
+  },
+  "route": {
+    "decision": "Re-run the likelihood ourselves. We do NOT re-analyse the published DESI chains.",
+    "why": "The three target claims are flat-LCDM background-only fits to a 12-element Gaussian likelihood that DESI published as plain text (mean vector + 12x12 covariance) in CobayaSampler/bao_data. The paper (Table 2) samples exactly (Omega_m, r_d h) for BAO alone and (Omega_m, H0, omega_b) for BAO+BBN, with flat priors. That is a 2- and 3-parameter problem, so we can evaluate the posterior on a dense deterministic grid and marginalise exactly. This is cheaper than an MCMC, has no sampling scatter, and reproduces the inference rather than only the summary statistics of someone else's samples.",
+    "not_cobaya_mcmc": "We do not run cobaya's Metropolis-Hastings sampler. Reason: with 2 and 3 parameters a grid is exact and finishes in minutes on CPU, so an MCMC would only add sampling noise and wall time. We do use CAMB (the Boltzmann code the paper uses) for the background expansion and for the drag-epoch sound horizon r_d, so the theory side is the authors' own code, not a fitting formula. This is recorded here BEFORE any run so the route cannot be chosen after seeing the numbers.",
+    "risk_accepted": "Writing our own likelihood and grid means a bug in our code looks like a disagreement with the paper. Mitigation, also fixed here before running: (a) the data vector we read must equal Table 1 of the paper to the printed digits; (b) our distance integrals must agree with CAMB's own angular_diameter_distance / hubble_parameter to better than 1e-4 relative at every one of the 6 effective redshifts; (c) our chi-square at the paper's best-fit-like point must be of order the number of degrees of freedom. If any of these three checks fails we fix our code, and we say so in the report."
+  },
+  "data": {
+    "source": "https://github.com/CobayaSampler/bao_data @ bb0c1c9009dc76d1391300e169e8df38fd1096db (2025-06-26)",
+    "files": [
+      "desi_2024_gaussian_bao_ALL_GCcomb_mean.txt",
+      "desi_2024_gaussian_bao_ALL_GCcomb_cov.txt"
+    ],
+    "n_data": 12,
+    "content": "The 12 DESI DR1 BAO measurements of Table 1: BGS DV/rd at z=0.295; LRG1 (DM/rd, DH/rd) at z=0.510; LRG2 at z=0.706; LRG3+ELG1 at z=0.930; ELG2 at z=1.317; QSO DV/rd at z=1.491; Lya DM/rd, DH/rd at z=2.330. Full 12x12 covariance, no login, no terms to accept.",
+    "note": "The repository also ships desi_bao_dr2/, which is DR2 and NOT the data of this paper. We use only the desi_2024_* DR1 files."
+  },
+  "model": {
+    "name": "flat LCDM, background only",
+    "fixed": {
+      "T_cmb_K": 2.7255,
+      "N_eff": 3.044,
+      "massive_neutrinos": "one massive species with m_nu = 0.06 eV, the paper's default (Table 2 caption)",
+      "Omega_m_definition": "Omega_m includes the contribution of the massive neutrinos, as stated in the Table 2 caption",
+      "Omega_K": 0.0,
+      "w": -1.0
+    },
+    "r_d": "drag-epoch sound horizon as computed by CAMB (get_derived_params()['rdrag']), the same code the paper uses. Only needed for the BAO+BBN fit; the BAO-alone fit treats r_d h as a free parameter and never needs r_d itself.",
+    "background": "CAMB background (hubble_parameter, comoving_radial_distance). D_M is the comoving transverse distance, D_H = c/H(z), D_V = (z * D_M^2 * D_H)^(1/3), as in Section 2.1 of the paper."
+  },
+  "inference": {
+    "likelihood": "L = exp(-0.5 * (d - t)^T C^-1 (d - t)) with d the 12-element DESI DR1 vector and C its published 12x12 covariance. No nuisance parameters.",
+    "fit_1_and_2": {
+      "sampled": ["Omega_m", "r_d h [Mpc]"],
+      "priors": "flat, Omega_m ~ U[0.01, 0.99] and r_d h ~ U[10, 1000] Mpc, exactly Table 2 of the paper",
+      "grid": "Omega_m on [0.15, 0.50], r_d h on [90, 115] Mpc, at least 701 x 701 points, refined if the posterior is not negligible at the edges",
+      "h_for_radiation": "At fixed Omega_m the expansion rate still depends very weakly on h through the radiation and neutrino terms. In this fit h is not a parameter, so we evaluate that term at h = 0.68 and report, as a sensitivity test, how much the answer moves for h = 0.64 and h = 0.72. Fixed here before running."
+    },
+    "fit_3": {
+      "sampled": ["Omega_m", "H0 [km/s/Mpc]", "omega_b"],
+      "priors": "flat, Omega_m ~ U[0.01, 0.99], H0 ~ U[20, 100], omega_b ~ U[0.005, 0.1], exactly Table 2 of the paper",
+      "extra_prior": "Gaussian BBN prior omega_b = 0.02218 +/- 0.00055, the paper's Eq. (2.8), the conservative PRyMordial value the paper adopts for LCDM",
+      "grid": "Omega_m on [0.20, 0.42], H0 on [63, 75], omega_b on [0.0200, 0.0244] (+/- 4 sigma of the BBN prior), at least 351 x 351 x 61 points"
+    },
+    "reported_statistic": "mean and standard deviation of the 1D marginal posterior, which is what the paper reports for symmetric marginals (Section 2.5). Marginalisation is the exact sum over the grid with the flat priors above.",
+    "no_tuning": "The grid ranges, the priors, the BBN prior, the neutrino treatment and the h=0.68 choice are all fixed in this file before any likelihood is evaluated. If a grid turns out too narrow (posterior not negligible at an edge) we widen it, record that we did, and never narrow it to improve agreement."
+  },
+  "tolerance": {
+    "rule": "For each claim: our central value must sit within 0.20 * sigma_published of the published central value, AND our uncertainty must be within 10% (relative) of the published uncertainty. Both conditions must hold to count as agreement.",
+    "why_0_2_sigma": "Three error sources add up and none of them is large. (1) Sampling scatter in the PAPER's own numbers: Section 2.5 says they require an effective sample size of at least about 1000, which puts the Monte Carlo error on a posterior mean at roughly sigma/sqrt(1000) = 0.03 sigma. Our grid has no sampling scatter at all. (2) Rounding of the printed number: Omega_m is printed to 0.001 = 0.067 sigma, r_d h to 0.1 Mpc = 0.077 sigma, H0 to 0.01 = 0.013 sigma, so half a printed unit is at most 0.04 sigma. (3) Method difference: our own likelihood code and grid marginalisation against their cobaya+CAMB MCMC, plus our interpolation of r_d. We have no measurement of this one, so 0.20 sigma leaves roughly 0.13 sigma of room for it, about 4x the combined size of (1) and (2). A band this wide still fails loudly on the things that actually go wrong in a rerun: a wrong covariance, a dropped tracer, the DR2 file read by mistake, a sign error in the sound horizon, or a genuine 1-sigma shift.",
+    "why_10_percent_on_sigma": "The Monte Carlo error on a posterior standard deviation with an effective sample size of 1000 is about 1/sqrt(2*1000) = 2.2%. Rounding adds up to 4% on r_d h (1.3 printed to 2 digits) and 3% on Omega_m. 10% is about twice that, and it is tight enough to catch a covariance that was used wrongly, which typically moves the width by tens of percent.",
+    "bands": {
+      "claim_1_Omega_m": "mean in [0.2920, 0.2980]; sigma in [0.0135, 0.0165]",
+      "claim_2_rd_h_Mpc": "mean in [101.54, 102.06]; sigma in [1.17, 1.43]",
+      "claim_3_H0": "mean in [68.37, 68.69]; sigma in [0.72, 0.88]"
+    },
+    "verdict_rule": "Reproduced if all three claims are inside their band. Partially reproduced if at least one is inside and at least one is outside. Not reproduced if none is inside. A claim we cannot compute at all is reported as 'not tested', never as a guess."
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Flat LCDM fit to DESI DR1 BAO alone gives Omega_m = 0.295 +/- 0.015.",
+      "value": 0.295,
+      "sigma": 0.015,
+      "unit": "dimensionless",
+      "where": "Table 3 row 'DESI', and the displayed equation block at arXiv p.22 (Eq. 4.2 group); repeated in the abstract and in the Summary (Section 8).",
+      "pdftotext_lines": "79, 1243, 1262, 2631",
+      "dataset": "DESI DR1 BAO (12 measurements, ALL_GCcomb)",
+      "cost_estimate": "minutes of CPU"
+    },
+    {
+      "id": "C2",
+      "text": "Same fit gives r_d h = (101.8 +/- 1.3) Mpc, with r_d h defined as H0 r_d / (100 km/s/Mpc).",
+      "value": 101.8,
+      "sigma": 1.3,
+      "unit": "Mpc",
+      "where": "Same displayed equation block as C1 (arXiv p.22, the 'Eq. (15)' of the JCAP version); repeated in Section 8. Omitted from Table 3 for space, which the Table 3 caption says explicitly.",
+      "pdftotext_lines": "1245, 1338, 2631",
+      "dataset": "DESI DR1 BAO (12 measurements, ALL_GCcomb)",
+      "cost_estimate": "same grid as C1, free"
+    },
+    {
+      "id": "C3",
+      "text": "DESI DR1 BAO combined with a BBN prior on omega_b gives H0 = (68.53 +/- 0.80) km/s/Mpc in flat LCDM.",
+      "value": 68.53,
+      "sigma": 0.80,
+      "unit": "km/s/Mpc",
+      "where": "Eq. (4.4) at arXiv p.23, and Table 3 row 'DESI+BBN'.",
+      "pdftotext_lines": "1376, 1263, 2636",
+      "dataset": "DESI DR1 BAO + BBN prior omega_b = 0.02218 +/- 0.00055 (paper Eq. 2.8)",
+      "cost_estimate": "tens of minutes of CPU, dominated by CAMB calls for r_d"
+    }
+  ],
+  "not_targets": [
+    "Everything else in the paper: the DESI+CMB and DESI+SN combinations, the w0-wa results, the curvature and neutrino-mass constraints, the per-tracer BAO fits of Section 3, and the DESI+BBN+theta* number H0 = 68.52 +/- 0.62. Not tested.",
+    "The DESI DR1 BAO measurements themselves. We take the published distance ratios and covariance as given; we do not re-measure them from the galaxy catalogues."
+  ],
+  "machine_and_budget": {
+    "cpu_only": true,
+    "gpu": "not touched, another job is using it",
+    "max_threads": 6,
+    "nice": 19,
+    "folder_cap_gb": 30,
+    "wall_clock_target_hours": "1 to 3"
+  },
+  "frozen_at": "2026-11-08T21:05:00Z",
+  "frozen_before": "any likelihood evaluation, any grid, any fit. The DESI data files and the paper PDF were downloaded before this freeze, as the triage step of E:/Ciencia/PIPELINE.md requires, but no number was computed from them."
+}

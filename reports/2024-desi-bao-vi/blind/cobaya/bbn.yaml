@@ -1,0 +1,37 @@
+# Cross-check of C3 with cobaya's own generic BAO likelihood and CAMB (not the verdict route)
+output: /mnt/e/Ciencia/noturno/2024-desi-bao-vi-cego/cobaya/chains/bbn
+likelihood:
+  bao.generic:
+    path: /mnt/e/Ciencia/noturno/2024-desi-bao-vi-cego/data/bao_data
+    measurements_file: desi_2024_gaussian_bao_ALL_GCcomb_mean.txt
+    cov_file: desi_2024_gaussian_bao_ALL_GCcomb_cov.txt
+theory:
+  camb:
+    extra_args:
+      num_massive_neutrinos: 1
+      nnu: 3.044
+params:
+  omegam:
+    prior: {min: 0.01, max: 0.99}
+    ref: {dist: norm, loc: 0.30, scale: 0.01}
+    proposal: 0.01
+    drop: true
+  H0:
+    prior: {min: 20, max: 100}
+    ref: {dist: norm, loc: 68.5, scale: 0.5}
+    proposal: 0.5
+  ombh2:
+    prior: {dist: norm, loc: 0.02218, scale: 0.00055}
+    ref: {dist: norm, loc: 0.02218, scale: 0.0003}
+    proposal: 0.0003
+  mnu: 0.06
+  omch2:
+    value: 'lambda omegam, H0, ombh2: omegam*(H0/100)**2 - ombh2 - 0.000644866570625114'
+  omegam_check:
+    derived: 'lambda omch2, ombh2, H0: (omch2+ombh2+0.000644866570625114)/(H0/100)**2'
+  rdrag: null
+sampler:
+  mcmc:
+    Rminus1_stop: 0.005
+    max_tries: 10000
+    seed: 20241108
