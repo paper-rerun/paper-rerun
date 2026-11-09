@@ -32,6 +32,7 @@ AREAS = {
 
 # The main thing each rerun found, in one category, read from the report
 MAIN_ISSUE = {
+	"2023-agazie-nanograv15": "Reference data offline or deleted",
 	"2024-desi-bao-vi": "Code differs from the Methods",
 	"2023-krapp-pesto": "Test lists or evaluation commands not published",
 	"2023-yuksel-selformer": "Released checkpoints differ from the paper",

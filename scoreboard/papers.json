@@ -1,5 +1,18 @@
 [
  {
+  "paper": "NANOGrav 15 yr GWB",
+  "report": "2023-agazie-nanograv15",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2023-agazie-nanograv15/REPORT.md",
+  "venue": "ApJL",
+  "year": 2023,
+  "field": "gravitational waves",
+  "area": "Physics",
+  "verdict": "Reproduced",
+  "main_issue": "Reference data offline or deleted",
+  "finding": "From the released chains, no re-sampling: the HD amplitude at gamma = 13/3 comes out at 2.4039 (+0.665/−0.589) × 10⁻¹⁵, the authors' own stored output to the digit, and the thermodynamic-integration Bayes factors give log10 BF 12.11 (CURN vs IRN) and 14.41 (HD vs IRN), inside the published ranges. The chain behind the headline number was removed from the repository in 2024 and survives only in its git history and on Google Drive. Two smaller points: the presampled HD vs CURN core is a fixed-gamma run, not the varied-gamma comparison of Fig. 2, and the TI quadrature moves log10 BF by 0.3, more than the quoted ±0.1. An independent blind rerun got the same numbers.",
+  "rerun_date": "2026-11-08"
+ },
+ {
   "paper": "DESI 2024 VI",
   "report": "2024-desi-bao-vi",
   "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2024-desi-bao-vi/REPORT.md",

@@ -1,0 +1,29 @@
+a3e8b8776a646208ca2d307f83c20bc70e029933 2025-08-11 13:03:22 -0500 Merge pull request #5 from AaronDJohnson/feathers
+tutorials/presampled_cores/curn_14f_pl_vg.core
+tutorials/presampled_cores/curn_hd.core
+tutorials/presampled_cores/curn_ti.core
+tutorials/presampled_cores/hd_14f_pl_vg.core
+tutorials/presampled_cores/hd_30f_fs.core
+tutorials/presampled_cores/hd_ti.core
+tutorials/presampled_cores/irn_ti.core
+tutorials/presampled_cores/spline_orf_vg.core
+382
+239M	.git
+tutorials
+tutorials/data
+tutorials/data/15yr_emp_distr.json
+tutorials/data/15yr_wn_dict.json
+tutorials/data/curn_14f_pl_vg_os.npz
+tutorials/data/feathers
+tutorials/data/ng15_rcparams.json
+tutorials/data/optstat_ml_gamma4p33.json
+tutorials/data/os_covariance_matix_between_rhos.npz
+tutorials/data/par
+tutorials/data/tim
+tutorials/explore_data.ipynb
+tutorials/extra_functions.py
+tutorials/model_selection.ipynb
+tutorials/optimal_stat.ipynb
+tutorials/optimal_statistic_covariances.py
+tutorials/parameter_est.ipynb
+tutorials/ti_sample.py

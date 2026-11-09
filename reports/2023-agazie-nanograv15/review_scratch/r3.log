@@ -1,0 +1,5 @@
+values repeated 131 extra copies 187 max count 8
+most repeated [(np.int64(8), np.float64(0.0001668799020971241)), (np.int64(7), np.float64(0.00014462603046046704)), (np.int64(6), np.float64(3.3371525189939595e-05)), (np.int64(5), np.float64(6.674527777159766e-05)), (np.int64(4), np.float64(0.0010021155773299187)), (np.int64(4), np.float64(0.0006789924197731497))]
+dtype float64 min 1.1123594255775927e-05
+first repeat idx [  8  12  13  18  20  25  29  30  35  43  46  54  56  62  70  71  74  78
+  91 101]

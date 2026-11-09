@@ -1,0 +1,24 @@
+Loading data from HDF5 file....curn_hd non-pulsar params: ['gw_crn_log10_A', 'gw_hd_log10_A', 'nmodel', 'lnpost', 'lnlike', 'chain_accept', 'pt_chain_accept']
+curn_hd params containing gamma but not red_noise: []
+Loading data from HDF5 file....hd_14f_pl_vg non-pulsar params: ['gw__gamma', 'gw__log10_A', 'nmodel', 'lnpost', 'lnlike', 'chain_accept', 'pt_chain_accept']
+Loading data from HDF5 file....irn monotonic: False trapz: 7972996.9642794 authors quad: 7972999.687635162 sorted: 7972999.687638101
+  top 6 betas: [0.06813, 0.11659, 0.19953, 0.34145, 0.58434, 1.0]
+  top 6 <lnL>: [7972775.41, 7972888.7, 7972970.31, 7973036.33, 7973083.95, 7973113.45]
+  low 4 betas: [1e-80, 1.7113283041617796e-07, 2.9286445646252346e-07, 5.01187233627272e-07] <lnL>: [7948831.97, 7948818.89, 7948867.46, 7948927.21]
+Loading data from HDF5 file....curn monotonic: False trapz: 7973025.726733575 authors quad: 7973027.647141817 sorted: 7973027.647143121
+  top 6 betas: [0.06813, 0.11659, 0.19953, 0.34145, 0.58434, 1.0]
+  top 6 <lnL>: [7972860.71, 7972963.08, 7973022.74, 7973060.69, 7973087.59, 7973107.87]
+  low 4 betas: [1e-80, 1.7113283041617796e-07, 2.9286445646252346e-07, 5.01187233627272e-07] <lnL>: [7963381.12, 7963382.28, 7963467.43, 7963604.85]
+Loading data from HDF5 file....hd monotonic: False trapz: 7973030.818315026 authors quad: 7973032.825276921 sorted: 7973032.825292973
+  top 6 betas: [0.06813, 0.11659, 0.19953, 0.34145, 0.58434, 1.0]
+  top 6 <lnL>: [7972866.34, 7972964.99, 7973024.37, 7973063.93, 7973093.96, 7973116.66]
+  low 4 betas: [1e-80, 1.7113283041617796e-07, 2.9286445646252346e-07, 5.01187233627272e-07] <lnL>: [7963387.14, 7963459.96, 7963634.43, 7963582.36]
+curn vs irn trapz_beta log10 BF = 12.491375133962684
+curn vs irn authors_quadrature_no_bootstrap log10 BF = 12.142659457052346
+curn vs irn authors_quadrature_sorted_no_bootstrap log10 BF = 12.142658746806092
+hd vs irn trapz_beta log10 BF = 14.702620862599804
+hd vs irn authors_quadrature_no_bootstrap log10 BF = 14.391494959071935
+hd vs irn authors_quadrature_sorted_no_bootstrap log10 BF = 14.391500653984965
+hd vs curn trapz_beta log10 BF = 2.2112457286371194
+hd vs curn authors_quadrature_no_bootstrap log10 BF = 2.248835502019587
+hd vs curn authors_quadrature_sorted_no_bootstrap log10 BF = 2.248841907178874

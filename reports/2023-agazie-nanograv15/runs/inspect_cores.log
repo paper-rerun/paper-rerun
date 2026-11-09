@@ -1,0 +1,76 @@
+la_forge 1.1.0
+Core signature: (self, chaindir=None, corepath=None, burn=0.25, label=None, fancy_par_names=None, chain=None, params=None, pt_chains=False, skiprows=0, usecols=None, true_vals=None)
+
+===== curn_14f_pl_vg.core
+  h5 key chain (42417, 141) float64
+  h5 key metadata  
+  h5 key params (141,) object
+  attrs {}
+Loading data from HDF5 file....  chain shape (42417, 141) burn 10604 nparams 141
+  gw/meta params ['gw_gamma', 'gw_log10_A', 'nmodel', 'lnpost', 'lnlike']  5
+   gw_gamma: n=31813 min=1.79844 max=4.53307 median=3.35336
+   gw_log10_A: n=31813 min=-14.6372 max=-13.6844 median=-14.1745
+   nmodel: n=31813 min=-0.499937 max=0.499938 median=0.000361832
+
+===== curn_hd.core
+  h5 key chain (19990, 141) float64
+  h5 key metadata  
+  h5 key params (141,) object
+  attrs {}
+Loading data from HDF5 file....  chain shape (19990, 141) burn 4997 nparams 141
+  gw/meta params ['gw_crn_log10_A', 'gw_hd_log10_A', 'nmodel', 'lnpost', 'lnlike']  5
+   gw_crn_log10_A: n=14993 min=-17.9997 max=-11.0011 median=-14.5624
+   gw_hd_log10_A: n=14993 min=-17.9996 max=-11.0009 median=-14.608
+   nmodel: n=14993 min=-0.499851 max=1.49974 median=0.338288
+
+===== curn_ti.core
+  h5 key chain (49990, 31) float64
+  h5 key metadata  
+  h5 key params (31,) object
+  h5 key pars2pull (1,) object
+  h5 key slicedirs () object
+  attrs {}
+
+===== hd_14f_pl_vg.core
+  h5 key chain (7814, 141) float64
+  h5 key metadata  
+  h5 key params (141,) object
+  attrs {}
+Loading data from HDF5 file....  chain shape (7814, 141) burn 1953 nparams 141
+  gw/meta params ['gw__gamma', 'gw__log10_A', 'nmodel', 'lnpost', 'lnlike']  5
+   gw__gamma: n=5861 min=1.79844 max=4.3947 median=3.24925
+   gw__log10_A: n=5861 min=-14.6461 max=-13.6844 median=-14.1987
+   nmodel: n=5861 min=0.500021 max=1.49983 median=1.00206
+
+===== hd_30f_fs.core
+  h5 key chain (12250, 168) float64
+  h5 key metadata  
+  h5 key params (168,) object
+  attrs {}
+Loading data from HDF5 file....  chain shape (12250, 168) burn 3062 nparams 168
+  gw/meta params ['gw_hd_log10_rho_0', 'gw_hd_log10_rho_1', 'gw_hd_log10_rho_2', 'gw_hd_log10_rho_3', 'gw_hd_log10_rho_4', 'gw_hd_log10_rho_5', 'gw_hd_log10_rho_6', 'gw_hd_log10_rho_7', 'gw_hd_log10_rho_8', 'gw_hd_log10_rho_9', 'gw_hd_log10_rho_10', 'gw_hd_log10_rho_11'] ... 32
+
+===== hd_ti.core
+  h5 key chain (24230, 31) float64
+  h5 key metadata  
+  h5 key params (31,) object
+  h5 key pars2pull (1,) object
+  h5 key slicedirs () object
+  attrs {}
+
+===== irn_ti.core
+  h5 key chain (49990, 31) float64
+  h5 key metadata  
+  h5 key params (31,) object
+  attrs {}
+
+===== spline_orf_vg.core
+  h5 key chain (37380, 148) float64
+  h5 key metadata  
+  h5 key params (148,) object
+  attrs {}
+Loading data from HDF5 file....  chain shape (37380, 148) burn 9345 nparams 148
+  gw/meta params ['gw_crn_gamma', 'gw_crn_log10_A', 'gw_orf_spline_0', 'gw_orf_spline_1', 'gw_orf_spline_2', 'gw_orf_spline_3', 'gw_orf_spline_4', 'gw_orf_spline_5', 'gw_orf_spline_6', 'nmodel', 'lnpost', 'lnlike']  12
+   gw_crn_gamma: n=28035 min=2.047 max=4.56686 median=3.21419
+   gw_crn_log10_A: n=28035 min=-14.7499 max=-13.7566 median=-14.1755
+   nmodel: n=28035 min=-0.49996 max=0.499994 median=-0.00431387

@@ -1,0 +1,35 @@
+===== curn_14f_pl_vg.core
+    burn () np.int64(10604)
+    chainpath () b''
+    label () b'./presampled_cores/curn_14f_pl_vg.core'
+   params[:5] ['B1855+09_red_noise_gamma', 'B1855+09_red_noise_log10_A', 'B1937+21_red_noise_gamma', 'B1937+21_red_noise_log10_A', 'B1953+29_red_noise_gamma'] params[-6:] ['gw_log10_A', 'nmodel', 'lnpost', 'lnlike', 'chain_accept', 'pt_chain_accept']
+===== curn_hd.core
+    burn () np.int64(4997)
+   params[:5] ['B1855+09_red_noise_gamma', 'B1855+09_red_noise_log10_A', 'B1937+21_red_noise_gamma', 'B1937+21_red_noise_log10_A', 'B1953+29_red_noise_gamma'] params[-6:] ['gw_hd_log10_A', 'nmodel', 'lnpost', 'lnlike', 'chain_accept', 'pt_chain_accept']
+===== curn_ti.core
+    burn () np.int64(124975)
+    chainpath () b' '
+    label () b'./chains/m2a.hdf'
+    pars2pull (1,) array([b'lnlike'], dtype=object)
+    slicedirs () b'./15yr_ti_m2a_14_10000000.0/'
+   params[:5] ['1.0', '1.7113283041617808', '1079.77516232771', '1165914.4011798324', '125.89254117941675'] params[-6:] ['681292.0690579617', '73.56422544596414', '79432.8234724282', '8.576958985908941', '9261.18728128794', '1e+80']
+===== hd_14f_pl_vg.core
+    burn () np.int64(1953)
+   params[:5] ['B1855+09_red_noise_gamma', 'B1855+09_red_noise_log10_A', 'B1937+21_red_noise_gamma', 'B1937+21_red_noise_log10_A', 'B1953+29_red_noise_gamma'] params[-6:] ['gw__log10_A', 'nmodel', 'lnpost', 'lnlike', 'chain_accept', 'pt_chain_accept']
+===== hd_30f_fs.core
+    burn () np.int64(3062)
+   params[:5] ['B1855+09_red_noise_gamma', 'B1855+09_red_noise_log10_A', 'B1937+21_red_noise_gamma', 'B1937+21_red_noise_log10_A', 'B1953+29_red_noise_gamma'] params[-6:] ['gw_hd_log10_rho_28', 'gw_hd_log10_rho_29', 'lnpost', 'lnlike', 'chain_accept', 'pt_chain_accept']
+===== hd_ti.core
+    burn () np.int64(60575)
+    chainpath () b' '
+    label () b'./chains/m3a.hdf'
+    pars2pull (1,) array([b'lnlike'], dtype=object)
+    slicedirs () b'./15yr_ti_m3a_14_10000000.0/'
+   params[:5] ['1.0', '1.7113283041617808', '1079.77516232771', '1165914.4011798324', '125.89254117941675'] params[-6:] ['681292.0690579617', '73.56422544596414', '79432.8234724282', '8.576958985908941', '9261.18728128794', '1e+80']
+===== irn_ti.core
+    burn () np.int64(12497)
+   params[:5] ['1.0', '1.7113283041617808', '1079.77516232771', '1165914.4011798324', '125.89254117941675'] params[-6:] ['681292.0690579617', '73.56422544596414', '79432.8234724282', '8.576958985908941', '9261.18728128794', '1e+80']
+===== spline_orf_vg.core
+    burn () np.int64(9345)
+   params[:5] ['B1855+09_red_noise_gamma', 'B1855+09_red_noise_log10_A', 'B1937+21_red_noise_gamma', 'B1937+21_red_noise_log10_A', 'B1953+29_red_noise_gamma'] params[-6:] ['gw_orf_spline_6', 'nmodel', 'lnpost', 'lnlike', 'chain_accept', 'pt_chain_accept']
+optstat_ml_gamma4p33.json gw keys: {'gw_log10_A': -14.673301816894826}

@@ -1,0 +1,38 @@
+973fa916cf8f152e9c47529facb5a7aa3fb7db4a tutorials/presampled_cores/curn_14f_pl_vg.core 0
+7e6338edefe1a77ea6ea53768990fa9743178480 tutorials/presampled_cores/curn_hd.core 0
+74e32b77fc17bf253df7f8edd2ccb65cd3b648d6 tutorials/presampled_cores/curn_ti.core 0
+bb150bd7a880ab253b353e66fb6444eb7609bca6 tutorials/presampled_cores/hd_14f_pl_vg.core 0
+4221ac61b53bedfc0708b8a97de6e016a7ed45d2 tutorials/presampled_cores/hd_30f_fs.core 0
+4b09953fd3576ab2393c6240a664ae2ca7f51e43 tutorials/presampled_cores/hd_ti.core 0
+197814999b9aad64a240fbbc1cd688fda8fd5870 tutorials/presampled_cores/irn_ti.core 0
+9a647c1937b12f8f94ab1f8637f0041fc01d1b41 tutorials/presampled_cores/spline_orf_vg.core 0
+--- history of the cores folder (commits only, no blobs)
+c09e8964fa02fa93471ae68b76b83bc138fd949d 2023-12-06 11:23:37 -0800 Aaron add in irn vs curn and irn_ti.core
+fdade416f6f77c363404d643235ada458312f591 2023-12-06 01:05:59 -0800 Aaron changing more m2a/m3a to curn/hd
+7ca703761708d7acb4e09c7296fc1113fcdb6498 2023-07-16 19:54:32 -0700 Aaron OS tutorial MCOS
+637b7e4cd0068966e9bb56572c7379556e4fb7d9 2023-07-10 23:23:49 -0700 Aaron add m2a vs m3a chains
+4e7d39e180b85c48890c7cc146d39f3e6004b63d 2023-07-03 14:26:29 -0500 Aaron updates...
+a045043a5a5197ed5fa956e67edfed44acb3c215 2023-06-15 17:01:19 +1000 Aaron add spline orf
+63691cb8f0cacc1dd41440203f7ec26e4c7d9716 2023-06-07 17:42:59 -0700 Aaron add ipyml as a dependency
+097e6b80777f46ebd21d369fc134eb6d194aa1fd 2023-06-05 14:30:04 -0700 Aaron changes....
+--- history of data_release
+54ccba86798200156782b0c2e9617a38ad6dc43d 2025-08-11 12:35:53 -0500 Aaron move to feathers
+98a4783a0c9955711a404a8773e46f6bc09a456f 2024-02-11 09:49:50 -0800 Aaron remove figure 1 data
+69c9f53f37311d8c91a99e6de523fb4592f55a56 2024-02-08 02:05:08 -0800 Aaron update figures 9 and 10
+7d974180c644efa5efb18606ce8b9b46a5349586 2024-02-08 01:44:04 -0800 Aaron figure 5 done
+3903edcc3e4a066a21cae30a2578c16db71d94c6 2024-02-08 01:30:51 -0800 Aaron update figure 4
+68453727142fe6e7505f88a0edb98ecba35004a8 2024-02-08 01:21:12 -0800 Aaron update several figures
+550094c25d4bdce09d7c91570cb084ca4fa95066 2024-02-08 00:19:11 -0800 Aaron figure 3 done
+99439792beff0e45e51b8e257364e96baa0906a1 2024-02-08 00:11:58 -0800 Aaron add data, fig 1 changes
+05122696d54780ef2411d8cedaff1c0d9e31ecff 2024-02-06 21:22:12 -0800 Aaron remove unused imports
+0167e66c260643ad131bc400e3ead638f5e3ba20 2024-01-05 16:43:57 -0600 svigeland updated figure_1 directory structure
+301M	.git
+376
+973fa916cf8f152e9c47529facb5a7aa3fb7db4a PRESENT
+7e6338edefe1a77ea6ea53768990fa9743178480 PRESENT
+74e32b77fc17bf253df7f8edd2ccb65cd3b648d6 PRESENT
+bb150bd7a880ab253b353e66fb6444eb7609bca6 PRESENT
+4221ac61b53bedfc0708b8a97de6e016a7ed45d2 PRESENT
+4b09953fd3576ab2393c6240a664ae2ca7f51e43 PRESENT
+197814999b9aad64a240fbbc1cd688fda8fd5870 PRESENT
+9a647c1937b12f8f94ab1f8637f0041fc01d1b41 PRESENT

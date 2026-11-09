@@ -1,0 +1,119 @@
+{
+  "paper": {
+    "title": "The NANOGrav 15 yr Data Set: Evidence for a Gravitational-wave Background",
+    "authors": "G. Agazie et al. (NANOGrav Collaboration)",
+    "venue": "ApJL 951:L8 (2023)",
+    "doi": "10.3847/2041-8213/acdac6",
+    "arxiv": "2306.16213 (PDF fetched from arxiv.org with TLS on, sha256 3a33495ae465768f832d5e55efff0769a6a6c41564ce8714e3f51ba929785aeb, logs/get_paper.log; text extracted with pypdf 4.3.1 to sources/paper.txt)",
+    "code_and_data": "https://github.com/nanograv/15yr_stochastic_analysis, MIT, pinned at a3e8b8776a646208ca2d307f83c20bc70e029933 (2025-08-11, HEAD of main when cloned on 2026-11-08). Last commit touching tutorials/presampled_cores: c09e8964 (2023-12-06). Last commit touching data_release: 54ccba86 (2025-08-11)."
+  },
+  "mode": "Analysis of the authors' published products (la_forge cores and data_release files). No sampling is re-run.",
+  "what_this_tests": "Reading the authors' published chains and re-computing summary numbers (quantiles, Bayes factors, p-values) with the authors' post-processing code tests (a) that the published products carry the published numbers and (b) the post-processing step: percentiles, the product-space weight correction, the thermodynamic-integration quadrature, the phase-shift p-value count. It does NOT test the data reduction, the noise modelling, the timing model, the priors as implemented, the likelihood, the MCMC sampling or its convergence. A pass here means 'the numbers follow from the chains the authors posted', not 'the GWB evidence is independently confirmed'.",
+  "pre_freeze_findings": {
+    "readme_caveat": "README.md (pinned commit) says, in a red heading: 'If you want to use our data for publications, the full data products are available for download under the data_release section.' and 'Data used in the tutorials section of this repository have been reduced to make them available on GitHub and may not reproduce the results of the 15-year analysis exactly.' The presampled cores live in tutorials/presampled_cores/, so the sentence, read literally, covers them too. Nothing in the README restricts it to par/tim files. The triage reading ('applies to par/tim, not to the cores') is NOT supported by the README text.",
+    "notebook_evidence": [
+      "tutorials/parameter_est.ipynb cell 34 says 'we have included a full set of samples from the posterior', which supports the cores being real posterior chains, but does not say they are the production chains used for the paper's numbers.",
+      "tutorials/model_selection.ipynb cell 32 says the TI cores 'only contain the likelihood parameter from each of the chains for 31 temperatures', i.e. the TI cores are reduced in columns (enough for TI, nothing else).",
+      "data_release/figure_1/lower_left.ipynb (the notebook behind Fig. 1b and the headline amplitude) does NOT load any presampled core. It loads 'nano15_hd_chain_fg_long_050523.npy' (fixed gamma = 13/3) and 'nano15_hd_chain_long_050523.npy' (varied gamma) from a Google Drive tarball (https://drive.google.com/file/d/1zywc5zUpMSlYDrrdogPEaRd_RTr9U5J6), described as 'long HD chains ... concatenated from runs by William Lamb and Nihan Pol'. Its stored output (authors' run, not ours) prints 5/95/50% of the fixed-gamma chain as 1.815211583802292e-15, 3.0689227094055674e-15, 2.403918137658136e-15.",
+      "The same notebook's stored output for the varied-gamma long chain gives median A = 6.385420941789065e-15, while tutorials/parameter_est.ipynb cell 53 (stored output) gives median log10_A = -14.198686384772618 (A = 6.33e-15) from presampled hd_14f_pl_vg.core. So the presampled varied-gamma core is a different chain from the one behind Fig. 1b.",
+      "data_release/figure_1/upper_left.ipynb loads '30fCP_30fiRN_3A_freespec_chain.core' and '14f_PL_hd_crn.core' from the same Drive tarball, not the presampled hd_30f_fs.core.",
+      "No file name in tutorials/presampled_cores/ indicates an HD model with gamma fixed to 13/3: hd_14f_pl_vg, curn_14f_pl_vg, spline_orf_vg are 'vg' (varied gamma); hd_30f_fs is a free spectrum; curn_hd is a CURN-vs-HD product-space run built with model_general(common_psd='powerlaw') and no gamma_common, i.e. varied gamma; curn_ti, hd_ti, irn_ti are thermodynamic-integration likelihood slices."
+    ],
+    "process_note": "To keep the cores unread until this file was frozen, the repo was cloned with --filter=blob:none and a sparse checkout that excluded tutorials/presampled_cores/. A presence check I ran (git cat-file -e, which lazily fetches in a partial clone) pulled the 8 core blobs into .git/objects before this freeze (logs/cores_missing_before_freeze.log). They were not checked out, decoded or read. Everything above comes from README/notebook text and file names only."
+  },
+  "definitions_fixed_before_computing": {
+    "which_core_for_C1": "C1 needs posterior samples of log10 A for the HD power-law model with gamma fixed to 13/3, 14 common frequencies. Rule: after checkout, list the parameters of every presampled core. A core counts as an hd13/3 chain only if it is an HD model and has a common-process log10_A parameter and NO varying common gamma parameter (or a gamma column that is constant at 13/3 to 1e-6). If such a core exists, C1 is computed from it. If not, C1 is 'not tested' from the GitHub products. The Drive tarball is NOT downloaded in this run: it is a source not named in the request, and a download outside the named source needs Filipe's explicit OK. Fetching it is the obvious next step.",
+    "burn_in": "la_forge defaults as the authors' notebooks use them (core.Core(corepath=...) and get_param(...) with default arguments). The installed la_forge version and its default burn fraction are recorded in the log. No other burn-in is tried for the verdict.",
+    "quantiles": "numpy.percentile with linear interpolation, q = 5, 50, 95, on 10**log10_A. '90% credible interval' = 5th to 95th percentile, as the paper's Sec. 3 states ('posterior medians and 5-95% quantiles') and as data_release/figure_1/lower_left.ipynb computes.",
+    "product_space_BF": "From curn_hd.core: BF(HD/CURN) = N(nmodel > 0.5) / N(nmodel < 0.5) * 300, where 300 = exp(log_weight) taken from tutorials/model_selection.ipynb (HyperModel(pta, log_weights=[np.log(300), 0])). The weight is not stored in the core, so it cannot be verified from the product itself; this is recorded as a limitation. Uncertainty: bootstrap of the nmodel column, 10,000 realizations, numpy default_rng(seed=20231108), as in the authors' notebook.",
+    "ti_BF": "From irn_ti.core, curn_ti.core, hd_ti.core with la_forge slices.SlicesCore and the authors' ti_log_evidence() from tutorials/extra_functions.py at the pinned commit, default arguments (bs_iterations=2000). Its module-level RNG is unseeded; we replace extra_functions.rng with numpy default_rng(seed) before each call, seeds fixed here: irn 1, curn 2, hd 3. log10 BF(B/A) = (lnZ_B - lnZ_A)/ln(10), sigma = sqrt(sA^2 + sB^2)/ln(10). The authors' file is not modified."
+  },
+  "claims": [
+    {
+      "id": "C1_A_hd13_3",
+      "primary": true,
+      "quantity": "GWB strain amplitude A_GWB at f_ref = 1/yr, HD-correlated power law with gamma fixed to 13/3, 14 frequencies; median and 5-95% interval",
+      "paper_value": {"median": 2.4e-15, "plus": 0.7e-15, "minus": 0.6e-15, "p05_implied": 1.8e-15, "p95_implied": 3.1e-15},
+      "location": "Abstract (p. 3 of arXiv PDF); Sec. 1 (p. 5); Sec. 3 (p. 8, 'A_HD,13/3 = 2.4 +0.7 -0.6 x 10^-15')",
+      "authors_notebook_output": "data_release/figure_1/lower_left.ipynb stored output from the Drive chain: p05 1.8152e-15, p95 3.0689e-15, median 2.4039e-15. This is the authors' printed output, not a computation of ours.",
+      "tolerance": {"median": [2.3e-15, 2.5e-15], "p05": [1.7e-15, 1.9e-15], "p95": [3.0e-15, 3.2e-15]},
+      "tolerance_basis": "The paper prints 2 significant figures, so the rounding half-width is 0.05e-15 on each of median, p05 and p95. We add 0.05e-15 for Monte Carlo noise of a chain quantile (a chain of >=1e4 effective samples has quantile noise well below that; a shorter presampled chain could reach it). Total +-0.1e-15 on each number.",
+      "status_rule": "Computed only from a core that passes the 'which_core_for_C1' rule. Otherwise 'not tested'."
+    },
+    {
+      "id": "S1_log10BF_curn_vs_irn",
+      "primary": false,
+      "quantity": "log10 Bayes factor, CURN (varied gamma) vs intrinsic red noise only, thermodynamic integration",
+      "paper_value": {"log10_bf": 12.1, "unc": 0.1},
+      "location": "Fig. 2 (p. 8): '10^(12.1 +- 0.1)' on the IRN -> CURN_gamma arrow",
+      "authors_notebook_output": "tutorials/model_selection.ipynb cell 36 stored output: (12.113858315735474, 0.08525879568084149)",
+      "tolerance": {"log10_bf": [11.9, 12.3]},
+      "tolerance_basis": "Twice the paper's quoted uncertainty (0.1). Our estimator is the authors' bootstrap TI, whose own sigma is ~0.09 per the stored output, so a correct recomputation should land within 0.2 of 12.1."
+    },
+    {
+      "id": "S2_log10BF_hd_vs_irn",
+      "primary": false,
+      "quantity": "log10 Bayes factor, HD power law (varied gamma) vs intrinsic red noise only, thermodynamic integration (hd_ti vs irn_ti)",
+      "paper_value": {"log10_bf_lower_bound": 14},
+      "location": "Abstract (p. 2-3): 'favored over a model with only independent pulsar noises with a Bayes factor in excess of 10^14'",
+      "tolerance": {"rule": "pass if central log10 BF > 14"},
+      "tolerance_basis": "The paper states only a lower bound. We also report whether central - 2 sigma > 14. The abstract does not say which method or which gamma; we read it as HD_gamma vs IRN, which equals Fig. 2's CURN/IRN times HD/CURN (10^12.1 x 226 = 10^14.45). This reading is fixed here."
+    },
+    {
+      "id": "S3_BF_hd_vs_curn_productspace",
+      "primary": false,
+      "quantity": "Bayes factor HD_gamma vs CURN_gamma, 14 frequencies, product-space (HyperModel) core curn_hd.core",
+      "paper_value": {"bf": 226, "unc": 70, "text_range": "200 (14 freqs) to 1000 (5 freqs)"},
+      "location": "Fig. 2 (p. 8) '226 +- 70'; Sec. 3 (p. 8) 'ranges from 200 (when 14 Fourier frequencies are included) to 1,000 (when 5 frequencies)'; abstract '200-1000'",
+      "authors_notebook_output": "tutorials/model_selection.ipynb cells 26 and 29 stored output: 202.2219740955784; bootstrap mean 202.21, std 3.40",
+      "tolerance": {"bf": [156, 296]},
+      "tolerance_basis": "The paper's own quoted uncertainty, 226 +- 70. This band also contains the text's '200'."
+    },
+    {
+      "id": "S3b_BF_hd_vs_curn_ti",
+      "primary": false,
+      "quantity": "Same Bayes factor as S3, by thermodynamic integration (hd_ti vs curn_ti)",
+      "paper_value": {"bf": 226, "unc": 70},
+      "location": "as S3",
+      "authors_notebook_output": "tutorials/model_selection.ipynb cell 40 stored output: (198.0219044034798, 45.156835821977516)",
+      "tolerance": {"bf": [156, 296]},
+      "tolerance_basis": "as S3"
+    },
+    {
+      "id": "S4_BF_hd_vs_curn_5freq",
+      "primary": false,
+      "quantity": "BF HD vs CURN with 5 frequencies, ~1000 (Fig. 2: '965 with 5 freqs.')",
+      "status": "not tested: no 5-frequency core is published in the repository"
+    },
+    {
+      "id": "S5_BF_hd13_3_vs_curn13_3",
+      "primary": false,
+      "quantity": "BF hd13/3 vs curn13/3 ('Results are similar', Sec. 3)",
+      "status": "not tested unless a fixed-gamma product-space or TI core turns up when the cores are listed (same rule as C1)"
+    }
+  ],
+  "extras_not_in_verdict": [
+    {
+      "id": "E1_vg_core_vs_paper",
+      "what": "Whether the presampled hd_14f_pl_vg.core reproduces the paper's varied-gamma numbers A_HD = 6.4 +4.2 -2.7 e-15 and gamma_HD = 3.2 +0.6 -0.6 (Sec. 3, p. 8). Tells whether the presampled cores behave like the production chains.",
+      "band": {"A_median": [6.3e-15, 6.5e-15], "gamma_median": [3.15, 3.25]},
+      "note": "Rounding half-width plus 0.05 units of MC noise, same rule as C1. Not part of the verdict."
+    },
+    {
+      "id": "E2_freespec_refit_A13_3",
+      "what": "Approximate A at gamma = 13/3 from the HD free-spectrum core hd_30f_fs.core, using the factorized-likelihood refit (Lamb et al. 2023, which the paper itself uses in App. C): posterior(log10 A) proportional to prior(log10 A) * prod_{i=1..14} p_i(log10 rho_i(A)) / prior_i(log10 rho_i), with p_i a histogram density (bins of 0.05 dex over the prior range [-9, -4] of log10 rho as stored in the core; the bin width is fixed here) of the core's gw_hd_log10_rho_{i-1}, prior_i uniform, log10 rho_i(A) = 0.5*log10(A^2/(12 pi^2) * yr^(3-gamma) * f_i^(-gamma) / T), T = 505861299.1401644 s from the authors' notebooks, log10 A prior U(-18,-14) on a grid of 4001 points. If the core's rho parameterization or prior range differs from this, the mapping is adjusted to what the core says and the change is logged. This is an approximation and does not count as testing C1.",
+      "band": "reported only; compared with 2.4 +0.7 -0.6 descriptively"
+    },
+    {
+      "id": "E3_vg_conditional_slice",
+      "what": "Samples of hd_14f_pl_vg.core with |gamma - 13/3| < 0.1: median and 5/95% of A, with the sample count. Under independent priors this conditional is the fixed-gamma posterior (prior range of log10 A differs, U(-18,-11) vs U(-18,-14), irrelevant if the slice has no mass above -14). 13/3 is at the 99% edge of the vg posterior, so few samples are expected. Approximation; does not count as testing C1."
+    },
+    {
+      "id": "E4_bayesian_pvalue",
+      "what": "Phase-shift p-value of the HD/CURN Bayes factor from data_release/figure_3/pshift_bfs.npy, computed as the authors' make_fap_plots.ipynb does: fraction of pshift_bfs > 226. Paper: p = 10^-3 (abstract; Fig. 3). Authors' stored output: 7.85e-04.",
+      "band": [5e-4, 1.5e-3]
+    }
+  ],
+  "verdict_rule": "Reproduced: C1 inside its band. Not reproduced: C1 computed and outside. If C1 is not testable from the GitHub products, the run verdict is 'Partially reproduced / headline not tested', with the secondaries reported claim by claim. Secondaries and extras never upgrade a not-tested primary.",
+  "frozen": "2026-11-08, before any core content was read"
+}

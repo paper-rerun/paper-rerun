@@ -1,0 +1,18 @@
+total 96116
+-rwxrwxrwx 1 root root 22623949 Nov  8 23:29 curn_14f_pl_vg.core
+-rwxrwxrwx 1 root root 10757054 Nov  8 23:29 curn_hd.core
+-rwxrwxrwx 1 root root  9660828 Nov  8 23:29 curn_ti.core
+-rwxrwxrwx 1 root root  6443933 Nov  8 23:29 hd_14f_pl_vg.core
+-rwxrwxrwx 1 root root 14932912 Nov  8 23:29 hd_30f_fs.core
+-rwxrwxrwx 1 root root  4737816 Nov  8 23:29 hd_ti.core
+-rwxrwxrwx 1 root root  9702038 Nov  8 23:29 irn_ti.core
+-rwxrwxrwx 1 root root 19548474 Nov  8 23:29 spline_orf_vg.core
+db113ef684a58ab01c95554ed837b7ac68f1a52954b87a325a821e2510417dc9  tutorials/presampled_cores/curn_14f_pl_vg.core
+962ada04cda45026a9818c2a7513bf3f3a2664acad10da19d85cd1c2d610e4a8  tutorials/presampled_cores/curn_hd.core
+20869840830e866ca4a5c978b29d1e888f61931b4edda9f595638db05fffcda2  tutorials/presampled_cores/curn_ti.core
+9c53e53c7d8c5397f5ff1cc2367588b07e7c36bde0f5e5223b6de44b32a5e1aa  tutorials/presampled_cores/hd_14f_pl_vg.core
+a829e8d7e93c7e452f946fbb6f2a6ad2da51b73c08ae145bd929ac70f634758d  tutorials/presampled_cores/hd_30f_fs.core
+3e115d5f243225b56c4d9a5d063cb82c5b821791f6bea52742916e28afb5b85e  tutorials/presampled_cores/hd_ti.core
+0960aef6c07714ea6330737a00d7de067f8a7442aa3c7f627df3fdcf1114ce1c  tutorials/presampled_cores/irn_ti.core
+e6a630487e33700415fa69019906a24b46076360f1ec74a8d63a12fc7d347510  tutorials/presampled_cores/spline_orf_vg.core
+7ab06e84faf7dae8a6dc2580a2d14829b1f3cf7f7743cb0dc033740ab5d10a3f  data_release/figure_3/pshift_bfs.npy

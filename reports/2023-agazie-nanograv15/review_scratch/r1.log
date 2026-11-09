@@ -1,0 +1,13 @@
+fg shape (188963,) float64
+fg long chain 5/50/95 A: [1.81521158e-15 2.40391814e-15 3.06892271e-15] n 188963 tau 77.81875111414148
+vg shape (143824, 2)
+vg A 5/50/95 [3.69992319e-15 6.38542094e-15 1.05585302e-14] gamma [2.65956843 3.2476866  3.83977187]
+Loading data from HDF5 file....KS curn_hd HD branch vs fg long: KstestResult(statistic=np.float64(0.06949252140461304), pvalue=np.float64(5.212045943978822e-25), statistic_location=np.float64(-14.627850442399088), statistic_sign=np.int8(-1))
+percentile of optstat ML in CURN branch: 5.21438142027691
+HD branch first 5 [-14.62010744 -14.62010744 -14.62010744 -14.62010744 -14.62010744]
+fg long has any exact match of first HD value? 0
+Loading data from HDF5 file....curn_hd lnlike etc params tail ['J2322+2057_red_noise_log10_A', 'gw_crn_log10_A', 'gw_hd_log10_A', 'nmodel', 'lnpost', 'lnlike', 'chain_accept', 'pt_chain_accept']
+Loading data from HDF5 file....14f_PL_hd_crn params tail ['J2322+2057_red_noise_log10_A', 'gw__gamma', 'gw__log10_A', 'nmodel', 'lnpost', 'lnlike', 'chain_accept', 'pt_chain_accept'] chain (502300, 141) burn 125575
+nmodel range -0.49999994211043974 1.4999660453043144 frac>0.5 0.15505740261463932
+gw__gamma 1.798441895498212 3.338608619488219 4.591628820803416
+gw__log10_A -14.653815673810819 -14.177995796767846 -13.684371375657513

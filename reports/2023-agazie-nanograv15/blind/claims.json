@@ -1,0 +1,94 @@
+{
+  "paper": "Agazie et al. (NANOGrav) 2023, ApJL 951:L8, arXiv:2306.16213v1",
+  "repo": "https://github.com/nanograv/15yr_stochastic_analysis @ a3e8b8776a646208ca2d307f83c20bc70e029933",
+  "mode": "analysis of published products only; no re-sampling",
+  "frozen_before": "any chain (.core) file is opened or decoded. Only file names, sizes, README, known_issues.md, figure READMEs, notebook SOURCE cells (outputs stripped), ti_sample.py and extra_functions.py were read.",
+  "product_inventory": {
+    "in_repo": [
+      "tutorials/presampled_cores/hd_14f_pl_vg.core  (HD, 14 freqs, power law, VARIED gamma; notebook params gw__log10_A, gw__gamma)",
+      "tutorials/presampled_cores/curn_14f_pl_vg.core (CURN, 14 freqs, varied gamma)",
+      "tutorials/presampled_cores/hd_30f_fs.core (HD free spectrum)",
+      "tutorials/presampled_cores/spline_orf_vg.core (spline ORF)",
+      "tutorials/presampled_cores/curn_hd.core (HyperModel product-space CURN vs HD, 14 freqs, model_general common_psd=powerlaw, log_weights=[ln 300, 0])",
+      "tutorials/presampled_cores/irn_ti.core, curn_ti.core, hd_ti.core (thermodynamic-integration slices, lnlike per temperature; ti_sample.py: model_1 / model_2a / model_3a, 14 freqs, varied gamma, Tmax=1e7)"
+    ],
+    "only_off_repo": "data_release/figure_1, figure_4, figure_5, figure_7 point to Google Drive. Not downloaded (forbidden host). Figure 1 holds the hd13/3 amplitude posterior.",
+    "caveat": "README: tutorial data 'have been reduced ... and may not reproduce the results of the 15-year analysis exactly'. It is not stated whether the presampled cores were run on the full or the reduced data, nor how long they are."
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "tier": "primary",
+      "text": "A_GWB = 2.4 (+0.7/-0.6) e-15 at f_ref = 1/yr, median and 90% credible interval, hd model with gamma fixed to 13/3, 14 frequencies",
+      "source": "abstract; Sec. 3 ('A_HD,13/3 = 2.4 +0.7 -0.6 x 10^-15'); Fig. 1(b) caption",
+      "published": {"median": 2.4e-15, "q05": 1.8e-15, "q95": 3.1e-15},
+      "product_needed": "posterior chain of the hd13/3 model",
+      "product_available": false,
+      "status_rule": "No published product in the repository samples hd with gamma fixed to 13/3 (only varied-gamma chains). The Figure 1 data are on Google Drive, which is off limits. C1 as stated is therefore NOT TESTED. Exploratory estimate E1 below does not enter the verdict.",
+      "tolerance": "would be: each of median, q05, q95 rounds to the printed value at 0.1e-15, i.e. median in [2.35, 2.45)e-15, q05 in [1.75, 1.85)e-15, q95 in [3.05, 3.15)e-15"
+    },
+    {
+      "id": "E1",
+      "tier": "exploratory (not in verdict)",
+      "text": "Conditional posterior of log10 A at gamma = 13/3 taken from the varied-gamma HD chain hd_14f_pl_vg.core",
+      "reasoning": "With independent priors p(log10A) p(gamma) and gamma ~ U[0,7], p(log10A | gamma=g0, d) is exactly the posterior of the fixed-gamma model with the same log10A prior. The prior upper bounds differ (-14 for gamma=13/3 in Table 1 vs -11 or the code default for varied), but A ~ 10^-14.6 at gamma=13/3, so truncation at -14 should be negligible; checked by reporting the fraction of conditional samples above -14. The paper says gamma=13/3 sits at the 99% boundary, so few samples will be near it, and A and gamma are strongly correlated, so a raw window biases A.",
+      "method_primary": "samples with |gamma - 13/3| < 0.15; fit log10A = a + b (gamma - 13/3) by least squares within the window; adjusted log10A_i = log10A_i - b (gamma_i - 13/3); report median, 5%, 95% of 10**adjusted. Chain as loaded by la_forge core.Core(corepath=...) with its default burn, as the authors' notebook loads it.",
+      "sensitivity": "raw window (no adjustment) at half-widths 0.05, 0.10, 0.15, 0.20; adjusted at 0.10 and 0.20; extra 25% burn-in; bootstrap (2000 resamples, seed 20231108) of the primary estimate's median",
+      "min_samples": 100,
+      "band": "consistent if median in [2.2, 2.6]e-15 and q05 in [1.6, 2.0]e-15 and q95 in [2.9, 3.3]e-15 (rounding band widened by 0.15-0.2e-15 for slice Monte Carlo error)"
+    },
+    {
+      "id": "P1",
+      "tier": "product identity check (not in verdict)",
+      "text": "Varied-gamma HD posterior: A_HD = 6.4 (+4.2/-2.7) e-15, gamma_HD = 3.2 (+0.6/-0.6), medians and 5-95% quantiles",
+      "source": "Sec. 3, Fig. 1(b)",
+      "purpose": "tells whether hd_14f_pl_vg.core is the paper's chain or a reduced-data / shortened one, which decides how far E1 can be trusted",
+      "band": "A median in [5.9, 6.9]e-15, gamma median in [3.1, 3.3] (rounding +-0.05 widened for Monte Carlo); quantiles reported, compared informally"
+    },
+    {
+      "id": "C2",
+      "tier": "secondary",
+      "text": "Bayes factor hd vs curn (variable-gamma power laws, 14 frequencies) = 226 +- 70",
+      "source": "Fig. 2 ('226 +- 70 (965 with 5 freqs.)'); Sec. 3 ('ranges from 200 (when 14 Fourier frequencies...) to 1,000 (5 frequencies)'); abstract '200-1000'",
+      "product": "curn_hd.core (product space, 14 freqs, varied gamma per notebook code; log weight ln 300 on curn)",
+      "estimator": "BF = N(nmodel > 0.5) / N(nmodel <= 0.5) * 300, the notebook's estimator, chain as loaded by core.Core with default burn; uncertainty by bootstrap of nmodel (2000 resamples, seed 20231108) and, as a check, by the same bootstrap on blocks of 1000 samples to account for autocorrelation",
+      "band": "inside if BF in [86, 366] (published value +- 2 x its quoted uncertainty)",
+      "not_testable": "the 5-frequency value 965 (no 5-frequency product); the hd13/3 vs curn13/3 variant ('results are similar')",
+      "check_after_freeze": "the core must contain nmodel and a varied common gamma; if gamma is fixed, C2 is reported against the hd13/3 vs curn13/3 statement only, with the same band, and flagged"
+    },
+    {
+      "id": "C3",
+      "tier": "secondary",
+      "text": "Bayes factor curn vs irn = 10^(12.1 +- 0.1)",
+      "source": "Fig. 2",
+      "product": "irn_ti.core and curn_ti.core (TI slices)",
+      "estimator": "authors' tutorials/extra_functions.ti_log_evidence (bootstrap 2000, num_samples default), its module rng reseeded with 20231108; log10 BF = (lnZ_curn - lnZ_irn)/ln 10. Independent cross-check: plain trapezoid over beta of the mean lnlike per temperature, no sorting, no bootstrap.",
+      "band": "inside if log10 BF in [11.9, 12.3] (published +- 2 x quoted uncertainty)"
+    },
+    {
+      "id": "C4",
+      "tier": "secondary",
+      "text": "GWB power law with HD correlations favoured over intrinsic pulsar noise only with a Bayes factor in excess of 10^14",
+      "source": "abstract",
+      "product": "irn_ti.core and hd_ti.core (TI slices)",
+      "estimator": "as C3 with hd_ti in place of curn_ti",
+      "band": "inside if log10 BF(hd vs irn) > 14.0 (one-sided, as stated)"
+    },
+    {
+      "id": "C5",
+      "tier": "secondary (cross-check of C2 by a second method)",
+      "text": "Bayes factor hd vs curn = 226 +- 70 from TI",
+      "source": "Fig. 2",
+      "product": "curn_ti.core and hd_ti.core",
+      "estimator": "as C3; BF = exp(lnZ_hd - lnZ_curn)",
+      "band": "inside if BF in [86, 366]"
+    }
+  ],
+  "not_tested": [
+    "BF hd vs curn with 5 frequencies (965): no product",
+    "monopole / dipole / HD+X Bayes factors of Fig. 2: no product",
+    "p-values (1e-3 Bayesian background, OS 5e-5 to 1.9e-4): out of scope of the given claims"
+  ],
+  "environment_plan": "WSL Ubuntu, uv, Python 3.10, la_forge + h5py + numpy + scipy + emcee + matplotlib (Agg), pinned in env/requirements.lock; enterprise not needed for reading cores",
+  "verdict_rule": "Verdict covers C1-C5. C1 not tested caps the verdict at 'Partially' or 'Not tested (primary)'; E1 and P1 are context only."
+}

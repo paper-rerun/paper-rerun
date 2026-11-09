@@ -1,0 +1,46 @@
+claims.json sha256 80d244413d03552ace2adc3d16653887fed47d49a30e9c7d89205a6405c98acb
+Loading data from HDF5 file....curn_hd: rows 19990 burn 4997 post-burn 14993
+curn_hd params with gamma: []
+C1 A_hd (nmodel>0.5): {
+ "p05": 1.8787826017186617e-15,
+ "median": 2.4419691935392188e-15,
+ "p95": 3.1473138497433204e-15,
+ "plus": 7.053446562041016e-16,
+ "minus": 5.631865918205571e-16,
+ "n": 6037,
+ "tau_int_on_hd_branch_samples": 28.79091694572461,
+ "neff_approx": 209.6841865571941,
+ "inside": {
+  "median": true,
+  "p05": true,
+  "p95": true
+ }
+}
+C1 HD-branch log10_A max -14.457394738861002  fraction above -14: 0.0
+Loading data from HDF5 file....C1 burn=0: {'p05': np.float64(1.8509147505783485e-15), 'median': np.float64(2.4221488560781393e-15), 'p95': np.float64(3.1064829361995374e-15), 'plus': np.float64(6.843340801213981e-16), 'minus': np.float64(5.712341054997908e-16), 'n': 7934}
+CURN branch log10_A {'p05': np.float64(-14.675071935790834), 'median': np.float64(-14.562865262004774), 'p95': np.float64(-14.479779847912278), 'plus': np.float64(0.08308541409249592), 'minus': np.float64(0.11220667378606031), 'n': 8956}  authors CURN13/3 ML log10_A -14.673301816894826
+S3 {'n_hd': 6037, 'n_curn': 8956, 'bf': 202.2219740955784, 'bs_mean': 202.18936077905371, 'bs_std': 3.3870468434699292, 'tau_int_nmodel': 23.066132724373237, 'inside': True}
+Loading data from HDF5 file....
+model:
+$ln(evidence) = 7972999.672121931
+error in ln_Z = 0.14824333538660947
+
+Loading data from HDF5 file....
+model:
+$ln(evidence) = 7973027.566691684
+error in ln_Z = 0.1294211314174502
+
+Loading data from HDF5 file....
+model:
+$ln(evidence) = 7973032.850721321
+error in ln_Z = 0.18787815407019337
+
+S1_log10BF_curn_vs_irn {'lnZ_irn': np.float64(7972999.672121931), 'sig_irn': np.float64(0.14824333538660947), 'lnZ_curn': np.float64(7973027.566691684), 'sig_curn': np.float64(0.1294211314174502), 'log10_bf': np.float64(12.114457718679416), 'sigma': np.float64(0.08546438256250069), 'inside': True}
+S2_log10BF_hd_vs_irn {'lnZ_hd': np.float64(7973032.850721321), 'sig_hd': np.float64(0.18787815407019337), 'log10_bf': np.float64(14.409282632443006), 'sigma': np.float64(0.10393555943888932), 'inside': True, 'central_minus_2sigma_above_14': True}
+S3b_BF_hd_vs_curn_ti {'log10_bf': np.float64(2.2948249137635908), 'sigma_log10': np.float64(0.0990801053232242), 'bf': np.float64(197.16277122673986), 'bf_lo_1sig': np.float64(156.94403297580465), 'bf_hi_1sig': np.float64(247.68803006228762), 'inside': True}
+Loading data from HDF5 file....E1 {'A': {'p05': np.float64(3.780072725593719e-15), 'median': np.float64(6.328686971873354e-15), 'p95': np.float64(1.040438989932812e-14), 'plus': np.float64(4.075702927454765e-15), 'minus': np.float64(2.548614246279635e-15), 'n': 5861}, 'gamma': {'p05': np.float64(2.6873058336488356), 'median': np.float64(3.2492489270361093), 'p95': np.float64(3.831788537526829), 'plus': np.float64(0.5825396104907195), 'minus': np.float64(0.5619430933872738), 'n': 5861}, 'inside': {'A_median': True, 'gamma_median': True}, 'tau_int_log10A': 5.7878695205780994}
+E3 {'n_slice': 10, 'p05': np.float64(2.330239761767084e-15), 'median': np.float64(2.508438133942401e-15), 'p95': np.float64(3.0029467049091735e-15), 'plus': np.float64(4.945085709667724e-16), 'minus': np.float64(1.78198372175317e-16), 'n': 10, 'gamma_max': 4.39469727052802}
+Loading data from HDF5 file....free-spec log10_rho range in core (bins 1-14): -15.499991543031665 -5.889388442596232
+E2 {'p05': np.float64(1.8665330964639793e-15), 'median': np.float64(2.484929118194517e-15), 'p95': np.float64(3.1108672127401365e-15), 'nsamples_per_bin': 9188}
+E4 {'n': 5097, 'n_above_226': 4, 'p': 0.0007847753580537571, 'inside': True, 'n_above_our_S3': 4, 'p_at_our_S3': 0.0007847753580537571}
+wrote runs/results.json

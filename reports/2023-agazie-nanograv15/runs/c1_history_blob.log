@@ -1,0 +1,154 @@
+--- packs before
+ 
+1100 pack-0a63fff9be7ec5f301fbff69cf5d13f18fbb130f.idx
+19506924 pack-0a63fff9be7ec5f301fbff69cf5d13f18fbb130f.pack
+0 pack-0a63fff9be7ec5f301fbff69cf5d13f18fbb130f.promisor
+56 pack-0a63fff9be7ec5f301fbff69cf5d13f18fbb130f.rev
+7932 pack-13ee2041fb4e2059ea88514581c4c2a9c5e577fc.idx
+37449 pack-13ee2041fb4e2059ea88514581c4c2a9c5e577fc.pack
+103 pack-13ee2041fb4e2059ea88514581c4c2a9c5e577fc.promisor
+1032 pack-13ee2041fb4e2059ea88514581c4c2a9c5e577fc.rev
+1100 pack-17e5a1aa774a3de38485cf60f9195df682a509e9.idx
+6421556 pack-17e5a1aa774a3de38485cf60f9195df682a509e9.pack
+0 pack-17e5a1aa774a3de38485cf60f9195df682a509e9.promisor
+56 pack-17e5a1aa774a3de38485cf60f9195df682a509e9.rev
+1100 pack-498277972ccf97c93726a6d6f624af8801232721.idx
+14905089 pack-498277972ccf97c93726a6d6f624af8801232721.pack
+0 pack-498277972ccf97c93726a6d6f624af8801232721.promisor
+56 pack-498277972ccf97c93726a6d6f624af8801232721.rev
+1100 pack-7208671e9c96386049b75ea230c7230b4d82c799.idx
+10728702 pack-7208671e9c96386049b75ea230c7230b4d82c799.pack
+0 pack-7208671e9c96386049b75ea230c7230b4d82c799.promisor
+56 pack-7208671e9c96386049b75ea230c7230b4d82c799.rev
+1100 pack-759ba22085a53cacc512dcdfafb1cf4a93ed5f2e.idx
+4704995 pack-759ba22085a53cacc512dcdfafb1cf4a93ed5f2e.pack
+0 pack-759ba22085a53cacc512dcdfafb1cf4a93ed5f2e.promisor
+56 pack-759ba22085a53cacc512dcdfafb1cf4a93ed5f2e.rev
+1100 pack-b550401631f2545ac6b357e4a189f4ee9a95e0a9.idx
+23764 pack-b550401631f2545ac6b357e4a189f4ee9a95e0a9.pack
+0 pack-b550401631f2545ac6b357e4a189f4ee9a95e0a9.promisor
+56 pack-b550401631f2545ac6b357e4a189f4ee9a95e0a9.rev
+1100 pack-dd20db08403c0dc169db7a6d3b5045a2dadd54fa.idx
+9656168 pack-dd20db08403c0dc169db7a6d3b5045a2dadd54fa.pack
+0 pack-dd20db08403c0dc169db7a6d3b5045a2dadd54fa.promisor
+56 pack-dd20db08403c0dc169db7a6d3b5045a2dadd54fa.rev
+1268 pack-dd43f30c8b62c8edf9aedd0857d9c081a2b758d8.idx
+219163307 pack-dd43f30c8b62c8edf9aedd0857d9c081a2b758d8.pack
+0 pack-dd43f30c8b62c8edf9aedd0857d9c081a2b758d8.promisor
+80 pack-dd43f30c8b62c8edf9aedd0857d9c081a2b758d8.rev
+1100 pack-f2c49e079f99d386a4ba1945908e9bb8b46d61cc.idx
+22581838 pack-f2c49e079f99d386a4ba1945908e9bb8b46d61cc.pack
+0 pack-f2c49e079f99d386a4ba1945908e9bb8b46d61cc.promisor
+56 pack-f2c49e079f99d386a4ba1945908e9bb8b46d61cc.rev
+4180 pack-f77fd5ef1b8230773d4ae6eb7680aac1d04ecf6a.idx
+215990791 pack-f77fd5ef1b8230773d4ae6eb7680aac1d04ecf6a.pack
+9102 pack-f77fd5ef1b8230773d4ae6eb7680aac1d04ecf6a.promisor
+496 pack-f77fd5ef1b8230773d4ae6eb7680aac1d04ecf6a.rev
+1100 pack-ff1039137cda63ce8b2cfc4223f0611f51d941d0.idx
+9616832 pack-ff1039137cda63ce8b2cfc4223f0611f51d941d0.pack
+0 pack-ff1039137cda63ce8b2cfc4223f0611f51d941d0.promisor
+56 pack-ff1039137cda63ce8b2cfc4223f0611f51d941d0.rev
+434175 tmp_pack_jc4YA0
+--- figure1_data tree in parent of 98a4783 (no lazy fetch)
+98a4783a0c9955711a404a8773e46f6bc09a456f 2024-02-11 09:49:50 -0800 remove figure 1 data
+100644 blob e9022d69b9b1ad0a6b2699b9bc4f5d66ed7e6f02	data_release/figure_1/figure1_data/14f_PL_hd_crn.core
+100644 blob dc919ae7b7f126b6ad5db357d5b899b3f00242b6	data_release/figure_1/figure1_data/30fCP_30fiRN_3A_freespec_chain.core
+100644 blob b1592dd64aee169646be7e9bf830689e41e07a60	data_release/figure_1/figure1_data/SplineORF_FixedGamma_NL.core
+100644 blob e1b0bb8db988d313ce3ec21df074da7c83ddc9b4	data_release/figure_1/figure1_data/SplineORF_VariedGamma_NL.core
+100644 blob 4923521acfd3027c1d264eb85225f62f813a4271	data_release/figure_1/figure1_data/nano15_hd_chain_fg_long_050523.npy
+100644 blob ea702c6e11af5f2eadd3581367b17ecb2e749df1	data_release/figure_1/figure1_data/nano15_hd_chain_long_050523.npy
+100644 blob 81eaef379a73e630d03aa5413df21c1d3bdfae34	data_release/figure_1/figure1_data/optstat_ml_gamma4p33.json
+100644 blob 5477ab6c9e2393ffcdb7d7439a7c566dc92e1ff1	data_release/figure_1/figure1_data/os_covariance_matix_between_rhos.npy
+100644 blob 544e18fb3edae582a08fe02ebcb0fa9f1f3e980d	data_release/figure_1/figure1_data/v1p1_wn_dict.json
+--- commit that added it
+--- enterprise_extensions gamma_common default and Constant
+811:    gamma_common=None,
+1080:                gamma_val=gamma_common,
+306:        if gamma_val is not None:
+307:            gamma = parameter.Constant(gamma_val)
+673:            if gamma_val is not None:
+674:                gamma_dm = parameter.Constant(gamma_val)
+681:            if gamma_val is not None:
+682:                gamma_dm = parameter.Constant(gamma_val)
+993:            if gamma_val is not None:
+994:                gamma = parameter.Constant(gamma_val)
+1373:                log10_Agw = parameter.Uniform(-18, -11)(amp_name)
+1378:        if gamma_val is not None:
+claims.json sha256 80d244413d03552ace2adc3d16653887fed47d49a30e9c7d89205a6405c98acb
+git blob id nano15_hd_chain_fg_long_050523.npy 4923521acfd3027c1d264eb85225f62f813a4271 1511832
+git blob id nano15_hd_chain_long_050523.npy ea702c6e11af5f2eadd3581367b17ecb2e749df1 2301312
+git blob id 14f_PL_hd_crn.core e9022d69b9b1ad0a6b2699b9bc4f5d66ed7e6f02 41272751
+git blob id optstat_ml_gamma4p33_fig1.json 81eaef379a73e630d03aa5413df21c1d3bdfae34 6871
+fg shape (188963,) dtype float64 log10A min/max -14.902756788396594 -14.36143974623447
+batch-means SE p05/p50/p95 (x1e-15), nb=10: [0.0069955  0.00786555 0.0070517 ]
+batch-means SE p05/p50/p95 (x1e-15), nb=20: [0.00830371 0.00752829 0.00788177]
+batch-means SE p05/p50/p95 (x1e-15), nb=50: [0.00861109 0.00849418 0.00757363]
+C1 (history blob): {
+ "p05": 1.815211583802292e-15,
+ "median": 2.403918137658136e-15,
+ "p95": 3.0689227094888395e-15,
+ "plus": 6.650045718307035e-16,
+ "minus": 5.887065538558439e-16,
+ "n": 188963,
+ "tau_int": 77.81875111414148,
+ "neff": 2428.245086108315,
+ "inside": {
+  "median": true,
+  "p05": true,
+  "p95": true
+ }
+}
+vg long shape (143824, 2) A 5/50/95 [3.69992319e-15 6.38542094e-15 1.05585302e-14] gamma 5/50/95 [2.65956843 3.2476866  3.83977187]
+--- packs after
+ 
+1100 pack-0a63fff9be7ec5f301fbff69cf5d13f18fbb130f.idx
+19506924 pack-0a63fff9be7ec5f301fbff69cf5d13f18fbb130f.pack
+0 pack-0a63fff9be7ec5f301fbff69cf5d13f18fbb130f.promisor
+56 pack-0a63fff9be7ec5f301fbff69cf5d13f18fbb130f.rev
+7932 pack-13ee2041fb4e2059ea88514581c4c2a9c5e577fc.idx
+37449 pack-13ee2041fb4e2059ea88514581c4c2a9c5e577fc.pack
+103 pack-13ee2041fb4e2059ea88514581c4c2a9c5e577fc.promisor
+1032 pack-13ee2041fb4e2059ea88514581c4c2a9c5e577fc.rev
+1100 pack-17e5a1aa774a3de38485cf60f9195df682a509e9.idx
+6421556 pack-17e5a1aa774a3de38485cf60f9195df682a509e9.pack
+0 pack-17e5a1aa774a3de38485cf60f9195df682a509e9.promisor
+56 pack-17e5a1aa774a3de38485cf60f9195df682a509e9.rev
+1100 pack-498277972ccf97c93726a6d6f624af8801232721.idx
+14905089 pack-498277972ccf97c93726a6d6f624af8801232721.pack
+0 pack-498277972ccf97c93726a6d6f624af8801232721.promisor
+56 pack-498277972ccf97c93726a6d6f624af8801232721.rev
+1100 pack-7208671e9c96386049b75ea230c7230b4d82c799.idx
+10728702 pack-7208671e9c96386049b75ea230c7230b4d82c799.pack
+0 pack-7208671e9c96386049b75ea230c7230b4d82c799.promisor
+56 pack-7208671e9c96386049b75ea230c7230b4d82c799.rev
+1100 pack-759ba22085a53cacc512dcdfafb1cf4a93ed5f2e.idx
+4704995 pack-759ba22085a53cacc512dcdfafb1cf4a93ed5f2e.pack
+0 pack-759ba22085a53cacc512dcdfafb1cf4a93ed5f2e.promisor
+56 pack-759ba22085a53cacc512dcdfafb1cf4a93ed5f2e.rev
+1100 pack-b550401631f2545ac6b357e4a189f4ee9a95e0a9.idx
+23764 pack-b550401631f2545ac6b357e4a189f4ee9a95e0a9.pack
+0 pack-b550401631f2545ac6b357e4a189f4ee9a95e0a9.promisor
+56 pack-b550401631f2545ac6b357e4a189f4ee9a95e0a9.rev
+1100 pack-dd20db08403c0dc169db7a6d3b5045a2dadd54fa.idx
+9656168 pack-dd20db08403c0dc169db7a6d3b5045a2dadd54fa.pack
+0 pack-dd20db08403c0dc169db7a6d3b5045a2dadd54fa.promisor
+56 pack-dd20db08403c0dc169db7a6d3b5045a2dadd54fa.rev
+1268 pack-dd43f30c8b62c8edf9aedd0857d9c081a2b758d8.idx
+219163307 pack-dd43f30c8b62c8edf9aedd0857d9c081a2b758d8.pack
+0 pack-dd43f30c8b62c8edf9aedd0857d9c081a2b758d8.promisor
+80 pack-dd43f30c8b62c8edf9aedd0857d9c081a2b758d8.rev
+1100 pack-f2c49e079f99d386a4ba1945908e9bb8b46d61cc.idx
+22581838 pack-f2c49e079f99d386a4ba1945908e9bb8b46d61cc.pack
+0 pack-f2c49e079f99d386a4ba1945908e9bb8b46d61cc.promisor
+56 pack-f2c49e079f99d386a4ba1945908e9bb8b46d61cc.rev
+4180 pack-f77fd5ef1b8230773d4ae6eb7680aac1d04ecf6a.idx
+215990791 pack-f77fd5ef1b8230773d4ae6eb7680aac1d04ecf6a.pack
+9102 pack-f77fd5ef1b8230773d4ae6eb7680aac1d04ecf6a.promisor
+496 pack-f77fd5ef1b8230773d4ae6eb7680aac1d04ecf6a.rev
+1100 pack-ff1039137cda63ce8b2cfc4223f0611f51d941d0.idx
+9616832 pack-ff1039137cda63ce8b2cfc4223f0611f51d941d0.pack
+0 pack-ff1039137cda63ce8b2cfc4223f0611f51d941d0.promisor
+56 pack-ff1039137cda63ce8b2cfc4223f0611f51d941d0.rev
+434175 tmp_pack_jc4YA0
+--- sizes
+1.3G	/mnt/e/Ciencia/noturno/2023-agazie-nanograv15

@@ -1,0 +1,106 @@
+82bf67d9a071f8b3da9dc43801232d50f15bb70baa398d117fc355eea9379cfd  claims.json
+Loading data from HDF5 file....hd_14f_pl_vg {"params_count": 141, "chain_shape": [7814, 141], "burn": 1953, "first_params": ["B1855+09_red_noise_gamma", "B1855+09_red_noise_log10_A", "B1937+21_red_noise_gamma", "B1937+21_red_noise_log10_A", "B1953+29_red_noise_gamma"], "last_params": ["gw__log10_A", "nmodel", "lnpost", "lnlike", "chain_accept", "pt_chain_accept"]}
+gw params: ['gw__gamma', 'gw__log10_A']
+samples after burn: 5861
+P1 {"median": 6.328686971873354e-15, "q05": 3.780072725593719e-15, "q95": 1.040438989932812e-14, "gamma_median": 3.2492489270361093, "gamma_q05": 2.6873058336488356, "gamma_q95": 3.831788537526829, "n": 5861, "fraction_gamma_above_13_3": 0.00017061934823408976, "log10A_min": -14.64611492274029, "log10A_max": -13.684371375657513, "gamma_min": 1.798441895498212, "gamma_max": 4.39469727052802}
+E1 {
+ "primary": {
+  "median": 2.546516935584819e-15,
+  "q05": 2.2487675659235854e-15,
+  "q95": 3.246161348308368e-15,
+  "half_width": 0.15,
+  "adjust": true,
+  "n": 18,
+  "slope_dlog10A_dgamma": -0.34185964621199405,
+  "fraction_log10A_above_minus14": 0.0
+ },
+ "sensitivity": [
+  {
+   "median": 2.488217719511615e-15,
+   "q05": 2.4263022522519036e-15,
+   "q95": 2.637210135537991e-15,
+   "half_width": 0.05,
+   "adjust": false,
+   "n": 4,
+   "slope_dlog10A_dgamma": 0.0,
+   "fraction_log10A_above_minus14": 0.0
+  },
+  {
+   "median": 2.508423081844602e-15,
+   "q05": 2.3289084012662757e-15,
+   "q95": 3.0015497102202055e-15,
+   "half_width": 0.1,
+   "adjust": false,
+   "n": 10,
+   "slope_dlog10A_dgamma": 0.0,
+   "fraction_log10A_above_minus14": 0.0
+  },
+  {
+   "median": 2.650136005631084e-15,
+   "q05": 2.3930159320373937e-15,
+   "q95": 3.4666866023952296e-15,
+   "half_width": 0.15,
+   "adjust": false,
+   "n": 18,
+   "slope_dlog10A_dgamma": 0.0,
+   "fraction_log10A_above_minus14": 0.0
+  },
+  {
+   "median": 2.9530108677027705e-15,
+   "q05": 2.4275532989250902e-15,
+   "q95": 3.571205744457291e-15,
+   "half_width": 0.2,
+   "adjust": false,
+   "n": 27,
+   "slope_dlog10A_dgamma": 0.0,
+   "fraction_log10A_above_minus14": 0.0
+  },
+  {
+   "median": 2.690293135228612e-15,
+   "q05": 2.4413981432240916e-15,
+   "q95": 3.0408613712040704e-15,
+   "half_width": 0.1,
+   "adjust": true,
+   "n": 10,
+   "slope_dlog10A_dgamma": 0.4282984528202666,
+   "fraction_log10A_above_minus14": 0.0
+  },
+  {
+   "median": 2.509815319031484e-15,
+   "q05": 2.1397729810329052e-15,
+   "q95": 3.0718414300095507e-15,
+   "half_width": 0.2,
+   "adjust": true,
+   "n": 27,
+   "slope_dlog10A_dgamma": -0.5417051685664107,
+   "fraction_log10A_above_minus14": 0.0
+  },
+  {
+   "median": 2.7195198770254987e-15,
+   "q05": 2.336483586898507e-15,
+   "q95": 3.2814481051557886e-15,
+   "half_width": 0.15,
+   "adjust": true,
+   "n": 15,
+   "slope_dlog10A_dgamma": -0.236165866479643,
+   "fraction_log10A_above_minus14": 0.0,
+   "note": "extra 25% burn"
+  }
+ ],
+ "bootstrap_median_mean": 2.496856758353341e-15,
+ "bootstrap_median_std": 2.0508858757512468e-16,
+ "bootstrap_median_q16_q84": [
+  2.2797960055992487e-15,
+  2.6889563496553677e-15
+ ]
+}
+Loading data from HDF5 file....curn_hd {"params_count": 141, "chain_shape": [19990, 141], "burn": 4997, "first_params": ["B1855+09_red_noise_gamma", "B1855+09_red_noise_log10_A", "B1937+21_red_noise_gamma", "B1937+21_red_noise_log10_A", "B1953+29_red_noise_gamma"], "last_params": ["gw_hd_log10_A", "nmodel", "lnpost", "lnlike", "chain_accept", "pt_chain_accept"]}
+curn_hd gw params: ['gw_crn_log10_A', 'gw_hd_log10_A', 'nmodel']
+C2 {"n": 14993, "hd_count": 6037, "curn_count": 8956, "nmodel_min": -0.4998505215529385, "nmodel_max": 1.499739923347348, "BF": 202.2219740955784, "iid_bootstrap_mean": 202.25983687852482, "iid_bootstrap_std": 3.4481158391076927, "block1000_bootstrap_std": 20.671924116721275, "blocks": 14, "model_switches": 587, "BF_extra_burn25": 209.7461468721668}
+Loading data from HDF5 file....irn temps: 31 min 1.0 max 1e+80 chain shape (49990, 31)
+Loading data from HDF5 file....curn temps: 31 min 1.0 max 1e+80 chain shape (49990, 31)
+Loading data from HDF5 file....hd temps: 31 min 1.0 max 1e+80 chain shape (24230, 31)
+C3 {"authors_fn": {"log10_BF": 12.110264015463132, "unc": 0.08613635576046322}, "plain": {"log10_BF": 12.491375133962684}}
+C4 {"authors_fn": {"log10_BF": 14.40563476884412, "unc": 0.10462612613656264}, "plain": {"log10_BF": 14.702620862599804}}
+C5 {"authors_fn": {"log10_BF": 2.2953707533809884, "unc": 0.09977409932189045, "BF": 197.4107295007861, "BF_1sigma": [156.89050252249018, 248.39614569050192]}, "plain": {"log10_BF": 2.2112457286371194, "BF": 162.6468769527258}}
+wrote outputs/results.json
