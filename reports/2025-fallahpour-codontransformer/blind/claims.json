@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "paper": "Fallahpour A, Gureghian V, Filion GJ, Lindner AB, Pandi A. CodonTransformer: a multispecies codon optimizer using context-aware neural networks. Nat Commun 16, 3205 (2025).",
+    "doi": "10.1038/s41467-025-58588-7",
+    "fulltext_used": "Europe PMC PMC11968976 fullTextXML, downloaded to ./paper.xml",
+    "code": "github.com/Adibvafa/CodonTransformer (Apache-2.0)",
+    "weights": [
+      "huggingface.co/adibvafa/CodonTransformer (fine-tuned)",
+      "huggingface.co/adibvafa/CodonTransformer-base (base/pretrained)"
+    ],
+    "weights_note": "Both repos are public and ungated. Weight blobs were uploaded 2024-05-24 (fine-tuned) and 2024-07-29 (base); every commit after that touches only README.md, so main == the weights the paper describes.",
+    "source_data": {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-58588-7/MediaObjects/41467_2025_58588_MOESM4_ESM.zip",
+      "sha256": "8dc388e45ddb9efee17b6f2e6bc070fb14bc6779977708f485294d84330f198f",
+      "bytes": 8024232,
+      "fig4_workbook": "Source Data/Fig. 4, Supplementary Fig. 19f-h, 20, 21, 22 and 25.xlsx"
+    },
+    "role": "Independent blind recount. I have not seen, and will not open, any earlier reproduction of this paper.",
+    "mode": "LIGHT: CPU only, nice -n 19, OMP/MKL threads = 4, torch threads = 4, RAM budget ~8 GB, whole run under /usr/bin/time -v.",
+    "frozen_at_utc": "2026-11-11T00:37:34Z",
+    "author_of_prereg": "blind recount agent (Claude), no human input on the bands"
+  },
+  "target": {
+    "figure": "Figure 4",
+    "what": "The Base (pretrained) vs Fine-tuned CodonTransformer comparison. Figure 4 compares the sequences that six codon-optimization tools designed for 52 recombinant proteins in 5 host organisms (E. coli, S. cerevisiae, A. thaliana, M. musculus, H. sapiens). Three of its four panels (a, b, c) are pairwise matrices of tool-vs-tool agreement, and the headline of each panel is the Base-vs-Fine-tuned cell, because the paper's argument is that the two CodonTransformer models agree with each other more than with any commercial tool. Panel d is a per-organism count, where the paper's claim about the two models is a per-organism pair of means.",
+    "why_these_numbers": "I read the Results section 'Model benchmark for heterologous expression of proteins' and the Fig. 4 caption myself. Every number the running text attributes to Fig. 4a/4b/4c for the base-vs-fine-tuned pair, and the base/fine-tuned means in Fig. 4d, is listed below. Numbers that Fig. 4 reports for other tool pairs are recorded as context claims (C6) but do not drive the verdict, since the task names the Base vs Fine-tuned comparison.",
+    "n": "52 benchmark proteins x 5 organisms = 260 base/fine-tuned sequence pairs; the published figure means are across all 5 organisms."
+  },
+  "fixed_definitions": {
+    "note": "Every ambiguity below is settled here, before any metric is computed. An alternative tried later goes in the report as a sensitivity analysis and cannot change the verdict.",
+    "codon_split": "A DNA string is split into codons from position 0 in non-overlapping steps of 3. The terminal stop codon, where the Source Data sequence carries one, IS included. Reason: the paper gives no exclusion rule, and the Source Data codon-count sheets list STOP_TGA / STOP_TAA / STOP_TAG as codons, so the authors' own pipeline counts stop codons.",
+    "jaccard": "For a pair of sequences, A and B are the SETS of distinct codon strings present. J = |A and B| / |A or B| (paper eq. 9).",
+    "sequence_similarity": "100 * (number of positions i where codon_A[i] == codon_B[i]) / L, with L the number of codons (paper eq. 10). Both sequences of a pair encode the same protein, so L is asserted equal; a pair with unequal L is reported, not silently truncated.",
+    "minmax": "The paper's eq. 6, (xmax - xmin)/(xmax + xmin)*100, does NOT describe the R package kodonz that the Methods say was used: kodonz/pminmax.r implements Clarke & Clark 2008, sum(f - favg) / sum(fmax - favg) when the numerator is positive, else sum(f - favg) / sum(favg - fmin), over a sliding window, returning a signed fraction. The %MinMax values published in the Source Data are signed fractions in roughly [-1, 1], which eq. 6 cannot produce. I therefore do not use eq. 6. For the verdict I take the authors' published %MinMax profiles as the INPUT to my own DTW (claim C3). My own from-scratch %MinMax (Clarke & Clark as in kodonz, window = 18 codons as the Methods state, GenScript per-host codon frequency tables as kodonz ships them) is claim C3b, a sensitivity check only.",
+    "dtw": "My own DTW: local cost |x_i - y_j| (absolute difference, which is the Euclidean distance in one dimension, as the Methods say), step pattern symmetric2 (the default of R's dtw), open.begin = open.end = FALSE. The reported statistic is normalizedDistance = cumulative cost / (N + M), which is what R's dtw returns in the normalizedDistance slot under symmetric2 with default parameters, and the Methods say they retrieved normalizedDistance with default parameters. distance/N and distance/max(N,M) are reported as sensitivity only.",
+    "cis_elements": "The counts come from GenScript's rare-codon-analysis web form, a third-party interactive service. I will not submit 520 sequences to a third-party web form. C4 therefore recomputes the per-organism means from the per-sequence CIS counts the authors published in the Source Data. This tests the arithmetic and the reporting of Fig. 4d, not the GenScript tool itself. The report must say so plainly.",
+    "generation_for_C5": "Inference by the 'protein sequence only' route of the Methods: every amino acid is presented as [aminoacid_UNK] plus the organism token, one masked-LM forward pass, and the codon taken by argmax over the tokens legal for that amino acid (deterministic, no sampling). Reason: the paper's benchmark gives only protein sequences for the 52 recombinant proteins, so the protein+DNA route is not available. torch.set_num_threads(4), no GPU.",
+    "peeking_rule": "The Source Data zip also contains the authors' own R notebook (Reproduce_figures.nb.html). I write every metric from the paper's equations and from kodonz's published source BEFORE opening that notebook. If a claim misses its band I may then open it to find out why, and the report must declare that I did and at what point."
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "panel": "Fig. 4a",
+      "text": "Across the 5 organisms, the Jaccard index between the Base and the Fine-tuned CodonTransformer sequences has a mean of 0.74, higher than the base model's Jaccard with any other tool (Twist 0.61, IDT 0.60, Genewiz 0.59).",
+      "quote": "the base model showed a greater Jaccard similarity with the fine-tuned model (mean of 0.74) than with any other tools (Twist: 0.61, IDT: 0.60, Genewiz: 0.59)",
+      "published_value": 0.74,
+      "unit": "Jaccard index (0-1)",
+      "computed_from": "My own code, on the base and fine-tuned DNA sequences in the Source Data sheet 'DNA sequences, CSI, CIS-element'.",
+      "band": 0.015,
+      "band_reasoning": "Two components. (1) The published value is rounded to 2 decimals, which alone allows 0.005. (2) The only definitional slack left after the fixed_definitions above is whether the terminal stop codon joins the codon set. A 300-codon CDS uses on the order of 45 distinct codons, so adding or dropping one changes a single pair's Jaccard by at most about 1/45 = 0.022, and far less in a mean over 260 pairs, since the stop codon is shared by both members of most pairs. I round the sum up to 0.015.",
+      "verdict_weight": "headline"
+    },
+    {
+      "id": "C2",
+      "panel": "Fig. 4b",
+      "text": "Across the 5 organisms, the position-aware sequence similarity between the Base and the Fine-tuned CodonTransformer sequences has a mean of 69.26, the highest of any pair.",
+      "quote": "CodonTransformer fine-tuned and base models showed the highest score when compared between them (mean of 69.26)",
+      "published_value": 69.26,
+      "unit": "percent of matching codons",
+      "computed_from": "My own code, on the same two Source Data sequence columns.",
+      "band": 0.75,
+      "band_reasoning": "Rounding of a 2-decimal value gives 0.005. The stop-codon decision moves one pair by at most 100/L percentage points; the shortest benchmark protein is on the order of 100 codons, so the worst single pair moves about 1 pp and the mean over 260 pairs much less. Length bookkeeping (L as min, max or the asserted common length) is worth a fraction of a point on the same argument. I set 0.75, which is about 1% relative. A miss larger than that is a real difference in what was counted, not rounding.",
+      "verdict_weight": "headline"
+    },
+    {
+      "id": "C3",
+      "panel": "Fig. 4c",
+      "text": "Across the 5 organisms, the normalized dynamic time warping distance between the %MinMax profiles of the Base and the Fine-tuned CodonTransformer sequences has a mean of 0.05 with a standard deviation of 0.03, the minimal distance of any tool pair.",
+      "quote": "minimal DTW distance between the CodonTransformer base and fine-tuned model (mean of 0.05 +/- 0.03)",
+      "published_value": {
+        "mean": 0.05,
+        "sd": 0.03
+      },
+      "unit": "normalized DTW distance",
+      "computed_from": "My own DTW implementation (see fixed_definitions.dtw) run on the %MinMax profiles the authors published in the Source Data sheet '%MinMax'.",
+      "band": {
+        "mean": 0.02,
+        "sd": 0.02
+      },
+      "band_reasoning": "This is the loosest band of the three and deliberately so. The published value carries one significant digit, so rounding alone is 0.005, which is 10% of the value. On top of that, the step pattern and the normalizer are only partly pinned by the Methods: symmetric2 with distance/(N+M) is what R's dtw returns by default and is what I committed to, but a reader who chose symmetric1 or divided by N instead of N+M would land roughly a factor of two away. I will not let that excuse a miss, so the band is 0.02 (40% relative) and only the committed normalizer counts; the alternatives are reported as sensitivity. 0.02 also keeps the paper's qualitative claim testable, since the next-lowest published pair distance is 0.07 (Twist/IDT) and 0.05 + 0.02 = 0.07.",
+      "verdict_weight": "headline"
+    },
+    {
+      "id": "C3b",
+      "panel": "Fig. 4c, sensitivity",
+      "text": "Same statistic as C3 but with the %MinMax profiles recomputed from scratch (Clarke & Clark as implemented in kodonz, window 18 codons, GenScript host tables) instead of taken from the Source Data.",
+      "published_value": {
+        "mean": 0.05,
+        "sd": 0.03
+      },
+      "band": {
+        "mean": 0.03,
+        "sd": 0.03
+      },
+      "band_reasoning": "Wider than C3 because the choice of host codon frequency table is genuinely undetermined: kodonz ships two candidate yeast tables ('yeast' and 'saccharomyces') and the Methods name neither, and a different table shifts every window. 0.03 is 60% relative, which is about as far as a table swap can push a signed windowed statistic without the comparison being meaningless.",
+      "verdict_weight": "sensitivity, cannot change the verdict"
+    },
+    {
+      "id": "C4",
+      "panel": "Fig. 4d",
+      "text": "Mean number of negative cis-elements per sequence, Base and Fine-tuned model, per organism: E. coli 0.37 and 0.29, S. cerevisiae 0.02 and 0.1, A. thaliana 0.06 and 0.17, M. musculus 0.1 and 0.02, H. sapiens 0.1 and 0.04.",
+      "quote": "mean of 0.37 and 0.29 for E. coli, 0.02 and 0.1 for S. cerevisiae, 0.06 and 0.17 for A. thaliana, 0.1 and 0.02 for M. musculus, and 0.1 and 0.04 for H. sapiens",
+      "published_value": {
+        "note": "The running text writes each pair without naming the order. The sentence immediately after it says the fine-tuned model REDUCED the count relative to the base model for E. coli, and 0.29 < 0.37, so in the E. coli pair the first number is the base model. I fix that reading for all five organisms: first = base, second = fine-tuned.",
+        "Escherichia coli": {
+          "base": 0.37,
+          "finetuned": 0.29
+        },
+        "Saccharomyces cerevisiae": {
+          "base": 0.02,
+          "finetuned": 0.1
+        },
+        "Arabidopsis thaliana": {
+          "base": 0.06,
+          "finetuned": 0.17
+        },
+        "Mus musculus": {
+          "base": 0.1,
+          "finetuned": 0.02
+        },
+        "Homo sapiens": {
+          "base": 0.1,
+          "finetuned": 0.04
+        }
+      },
+      "unit": "mean count of negative cis-elements per sequence, n = 52 per organism per model",
+      "computed_from": "My own code, averaging the per-sequence CIS counts published in the Source Data sheet 'DNA sequences, CSI, CIS-element'. NOT a re-run of the GenScript web tool.",
+      "band": 0.01,
+      "band_reasoning": "This claim is arithmetic on published integers, so there is nothing to diverge except rounding: the paper gives 2 decimals for 0.37, 0.29 and 0.06 and 1 or 2 decimals for the rest, and with n = 52 a mean is a multiple of 1/52 = 0.0192, so a correct recount must land within half a reported decimal place. I set 0.01, slightly above 0.005, to absorb the one-decimal values (0.1, 0.02 may each be a round of anything in a 0.005 window) without tolerating a wrong denominator, which would cost at least 0.019.",
+      "verdict_weight": "headline"
+    },
+    {
+      "id": "C5",
+      "panel": "Fig. 4a and 4b, from regenerated sequences",
+      "text": "Regenerating the 52 x 5 sequences with the published base and fine-tuned weights, instead of reading them from the Source Data, reproduces the Fig. 4a and Fig. 4b base-vs-fine-tuned means (0.74 Jaccard, 69.26 sequence similarity).",
+      "published_value": {
+        "jaccard": 0.74,
+        "sequence_similarity": 69.26
+      },
+      "computed_from": "My own inference driver, weights from the two Hugging Face repos at main, CPU only.",
+      "band": {
+        "jaccard": 0.05,
+        "sequence_similarity": 4.0
+      },
+      "band_reasoning": "Much wider than C1 and C2, on purpose. Inference should be deterministic (one masked-LM pass, argmax), so in the ideal case my sequences equal theirs and the means are identical. But the paper does not state which inference route or decoding setting produced the 52 benchmark sequences, nor the package version, and any mismatch there changes individual codons without being an error in the weights. I therefore set the band at the scale where the paper's actual conclusion still stands: the base/fine-tuned pair must remain the most similar pair, and the next-highest published Jaccard is Twist at 0.61, so 0.74 - 0.05 = 0.69 is still clearly above it. 4.0 points on sequence similarity is the matching scale, since the next-highest published similarity is Genewiz at 62.58 and 69.26 - 4 = 65.26 is still above it.",
+      "verdict_weight": "secondary: a miss here downgrades to Partially, it cannot by itself mean the figure is wrong"
+    },
+    {
+      "id": "C6",
+      "panel": "Fig. 4a, 4b, 4c, context",
+      "text": "The ordering claims that give the base-vs-fine-tuned numbers their meaning: in Fig. 4a and 4b the base/fine-tuned pair is the most similar pair among the five organism-general tools (ICOR excluded, it only handles E. coli), and in Fig. 4c it is the pair with the smallest DTW distance.",
+      "published_value": "ordering only",
+      "band": "exact: the ordering either holds in my recount or it does not",
+      "band_reasoning": "An ordering has no tolerance. I include it because a recount can match all three means to three decimals and still fail the paper's actual argument if some other pair sits above the base/fine-tuned pair.",
+      "verdict_weight": "headline: an ordering failure caps the verdict at Partially even if C1-C4 all pass"
+    }
+  ],
+  "verdict_rule": {
+    "Reproduced": "C1, C2, C3 and C4 all inside their bands AND C6 holds. C5 inside its band as well.",
+    "Reproduced with a caveat": "C1, C2, C3, C4 and C6 all hold, but C5 is outside its band or could not be run, or C4 had to be read off the authors' published counts rather than recomputed from the GenScript tool (which is the plan, so this caveat is expected and must be stated whatever the outcome).",
+    "Partially reproduced": "C1 and C2 both inside their bands, but C3 or C4 outside, or C6 fails.",
+    "Not reproduced": "C1 or C2 outside its band.",
+    "Blocked": "A needed public resource turns out to need a login, a licence click, or a TLS exception. I stop and report instead of working around it.",
+    "tie_breaker": "Where a claim can be read two ways, the reading fixed in fixed_definitions and in C4.published_value.note wins, even if the other reading would match the paper better. The other reading goes in the report as a sensitivity analysis."
+  },
+  "declared_before_running": [
+    "I have already noticed, from the first four rows of the Source Data 'DTW' sheet of the Fig. 4 workbook, that the published distance and normalized_distance are identical for three different model2 values, including the self-comparison Fine-tuned vs Fine-tuned, where the distance should be 0. If that pattern holds for the whole sheet it means the authors' published Fig. 4c per-pair table carries one value per (organism, protein) rather than one per pair. I write this down now so that nobody can say I found it after I knew my own number. The equivalent sheet of the Fig. 3 workbook does vary by model2 and does give 0 for the self-comparison, so this looks specific to the Fig. 4 workbook. How this interacts with C3 is unknown to me at the time of freezing: my C3 is computed from the '%MinMax' sheet, not from the 'DTW' sheet, so it is unaffected either way.",
+    "I have read kodonz/R/pminmax.r and know that the paper's eq. 6 does not match it. This is why C3 uses the published %MinMax profiles and C3b is only a sensitivity check.",
+    "I have NOT computed any of C1 to C6. No metric has been run against any sequence at the time of the freeze."
+  ]
+}

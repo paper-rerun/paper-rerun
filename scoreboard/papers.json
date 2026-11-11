@@ -1,5 +1,18 @@
 [
  {
+  "paper": "CodonTransformer",
+  "report": "2025-fallahpour-codontransformer",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2025-fallahpour-codontransformer/REPORT.md",
+  "venue": "Nature Communications",
+  "year": 2025,
+  "field": "gene design",
+  "area": "Biology",
+  "verdict": "Two verdicts",
+  "main_issue": "Source Data table corrupt on deposit",
+  "finding": "Figure 4, base against fine-tuned model, 260 protein-organism pairs: Jaccard 0.7379 against 0.74 published, codon similarity 69.2629% against 69.26%, normalized DTW 0.0459 ± 0.0338 against 0.05 ± 0.03. The released checkpoints regenerate all 520 benchmark sequences byte for byte. An independent blind rerun got the same numbers to every digit and a different label, because the two runs set different bands: ours asked for 1e-6 agreement on each of 260 DTW values and got none, which fails our own frozen rule, while the blind run put its band on the means alone and passes. We publish both and name the bad band as ours. Three defects in the release: the per-pair DTW table of the Source Data carries one value per protein under every pair label, found independently by both runs; equation 6 of the Methods does not describe the %MinMax that was computed, which is the Clarke & Clark statistic the cited R package implements; and the base checkpoint repository ships no tokenizer. The paper's own figure is fine.",
+  "rerun_date": "2026-11-10"
+ },
+ {
   "paper": "NANOGrav 15 yr GWB",
   "report": "2023-agazie-nanograv15",
   "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2023-agazie-nanograv15/REPORT.md",

@@ -1,0 +1,52 @@
+260 benchmark rows, E. coli token 'Escherichia coli general'
+BigBirdForMaskedLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+BigBirdForMaskedLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+BigBirdForMaskedLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+  fine 1/260 Arabidopsis thaliana / Insulin 26.6s elapsed=30s
+  fine 21/260 Arabidopsis thaliana / Herceptin (Trastuzumab) light chain 0.4s elapsed=60s
+  fine 41/260 Arabidopsis thaliana / YFP (Yellow Fluorescent Protein) 1.3s elapsed=102s
+  fine 61/260 Escherichia coli / Tissue-type plasminogen activator 1.5s elapsed=159s
+  fine 81/260 Escherichia coli / Cellulase (Endoglucanase EG-II) 1.6s elapsed=193s
+  fine 101/260 Escherichia coli / Ribonuclease Barnase 0.2s elapsed=212s
+  fine 121/260 Homo sapiens / Adalimumab light chain 0.3s elapsed=231s
+  fine 141/260 Homo sapiens / Renin 0.6s elapsed=248s
+  fine 161/260 Mus musculus / Interferon omega-1 0.4s elapsed=267s
+  fine 181/260 Mus musculus / Prothrombin 1.2s elapsed=295s
+  fine 201/260 Mus musculus / lacI transcription factor 1.9s elapsed=362s
+  fine 221/260 Saccharomyces cerevisiae / Covid-19 spike (S) protein 9.0s elapsed=409s
+  fine 241/260 Saccharomyces cerevisiae / Alcohol Dehydrogenase 1.0s elapsed=458s
+BigBirdForMaskedLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+BigBirdForMaskedLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+BigBirdForMaskedLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+  base 1/260 Arabidopsis thaliana / Insulin 15.0s elapsed=510s
+  base 21/260 Arabidopsis thaliana / Herceptin (Trastuzumab) light chain 0.3s elapsed=520s
+  base 41/260 Arabidopsis thaliana / YFP (Yellow Fluorescent Protein) 0.2s elapsed=530s
+  base 61/260 Escherichia coli / Tissue-type plasminogen activator 0.7s elapsed=542s
+  base 81/260 Escherichia coli / Cellulase (Endoglucanase EG-II) 0.5s elapsed=553s
+  base 101/260 Escherichia coli / Ribonuclease Barnase 0.3s elapsed=564s
+  base 121/260 Homo sapiens / Adalimumab light chain 1.4s elapsed=585s
+  base 141/260 Homo sapiens / Renin 1.1s elapsed=609s
+  base 161/260 Mus musculus / Interferon omega-1 0.3s elapsed=628s
+  base 181/260 Mus musculus / Prothrombin 0.9s elapsed=641s
+  base 201/260 Mus musculus / lacI transcription factor 0.6s elapsed=654s
+  base 221/260 Saccharomyces cerevisiae / Covid-19 spike (S) protein 2.6s elapsed=669s
+  base 241/260 Saccharomyces cerevisiae / Alcohol Dehydrogenase 0.5s elapsed=680s
+done in 698s

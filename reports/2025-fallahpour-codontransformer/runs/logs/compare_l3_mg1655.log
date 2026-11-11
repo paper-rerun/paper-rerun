@@ -1,0 +1,13 @@
+
+==== generated_ecoli_mg1655.csv ====
+rows=104 pairs=52
+E. coli organism token(s): ['Escherichia coli str. K-12 substr. MG1655']
+sequences identical to the authors' deposited ones:
+   base  Escherichia coli             0/ 52
+   fine  Escherichia coli             0/ 52
+C1 n=52 ours mean=0.7608 sd=0.0645 published=0.74 delta=+0.0208 band=+/-0.03 -> INSIDE
+     Escherichia coli           n= 52 mean=0.7608
+C2 n=52 ours mean=71.4173 sd=3.9838 published=69.26 delta=+2.1573 band=+/-2.0 -> OUTSIDE
+     Escherichia coli           n= 52 mean=71.4173
+inference time: 1.7 min over 52 pairs, mean 1.9 s per pair, max 21.3 s
+wrote runs/out/generated_ecoli_mg1655_metrics.csv

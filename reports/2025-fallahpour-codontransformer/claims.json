@@ -1,0 +1,149 @@
+{
+  "paper": {
+    "title": "CodonTransformer: a multispecies codon optimizer using context-aware neural networks",
+    "authors": "Fallahpour, A.; Gureghian, V.; Filion, G. J.; Lindner, A. B.; Pandi, A.",
+    "journal": "Nature Communications 16, 3205 (2025)",
+    "doi": "10.1038/s41467-025-58588-7",
+    "fulltext_used": "Europe PMC PMC11968976 fullTextXML, downloaded 2026-11-09 (paper/fulltext_PMC11968976.xml)",
+    "peer_reviewed": true
+  },
+  "code": {
+    "repo": "https://github.com/Adibvafa/CodonTransformer",
+    "commit": "4a447b01dab860feb81b647ff1ff88ad598517f4",
+    "commit_date": "2025-07-27",
+    "licence": "Apache-2.0",
+    "note": "No release tag exists, so the HEAD at checkout time is pinned."
+  },
+  "weights": {
+    "finetuned": {
+      "hf_repo": "adibvafa/CodonTransformer",
+      "revision": "9744dcc920d813066391fc828d7a590207f148e8",
+      "gated": false,
+      "files": ["model.safetensors", "config.json", "tokenizer.json", "tokenizer_config.json", "special_tokens_map.json"]
+    },
+    "base": {
+      "hf_repo": "adibvafa/CodonTransformer-base",
+      "revision": "15cf7f265320eeca9943f2132d43100faa4d3bee",
+      "gated": false,
+      "files": ["model.safetensors", "config.json"],
+      "note": "The base repo ships no tokenizer; finetune.py loads the tokenizer from adibvafa/CodonTransformer, and we do the same."
+    },
+    "licence_note": "Both repos are public and ungated. No account was created and no licence was accepted."
+  },
+  "data": {
+    "source_data_zip": "41467_2025_58588_MOESM4_ESM.zip",
+    "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-025-58588-7/MediaObjects/41467_2025_58588_MOESM4_ESM.zip",
+    "bytes": 8024232,
+    "sha256": "8dc388e45ddb9efee17b6f2e6bc070fb14bc6779977708f485294d84330f198f",
+    "downloaded": "2026-11-09, plain curl, HTTP 200, no login, TLS verification on",
+    "fig4_workbook": "Source Data/Fig. 4, Supplementary Fig. 19f-h, 20, 21, 22 and 25.xlsx",
+    "fig4_sheets_used": [
+      "DNA sequences, CSI, CIS-element (protein, protein sequence, organism, finetune_transformer_dna, pretrain_transformer_dna, twist_DNA, idt_dna, ...)",
+      "%MinMax (organism, protein, model, minmax as a comma-separated profile)",
+      "Jaccard (organism, protein, model1, model2, jaccard)",
+      "Sequence similarity (organism, protein, model1, model2, seq_similarity)",
+      "DTW (organism, protein, model1, model2, distance, normalized_distance)"
+    ],
+    "authors_notebook": "Source Data/Reproduce_figures.nb.html (R code, chunks extracted to runs/out/authors_notebook_code.txt before freezing)"
+  },
+  "target": {
+    "figure": "Fig. 4a, 4b and 4c",
+    "population": "52 recombinant proteins x 5 organisms (Escherichia coli, Saccharomyces cerevisiae, Arabidopsis thaliana, Mus musculus, Homo sapiens) = 260 sequence pairs",
+    "pair": "Base CodonTransformer vs Fine-tuned CodonTransformer, the pair the paper highlights in each of the three panels",
+    "not_checked": [
+      "Fig. 4d, the count of negative cis-regulatory elements: it comes from the GenScript web tool, which we do not use",
+      "the IDT, Twist, Genewiz and ICOR columns: proprietary tools whose sequences cannot be regenerated. Their published values are quoted as context only",
+      "Fig. 1, 2, 3 and the Supplementary Figures",
+      "the pretraining procedure. Issue #28 reports a masking bug in pretrain.py; we check the released checkpoints, not the method as described"
+    ]
+  },
+  "metric_definitions": {
+    "source": "Methods of the paper plus the authors' own R code in Reproduce_figures.nb.html, read and frozen before any computation",
+    "jaccard": "Split each DNA sequence into codons (3-letter chunks). Jaccard = |set(A) intersect set(B)| / |set(A) union set(B)|, i.e. over the SETS of distinct codons used, not positionwise. The authors' jaccard_similarity() uses base::intersect and base::union, which deduplicate, and returns the string 'different length' when the two codon lists differ in length.",
+    "sequence_similarity": "Positionwise: 100 * (number of positions i where codon A[i] == codon B[i]) / length(A), defined only when the two codon lists have equal length.",
+    "minmax": "%MinMax of Clarke & Clark with a sliding window of 18 codons, computed by the authors with kodonz::pminmax(z = 18, y = 0, spp = species). The published profiles sit on a 0-1 scale.",
+    "dtw": "R dtw::dtw(minmax1, minmax2) with default arguments (step pattern symmetric2, open ends off), reading the normalizedDistance element. Our side uses dtw-python 1.5.3 by the same author, with the same defaults.",
+    "aggregation": "mean (and sd for 4c) over the 260 protein-organism pairs, across organisms, ICOR excluded (it is E. coli only)"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "panel": "Fig. 4a",
+      "text": "Across organisms, the base model showed a greater Jaccard similarity with the fine-tuned model (mean of 0.74) than with any other tool",
+      "published_value": 0.74,
+      "unit": "dimensionless, 0 to 1",
+      "quote_location": "Results, 'Benchmarking codon optimization tools for heterologous expression of proteins'; panel Fig. 4a",
+      "context_values_not_scored": {"Twist": 0.61, "IDT": 0.60, "Genewiz": 0.59, "highest_pair_IDT_Twist": 0.92}
+    },
+    {
+      "id": "C2",
+      "panel": "Fig. 4b",
+      "text": "CodonTransformer fine-tuned and base models showed the highest sequence similarity score when compared between them (mean of 69.26)",
+      "published_value": 69.26,
+      "unit": "percent of matching codons",
+      "quote_location": "Results, same section; panel Fig. 4b"
+    },
+    {
+      "id": "C3",
+      "panel": "Fig. 4c",
+      "text": "Minimal DTW distance between the CodonTransformer base and fine-tuned model (mean of 0.05 +/- 0.03) when computing the mean across organisms",
+      "published_value": 0.05,
+      "published_sd": 0.03,
+      "unit": "dimensionless normalized DTW distance between %MinMax profiles",
+      "quote_location": "Results, same section; panel Fig. 4c",
+      "context_values_not_scored": {"Twist_IDT": 0.07}
+    }
+  ],
+  "levels": [
+    {
+      "id": "L1",
+      "name": "arithmetic on the authors' own per-protein values",
+      "what": "Average the per-protein values the authors published in the Jaccard, Sequence similarity and DTW sheets of the Fig. 4 workbook, over the Base vs Fine-tuned pair, 260 rows per metric.",
+      "band": "the mean must round to the published value: |ours - published| <= 0.005 for C1 and C2 (both printed to 2 decimals), and <= 0.005 for the C3 mean and sd.",
+      "meaning": "Checks only that the figure's headline matches the deposited per-item data. A miss here is a bookkeeping problem in the paper, not in the model."
+    },
+    {
+      "id": "L2",
+      "name": "our own metric code on the authors' published sequences and profiles",
+      "what": "Recompute Jaccard and sequence similarity from the pretrain_transformer_dna and finetune_transformer_dna columns, and normalized DTW from the published %MinMax profiles of the two models, with our own implementation of the three definitions above. Compare per protein against the authors' values and then average.",
+      "band": "same rounding band as L1 on the means; in addition, at least 95% of the 260 per-protein values must agree with the authors' to 1e-6 (Jaccard, similarity) and to 1e-6 (normalized DTW).",
+      "meaning": "Checks that the three definitions, as written in the Methods and in the authors' code, give the published numbers from the published sequences."
+    },
+    {
+      "id": "L3",
+      "name": "the released checkpoints",
+      "what": "Regenerate the base and fine-tuned DNA for all 260 protein-organism pairs with the two released checkpoints, deterministic decoding, then recompute C1 and C2 with the L2 code. Primary organism token for E. coli: 'Escherichia coli general'.",
+      "band": "|ours - published| <= 0.03 for C1 (absolute, dimensionless) and <= 2.0 for C2 (percentage points). Wider than L1/L2 because the generated sequences depend on the library versions and on the organism token, which the paper does not state.",
+      "meaning": "Checks the model that was released, not the training method.",
+      "c3_at_this_level": "Conditional. %MinMax needs the organism codon-frequency table the authors used (R kodonz), which the release does not contain. We will first try the repo's own get_min_max_percentage with a frequency table estimated per organism from the natural DNA published in the Fig. 3 Source Data, and accept it as our %MinMax only if it reproduces the authors' published profiles for the authors' published sequences with a mean absolute difference <= 0.02 on the 0-1 scale. If it does not, C3 at L3 is reported as not checkable and C3 rests on L1 and L2."
+    }
+  ],
+  "verdict_rule": {
+    "Reproduced": "All three claims inside their band at L1 and L2, and C1 and C2 inside their band at L3.",
+    "Partially reproduced": "All three inside their band at L1 and L2, but C1 or C2 outside the band at L3, or L3 not completed.",
+    "Not reproduced": "Any claim outside its band at L1 or L2."
+  },
+  "deviations_declared_before_running": [
+    "Light mode: CPU only, 4 threads (OMP_NUM_THREADS=MKL_NUM_THREADS=4, torch.set_num_threads(4)), nice -n 19, no GPU.",
+    "No subset: 260 pairs x 2 checkpoints = 520 forward passes, which the triage estimates at well under the 4 h budget. Fallback, fixed here: if generation passes 3 h of wall clock we stop and report the completed fraction, taking the pairs in the order (organism alphabetical, protein in Source Data row order). No reordering, no resampling.",
+    "Deterministic decoding (deterministic=True, attention_type='original_full'), because issues #19 and #20 report that sample_non_deterministic() applied the temperature more than once.",
+    "E. coli organism token: 'Escherichia coli general' is primary. 'Escherichia coli str. K-12 substr. MG1655' is a secondary analysis and cannot change the verdict.",
+    "The IDT, Twist, Genewiz and ICOR columns are quoted from the paper and never recomputed."
+  ],
+  "alternative_readings": [
+    {
+      "id": "A1",
+      "text": "Jaccard positionwise (multiset) instead of over codon sets. Reported for contrast; the Methods and the authors' code both say sets."
+    },
+    {
+      "id": "A2",
+      "text": "Mean over the 5 per-organism means instead of over the 260 pairs. Equal only if every organism has the same number of proteins."
+    },
+    {
+      "id": "A3",
+      "text": "The DTW sheet of the Fig. 4 workbook appears to carry the same normalized_distance for the diagonal (a model against itself) and for the first off-diagonal pair, where the diagonal should be 0. To be checked at L1 and reported."
+    }
+  ],
+  "frozen_at": "2026-11-09T20:40:00Z",
+  "frozen_before": "any metric computation, any model download and any inference. Only the following had happened: the Source Data zip and the paper full text were downloaded, the repository was cloned, the two Hugging Face repos were queried for metadata, the venv was built, and the workbook sheet names plus the authors' R code were read."
+}

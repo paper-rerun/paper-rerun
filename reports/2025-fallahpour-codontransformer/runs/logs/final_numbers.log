@@ -1,0 +1,33 @@
+=== claim table (260 protein-organism pairs, Base vs Fine-tuned) ===
+                              published   L1 authors  L2 our code  L3 our seqs
+C1 Jaccard (Fig. 4a)               0.74       0.7379       0.7379       0.7379
+C2 codon similarity % (4b)        69.26      69.2629      69.2629      69.2629
+C3 normalized DTW (4c)             0.05       0.0462       0.0459       0.0459
+C3 sd                              0.03       0.0338       0.0338       0.0338
+  (L3 column of C3 equals L2 because all 520 regenerated sequences are identical
+   to the deposited ones, so the %MinMax profiles and the DTW cannot differ)
+
+=== per organism, from the authors' deposited per-protein values (L1) ===
+organism                      n   jaccard  simil. %       DTW    DTW sd
+Arabidopsis thaliana         52    0.6995   62.6004    0.0368    0.0078
+Escherichia coli             52    0.7738   71.5759    0.0459    0.0143
+Homo sapiens                 52    0.7649   70.6681    0.0266    0.0064
+Mus musculus                 52    0.7557   71.3680    0.0245    0.0071
+Saccharomyces cerevisiae     52    0.6954   70.1019    0.0970    0.0428
+ALL                         260    0.7379   69.2629    0.0462    0.0338
+
+=== L3: regenerated vs deposited sequences ===
+identical, fine-tuned checkpoint: 260/260
+identical, base checkpoint:       260/260
+secondary E. coli token 'Escherichia coli str. K-12 substr. MG1655':
+  identical fine 0/52, base 0/52
+  E. coli jaccard  general=0.7738  MG1655=0.7608
+  E. coli simil. % general=71.5759  MG1655=71.4173
+
+=== A1: Jaccard read positionwise instead of over codon sets ===
+multiset Jaccard: n=260 mean=0.6266 (set-based mean is 0.7379)
+
+=== A2: mean of the 5 per-organism means instead of the 260 pairs ===
+  jaccard: 0.7379 (pooled 0.7379) - equal, 52 proteins per organism
+  similarity: 69.2629 (pooled 69.2629) - equal, 52 proteins per organism
+  dtw: 0.0462 (pooled 0.0462) - equal, 52 proteins per organism

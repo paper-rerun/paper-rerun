@@ -24,7 +24,8 @@ import drift_watch  # noqa: E402
 AREAS = {
 	"protein structure": "Biology", "cell biology": "Biology", "genomics": "Biology",
 	"protein fitness": "Biology", "protein design": "Biology", "cell imaging": "Biology",
-	"plant genomics": "Biology", "cosmology": "Physics", "particle physics": "Physics",
+	"plant genomics": "Biology", "gene design": "Biology",
+	"cosmology": "Physics", "particle physics": "Physics",
 	"materials / chemistry": "Materials and chemistry", "materials": "Materials and chemistry",
 	"machine learning": "Computing", "chemistry": "Materials and chemistry",
 	"weather and climate": "Earth sciences", "gravitational waves": "Physics",
@@ -52,6 +53,7 @@ MAIN_ISSUE = {
 	"2023-deng-chgnet": "Test split not published",
 	"2025-stringer-cellpose3": "Test data not released",
 	"2025-zhai-plantcad": "More compute than one home GPU",
+	"2025-fallahpour-codontransformer": "Source Data table corrupt on deposit",
 }
 
 

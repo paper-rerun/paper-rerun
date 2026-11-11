@@ -1,0 +1,35 @@
+proteins in DTW sheet: 260
+proteins where the value depends only on model1: 260/260
+proteins where the value depends only on model2: 260/260
+proteins whose matrix is symmetric: 260/260
+
+=== ('Arabidopsis thaliana', 'Adalimumab heavy chain') ===
+              Base Codon-  Fine-tuned       Genewiz          IDT        Twist
+Base Codon-      0.047341     0.047341     0.047341     0.047341     0.047341
+Fine-tuned       0.047341     0.047341     0.047341     0.047341     0.047341
+    Genewiz      0.047341     0.047341     0.047341     0.047341     0.047341
+        IDT      0.047341     0.047341     0.047341     0.047341     0.047341
+      Twist      0.047341     0.047341     0.047341     0.047341     0.047341
+recomputed from the published profiles (upper half):
+Base Codon-      0.000000     0.046789     0.055608     0.196319     0.162053
+Fine-tuned       0.046789     0.000000     0.100745     0.180917     0.130103
+    Genewiz      0.055608     0.100745     0.000000     0.431686     0.307580
+        IDT      0.196319     0.180917     0.431686     0.000000     0.067144
+      Twist      0.162053     0.130103     0.307580     0.067144     0.000000
+
+=== ('Arabidopsis thaliana', 'Adalimumab light chain') ===
+              Base Codon-  Fine-tuned       Genewiz          IDT        Twist
+Base Codon-      0.022708     0.022708     0.022708     0.022708     0.022708
+Fine-tuned       0.022708     0.022708     0.022708     0.022708     0.022708
+    Genewiz      0.022708     0.022708     0.022708     0.022708     0.022708
+        IDT      0.022708     0.022708     0.022708     0.022708     0.022708
+      Twist      0.022708     0.022708     0.022708     0.022708     0.022708
+recomputed from the published profiles (upper half):
+Base Codon-      0.000000     0.022965     0.060075     0.366910     0.179196
+Fine-tuned       0.022965     0.000000     0.059673     0.372889     0.203568
+    Genewiz      0.060075     0.059673     0.000000     0.477487     0.295578
+        IDT      0.366910     0.372889     0.477487     0.000000     0.071156
+      Twist      0.179196     0.203568     0.295578     0.071156     0.000000
+
+matching each deposited row value to our recomputed matrix:
+  closest partner of the single per-row value, counted over all rows: {'Fine-tuned Codon- Transformer': 407, 'Base Codon- Transformer': 406, 'Twist': 247, 'IDT': 220, 'Genewiz': 50, 'ICOR': 22}

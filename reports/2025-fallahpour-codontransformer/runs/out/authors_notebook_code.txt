@@ -1,0 +1,2148 @@
+# model names matching in different files
+model_patterns <- c(
+  "atural",
+  "base|pretrain",
+  "fine",
+  "Twist|twist",
+  "Genewiz|genewiz",
+  "IDT|idt",
+  "ICOR|icor"
+)
+
+# model naming on figures
+model_levels <- c(
+  "Natural",
+  "Base \n Codon- \n Transformer",
+  "Fine-tuned \n Codon- \n Transformer",
+  "Twist",
+  "Genewiz",
+  "IDT",
+  "ICOR"
+)
+
+# model colors
+model_colors <- c(
+  "black",
+  "#F9909F",
+  "#F4003F",
+  "#A821DF",
+  "#02FFA2",
+  "#2074DF",
+  "#FFA400"
+)
+
+# species color
+species_color <- brewer.pal(9, "Set1")[c(7, 4, 3, 9, 8)]
+
+# compute minmax
+compute_minmax <- function(df) {
+  seq <- kodonz::load.fasta(x = df$sequence)
+  res <- kodonz::pminmax(seq[[1]],
+    # window length
+    z = 18,
+    # standard codon table
+    y = 0,
+    # species for which cut is overided
+    spp = df$species
+  )
+}
+
+# compute Dynamic time warping distances
+compute_DTW <- function(df) {
+  minmax1 <- df |>
+    pull(minmax1) |>
+    unlist()
+  minmax2 <- df |>
+    pull(minmax2) |>
+    unlist()
+  dtw(minmax1, minmax2)
+}
+
+# compute RNA structures
+compute_RNA_fold <- function(sequence) {
+  # Predict folding and DrG
+  XNAString::predictMfeStructure(
+    # Convert to XNA object
+    XNAString::XNAString(
+      base =
+      # Store in RNA object
+        Biostrings::RNAString(
+          # convert DNA to RNA
+          x = sequence |> str_replace_all("T", "U")
+        )
+    )
+  )
+}
+
+# plot %minmax profiles
+plot_line_minmax <- function(.data_structure = NA,
+                             .organism = NA,
+                             .limits = NA,
+                             .ncol = NA) {
+  .data_structure |>
+    mutate(
+      model = factor(model, levels = model_levels),
+      name = factor(ifelse("description" %in% colnames(.data_structure),
+        description,
+        protein
+      ))
+    ) |>
+    filter(str_detect(organism, .organism)) |>
+    ggplot(aes(
+      y = minmax,
+      x = index,
+      color = model
+    )) +
+    geom_line(linewidth = 0.5) +
+    lims(y = .limits) +
+    # use colors for models present in data
+    scale_color_manual(values = model_colors[model_levels %in% .data_structure$model]) +
+    facet_wrap(~ name + model, ncol = .ncol, scales = "free_x") +
+    ggtitle(paste0("minmax sequences - ", .organism)) +
+    theme(plot.title = element_text(hjust = 0.5)) +
+    guides(color = "none") +
+    theme_bw()
+}
+
+# for similarity plots
+similarity_plot_height <- 6
+similarity_plot_width <- 8
+
+# plot similarity metrics
+plot_tile_similarity <- function(.data_struc = NA,
+                                 .metric = NA,
+                                 .organism = NA) {
+  # adapt text size to the number of models
+  nb_categories <- length(.data_struc$model2 |> unique())
+  data <- .data_struc |>
+    filter(str_detect(organism, .organism)) |>
+    mutate(
+      model1 = factor(model1, levels = rev(model_levels)),
+      model2 = factor(model2, levels = rev(levels(model1)))
+    ) |>
+    group_by(model1, model2) |>
+    summarise(
+      mean_metric = mean(as.numeric(value)),
+      sd_metric = sd(as.numeric(value)),
+      .groups = "drop"
+    ) |>
+    mutate(diagonal = factor(ifelse(model1 == model2, "yes", "no"))) |>
+    # filter only the bottom triangle of the heatmap
+    mutate(model1_nb = as.numeric(model1)) |>
+    mutate(model2_nb = as.numeric(model2)) |>
+    filter((model2_nb + model1_nb) <= length(model_levels) + 1) |>
+    ggplot(aes(x = model1, y = model2, fill = mean_metric)) +
+    geom_tile() +
+    # for diagonal, text = centered mean
+    geom_text(
+      data = ~ subset(., diagonal == "yes"),
+      aes(label = paste0(
+        round(mean_metric, digits = 2)
+      )),
+      color = "black",
+      size = 35 / nb_categories
+    ) +
+    # for others, upper text = mean
+    geom_text(
+      data = ~ subset(., diagonal == "no"),
+      aes(label = paste0(
+        round(mean_metric, digits = 2),
+        "\n"
+      )),
+      color = "black",
+      size = 35 / nb_categories
+    ) +
+    # for others, lower text = sd
+    geom_text(
+      data = ~ subset(., diagonal == "no"),
+      aes(label = paste0(
+        "\n +/- ",
+        round(sd_metric, digits = 2)
+      )),
+      color = "black",
+      size = 25 / nb_categories
+    ) +
+    labs(
+      x = "",
+      y = "",
+      title = paste0(.metric, " between models for ", .organism, " sequences"),
+      fill = "Mean"
+    ) +
+    theme_classic() +
+    theme(
+      plot.title = element_text(hjust = 0.5, size = 14),
+      legend.key.height = unit(1, "cm")
+    )
+}
+
+plot_jitter_species <- function(.data) {
+  .data |>
+    ggplot(aes(x = value, y = model, color = organism)) +
+    geom_jitter(size = 1, alpha = 0.7, width = 0) +
+    scale_color_manual(values = species_color) +
+    theme_bw() +
+    theme(legend.title = element_blank()) +
+    guides(colour = guide_legend(override.aes = list(size = 3)))
+}
+
+plot_smooth_model <- function(.data) {
+  .data |>
+    ggplot(aes(y = y_plot, x = x_plot, color = model)) +
+    geom_point(size = 1, alpha = 0.4) +
+    geom_smooth(aes(color = model, fill = model), linewidth = 0.5, alpha = 0.3, method = "lm", se = TRUE, formula = "y ~ x") +
+    theme_bw() +
+    theme(
+      strip.text = element_blank(),
+      legend.key.spacing.y = unit(0.2, "cm"),
+      legend.key.width = unit(1, "cm"),
+      legend.key.height = unit(1, "cm"),
+      strip.background = element_blank(),
+      legend.title = element_blank()
+    ) +
+    guides(color = "none") +
+    guides(fill = guide_legend(override.aes = list(shape = 21, colour = NA)))
+}
+
+# 61 codons (20 amino acids) + 3 STOP codons
+codon_aa_table <- dplyr::tibble(
+  token = c(
+    "M_ATG",
+    "A_GCG",
+    "A_GCC",
+    "A_GCA",
+    "A_GCT",
+    "C_TGC",
+    "C_TGT",
+    "D_GAT",
+    "D_GAC",
+    "E_GAA",
+    "E_GAG",
+    "F_TTT",
+    "F_TTC",
+    "G_GGC",
+    "G_GGT",
+    "G_GGG",
+    "G_GGA",
+    "H_CAT",
+    "H_CAC",
+    "I_ATT",
+    "I_ATC",
+    "I_ATA",
+    "K_AAA",
+    "K_AAG",
+    "L_CTG",
+    "L_TTA",
+    "L_TTG",
+    "L_CTC",
+    "L_CTT",
+    "L_CTA",
+    "N_AAC",
+    "N_AAT",
+    "P_CCG",
+    "P_CCA",
+    "P_CCT",
+    "P_CCC",
+    "Q_CAG",
+    "Q_CAA",
+    "R_CGC",
+    "R_CGT",
+    "R_CGG",
+    "R_CGA",
+    "R_AGA",
+    "R_AGG",
+    "S_AGC",
+    "S_TCG",
+    "S_TCC",
+    "S_AGT",
+    "S_TCT",
+    "S_TCA",
+    "T_ACC",
+    "T_ACG",
+    "T_ACT",
+    "T_ACA",
+    "V_GTG",
+    "V_GTT",
+    "V_GTC",
+    "V_GTA",
+    "Y_TAT",
+    "Y_TAC",
+    "W_TGG",
+    "STOP_TAA",
+    "STOP_TGA",
+    "STOP_TAG"
+  )
+) |>
+  mutate(
+    codon = str_extract(token, "[A-Z]{3}$"),
+    aa = str_extract(token, "^[A-Z]+"),
+    token = factor(token, levels = token |> unique() |> rev())
+  )
+
+
+plot_bar_codons_natural <- function(.species = NA,
+                                    .save = FALSE) {
+  plot_1 <- natural_sequence_data |>
+    filter(str_detect(organism, .species)) |>
+    mutate(codons = sequence |>
+      str_extract_all(pattern = "[:alpha:]{3}")) |>
+    select(-sequence) |>
+    unnest(codons) |>
+    inner_join(codon_aa_table,
+      by = c("codons" = "codon")
+    ) |>
+    ggplot(aes(y = token, fill = model)) +
+    geom_bar(alpha = 0.7) +
+    scale_fill_manual(values = model_colors) +
+    scale_x_continuous(breaks = c(0, 1500)) +
+    facet_wrap(~model, nrow = 1) +
+    theme_bw() +
+    ylab("Codons") +
+    xlab("") +
+    ggtitle("Codon distribution across sequences") +
+    theme(
+      plot.title = element_text(hjust = 0.5),
+      legend.key.spacing.y = unit(0.2, "cm"),
+      legend.key.width = unit(1, "cm"),
+      legend.key.height = unit(1, "cm"),
+      strip.background = element_blank(),
+      strip.text.x = element_blank()
+    ) +
+    guides(fill = guide_legend(title = "Model"))
+
+  plot_2 <- natural_sequence_data |>
+    filter(str_detect(organism, .species)) |>
+    mutate(codons = sequence |>
+      str_extract_all(pattern = "[:alpha:]{3}")) |>
+    select(-sequence) |>
+    unnest(codons) |>
+    inner_join(codon_aa_table,
+      by = c("codons" = "codon")
+    ) |>
+    group_by(codons, organism, model) |>
+    nest(data = description) |>
+    mutate(nb_of_sequences = length(unlist(data) |> unique())) |>
+    ggplot(aes(y = token, x = nb_of_sequences, fill = model)) +
+    geom_col(alpha = 0.7) +
+    scale_fill_manual(values = model_colors) +
+    scale_x_continuous(breaks = c(0, 50)) +
+    facet_wrap(~model, nrow = 1) +
+    theme_bw() +
+    ylab("Codons") +
+    xlab("") +
+    ggtitle("Number of sequences where the codon is present") +
+    theme(
+      plot.title = element_text(hjust = 0.5),
+      legend.key.spacing.y = unit(0.2, "cm"),
+      legend.key.width = unit(1, "cm"),
+      legend.key.height = unit(1, "cm"),
+      strip.background = element_blank(),
+      strip.text.x = element_blank()
+    ) +
+    guides(fill = guide_legend(title = "Model"))
+
+  plot <- plot_1 + plot_2 +
+    plot_layout(
+      widths = c(0.5, 0.5),
+      guides = "collect",
+      axes = "collect"
+    ) +
+    plot_annotation(
+      title = paste0("Codon distribution for natural sequences among top 10% CSI for ", .species),
+      theme = theme(plot.title = element_text(hjust = 0.5)) &
+        theme(plot.title = element_text(size = 18))
+    )
+
+  if (.save == TRUE) {
+    ggsave(plot,
+      filename = paste0(
+        "codon_distribution_natural_sequences_",
+        .species,
+        ".svg"
+      ),
+      height = 10,
+      width = 14
+    )
+  }
+  plot
+}
+
+plot_bar_codons_benchmark <- function(.species = NA,
+                                      .save = FALSE) {
+  plot_1 <- benchmark_sequence_data |>
+    filter(str_detect(organism, .species)) |>
+    mutate(codons = sequence |>
+      str_extract_all(pattern = "[:alpha:]{3}")) |>
+    select(-sequence) |>
+    unnest(codons) |>
+    inner_join(codon_aa_table,
+      by = c("codons" = "codon")
+    ) |>
+    ggplot(aes(y = token, fill = model)) +
+    geom_bar(alpha = 0.7) +
+    scale_fill_manual(values = model_colors[-1]) +
+    scale_x_continuous(breaks = c(0, 1500)) +
+    facet_wrap(~model, nrow = 1) +
+    theme_bw() +
+    ylab("Codons") +
+    xlab("") +
+    ggtitle("Codon distribution across sequences") +
+    theme(
+      plot.title = element_text(hjust = 0.5),
+      legend.key.spacing.y = unit(0.2, "cm"),
+      legend.key.width = unit(1, "cm"),
+      legend.key.height = unit(1, "cm"),
+      strip.background = element_blank(),
+      strip.text.x = element_blank()
+    ) +
+    guides(fill = guide_legend(title = "Model"))
+
+  plot_2 <- benchmark_sequence_data |>
+    filter(str_detect(organism, .species)) |>
+    mutate(codons = sequence |>
+      str_extract_all(pattern = "[:alpha:]{3}")) |>
+    select(-sequence) |>
+    unnest(codons) |>
+    inner_join(codon_aa_table,
+      by = c("codons" = "codon")
+    ) |>
+    group_by(codons, organism, model) |>
+    nest(data = protein) |>
+    mutate(nb_of_sequences = length(unlist(data) |> unique())) |>
+    ggplot(aes(y = token, x = nb_of_sequences, fill = model)) +
+    geom_col(alpha = 0.7) +
+    scale_fill_manual(values = model_colors[-1]) +
+    scale_x_continuous(breaks = c(0, 50)) +
+    facet_wrap(~model, nrow = 1) +
+    theme_bw() +
+    ylab("Codons") +
+    xlab("") +
+    ggtitle("Number of sequences where the codon is present") +
+    theme(
+      plot.title = element_text(hjust = 0.5),
+      legend.key.spacing.y = unit(0.2, "cm"),
+      legend.key.width = unit(1, "cm"),
+      legend.key.height = unit(1, "cm"),
+      strip.background = element_blank(),
+      strip.text.x = element_blank()
+    ) +
+    guides(fill = guide_legend(title = "Model"))
+
+  plot <- plot_1 + plot_2 +
+    plot_layout(
+      widths = c(0.5, 0.5),
+      guides = "collect",
+      axes = "collect"
+    ) +
+    plot_annotation(
+      title = paste0("Codon distribution within benchmark sequences optimized for ", .species),
+      theme = theme(plot.title = element_text(hjust = 0.5)) &
+        theme(plot.title = element_text(size = 18))
+    )
+
+
+  if (.save == TRUE) {
+    ggsave(plot,
+      filename = paste0(
+        "codon_distribution_benchmark_sequences_",
+        .species,
+        ".svg"
+      ),
+      height = 10,
+      width = 14
+    )
+  }
+  plot
+}
+
+#=== chunk ===
+
+natural_sequence_data <- read_xlsx("Supplementary Data 1.xlsx", sheet = "DNA sequences") |>
+  mutate(organism = organism |> str_remove(" str. K-12 substr. MG1655")) |>
+  pivot_longer(
+    cols = matches("DNA"),
+    names_to = "model",
+    values_to = "sequence"
+  ) |>
+  mutate(model = model |>
+    str_remove("_.*$")) |>
+  # ICOR are NA for other organisms
+  drop_na() |>
+  mutate(model = factor(
+    ifelse(
+      str_detect(model, model_patterns[1]),
+      model_levels[1],
+      ifelse(
+        str_detect(model, model_patterns[2]),
+        model_levels[2],
+        ifelse(
+          str_detect(model, model_patterns[3]),
+          model_levels[3],
+          ifelse(
+            str_detect(model, model_patterns[4]),
+            model_levels[4],
+            ifelse(
+              str_detect(model, model_patterns[5]),
+              model_levels[5],
+              ifelse(
+                str_detect(model, model_patterns[6]),
+                model_levels[6],
+                ifelse(
+                  str_detect(model, model_patterns[7]),
+                  model_levels[7],
+                  NA
+                )
+              )
+            )
+          )
+        )
+      )
+    ),
+    levels = model_levels
+  )) |>
+  select(organism, description, model, sequence)
+
+organism_levels <- natural_sequence_data |>
+  pull(organism) |>
+  unique()
+
+#=== chunk ===
+
+natural_sequence_data |>
+  group_by(organism, model) |>
+  summarise(
+    nb_of_sequences = n(),
+    .groups = "drop"
+  )
+
+#=== chunk ===
+
+natural_sequence_data |> 
+  mutate(codon=sequence |> str_extract_all("[A-Z]{3}")) |> 
+  unnest_longer(codon) |> 
+  inner_join(codon_aa_table, by=join_by(codon==codon)) |> 
+  mutate(model=model |> str_remove_all("\n")) |> 
+  group_by(organism, model, token) |> 
+  summarise(codon_count=n()) |> 
+  write_tsv("natural_sequences_codon_counts.tsv")
+
+#=== chunk ===
+
+plot_bar_codons_natural(
+  .species = "Escherichia coli",
+  .save = FALSE
+)
+
+#=== chunk ===
+
+plot_bar_codons_natural(
+  .species = "Saccharomyces cerevisiae",
+  .save = FALSE
+)
+
+#=== chunk ===
+
+plot_bar_codons_natural(
+  .species = "Arabidopsis thaliana",
+  .save = FALSE
+)
+
+#=== chunk ===
+
+plot_bar_codons_natural(
+  .species = "Mus musculus",
+  .save = FALSE
+)
+
+#=== chunk ===
+
+plot_bar_codons_natural(
+  .species = "Homo sapiens",
+  .save = FALSE
+)
+
+#=== chunk ===
+
+natural_minmax_results <- natural_sequence_data |>
+  select(organism, description, model, sequence) |>
+  mutate(species = ifelse(str_detect(organism, "coli"), "ecoli",
+    ifelse(str_detect(organism, "cerevisiae"), "saccharomyces",
+      ifelse(str_detect(organism, "thaliana"), "arabidopsis",
+        ifelse(str_detect(organism, "musculus"), "mouse",
+          ifelse(str_detect(organism, "sapiens"), "human", NA)
+        )
+      )
+    )
+  )) |>
+  nest(data = c(sequence, species)) |>
+  mutate(minmax = map(data, compute_minmax)) |>
+  unnest(data) |>
+  unnest(minmax) |>
+  group_by(organism, model, description) |>
+  mutate(index = row_number())
+
+#=== chunk ===
+
+plot <- natural_minmax_results |>
+  filter(str_detect(
+    description,
+    "NC_000913.3:338325-339743 yahG|NM_001179424.1:1-1410 SER33|NM_001340786.1:277-1587 AT4G12540|NM_001416453.1:324-1805 Csad|XM_054318276.1:337-2223 ZBTB7C"
+  )) |>
+  mutate(description = description |>
+    str_extract(" .*$") |>
+    str_remove(" ")) |>
+  mutate(description = factor(description,
+    levels = c(
+      "yahG",
+      "SER33",
+      "AT4G12540",
+      "Csad",
+      "ZBTB7C"
+    )
+  )) |>
+  mutate(value = minmax * 100) |>
+  ggplot(aes(
+    y = value,
+    x = index,
+    color = model
+  )) +
+  geom_line(linewidth = 0.5) +
+  scale_color_manual(values = model_colors) +
+  facet_grid(model ~ description,
+    scales = "free_x"
+  ) +
+  labs(x = "", y = "") +
+  theme_bw() +
+  theme(
+    legend.position = "none",
+    theme(
+      legend.position = "none",
+      strip.background = element_blank(),
+      panel.border = element_blank()
+    )
+  ) +
+  theme(strip.background = element_blank())
+plot
+
+#=== chunk ===
+
+ggsave(
+  plot = plot,
+  filename = "selected_minmax.svg",
+  height = 8,
+  width = 10
+)
+
+#=== chunk ===
+
+plot <- plot_line_minmax(
+  .data_structure = natural_minmax_results,
+  .organism = organism_levels[1],
+  .limits = c(-1, 1.2),
+  .ncol = 7
+)
+
+# ggsave(plot,
+#   filename = "minmax_natural_Ecoli_w=18.svg",
+#   height = 120,
+#   width = 20,
+#   limitsize = FALSE
+# )
+
+#=== chunk ===
+
+plot <- plot_line_minmax(
+  .data_structure = natural_minmax_results,
+  .organism = organism_levels[2],
+  .limits = c(-1, 1.2),
+  .ncol = 6
+)
+
+# ggsave(plot,
+#   filename = "minmax_natural_Scerevisiae_w=18.svg",
+#   height = 120,
+#   width = 16,
+#   limitsize = FALSE
+# )
+
+#=== chunk ===
+
+plot <- plot_line_minmax(
+  .data_structure = natural_minmax_results,
+  .organism = organism_levels[3],
+  .limits = c(-1, 1.2),
+  .ncol = 6
+)
+
+# ggsave(plot,
+#   filename = "minmax_natural_Athaliana_w=18.svg",
+#   height = 120,
+#   width = 16,
+#   limitsize = FALSE
+# )
+
+#=== chunk ===
+
+plot <- plot_line_minmax(
+  .data_structure = natural_minmax_results,
+  .organism = organism_levels[4],
+  .limits = c(-1, 1.2),
+  .ncol = 6
+)
+
+# ggsave(plot,
+#   filename = "minmax_natural_Mmusculus_w=18.svg",
+#   height = 120,
+#   width = 16,
+#   limitsize = FALSE
+# )
+
+#=== chunk ===
+
+plot <- plot_line_minmax(
+  .data_structure = natural_minmax_results,
+  .organism = organism_levels[5],
+  .limits = c(-1, 1.2),
+  .ncol = 6
+)
+
+# ggsave(plot,
+#   filename = "minmax_natural_Hsapiens_w=18.svg",
+#   height = 120,
+#   width = 16,
+#   limitsize = FALSE
+# )
+
+#=== chunk ===
+
+natural_minmax_results |>
+  select(-species, -sequence) |>
+  mutate(
+    model = model |> str_remove_all("\n"),
+    minmax = minmax |> round(digits = 2)
+  ) |>
+  pivot_wider(names_from = index, values_from = minmax) |>
+  unite(col = "minmax", matches("\\d"), sep = ",") |>
+  mutate(minmax = minmax |> str_remove_all(",NA")) |>
+  write_tsv("natural_minmax_profiles.tsv")
+
+#=== chunk ===
+
+natural_DTW_results <- natural_minmax_results |>
+  select(-species, -index, -sequence) |>
+  group_by(organism, description, model) |>
+  # minmax results are in long format
+  nest(minmax = minmax) |>
+  # duplicate models
+  mutate(
+    model1 = model, minmax1 = minmax,
+    model2 = model, minmax2 = minmax
+  ) |>
+  # link model and minmax profiles
+  nest(
+    comparison1 = c(model1, minmax1),
+    comparison2 = c(model2, minmax2)
+  ) |>
+  ungroup() |>
+  select(organism, description, comparison1, comparison2) |>
+  group_by(organism, description) |>
+  # make all comparison between c(model,profiles)
+  complete(comparison1, comparison2) |>
+  unnest(c(comparison1, comparison2)) |>
+  nest(dtw_data = c(minmax1, minmax2)) |>
+  # compute DTW
+  mutate(dtw_object = map(dtw_data, compute_DTW)) |>
+  mutate(
+    distance = map(dtw_object, pluck("distance")),
+    normalized_distance = map(dtw_object, pluck("normalizedDistance"))
+  ) |>
+  mutate(
+    distance = parse_number(distance),
+    normalized_distance = parse_number(normalized_distance)
+  ) |>
+  select(organism, description, model1, model2, distance, normalized_distance)
+
+saveRDS(natural_DTW_results, "natural_DTW_results.rds")
+
+#=== chunk ===
+
+natural_DTW_results <- readRDS(file = "natural_DTW_results.rds") |>
+  mutate(
+    distance = as.numeric(distance),
+    normalized_distance = as.numeric(normalized_distance)
+  )
+
+#=== chunk ===
+
+dtw_gene_ecoli <- dtw::dtw(
+  natural_minmax_results |>
+    dplyr::filter(
+      organism == "Escherichia coli",
+      description == "NC_000913.3:338325-339743 yahG"
+    ) |>
+    dplyr::filter(model == "Natural") |>
+    dplyr::pull(minmax) * 100,
+  natural_minmax_results |>
+    dplyr::filter(
+      organism == "Escherichia coli",
+      description == "NC_000913.3:338325-339743 yahG"
+    ) |>
+    dplyr::filter(model == model_levels[3]) |>
+    dplyr::pull(minmax) * 100,
+  keep = TRUE
+)
+
+dtw::dtwPlotTwoWay(dtw_gene_ecoli,
+  ylab = "Natural sequence",
+  xlab = "Model sequence",
+  ts.type = "l",
+  lty = 1,
+  lwd = 3,
+  offset = 80,
+  match.col = "grey"
+)
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = natural_DTW_results |>
+    mutate(value = normalized_distance),
+  .organism = organism_levels[1],
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_ecoli_natural.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = natural_DTW_results |>
+    mutate(value = normalized_distance),
+  .organism = organism_levels[2],
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_scerevisiae_natural.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = natural_DTW_results |>
+    mutate(value = normalized_distance),
+  .organism = organism_levels[3],
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_Athaliana_natural.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = natural_DTW_results |>
+    mutate(value = normalized_distance),
+  .organism = organism_levels[4],
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_mmusculus_natural.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = natural_DTW_results |>
+    mutate(value = normalized_distance),
+  .organism = organism_levels[5],
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_hsapiens_natural.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = natural_DTW_results |>
+    mutate(value = normalized_distance),
+  .organism = ".*",
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_distances_between_models_for_natural_genes.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+dtw_between_natural_and_model <- natural_DTW_results |>
+  filter(model1 == "Natural") |>
+  filter(model2 != "Natural") |>
+  mutate(model = model2) |>
+  mutate(organism = factor(organism, levels = organism_levels)) |>
+  drop_na()
+
+#=== chunk ===
+
+stat.test_distance <- dtw_between_natural_and_model |>
+  group_by(organism) |>
+  t_test(distance ~ model, ref.group = model_levels[3])  
+stat.test_distance
+
+#=== chunk ===
+
+stat.test_distance <- stat.test_distance |>
+  add_y_position(
+    scales = "free_y",
+    step.increase = 0.2
+  ) |>
+  mutate(p.adj.signif = ifelse(p.adj.signif == "ns", "", p.adj.signif))
+
+plot <- dtw_between_natural_and_model |>
+  ggplot(aes(x = model, y = distance, color = model)) +
+  geom_boxplot(color = "black", outlier.shape = NA) +
+  geom_jitter(
+    data = ~ subset(.x, description != "NC_000913.3:338325-339743 yahG" &
+      description != "NM_001179424.1:1-1410 SER33" &
+      description != "NM_001340786.1:277-1587 AT4G12540" &
+      description != "NM_001416453.1:324-1805 Csad" &
+      description != "XM_054318276.1:337-2223 ZBTB7C"),
+    width = 0.2, height = 0, size = 1, alpha = 0.5
+  ) +
+  scale_color_manual(values = model_colors[c(-1)]) +
+  geom_jitter(
+    data = ~ subset(.x, description == "NC_000913.3:338325-339743 yahG" |
+      description == "NM_001179424.1:1-1410 SER33" |
+      description == "NM_001340786.1:277-1587 AT4G12540" |
+      description == "NM_001416453.1:324-1805 Csad" |
+      description == "XM_054318276.1:337-2223 ZBTB7C"),
+    color = "grey30", height = 0, size = 2, alpha = 0.7
+  ) +
+  stat_pvalue_manual(
+    stat.test_distance,
+    bracket.nudge.y = -2, hide.ns = FALSE,
+    label = "{scales::scientific(p.adj)} {p.adj.signif}",
+    tip.length = 0
+  ) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
+  facet_wrap(~organism, ncol = 5, scales = "free") +
+  labs(y = "", x = "") +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.text.x = element_blank(),
+    legend.title = element_blank(),
+    legend.position = "none",
+    strip.text = element_text(face = "italic")
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_to_natural_all_species_with_statistics.svg", height = 3, width = 15
+# )
+
+#=== chunk ===
+
+natural_DTW_results |>
+  mutate(
+    model1 = model1 |> str_remove_all("\n"),
+    model2 = model2 |> str_remove_all("\n")
+  ) |>
+  select(organism, description, model1, model2, distance, normalized_distance) |>
+  mutate(
+    distance = unlist(distance),
+    normalized_distance = unlist(normalized_distance)
+  ) |>
+  write_tsv("natural_DTW_minmax.tsv")
+
+#=== chunk ===
+
+natural_RNA_folding_results <- natural_sequence_data |>
+  mutate(RNA_fold_object = map(sequence, compute_RNA_fold)) |>
+  select(organism, description, model, sequence, RNA_fold_object)
+
+saveRDS(natural_RNA_folding_results, "natural_RNA_folding.rds")
+
+#=== chunk ===
+
+natural_RNA_folding_results <- readRDS("natural_RNA_folding.rds") |> mutate(
+  organism = factor(organism, levels = organism_levels),
+  mfe = map(RNA_fold_object, pluck("mfe")),
+  mfe = as.numeric(mfe),
+  length = str_count(sequence),
+  mfe_normalized_by_length = mfe / length,
+  GC_content = str_count(sequence, "G|C") / length
+)
+
+#=== chunk ===
+
+plot <- natural_RNA_folding_results |>
+  mutate(y_plot = mfe, x_plot = length) |>
+  plot_smooth_model() +
+  scale_color_manual(values = model_colors) +
+  scale_fill_manual(values = model_colors)
+plot
+
+#=== chunk ===
+
+
+# ggsave(plot,
+#   filename = "RNA_folding_1_linear_relation_to_length_natural.svg",
+#   height = 4,
+#   width = 6
+# )
+
+#=== chunk ===
+
+plot <- inner_join(
+  natural_RNA_folding_results |>
+    filter(model != "Natural"),
+  natural_RNA_folding_results |>
+    filter(model == "Natural") |>
+    mutate(ref_norm = mfe_normalized_by_length) |>
+    select(-mfe_normalized_by_length, -model),
+  by = c("organism", "description", "length")
+) |>
+  mutate(organism = factor(organism, levels = organism_levels)) |>
+  mutate(x_plot = ref_norm, y_plot = mfe_normalized_by_length) |>
+  plot_smooth_model() +
+  stat_regline_equation(
+    label.x.npc = 0.6,
+    label.y.npc = 0.35,
+  ) +
+  ylab("mfe / length") +
+  xlab("mfe / length for natural sequence") +
+  xlim(c(-0.55, -0.1)) +
+  scale_color_manual(values = model_colors[-1]) +
+  scale_fill_manual(values = model_colors[-1])
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "RNA_folding_2_linear_fit_plotnormalized_natural.svg",
+#   height = 4,
+#   width = 6
+# )
+
+#=== chunk ===
+
+plot <- natural_RNA_folding_results |>
+  mutate(value = mfe_normalized_by_length) |>
+  plot_jitter_species() +
+  xlab("mfe / length")
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "RNA_folding_3_species_separation_normalized_natural.svg",
+#   height = 4,
+#   width = 6
+# )
+
+#=== chunk ===
+
+plot <- natural_RNA_folding_results |>
+  mutate(value = GC_content) |>
+  plot_jitter_species() +
+  xlab("GC content")
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "RNA_folding_4_species_separation_GC_content.svg",
+#   height = 4,
+#   width = 6
+# )
+
+#=== chunk ===
+
+plot <- inner_join(
+  natural_RNA_folding_results |>
+    filter(model != "Natural"),
+  natural_RNA_folding_results |>
+    filter(model == "Natural") |>
+    mutate(ref_GC = GC_content) |>
+    select(-GC_content, -model),
+  by = c("organism", "description", "length")
+) |>
+  mutate(organism = factor(organism, levels = organism_levels)) |>
+  mutate(x_plot = ref_GC, y_plot = GC_content) |>
+  plot_smooth_model() +
+  stat_regline_equation(
+    label.x.npc = 0.6,
+    label.y.npc = 0.35,
+  ) +
+  ylab("GC content") +
+  xlab("GC content of natural sequence") +
+  scale_color_manual(values = model_colors[-1]) +
+  scale_fill_manual(values = model_colors[-1])
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "RNA_folding_5_linear_fit_GCcontent_natural.svg",
+#   height = 4,
+#   width = 6
+# )
+
+#=== chunk ===
+
+natural_RNA_folding_results |>
+  mutate(model = model |> str_remove_all("\n")) |>
+  select(organism, description, mfe, length, mfe_normalized_by_length, GC_content) |>
+  write_tsv("natural_RNA_fold.tsv")
+
+#=== chunk ===
+
+# import sequences generated by different tools
+benchmark_sequence_data <- read_xlsx("Supplementary Data 2.xlsx", sheet = "DNA sequences, CSI, CIS-element") |>
+  select(-matches("CSI")) |>
+  # make columns containing dna sequence as rows
+  pivot_longer(
+    cols = matches("DNA"),
+    names_to = "model",
+    values_to = "sequence"
+  ) |>
+  # make columns containing CSI as rows
+  pivot_longer(
+    cols = matches("CIS"),
+    names_to = "model_bis",
+    values_to = "nb_cis_element"
+  ) |>
+  mutate(
+    model = model |> str_remove("_dna$|_DNA$"),
+    model_bis = model_bis |> str_remove("_CIS$")
+  ) |>
+  filter(model == model_bis) |>
+  # ICOR are NA for other organisms
+  drop_na() |>
+  mutate(model = factor(
+    ifelse(
+      str_detect(model, model_patterns[1]),
+      model_levels[1],
+      ifelse(
+        str_detect(model, model_patterns[2]),
+        model_levels[2],
+        ifelse(
+          str_detect(model, model_patterns[3]),
+          model_levels[3],
+          ifelse(
+            str_detect(model, model_patterns[4]),
+            model_levels[4],
+            ifelse(
+              str_detect(model, model_patterns[5]),
+              model_levels[5],
+              ifelse(
+                str_detect(model, model_patterns[6]),
+                model_levels[6],
+                ifelse(
+                  str_detect(model, model_patterns[7]),
+                  model_levels[7],
+                  NA
+                )
+              )
+            )
+          )
+        )
+      )
+    ),
+    levels = model_levels
+  )) |>
+  select(organism, protein, model, sequence, nb_cis_element)
+
+organism_levels <- benchmark_sequence_data |>
+  pull(organism) |>
+  unique()
+
+#=== chunk ===
+
+benchmark_sequence_data |>
+  group_by(organism, model) |>
+  summarise(nb_of_sequences = n(), .groups = "drop")
+
+#=== chunk ===
+
+benchmark_sequence_data |> 
+  mutate(codon=sequence |> str_extract_all("[A-Z]{3}")) |> 
+  unnest_longer(codon) |> 
+  inner_join(codon_aa_table, by=join_by(codon==codon)) |> 
+  mutate(model=model |> str_remove_all("\n")) |> 
+  group_by(organism, model, token) |> 
+  summarise(codon_count=n()) |> 
+  write_tsv("benchmark_sequences_codon_counts.tsv")
+
+#=== chunk ===
+
+plot_bar_codons_benchmark(
+  .species = "Escherichia coli",
+  .save = FALSE
+)
+
+#=== chunk ===
+
+plot_bar_codons_benchmark(
+  .species = "Saccharomyces cerevisiae",
+  .save = FALSE
+)
+
+#=== chunk ===
+
+plot_bar_codons_benchmark(
+  .species = "Arabidopsis thaliana",
+  .save = FALSE
+)
+
+#=== chunk ===
+
+plot_bar_codons_benchmark(
+  .species = "Mus musculus",
+  .save = FALSE
+)
+
+#=== chunk ===
+
+plot_bar_codons_benchmark(
+  .species = "Homo sapiens",
+  .save = FALSE
+)
+
+#=== chunk ===
+
+# function to compute Jaccard index for two input sequences
+jaccard_similarity <- function(df) {
+  A <- df$codons1 |> unlist()
+  B <- df$codons2 |> unlist()
+  if (length(A) != length(B)) {
+    return("different length")
+  } else if (is.null(A) | is.null(B)) {
+    return(NA)
+  } else {
+    intersection <- length(base::intersect(A, B))
+    union <- length(base::union(A, B))
+    return(intersection / union)
+  }
+}
+
+benchmark_jaccard_results <- benchmark_sequence_data |>
+  mutate(codons = sequence |>
+    str_extract_all(pattern = "[:alpha:]{3}")) |>
+  mutate(
+    model1 = model, codons1 = codons,
+    model2 = model, codons2 = codons
+  ) |>
+  nest(
+    comparison1 = c(model1, codons1),
+    comparison2 = c(model2, codons2)
+  ) |>
+  select(organism, protein, comparison1, comparison2) |>
+  group_by(organism, protein) |>
+  complete(comparison1, comparison2) |>
+  unnest(c(comparison1, comparison2)) |>
+  nest(jaccard_data = c(codons1, codons2)) |>
+  mutate(value = map(jaccard_data, jaccard_similarity))
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_jaccard_results,
+  .organism = organism_levels[1],
+  .metric = "Jaccard index"
+) +
+  scale_fill_distiller(
+    palette = "Greens",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "jaccard_ecoli.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_jaccard_results,
+  .organism = organism_levels[2],
+  .metric = "Jaccard index"
+) +
+  scale_fill_distiller(
+    palette = "Greens",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "jaccard_scerevisiae.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_jaccard_results,
+  .organism = organism_levels[3],
+  .metric = "Jaccard index"
+) +
+  scale_fill_distiller(
+    palette = "Greens",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "jaccard_athaliana.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_jaccard_results,
+  .organism = organism_levels[4],
+  .metric = "Jaccard index"
+) +
+  scale_fill_distiller(
+    palette = "Greens",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "jaccard_mmusculus.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_jaccard_results,
+  .organism = organism_levels[5],
+  .metric = "Jaccard index"
+) +
+  scale_fill_distiller(
+    palette = "Greens",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "jaccard_hsapiens.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_jaccard_results,
+  .organism = ".*",
+  .metric = "Jaccard index"
+) +
+  scale_fill_distiller(
+    palette = "Greens",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "jaccard_all_species_mean.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+benchmark_jaccard_results |>
+  mutate(
+    model1 = model1 |> str_remove_all("\n"),
+    model2 = model2 |> str_remove_all("\n")
+  ) |>
+  mutate(jaccard = unlist(value)) |>
+  select(-jaccard_data, value) |>
+  write_tsv("benchmark_jaccard_values.tsv")
+
+#=== chunk ===
+
+sequence_similarity <- function(df) {
+  A <- df$codons1 |> unlist()
+  B <- df$codons2 |> unlist()
+  if (length(A) != length(B)) {
+    return("different length")
+  } else if (is.null(A) | is.null(B)) {
+    return(NA)
+  } else {
+    sum <- 0
+    for (i in seq(1, length(A))) {
+      if (A[i] == B[i]) {
+        sum <- sum + 1
+      }
+    }
+    sum <- (sum * 100) / length(A)
+    return(sum)
+  }
+}
+
+benchmark_sequence_similarity_results <- benchmark_sequence_data |>
+  mutate(codons = sequence |>
+    str_extract_all(pattern = "[:alpha:]{3}")) |>
+  mutate(
+    model1 = model, codons1 = codons,
+    model2 = model, codons2 = codons
+  ) |>
+  nest(
+    comparison1 = c(model1, codons1),
+    comparison2 = c(model2, codons2)
+  ) |>
+  select(organism, protein, comparison1, comparison2) |>
+  group_by(organism, protein) |>
+  complete(comparison1, comparison2) |>
+  unnest(c(comparison1, comparison2)) |>
+  nest(seq_similarity_data = c(codons1, codons2)) |>
+  mutate(value = map(seq_similarity_data, sequence_similarity))
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_sequence_similarity_results,
+  .organism = organism_levels[1],
+  .metric = "sequence similarity"
+) +
+  scale_fill_distiller(
+    palette = "Blues",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "seq_similarity_ecoli.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_sequence_similarity_results,
+  .organism = organism_levels[2],
+  .metric = "sequence similarity"
+) +
+  scale_fill_distiller(
+    palette = "Blues",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "seq_similarity_scerevisiae.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_sequence_similarity_results,
+  .organism = organism_levels[3],
+  .metric = "sequence similarity"
+) +
+  scale_fill_distiller(
+    palette = "Blues",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "seq_similarity_Athaliana.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_sequence_similarity_results,
+  .organism = organism_levels[4],
+  .metric = "sequence similarity"
+) +
+  scale_fill_distiller(
+    palette = "Blues",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "seq_similarity_mmusculus.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_sequence_similarity_results,
+  .organism = organism_levels[5],
+  .metric = "sequence similarity"
+) +
+  scale_fill_distiller(
+    palette = "Blues",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "seq_similarity_hsapiens.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_sequence_similarity_results,
+  .organism = ".*",
+  .metric = "sequence similarity"
+) +
+  scale_fill_distiller(
+    palette = "Blues",
+    direction = 1
+  )
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "seq_similarity_all_species_mean.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+benchmark_sequence_similarity_results |>
+  mutate(
+    model1 = model1 |> str_remove_all("\n"),
+    model2 = model2 |> str_remove_all("\n")
+  ) |>
+  mutate(seq_similarity = unlist(value)) |>
+  select(-seq_similarity_data, -value) |>
+  write_tsv("benchmark_sequence_similarity.tsv")
+
+#=== chunk ===
+
+benchmark_minmax_results <- benchmark_sequence_data |>
+  select(organism, protein, model, sequence) |>
+  mutate(species = ifelse(str_detect(organism, "coli"), "ecoli",
+    ifelse(str_detect(organism, "cerevisiae"), "saccharomyces",
+      ifelse(str_detect(organism, "thaliana"), "arabidopsis",
+        ifelse(str_detect(organism, "musculus"), "mouse",
+          ifelse(str_detect(organism, "sapiens"), "human", NA)
+        )
+      )
+    )
+  )) |>
+  nest(data = c(sequence, species)) |>
+  mutate(minmax = map(data, compute_minmax)) |>
+  unnest(data) |>
+  unnest(minmax) |>
+  group_by(organism, model, protein) |>
+  mutate(index = row_number())
+
+#=== chunk ===
+
+plot <- plot_line_minmax(
+  .data_structure = benchmark_minmax_results,
+  .organism = organism_levels[1],
+  .limits = c(-1, 1.2),
+  .ncol = 6
+)
+
+# ggsave(plot,
+#   filename = "minmax_benchmark_Ecoli_w=18.svg",
+#   height = 120,
+#   width = 20,
+#   limitsize = FALSE
+# )
+
+#=== chunk ===
+
+plot <- plot_line_minmax(
+  .data_structure = benchmark_minmax_results,
+  .organism = organism_levels[2],
+  .limits = c(-1, 1.2),
+  .ncol = 5
+)
+
+# ggsave(plot,
+#   filename = "minmax_benchmark_Scerevisiae_w=18.svg",
+#   height = 120,
+#   width = 16,
+#   limitsize = FALSE
+# )
+
+#=== chunk ===
+
+plot <- plot_line_minmax(
+  .data_structure = benchmark_minmax_results,
+  .organism = organism_levels[3],
+  .limits = c(-1, 1.2),
+  .ncol = 5
+)
+
+# ggsave(plot,
+#   filename = "minmax_benchmark_Athaliana_w=18.svg",
+#   height = 120,
+#   width = 16,
+#   limitsize = FALSE
+# )
+
+#=== chunk ===
+
+plot <- plot_line_minmax(
+  .data_structure = benchmark_minmax_results,
+  .organism = organism_levels[4],
+  .limits = c(-1, 1.2),
+  .ncol = 5
+)
+
+# ggsave(plot,
+#   filename = "minmax_benchmark_Mmusculus_w=18.svg",
+#   height = 120,
+#   width = 16,
+#   limitsize = FALSE
+# )
+
+#=== chunk ===
+
+plot <- plot_line_minmax(
+  .data_structure = benchmark_minmax_results,
+  .organism = organism_levels[5],
+  .limits = c(-1, 1.2),
+  .ncol = 5
+)
+
+# ggsave(plot,
+#   filename = "minmax_benchmark_Hsapiens_w=18.svg",
+#   height = 120,
+#   width = 16,
+#   limitsize = FALSE
+# )
+
+#=== chunk ===
+
+benchmark_minmax_results |>
+  select(-species, -sequence) |>
+  mutate(
+    model = model |> str_remove_all("\n"),
+    minmax = minmax |> round(digits = 2)
+  ) |>
+  pivot_wider(names_from = index, values_from = minmax) |>
+  unite(col = "minmax", matches("\\d"), sep = ",") |>
+  mutate(minmax = minmax |> str_remove_all(",NA")) |>
+  write_tsv("benchmark_minmax_profiles.tsv")
+
+#=== chunk ===
+
+benchmark_DTW_results <- benchmark_minmax_results |>
+  select(-species, -index, -sequence) |>
+  group_by(organism, protein, model) |>
+  nest(minmax = minmax) |>
+  mutate(
+    model1 = model, minmax1 = minmax,
+    model2 = model, minmax2 = minmax
+  ) |>
+  nest(
+    comparison1 = c(model1, minmax1),
+    comparison2 = c(model2, minmax2)
+  ) |>
+  ungroup() |>
+  select(organism, protein, comparison1, comparison2) |>
+  group_by(organism, protein) |>
+  complete(comparison1, comparison2) |>
+  unnest(c(comparison1, comparison2)) |>
+  nest(dtw_data = c(minmax1, minmax2)) |>
+  mutate(dtw_object = map(dtw_data, compute_DTW)) |>
+  mutate(
+    distance = map(dtw_object, pluck("distance")),
+    normalized_distance = map(dtw_object, pluck("normalizedDistance"))
+  ) |>
+  select(organism, protein, model1, model2, distance, normalized_distance) |>
+  select(organism, description, model1, model2, dtw_object)
+
+saveRDS(benchmark_DTW_results, "benchmark_DTW_results.rds")
+
+#=== chunk ===
+
+benchmark_DTW_results <- readRDS("benchmark_DTW_results.rds")
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_DTW_results |>
+    mutate(value = normalized_distance),
+  .organism = organism_levels[1],
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_ecoli_benchmark.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_DTW_results |> mutate(value = normalized_distance),
+  .organism = organism_levels[2],
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_scerevisiae_benchmark.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_DTW_results |> mutate(value = normalized_distance),
+  .organism = organism_levels[3],
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_Athaliana_benchmark.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_DTW_results |> mutate(value = normalized_distance),
+  .organism = organism_levels[4],
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_mmusculus_benchmark.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_DTW_results |> mutate(value = normalized_distance),
+  .organism = organism_levels[5],
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_hsapiens_benchmark.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+plot <- plot_tile_similarity(
+  .data_struc = benchmark_DTW_results |> mutate(value = normalized_distance),
+  .organism = ".*",
+  .metric = "DTW distance"
+) +
+  scale_fill_gradient(
+    low = "#F7FEAD",
+    high = "#01708B"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "DTW_distances_between_models_for_benchmark_genes.svg",
+#   height = similarity_plot_height,
+#   width = similarity_plot_width
+# )
+
+#=== chunk ===
+
+benchmark_DTW_results |>
+  mutate(
+    model1 = model1 |> str_remove_all("\n"),
+    model2 = model2 |> str_remove_all("\n")
+  ) |>
+  select(organism, protein, model1, model2, distance, normalized_distance) |>
+  mutate(
+    distance = unlist(distance),
+    normalized_distance = unlist(normalized_distance)
+  ) |>
+  write_tsv("benchmark_DTW_minmax.tsv")
+
+#=== chunk ===
+
+plot <- benchmark_sequence_data |>
+  mutate(organism = factor(organism, levels = organism_levels)) |>
+  ggplot(aes(x = model, y = as.numeric(nb_cis_element), color = model)) +
+  geom_boxplot(color = "black", outlier.shape = NA) +
+  geom_jitter(width = 0.2, height = 0.2, size = 1, alpha = 0.5) +
+  scale_color_manual(values = model_colors[-1]) +
+  stat_summary(
+    fun.y = mean, fun.min = mean, fun.max = mean,
+    geom = "point", color = "black", shape = 4, size = 4
+  ) +
+  scale_y_continuous(breaks = c(0, 2, 4, 6, 8, 10)) +
+  facet_wrap(~organism, ncol = 5, scales = "free") +
+  ylab("Number of cis regulatory element") +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.text.x = element_blank(),
+    legend.title = element_blank(),
+    plot.title = element_text(hjust = 0.5),
+    strip.text = element_text(face = "italic"),
+    legend.position = "none"
+  )
+
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "Cis_regulatory_elements_without_legend.svg",
+#   height = 3,
+#   width = 10
+# )
+
+#=== chunk ===
+
+benchmark_RNA_folding_results <- benchmark_sequence_data |>
+  mutate(RNA_fold_object = map(sequence, compute_RNA_fold)) |>
+  select(organism, protein, model, sequence, RNA_fold_object)
+
+saveRDS(benchmark_RNA_folding_results, "benchmark_RNA_folding.rds")
+
+#=== chunk ===
+
+benchmark_RNA_folding_results <- readRDS("benchmark_RNA_folding.rds") |>
+  mutate(
+    organism = factor(organism, levels = organism_levels),
+    mfe = map(RNA_fold_object, pluck("mfe")),
+    mfe = as.numeric(mfe),
+    length = str_count(sequence),
+    mfe_normalized_by_length = mfe / length,
+    GC_content = str_count(sequence, "G|C") / length
+  )
+
+#=== chunk ===
+
+plot <- benchmark_RNA_folding_results |>
+  mutate(y_plot = mfe, x_plot = length) |>
+  plot_smooth_model() +
+  scale_color_manual(values = model_colors[-1]) +
+  scale_fill_manual(values = model_colors[-1])
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "RNA_folding_1_linear_relation_to_length_benchmark.svg",
+#   height = 4,
+#   width = 6
+# )
+
+#=== chunk ===
+
+plot <- benchmark_RNA_folding_results |>
+  mutate(value = mfe_normalized_by_length) |>
+  plot_jitter_species() +
+  xlab("mfe / length")
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "RNA_folding_3_species_separation_normalized_benchmark.svg",
+#   height = 4,
+#   width = 6
+# )
+
+#=== chunk ===
+
+plot <- benchmark_RNA_folding_results |>
+  mutate(value = GC_content) |>
+  plot_jitter_species() +
+  xlab("GC content")
+plot
+
+#=== chunk ===
+
+# ggsave(plot,
+#   filename = "RNA_folding_4_species_separation_GC_content.svg",
+#   height = 4,
+#   width = 6
+# )
+
+#=== chunk ===
+
+benchmark_RNA_folding_results |>
+  mutate(model = model |> str_remove_all("\n")) |>
+  select(organism, protein, mfe, length, mfe_normalized_by_length, GC_content) |>
+  write_tsv("benchmark_RNA_fold.tsv")
+
+#=== chunk ===
+
+# import natural and optimized sequences
+codon_across_genomes <- genomic_sequences |> 
+  mutate("Natural"=str_extract_all(original_sequence, "[A-Z]{3}"),
+         "Base \n model"=str_extract_all(base_model, "[A-Z]{3}"),
+         "Fine \n tuned"=str_extract_all(fine_tuned, "[A-Z]{3}")) |> 
+  pivot_longer(cols=c("Natural", "Base \n model", "Fine \n tuned"),
+               names_to="model",
+               values_to = "codon") |> 
+  unnest_longer(codon) |> 
+  inner_join(codon_aa_table,
+             by=c("codon"="codon")) |> 
+  mutate(model=factor(model,
+                      levels=c("Natural", "Base \n model", "Fine \n tuned")))
+rm(genomic_sequences)
+
+#=== chunk ===
+
+codon_across_genomes |>
+  mutate(model=model |> str_remove_all("\n")) |> 
+  group_by(organism, model, token) |> 
+  summarise(codon_count=n()) |> 
+  write_tsv("genome_sequences_codon_counts.tsv")
+
+#=== chunk ===
+
+plot1 <- codon_across_genomes |> 
+  filter(organism=="Escherichia coli") +
+  ggplot(aes(y = token, fill=model)) +
+    geom_bar() +
+  scale_fill_manual(values=model_colors[1:3])+
+      scale_x_continuous(breaks = c(0, 100000))+
+    facet_wrap(~model, ncol=3) +
+    theme_bw() +
+    ylab("Codons") +
+    xlab("") +
+    ggtitle("E. coli") +
+    theme(plot.title = element_text(hjust = 0.5),
+          axis.title.y=element_text(face="italic"))
+plot2 <- codon_across_genomes |> 
+  filter(organism=="Saccharomyces cerevisiae") |> 
+  ggplot(aes(y = token, fill=model)) +
+    geom_bar() +
+  scale_fill_manual(values=model_colors[1:3])+
+      scale_x_continuous(breaks = c(0, 200000))+
+    facet_wrap(~model, ncol=3) +
+    theme_bw() +
+    ylab("Codons") +
+    xlab("") +
+    ggtitle("S. cerevisiae") +
+    theme(plot.title = element_text(hjust = 0.5),
+          axis.title.y=element_text(face="italic"))
+plot3 <- codon_across_genomes |> 
+  filter(organism=="Arabidopsis thaliana") |> 
+  ggplot(aes(y = token, fill=model)) +
+    geom_bar() +
+  scale_fill_manual(values=model_colors[1:3])+
+      scale_x_continuous(breaks = c(0, 1000000))+
+    facet_wrap(~model, ncol=3) +
+    theme_bw() +
+    ylab("Codons") +
+    xlab("") +
+    ggtitle("A. thaliana") +
+    theme(plot.title = element_text(hjust = 0.5),
+          axis.title.y=element_text(face="italic"))
+plot4 <- codon_across_genomes |> 
+  filter(organism=="Mus musculus") |> 
+  ggplot(aes(y = token, fill=model)) +
+    geom_bar() +
+  scale_fill_manual(values=model_colors[1:3])+
+      scale_x_continuous(breaks = c(0,3000000))+
+    facet_wrap(~model, ncol=3) +
+    theme_bw() +
+    ylab("Codons") +
+    xlab("") +
+    ggtitle("M. musculus") +
+    theme(plot.title = element_text(hjust = 0.5),
+          axis.title.y=element_text(face="italic"))
+plot5 <- codon_across_genomes |> 
+  filter(organism=="Homo sapiens") |> 
+  ggplot(aes(y = token, fill=model)) +
+    geom_bar() +
+  scale_fill_manual(values=model_colors[1:3])+
+      scale_x_continuous(breaks = c(0, 5000000))+
+    facet_wrap(~model, ncol=3) +
+    theme_bw() +
+    ylab("Codons") +
+    xlab("") +
+    ggtitle("H. sapiens") +
+    theme(plot.title = element_text(hjust = 0.5),
+          axis.title.y=element_text(face="italic"))
+
+#=== chunk ===
+
+plot=plot1+plot2+plot3+plot4+plot5+
+  plot_layout(
+      guides = "collect",
+      axes = "collect",
+      ncol=5
+    ) +
+    plot_annotation(
+      title = paste0("Codon distribution across genomic sequences"),
+      theme = theme(plot.title = element_text(hjust = 0.5)) &
+        theme(plot.title = element_text(size = 18))
+    )
+
+#=== chunk ===
+
+plot
+
+#=== chunk ===
+
+print(sessionInfo(), locale = FALSE)

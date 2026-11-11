@@ -1,0 +1,62 @@
+2.7.1+cpu 4.54.0 2.3.2 2.3.1
+g virtual environment at: .venv
+Activate with: source .venv/bin/activate
+Resolved 13 packages in 21ms
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 13 packages in 17.12s
+ + biopython==1.85
+ + cai-pypi==2.0.1
+ + click==8.2.1
+ + dtw-python==1.5.3
+ + et-xmlfile==2.0.0
+ + numpy==2.3.2
+ + openpyxl==3.1.5
+ + pandas==2.3.1
+ + python-dateutil==2.9.0.post0
+ + pytz==2025.2
+ + scipy==1.16.1
+ + six==1.17.0
+ + tzdata==2025.2
+Resolved 9 packages in 798ms
+Downloading torch (167.8MiB)
+ Downloaded torch
+Prepared 3 packages in 5.97s
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 9 packages in 1m 52s
+ + filelock==4.2.4
+ + fsspec==2026.9.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.3
+ + mpmath==1.3.0
+ + networkx==3.6.1
+ + sympy==1.14.0
+ + torch==2.7.1+cpu
+ + typing-extensions==4.16.0
+Resolved 18 packages in 984ms
+Downloading hf-xet (3.0MiB)
+Downloading transformers (10.7MiB)
+ Downloaded hf-xet
+ Downloaded transformers
+Prepared 10 packages in 538ms
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 14 packages in 24.92s
+ + certifi==2025.7.14
+ + charset-normalizer==3.4.2
+ + hf-xet==1.1.5
+ + huggingface-hub==0.34.2
+ + idna==3.10
+ + packaging==25.0
+ + pyyaml==6.0.2
+ + regex==2024.11.6
+ + requests==2.32.4
+ + safetensors==0.5.3
+ + tokenizers==0.21.4
+ + tqdm==4.67.1
+ + transformers==4.54.0
+ + urllib3==2.5.0

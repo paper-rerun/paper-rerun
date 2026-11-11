@@ -1,0 +1,29 @@
+
+==== generated_primary.csv ====
+rows=520 pairs=260
+E. coli organism token(s): ['Escherichia coli general']
+sequences identical to the authors' deposited ones:
+   base  Arabidopsis thaliana        52/ 52
+   base  Escherichia coli            52/ 52
+   base  Homo sapiens                52/ 52
+   base  Mus musculus                52/ 52
+   base  Saccharomyces cerevisiae    52/ 52
+   fine  Arabidopsis thaliana        52/ 52
+   fine  Escherichia coli            52/ 52
+   fine  Homo sapiens                52/ 52
+   fine  Mus musculus                52/ 52
+   fine  Saccharomyces cerevisiae    52/ 52
+C1 n=260 ours mean=0.7379 sd=0.0663 published=0.74 delta=-0.0021 band=+/-0.03 -> INSIDE
+     Arabidopsis thaliana       n= 52 mean=0.6995
+     Escherichia coli           n= 52 mean=0.7738
+     Homo sapiens               n= 52 mean=0.7649
+     Mus musculus               n= 52 mean=0.7557
+     Saccharomyces cerevisiae   n= 52 mean=0.6954
+C2 n=260 ours mean=69.2629 sd=6.3405 published=69.26 delta=+0.0029 band=+/-2.0 -> INSIDE
+     Arabidopsis thaliana       n= 52 mean=62.6004
+     Escherichia coli           n= 52 mean=71.5759
+     Homo sapiens               n= 52 mean=70.6681
+     Mus musculus               n= 52 mean=71.3680
+     Saccharomyces cerevisiae   n= 52 mean=70.1019
+inference time: 11.5 min over 260 pairs, mean 2.6 s per pair, max 41.5 s
+wrote runs/out/generated_primary_metrics.csv

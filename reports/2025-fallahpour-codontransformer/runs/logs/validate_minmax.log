@@ -1,0 +1,7 @@
+natural genes per organism: {'Arabidopsis thaliana': 50, 'Escherichia coli': 50, 'Homo sapiens': 50, 'Mus musculus': 50, 'Saccharomyces cerevisiae': 50}
+table P: n=520 mean|diff|=0.1525 median=0.1252 p95=0.3204 max=0.4381
+   worst: ('Saccharomyces cerevisiae', 'Cas9', 'Base Codon- Transformer', 1352, 1352) at 0.4381
+   verdict at the pre-registered 0.02 ceiling: REJECT
+table K: n=520 mean|diff|=0.0378 median=0.0352 p95=0.0624 max=0.0857
+   worst: ('Saccharomyces cerevisiae', 'Granulocyte colony-stimulating factor', 'Base Codon- Transformer', 191, 191) at 0.0857
+   verdict at the pre-registered 0.02 ceiling: REJECT

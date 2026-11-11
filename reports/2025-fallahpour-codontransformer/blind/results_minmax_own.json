@@ -1,0 +1,64 @@
+{
+  "table_sizes": {
+    "ecoli": 64,
+    "saccharomyces": 64,
+    "yeast": 64,
+    "arabidopsis": 64,
+    "mouse": 64,
+    "human": 64
+  },
+  "variants": {
+    "ecoli": {
+      "Escherichia coli": {
+        "n": 52,
+        "mean": 0.04563808139386156,
+        "sd": 0.014203497769062342
+      }
+    },
+    "saccharomyces": {
+      "Saccharomyces cerevisiae": {
+        "n": 52,
+        "mean": 0.0969697609753937,
+        "sd": 0.04271827654791348
+      }
+    },
+    "yeast": {
+      "Saccharomyces cerevisiae": {
+        "n": 52,
+        "mean": 0.0975805410428444,
+        "sd": 0.042922624534440644
+      }
+    },
+    "arabidopsis": {
+      "Arabidopsis thaliana": {
+        "n": 52,
+        "mean": 0.036806575253853245,
+        "sd": 0.007842003269723476
+      }
+    },
+    "mouse": {
+      "Mus musculus": {
+        "n": 52,
+        "mean": 0.024531931908929702,
+        "sd": 0.007060127935533583
+      }
+    },
+    "human": {
+      "Homo sapiens": {
+        "n": 52,
+        "mean": 0.026497897266608013,
+        "sd": 0.006356040870496041
+      }
+    }
+  },
+  "C3b_pooled_yeast_table_saccharomyces": {
+    "n": 260,
+    "mean": 0.04608884935972924,
+    "sd": 0.03371062802467922
+  },
+  "C3b_pooled_yeast_table_yeast": {
+    "n": 260,
+    "mean": 0.046211005373219385,
+    "sd": 0.033946888342417485
+  }
+}

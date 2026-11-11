@@ -1,0 +1,841 @@
+{
+  "n_sequence_rows": 260,
+  "organisms_found": [
+    "Arabidopsis thaliana",
+    "Escherichia coli",
+    "Homo sapiens",
+    "Mus musculus",
+    "Saccharomyces cerevisiae"
+  ],
+  "proteins_found": 52,
+  "sequence_sheet_columns": [
+    "protein",
+    "protein sequence",
+    "organism",
+    "finetune_transformer_dna",
+    "finetune_transformer_CSI",
+    "finetune_transformer_CIS",
+    "pretrain_transformer_dna",
+    "pretrain_transformer_CSI",
+    "pretrain_transformer_CIS",
+    "twist_DNA",
+    "twist_CSI",
+    "twist_CIS",
+    "idt_dna",
+    "idt_CSI",
+    "idt_CIS",
+    "genewiz_dna",
+    "genewiz_CSI",
+    "genewiz_CIS",
+    "icor_dna",
+    "icor_CSI",
+    "icor_CIS"
+  ],
+  "tool_columns": {
+    "finetune_transformer_dna": "finetune_transformer",
+    "pretrain_transformer_dna": "pretrain_transformer",
+    "twist_DNA": "twist",
+    "idt_dna": "idt",
+    "genewiz_dna": "genewiz",
+    "icor_dna": "icor"
+  },
+  "length_mismatches": [],
+  "all_pairs": {
+    "finetune_transformer | genewiz": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "jaccard": {
+        "n": 260,
+        "mean": 0.6183378986315463,
+        "sd": 0.07281604151387021
+      },
+      "sequence_similarity": {
+        "n": 260,
+        "mean": 62.68000221612384,
+        "sd": 5.536932172896051
+      }
+    },
+    "finetune_transformer | icor": {
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "jaccard": {
+        "n": 52,
+        "mean": 0.7753529935942031,
+        "sd": 0.05831286971334242
+      },
+      "sequence_similarity": {
+        "n": 52,
+        "mean": 66.05659369684396,
+        "sd": 2.995466232132604
+      }
+    },
+    "finetune_transformer | idt": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "jaccard": {
+        "n": 260,
+        "mean": 0.7045692291230915,
+        "sd": 0.10656287219407161
+      },
+      "sequence_similarity": {
+        "n": 260,
+        "mean": 37.31399169481879,
+        "sd": 3.4807685513142146
+      }
+    },
+    "finetune_transformer | pretrain_transformer": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "jaccard": {
+        "n": 260,
+        "mean": 0.7378555443768628,
+        "sd": 0.0662513097304056
+      },
+      "sequence_similarity": {
+        "n": 260,
+        "mean": 69.26288301454848,
+        "sd": 6.340461934403597
+      }
+    },
+    "finetune_transformer | twist": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "jaccard": {
+        "n": 260,
+        "mean": 0.7092602485839323,
+        "sd": 0.09641402270116227
+      },
+      "sequence_similarity": {
+        "n": 260,
+        "mean": 44.579985796572814,
+        "sd": 2.944151727936491
+      }
+    },
+    "genewiz | icor": {
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "jaccard": {
+        "n": 52,
+        "mean": 0.6027481358934746,
+        "sd": 0.07241255516015428
+      },
+      "sequence_similarity": {
+        "n": 52,
+        "mean": 63.17084120624074,
+        "sd": 4.527232195297291
+      }
+    },
+    "genewiz | idt": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "jaccard": {
+        "n": 260,
+        "mean": 0.6027235837635114,
+        "sd": 0.13271539072368854
+      },
+      "sequence_similarity": {
+        "n": 260,
+        "mean": 37.271164382646404,
+        "sd": 3.0908664232329284
+      }
+    },
+    "genewiz | pretrain_transformer": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "jaccard": {
+        "n": 260,
+        "mean": 0.5919598964012147,
+        "sd": 0.07806465884542935
+      },
+      "sequence_similarity": {
+        "n": 260,
+        "mean": 61.42239200446058,
+        "sd": 9.536193587293978
+      }
+    },
+    "genewiz | twist": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "jaccard": {
+        "n": 260,
+        "mean": 0.6208673388548374,
+        "sd": 0.13890643910365083
+      },
+      "sequence_similarity": {
+        "n": 260,
+        "mean": 46.41329087468665,
+        "sd": 3.11454738924493
+      }
+    },
+    "icor | idt": {
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "jaccard": {
+        "n": 52,
+        "mean": 0.7619543182057504,
+        "sd": 0.08010792536497299
+      },
+      "sequence_similarity": {
+        "n": 52,
+        "mean": 38.95616709553587,
+        "sd": 3.299776157150129
+      }
+    },
+    "icor | pretrain_transformer": {
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "jaccard": {
+        "n": 52,
+        "mean": 0.7504260908995223,
+        "sd": 0.05416815509273828
+      },
+      "sequence_similarity": {
+        "n": 52,
+        "mean": 67.70644774610982,
+        "sd": 3.0551079138383512
+      }
+    },
+    "icor | twist": {
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "jaccard": {
+        "n": 52,
+        "mean": 0.7524015218574802,
+        "sd": 0.06190821097360185
+      },
+      "sequence_similarity": {
+        "n": 52,
+        "mean": 46.97464168791451,
+        "sd": 3.3043189230676
+      }
+    },
+    "idt | pretrain_transformer": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "jaccard": {
+        "n": 260,
+        "mean": 0.6042291346052934,
+        "sd": 0.0639230438578294
+      },
+      "sequence_similarity": {
+        "n": 260,
+        "mean": 37.281497661286735,
+        "sd": 3.323715678063193
+      }
+    },
+    "idt | twist": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "jaccard": {
+        "n": 260,
+        "mean": 0.9235140118048266,
+        "sd": 0.04544265623245028
+      },
+      "sequence_similarity": {
+        "n": 260,
+        "mean": 37.17854117137442,
+        "sd": 3.1727356383312872
+      }
+    },
+    "pretrain_transformer | twist": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "jaccard": {
+        "n": 260,
+        "mean": 0.6071764426860529,
+        "sd": 0.057193824179354535
+      },
+      "sequence_similarity": {
+        "n": 260,
+        "mean": 43.84560767984155,
+        "sd": 3.6556711251781726
+      }
+    }
+  },
+  "C1_C2_base_vs_finetuned": {
+    "pair_key": "finetune_transformer | pretrain_transformer",
+    "organisms": [
+      "Arabidopsis thaliana",
+      "Escherichia coli",
+      "Homo sapiens",
+      "Mus musculus",
+      "Saccharomyces cerevisiae"
+    ],
+    "jaccard": {
+      "n": 260,
+      "mean": 0.7378555443768628,
+      "sd": 0.0662513097304056
+    },
+    "sequence_similarity": {
+      "n": 260,
+      "mean": 69.26288301454848,
+      "sd": 6.340461934403597
+    }
+  },
+  "C4_cis_means": {
+    "Escherichia coli": {
+      "finetune_transformer": {
+        "n": 52,
+        "mean": 0.28846153846153844
+      },
+      "pretrain_transformer": {
+        "n": 52,
+        "mean": 0.36538461538461536
+      },
+      "twist": {
+        "n": 52,
+        "mean": 0.7115384615384616
+      },
+      "idt": {
+        "n": 52,
+        "mean": 0.46153846153846156
+      },
+      "genewiz": {
+        "n": 52,
+        "mean": 1.0961538461538463
+      },
+      "icor": {
+        "n": 52,
+        "mean": 0.5769230769230769
+      }
+    },
+    "Saccharomyces cerevisiae": {
+      "finetune_transformer": {
+        "n": 52,
+        "mean": 0.09615384615384616
+      },
+      "pretrain_transformer": {
+        "n": 52,
+        "mean": 0.019230769230769232
+      },
+      "twist": {
+        "n": 52,
+        "mean": 0.8461538461538461
+      },
+      "idt": {
+        "n": 52,
+        "mean": 0.5961538461538461
+      },
+      "genewiz": {
+        "n": 52,
+        "mean": 1.9615384615384615
+      }
+    },
+    "Arabidopsis thaliana": {
+      "finetune_transformer": {
+        "n": 52,
+        "mean": 0.17307692307692307
+      },
+      "pretrain_transformer": {
+        "n": 52,
+        "mean": 0.057692307692307696
+      },
+      "twist": {
+        "n": 52,
+        "mean": 0.6153846153846154
+      },
+      "idt": {
+        "n": 52,
+        "mean": 0.5
+      },
+      "genewiz": {
+        "n": 52,
+        "mean": 0.8846153846153846
+      }
+    },
+    "Mus musculus": {
+      "finetune_transformer": {
+        "n": 52,
+        "mean": 0.019230769230769232
+      },
+      "pretrain_transformer": {
+        "n": 52,
+        "mean": 0.09615384615384616
+      },
+      "twist": {
+        "n": 52,
+        "mean": 0.38461538461538464
+      },
+      "idt": {
+        "n": 52,
+        "mean": 0.5384615384615384
+      },
+      "genewiz": {
+        "n": 52,
+        "mean": 0.019230769230769232
+      }
+    },
+    "Homo sapiens": {
+      "finetune_transformer": {
+        "n": 52,
+        "mean": 0.038461538461538464
+      },
+      "pretrain_transformer": {
+        "n": 52,
+        "mean": 0.09615384615384616
+      },
+      "twist": {
+        "n": 52,
+        "mean": 0.40384615384615385
+      },
+      "idt": {
+        "n": 52,
+        "mean": 0.40384615384615385
+      },
+      "genewiz": {
+        "n": 52,
+        "mean": 0.0
+      }
+    }
+  },
+  "n_minmax_profiles": 1352,
+  "minmax_models": [
+    "Base Codon-Transformer",
+    "Fine-tuned Codon-Transformer",
+    "Genewiz",
+    "ICOR",
+    "IDT",
+    "Twist"
+  ],
+  "C3_dtw_all_pairs": {
+    "Base Codon-Transformer | Fine-tuned Codon-Transformer": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "norm_n_plus_m": {
+        "n": 260,
+        "mean": 0.045890135997284975,
+        "sd": 0.03376387617694362
+      },
+      "norm_n": {
+        "n": 260,
+        "mean": 0.09178027199456995,
+        "sd": 0.06752775235388724
+      },
+      "norm_max": {
+        "n": 260,
+        "mean": 0.09178027199456995,
+        "sd": 0.06752775235388724
+      }
+    },
+    "Base Codon-Transformer | Genewiz": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "norm_n_plus_m": {
+        "n": 260,
+        "mean": 0.08620678367606315,
+        "sd": 0.08215302115975759
+      },
+      "norm_n": {
+        "n": 260,
+        "mean": 0.1724135673521263,
+        "sd": 0.16430604231951518
+      },
+      "norm_max": {
+        "n": 260,
+        "mean": 0.1724135673521263,
+        "sd": 0.16430604231951518
+      }
+    },
+    "Base Codon-Transformer | ICOR": {
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "norm_n_plus_m": {
+        "n": 52,
+        "mean": 0.042533506374931015,
+        "sd": 0.018747649889783446
+      },
+      "norm_n": {
+        "n": 52,
+        "mean": 0.08506701274986203,
+        "sd": 0.03749529977956689
+      },
+      "norm_max": {
+        "n": 52,
+        "mean": 0.08506701274986203,
+        "sd": 0.03749529977956689
+      }
+    },
+    "Base Codon-Transformer | IDT": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "norm_n_plus_m": {
+        "n": 260,
+        "mean": 0.3067185199135146,
+        "sd": 0.14809403591573203
+      },
+      "norm_n": {
+        "n": 260,
+        "mean": 0.6134370398270292,
+        "sd": 0.29618807183146406
+      },
+      "norm_max": {
+        "n": 260,
+        "mean": 0.6134370398270292,
+        "sd": 0.29618807183146406
+      }
+    },
+    "Base Codon-Transformer | Twist": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "norm_n_plus_m": {
+        "n": 260,
+        "mean": 0.17283993491495675,
+        "sd": 0.08661909777995581
+      },
+      "norm_n": {
+        "n": 260,
+        "mean": 0.3456798698299135,
+        "sd": 0.17323819555991163
+      },
+      "norm_max": {
+        "n": 260,
+        "mean": 0.3456798698299135,
+        "sd": 0.17323819555991163
+      }
+    },
+    "Fine-tuned Codon-Transformer | Genewiz": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "norm_n_plus_m": {
+        "n": 260,
+        "mean": 0.06700426262503123,
+        "sd": 0.0288394780317602
+      },
+      "norm_n": {
+        "n": 260,
+        "mean": 0.13400852525006246,
+        "sd": 0.0576789560635204
+      },
+      "norm_max": {
+        "n": 260,
+        "mean": 0.13400852525006246,
+        "sd": 0.0576789560635204
+      }
+    },
+    "Fine-tuned Codon-Transformer | ICOR": {
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "norm_n_plus_m": {
+        "n": 52,
+        "mean": 0.034825513914078114,
+        "sd": 0.006964950316112492
+      },
+      "norm_n": {
+        "n": 52,
+        "mean": 0.06965102782815623,
+        "sd": 0.013929900632224984
+      },
+      "norm_max": {
+        "n": 52,
+        "mean": 0.06965102782815623,
+        "sd": 0.013929900632224984
+      }
+    },
+    "Fine-tuned Codon-Transformer | IDT": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "norm_n_plus_m": {
+        "n": 260,
+        "mean": 0.29149795783642646,
+        "sd": 0.12823154342760087
+      },
+      "norm_n": {
+        "n": 260,
+        "mean": 0.5829959156728529,
+        "sd": 0.25646308685520175
+      },
+      "norm_max": {
+        "n": 260,
+        "mean": 0.5829959156728529,
+        "sd": 0.25646308685520175
+      }
+    },
+    "Fine-tuned Codon-Transformer | Twist": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "norm_n_plus_m": {
+        "n": 260,
+        "mean": 0.15377152101980082,
+        "sd": 0.08034757573557479
+      },
+      "norm_n": {
+        "n": 260,
+        "mean": 0.30754304203960164,
+        "sd": 0.16069515147114957
+      },
+      "norm_max": {
+        "n": 260,
+        "mean": 0.30754304203960164,
+        "sd": 0.16069515147114957
+      }
+    },
+    "Genewiz | ICOR": {
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "norm_n_plus_m": {
+        "n": 52,
+        "mean": 0.06808374128294009,
+        "sd": 0.03005817997289823
+      },
+      "norm_n": {
+        "n": 52,
+        "mean": 0.13616748256588018,
+        "sd": 0.06011635994579646
+      },
+      "norm_max": {
+        "n": 52,
+        "mean": 0.13616748256588018,
+        "sd": 0.06011635994579646
+      }
+    },
+    "Genewiz | IDT": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "norm_n_plus_m": {
+        "n": 260,
+        "mean": 0.4006276826873867,
+        "sd": 0.15125300708736808
+      },
+      "norm_n": {
+        "n": 260,
+        "mean": 0.8012553653747734,
+        "sd": 0.30250601417473616
+      },
+      "norm_max": {
+        "n": 260,
+        "mean": 0.8012553653747734,
+        "sd": 0.30250601417473616
+      }
+    },
+    "Genewiz | Twist": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "norm_n_plus_m": {
+        "n": 260,
+        "mean": 0.24181545309424074,
+        "sd": 0.10620344747104991
+      },
+      "norm_n": {
+        "n": 260,
+        "mean": 0.4836309061884815,
+        "sd": 0.21240689494209983
+      },
+      "norm_max": {
+        "n": 260,
+        "mean": 0.4836309061884815,
+        "sd": 0.21240689494209983
+      }
+    },
+    "ICOR | IDT": {
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "norm_n_plus_m": {
+        "n": 52,
+        "mean": 0.26804229406443686,
+        "sd": 0.08210969160537776
+      },
+      "norm_n": {
+        "n": 52,
+        "mean": 0.5360845881288737,
+        "sd": 0.16421938321075552
+      },
+      "norm_max": {
+        "n": 52,
+        "mean": 0.5360845881288737,
+        "sd": 0.16421938321075552
+      }
+    },
+    "ICOR | Twist": {
+      "organisms": [
+        "Escherichia coli"
+      ],
+      "norm_n_plus_m": {
+        "n": 52,
+        "mean": 0.12693948673542382,
+        "sd": 0.03672891970007242
+      },
+      "norm_n": {
+        "n": 52,
+        "mean": 0.25387897347084765,
+        "sd": 0.07345783940014484
+      },
+      "norm_max": {
+        "n": 52,
+        "mean": 0.25387897347084765,
+        "sd": 0.07345783940014484
+      }
+    },
+    "IDT | Twist": {
+      "organisms": [
+        "Arabidopsis thaliana",
+        "Escherichia coli",
+        "Homo sapiens",
+        "Mus musculus",
+        "Saccharomyces cerevisiae"
+      ],
+      "norm_n_plus_m": {
+        "n": 260,
+        "mean": 0.07376848086622993,
+        "sd": 0.01982589322625632
+      },
+      "norm_n": {
+        "n": 260,
+        "mean": 0.14753696173245986,
+        "sd": 0.03965178645251264
+      },
+      "norm_max": {
+        "n": 260,
+        "mean": 0.14753696173245986,
+        "sd": 0.03965178645251264
+      }
+    }
+  },
+  "C3_base_vs_finetuned": {
+    "organisms": [
+      "Arabidopsis thaliana",
+      "Escherichia coli",
+      "Homo sapiens",
+      "Mus musculus",
+      "Saccharomyces cerevisiae"
+    ],
+    "norm_n_plus_m": {
+      "n": 260,
+      "mean": 0.045890135997284975,
+      "sd": 0.03376387617694362
+    },
+    "norm_n": {
+      "n": 260,
+      "mean": 0.09178027199456995,
+      "sd": 0.06752775235388724
+    },
+    "norm_max": {
+      "n": 260,
+      "mean": 0.09178027199456995,
+      "sd": 0.06752775235388724
+    }
+  },
+  "published_DTW_sheet_check": {
+    "n_rows": 7072,
+    "n_self_comparison_rows": 1352,
+    "n_self_rows_with_zero_distance": 0,
+    "n_groups_organism_protein": 260,
+    "n_groups_with_a_single_distinct_distance": 260,
+    "model_labels_in_DTW_sheet": [
+      "Base Codon-Transformer",
+      "Fine-tuned Codon-Transformer",
+      "Genewiz",
+      "ICOR",
+      "IDT",
+      "Twist"
+    ],
+    "published_base_vs_ft_normalized": {
+      "n": 520,
+      "mean": 0.04617104235693258,
+      "sd": 0.03372726435601904
+    }
+  }
+}

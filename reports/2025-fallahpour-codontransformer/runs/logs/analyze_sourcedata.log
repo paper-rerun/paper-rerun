@@ -1,0 +1,19 @@
+sequence rows: 260; organisms: ['Arabidopsis thaliana', 'Escherichia coli', 'Homo sapiens', 'Mus musculus', 'Saccharomyces cerevisiae']
+minmax profiles: 1352; models: ['Base Codon- Transformer', 'Fine-tuned Codon- Transformer', 'Genewiz', 'ICOR', 'IDT', 'Twist']
+L1 C1_jaccard: n=260 mean=0.737856 sd=0.066251 (rows per pair [2], max spread 0)
+L1 C2_similarity: n=260 mean=69.262883 sd=6.340462 (rows per pair [2], max spread 0)
+L1 C3_dtw: n=260 mean=0.046171 sd=0.033760 (rows per pair [2], max spread 0)
+A3 DTW diagonal (model vs itself): n=1352 min=0.0126115 max=0.24322 nonzero=1352
+L2 C1 jaccard: n=260 our mean=0.737856 sd=0.066251 | authors mean=0.737856 | agree<=1e-6: 260/260 | max |diff|=0.000e+00
+L2 C2 similarity: n=260 our mean=69.262883 sd=6.340462 | authors mean=69.262883 | agree<=1e-6: 260/260 | max |diff|=0.000e+00
+L2 C3 normalized DTW: n=260 our mean=0.045890 sd=0.033764 | authors mean=0.046171 | agree<=1e-6: 0/260 | max |diff|=2.033e-03
+    mismatch Arabidopsis thaliana / Adalimumab heavy chain: ours=np.float64(0.046788990825687986) authors=0.047341002290329434
+    mismatch Arabidopsis thaliana / Adalimumab light chain: ours=np.float64(0.022964824120602977) authors=0.022707750881080405
+    mismatch Arabidopsis thaliana / Alcohol Dehydrogenase: ours=np.float64(0.040450819672131134) authors=0.04051637240891786
+    mismatch Arabidopsis thaliana / Alpha-1-antitrypsin: ours=np.float64(0.04039800995024877) authors=0.040531937643349905
+    mismatch Arabidopsis thaliana / Alpha-amylase: ours=np.float64(0.04361895161290323) authors=0.04386045828667369
+    mismatch Arabidopsis thaliana / Avidin: ours=np.float64(0.03235294117647052) authors=0.03257893651193759
+    mismatch Arabidopsis thaliana / Beta-galactosidase (LacZ): ours=np.float64(0.03702876984126992) authors=0.037189304033024125
+    mismatch Arabidopsis thaliana / Beta-glucuronidase: ours=np.float64(0.035897637795275654) authors=0.0363440699895964
+    ... 260 mismatches in total
+pairs where the two codon lists differ in length (metric undefined): 0

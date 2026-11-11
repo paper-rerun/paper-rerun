@@ -1,0 +1,3 @@
+23994e1e7324e78c9d9da71040e8677c0a635287cf1c7c9ea5096b7eadc44dfd *data/weights/CodonTransformer/model.safetensors
+3bb904b52a69cbe735962852dc5586dbe7fc71b707cd6c74efed31e1ad8de687 *data/weights/CodonTransformer-base/model.safetensors
+ed67da0846097c8ea4425c4b84fb31c18cbfb52fde30813109a0d8d32a40217b *data/weights/CodonTransformer/tokenizer.json
