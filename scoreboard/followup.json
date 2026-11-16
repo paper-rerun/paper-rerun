@@ -144,7 +144,7 @@
   "paper": "PlantCAD",
   "repository": "plantcad/plantcad",
   "ask": "float16 loading returns a float32 model with the pinned transformers.",
-  "status": "posted"
+  "status": "merged"
  },
  {
   "kind": "Issue",
