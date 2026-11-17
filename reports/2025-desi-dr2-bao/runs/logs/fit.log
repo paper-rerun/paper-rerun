@@ -1,0 +1,19 @@
+nproc=4
+[A:c] 2103 CAMB calls in 243.4 s, nan=0
+[C] main     chi2_min=10.2836  Omega_m=0.29755+/-0.00863 (edge 4.0e-69)  rd_h=101.5313+/-0.7360 (edge 8.2e-55)
+[C] h=0.64   chi2_min=10.2853  Omega_m=0.29751+/-0.00863 (edge 3.8e-69)  rd_h=101.5323+/-0.7360 (edge 8.1e-55)
+[C] h=0.72   chi2_min=10.2822  Omega_m=0.29758+/-0.00863 (edge 4.2e-69)  rd_h=101.5304+/-0.7360 (edge 8.3e-55)
+[A:d] 123201 CAMB calls in 14850.8 s, nan=0
+[B] 5400 CAMB calls in 485.3 s, nan=0, r_d range 124.77..175.65 Mpc
+[B] spline vs direct CAMB on 40 unseen points: worst relative error 3.951e-06, median 7.646e-08
+[D] chi2_min=10.2845
+[D] H0        68.546589 +/- 0.598017  (edge mass 2.6e-28)
+[D] Omega_m   0.297728 +/- 0.008640  (edge mass 1.3e-31)
+[D] omega_b   0.022186 +/- 0.000550  (edge mass 3.6e-05)
+
+== verdict against the pre-registered bands ==
+  C1: ours 0.2975 +/- 0.0086 | paper 0.2975 +/- 0.0086 | shift +0.006 sigma | mean in | sigma in
+  C2: ours 101.5313 +/- 0.7360 | paper 101.54 +/- 0.73 | shift -0.012 sigma | mean in | sigma in
+  C3: ours 68.5466 +/- 0.5980 | paper 68.51 +/- 0.58 | shift +0.063 sigma | mean in | sigma in
+
+written /mnt/e/Ciencia/noturno/2025-desi-dr2-bao/runs/out/results.json

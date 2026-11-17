@@ -1,0 +1,16 @@
+== G. H0 marginal, baseline BBN prior eq. (14) 0.02218 +/- 0.00055 ==
+  mean 68.5466  std 0.5980  skewness +0.0378
+  68% minimal interval [67.9714, 69.1371] -> half width 0.5829, centre 68.5543
+  16-84 percentiles [67.9348, 69.1241] -> half width 0.5947
+  published: 68.51 +/- 0.58 (mean and standard deviation per Sec. V)
+
+== H. same fit with the Neff-varying BBN prior, eq. (15) ==
+  H0 mean 68.3694 +/- 0.6459   shift vs published -0.242 sigma   (band is +/-0.20 sigma)
+  eq. (14) gave 68.5466 (+0.063 sigma)
+  both priors inside the pre-registered band: False
+
+== I. Omega_m - rd*h correlation, BAO alone ==
+  r = -0.9239   (paper: -0.92)
+
+== H2. the exact DR1-style sliced prior, 0.021976 +/- 0.000534 ==
+  H0 mean 68.3809 +/- 0.5875   shift vs published -0.223 sigma

@@ -1,0 +1,29 @@
+-- 1. diagonal sigma against Table IV --
+tracer           z quantity        file   table   ratio
+BGS          0.295 DV_over_rs    0.0761   0.075  1.0146
+LRG1         0.510 DM_over_rs    0.1684   0.167  1.0082
+LRG1         0.510 DH_over_rs    0.4289   0.425  1.0091
+LRG2         0.706 DM_over_rs    0.1799   0.177  1.0166
+LRG2         0.706 DH_over_rs    0.3339   0.330  1.0117
+LRG3+ELG1    0.934 DM_over_rs    0.1618   0.152  1.0644
+LRG3+ELG1    0.934 DH_over_rs    0.2010   0.193  1.0417
+ELG2         1.321 DM_over_rs    0.3246   0.318  1.0206
+ELG2         1.321 DH_over_rs    0.2246   0.221  1.0161
+QSO          1.484 DM_over_rs    0.7636   0.760  1.0047
+QSO          1.484 DH_over_rs    0.5180   0.516  1.0039
+Lya          2.330 DH_over_rs    0.1011   0.101  1.0006
+Lya          2.330 DM_over_rs    0.5317   0.531  1.0013
+  every released sigma larger: True
+  range of the ratio: 1.0006 to 1.0644
+
+-- 2. within-tracer correlation against Table IV --
+LRG1        z=0.510  file -0.4516  table -0.459  diff +0.0074
+LRG2        z=0.706  file -0.3953  table -0.404  diff +0.0087
+LRG3+ELG1   z=0.934  file -0.3472  table -0.416  diff +0.0688
+ELG2        z=1.321  file -0.3983  table -0.434  diff +0.0357
+QSO         z=1.484  file -0.4936  table -0.500  diff +0.0064
+Lya         z=2.330  file -0.4306  table -0.431  diff +0.0004
+
+-- 3. cross-tracer terms --
+  off-diagonal, different tracer: 144 entries, all exactly zero: True, max abs 0.0e+00
+  off-diagonal, same tracer: 12 entries, any zero: False

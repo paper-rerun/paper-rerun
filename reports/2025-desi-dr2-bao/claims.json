@@ -1,0 +1,73 @@
+{
+  "paper": {
+    "title": "DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations and Cosmological Constraints",
+    "authors": "DESI Collaboration (M. Abdul Karim et al.)",
+    "journal": "Phys. Rev. D 112, 083515 (2025)",
+    "doi": "10.1103/tr6y-kpc6",
+    "arxiv": "2503.14738v3",
+    "pdf_local": "paper/2503.14738.pdf",
+    "pdf_sha256": "1e82f26e4cc3901b16168cd147f252bfa804f9c3caad3f4f7e3532640d237841",
+    "pdf_note": "arXiv v3 downloaded 2026-11-16. Equation numbers below are the arXiv numbering."
+  },
+  "route": {
+    "decision": "Same route as our DESI 2024 VI rerun: we evaluate the likelihood ourselves on a dense deterministic grid and marginalise exactly. We do NOT re-analyse the published DESI chains.",
+    "why": "The three targets are flat-LCDM background-only fits to a 13-element Gaussian likelihood that DESI published as plain text in CobayaSampler/bao_data. BAO alone samples (Omega_m, r_d h), BAO+BBN samples (Omega_m, H0, omega_b). With 2 and 3 parameters a grid is exact, has no sampling scatter and finishes in minutes on CPU.",
+    "reuse": "The fit code, the CAMB version and the venv come from noturno/2024-desi-bao-vi, which reproduced the DR1 numbers. Only the data file and the target values change. This is stated here before the run: if DR2 fails where DR1 passed, the code is not the first suspect.",
+    "risk_accepted": "Same three self-checks as DR1, fixed before running: (a) the data vector must equal Table 1 of the paper to the printed digits; (b) our distance integrals must agree with CAMB to better than 1e-4 relative; (c) chi-square at the best fit must be of order the degrees of freedom."
+  },
+  "data": {
+    "source": "https://github.com/CobayaSampler/bao_data @ bb0c1c9009dc76d1391300e169e8df38fd1096db",
+    "folder": "desi_bao_dr2/",
+    "files": ["desi_gaussian_bao_ALL_GCcomb_mean.txt", "desi_gaussian_bao_ALL_GCcomb_cov.txt"],
+    "sha256": {
+      "mean": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "cov": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+    },
+    "n_data": 13,
+    "content": "The DR2 BAO measurements: BGS DV/rd at z=0.295; LRG1 (DM/rd, DH/rd) at z=0.510; LRG2 at z=0.706; LRG3+ELG1 at z=0.934; ELG2 at z=1.321; QSO at z=1.484; Lya at z=2.330. DR2 has 13 points against DR1's 12, because QSO now gives DM and DH separately instead of DV. No login, no terms to accept."
+  },
+  "model": {
+    "name": "flat LCDM, background only",
+    "fixed": {
+      "T_cmb_K": 2.7255,
+      "N_eff": 3.044,
+      "massive_neutrinos": "one massive species with m_nu = 0.06 eV, the paper's default",
+      "Omega_m_definition": "Omega_m includes the massive neutrinos",
+      "Omega_K": 0.0,
+      "w": -1.0
+    },
+    "bbn_prior": "omega_b h^2 = 0.02218 +/- 0.00055, Gaussian, eq. (14) of the paper. Identical to the DR1 prior.",
+    "r_d": "drag-epoch sound horizon from CAMB get_derived_params()['rdrag'], the code the paper uses."
+  },
+  "claims": {
+    "C1": {
+      "what": "Omega_m from DESI DR2 BAO alone, flat LCDM",
+      "published": 0.2975,
+      "published_sigma": 0.0086,
+      "where": "eq. (17), and the LCDM / DESI row of Table 3"
+    },
+    "C2": {
+      "what": "h * r_d from DESI DR2 BAO alone, flat LCDM, in Mpc",
+      "published": 101.54,
+      "published_sigma": 0.73,
+      "where": "eq. (17)"
+    },
+    "C3": {
+      "what": "H0 from DESI DR2 BAO + BBN prior on omega_b, flat LCDM, in km/s/Mpc",
+      "published": 68.51,
+      "published_sigma": 0.58,
+      "where": "eq. (19)",
+      "careful": "The paper gives two H0 values and they are easy to swap. Eq. (19), 68.51 +/- 0.58, is DESI+BBN: the conservative prior on omega_b alone, which is the only one our recipe implements. Eq. (20), 68.45 +/- 0.47, is DESI+BBN+, which also adds the CMB acoustic scale prior 100*theta* = 1.04110 +/- 0.00053. We are NOT reproducing eq. (20). This is written down before the run so the target cannot be picked after seeing the number."
+    }
+  },
+  "tolerance": {
+    "rule": "Same ruler as the DR1 rerun: the mean has to land within 0.2 published sigma of the published mean, and our sigma within 10% of the published sigma. Both must hold for a claim to count as reproduced.",
+    "bands": {
+      "C1": {"mean": [0.29578, 0.29922], "sigma": [0.00774, 0.00946]},
+      "C2": {"mean": [101.394, 101.686], "sigma": [0.657, 0.803]},
+      "C3": {"mean": [68.394, 68.626], "sigma": [0.522, 0.638]}
+    },
+    "edge_mass": "A marginal with more than 1e-6 of its mass on the grid edge is reported as a grid failure, not as a result."
+  },
+  "verdict_rule": "3 of 3 claims in band: Reproduced. 1 or 2: Partially reproduced. 0: Not reproduced."
+}

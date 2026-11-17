@@ -284,5 +284,18 @@
   "main_issue": "More compute than one home GPU",
   "finding": "All four values fall inside our 95% interval on a weighted 300k-window sample. The full test set would take about 115 days on our GPU.",
   "rerun_date": "2026-10-22"
+ },
+ {
+  "paper": "DESI DR2 BAO",
+  "report": "2025-desi-dr2-bao",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2025-desi-dr2-bao/REPORT.md",
+  "venue": "Phys. Rev. D",
+  "year": 2025,
+  "field": "cosmology",
+  "area": "Physics",
+  "verdict": "Reproduced",
+  "main_issue": "Released covariance differs from the published table",
+  "finding": "Flat ΛCDM from the public DR2 BAO distances, our own likelihood and a dense marginalised grid with CAMB: Omega_m = 0.29755 ± 0.00863 against 0.2975 ± 0.0086, r_d h = 101.5313 ± 0.7360 Mpc against 101.54 ± 0.73, and H0 with BBN 68.5466 ± 0.5980 against 68.51 ± 0.58. All three inside the pre-registered band, the worst at 0.063σ. The DR1 prior defect does not repeat: refitting H0 under the slice DR1's chain imposed gives −0.223σ and under DR2's varying-N_eff prior −0.242σ, both outside the band, so only the prior the paper prints reproduces the paper's H0. Three things about the release: the released 13×13 covariance is not the likelihood of Table IV, being 0.2 to 11.5% wider along the isotropic direction while matching to 0.1-2.5% along the Alcock-Paczynski one; the Lyman-alpha row of the mean file lists D_H before D_M, the reverse of every other tracer; and the Lyman-alpha D_M/r_d of Table IV is truncated, not rounded. An independent blind rerun got the same three values. An adversarial review then found two false statements the report made about itself, both corrected and named in it: the grids were not pre-registered, and one frozen edge-mass gate was missed.",
+  "rerun_date": "2026-11-17"
  }
 ]

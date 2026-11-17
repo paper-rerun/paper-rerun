@@ -1,0 +1,35 @@
+== 1. file sigma / correlation, recomputed independently ==
+  BGS        z=0.295 DV_over_rs  sigma_file=0.076092
+  LRG1       z=0.510 DM_over_rs  sigma_file=0.168367
+  LRG1       z=0.510 DH_over_rs  sigma_file=0.428868
+  LRG1       corr_file=-0.451565 (table -0.459)
+  LRG2       z=0.706 DM_over_rs  sigma_file=0.179931
+  LRG2       z=0.706 DH_over_rs  sigma_file=0.333870
+  LRG2       corr_file=-0.395258 (table -0.404)
+  LRG3+ELG1  z=0.934 DM_over_rs  sigma_file=0.161782
+  LRG3+ELG1  z=0.934 DH_over_rs  sigma_file=0.201043
+  LRG3+ELG1  corr_file=-0.347233 (table -0.416)
+  ELG2       z=1.321 DM_over_rs  sigma_file=0.324556
+  ELG2       z=1.321 DH_over_rs  sigma_file=0.224551
+  ELG2       corr_file=-0.398341 (table -0.434)
+  QSO        z=1.484 DM_over_rs  sigma_file=0.763558
+  QSO        z=1.484 DH_over_rs  sigma_file=0.518012
+  QSO        corr_file=-0.493552 (table -0.500)
+  Lya        z=2.330 DH_over_rs  sigma_file=0.101062
+  Lya        z=2.330 DM_over_rs  sigma_file=0.531682
+  Lya        corr_file=-0.430638 (table -0.431)
+
+== 2. internal consistency of Table IV with itself vs with the file ==
+tracer     src         sDV   T4 sDV   ratio     sFAP  T4 sFAP   ratio   r_V,MH   T4 r
+LRG1       table    0.0988    0.099  0.9984   0.0170    0.017  1.0001  +0.0531 +0.050
+LRG1       file     0.1003    0.099  1.0134   0.0171    0.017  1.0064  +0.0492 +0.050
+LRG2       table    0.1102    0.110  1.0019   0.0206    0.021  0.9792  -0.0204 -0.018
+LRG2       file     0.1126    0.110  1.0240   0.0208    0.021  0.9894  -0.0185 -0.018
+LRG3+ELG1  table    0.0906    0.091  0.9956   0.0187    0.019  0.9835  +0.0552 +0.056
+LRG3+ELG1  file     0.1010    0.091  1.1099   0.0192    0.019  1.0085  +0.0509 +0.056
+ELG2       table    0.1738    0.174  0.9988   0.0449    0.045  0.9977  +0.2025 +0.202
+ELG2       file     0.1821    0.174  1.0463   0.0451    0.045  1.0032  +0.1912 +0.202
+QSO        table    0.3977    0.398  0.9993   0.1356    0.136  0.9970  +0.0466 +0.044
+QSO        file     0.4019    0.398  1.0099   0.1359    0.136  0.9991  +0.0448 +0.044
+Lya        table    0.2562    0.256  1.0007   0.0968    0.097  0.9984  +0.5745 +0.574
+Lya        file     0.2566    0.256  1.0022   0.0969    0.097  0.9993  +0.5748 +0.574

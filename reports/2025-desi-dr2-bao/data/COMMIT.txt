@@ -1,0 +1,9 @@
+The two text files here are the DESI DR2 BAO measurements as released by the DESI
+Collaboration. Contents are byte for byte the upstream files; only the names carry
+a dr2 tag, because the upstream folder name is what says DR2.
+
+  https://github.com/CobayaSampler/bao_data  folder desi_bao_dr2/
+  commit bb0c1c9009dc76d1391300e169e8df38fd1096db
+
+  desi_gaussian_bao_ALL_GCcomb_mean.txt -> desi_dr2_gaussian_bao_ALL_GCcomb_mean.txt
+  desi_gaussian_bao_ALL_GCcomb_cov.txt  -> desi_dr2_gaussian_bao_ALL_GCcomb_cov.txt

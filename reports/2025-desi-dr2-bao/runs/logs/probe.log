@@ -1,0 +1,32 @@
+n_data = 13, cov shape = (13, 13)
+cov eigenvalues: min 5.789987e-03 max 6.764084e-01
+
+-- check 1: data vector against Table IV of the paper --
+  z=0.295 DV_over_rs  file   7.941676  table   7.942  ok
+  z=0.510 DM_over_rs  file  13.587584  table  13.588  ok
+  z=0.510 DH_over_rs  file  21.862947  table  21.863  ok
+  z=0.706 DM_over_rs  file  17.350691  table  17.351  ok
+  z=0.706 DH_over_rs  file  19.455349  table  19.455  ok
+  z=0.934 DM_over_rs  file  21.575640  table  21.576  ok
+  z=0.934 DH_over_rs  file  17.641495  table  17.641  ok
+  z=1.321 DM_over_rs  file  27.600856  table  27.601  ok
+  z=1.321 DH_over_rs  file  14.176022  table  14.176  ok
+  z=1.484 DM_over_rs  file  30.511901  table  30.512  ok
+  z=1.484 DH_over_rs  file  12.817000  table  12.817  ok
+  z=2.330 DH_over_rs  file   8.631546  table   8.632  ok
+  z=2.330 DM_over_rs  file  38.988974  table  38.988  ok  (table digit truncated, not rounded)
+  mismatches: 0
+
+-- check 2: our D_M against CAMB's own (1+z)D_A --
+  r_drag = 148.0911 Mpc, r_d h = 101.5114 Mpc
+  worst relative difference over 7 redshifts: 0.000e+00
+
+-- check 3: chi-square at the reference cosmology --
+  chi2 = 10.2863 for 13 points, 2 fitted parameters
+
+-- check 4: our chi2 against cobaya's released BAO likelihood --
+[camb] `camb` module loaded successfully from /mnt/e/Ciencia/noturno/2024-desi-bao-vi/env/venv/lib/python3.11/site-packages/camb
+[bao.generic] Initialized.
+  cobaya chi2 = 10.286317
+  ours        = 10.286316
+  difference  = +5.94e-07
