@@ -1,0 +1,69 @@
+Cloning into 'repo'...
+Updating files:  40% (4/10)Updating files:  50% (5/10)Updating files:  60% (6/10)Updating files:  70% (7/10)Updating files:  80% (8/10)Updating files:  90% (9/10)Updating files: 100% (10/10)Updating files: 100% (10/10), done.
+91a78c5a9c300d1104700d9352c8bfe449227737 2025-01-29 09:44:50 +0000 add udpated models
+986283a9647cf10c4c8e562cd1c11b6ae26ff238 2024-04-04 15:28:39 +0100 update train scripts
+1239aa2fdfc136e3bed61d73b05e52b72d47ef35 2024-04-04 15:26:39 +0100 update repo structure
+.:
+total 20
+drwxrwxrwx 1 root root   512 Nov  9 00:54 .
+drwxrwxrwx 1 root root   512 Nov  9 00:53 ..
+drwxrwxrwx 1 root root   512 Nov  9 00:54 .git
+-rwxrwxrwx 1 root root 16366 Nov  9 00:53 LICENSE.md
+-rwxrwxrwx 1 root root  1035 Nov  9 00:53 README.md
+drwxrwxrwx 1 root root   512 Nov  9 00:54 mace_off23
+drwxrwxrwx 1 root root   512 Nov  9 00:54 mace_off24
+
+./.git:
+total 4
+drwxrwxrwx 1 root root  512 Nov  9 00:54 .
+drwxrwxrwx 1 root root  512 Nov  9 00:54 ..
+-rwxrwxrwx 1 root root   21 Nov  9 00:53 HEAD
+drwxrwxrwx 1 root root  512 Nov  9 00:53 branches
+-rwxrwxrwx 1 root root  315 Nov  9 00:54 config
+-rwxrwxrwx 1 root root   73 Nov  9 00:53 description
+drwxrwxrwx 1 root root  512 Nov  9 00:53 hooks
+-rwxrwxrwx 1 root root 1126 Nov  9 00:54 index
+drwxrwxrwx 1 root root  512 Nov  9 00:53 info
+drwxrwxrwx 1 root root  512 Nov  9 00:53 logs
+drwxrwxrwx 1 root root  512 Nov  9 00:53 objects
+-rwxrwxrwx 1 root root  168 Nov  9 00:53 packed-refs
+drwxrwxrwx 1 root root  512 Nov  9 00:53 refs
+
+./.git/branches:
+total 0
+drwxrwxrwx 1 root root 512 Nov  9 00:53 .
+drwxrwxrwx 1 root root 512 Nov  9 00:54 ..
+
+./.git/hooks:
+total 45
+drwxrwxrwx 1 root root  512 Nov  9 00:53 .
+drwxrwxrwx 1 root root  512 Nov  9 00:54 ..
+-rwxrwxrwx 1 root root  478 Nov  9 00:53 applypatch-msg.sample
+-rwxrwxrwx 1 root root  896 Nov  9 00:53 commit-msg.sample
+-rwxrwxrwx 1 root root 4726 Nov  9 00:53 fsmonitor-watchman.sample
+-rwxrwxrwx 1 root root  189 Nov  9 00:53 post-update.sample
+-rwxrwxrwx 1 root root  424 Nov  9 00:53 pre-applypatch.sample
+-rwxrwxrwx 1 root root 1643 Nov  9 00:53 pre-commit.sample
+-rwxrwxrwx 1 root root  416 Nov  9 00:53 pre-merge-commit.sample
+-rwxrwxrwx 1 root root 1374 Nov  9 00:53 pre-push.sample
+-rwxrwxrwx 1 root root 4898 Nov  9 00:53 pre-rebase.sample
+-rwxrwxrwx 1 root root  544 Nov  9 00:53 pre-receive.sample
+-rwxrwxrwx 1 root root 1492 Nov  9 00:53 prepare-commit-msg.sample
+-rwxrwxrwx 1 root root 2783 Nov  9 00:53 push-to-checkout.sample
+-rwxrwxrwx 1 root root 2308 Nov  9 00:53 sendemail-validate.sample
+-rwxrwxrwx 1 root root 3650 Nov  9 00:53 update.sample
+
+./.git/info:
+total 0
+drwxrwxrwx 1 root root 512 Nov  9 00:53 .
+drwxrwxrwx 1 root root 512 Nov  9 00:54 ..
+-rwxrwxrwx 1 root root 240 Nov  9 00:53 exclude
+
+./.git/logs:
+total 0
+drwxrwxrwx 1 root root 512 Nov  9 00:53 .
+drwxrwxrwx 1 root root 512 Nov  9 00:54 ..
+
+200
+rc=0
+rc=0

@@ -1,0 +1,188 @@
+=== small  2026-11-08T21:43:19Z
+2000 configs, 64 s
+4000 configs, 94 s
+6000 configs, 124 s
+8000 configs, 154 s
+10000 configs, 184 s
+12000 configs, 214 s
+14000 configs, 245 s
+16000 configs, 275 s
+18000 configs, 306 s
+20000 configs, 337 s
+22000 configs, 368 s
+24000 configs, 399 s
+26000 configs, 431 s
+28000 configs, 462 s
+30000 configs, 494 s
+32000 configs, 524 s
+34000 configs, 555 s
+36000 configs, 587 s
+38000 configs, 617 s
+40000 configs, 650 s
+42000 configs, 681 s
+44000 configs, 712 s
+46000 configs, 742 s
+48000 configs, 781 s
+50000 configs, 814 s
+done: 50195 configs in 817 s -> /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/runs/out/errors_small.csv
+	Command being timed: "nice -n 19 /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/bin/python -I /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/scripts/evaluate.py --model /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/weights/MACE-OFF23_small.model --xyz /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/data/test_extract/test_large_neut_all.xyz --out /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/runs/out/errors_small.csv --batch-size 8"
+	User time (seconds): 898.60
+	System time (seconds): 818.93
+	Percent of CPU this job got: 195%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 14:39.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1349512
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5186
+	Minor (reclaiming a frame) page faults: 165921
+	Voluntary context switches: 549252
+	Involuntary context switches: 869
+	Swaps: 0
+	File system inputs: 979440
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+=== medium  2026-11-08T21:57:59Z
+2000 configs, 171 s
+4000 configs, 324 s
+6000 configs, 479 s
+8000 configs, 640 s
+10000 configs, 787 s
+12000 configs, 923 s
+14000 configs, 1059 s
+16000 configs, 1197 s
+18000 configs, 1335 s
+20000 configs, 1470 s
+22000 configs, 1605 s
+24000 configs, 1741 s
+26000 configs, 1904 s
+28000 configs, 2041 s
+30000 configs, 2178 s
+32000 configs, 2317 s
+34000 configs, 2468 s
+36000 configs, 2608 s
+38000 configs, 2743 s
+40000 configs, 2881 s
+42000 configs, 3017 s
+44000 configs, 3157 s
+46000 configs, 3292 s
+48000 configs, 3428 s
+50000 configs, 3565 s
+done: 50195 configs in 3578 s -> /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/runs/out/errors_medium.csv
+	Command being timed: "nice -n 19 /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/bin/python -I /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/scripts/evaluate.py --model /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/weights/MACE-OFF23_medium.model --xyz /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/data/test_extract/test_large_neut_all.xyz --out /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/runs/out/errors_medium.csv --batch-size 8"
+	User time (seconds): 3637.31
+	System time (seconds): 830.79
+	Percent of CPU this job got: 122%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:01:00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1352560
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5036
+	Minor (reclaiming a frame) page faults: 166016
+	Voluntary context switches: 611351
+	Involuntary context switches: 2676
+	Swaps: 0
+	File system inputs: 966600
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+=== large  2026-11-08T22:59:00Z
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/scripts/evaluate.py", line 126, in <module>
+    main()
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/scripts/evaluate.py", line 117, in main
+    flush(batch_atoms, batch_meta)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/scripts/evaluate.py", line 80, in flush
+    out = model(batch.to_dict(), compute_force=True, training=False)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/mace/modules/models.py", line 412, in forward
+    node_feats, sc = interaction(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/mace/modules/blocks.py", line 751, in forward
+    mji = self.conv_tp(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/e3nn/o3/_tensor_product/_tensor_product.py", line 529, in forward
+    return self._compiled_main_left_right(x, y, real_weight)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript, serialized code (most recent call last):
+  File "code/__torch__/torch/fx/graph_module/___torch_mangle_11.py", line 202, in forward
+    _w3j_2_3_3 = self._w3j_2_3_3
+    mul_10 = torch.mul(_w3j_2_3_3, 2.6457513110645907)
+    tensordot_8 = _0(einsum_17, mul_10, ([4, 3], [1, 0]), None, )
+                  ~~ <--- HERE
+    einsum_36 = torch.einsum("dbca,dbc->dba", [tensordot_8, reshape_49])
+    reshape_50 = torch.reshape(einsum_36, [getitem_4, 1568])
+  File "code/__torch__/torch/functional/___torch_mangle_0.py", line 9, in tensordot
+  dims_a, dims_b, = dims1
+  if torch.__is__(out, None):
+    _1 = torch.tensordot(a, b, dims_a, dims_b)
+         ~~~~~~~~~~~~~~~ <--- HERE
+    _0 = _1
+  else:
+
+Traceback of TorchScript, original code (most recent call last):
+  File "<eval_with_key>.157", line 165, in forward
+    _w3j_2_3_3 = self._w3j_2_3_3
+    mul_10 = _w3j_2_3_3 * 2.6457513110645907;  _w3j_2_3_3 = None
+    tensordot_8 = torch.functional.tensordot(einsum_17, mul_10, ([4, 3], [1, 0]), out = None);  einsum_17 = mul_10 = None
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~ <--- HERE
+    einsum_36 = torch.functional.einsum('dbca,dbc->dba', tensordot_8, reshape_49);  tensordot_8 = reshape_49 = None
+    reshape_50 = einsum_36.reshape(getitem_4, 1568);  einsum_36 = getitem_4 = None
+  File "/home/dpk25/miniconda3/envs/SPICE/lib/python3.9/site-packages/torch/functional.py", line 1064, in tensordot
+
+    if out is None:
+        return _VF.tensordot(a, b, dims_a, dims_b)  # type: ignore[attr-defined]
+               ~~~~~~~~~~~~~ <--- HERE
+    else:
+        return _VF.tensordot(a, b, dims_a, dims_b, out=out)  # type: ignore[attr-defined]
+RuntimeError: CUDA out of memory. Tried to allocate 364.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 3.18 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. 4.00 GiB allowed; Of the allocated memory 3.57 GiB is allocated by PyTorch, and 173.48 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+Command exited with non-zero status 1
+	Command being timed: "nice -n 19 /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/bin/python -I /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/scripts/evaluate.py --model /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/weights/MACE-OFF23_large.model --xyz /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/data/test_extract/test_large_neut_all.xyz --out /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/runs/out/errors_large.csv --batch-size 8"
+	User time (seconds): 19.42
+	System time (seconds): 7.20
+	Percent of CPU this job got: 21%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:01.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1312796
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5131
+	Minor (reclaiming a frame) page faults: 157173
+	Voluntary context switches: 457689
+	Involuntary context switches: 229
+	Swaps: 0
+	File system inputs: 978432
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

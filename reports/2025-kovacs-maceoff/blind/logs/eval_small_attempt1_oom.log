@@ -1,0 +1,349 @@
+model=repo/mace_off23/MACE-OFF23_small.model r_max=4.5 z=[1, 6, 7, 8, 9, 15, 16, 17, 35, 53] dtype=torch.float64
+configs=50195
+  OOM on 97 configs / 2978 atoms, splitting
+  OOM on 48 configs / 1413 atoms, splitting
+  OOM on 24 configs / 669 atoms, splitting
+  OOM on 12 configs / 363 atoms, splitting
+  OOM on 6 configs / 178 atoms, splitting
+  OOM on 3 configs / 115 atoms, splitting
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 56, in predict_with_split
+    return predict_batch(atoms_batch)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 45, in predict_batch
+    output = model(batch.to_dict(), compute_force=True, training=False)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/models.py", line 344, in forward
+    node_feats = product(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/blocks.py", line 203, in forward
+    node_feats = self.symmetric_contractions(node_feats, node_attrs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/symmetric_contraction.py", line 82, in forward
+    outs = [contraction(x, y) for contraction in self.contractions]
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/symmetric_contraction.py", line 82, in <listcomp>
+    outs = [contraction(x, y) for contraction in self.contractions]
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/symmetric_contraction.py", line 213, in forward
+    out = self.graph_opt_main(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/fx/graph_module.py", line 738, in call_wrapped
+    return self._wrapped_call(self, *args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/fx/graph_module.py", line 317, in __call__
+    raise e
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/fx/graph_module.py", line 304, in __call__
+    return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "<eval_with_key>.19 from <eval_with_key>.18:10 in forward", line 7, in forward
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/functional.py", line 1208, in tensordot
+    return _VF.tensordot(a, b, dims_a, dims_b)  # type: ignore[attr-defined]
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 804.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 3.42 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 2.97 GiB is allocated by PyTorch, and 549.62 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 56, in predict_with_split
+    return predict_batch(atoms_batch)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 45, in predict_batch
+    output = model(batch.to_dict(), compute_force=True, training=False)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/models.py", line 344, in forward
+    node_feats = product(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/blocks.py", line 203, in forward
+    node_feats = self.symmetric_contractions(node_feats, node_attrs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/symmetric_contraction.py", line 82, in forward
+    outs = [contraction(x, y) for contraction in self.contractions]
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/symmetric_contraction.py", line 82, in <listcomp>
+    outs = [contraction(x, y) for contraction in self.contractions]
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/symmetric_contraction.py", line 213, in forward
+    out = self.graph_opt_main(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/fx/graph_module.py", line 738, in call_wrapped
+    return self._wrapped_call(self, *args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/fx/graph_module.py", line 317, in __call__
+    raise e
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/fx/graph_module.py", line 304, in __call__
+    return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "<eval_with_key>.9 from <eval_with_key>.8:10 in forward", line 7, in forward
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/functional.py", line 1208, in tensordot
+    return _VF.tensordot(a, b, dims_a, dims_b)  # type: ignore[attr-defined]
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 382.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 2.94 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 3.88 GiB is allocated by PyTorch, and 109.25 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 56, in predict_with_split
+    return predict_batch(atoms_batch)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 45, in predict_batch
+    output = model(batch.to_dict(), compute_force=True, training=False)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/models.py", line 337, in forward
+    node_feats, sc = interaction(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/blocks.py", line 540, in forward
+    mji = self.conv_tp(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/e3nn/o3/_tensor_product/_tensor_product.py", line 529, in forward
+    return self._compiled_main_left_right(x, y, real_weight)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript, serialized code (most recent call last):
+  File "code/__torch__/torch/fx/graph_module/___torch_mangle_4.py", line 65, in forward
+    reshape_13 = torch.reshape(reshape_3, [getitem_4, 96])
+    einsum_4 = torch.einsum("ca,cab->cab", [reshape_13, reshape_12])
+    einsum_5 = torch.einsum("dbc,dca->dba", [einsum_4, reshape_5])
+               ~~~~~~~~~~~~ <--- HERE
+    reshape_14 = torch.reshape(einsum_5, [getitem_4, 288])
+    _6 = torch.slice(reshape_2, 0, 0, 9223372036854775807)
+
+Traceback of TorchScript, original code (most recent call last):
+  File "<eval_with_key>.21", line 52, in forward
+    reshape_13 = reshape_3.reshape(getitem_4, 96)
+    einsum_4 = torch.functional.einsum('ca,cab->cab', reshape_13, reshape_12);  reshape_13 = reshape_12 = None
+    einsum_5 = torch.functional.einsum('dbc,dca->dba', einsum_4, reshape_5);  einsum_4 = reshape_5 = None
+               ~~~~~~~~~~~~~~~~~~~~~~~ <--- HERE
+    reshape_14 = einsum_5.reshape(getitem_4, 288);  einsum_5 = None
+    getitem_11 = reshape_2[(slice(None, None, None), slice(192, 288, None))]
+RuntimeError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 2.94 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 3.96 GiB is allocated by PyTorch, and 32.86 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 56, in predict_with_split
+    return predict_batch(atoms_batch)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 45, in predict_batch
+    output = model(batch.to_dict(), compute_force=True, training=False)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/models.py", line 337, in forward
+    node_feats, sc = interaction(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/blocks.py", line 540, in forward
+    mji = self.conv_tp(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/e3nn/o3/_tensor_product/_tensor_product.py", line 529, in forward
+    return self._compiled_main_left_right(x, y, real_weight)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript, serialized code (most recent call last):
+  File "code/__torch__/torch/fx/graph_module/___torch_mangle_4.py", line 57, in forward
+    reshape_9 = torch.reshape(reshape_3, [getitem_4, 96])
+    reshape_10 = torch.reshape(reshape_4, [getitem_4, 1])
+    einsum_1 = torch.einsum("ca,cab->cab", [reshape_9, reshape_8])
+               ~~~~~~~~~~~~ <--- HERE
+    einsum_2 = torch.einsum("cab,cb->ca", [einsum_1, reshape_10])
+    reshape_11 = torch.reshape(einsum_2, [getitem_4, 96])
+
+Traceback of TorchScript, original code (most recent call last):
+  File "<eval_with_key>.21", line 44, in forward
+    reshape_9 = reshape_3.reshape(getitem_4, 96)
+    reshape_10 = reshape_4.reshape(getitem_4, 1);  reshape_4 = None
+    einsum_1 = torch.functional.einsum('ca,cab->cab', reshape_9, reshape_8);  reshape_9 = reshape_8 = None
+               ~~~~~~~~~~~~~~~~~~~~~~~ <--- HERE
+    einsum_2 = torch.functional.einsum('cab,cb->ca', einsum_1, reshape_10);  einsum_1 = reshape_10 = None
+    reshape_11 = einsum_2.reshape(getitem_4, 96);  einsum_2 = None
+RuntimeError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 2.93 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 3.97 GiB is allocated by PyTorch, and 26.95 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 56, in predict_with_split
+    return predict_batch(atoms_batch)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 45, in predict_batch
+    output = model(batch.to_dict(), compute_force=True, training=False)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/models.py", line 337, in forward
+    node_feats, sc = interaction(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/blocks.py", line 539, in forward
+    tp_weights = self.conv_tp_weights(edge_feats)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/e3nn/nn/_fc.py", line 47, in forward
+    x = x @ w
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 2.93 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 3.98 GiB is allocated by PyTorch, and 19.73 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 56, in predict_with_split
+    return predict_batch(atoms_batch)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 45, in predict_batch
+    output = model(batch.to_dict(), compute_force=True, training=False)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/models.py", line 337, in forward
+    node_feats, sc = interaction(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/blocks.py", line 539, in forward
+    tp_weights = self.conv_tp_weights(edge_feats)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/e3nn/nn/_fc.py", line 43, in forward
+    x = self.act(x)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/e3nn/math/_normalize_activation.py", line 50, in forward
+    return self.f(x).mul(self.cst)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/functional.py", line 2075, in silu
+    return torch._C._nn.silu(input)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 2.93 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 3.98 GiB is allocated by PyTorch, and 19.71 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 86, in <module>
+    energies, forces = predict_with_split(batch)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 65, in predict_with_split
+    energies_first, forces_first = predict_with_split(atoms_batch[:half])
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 65, in predict_with_split
+    energies_first, forces_first = predict_with_split(atoms_batch[:half])
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 65, in predict_with_split
+    energies_first, forces_first = predict_with_split(atoms_batch[:half])
+  [Previous line repeated 3 more times]
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 56, in predict_with_split
+    return predict_batch(atoms_batch)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/scripts/evaluate.py", line 45, in predict_batch
+    output = model(batch.to_dict(), compute_force=True, training=False)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/models.py", line 337, in forward
+    node_feats, sc = interaction(
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/mace/modules/blocks.py", line 539, in forward
+    tp_weights = self.conv_tp_weights(edge_feats)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/e3nn/nn/_fc.py", line 43, in forward
+    x = self.act(x)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/e3nn/math/_normalize_activation.py", line 50, in forward
+    return self.f(x).mul(self.cst)
+  File "/mnt/e/Ciencia/noturno/2025-kovacs-maceoff-cego/env/venv/lib/python3.10/site-packages/torch/nn/functional.py", line 2075, in silu
+    return torch._C._nn.silu(input)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 2.93 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 3.98 GiB is allocated by PyTorch, and 19.19 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Command exited with non-zero status 1
+	Command being timed: "env/venv/bin/python -I scripts/evaluate.py repo/mace_off23/MACE-OFF23_small.model data/test/x/test_large_neut_all.xyz runs/small 3000"
+	User time (seconds): 32.31
+	System time (seconds): 8.01
+	Percent of CPU this job got: 40%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:39.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1520848
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4107
+	Minor (reclaiming a frame) page faults: 265877
+	Voluntary context switches: 386935
+	Involuntary context switches: 232
+	Swaps: 0
+	File system inputs: 764600
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

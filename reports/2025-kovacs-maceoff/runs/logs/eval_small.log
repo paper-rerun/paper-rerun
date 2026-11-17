@@ -1,0 +1,53 @@
+/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/lib/python3.10/site-packages/e3nn/o3/_wigner.py:10: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+/mnt/e/Ciencia/noturno/2025-kovacs-maceoff/scripts/evaluate.py:39: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model = torch.load(args.model, map_location=device)
+2000 configs, 64 s
+4000 configs, 94 s
+6000 configs, 124 s
+8000 configs, 154 s
+10000 configs, 184 s
+12000 configs, 214 s
+14000 configs, 245 s
+16000 configs, 275 s
+18000 configs, 306 s
+20000 configs, 337 s
+22000 configs, 368 s
+24000 configs, 399 s
+26000 configs, 431 s
+28000 configs, 462 s
+30000 configs, 494 s
+32000 configs, 524 s
+34000 configs, 555 s
+36000 configs, 587 s
+38000 configs, 617 s
+40000 configs, 650 s
+42000 configs, 681 s
+44000 configs, 712 s
+46000 configs, 742 s
+48000 configs, 781 s
+50000 configs, 814 s
+done: 50195 configs in 817 s -> /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/runs/out/errors_small.csv
+	Command being timed: "nice -n 19 /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/env/venv/bin/python -I /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/scripts/evaluate.py --model /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/weights/MACE-OFF23_small.model --xyz /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/data/test_extract/test_large_neut_all.xyz --out /mnt/e/Ciencia/noturno/2025-kovacs-maceoff/runs/out/errors_small.csv --batch-size 8"
+	User time (seconds): 898.60
+	System time (seconds): 818.93
+	Percent of CPU this job got: 195%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 14:39.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1349512
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5186
+	Minor (reclaiming a frame) page faults: 165921
+	Voluntary context switches: 549252
+	Involuntary context switches: 869
+	Swaps: 0
+	File system inputs: 979440
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

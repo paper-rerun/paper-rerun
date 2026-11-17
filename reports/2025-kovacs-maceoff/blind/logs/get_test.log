@@ -1,0 +1,15 @@
+total 83448
+-rwxrwxrwx 1 root root 85448756 Nov  9 00:55 test_large_neut_all.tar.gz
+bf1f7c7ff1714e6ac6af2cdc642a130a  test_large_neut_all.tar.gz
+expected md5 bf1f7c7ff1714e6ac6af2cdc642a130a
+0c09cc1d49720ac31c47aeeabaa6692af28607e18ddb85a9c57c729ca0b6e03f  test_large_neut_all.tar.gz
+-rwx------ jhm/staff       220 2023-05-23 10:50 ._test_large_neut_all.xyz
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.macl'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.FinderInfo'
+-rwx------ jhm/staff 261583315 2023-05-23 10:50 test_large_neut_all.xyz
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.macl'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.FinderInfo'
+-rwxrwxrwx 1 root root 220 May 23  2023 x/._test_large_neut_all.xyz
+51a3f34af70507f97140440c8472d6e5e341f238290b8d6920467a367beb91d5  x/._test_large_neut_all.xyz
+-rwxrwxrwx 1 root root 261583315 May 23  2023 x/test_large_neut_all.xyz
+c65a7fcf9140fb127ccc6cc7fce243ab5052665a8741516cde143592a319745e  x/test_large_neut_all.xyz

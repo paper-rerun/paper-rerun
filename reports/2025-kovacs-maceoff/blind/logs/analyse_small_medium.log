@@ -1,0 +1,84 @@
+subset counts (all / after A1 filter):
+  PubChem: 34093 / 33967
+  DES370K Monomers: 889 / 889
+  DES370K Dimers: 13908 / 13908
+  Dipeptides: 1025 / 1025
+  Solvated Amino Acids: 52 / 52
+  water: 84 / 84
+  QMugs: 144 / 144
+
+PRIMARY: claims (all configs in file)
+id	published	ours	band	inside
+small|PubChem|energy_mae_per_atom	1.41	1.4309	[1.3959, 1.4241]	NO
+small|PubChem|force_mae_component	35.68	36.7961	[35.3232, 36.0368]	NO
+small|DES370K Monomers|energy_mae_per_atom	1.04	1.0369	[1.0296, 1.0504]	yes
+small|DES370K Monomers|force_mae_component	17.63	17.6342	[17.4537, 17.8063]	yes
+small|DES370K Dimers|energy_mae_per_atom	0.98	0.9799	[0.97, 0.99]	yes
+small|DES370K Dimers|force_mae_component	16.31	16.3418	[16.1469, 16.4731]	yes
+small|Dipeptides|energy_mae_per_atom	0.84	0.8370	[0.83, 0.85]	yes
+small|Dipeptides|force_mae_component	25.07	25.0691	[24.8193, 25.3207]	yes
+small|Solvated Amino Acids|energy_mae_per_atom	1.6	1.5967	[1.584, 1.616]	yes
+small|Solvated Amino Acids|force_mae_component	38.56	38.5578	[38.1744, 38.9456]	yes
+small|water|energy_mae_per_atom	1.67	1.6700	[1.6533, 1.6867]	yes
+small|water|force_mae_component	28.53	28.5281	[28.2447, 28.8153]	yes
+small|QMugs|energy_mae_per_atom	1.03	1.0268	[1.0197, 1.0403]	yes
+small|QMugs|force_mae_component	41.45	41.4476	[41.0355, 41.8645]	yes
+medium|PubChem|energy_mae_per_atom	0.91	0.9243	[0.9, 0.92]	NO
+medium|PubChem|force_mae_component	20.57	21.6463	[20.3643, 20.7757]	NO
+medium|DES370K Monomers|energy_mae_per_atom	0.63	0.6275	[0.62, 0.64]	yes
+medium|DES370K Monomers|force_mae_component	9.36	9.3563	[9.2664, 9.4536]	yes
+medium|DES370K Dimers|energy_mae_per_atom	0.58	0.5789	[0.57, 0.59]	yes
+medium|DES370K Dimers|force_mae_component	9.02	9.0475	[8.9298, 9.1102]	yes
+medium|Dipeptides|energy_mae_per_atom	0.52	0.5208	[0.51, 0.53]	yes
+medium|Dipeptides|force_mae_component	14.27	14.2659	[14.1273, 14.4127]	yes
+medium|Solvated Amino Acids|energy_mae_per_atom	1.21	1.2092	[1.1979, 1.2221]	yes
+medium|Solvated Amino Acids|force_mae_component	23.26	23.2647	[23.0274, 23.4926]	yes
+medium|water|energy_mae_per_atom	0.76	0.7592	[0.75, 0.77]	yes
+medium|water|force_mae_component	15.27	15.2651	[15.1173, 15.4227]	yes
+medium|QMugs|energy_mae_per_atom	0.69	0.6872	[0.68, 0.7]	yes
+medium|QMugs|force_mae_component	23.58	23.5813	[23.3442, 23.8158]	yes
+
+inside 24 of 28
+
+EXTRA A1 (force filter) and A2/A4 (other force definitions), per model and subset
+model	subset	set	n	E_mae	F_mae_comp	F_mae_norm	F_mae_comp_meancfg	E_rmse	F_rmse
+small	PubChem	all	34093	1.4309	36.7961	73.6062	38.5198	2.8629	124.8669
+small	PubChem	A1	33967	1.4125	35.7316	71.4636	37.4845	2.7453	62.0195
+small	DES370K Monomers	all	889	1.0369	17.6342	35.2673	17.4597	1.4717	26.1529
+small	DES370K Monomers	A1	889	1.0369	17.6342	35.2673	17.4597	1.4717	26.1529
+small	DES370K Dimers	all	13908	0.9799	16.3418	32.6925	16.4571	1.5075	28.6251
+small	DES370K Dimers	A1	13908	0.9799	16.3418	32.6925	16.4571	1.5075	28.6251
+small	Dipeptides	all	1025	0.8370	25.0691	50.1542	25.0783	1.2567	36.9701
+small	Dipeptides	A1	1025	0.8370	25.0691	50.1542	25.0783	1.2567	36.9701
+small	Solvated Amino Acids	all	52	1.5967	38.5578	76.9265	38.5753	1.9845	53.5518
+small	Solvated Amino Acids	A1	52	1.5967	38.5578	76.9265	38.5753	1.9845	53.5518
+small	water	all	84	1.6700	28.5281	56.9731	21.0902	2.0716	39.3280
+small	water	A1	84	1.6700	28.5281	56.9731	21.0902	2.0716	39.3280
+small	QMugs	all	144	1.0268	41.4476	82.8153	41.4578	1.2778	62.4595
+small	QMugs	A1	144	1.0268	41.4476	82.8153	41.4578	1.2778	62.4595
+medium	PubChem	all	34093	0.9243	21.6463	43.2962	22.7428	2.1302	115.4754
+medium	PubChem	A1	33967	0.9099	20.6118	41.2134	21.7493	2.0202	40.6603
+medium	DES370K Monomers	all	889	0.6275	9.3563	18.7245	9.3309	0.8992	14.3098
+medium	DES370K Monomers	A1	889	0.6275	9.3563	18.7245	9.3309	0.8992	14.3098
+medium	DES370K Dimers	all	13908	0.5789	9.0475	18.0953	9.2127	0.9139	16.9503
+medium	DES370K Dimers	A1	13908	0.5789	9.0475	18.0953	9.2127	0.9139	16.9503
+medium	Dipeptides	all	1025	0.5208	14.2659	28.5620	14.2612	0.8456	22.2479
+medium	Dipeptides	A1	1025	0.5208	14.2659	28.5620	14.2612	0.8456	22.2479
+medium	Solvated Amino Acids	all	52	1.2092	23.2647	46.7249	23.2869	1.5476	32.1921
+medium	Solvated Amino Acids	A1	52	1.2092	23.2647	46.7249	23.2869	1.5476	32.1921
+medium	water	all	84	0.7592	15.2651	30.5149	10.8515	0.9885	21.4029
+medium	water	A1	84	0.7592	15.2651	30.5149	10.8515	0.9885	21.4029
+medium	QMugs	all	144	0.6872	23.5813	47.1750	23.5806	0.8915	36.7317
+medium	QMugs	A1	144	0.6872	23.5813	47.1750	23.5806	0.8915	36.7317
+
+EXTRA A3: stored MACE_energy/MACE_forces columns in the file
+stored	PubChem	34093	E_mae=0.8350	F_mae_comp=17.5923
+stored	DES370K Monomers	889	E_mae=0.5239	F_mae_comp=7.3311
+stored	DES370K Dimers	13908	E_mae=0.5240	F_mae_comp=7.3502
+stored	Dipeptides	1025	E_mae=0.4494	F_mae_comp=11.3688
+stored	Solvated Amino Acids	52	E_mae=1.0016	F_mae_comp=20.9526
+stored	water	84	E_mae=0.8006	F_mae_comp=14.5931
+stored	QMugs	144	E_mae=0.4606	F_mae_comp=18.5946
+ours_small vs stored: mean |dE| 1.0802 meV/atom, max 89.6041; mean |dF| 31.6340 meV/A, max 5218.4741
+ours_medium vs stored: mean |dE| 0.6115 meV/atom, max 42.5058; mean |dF| 18.2092 meV/A, max 3391.5126
+7e025a82c2c772e63b1c8504e2d2748319b93f0380902d8ff55289c620fc7cf5  claims.json

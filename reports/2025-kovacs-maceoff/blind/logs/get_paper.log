@@ -1,0 +1,13 @@
+arxiv rc=0
+abs rc=0
+403
+acs rc=0
+total 4296
+drwxrwxrwx 1 root root     512 Nov  9 00:51 .
+drwxrwxrwx 1 root root     512 Nov  9 00:51 ..
+-rwxrwxrwx 1 root root    5460 Nov  9 00:51 acs_si.html
+-rwxrwxrwx 1 root root 4345460 Nov  9 00:51 arxiv_2312.15211.pdf
+-rwxrwxrwx 1 root root   43228 Nov  9 00:51 arxiv_abs.html
+acs_si.html:          HTML document, ASCII text, with very long lines (5460), with no line terminators
+arxiv_2312.15211.pdf: PDF document, version 1.7, 10 page(s)
+arxiv_abs.html:       HTML document, Unicode text, UTF-8 text, with very long lines (2528)

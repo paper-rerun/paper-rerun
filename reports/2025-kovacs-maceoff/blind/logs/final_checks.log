@@ -1,0 +1,30 @@
+claims.json: OK
+2026-11-09T09:13:14Z
+5.7G	.
+Docker
+bin
+bin.usr-is-merged
+boot
+dev
+etc
+home
+init
+lib
+lib.usr-is-merged
+lib32
+lib64
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+sbin.usr-is-merged
+snap
+srv
+sys
+tmp
+usr
+var

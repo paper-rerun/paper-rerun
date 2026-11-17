@@ -1,0 +1,848 @@
+{
+ "claims": [
+  {
+   "id": "small|PubChem|energy_mae_per_atom",
+   "published": 1.41,
+   "ours": 1.4309,
+   "band": [
+    1.3959,
+    1.4241
+   ],
+   "inside": false
+  },
+  {
+   "id": "small|PubChem|force_mae_component",
+   "published": 35.68,
+   "ours": 36.7961,
+   "band": [
+    35.3232,
+    36.0368
+   ],
+   "inside": false
+  },
+  {
+   "id": "small|DES370K Monomers|energy_mae_per_atom",
+   "published": 1.04,
+   "ours": 1.0369,
+   "band": [
+    1.0296,
+    1.0504
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|DES370K Monomers|force_mae_component",
+   "published": 17.63,
+   "ours": 17.6342,
+   "band": [
+    17.4537,
+    17.8063
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|DES370K Dimers|energy_mae_per_atom",
+   "published": 0.98,
+   "ours": 0.9799,
+   "band": [
+    0.97,
+    0.99
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|DES370K Dimers|force_mae_component",
+   "published": 16.31,
+   "ours": 16.3418,
+   "band": [
+    16.1469,
+    16.4731
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|Dipeptides|energy_mae_per_atom",
+   "published": 0.84,
+   "ours": 0.837,
+   "band": [
+    0.83,
+    0.85
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|Dipeptides|force_mae_component",
+   "published": 25.07,
+   "ours": 25.0691,
+   "band": [
+    24.8193,
+    25.3207
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|Solvated Amino Acids|energy_mae_per_atom",
+   "published": 1.6,
+   "ours": 1.5967,
+   "band": [
+    1.584,
+    1.616
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|Solvated Amino Acids|force_mae_component",
+   "published": 38.56,
+   "ours": 38.5578,
+   "band": [
+    38.1744,
+    38.9456
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|water|energy_mae_per_atom",
+   "published": 1.67,
+   "ours": 1.67,
+   "band": [
+    1.6533,
+    1.6867
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|water|force_mae_component",
+   "published": 28.53,
+   "ours": 28.5281,
+   "band": [
+    28.2447,
+    28.8153
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|QMugs|energy_mae_per_atom",
+   "published": 1.03,
+   "ours": 1.0268,
+   "band": [
+    1.0197,
+    1.0403
+   ],
+   "inside": true
+  },
+  {
+   "id": "small|QMugs|force_mae_component",
+   "published": 41.45,
+   "ours": 41.4476,
+   "band": [
+    41.0355,
+    41.8645
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|PubChem|energy_mae_per_atom",
+   "published": 0.91,
+   "ours": 0.9243,
+   "band": [
+    0.9,
+    0.92
+   ],
+   "inside": false
+  },
+  {
+   "id": "medium|PubChem|force_mae_component",
+   "published": 20.57,
+   "ours": 21.6463,
+   "band": [
+    20.3643,
+    20.7757
+   ],
+   "inside": false
+  },
+  {
+   "id": "medium|DES370K Monomers|energy_mae_per_atom",
+   "published": 0.63,
+   "ours": 0.6275,
+   "band": [
+    0.62,
+    0.64
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|DES370K Monomers|force_mae_component",
+   "published": 9.36,
+   "ours": 9.3563,
+   "band": [
+    9.2664,
+    9.4536
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|DES370K Dimers|energy_mae_per_atom",
+   "published": 0.58,
+   "ours": 0.5789,
+   "band": [
+    0.57,
+    0.59
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|DES370K Dimers|force_mae_component",
+   "published": 9.02,
+   "ours": 9.0475,
+   "band": [
+    8.9298,
+    9.1102
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|Dipeptides|energy_mae_per_atom",
+   "published": 0.52,
+   "ours": 0.5208,
+   "band": [
+    0.51,
+    0.53
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|Dipeptides|force_mae_component",
+   "published": 14.27,
+   "ours": 14.2659,
+   "band": [
+    14.1273,
+    14.4127
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|Solvated Amino Acids|energy_mae_per_atom",
+   "published": 1.21,
+   "ours": 1.2092,
+   "band": [
+    1.1979,
+    1.2221
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|Solvated Amino Acids|force_mae_component",
+   "published": 23.26,
+   "ours": 23.2647,
+   "band": [
+    23.0274,
+    23.4926
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|water|energy_mae_per_atom",
+   "published": 0.76,
+   "ours": 0.7592,
+   "band": [
+    0.75,
+    0.77
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|water|force_mae_component",
+   "published": 15.27,
+   "ours": 15.2651,
+   "band": [
+    15.1173,
+    15.4227
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|QMugs|energy_mae_per_atom",
+   "published": 0.69,
+   "ours": 0.6872,
+   "band": [
+    0.68,
+    0.7
+   ],
+   "inside": true
+  },
+  {
+   "id": "medium|QMugs|force_mae_component",
+   "published": 23.58,
+   "ours": 23.5813,
+   "band": [
+    23.3442,
+    23.8158
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|PubChem|energy_mae_per_atom",
+   "published": 0.88,
+   "ours": 0.9122,
+   "band": [
+    0.87,
+    0.89
+   ],
+   "inside": false
+  },
+  {
+   "id": "large|PubChem|force_mae_component",
+   "published": 14.75,
+   "ours": 15.818,
+   "band": [
+    14.6025,
+    14.8975
+   ],
+   "inside": false
+  },
+  {
+   "id": "large|DES370K Monomers|energy_mae_per_atom",
+   "published": 0.59,
+   "ours": 0.59,
+   "band": [
+    0.58,
+    0.6
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|DES370K Monomers|force_mae_component",
+   "published": 6.58,
+   "ours": 6.5755,
+   "band": [
+    6.5142,
+    6.6458
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|DES370K Dimers|energy_mae_per_atom",
+   "published": 0.54,
+   "ours": 0.5454,
+   "band": [
+    0.53,
+    0.55
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|DES370K Dimers|force_mae_component",
+   "published": 6.62,
+   "ours": 6.648,
+   "band": [
+    6.5538,
+    6.6862
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|Dipeptides|energy_mae_per_atom",
+   "published": 0.42,
+   "ours": 0.4154,
+   "band": [
+    0.41,
+    0.43
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|Dipeptides|force_mae_component",
+   "published": 10.19,
+   "ours": 10.1943,
+   "band": [
+    10.0881,
+    10.2919
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|Solvated Amino Acids|energy_mae_per_atom",
+   "published": 0.98,
+   "ours": 0.9836,
+   "band": [
+    0.97,
+    0.99
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|Solvated Amino Acids|force_mae_component",
+   "published": 19.43,
+   "ours": 19.4349,
+   "band": [
+    19.2357,
+    19.6243
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|water|energy_mae_per_atom",
+   "published": 0.83,
+   "ours": 0.8267,
+   "band": [
+    0.82,
+    0.84
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|water|force_mae_component",
+   "published": 13.57,
+   "ours": 13.5684,
+   "band": [
+    13.4343,
+    13.7057
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|QMugs|energy_mae_per_atom",
+   "published": 0.45,
+   "ours": 0.4479,
+   "band": [
+    0.44,
+    0.46
+   ],
+   "inside": true
+  },
+  {
+   "id": "large|QMugs|force_mae_component",
+   "published": 16.93,
+   "ours": 16.9317,
+   "band": [
+    16.7607,
+    17.0993
+   ],
+   "inside": true
+  }
+ ],
+ "inside": 36,
+ "tested": 42,
+ "per_subset": {
+  "small|PubChem|all": {
+   "n_configs": 34093,
+   "n_atoms": 1252273,
+   "energy_mae_per_atom": 1.430938830558095,
+   "force_mae_component": 36.796070391600985,
+   "force_mae_vector_norm": 73.60616985106662,
+   "force_mae_component_mean_of_configs": 38.51978464649296,
+   "energy_rmse_per_atom": 2.8628582609484967,
+   "force_rmse_component": 124.8669436462395
+  },
+  "small|PubChem|A1": {
+   "n_configs": 33967,
+   "n_atoms": 1248000,
+   "energy_mae_per_atom": 1.4124632925805225,
+   "force_mae_component": 35.73157975763921,
+   "force_mae_vector_norm": 71.46363192696528,
+   "force_mae_component_mean_of_configs": 37.484517919266814,
+   "energy_rmse_per_atom": 2.7452848623722645,
+   "force_rmse_component": 62.01954403605713
+  },
+  "small|DES370K Monomers|all": {
+   "n_configs": 889,
+   "n_atoms": 11212,
+   "energy_mae_per_atom": 1.0368786811602386,
+   "force_mae_component": 17.634247611036226,
+   "force_mae_vector_norm": 35.2673414189886,
+   "force_mae_component_mean_of_configs": 17.459677751827776,
+   "energy_rmse_per_atom": 1.4717060451160646,
+   "force_rmse_component": 26.152938593458526
+  },
+  "small|DES370K Monomers|A1": {
+   "n_configs": 889,
+   "n_atoms": 11212,
+   "energy_mae_per_atom": 1.0368786811602386,
+   "force_mae_component": 17.634247611036226,
+   "force_mae_vector_norm": 35.2673414189886,
+   "force_mae_component_mean_of_configs": 17.459677751827776,
+   "energy_rmse_per_atom": 1.4717060451160646,
+   "force_rmse_component": 26.152938593458526
+  },
+  "small|DES370K Dimers|all": {
+   "n_configs": 13908,
+   "n_atoms": 228003,
+   "energy_mae_per_atom": 0.9799285663235426,
+   "force_mae_component": 16.341804173615277,
+   "force_mae_vector_norm": 32.69245478910744,
+   "force_mae_component_mean_of_configs": 16.4571433675838,
+   "energy_rmse_per_atom": 1.5074709911988613,
+   "force_rmse_component": 28.625145276677063
+  },
+  "small|DES370K Dimers|A1": {
+   "n_configs": 13908,
+   "n_atoms": 228003,
+   "energy_mae_per_atom": 0.9799285663235426,
+   "force_mae_component": 16.341804173615277,
+   "force_mae_vector_norm": 32.69245478910744,
+   "force_mae_component_mean_of_configs": 16.4571433675838,
+   "energy_rmse_per_atom": 1.5074709911988613,
+   "force_rmse_component": 28.625145276677063
+  },
+  "small|Dipeptides|all": {
+   "n_configs": 1025,
+   "n_atoms": 44975,
+   "energy_mae_per_atom": 0.8369526565790092,
+   "force_mae_component": 25.069148111623342,
+   "force_mae_vector_norm": 50.15422183554232,
+   "force_mae_component_mean_of_configs": 25.078330858974272,
+   "energy_rmse_per_atom": 1.256701001340869,
+   "force_rmse_component": 36.970070342450086
+  },
+  "small|Dipeptides|A1": {
+   "n_configs": 1025,
+   "n_atoms": 44975,
+   "energy_mae_per_atom": 0.8369526565790092,
+   "force_mae_component": 25.069148111623342,
+   "force_mae_vector_norm": 50.15422183554232,
+   "force_mae_component_mean_of_configs": 25.078330858974272,
+   "energy_rmse_per_atom": 1.256701001340869,
+   "force_rmse_component": 36.970070342450086
+  },
+  "small|Solvated Amino Acids|all": {
+   "n_configs": 52,
+   "n_atoms": 4569,
+   "energy_mae_per_atom": 1.596740521396987,
+   "force_mae_component": 38.55775556860704,
+   "force_mae_vector_norm": 76.92652899268252,
+   "force_mae_component_mean_of_configs": 38.57526698581235,
+   "energy_rmse_per_atom": 1.984525303034757,
+   "force_rmse_component": 53.551784573533425
+  },
+  "small|Solvated Amino Acids|A1": {
+   "n_configs": 52,
+   "n_atoms": 4569,
+   "energy_mae_per_atom": 1.596740521396987,
+   "force_mae_component": 38.55775556860704,
+   "force_mae_vector_norm": 76.92652899268252,
+   "force_mae_component_mean_of_configs": 38.57526698581235,
+   "energy_rmse_per_atom": 1.984525303034757,
+   "force_rmse_component": 53.551784573533425
+  },
+  "small|water|all": {
+   "n_configs": 84,
+   "n_atoms": 2031,
+   "energy_mae_per_atom": 1.670006581794097,
+   "force_mae_component": 28.528105849250064,
+   "force_mae_vector_norm": 56.973109166061015,
+   "force_mae_component_mean_of_configs": 21.090229718213948,
+   "energy_rmse_per_atom": 2.0715536750832806,
+   "force_rmse_component": 39.327975388739404
+  },
+  "small|water|A1": {
+   "n_configs": 84,
+   "n_atoms": 2031,
+   "energy_mae_per_atom": 1.670006581794097,
+   "force_mae_component": 28.528105849250064,
+   "force_mae_vector_norm": 56.973109166061015,
+   "force_mae_component_mean_of_configs": 21.090229718213948,
+   "energy_rmse_per_atom": 2.0715536750832806,
+   "force_rmse_component": 39.327975388739404
+  },
+  "small|QMugs|all": {
+   "n_configs": 144,
+   "n_atoms": 8743,
+   "energy_mae_per_atom": 1.0268271453968336,
+   "force_mae_component": 41.4476106419482,
+   "force_mae_vector_norm": 82.81528461379456,
+   "force_mae_component_mean_of_configs": 41.45784621176496,
+   "energy_rmse_per_atom": 1.2777771645761216,
+   "force_rmse_component": 62.45947755561427
+  },
+  "small|QMugs|A1": {
+   "n_configs": 144,
+   "n_atoms": 8743,
+   "energy_mae_per_atom": 1.0268271453968336,
+   "force_mae_component": 41.4476106419482,
+   "force_mae_vector_norm": 82.81528461379456,
+   "force_mae_component_mean_of_configs": 41.45784621176496,
+   "energy_rmse_per_atom": 1.2777771645761216,
+   "force_rmse_component": 62.45947755561427
+  },
+  "medium|PubChem|all": {
+   "n_configs": 34093,
+   "n_atoms": 1252273,
+   "energy_mae_per_atom": 0.924259402517341,
+   "force_mae_component": 21.6462595322079,
+   "force_mae_vector_norm": 43.2961517225502,
+   "force_mae_component_mean_of_configs": 22.742798123702354,
+   "energy_rmse_per_atom": 2.130151287576603,
+   "force_rmse_component": 115.47537046316046
+  },
+  "medium|PubChem|A1": {
+   "n_configs": 33967,
+   "n_atoms": 1248000,
+   "energy_mae_per_atom": 0.9098666016975172,
+   "force_mae_component": 20.6118480011609,
+   "force_mae_vector_norm": 41.21338537255291,
+   "force_mae_component_mean_of_configs": 21.749307999543774,
+   "energy_rmse_per_atom": 2.020221251658727,
+   "force_rmse_component": 40.660329771978446
+  },
+  "medium|DES370K Monomers|all": {
+   "n_configs": 889,
+   "n_atoms": 11212,
+   "energy_mae_per_atom": 0.6274559881398232,
+   "force_mae_component": 9.356289313513464,
+   "force_mae_vector_norm": 18.72448350043171,
+   "force_mae_component_mean_of_configs": 9.330896946763131,
+   "energy_rmse_per_atom": 0.8991575312232967,
+   "force_rmse_component": 14.30977202335038
+  },
+  "medium|DES370K Monomers|A1": {
+   "n_configs": 889,
+   "n_atoms": 11212,
+   "energy_mae_per_atom": 0.6274559881398232,
+   "force_mae_component": 9.356289313513464,
+   "force_mae_vector_norm": 18.72448350043171,
+   "force_mae_component_mean_of_configs": 9.330896946763131,
+   "energy_rmse_per_atom": 0.8991575312232967,
+   "force_rmse_component": 14.30977202335038
+  },
+  "medium|DES370K Dimers|all": {
+   "n_configs": 13908,
+   "n_atoms": 228003,
+   "energy_mae_per_atom": 0.5788701985071415,
+   "force_mae_component": 9.047468405743697,
+   "force_mae_vector_norm": 18.09534148081684,
+   "force_mae_component_mean_of_configs": 9.212698861038007,
+   "energy_rmse_per_atom": 0.9139320188518169,
+   "force_rmse_component": 16.95030325284754
+  },
+  "medium|DES370K Dimers|A1": {
+   "n_configs": 13908,
+   "n_atoms": 228003,
+   "energy_mae_per_atom": 0.5788701985071415,
+   "force_mae_component": 9.047468405743697,
+   "force_mae_vector_norm": 18.09534148081684,
+   "force_mae_component_mean_of_configs": 9.212698861038007,
+   "energy_rmse_per_atom": 0.9139320188518169,
+   "force_rmse_component": 16.95030325284754
+  },
+  "medium|Dipeptides|all": {
+   "n_configs": 1025,
+   "n_atoms": 44975,
+   "energy_mae_per_atom": 0.5208100046656695,
+   "force_mae_component": 14.265893745213255,
+   "force_mae_vector_norm": 28.562033030970838,
+   "force_mae_component_mean_of_configs": 14.261242396524096,
+   "energy_rmse_per_atom": 0.8455960415598046,
+   "force_rmse_component": 22.247894639837064
+  },
+  "medium|Dipeptides|A1": {
+   "n_configs": 1025,
+   "n_atoms": 44975,
+   "energy_mae_per_atom": 0.5208100046656695,
+   "force_mae_component": 14.265893745213255,
+   "force_mae_vector_norm": 28.562033030970838,
+   "force_mae_component_mean_of_configs": 14.261242396524096,
+   "energy_rmse_per_atom": 0.8455960415598046,
+   "force_rmse_component": 22.247894639837064
+  },
+  "medium|Solvated Amino Acids|all": {
+   "n_configs": 52,
+   "n_atoms": 4569,
+   "energy_mae_per_atom": 1.2092113297962646,
+   "force_mae_component": 23.26472722016396,
+   "force_mae_vector_norm": 46.72490790098925,
+   "force_mae_component_mean_of_configs": 23.286860837359235,
+   "energy_rmse_per_atom": 1.5476132676880225,
+   "force_rmse_component": 32.19208760295147
+  },
+  "medium|Solvated Amino Acids|A1": {
+   "n_configs": 52,
+   "n_atoms": 4569,
+   "energy_mae_per_atom": 1.2092113297962646,
+   "force_mae_component": 23.26472722016396,
+   "force_mae_vector_norm": 46.72490790098925,
+   "force_mae_component_mean_of_configs": 23.286860837359235,
+   "energy_rmse_per_atom": 1.5476132676880225,
+   "force_rmse_component": 32.19208760295147
+  },
+  "medium|water|all": {
+   "n_configs": 84,
+   "n_atoms": 2031,
+   "energy_mae_per_atom": 0.7591585197374946,
+   "force_mae_component": 15.265065884248147,
+   "force_mae_vector_norm": 30.51485174517777,
+   "force_mae_component_mean_of_configs": 10.851531488628071,
+   "energy_rmse_per_atom": 0.9884580638391078,
+   "force_rmse_component": 21.40285835939246
+  },
+  "medium|water|A1": {
+   "n_configs": 84,
+   "n_atoms": 2031,
+   "energy_mae_per_atom": 0.7591585197374946,
+   "force_mae_component": 15.265065884248147,
+   "force_mae_vector_norm": 30.51485174517777,
+   "force_mae_component_mean_of_configs": 10.851531488628071,
+   "energy_rmse_per_atom": 0.9884580638391078,
+   "force_rmse_component": 21.40285835939246
+  },
+  "medium|QMugs|all": {
+   "n_configs": 144,
+   "n_atoms": 8743,
+   "energy_mae_per_atom": 0.6872467313681211,
+   "force_mae_component": 23.581313584238245,
+   "force_mae_vector_norm": 47.17498102355342,
+   "force_mae_component_mean_of_configs": 23.58062824120409,
+   "energy_rmse_per_atom": 0.8914575067794067,
+   "force_rmse_component": 36.73167095334815
+  },
+  "medium|QMugs|A1": {
+   "n_configs": 144,
+   "n_atoms": 8743,
+   "energy_mae_per_atom": 0.6872467313681211,
+   "force_mae_component": 23.581313584238245,
+   "force_mae_vector_norm": 47.17498102355342,
+   "force_mae_component_mean_of_configs": 23.58062824120409,
+   "energy_rmse_per_atom": 0.8914575067794067,
+   "force_rmse_component": 36.73167095334815
+  },
+  "large|PubChem|all": {
+   "n_configs": 34093,
+   "n_atoms": 1252273,
+   "energy_mae_per_atom": 0.9122481201336626,
+   "force_mae_component": 15.818008440924704,
+   "force_mae_vector_norm": 31.646465928337538,
+   "force_mae_component_mean_of_configs": 16.802048120532124,
+   "energy_rmse_per_atom": 2.6961914507604523,
+   "force_rmse_component": 113.01549518783119
+  },
+  "large|PubChem|A1": {
+   "n_configs": 33967,
+   "n_atoms": 1248000,
+   "energy_mae_per_atom": 0.8883978924303634,
+   "force_mae_component": 14.786863932284978,
+   "force_mae_vector_norm": 29.570501237948267,
+   "force_mae_component_mean_of_configs": 15.81472721088939,
+   "energy_rmse_per_atom": 2.516208644299914,
+   "force_rmse_component": 33.490920921544884
+  },
+  "large|DES370K Monomers|all": {
+   "n_configs": 889,
+   "n_atoms": 11212,
+   "energy_mae_per_atom": 0.5900259677454508,
+   "force_mae_component": 6.575511219543797,
+   "force_mae_vector_norm": 13.170823033321179,
+   "force_mae_component_mean_of_configs": 6.683391478616489,
+   "energy_rmse_per_atom": 0.8393015243153397,
+   "force_rmse_component": 10.268240563288067
+  },
+  "large|DES370K Monomers|A1": {
+   "n_configs": 889,
+   "n_atoms": 11212,
+   "energy_mae_per_atom": 0.5900259677454508,
+   "force_mae_component": 6.575511219543797,
+   "force_mae_vector_norm": 13.170823033321179,
+   "force_mae_component_mean_of_configs": 6.683391478616489,
+   "energy_rmse_per_atom": 0.8393015243153397,
+   "force_rmse_component": 10.268240563288067
+  },
+  "large|DES370K Dimers|all": {
+   "n_configs": 13908,
+   "n_atoms": 228003,
+   "energy_mae_per_atom": 0.5454064900805767,
+   "force_mae_component": 6.647952317089023,
+   "force_mae_vector_norm": 13.305097387446123,
+   "force_mae_component_mean_of_configs": 6.9138151214743475,
+   "energy_rmse_per_atom": 0.8680712289492606,
+   "force_rmse_component": 12.981291971417289
+  },
+  "large|DES370K Dimers|A1": {
+   "n_configs": 13908,
+   "n_atoms": 228003,
+   "energy_mae_per_atom": 0.5454064900805767,
+   "force_mae_component": 6.647952317089023,
+   "force_mae_vector_norm": 13.305097387446123,
+   "force_mae_component_mean_of_configs": 6.9138151214743475,
+   "energy_rmse_per_atom": 0.8680712289492606,
+   "force_rmse_component": 12.981291971417289
+  },
+  "large|Dipeptides|all": {
+   "n_configs": 1025,
+   "n_atoms": 44975,
+   "energy_mae_per_atom": 0.41536483551527176,
+   "force_mae_component": 10.194341728473711,
+   "force_mae_vector_norm": 20.3968720494012,
+   "force_mae_component_mean_of_configs": 10.186071501878352,
+   "energy_rmse_per_atom": 0.7001275041308614,
+   "force_rmse_component": 16.194204901067184
+  },
+  "large|Dipeptides|A1": {
+   "n_configs": 1025,
+   "n_atoms": 44975,
+   "energy_mae_per_atom": 0.41536483551527176,
+   "force_mae_component": 10.194341728473711,
+   "force_mae_vector_norm": 20.3968720494012,
+   "force_mae_component_mean_of_configs": 10.186071501878352,
+   "energy_rmse_per_atom": 0.7001275041308614,
+   "force_rmse_component": 16.194204901067184
+  },
+  "large|Solvated Amino Acids|all": {
+   "n_configs": 52,
+   "n_atoms": 4569,
+   "energy_mae_per_atom": 0.9836426535731448,
+   "force_mae_component": 19.43486973739986,
+   "force_mae_vector_norm": 38.96557917040516,
+   "force_mae_component_mean_of_configs": 19.455348749929072,
+   "energy_rmse_per_atom": 1.3210242210365017,
+   "force_rmse_component": 26.914412694868552
+  },
+  "large|Solvated Amino Acids|A1": {
+   "n_configs": 52,
+   "n_atoms": 4569,
+   "energy_mae_per_atom": 0.9836426535731448,
+   "force_mae_component": 19.43486973739986,
+   "force_mae_vector_norm": 38.96557917040516,
+   "force_mae_component_mean_of_configs": 19.455348749929072,
+   "energy_rmse_per_atom": 1.3210242210365017,
+   "force_rmse_component": 26.914412694868552
+  },
+  "large|water|all": {
+   "n_configs": 84,
+   "n_atoms": 2031,
+   "energy_mae_per_atom": 0.8267139235410947,
+   "force_mae_component": 13.568396237870544,
+   "force_mae_vector_norm": 27.01813592057163,
+   "force_mae_component_mean_of_configs": 9.961034253829403,
+   "energy_rmse_per_atom": 0.9945028484788607,
+   "force_rmse_component": 18.777338264037905
+  },
+  "large|water|A1": {
+   "n_configs": 84,
+   "n_atoms": 2031,
+   "energy_mae_per_atom": 0.8267139235410947,
+   "force_mae_component": 13.568396237870544,
+   "force_mae_vector_norm": 27.01813592057163,
+   "force_mae_component_mean_of_configs": 9.961034253829403,
+   "energy_rmse_per_atom": 0.9945028484788607,
+   "force_rmse_component": 18.777338264037905
+  },
+  "large|QMugs|all": {
+   "n_configs": 144,
+   "n_atoms": 8743,
+   "energy_mae_per_atom": 0.4478847115106803,
+   "force_mae_component": 16.931700118413016,
+   "force_mae_vector_norm": 33.91236017063002,
+   "force_mae_component_mean_of_configs": 16.897997854021252,
+   "energy_rmse_per_atom": 0.5840825476673507,
+   "force_rmse_component": 27.16854236462844
+  },
+  "large|QMugs|A1": {
+   "n_configs": 144,
+   "n_atoms": 8743,
+   "energy_mae_per_atom": 0.4478847115106803,
+   "force_mae_component": 16.931700118413016,
+   "force_mae_vector_norm": 33.91236017063002,
+   "force_mae_component_mean_of_configs": 16.897997854021252,
+   "energy_rmse_per_atom": 0.5840825476673507,
+   "force_rmse_component": 27.16854236462844
+  }
+ }
+}

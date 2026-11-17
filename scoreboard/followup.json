@@ -148,6 +148,13 @@
  },
  {
   "kind": "Issue",
+  "paper": "MACE-OFF",
+  "repository": "ACEsuit/mace-off",
+  "ask": "By e-mail, not an issue: which filter produced the Table 1 counts (removing configurations above 10 eV/Å on the largest Cartesian force component reproduces 33,884 and 13,896 exactly), and whether publishing the report and scripts without the weights or the raw predictions was acceptable under the ASL.",
+  "status": "answered"
+ },
+ {
+  "kind": "Issue",
   "paper": "FoldMason",
   "repository": "steineggerlab/foldmason",
   "ask": "Deposit the HOMSTRAD release used for Fig. 2A (server offline, see their #38); 285 AFDB members deleted.",

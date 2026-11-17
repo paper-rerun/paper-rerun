@@ -1,0 +1,595 @@
+{
+ "paper": "Kovacs et al., MACE-OFF, JACS 2025 147(21) 17598, DOI 10.1021/jacs.4c07099; arXiv 2312.15211",
+ "source_of_numbers": "Table S1 'Summary of test set errors including inter-molecular force errors', MAE block, rows E (meV/at) and Ftotal (meV/A), arXiv v5 (2025-08-22) Supporting Information p.5. Identical values in arXiv v1 Table III and v3 Table IV. Version-of-record SI on pubs.acs.org returned HTTP 403 and was not read.",
+ "test_data": "test_large_neut_all.xyz from Apollo DOI 10.17863/CAM.107498 (bitstream md5 bf1f7c7ff1714e6ac6af2cdc642a130a, xyz sha256 c65a7fcf9140fb127ccc6cc7fce243ab5052665a8741516cde143592a319745e)",
+ "weights": "repo ACEsuit/mace-off @ 91a78c5a9c300d1104700d9352c8bfe449227737, mace_off23/MACE-OFF23_{small,medium,large}.model (not MACE-OFF23b, not MACE-OFF24)",
+ "definitions": {
+  "energy_mae_per_atom": "mean over configurations of the subset of |E_model - E_ref| / N_atoms, E = total energy (model output includes its stored E0s; reference = info['energy'] in the file, eV), times 1000 -> meV/atom",
+  "force_mae_component": "mean of |F_model - F_ref| over all Cartesian components of all atoms of all configurations in the subset, pooled (MACE's mae_f and aseMolec's .flatten() convention), times 1000 -> meV/A. Reference = arrays['forces'].",
+  "precision": "float64 (torch default dtype float64), MACE 0.3.4, model.double()",
+  "subset": "config_type field in the xyz; 'water' = paper column Water"
+ },
+ "set_composition_decision": {
+  "counts_in_file": {
+   "PubChem": 34093,
+   "DES370K Monomers": 889,
+   "DES370K Dimers": 13908,
+   "Dipeptides": 1025,
+   "Solvated Amino Acids": 52,
+   "water": 84,
+   "QMugs": 144,
+   "Tripeptides": 0
+  },
+  "counts_in_paper_Table1": {
+   "PubChem": 33884,
+   "DES370K Monomers": 889,
+   "DES370K Dimers": 13896,
+   "Dipeptides": 1025,
+   "Solvated Amino Acids": 52,
+   "water": 84,
+   "QMugs": 144,
+   "Tripeptides": 898
+  },
+  "primary": "Evaluate every configuration in the released file, no filtering. The released file is what the paper points readers to; we have no rule that maps 34093->33884 or 13908->13896.",
+  "tripeptides": "Not in the released test file: the Tripeptide column (898 configs) is not testable and is excluded. 42 claims = 3 models x 7 subsets x 2 metrics.",
+  "extra_analyses_not_affecting_verdict": [
+   "A1: same metrics after dropping configs with any per-atom |F_ref| > 15 eV/A or |sum_i F_ref| > 0.1 eV/A (the SPICE-2 filters of SI S1), to see if the PubChem/Dimers excess explains any gap.",
+   "A2: per-atom vector-norm force MAE (mean over atoms of |F_model - F_ref|_2) as the alternative force definition.",
+   "A3: errors of the MACE_energy / MACE_forces columns already stored in the file, against which of our three models they match.",
+   "A4: mean-of-per-config force MAE instead of pooled."
+  ]
+ },
+ "tolerance": {
+  "rule": "inside if published - h <= ours <= published + h with h = max(0.01, 0.01*published) in the claim's unit",
+  "reasoning": "Inference with fixed weights on fixed data is deterministic; float64 run-to-run and library-version differences are orders of magnitude below 0.01 meV. The table prints 2 decimals, so rounding alone needs +-0.005; we allow +-0.01 absolute or 1% relative, whichever is larger, for MACE-version and hardware differences. Not wider, because the paper gives no uncertainty and a wider band would hide a wrong data split or a wrong definition. PubChem and DES370K Dimers have 209 and 12 more configs in the file than in Table 1; if those subsets fall outside, A1 is reported but the verdict uses the primary numbers."
+ },
+ "verdict_rule": "Reproduced if >= 38 of 42 claims inside; Partially reproduced if 21-37 inside; Not reproduced if < 21 inside.",
+ "claims": [
+  {
+   "id": "small|PubChem|energy_mae_per_atom",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "PubChem",
+   "paper_column": "PubChem",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 1.41,
+   "band_inclusive": [
+    1.3959,
+    1.4241
+   ]
+  },
+  {
+   "id": "small|PubChem|force_mae_component",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "PubChem",
+   "paper_column": "PubChem",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 35.68,
+   "band_inclusive": [
+    35.3232,
+    36.0368
+   ]
+  },
+  {
+   "id": "small|DES370K Monomers|energy_mae_per_atom",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "DES370K Monomers",
+   "paper_column": "DES370K Monomers",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 1.04,
+   "band_inclusive": [
+    1.0296,
+    1.0504
+   ]
+  },
+  {
+   "id": "small|DES370K Monomers|force_mae_component",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "DES370K Monomers",
+   "paper_column": "DES370K Monomers",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 17.63,
+   "band_inclusive": [
+    17.4537,
+    17.8063
+   ]
+  },
+  {
+   "id": "small|DES370K Dimers|energy_mae_per_atom",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "DES370K Dimers",
+   "paper_column": "DES370K Dimers",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.98,
+   "band_inclusive": [
+    0.97,
+    0.99
+   ]
+  },
+  {
+   "id": "small|DES370K Dimers|force_mae_component",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "DES370K Dimers",
+   "paper_column": "DES370K Dimers",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 16.31,
+   "band_inclusive": [
+    16.1469,
+    16.4731
+   ]
+  },
+  {
+   "id": "small|Dipeptides|energy_mae_per_atom",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "Dipeptides",
+   "paper_column": "Dipeptides",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.84,
+   "band_inclusive": [
+    0.83,
+    0.85
+   ]
+  },
+  {
+   "id": "small|Dipeptides|force_mae_component",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "Dipeptides",
+   "paper_column": "Dipeptides",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 25.07,
+   "band_inclusive": [
+    24.8193,
+    25.3207
+   ]
+  },
+  {
+   "id": "small|Solvated Amino Acids|energy_mae_per_atom",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "Solvated Amino Acids",
+   "paper_column": "Solvated Amino Acids",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 1.6,
+   "band_inclusive": [
+    1.584,
+    1.616
+   ]
+  },
+  {
+   "id": "small|Solvated Amino Acids|force_mae_component",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "Solvated Amino Acids",
+   "paper_column": "Solvated Amino Acids",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 38.56,
+   "band_inclusive": [
+    38.1744,
+    38.9456
+   ]
+  },
+  {
+   "id": "small|water|energy_mae_per_atom",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "water",
+   "paper_column": "Water",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 1.67,
+   "band_inclusive": [
+    1.6533,
+    1.6867
+   ]
+  },
+  {
+   "id": "small|water|force_mae_component",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "water",
+   "paper_column": "Water",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 28.53,
+   "band_inclusive": [
+    28.2447,
+    28.8153
+   ]
+  },
+  {
+   "id": "small|QMugs|energy_mae_per_atom",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "QMugs",
+   "paper_column": "QMugs",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 1.03,
+   "band_inclusive": [
+    1.0197,
+    1.0403
+   ]
+  },
+  {
+   "id": "small|QMugs|force_mae_component",
+   "model": "MACE-OFF23_small.model",
+   "subset_config_type": "QMugs",
+   "paper_column": "QMugs",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 41.45,
+   "band_inclusive": [
+    41.0355,
+    41.8645
+   ]
+  },
+  {
+   "id": "medium|PubChem|energy_mae_per_atom",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "PubChem",
+   "paper_column": "PubChem",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.91,
+   "band_inclusive": [
+    0.9,
+    0.92
+   ]
+  },
+  {
+   "id": "medium|PubChem|force_mae_component",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "PubChem",
+   "paper_column": "PubChem",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 20.57,
+   "band_inclusive": [
+    20.3643,
+    20.7757
+   ]
+  },
+  {
+   "id": "medium|DES370K Monomers|energy_mae_per_atom",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "DES370K Monomers",
+   "paper_column": "DES370K Monomers",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.63,
+   "band_inclusive": [
+    0.62,
+    0.64
+   ]
+  },
+  {
+   "id": "medium|DES370K Monomers|force_mae_component",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "DES370K Monomers",
+   "paper_column": "DES370K Monomers",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 9.36,
+   "band_inclusive": [
+    9.2664,
+    9.4536
+   ]
+  },
+  {
+   "id": "medium|DES370K Dimers|energy_mae_per_atom",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "DES370K Dimers",
+   "paper_column": "DES370K Dimers",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.58,
+   "band_inclusive": [
+    0.57,
+    0.59
+   ]
+  },
+  {
+   "id": "medium|DES370K Dimers|force_mae_component",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "DES370K Dimers",
+   "paper_column": "DES370K Dimers",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 9.02,
+   "band_inclusive": [
+    8.9298,
+    9.1102
+   ]
+  },
+  {
+   "id": "medium|Dipeptides|energy_mae_per_atom",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "Dipeptides",
+   "paper_column": "Dipeptides",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.52,
+   "band_inclusive": [
+    0.51,
+    0.53
+   ]
+  },
+  {
+   "id": "medium|Dipeptides|force_mae_component",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "Dipeptides",
+   "paper_column": "Dipeptides",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 14.27,
+   "band_inclusive": [
+    14.1273,
+    14.4127
+   ]
+  },
+  {
+   "id": "medium|Solvated Amino Acids|energy_mae_per_atom",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "Solvated Amino Acids",
+   "paper_column": "Solvated Amino Acids",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 1.21,
+   "band_inclusive": [
+    1.1979,
+    1.2221
+   ]
+  },
+  {
+   "id": "medium|Solvated Amino Acids|force_mae_component",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "Solvated Amino Acids",
+   "paper_column": "Solvated Amino Acids",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 23.26,
+   "band_inclusive": [
+    23.0274,
+    23.4926
+   ]
+  },
+  {
+   "id": "medium|water|energy_mae_per_atom",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "water",
+   "paper_column": "Water",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.76,
+   "band_inclusive": [
+    0.75,
+    0.77
+   ]
+  },
+  {
+   "id": "medium|water|force_mae_component",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "water",
+   "paper_column": "Water",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 15.27,
+   "band_inclusive": [
+    15.1173,
+    15.4227
+   ]
+  },
+  {
+   "id": "medium|QMugs|energy_mae_per_atom",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "QMugs",
+   "paper_column": "QMugs",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.69,
+   "band_inclusive": [
+    0.68,
+    0.7
+   ]
+  },
+  {
+   "id": "medium|QMugs|force_mae_component",
+   "model": "MACE-OFF23_medium.model",
+   "subset_config_type": "QMugs",
+   "paper_column": "QMugs",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 23.58,
+   "band_inclusive": [
+    23.3442,
+    23.8158
+   ]
+  },
+  {
+   "id": "large|PubChem|energy_mae_per_atom",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "PubChem",
+   "paper_column": "PubChem",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.88,
+   "band_inclusive": [
+    0.87,
+    0.89
+   ]
+  },
+  {
+   "id": "large|PubChem|force_mae_component",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "PubChem",
+   "paper_column": "PubChem",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 14.75,
+   "band_inclusive": [
+    14.6025,
+    14.8975
+   ]
+  },
+  {
+   "id": "large|DES370K Monomers|energy_mae_per_atom",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "DES370K Monomers",
+   "paper_column": "DES370K Monomers",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.59,
+   "band_inclusive": [
+    0.58,
+    0.6
+   ]
+  },
+  {
+   "id": "large|DES370K Monomers|force_mae_component",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "DES370K Monomers",
+   "paper_column": "DES370K Monomers",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 6.58,
+   "band_inclusive": [
+    6.5142,
+    6.6458
+   ]
+  },
+  {
+   "id": "large|DES370K Dimers|energy_mae_per_atom",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "DES370K Dimers",
+   "paper_column": "DES370K Dimers",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.54,
+   "band_inclusive": [
+    0.53,
+    0.55
+   ]
+  },
+  {
+   "id": "large|DES370K Dimers|force_mae_component",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "DES370K Dimers",
+   "paper_column": "DES370K Dimers",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 6.62,
+   "band_inclusive": [
+    6.5538,
+    6.6862
+   ]
+  },
+  {
+   "id": "large|Dipeptides|energy_mae_per_atom",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "Dipeptides",
+   "paper_column": "Dipeptides",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.42,
+   "band_inclusive": [
+    0.41,
+    0.43
+   ]
+  },
+  {
+   "id": "large|Dipeptides|force_mae_component",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "Dipeptides",
+   "paper_column": "Dipeptides",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 10.19,
+   "band_inclusive": [
+    10.0881,
+    10.2919
+   ]
+  },
+  {
+   "id": "large|Solvated Amino Acids|energy_mae_per_atom",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "Solvated Amino Acids",
+   "paper_column": "Solvated Amino Acids",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.98,
+   "band_inclusive": [
+    0.97,
+    0.99
+   ]
+  },
+  {
+   "id": "large|Solvated Amino Acids|force_mae_component",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "Solvated Amino Acids",
+   "paper_column": "Solvated Amino Acids",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 19.43,
+   "band_inclusive": [
+    19.2357,
+    19.6243
+   ]
+  },
+  {
+   "id": "large|water|energy_mae_per_atom",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "water",
+   "paper_column": "Water",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.83,
+   "band_inclusive": [
+    0.82,
+    0.84
+   ]
+  },
+  {
+   "id": "large|water|force_mae_component",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "water",
+   "paper_column": "Water",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 13.57,
+   "band_inclusive": [
+    13.4343,
+    13.7057
+   ]
+  },
+  {
+   "id": "large|QMugs|energy_mae_per_atom",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "QMugs",
+   "paper_column": "QMugs",
+   "metric": "energy_mae_per_atom",
+   "unit": "meV/atom",
+   "published": 0.45,
+   "band_inclusive": [
+    0.44,
+    0.46
+   ]
+  },
+  {
+   "id": "large|QMugs|force_mae_component",
+   "model": "MACE-OFF23_large.model",
+   "subset_config_type": "QMugs",
+   "paper_column": "QMugs",
+   "metric": "force_mae_component",
+   "unit": "meV/A",
+   "published": 16.93,
+   "band_inclusive": [
+    16.7607,
+    17.0993
+   ]
+  }
+ ]
+}

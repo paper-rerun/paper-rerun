@@ -1,0 +1,132 @@
+== Summary counts, released file as is
+within 0.5%: 34
+within 5%  : 40
+outside 0.5%:
+    E-23S-PubChem                  paper   1.41 ours    1.4309   +1.49%
+    E-23M-PubChem                  paper   0.91 ours    0.9243   +1.57%
+    E-23L-PubChem                  paper   0.88 ours    0.9122   +3.66%
+    E-23L-DES370K_Dimers           paper   0.54 ours    0.5454   +1.00%
+    E-23L-Dipeptides               paper   0.42 ours    0.4154   -1.10%
+    F-23S-PubChem                  paper  35.68 ours   36.7961   +3.13%
+    F-23M-PubChem                  paper  20.57 ours   21.6463   +5.23%
+    F-23L-PubChem                  paper  14.75 ours   15.8180   +7.24%
+outside 5% (no floor applies):
+    F-23M-PubChem                   +5.23%
+    F-23L-PubChem                   +7.24%
+[no cut] 32/42 round to the published value
+    miss E-23S-PubChem                  paper   1.41  ours    1.4309
+    miss E-23M-PubChem                  paper   0.91  ours    0.9243
+    miss E-23L-PubChem                  paper   0.88  ours    0.9122
+    miss E-23L-DES370K_Dimers           paper   0.54  ours    0.5454
+    miss F-23S-PubChem                  paper  35.68  ours   36.7961
+    miss F-23S-DES370K_Dimers           paper  16.31  ours   16.3418
+    miss F-23M-PubChem                  paper  20.57  ours   21.6463
+    miss F-23M-DES370K_Dimers           paper   9.02  ours    9.0475
+    miss F-23L-PubChem                  paper  14.75  ours   15.8180
+    miss F-23L-DES370K_Dimers           paper   6.62  ours    6.6480
+values at 4 decimals:
+    E-23S-PubChem                  1.4309
+    E-23S-DES370K_Monomers         1.0369
+    E-23S-DES370K_Dimers           0.9799
+    E-23S-Dipeptides               0.8370
+    E-23S-Solvated_Amino_Acids     1.5967
+    E-23S-water                    1.6700
+    E-23S-QMugs                    1.0268
+    E-23M-PubChem                  0.9243
+    E-23M-DES370K_Monomers         0.6275
+    E-23M-DES370K_Dimers           0.5789
+    E-23M-Dipeptides               0.5208
+    E-23M-Solvated_Amino_Acids     1.2092
+    E-23M-water                    0.7592
+    E-23M-QMugs                    0.6872
+    E-23L-PubChem                  0.9122
+    E-23L-DES370K_Monomers         0.5900
+    E-23L-DES370K_Dimers           0.5454
+    E-23L-Dipeptides               0.4154
+    E-23L-Solvated_Amino_Acids     0.9836
+    E-23L-water                    0.8267
+    E-23L-QMugs                    0.4479
+    F-23S-PubChem                  36.7961
+    F-23S-DES370K_Monomers         17.6342
+    F-23S-DES370K_Dimers           16.3418
+    F-23S-Dipeptides               25.0691
+    F-23S-Solvated_Amino_Acids     38.5578
+    F-23S-water                    28.5281
+    F-23S-QMugs                    41.4476
+    F-23M-PubChem                  21.6463
+    F-23M-DES370K_Monomers         9.3563
+    F-23M-DES370K_Dimers           9.0475
+    F-23M-Dipeptides               14.2659
+    F-23M-Solvated_Amino_Acids     23.2647
+    F-23M-water                    15.2651
+    F-23M-QMugs                    23.5813
+    F-23L-PubChem                  15.8180
+    F-23L-DES370K_Monomers         6.5755
+    F-23L-DES370K_Dimers           6.6480
+    F-23L-Dipeptides               10.1943
+    F-23L-Solvated_Amino_Acids     19.4349
+    F-23L-water                    13.5684
+    F-23L-QMugs                    16.9317
+
+== Cut on the largest Cartesian component vs per-atom norm
+component <= 10.0: {'PubChem': 33884, 'DES370K Monomers': 889, 'DES370K Dimers': 13896, 'Dipeptides': 1025, 'Solvated Amino Acids': 52, 'water': 84, 'QMugs': 144}
+[component <= 10.0] 42/42 round to the published value
+per-atom norm <= 10.0: {'PubChem': 33722, 'DES370K Monomers': 889, 'DES370K Dimers': 13884, 'Dipeptides': 1023, 'Solvated Amino Acids': 52, 'water': 84, 'QMugs': 144}
+[per-atom norm <= 10.0] 31/42 round to the published value
+    miss E-23S-PubChem                  paper   1.41  ours    1.4046
+    miss E-23M-PubChem                  paper   0.91  ours    0.9017
+    miss E-23L-PubChem                  paper   0.88  ours    0.8735
+    miss F-23S-PubChem                  paper  35.68  ours   35.5818
+    miss F-23S-DES370K_Dimers           paper  16.31  ours   16.2795
+    miss F-23S-Dipeptides               paper  25.07  ours   25.0581
+    miss F-23M-PubChem                  paper  20.57  ours   20.4957
+    miss F-23M-DES370K_Dimers           paper   9.02  ours    9.0018
+    miss F-23M-Dipeptides               paper  14.27  ours   14.2604
+    miss F-23L-PubChem                  paper  14.75  ours   14.6782
+    miss F-23L-DES370K_Dimers           paper   6.62  ours    6.6050
+component window: largest kept value 9.9970, smallest dropped 10.0023
+   PubChem                n=34093 dropped at comp<=10: 209
+   DES370K Monomers       n=889 dropped at comp<=10: 0
+   DES370K Dimers         n=13908 dropped at comp<=10: 12
+   Dipeptides             n=1025 dropped at comp<=10: 0
+   Solvated Amino Acids   n=52 dropped at comp<=10: 0
+   water                  n=84 dropped at comp<=10: 0
+   QMugs                  n=144 dropped at comp<=10: 0
+
+per-atom norm cuts that give both published counts:
+   kept-max range 11.6265 .. 11.6265
+   at 11.6265: other subsets [33884, 889, 13896, 1025, 52, 84, 144], configs differing from the component cut: 56
+[per-atom norm <= 11.6265] 39/42 round to the published value
+    miss F-23S-PubChem                  paper  35.68  ours   35.6495
+    miss F-23M-PubChem                  paper  20.57  ours   20.5457
+    miss F-23L-PubChem                  paper  14.75  ours   14.7229
+
+PubChem and Dimers MAE, component cut <= 10:
+   small  PubChem          n=33884 E=1.4104 F=35.6775
+   small  DES370K Dimers   n=13896 E=0.9785 F=16.3055
+   medium PubChem          n=33884 E=0.9079 F=20.5687
+   medium DES370K Dimers   n=13896 E=0.5781 F=9.0220
+   large  PubChem          n=33884 E=0.8825 F=14.7453
+   large  DES370K Dimers   n=13896 E=0.5447 F=6.6230
+
+== A2: SPICE v2 filters, component vs per-atom norm
+component <=15: dropped {'PubChem': 89, 'DES370K Dimers': 0}
+component <=15 & |sumF|<=0.1: dropped {'PubChem': 94, 'DES370K Dimers': 0}
+   small  PubChem n=33999 E=1.4141 F=35.7968
+   medium PubChem n=33999 E=0.9113 F=20.6693
+   large  PubChem n=33999 E=0.8909 F=14.8453
+per-atom norm <=15: dropped {'PubChem': 121, 'DES370K Dimers': 0}
+per-atom norm <=15 & |sumF|<=0.1: dropped {'PubChem': 126, 'DES370K Dimers': 0}
+   small  PubChem n=33967 E=1.4125 F=35.7316
+   medium PubChem n=33967 E=0.9099 F=20.6118
+   large  PubChem n=33967 E=0.8884 F=14.7869
+PubChem configs with per-atom norm > 15: 121
+
+== Per-snapshot split (issue #7, point 3): test side only
+   PubChem                configs=34093 with smiles=34093 distinct=12931
+   DES370K Monomers       configs=889 with smiles=889 distinct=326
+   DES370K Dimers         configs=13908 with smiles=13908 distinct=1877
+   Dipeptides             configs=1025 with smiles=1025 distinct=389
+   Solvated Amino Acids   configs=52 with smiles=52 distinct=18
+   water                  configs=84 with smiles=0 distinct=0
+   QMugs                  configs=144 with smiles=0 distinct=0

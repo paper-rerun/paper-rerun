@@ -1,0 +1,13 @@
+v1 rc=0
+v3 rc=0
+v4 rc=0
+/usr/bin/pdftotext
+/usr/bin/pdfinfo
+Pages:           21
+Pages:           25
+Pages:           17
+Pages:           47
+14febfef67197158ddc081acc7cb39a1bfbe7844aaa303e0b8d38d2ed945a300  arxiv_2312.15211v1.pdf
+f774f00888eb88cf1dc6875ff19ee42b18c4a7252fe3d7b6c65a0df1ef40b793  arxiv_2312.15211v3.pdf
+be7d23c8c9f8049a36525b26cdb374c593c4ead64dc689d3f8e3f485b0220fca  arxiv_2312.15211v4.pdf
+e3dd92a6cb2466f5ad545c7d2b3aaeb0fe920c13a5f92392d6807ce60b981c4d  arxiv_2312.15211v5.pdf

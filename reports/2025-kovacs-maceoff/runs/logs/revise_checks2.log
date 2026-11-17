@@ -1,0 +1,3 @@
+PubChem failing norm>15 or |sumF|>0.1: 126
+of those, also removed by component>10: 121
+removed by component>10 but passing the v2 filters: 88

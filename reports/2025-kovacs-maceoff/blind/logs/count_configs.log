@@ -1,0 +1,8 @@
+DES370K Dimers	configs=13908	atoms=228003	size=4-34
+DES370K Monomers	configs=889	atoms=11212	size=3-22
+Dipeptides	configs=1025	atoms=44975	size=26-60
+PubChem	configs=34093	atoms=1252273	size=3-50
+QMugs	configs=144	atoms=8743	size=51-86
+Solvated Amino Acids	configs=52	atoms=4569	size=79-96
+water	configs=84	atoms=2031	size=3-150
+TOTAL	configs=50195

@@ -1,0 +1,8 @@
+subset                      n    n_E    E_mae     F_mae
+DES370K Dimers          13908  13908    0.524     7.350
+DES370K Monomers          889    889    0.524     7.331
+Dipeptides               1025   1025    0.449    11.369
+PubChem                 34093  34093    0.835    17.592
+QMugs                     144    144    0.461    18.595
+Solvated Amino Acids       52     52    1.002    20.953
+water                      84     84    0.801    14.593

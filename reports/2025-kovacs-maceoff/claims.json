@@ -1,0 +1,149 @@
+{
+  "paper": {
+    "citation": "Kovacs, D. P.; Moore, J. H.; Browning, N. J.; Batatia, I.; Horton, J. T.; Pu, Y.; Kapil, V.; Witt, W. C.; Magdau, I.-B.; Cole, D. J.; Csanyi, G. MACE-OFF: Short-Range Transferable Machine Learning Force Fields for Organic Molecules. J. Am. Chem. Soc. 2025, 147 (21), 17598-17611.",
+    "doi": "10.1021/jacs.4c07099",
+    "version_read": "Published JACS version, read as the publisher-deposited full text in PubMed Central (PMC12123624, Europe PMC fullTextXML). The Supporting Information PDF on pubs.acs.org returns HTTP 403 to a plain client, so the SI was read from arXiv:2312.15211v5 (22 Aug 2025), the post-publication author version, whose SI section S2 and Table S1 are the SI of the published paper. Both files are kept in paper/.",
+    "preprint_note": "arXiv:2312.15211 has 5 versions and a slightly different title ('Short Range' instead of 'Short-Range'). Numbers in this pre-registration are taken from the SI of v5, which postdates publication."
+  },
+  "target": {
+    "requested": "Table 1 of the paper: energy and force MAE of MACE-OFF23 small, medium and large on the SPICE test set.",
+    "correction": "In the published version Table 1 is the summary of the training and test sets (element coverage, system size, # train, # test). It carries no error values. The main text reports the SPICE test errors as RMSE bar charts in Figure 1, and points at 'full statistics in Section S2'. The energy and force MAE per model and per subset exist only in Supporting Information Table S1. So the target of this reproduction is the MAE block of SI Table S1, and Table 1 is used only for the test set counts. This correction was made before any model was run.",
+    "table": "Supporting Information, Section S2, Table S1 ('Summary of test set errors including inter-molecular force errors'), the two MAE rows blocks: E (meV/at) and F_total (meV/AA).",
+    "not_checked": [
+      "The RMSE blocks of Table S1 and Figure 1 of the main text.",
+      "The intermolecular force errors (F_inter), which need the translation/rotation decomposition of Magdau et al.",
+      "The relative MAE / relative RMSE blocks.",
+      "The Tripeptide column (see data.tripeptides).",
+      "MACE-OFF24(M) and Table S2.",
+      "Everything downstream of the test set: dihedral scans, crystals, liquids, water, Ala3, Ala15, crambin."
+    ]
+  },
+  "code": {
+    "repo": "https://github.com/ACEsuit/mace-off",
+    "commit": "91a78c5a9c300d1104700d9352c8bfe449227737",
+    "commit_date": "2025-01-29",
+    "weights": [
+      "mace_off23/MACE-OFF23_small.model",
+      "mace_off23/MACE-OFF23_medium.model",
+      "mace_off23/MACE-OFF23_large.model"
+    ],
+    "licence": "Academic Software Licence (ASL). Non-commercial academic use only. Accepted by Filipe Tessaro on 2026-11-08 before the weights were downloaded. This report and the scripts in this folder inherit the non-commercial restriction for anything derived from the weights.",
+    "inference_stack": "mace-torch pinned to the era of the pinned commit; PyPI resolution frozen with uv --exclude-newer 2025-01-29. torch from the PyTorch CUDA index, which carries no upload dates."
+  },
+  "data": {
+    "doi": "10.17863/CAM.107498",
+    "record": "https://www.repository.cam.ac.uk/items/d50227cd-194f-4ba4-aeb7-2643a69f025f",
+    "file": "test_large_neut_all.tar.gz (85448756 bytes, md5 bf1f7c7ff1714e6ac6af2cdc642a130a), extracts to test_large_neut_all.xyz (261583315 bytes, mtime 2023-05-23)",
+    "login_required": false,
+    "licence": "CC BY 4.0 on the Apollo record.",
+    "reference_fields": "The extxyz 'energy' (eV) and 'forces' (eV/AA) of each frame are the DFT reference. The frames also carry 'MACE_energy' and 'MACE_forces' from some earlier model run; those are ignored.",
+    "counts_found": {
+      "PubChem": 34093,
+      "DES370K Monomers": 889,
+      "DES370K Dimers": 13908,
+      "Dipeptides": 1025,
+      "Solvated Amino Acids": 52,
+      "water": 84,
+      "QMugs": 144,
+      "total": 50195
+    },
+    "counts_in_table_1": {
+      "PubChem": 33884,
+      "DES370K monomers": 889,
+      "DES370K dimers": 13896,
+      "dipeptides": 1025,
+      "solvated amino acids": 52,
+      "water": 84,
+      "QMugs": 144,
+      "tripeptides": 898
+    },
+    "tripeptides": "The 898 tripeptide test configurations are not in the released archive, which holds only the seven subsets above. The tripeptide set is described in the paper as a part of COMP6 recomputed at the SPICE level of theory and used for testing only. With no released file for it, the eight Tripeptide values of Table S1 cannot be checked here, and they are dropped from this pre-registration rather than guessed at."
+  },
+  "issue_7_decision": {
+    "issue": "https://github.com/ACEsuit/mace-off/issues/7 ('Understanding Apparent Differences between Provided Test/Train Files and Paper Tables', opened 2025-11-10 by tallakahath, no maintainer answer at the time of reading).",
+    "what_it_reports": [
+      "The released test file has 209 more PubChem configurations and 12 more DES370K Dimers configurations than Table 1 states, 221 in total, and 126 of the extra PubChem points fail the force filters stated in the paper.",
+      "The released train file is short of Table 1 by 808 configurations (PubChem 803, DES370K Dimers 1, Dipeptides 4), which is exactly the number the SI says was removed for a maximum force error above 2 eV/AA, suggesting the Table 1 counts are pre-filter.",
+      "Every hydrogen-mapped SMILES in the test set also appears in the train set, which would mean the split was per snapshot and not per molecule as Section 2.2 claims."
+    ],
+    "our_count_check": "We counted the released test file independently before writing this file and we get the same numbers the issue reports: PubChem 34093 (+209) and DES370K Dimers 13908 (+12). The other five subsets match Table 1 exactly.",
+    "decision": [
+      "We evaluate the released test file exactly as published, with no filter and no subsampling. It is the only test data the authors released, and the SI states no force filter on the test set for SPICE v1: the only filter described there is a maximum-force-error cut of 2 eV/AA applied to the TRAINING set (808 configurations). The 15 eV/AA and 0.1 eV/AA filters in the same SI section belong to SPICE version 2, i.e. to MACE-OFF24, not to the models we evaluate.",
+      "Because the released PubChem and DES370K Dimers sets are larger than the ones Table S1 was computed on, and because MAE is sensitive to a handful of high-error outliers, the tolerance band for those two subsets is widened (see tolerance.wide). The other five subsets keep the narrow band.",
+      "The per-molecule split question does not touch these claims: we only run inference on the released test file and never retrain. It is reported as a finding, not scored."
+    ],
+    "recorded_before_computing": true
+  },
+  "metric_definitions": {
+    "energy_mae": "mean over configurations of |E_pred - E_ref| / N_atoms, reported in meV/atom. E_pred is the model's total energy for the configuration; MACE-OFF carries its own fitted atomic reference energies, so no shift is applied.",
+    "force_mae": "mean over all atoms and all three Cartesian components of |F_pred - F_ref|, reported in meV/AA. This is the component-wise MAE that the mace codebase computes as mae_f. The per-atom vector-norm alternative is listed under alternatives.",
+    "aggregation": "Each subset is aggregated on its own, by config_type, exactly as Table S1 is laid out. No weighting across subsets.",
+    "precision": "Inference in float64 on the GPU, which makes the result independent of the GPU's reduced-precision paths."
+  },
+  "tolerance": {
+    "narrow": "|ours - paper| <= max(5% of the paper value, 0.02 meV/atom for energy, 0.2 meV/AA for force). The absolute floor covers the rounding of the two printed decimals; the 5% covers float and library drift between the authors' stack and ours.",
+    "wide": "PubChem and DES370K Dimers only: |ours - paper| <= max(15% of the paper value, 0.02 meV/atom, 0.2 meV/AA). Reason: the released set for these two subsets is larger than the one Table S1 was computed on (+209 and +12 configurations), 126 of the extra PubChem points are flagged in issue #7 as failing the stated force sanity filters, and a few outliers of that kind can move an MAE by this much.",
+    "fixed_before_running": true
+  },
+  "verdict_rule": {
+    "reproduced": "at least 38 of the 42 claims inside their band, and no claim off by more than 25% of its paper value.",
+    "partially": "between 26 and 37 claims inside their band, or any claim off by more than 25% while 38 or more are inside.",
+    "not_reproduced": "fewer than 26 claims inside their band."
+  },
+  "alternatives": {
+    "note": "Declared here, before running. Computed and reported as alternative readings. They never change the verdict.",
+    "A1": "Force MAE as the mean over atoms of the Euclidean norm of the force error, instead of the component-wise mean.",
+    "A2": "Energy and force MAE on PubChem and DES370K Dimers after dropping configurations whose reference forces have max |F| > 15 eV/AA or |sum F| > 0.1 eV/AA, the filters issue #7 points at.",
+    "A3": "Energy and force MAE of the MACE_energy / MACE_forces columns already stored in the released file, against the DFT reference, to identify which model wrote them."
+  },
+  "claims": [
+    {"id": "E-23S-PubChem", "model": "MACE-OFF23(S)", "metric": "energy_mae", "subset": "PubChem", "paper": 1.41, "unit": "meV/atom", "band": "wide"},
+    {"id": "E-23S-DES370K_Monomers", "model": "MACE-OFF23(S)", "metric": "energy_mae", "subset": "DES370K Monomers", "paper": 1.04, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23S-DES370K_Dimers", "model": "MACE-OFF23(S)", "metric": "energy_mae", "subset": "DES370K Dimers", "paper": 0.98, "unit": "meV/atom", "band": "wide"},
+    {"id": "E-23S-Dipeptides", "model": "MACE-OFF23(S)", "metric": "energy_mae", "subset": "Dipeptides", "paper": 0.84, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23S-Solvated_Amino_Acids", "model": "MACE-OFF23(S)", "metric": "energy_mae", "subset": "Solvated Amino Acids", "paper": 1.60, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23S-water", "model": "MACE-OFF23(S)", "metric": "energy_mae", "subset": "water", "paper": 1.67, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23S-QMugs", "model": "MACE-OFF23(S)", "metric": "energy_mae", "subset": "QMugs", "paper": 1.03, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23M-PubChem", "model": "MACE-OFF23(M)", "metric": "energy_mae", "subset": "PubChem", "paper": 0.91, "unit": "meV/atom", "band": "wide"},
+    {"id": "E-23M-DES370K_Monomers", "model": "MACE-OFF23(M)", "metric": "energy_mae", "subset": "DES370K Monomers", "paper": 0.63, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23M-DES370K_Dimers", "model": "MACE-OFF23(M)", "metric": "energy_mae", "subset": "DES370K Dimers", "paper": 0.58, "unit": "meV/atom", "band": "wide"},
+    {"id": "E-23M-Dipeptides", "model": "MACE-OFF23(M)", "metric": "energy_mae", "subset": "Dipeptides", "paper": 0.52, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23M-Solvated_Amino_Acids", "model": "MACE-OFF23(M)", "metric": "energy_mae", "subset": "Solvated Amino Acids", "paper": 1.21, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23M-water", "model": "MACE-OFF23(M)", "metric": "energy_mae", "subset": "water", "paper": 0.76, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23M-QMugs", "model": "MACE-OFF23(M)", "metric": "energy_mae", "subset": "QMugs", "paper": 0.69, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23L-PubChem", "model": "MACE-OFF23(L)", "metric": "energy_mae", "subset": "PubChem", "paper": 0.88, "unit": "meV/atom", "band": "wide"},
+    {"id": "E-23L-DES370K_Monomers", "model": "MACE-OFF23(L)", "metric": "energy_mae", "subset": "DES370K Monomers", "paper": 0.59, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23L-DES370K_Dimers", "model": "MACE-OFF23(L)", "metric": "energy_mae", "subset": "DES370K Dimers", "paper": 0.54, "unit": "meV/atom", "band": "wide"},
+    {"id": "E-23L-Dipeptides", "model": "MACE-OFF23(L)", "metric": "energy_mae", "subset": "Dipeptides", "paper": 0.42, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23L-Solvated_Amino_Acids", "model": "MACE-OFF23(L)", "metric": "energy_mae", "subset": "Solvated Amino Acids", "paper": 0.98, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23L-water", "model": "MACE-OFF23(L)", "metric": "energy_mae", "subset": "water", "paper": 0.83, "unit": "meV/atom", "band": "narrow"},
+    {"id": "E-23L-QMugs", "model": "MACE-OFF23(L)", "metric": "energy_mae", "subset": "QMugs", "paper": 0.45, "unit": "meV/atom", "band": "narrow"},
+    {"id": "F-23S-PubChem", "model": "MACE-OFF23(S)", "metric": "force_mae", "subset": "PubChem", "paper": 35.68, "unit": "meV/AA", "band": "wide"},
+    {"id": "F-23S-DES370K_Monomers", "model": "MACE-OFF23(S)", "metric": "force_mae", "subset": "DES370K Monomers", "paper": 17.63, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23S-DES370K_Dimers", "model": "MACE-OFF23(S)", "metric": "force_mae", "subset": "DES370K Dimers", "paper": 16.31, "unit": "meV/AA", "band": "wide"},
+    {"id": "F-23S-Dipeptides", "model": "MACE-OFF23(S)", "metric": "force_mae", "subset": "Dipeptides", "paper": 25.07, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23S-Solvated_Amino_Acids", "model": "MACE-OFF23(S)", "metric": "force_mae", "subset": "Solvated Amino Acids", "paper": 38.56, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23S-water", "model": "MACE-OFF23(S)", "metric": "force_mae", "subset": "water", "paper": 28.53, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23S-QMugs", "model": "MACE-OFF23(S)", "metric": "force_mae", "subset": "QMugs", "paper": 41.45, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23M-PubChem", "model": "MACE-OFF23(M)", "metric": "force_mae", "subset": "PubChem", "paper": 20.57, "unit": "meV/AA", "band": "wide"},
+    {"id": "F-23M-DES370K_Monomers", "model": "MACE-OFF23(M)", "metric": "force_mae", "subset": "DES370K Monomers", "paper": 9.36, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23M-DES370K_Dimers", "model": "MACE-OFF23(M)", "metric": "force_mae", "subset": "DES370K Dimers", "paper": 9.02, "unit": "meV/AA", "band": "wide"},
+    {"id": "F-23M-Dipeptides", "model": "MACE-OFF23(M)", "metric": "force_mae", "subset": "Dipeptides", "paper": 14.27, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23M-Solvated_Amino_Acids", "model": "MACE-OFF23(M)", "metric": "force_mae", "subset": "Solvated Amino Acids", "paper": 23.26, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23M-water", "model": "MACE-OFF23(M)", "metric": "force_mae", "subset": "water", "paper": 15.27, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23M-QMugs", "model": "MACE-OFF23(M)", "metric": "force_mae", "subset": "QMugs", "paper": 23.58, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23L-PubChem", "model": "MACE-OFF23(L)", "metric": "force_mae", "subset": "PubChem", "paper": 14.75, "unit": "meV/AA", "band": "wide"},
+    {"id": "F-23L-DES370K_Monomers", "model": "MACE-OFF23(L)", "metric": "force_mae", "subset": "DES370K Monomers", "paper": 6.58, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23L-DES370K_Dimers", "model": "MACE-OFF23(L)", "metric": "force_mae", "subset": "DES370K Dimers", "paper": 6.62, "unit": "meV/AA", "band": "wide"},
+    {"id": "F-23L-Dipeptides", "model": "MACE-OFF23(L)", "metric": "force_mae", "subset": "Dipeptides", "paper": 10.19, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23L-Solvated_Amino_Acids", "model": "MACE-OFF23(L)", "metric": "force_mae", "subset": "Solvated Amino Acids", "paper": 19.43, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23L-water", "model": "MACE-OFF23(L)", "metric": "force_mae", "subset": "water", "paper": 13.57, "unit": "meV/AA", "band": "narrow"},
+    {"id": "F-23L-QMugs", "model": "MACE-OFF23(L)", "metric": "force_mae", "subset": "QMugs", "paper": 16.93, "unit": "meV/AA", "band": "narrow"}
+  ],
+  "constraints": {
+    "gpu": "RTX 2070 SUPER 8 GB, torch.cuda.set_per_process_memory_fraction(0.5), modest batches.",
+    "cpu": "at most 6 threads, nice 19 under WSL2.",
+    "disk": "under 30 GB in this folder."
+  },
+  "frozen_at": "2026-11-08T21:26:00Z"
+}

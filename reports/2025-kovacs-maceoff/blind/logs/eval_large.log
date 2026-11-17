@@ -1,0 +1,83 @@
+model=repo/mace_off23/MACE-OFF23_large.model r_max=5.0 z=[1, 6, 7, 8, 9, 15, 16, 17, 35, 53] dtype=torch.float64
+configs=50195
+  OOM on 6 configs / 238 atoms, splitting
+  OOM on 9 configs / 233 atoms, splitting
+  OOM on 7 configs / 236 atoms, splitting
+=== restarted with max_atoms_per_batch=120 ===
+model=repo/mace_off23/MACE-OFF23_large.model r_max=5.0 z=[1, 6, 7, 8, 9, 15, 16, 17, 35, 53] dtype=torch.float64
+configs=50195
+chunk 1/51 configs 0-999 done, 289s, peak GPU 2.24 GB
+chunk 2/51 configs 1000-1999 done, 581s, peak GPU 2.24 GB
+chunk 3/51 configs 2000-2999 done, 860s, peak GPU 2.24 GB
+chunk 4/51 configs 3000-3999 done, 1145s, peak GPU 2.24 GB
+chunk 5/51 configs 4000-4999 done, 1428s, peak GPU 2.24 GB
+chunk 6/51 configs 5000-5999 done, 1708s, peak GPU 2.24 GB
+chunk 7/51 configs 6000-6999 done, 1989s, peak GPU 2.24 GB
+chunk 8/51 configs 7000-7999 done, 2262s, peak GPU 2.24 GB
+chunk 9/51 configs 8000-8999 done, 2542s, peak GPU 2.24 GB
+chunk 10/51 configs 9000-9999 done, 2822s, peak GPU 2.24 GB
+chunk 11/51 configs 10000-10999 done, 3105s, peak GPU 2.24 GB
+chunk 12/51 configs 11000-11999 done, 3387s, peak GPU 2.24 GB
+chunk 13/51 configs 12000-12999 done, 3666s, peak GPU 2.24 GB
+chunk 14/51 configs 13000-13999 done, 3948s, peak GPU 2.24 GB
+chunk 15/51 configs 14000-14999 done, 4234s, peak GPU 2.24 GB
+chunk 16/51 configs 15000-15999 done, 4521s, peak GPU 2.24 GB
+chunk 17/51 configs 16000-16999 done, 4804s, peak GPU 2.24 GB
+chunk 18/51 configs 17000-17999 done, 5092s, peak GPU 2.24 GB
+chunk 19/51 configs 18000-18999 done, 5378s, peak GPU 3.32 GB
+chunk 20/51 configs 19000-19999 done, 5656s, peak GPU 3.42 GB
+chunk 21/51 configs 20000-20999 done, 5934s, peak GPU 3.42 GB
+chunk 22/51 configs 21000-21999 done, 6210s, peak GPU 3.42 GB
+chunk 23/51 configs 22000-22999 done, 6486s, peak GPU 3.42 GB
+chunk 24/51 configs 23000-23999 done, 6766s, peak GPU 3.42 GB
+chunk 25/51 configs 24000-24999 done, 7050s, peak GPU 3.42 GB
+chunk 26/51 configs 25000-25999 done, 7336s, peak GPU 3.42 GB
+chunk 27/51 configs 26000-26999 done, 7615s, peak GPU 3.42 GB
+chunk 28/51 configs 27000-27999 done, 7891s, peak GPU 3.42 GB
+chunk 29/51 configs 28000-28999 done, 8175s, peak GPU 3.42 GB
+chunk 30/51 configs 29000-29999 done, 8454s, peak GPU 3.42 GB
+chunk 31/51 configs 30000-30999 done, 8736s, peak GPU 3.42 GB
+chunk 32/51 configs 31000-31999 done, 9013s, peak GPU 3.42 GB
+chunk 33/51 configs 32000-32999 done, 9297s, peak GPU 3.42 GB
+chunk 34/51 configs 33000-33999 done, 9585s, peak GPU 3.42 GB
+chunk 35/51 configs 34000-34999 done, 9874s, peak GPU 3.42 GB
+chunk 36/51 configs 35000-35999 done, 10156s, peak GPU 3.42 GB
+chunk 37/51 configs 36000-36999 done, 10435s, peak GPU 3.42 GB
+chunk 38/51 configs 37000-37999 done, 10707s, peak GPU 3.42 GB
+chunk 39/51 configs 38000-38999 done, 10991s, peak GPU 3.42 GB
+chunk 40/51 configs 39000-39999 done, 11271s, peak GPU 3.42 GB
+chunk 41/51 configs 40000-40999 done, 11549s, peak GPU 3.42 GB
+chunk 42/51 configs 41000-41999 done, 11833s, peak GPU 3.42 GB
+chunk 43/51 configs 42000-42999 done, 12117s, peak GPU 3.42 GB
+chunk 44/51 configs 43000-43999 done, 12401s, peak GPU 3.42 GB
+chunk 45/51 configs 44000-44999 done, 12686s, peak GPU 3.42 GB
+chunk 46/51 configs 45000-45999 done, 12958s, peak GPU 3.42 GB
+chunk 47/51 configs 46000-46999 done, 13237s, peak GPU 3.42 GB
+chunk 48/51 configs 47000-47999 done, 13521s, peak GPU 3.42 GB
+chunk 49/51 configs 48000-48999 done, 13811s, peak GPU 3.42 GB
+chunk 50/51 configs 49000-49999 done, 14091s, peak GPU 3.42 GB
+chunk 51/51 configs 50000-50194 done, 14145s, peak GPU 3.42 GB
+all chunks done
+	Command being timed: "env/venv/bin/python -I scripts/evaluate.py repo/mace_off23/MACE-OFF23_large.model data/test/x/test_large_neut_all.xyz runs/large 120"
+	User time (seconds): 14423.95
+	System time (seconds): 1953.74
+	Percent of CPU this job got: 115%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:56:58
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1750176
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4210
+	Minor (reclaiming a frame) page faults: 280122
+	Voluntary context switches: 665336
+	Involuntary context switches: 1568
+	Swaps: 0
+	File system inputs: 778584
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

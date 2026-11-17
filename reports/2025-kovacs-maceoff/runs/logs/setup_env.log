@@ -1,0 +1,6 @@
+torch 2.5.1+cu121 12.1 True
+mace 0.3.9 ase 3.23.0 numpy 1.26.4 e3nn 0.4.4
+NVIDIA GeForce RTX 2070 SUPER
+free/total GB [6.9541015625, 7.99957275390625]
+Using Python 3.10.22 environment at: env/venv
+59 env/requirements.freeze.txt

@@ -1,5 +1,18 @@
 [
  {
+  "paper": "MACE-OFF",
+  "report": "2025-kovacs-maceoff",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2025-kovacs-maceoff/REPORT.md",
+  "venue": "JACS",
+  "year": 2025,
+  "field": "molecular simulation",
+  "area": "Materials and chemistry",
+  "verdict": "Two verdicts",
+  "main_issue": "Released test set differs from the paper counts",
+  "finding": "The MAE block of Supporting Information Table S1, 42 numbers, with the three released MACE-OFF23 checkpoints and the SPICE test file on Apollo. Every value falls inside our pre-registered band, so by our rule it is reproduced; an independent blind rerun got the same 42 numbers, set a tighter band and calls it partially reproduced, 36 of 42. All 6 it fails are PubChem, and both runs trace that to the same cause: the released PubChem set has 209 more configurations than the count in Table 1. Removing configurations whose largest Cartesian reference force component exceeds 10 eV/Å reproduces the Table 1 counts exactly, 33,884 and 13,896, and then all 42 values round to the published ones. The paper does not mention that cut, and the senior author did not confirm it. On the five subsets whose size already matches Table 1, all 30 values round to the published number with no filtering at all. Run on a home RTX 2070 SUPER. The weights are under the Academic Software License and are not redistributed here; the authors gave permission for the report and scripts to be published.",
+  "rerun_date": "2026-11-09"
+ },
+ {
   "paper": "CodonTransformer",
   "report": "2025-fallahpour-codontransformer",
   "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2025-fallahpour-codontransformer/REPORT.md",

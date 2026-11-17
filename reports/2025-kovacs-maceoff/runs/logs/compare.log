@@ -1,0 +1,78 @@
+claim                                 paper      ours     tol     rel%  result
+E-23S-PubChem                          1.41     1.431   0.211     1.49  inside
+E-23S-DES370K_Monomers                 1.04     1.037   0.052    -0.30  inside
+E-23S-DES370K_Dimers                   0.98     0.980   0.147    -0.01  inside
+E-23S-Dipeptides                       0.84     0.837   0.042    -0.36  inside
+E-23S-Solvated_Amino_Acids             1.60     1.597   0.080    -0.20  inside
+E-23S-water                            1.67     1.670   0.084     0.00  inside
+E-23S-QMugs                            1.03     1.027   0.051    -0.31  inside
+E-23M-PubChem                          0.91     0.924   0.137     1.57  inside
+E-23M-DES370K_Monomers                 0.63     0.627   0.032    -0.40  inside
+E-23M-DES370K_Dimers                   0.58     0.579   0.087    -0.19  inside
+E-23M-Dipeptides                       0.52     0.521   0.026     0.16  inside
+E-23M-Solvated_Amino_Acids             1.21     1.209   0.060    -0.07  inside
+E-23M-water                            0.76     0.759   0.038    -0.11  inside
+E-23M-QMugs                            0.69     0.687   0.035    -0.40  inside
+E-23L-PubChem                          0.88     0.912   0.132     3.66  inside
+E-23L-DES370K_Monomers                 0.59     0.590   0.029     0.00  inside
+E-23L-DES370K_Dimers                   0.54     0.545   0.081     1.00  inside
+E-23L-Dipeptides                       0.42     0.415   0.021    -1.10  inside
+E-23L-Solvated_Amino_Acids             0.98     0.984   0.049     0.37  inside
+E-23L-water                            0.83     0.827   0.042    -0.40  inside
+E-23L-QMugs                            0.45     0.448   0.022    -0.47  inside
+F-23S-PubChem                         35.68    36.796   5.352     3.13  inside
+F-23S-DES370K_Monomers                17.63    17.634   0.881     0.02  inside
+F-23S-DES370K_Dimers                  16.31    16.342   2.446     0.19  inside
+F-23S-Dipeptides                      25.07    25.069   1.254    -0.00  inside
+F-23S-Solvated_Amino_Acids            38.56    38.558   1.928    -0.01  inside
+F-23S-water                           28.53    28.528   1.427    -0.01  inside
+F-23S-QMugs                           41.45    41.448   2.072    -0.01  inside
+F-23M-PubChem                         20.57    21.646   3.086     5.23  inside
+F-23M-DES370K_Monomers                 9.36     9.356   0.468    -0.04  inside
+F-23M-DES370K_Dimers                   9.02     9.047   1.353     0.30  inside
+F-23M-Dipeptides                      14.27    14.266   0.714    -0.03  inside
+F-23M-Solvated_Amino_Acids            23.26    23.265   1.163     0.02  inside
+F-23M-water                           15.27    15.265   0.763    -0.03  inside
+F-23M-QMugs                           23.58    23.581   1.179     0.01  inside
+F-23L-PubChem                         14.75    15.818   2.212     7.24  inside
+F-23L-DES370K_Monomers                 6.58     6.575   0.329    -0.07  inside
+F-23L-DES370K_Dimers                   6.62     6.648   0.993     0.42  inside
+F-23L-Dipeptides                      10.19    10.194   0.509     0.04  inside
+F-23L-Solvated_Amino_Acids            19.43    19.435   0.972     0.03  inside
+F-23L-water                           13.57    13.568   0.678    -0.01  inside
+F-23L-QMugs                           16.93    16.932   0.847     0.01  inside
+
+inside: 42/42   worst relative deviation: 7.2%
+verdict by the pre-registered rule: Reproduced
+ rule: {"reproduced": "at least 38 of the 42 claims inside their band, and no claim off by more than 25% of its paper value.", "partially": "between 26 and 37 claims inside their band, or any claim off by more than 25% while 38 or more are inside.", "not_reproduced": "fewer than 26 claims inside their band."}
+
+--- A1: force MAE as mean per-atom vector norm (meV/A)
+  small  PubChem                n= 34093  comp=  36.796  vecnorm=  73.606
+  small  DES370K Monomers       n=   889  comp=  17.634  vecnorm=  35.267
+  small  DES370K Dimers         n= 13908  comp=  16.342  vecnorm=  32.692
+  small  Dipeptides             n=  1025  comp=  25.069  vecnorm=  50.154
+  small  Solvated Amino Acids   n=    52  comp=  38.558  vecnorm=  76.927
+  small  water                  n=    84  comp=  28.528  vecnorm=  56.973
+  small  QMugs                  n=   144  comp=  41.448  vecnorm=  82.815
+  medium PubChem                n= 34093  comp=  21.646  vecnorm=  43.296
+  medium DES370K Monomers       n=   889  comp=   9.356  vecnorm=  18.724
+  medium DES370K Dimers         n= 13908  comp=   9.047  vecnorm=  18.095
+  medium Dipeptides             n=  1025  comp=  14.266  vecnorm=  28.562
+  medium Solvated Amino Acids   n=    52  comp=  23.265  vecnorm=  46.725
+  medium water                  n=    84  comp=  15.265  vecnorm=  30.515
+  medium QMugs                  n=   144  comp=  23.581  vecnorm=  47.175
+  large  PubChem                n= 34093  comp=  15.818  vecnorm=  31.646
+  large  DES370K Monomers       n=   889  comp=   6.576  vecnorm=  13.171
+  large  DES370K Dimers         n= 13908  comp=   6.648  vecnorm=  13.305
+  large  Dipeptides             n=  1025  comp=  10.194  vecnorm=  20.397
+  large  Solvated Amino Acids   n=    52  comp=  19.435  vecnorm=  38.966
+  large  water                  n=    84  comp=  13.568  vecnorm=  27.018
+  large  QMugs                  n=   144  comp=  16.932  vecnorm=  33.912
+
+--- A2: PubChem and DES370K Dimers after the SPICE v2 force filters
+  small  PubChem          all n= 34093 E=  1.431 F=  36.796 | filtered n= 33999 E=  1.414 F=  35.797 (dropped 94)
+  small  DES370K Dimers   all n= 13908 E=  0.980 F=  16.342 | filtered n= 13908 E=  0.980 F=  16.342 (dropped 0)
+  medium PubChem          all n= 34093 E=  0.924 F=  21.646 | filtered n= 33999 E=  0.911 F=  20.669 (dropped 94)
+  medium DES370K Dimers   all n= 13908 E=  0.579 F=   9.047 | filtered n= 13908 E=  0.579 F=   9.047 (dropped 0)
+  large  PubChem          all n= 34093 E=  0.912 F=  15.818 | filtered n= 33999 E=  0.891 F=  14.845 (dropped 94)
+  large  DES370K Dimers   all n= 13908 E=  0.545 F=   6.648 | filtered n= 13908 E=  0.545 F=   6.648 (dropped 0)
