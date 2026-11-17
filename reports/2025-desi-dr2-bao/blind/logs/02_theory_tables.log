@@ -1,0 +1,4 @@
+A table done in 27.9 s, shape (281, 13)
+rd table done in 99.7 s, nan count 0
+max fractional h-dependence of A over h in [0.64,0.72]: {'0.26': 5.9497599903847074e-05, '0.2975': 5.2645703797749126e-05, '0.34': 4.656778905780244e-05}
+saved

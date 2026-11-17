@@ -1,0 +1,37 @@
+{
+  "cobaya_version": "3.5",
+  "cobaya_chi2_comparison": [
+    {
+      "Omega_m": 0.2975,
+      "h": 0.6851,
+      "omega_b": 0.02218,
+      "rdrag_Mpc": 148.16546065338486,
+      "chi2_cobaya": 10.286040602685947,
+      "chi2_mine": 10.28603441426352,
+      "abs_diff": 6.1884224269448396e-06
+    },
+    {
+      "Omega_m": 0.31,
+      "h": 0.67,
+      "omega_b": 0.0224,
+      "rdrag_Mpc": 148.10542403683505,
+      "chi2_cobaya": 35.685203379328996,
+      "chi2_mine": 35.68862697995131,
+      "abs_diff": 0.003423600622312506
+    },
+    {
+      "Omega_m": 0.28,
+      "h": 0.7,
+      "omega_b": 0.022,
+      "rdrag_Mpc": 148.9840509762514,
+      "chi2_cobaya": 36.154404264823235,
+      "chi2_mine": 36.154558826803004,
+      "abs_diff": 0.0001545619797695963
+    }
+  ],
+  "cobaya_chi2_max_abs_diff": 0.003423600622312506,
+  "rd_interp_max_rel_error": 9.634751914606187e-07,
+  "rd_interp_mean_rel_error": 2.0694004163806853e-07,
+  "rd_interp_n_test_points": 20,
+  "A_identity_max_rel_diff_h065_vs_h072": 8.269673291152194e-05
+}

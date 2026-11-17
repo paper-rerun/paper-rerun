@@ -156,6 +156,8 @@ scripts/fit.py           stages A-D: distances, r_d table, BAO alone, BAO+BBN
 scripts/probe.py         the four checks above
 scripts/cov_vs_table.py  the covariance against the error bars of Table IV
 REVIEW.md                the adversarial review, by a third agent
+blind/                   the independent blind rerun: its own frozen claims,
+                         code, logs and outputs, run as `2025-desi-dr2-bao-cego`
 review/                  that review's own scripts and logs
 runs/logs/               fit.log, probe.log, cov_vs_table.log
 runs/out/results.json    every number in the results table, as the code wrote it

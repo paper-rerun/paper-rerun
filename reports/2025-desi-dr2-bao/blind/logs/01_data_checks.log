@@ -1,0 +1,46 @@
+{
+  "n_data": 13,
+  "mean_sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+  "cov_sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+  "table_iv_max_abs_diff_value": 0.0009739619587847415,
+  "table_iv_max_abs_diff_sigma": 0.009781586096811401,
+  "table_iv_values_match_to_paper_rounding": false,
+  "table_iv_sigmas_match_to_paper_rounding": false,
+  "corr_DM_DH_from_cov": {
+    "0.51": -0.4515645159751099,
+    "0.706": -0.3952576149606728,
+    "0.934": -0.3472334325670801,
+    "1.321": -0.39834051635094414,
+    "1.484": -0.4935520710714642,
+    "2.33": -0.4306382085569688
+  },
+  "corr_DM_DH_from_table_iv": {
+    "0.51": -0.459,
+    "0.706": -0.404,
+    "0.934": -0.416,
+    "1.321": -0.434,
+    "1.484": -0.5,
+    "2.33": -0.431
+  },
+  "corr_max_abs_diff": 0.06876656743291987,
+  "cov_max_asymmetry": 0.0,
+  "cov_min_eigenvalue": 0.00578998687,
+  "cov_max_eigenvalue": 0.6764084362676288,
+  "cov_condition_number": 116.8238290439558,
+  "cov_positive_definite": true,
+  "cov_offdiag_exact_zeros": 144,
+  "cov_offdiag_total": 156
+}
+z= 0.295 DV_over_rs   file=  7.94167639 paper=   7.942 d=3.24e-04 | sig file= 0.076092 paper= 0.075 d=1.09e-03
+z= 0.510 DM_over_rs   file= 13.58758434 paper=  13.588 d=4.16e-04 | sig file= 0.168367 paper= 0.167 d=1.37e-03
+z= 0.510 DH_over_rs   file= 21.86294686 paper=  21.863 d=5.31e-05 | sig file= 0.428868 paper= 0.425 d=3.87e-03
+z= 0.706 DM_over_rs   file= 17.35069094 paper=  17.351 d=3.09e-04 | sig file= 0.179931 paper= 0.177 d=2.93e-03
+z= 0.706 DH_over_rs   file= 19.45534918 paper=  19.455 d=3.49e-04 | sig file= 0.333870 paper= 0.330 d=3.87e-03
+z= 0.934 DM_over_rs   file= 21.57563956 paper=  21.576 d=3.60e-04 | sig file= 0.161782 paper= 0.152 d=9.78e-03
+z= 0.934 DH_over_rs   file= 17.64149464 paper=  17.641 d=4.95e-04 | sig file= 0.201043 paper= 0.193 d=8.04e-03
+z= 1.321 DM_over_rs   file= 27.60085612 paper=  27.601 d=1.44e-04 | sig file= 0.324556 paper= 0.318 d=6.56e-03
+z= 1.321 DH_over_rs   file= 14.17602155 paper=  14.176 d=2.15e-05 | sig file= 0.224551 paper= 0.221 d=3.55e-03
+z= 1.484 DM_over_rs   file= 30.51190063 paper=  30.512 d=9.94e-05 | sig file= 0.763558 paper= 0.760 d=3.56e-03
+z= 1.484 DH_over_rs   file= 12.81699964 paper=  12.817 d=3.60e-07 | sig file= 0.518012 paper= 0.516 d=2.01e-03
+z= 2.330 DH_over_rs   file=  8.63154567 paper=   8.632 d=4.54e-04 | sig file= 0.101062 paper= 0.101 d=6.25e-05
+z= 2.330 DM_over_rs   file= 38.98897396 paper=  38.988 d=9.74e-04 | sig file= 0.531682 paper= 0.531 d=6.82e-04

@@ -1,0 +1,89 @@
+{
+  "C1_C2": {
+    "Omega_m_mean": 0.29754885215792554,
+    "Omega_m_sigma": 0.008631575468869087,
+    "h_rd_mean_Mpc": 101.531268887799,
+    "h_rd_sigma_Mpc": 0.7360026351485441,
+    "correlation_Omega_m_h_rd": -0.9239067616533814,
+    "chi2_min": 10.2826144782739,
+    "n_data": 13,
+    "n_params": 2,
+    "dof": 11,
+    "bestfit_Omega_m_on_grid": 0.297,
+    "bestfit_h_rd_on_grid": 101.56,
+    "edge_mass_Omega_m": [
+      7.865561639888574e-20,
+      1.9707961868525936e-14
+    ],
+    "edge_mass_h_rd": [
+      1.0688394222357694e-21,
+      1.6375024422809522e-19
+    ]
+  },
+  "C3": {
+    "H0_mean": 68.54615922650775,
+    "H0_sigma": 0.5977748098596747,
+    "Omega_m_mean": 0.2977233218761436,
+    "Omega_m_sigma": 0.008638974854146109,
+    "omega_b_mean": 0.02218553125334313,
+    "omega_b_sigma": 0.0005499786306171714,
+    "chi2_min_over_grid": 10.282546988135437,
+    "bestfit_Omega_m_on_grid": 0.297,
+    "bestfit_H0_on_grid": 69.75,
+    "edge_mass_H0": [
+      1.856612428813277e-23,
+      1.6988985142292023e-18
+    ],
+    "edge_mass_Omega_m": [
+      1.425678434523906e-19,
+      4.631550893924341e-14
+    ],
+    "edge_mass_omega_b": [
+      9.613229019708379e-15,
+      6.434898753928519e-15
+    ],
+    "bbn_prior": {
+      "mean": 0.02218,
+      "sigma": 0.00055,
+      "source": "eq. (14)"
+    }
+  },
+  "verdict": {
+    "C1": {
+      "published_mean": 0.2975,
+      "published_sigma": 0.0086,
+      "my_mean": 0.29754885215792554,
+      "my_sigma": 0.008631575468869087,
+      "mean_offset_in_published_sigma": 0.005680483479715075,
+      "sigma_ratio": 1.0036715661475681,
+      "mean_ok": true,
+      "sigma_ok": true,
+      "pass": true
+    },
+    "C2": {
+      "published_mean": 101.54,
+      "published_sigma": 0.73,
+      "my_mean": 101.531268887799,
+      "my_sigma": 0.7360026351485441,
+      "mean_offset_in_published_sigma": 0.011960427672609556,
+      "sigma_ratio": 1.008222787874718,
+      "mean_ok": true,
+      "sigma_ok": true,
+      "pass": true
+    },
+    "C3": {
+      "published_mean": 68.51,
+      "published_sigma": 0.58,
+      "my_mean": 68.54615922650775,
+      "my_sigma": 0.5977748098596747,
+      "mean_offset_in_published_sigma": 0.06234349397887768,
+      "sigma_ratio": 1.0306462238959908,
+      "mean_ok": true,
+      "sigma_ok": true,
+      "pass": true
+    }
+  },
+  "overall": "Reproduced",
+  "max_edge_mass": 4.631550893924341e-14,
+  "grid_valid": true
+}
