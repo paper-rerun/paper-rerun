@@ -1,5 +1,7 @@
 import zipfile, tarfile, io
 import numpy as np
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 z = zipfile.ZipFile(r"E:\Ciencia\noturno\2023-antoniadis-epta-dr2\data\chains.zip")
 L=[]
 def peek(member):
@@ -22,5 +24,5 @@ L.append("B3: hd_pl DR2full tem %d params, DR2full+ tem %d" % (len(pf), len(pp))
 L.append("   so em DR2full : %s" % sorted(set(pf)-set(pp)))
 L.append("   so em DR2full+: %s" % sorted(set(pp)-set(pf)))
 txt="\n".join(L)+"\n"
-io.open(r"C:\Users\tessa\AppData\Local\Temp\claude\2260513979417783\490b517f-7bd3-4afe-b45c-0e5956616fe7\scratchpad\check_c3.txt","w",encoding="utf-8",newline="\n").write(txt)
+io.open(os.path.join(ROOT, "runs", "logs", "release_inventory.log"), "w",encoding="utf-8",newline="\n").write(txt)
 print(txt)

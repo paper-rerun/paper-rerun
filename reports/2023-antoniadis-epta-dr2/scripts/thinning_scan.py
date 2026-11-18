@@ -1,4 +1,6 @@
 import io, numpy as np
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 d = r"E:\Ciencia\noturno\2023-antoniadis-epta-dr2\data\extracted\DR2new__hd_pl\hd_pl"
 pars = [l.strip() for l in io.open(d + r"\pars.txt") if l.strip()]
 arr = np.loadtxt(d + r"\chain_1.txt")
@@ -22,5 +24,5 @@ L.append("  nossa borda %.4f ; impresso 0.71 -> verdadeiro em [0.705, 0.715)" % 
 L.append("  distancia ate 0.715 = %.4f" % (ours-0.715))
 L.append("  distancia ate 0.71  = %.4f" % (ours-0.71))
 txt = "\n".join(L)+"\n"
-io.open(r"C:\Users\tessa\AppData\Local\Temp\claude\2260513979417783\490b517f-7bd3-4afe-b45c-0e5956616fe7\scratchpad\check_b1b2.txt","w",encoding="utf-8",newline="\n").write(txt)
+io.open(os.path.join(ROOT, "runs", "logs", "thinning_scan.log"), "w",encoding="utf-8",newline="\n").write(txt)
 print(txt)
