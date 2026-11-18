@@ -1,0 +1,10 @@
+chains/DR2full/os.tar.gz     arquivos=['hd_amp_sn.txt', 'os_cor.npy', 'dipole_amp_sn.txt', 'monopole_amp_sn.txt']  pars=None  rho=0  linhas=None
+chains/DR2new/crn_fs.tar.gz  arquivos=['chain_1.txt', 'pars.txt']  pars=85  rho=20  linhas=29990
+chains/DR2full/crn_fs.tar.gz arquivos=['chain_1.txt', 'pars.txt']  pars=122  rho=50  linhas=29990
+chains/DR2new+/hd_pl.tar.gz  arquivos=['chain_1.txt', 'pars.txt']  pars=69  rho=0  linhas=44190
+chains/DR2full+/hd_pl.tar.gz arquivos=['chain_1.txt', 'pars.txt']  pars=74  rho=0  linhas=34420
+chains/DR2full/hd_pl.tar.gz  arquivos=['chain_1.txt', 'pars.txt']  pars=74  rho=0  linhas=29990
+
+B3: hd_pl DR2full tem 74 params, DR2full+ tem 74
+   so em DR2full : ['J1600-3053_chrom_gp_gamma', 'J1600-3053_chrom_gp_log10_A']
+   so em DR2full+: ['J1600-3053_red_noise_gamma', 'J1600-3053_red_noise_log10_A']

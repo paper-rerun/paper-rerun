@@ -1,0 +1,17 @@
+B1: thinning, burn-in de 25%% primeiro, depois pega 1 a cada k
+  k= 1  fase0 0.7322  min 0.7322  max 0.7322  fases dentro de [0.705,0.715): 0 de 1
+  k= 2  fase0 0.7316  min 0.7316  max 0.7335  fases dentro de [0.705,0.715): 0 de 2
+  k= 3  fase0 0.7329  min 0.7227  max 0.7346  fases dentro de [0.705,0.715): 0 de 3
+  k= 4  fase0 0.7245  min 0.7245  max 0.7388  fases dentro de [0.705,0.715): 0 de 4
+  k= 5  fase0 0.7314  min 0.7217  max 0.7358  fases dentro de [0.705,0.715): 0 de 5
+  k= 6  fase0 0.7222  min 0.7185  max 0.7393  fases dentro de [0.705,0.715): 0 de 6
+  k= 8  fase0 0.7080  min 0.7080  max 0.7429  fases dentro de [0.705,0.715): 1 de 8
+  k=10  fase0 0.7322  min 0.7107  max 0.7464  fases dentro de [0.705,0.715): 1 de 10
+  k=12  fase0 0.7103  min 0.7063  max 0.7631  fases dentro de [0.705,0.715): 4 de 12
+  k=15  fase0 0.7090  min 0.6901  max 0.7519  fases dentro de [0.705,0.715): 3 de 15
+  k=20  fase0 0.7467  min 0.6857  max 0.7759  fases dentro de [0.705,0.715): 2 de 20
+
+B2: aritmetica da distancia ate a faixa de arredondamento
+  nossa borda 0.7322 ; impresso 0.71 -> verdadeiro em [0.705, 0.715)
+  distancia ate 0.715 = 0.0172
+  distancia ate 0.71  = 0.0222

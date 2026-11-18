@@ -1,0 +1,94 @@
+the prior over the prior range. When searching for a GWB, we fixed the white noise parameters of each pulsar to the maximum likelihood values produced by the single pulsar noise analysis (the EPTA and InPTA Collaborations 2023) and we simultaneously evaluated the RN, DM, and SV of each individual pulsar and the CRS. The prior ranges adopted for these parameters is given in Table 1.
+Bayesian evidence was used for model selection, where the Bayes factor for one hypothesis over the other is equal to the ratio of the two evidence values corresponding to these hypotheses.
+The posterior evaluation was done mainly with PTMCMCSAMPLER with other samplers used for cross-checking: m3c2 (Falxa et al. 2023), Eryn (Karnesis et al. 2023), and (Williams et al. 2021).
+In this work, we performed model selection in two ways.
+First, directly, by introducing a hyperparameter that switches between likelihoods corresponding to the two models. The ratio of the fraction of samples using one model to the fraction using the other model is the Bayes factor. This method is known as the product-space sampling method (Carlin & Chib 1995; Hee et al. 2016). The second method involves resampling from the CURN model; it is mentioned above and described in detail in Hourihane et al. 2022.
+Figure 1:
+Spectral properties of a CRS assuming HD correlations. The left panel shows the free spectrum, the independent measurement of common power at each frequency bin, for the two versions of the EPTA-only data set. The right panel shows the 1/2/3σ\sigma contour of the 2D posterior distribution of amplitude and spectral index when modelling the spectrum with a power law. In both panels, results for DR2full are in blue, while those of DR2new are in orange. The solid lines in the left panel are the power law best-fits to the GWB (see main text for the parameters of the fit), while the vertical dashed line indicates the position of f=1​yr−1f=1\,{\rm yr}^{-1}. The vertical dashed line in the right panel denotes γ=13/3\gamma=13/3.
+Table 2: 90% credible regions for the power law parameters constraints in the different Bayesian analyses with DE440 for both DR2full and DR2new. The analyses included the search for common uncorrelated red noise (CURN), gravitational wave background (GWB), and a common correlated signal with overlap reduction function (ORF) modelled with different methods (binned ORF, Chebyshev ORF, and Legendre ORF).
+|
+DR2full |
+DR2new |
+Software + Model |
+log10⁡ACRS\log_{10}A_{\rm CRS} |
+γCRS\gamma_{\rm CRS} |
+log10⁡ACRS\log_{10}A_{\rm CRS} |
+γCRS\gamma_{\rm CRS} |
+ENTERPRISE + CURN |
+−14.53−0.44+0.29-14.53_{-0.44}^{+0.29} |
+4.13−0.59+0.804.13_{-0.59}^{+0.80} |
+−14.00−0.77+0.28-14.00_{-0.77}^{+0.28} |
+2.91−0.87+1.722.91_{-0.87}^{+1.72} |
+FORTYTWO + CURN |
+−14.52−0.40+0.30-14.52_{-0.40}^{+0.30} |
+4.12−0.60+0.744.12_{-0.60}^{+0.74} |
+−14.00−0.66+0.27-14.00_{-0.66}^{+0.27} |
+2.91−0.85+1.512.91_{-0.85}^{+1.51} |
+ENTERPRISE + GWB |
+−14.54−0.41+0.28-14.54_{-0.41}^{+0.28} |
+4.19−0.63+0.734.19_{-0.63}^{+0.73} |
+−13.94−0.48+0.23-13.94_{-0.48}^{+0.23} |
+2.71−0.71+1.182.71_{-0.71}^{+1.18} |
+FORTYTWO + GWB |
+−14.53−0.40+0.30-14.53_{-0.40}^{+0.30} |
+4.16−0.66+0.744.16_{-0.66}^{+0.74} |
+−13.94−0.55+0.24-13.94_{-0.55}^{+0.24} |
+2.71−0.75+1.302.71_{-0.75}^{+1.30} |
+ENTERPRISE + Binned ORF |
+−14.47−0.35+0.27-14.47_{-0.35}^{+0.27} |
+4.10−0.56+0.644.10_{-0.56}^{+0.64} |
+−13.89−0.32+0.22-13.89_{-0.32}^{+0.22} |
+2.63−0.71+0.862.63_{-0.71}^{+0.86} |
+FORTYTWO + Binned ORF |
+−14.49−0.39+0.29-14.49_{-0.39}^{+0.29} |
+4.11−0.62+0.724.11_{-0.62}^{+0.72} |
+−13.87−0.37+0.22-13.87_{-0.37}^{+0.22} |
+2.58−0.74+0.982.58_{-0.74}^{+0.98} |
+ENTERPRISE + Chebyshev ORF |
+−14.50−0.40+0.32-14.50_{-0.40}^{+0.32} |
+4.17−0.72+0.734.17_{-0.72}^{+0.73} |
+−13.87−0.31+0.22-13.87_{-0.31}^{+0.22} |
+2.57−0.76+0.862.57_{-0.76}^{+0.86} |
+ENTERPRISE + Legendre ORF |
+−14.51−0.40+0.30-14.51_{-0.40}^{+0.30} |
+4.19−0.63+0.744.19_{-0.63}^{+0.74} |
+−13.89−0.35+0.23-13.89_{-0.35}^{+0.23} |
+2.59−0.72+0.982.59_{-0.72}^{+0.98} |
+3.2 Frequentist analysis
+We also used the frequentist optimal statistic (OS) framework, developed by Anholm et al. 2009, Demorest et al. 2013 and Chamberlin et al. 2015 with the noise marginalisation introduced by Vigeland et al. 2018, to compare against the Bayesian results.
+The Bayesian output of a CURN analysis was used as the input for the OS. This allowed for high computational efficiency, as the posterior distributions of pulsar noise were directly used to compute the statistics. With the OS we can compute the amount of correlated power for each pulsar pair. Comparing this correlation against different models gives signal-to-noise (S/N) estimates for different types of spatial correlations.
+3.3 Software packages
+As in Chen et al. 2021, we used both ENTERPRISE22
+2
+https://gitlab.in2p3.fr/epta/enterprise and https://gitlab.in2p3.fr/epta/enterprise_extensions (Ellis et al. 2020; Taylor et al. 2021) and FORTYTWO33
+3
+https://github.com/caballero-astro/fortytwo (Caballero et al. 2016) for the PTA likelihood computation and cross-check the main results with both pipelines. Some of the more specific analyses were performed only with ENTERPRISE for computational cost efficacy since we have demonstrated in Chen et al. 2021 that the two pipelines produce broadly consistent results.
+Figure 2:
+Difference distributions between two posterior distributions originating from GWB processes. The left panel depicts the difference distribution between DR2new and DR2full data sets while employing the ENTERPRISE package. In comparison, the right panel shows the tension contour between ENTERPRISE and FORTYTWO software packages when we employ the DR2new data set. The plots contain three contours: 1​σ1\sigma, 2​σ2\sigma, and the Δ\Delta contours that correspond to the value of the computed tension.
+Table 3:
+ZZ-score (in number of σ\sigma) produced by the tensiometer package, detailed in Raveri & Doux 2021 when comparing posteriors produced by
+various data sets and software packages.
+The second column compares the posteriors between the DR2new and DR2full data set
+while employing ENTERPRISE and FORTYTWO (in brackets).
+On the contrary, the third column compares the posteriors given by the
+ENTERPRISE and FORTYTWO software packages running on the DR2new and DR2full data sets (in brackets).
+|
+Data set comparison |
+Software package comparison |
+|
+DR2new vs DR2full |
+ENTERPRISE vs FORTYTWO |
+|
+ENTERPRISE (FORTYTWO) |
+DR2new (DR2full) |
+CURN |
+1.06 (1.15) |
+0.0063 (0.0274) |
+GWB |
+1.50 (1.49) |
+0.006 (0.0229) |
+Binned ORF |
+1.69 (1.68) |
+0.002 (0.0325) |
+4 Search results on the EPTA data sets DR2full and DR2new
+We first present results for the analysis carried out with EPTA-only versions of the data set, namely <span id="S4.p1.1.

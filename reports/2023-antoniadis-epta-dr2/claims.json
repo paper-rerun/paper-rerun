@@ -1,0 +1,57 @@
+{
+  "paper": "EPTA Collaboration and InPTA Collaboration (Antoniadis et al.), The second data release from the European Pulsar Timing Array III. Search for gravitational wave signals, A&A 678, A50 (2023)",
+  "arxiv": "2306.16214",
+  "source_of_targets": "Table 2 and the abstract, read from the ar5iv HTML of arXiv:2306.16214, not from pdftotext",
+  "trap": "pdftotext -layout shifts the rows of Table 2 by one against their labels, because the first row renders empty, and it interleaves the +/- superscripts character by character. The DESI DR2 run hit the same class of bug in its Table III. Every target here was taken from the HTML and the magnitudes were cross-checked against the interleaved PDF string.",
+  "what_this_run_is": "A recount of posterior summaries from the chains the authors published, not a re-run of the Bayesian search. It checks the summarising step, not the inference.",
+  "data": {
+    "zenodo": "10.5281/zenodo.8091568",
+    "file": "chains.zip",
+    "size_mb": 649.5,
+    "license": "CC BY 4.0",
+    "login_required": false
+  },
+  "route": "For each chain that maps to a row of Table 2, take the marginal posterior of log10 A_CRS and gamma_CRS, drop the burn-in the chain file itself declares (or the first 25% if it declares none), apply sample weights if the file carries them, and report the median and the 5th and 95th percentiles. The 90% credible region of the paper is reported as median with upper and lower bounds, so the comparison is median, median+upper, median-lower.",
+  "claims": [
+    {
+      "id": "C1",
+      "what": "ENTERPRISE + GWB, DR2full",
+      "log10_A": {"median": -14.54, "plus": 0.28, "minus": 0.41},
+      "gamma": {"median": 4.19, "plus": 0.73, "minus": 0.63}
+    },
+    {
+      "id": "C2",
+      "what": "ENTERPRISE + GWB, DR2new",
+      "log10_A": {"median": -13.94, "plus": 0.23, "minus": 0.48},
+      "gamma": {"median": 2.71, "plus": 1.18, "minus": 0.71}
+    },
+    {
+      "id": "C3",
+      "what": "ENTERPRISE + CURN, DR2full",
+      "log10_A": {"median": -14.53, "plus": 0.29, "minus": 0.44},
+      "gamma": {"median": 4.13, "plus": 0.80, "minus": 0.59}
+    }
+  ],
+  "secondary": {
+    "id": "S1",
+    "what": "abstract, spectral index fixed at 13/3, amplitude at a reference frequency of 1/yr",
+    "value": 2.5e-15,
+    "error": 0.7e-15,
+    "note": "Only checkable if the zip carries a fixed-gamma chain. If it does not, S1 is reported as not checkable and is not part of the verdict."
+  },
+  "tolerance": {
+    "median": "|delta| <= 0.01 in log10 A and in gamma. The paper prints two decimals, so rounding alone allows 0.005; the extra 0.005 covers quantile noise.",
+    "bounds": "|delta| <= 0.02 on each of the two credible bounds, because a 5th or 95th percentile is noisier than a median.",
+    "verdict": "Reproduced if every claim passes on the median and on both bounds. Partially reproduced if the medians pass and some bound does not. Not reproduced if a median fails."
+  },
+  "self_checks": [
+    "The number of samples read is printed per chain, and a chain with fewer than 10000 post-burn-in samples is reported as too short to summarise rather than summarised.",
+    "The mapping from file to table row is stated explicitly per chain, with the evidence used (path name, parameter names in the header, or the companion file). A chain whose row cannot be established from the file itself is reported unmapped and is not used.",
+    "log10 A and gamma are read by parameter name from the chain header, never by column index."
+  ],
+  "not_claimed": [
+    "We do not re-run ENTERPRISE or FORTYTWO.",
+    "We do not check the Hellings-Downs evidence, the Bayes factors, or Table 3.",
+    "Agreement here says nothing about whether the inference itself is right."
+  ]
+}

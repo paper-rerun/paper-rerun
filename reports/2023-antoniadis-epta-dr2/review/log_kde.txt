@@ -1,0 +1,7 @@
+DR2full hd_pl log10_A  paper +0.28 -0.41 | perc +0.2802 -0.4064 | KDE +0.2872 -0.4059
+DR2full hd_pl gamma    paper +0.73 -0.63 | perc +0.7324 -0.6330 | KDE +0.7423 -0.6402
+DR2new hd_pl log10_A  paper +0.23 -0.48 | perc +0.2329 -0.4831 | KDE +0.2419 -0.4839
+DR2new hd_pl gamma    paper +1.18 -0.71 | perc +1.1835 -0.7322 | KDE +1.1839 -0.7445
+DR2full crn_pl log10_A  paper +0.29 -0.44 | perc +0.2939 -0.4391 | KDE +0.2989 -0.4412
+DR2full crn_pl gamma    paper +0.80 -0.59 | perc +0.7969 -0.5898 | KDE +0.8026 -0.6007
+soma erro abs bordas: percentil 0.0490  KDE 0.1115

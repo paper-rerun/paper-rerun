@@ -1,0 +1,34 @@
+C2 gamma, borda de baixo. Artigo -0.71, ou seja p5 em 2.0000
+varredura de burn-in:
+   burn    0%  n 29990  mediana +2.7108  p5 +1.9723  menos 0.7386  (erro +0.0286)
+   burn    5%  n 28491  mediana +2.7153  p5 +1.9788  menos 0.7365  (erro +0.0265)
+   burn   10%  n 26991  mediana +2.7100  p5 +1.9776  menos 0.7324  (erro +0.0224)
+   burn   15%  n 25492  mediana +2.7114  p5 +1.9777  menos 0.7337  (erro +0.0237)
+   burn   20%  n 23992  mediana +2.7091  p5 +1.9786  menos 0.7305  (erro +0.0205)
+   burn   25%  n 22493  mediana +2.7103  p5 +1.9781  menos 0.7322  (erro +0.0222)
+   burn   30%  n 20993  mediana +2.7073  p5 +1.9771  menos 0.7302  (erro +0.0202)
+   burn   40%  n 17994  mediana +2.7144  p5 +1.9722  menos 0.7423  (erro +0.0323)
+   burn   50%  n 14995  mediana +2.7142  p5 +1.9681  menos 0.7461  (erro +0.0361)
+
+metodo de interpolacao do percentil, com burn-in de 25%:
+   linear                     menos 0.7322  (erro +0.0222)
+   lower                      menos 0.7323  (erro +0.0223)
+   higher                     menos 0.7322  (erro +0.0222)
+   nearest                    menos 0.7322  (erro +0.0222)
+   midpoint                   menos 0.7322  (erro +0.0222)
+   inverted_cdf               menos 0.7323  (erro +0.0223)
+   averaged_inverted_cdf      menos 0.7323  (erro +0.0223)
+   closest_observation        menos 0.7323  (erro +0.0223)
+   interpolated_inverted_cdf  menos 0.7323  (erro +0.0223)
+   hazen                      menos 0.7323  (erro +0.0223)
+   weibull                    menos 0.7323  (erro +0.0223)
+   median_unbiased            menos 0.7323  (erro +0.0223)
+   normal_unbiased            menos 0.7323  (erro +0.0223)
+
+efeito do burn-in nas seis grandezas (borda de baixo, 0% contra 25%):
+   C1 log10_A   0% 0.4079   25% 0.4064   artigo 0.41
+   C1 gamma     0% 0.6334   25% 0.6330   artigo 0.63
+   C2 log10_A   0% 0.4810   25% 0.4831   artigo 0.48
+   C2 gamma     0% 0.7386   25% 0.7322   artigo 0.71
+   C3 log10_A   0% 0.4390   25% 0.4391   artigo 0.44
+   C3 gamma     0% 0.6112   25% 0.5898   artigo 0.59

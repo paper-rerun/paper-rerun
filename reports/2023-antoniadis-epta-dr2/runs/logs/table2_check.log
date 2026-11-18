@@ -1,0 +1,22 @@
+Conferencia da Tabela 2 antes de rodar (18/11)
+
+Objetivo: saber de qual fonte vem cada alvo, porque o DESI DR2 ja tinha sido mordido
+por pdftotext desalinhando uma tabela.
+
+1. Ordem das linhas. O corpo da tabela no pdftotext sai nesta ordem de valores:
+   -14.53 / -14.52 / -14.54 / -14.53 / -14.47 / -14.49 / -14.50 / -14.51
+   O HTML do ar5iv da a mesma ordem e amarra cada uma ao rotulo:
+   ENTERPRISE+CURN, FORTYTWO+CURN, ENTERPRISE+GWB, FORTYTWO+GWB,
+   ENTERPRISE+Binned ORF, FORTYTWO+Binned ORF, ENTERPRISE+Chebyshev, ENTERPRISE+Legendre.
+   No texto do pdftotext os rotulos saem numa linha e os valores em outra, deslocados de um.
+   Quem ler so o pdftotext atribui -14.47 ao FORTYTWO+GWB, e e do ENTERPRISE+Binned ORF.
+
+2. Valores centrais: PDF e HTML batem nos oito, nas duas colunas de dado e nos dois parametros.
+
+3. Barras de erro: o pdftotext intercala o sobrescrito e o subscrito caractere a caractere,
+   e a ordem da intercalacao vira de linha pra linha. Pro ENTERPRISE+CURN DR2full o PDF
+   permite ler +0.29/-0.44 (HTML) ou +0.49/-0.24; o conjunto de digitos e o mesmo nos dois.
+   Ou seja: o PDF NAO decide a barra de erro. Os alvos de incerteza do claims.json vem do
+   HTML, que sai do fonte LaTeX, e isso esta dito no claims.json.
+   Onde a intercalacao e nao ambigua ela bate com o HTML, por exemplo ENTERPRISE+GWB DR2full,
+   {0.28, 0.41}, igual ao HTML.

@@ -1,0 +1,4 @@
+extracted/chains/DR2full/hd_pl/hd_pl ncol 78 npar 74
+  lnpost first50 mean 659406.3, last50 mean 659842.5, overall median 659839.1, min 658200.1
+extracted/chains/DR2new/hd_pl/hd_pl ncol 71 npar 67
+  lnpost first50 mean 536172.5, last50 mean 536559.5, overall median 536558.9, min 531299.4

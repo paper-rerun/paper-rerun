@@ -1,0 +1,12 @@
+C1 log10_A  tau 14.0  ESS 1604  bloco 71
+            sd do bootstrap em bloco:  p5 0.0133   mediana 0.0043   p95 0.0050
+C1 gamma    tau 13.7  ESS 1638  bloco 69
+            sd do bootstrap em bloco:  p5 0.0139   mediana 0.0087   p95 0.0202
+C2 log10_A  tau 27.5  ESS 819  bloco 138
+            sd do bootstrap em bloco:  p5 0.0349   mediana 0.0044   p95 0.0036
+C2 gamma    tau 21.7  ESS 1035  bloco 109
+            sd do bootstrap em bloco:  p5 0.0119   mediana 0.0111   p95 0.0695
+C3 log10_A  tau 13.6  ESS 1651  bloco 69
+            sd do bootstrap em bloco:  p5 0.0148   mediana 0.0045   p95 0.0043
+C3 gamma    tau 12.9  ESS 1738  bloco 65
+            sd do bootstrap em bloco:  p5 0.0115   mediana 0.0100   p95 0.0222

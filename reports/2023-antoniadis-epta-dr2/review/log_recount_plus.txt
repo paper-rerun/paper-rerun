@@ -1,0 +1,12 @@
+DR2full+/hd_pl  n=34420 pars=74 cols=78
+   log10_A  med -14.4781  +0.2854 -0.3506   | paper(EPTA-only row) d(med)+0.0619 d(+)+0.0054 d(-)-0.0594
+   gamma    med +4.0633  +0.6690 -0.6540   | paper(EPTA-only row) d(med)-0.1267 d(+)-0.0610 d(-)+0.0240
+DR2full+/crn_pl  n=29990 pars=74 cols=78
+   log10_A  med -14.4392  +0.2762 -0.3609   | paper(EPTA-only row) d(med)+0.0908 d(+)-0.0138 d(-)-0.0791
+   gamma    med +3.9819  +0.6797 -0.6091   | paper(EPTA-only row) d(med)-0.1481 d(+)-0.1203 d(-)+0.0191
+DR2new+/hd_pl  n=44190 pars=69 cols=73
+   log10_A  med -14.1006  +0.3681 -0.8202   | paper(EPTA-only row) d(med)-0.1606 d(+)+0.1381 d(-)+0.3402
+   gamma    med +3.0337  +1.8379 -1.0114   | paper(EPTA-only row) d(med)+0.3237 d(+)+0.6579 d(-)+0.3014
+DR2new+/crn_pl  n=29990 pars=72 cols=76
+   log10_A  med -14.2952  +0.4711 -0.9339   | paper(EPTA-only row) d(med)-0.2952 d(+)+0.1911 d(-)+0.1639
+   gamma    med +3.5277  +1.9306 -1.2417   | paper(EPTA-only row) d(med)+0.6177 d(+)+0.2106 d(-)+0.3717

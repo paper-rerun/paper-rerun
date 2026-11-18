@@ -1,0 +1,17 @@
+DR2full   hd_pl          gamma    Table 2      artigo +0.73 -0.63 | 90% +0.732 -0.633 | 68% +0.419 -0.383 | melhor nivel 90.0% (erro 0.005)
+DR2full   crn_pl         gamma    Table 2      artigo +0.80 -0.59 | 90% +0.797 -0.590 | 68% +0.442 -0.375 | melhor nivel 90.0% (erro 0.003)
+DR2new    hd_pl          gamma    Table 2      artigo +1.18 -0.71 | 90% +1.184 -0.732 | 68% +0.590 -0.460 | melhor nivel 90.0% (erro 0.026)
+DR2new    bin_b10_orf    gamma    Table 2 ORF  artigo +0.86 -0.71 | 90% +1.017 -0.767 | 68% +0.549 -0.459 | melhor nivel 85.2% (erro 0.032)
+DR2new    chebyshev_orf  gamma    Table 2 ORF  artigo +0.86 -0.76 | 90% +0.949 -0.749 | 68% +0.534 -0.451 | melhor nivel 87.5% (erro 0.065)
+DR2full+  crn_pl         log10_A  Table A.1    artigo +0.17 -0.20 | 90% +0.276 -0.361 | 68% +0.169 -0.202 | melhor nivel 67.8% (erro 0.003)
+DR2full+  crn_pl         gamma    Table A.1    artigo +0.40 -0.37 | 90% +0.680 -0.609 | 68% +0.397 -0.369 | melhor nivel 68.2% (erro 0.002)
+DR2full+  hd_pl          log10_A  Table A.1    artigo +0.18 -0.20 | 90% +0.285 -0.351 | 68% +0.180 -0.197 | melhor nivel 68.8% (erro 0.003)
+DR2full+  hd_pl          gamma    Table A.1    artigo +0.39 -0.40 | 90% +0.669 -0.654 | 68% +0.393 -0.405 | melhor nivel 67.5% (erro 0.002)
+DR2new+   crn_pl         log10_A  Table A.1    artigo +0.33 -0.52 | 90% +0.471 -0.934 | 68% +0.327 -0.520 | melhor nivel 68.0% (erro 0.003)
+DR2new+   crn_pl         gamma    Table A.1    artigo +1.12 -0.84 | 90% +1.931 -1.242 | 68% +1.117 -0.835 | melhor nivel 68.2% (erro 0.004)
+DR2new+   hd_pl          log10_A  Table A.1    artigo +0.25 -0.44 | 90% +0.368 -0.820 | 68% +0.254 -0.436 | melhor nivel 68.2% (erro 0.005)
+DR2new+   hd_pl          gamma    Table A.1    artigo +1.02 -0.67 | 90% +1.838 -1.011 | 68% +1.018 -0.673 | melhor nivel 68.0% (erro 0.005)
+
+Table 2      nivel que melhor casa: mediana 90.0%, faixa 90.0 a 90.0%
+Table 2 ORF  nivel que melhor casa: mediana 86.4%, faixa 85.2 a 87.5%
+Table A.1    nivel que melhor casa: mediana 68.1%, faixa 67.5 a 68.8%

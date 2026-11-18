@@ -1,0 +1,34 @@
+{
+  "exercise": "Blind independent recount of EPTA DR2 III (Antoniadis et al. 2023, A&A 678, A50; arXiv:2306.16214), Table 2 power-law constraints on the common red signal.",
+  "frozen_before_looking_at_data": true,
+  "date": "2026-11-18",
+  "paper_values_read_by_me": {
+    "source": "arXiv e-print source LaTeX (arxiv.org/e-print/2306.16214), file eptadr2_gwb_25psr.tex, table environment labelled tab:pl (= Table 2 in the journal version). Read from the LaTeX source rather than from a rendered PDF, so no OCR step and no risk of misreading a sub/superscript.",
+    "caption": "90% credible regions for the power law parameters constraints in the different Bayesian analyses with DE440 for both DR2full and DR2new.",
+    "targets": {
+      "ENTERPRISE+GWB_DR2full": {"log10A": {"c": -14.54, "minus": 0.41, "plus": 0.28}, "gamma": {"c": 4.19, "minus": 0.63, "plus": 0.73}},
+      "ENTERPRISE+GWB_DR2new":  {"log10A": {"c": -13.94, "minus": 0.48, "plus": 0.23}, "gamma": {"c": 2.71, "minus": 0.71, "plus": 1.18}},
+      "ENTERPRISE+CURN_DR2full":{"log10A": {"c": -14.53, "minus": 0.44, "plus": 0.29}, "gamma": {"c": 4.13, "minus": 0.59, "plus": 0.80}}
+    },
+    "known_internal_inconsistency_in_the_paper": "Sect. 4 (line 455 of the tex) and the conclusions (line 868) both quote the ENTERPRISE+GWB DR2new spectral index as 2.71_{-0.73}^{+1.18}, while Table 2 prints 2.71_{-0.71}^{+1.18}. I will report against the Table 2 value and flag the text value.",
+    "abstract_fixed_gamma": "If the spectral index is fixed at 13/3, both data sets give an amplitude of (2.5 +- 0.7)e-15 at f = 1/yr. Sect. 4 states log10A = -14.61_{-0.12}^{+0.11}; the conclusions state log10A = -14.61_{-0.15}^{+0.11}. These two are also mutually inconsistent in the lower bound; (2.5+-0.7)e-15 maps to about -14.60_{-0.15}^{+0.11}, matching the conclusions."
+  },
+  "route_i_intend_to_take": [
+    "Download Zenodo record 10.5281/zenodo.8091568 (the chains released with this paper), verify every file against the MD5 checksums the Zenodo API prints for the record.",
+    "Map directory/file names in the release to Table 2 rows using only internal evidence: directory naming, parameter-name lists in the chain's pars.txt / parameter files, number of pulsars, and whether an HD/ORF term is present (GWB vs CURN).",
+    "Load the post-burn-in samples for the two CRS power-law parameters, discard a burn-in fraction, and compute summary statistics.",
+    "Decide the summary statistic empirically: compute (a) median with 5th/95th percentiles, (b) mode with the highest-posterior-density 90% interval, and (c) mean with 5th/95th, and report which one reproduces all six published numbers. The paper's own wording ('central 95 and 99.7% credible regions' in the ORF appendix) is weak evidence for equal-tailed intervals; I will not assume it.",
+    "If a number misses, chase it: check burn-in, check thinning, check whether the chain is the DE440 one, check whether log10A is quoted at f=1/yr, check parameter column indexing, and check whether the released chain is the CURN run reused for the GWB row."
+  ],
+  "tolerance": {
+    "central_value": {"log10A": 0.02, "gamma": 0.05},
+    "interval_half_width": {"log10A": 0.05, "gamma": 0.10},
+    "why": "The paper quotes two decimals, so the quantisation alone is +-0.005. On top of that a 5th/95th percentile of an MCMC chain carries sampling error: for a few times 10^4 effectively independent samples the quantile standard error is of order a few times 0.01 in gamma and about 0.01 in log10A, and the chains are correlated so the effective sample size is smaller than the file length. The published numbers also come from a particular burn-in/thinning choice that the release does not necessarily pin down. So I allow 0.02 in log10A and 0.05 in gamma on the central value, and twice that on the credible-interval edges, which are noisier than the median by construction. A miss larger than this is a real disagreement and I will chase it rather than excuse it.",
+    "verdict_rule": "Reproduced if all six numbers (3 cases x 2 parameters) agree on the central value within the central tolerance AND the interval edges agree within the interval tolerance. Partial if the central values agree but edges do not. Failed otherwise."
+  },
+  "things_that_could_make_this_not_checkable": [
+    "The release may only contain chains for a subset of Table 2 rows.",
+    "The release may contain thinned chains with burn-in already removed, or may not, and may not say which.",
+    "The GWB (HD) run and the CURN run may not both be present."
+  ]
+}

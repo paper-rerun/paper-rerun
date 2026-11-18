@@ -1,0 +1,21 @@
+C1  ENTERPRISE + GWB, DR2full  (29990 amostras, 74 parametros + 4 colunas extras)
+   log10_A  nosso -14.5357 +0.2802 -0.4064 | artigo -14.54 +0.28 -0.41
+            delta  med +0.0043  mais +0.0002  menos -0.0036   -> ok ok ok
+            sem burn-in: med -14.5349 +0.2842 -0.4079 | 1o decimo -14.5353 vs ultimo -14.5567 (d -0.0214)
+   gamma    nosso +4.1914 +0.7324 -0.6330 | artigo +4.19 +0.73 -0.63
+            delta  med +0.0014  mais +0.0024  menos +0.0030   -> ok ok ok
+            sem burn-in: med +4.1828 +0.7409 -0.6334 | 1o decimo +4.1656 vs ultimo +4.2394 (d +0.0738)
+C2  ENTERPRISE + GWB, DR2new  (29990 amostras, 67 parametros + 4 colunas extras)
+   log10_A  nosso -13.9353 +0.2329 -0.4831 | artigo -13.94 +0.23 -0.48
+            delta  med +0.0047  mais +0.0029  menos +0.0031   -> ok ok ok
+            sem burn-in: med -13.9365 +0.2394 -0.4810 | 1o decimo -13.9404 vs ultimo -13.9309 (d +0.0095)
+   gamma    nosso +2.7103 +1.1835 -0.7322 | artigo +2.71 +1.18 -0.71
+            delta  med +0.0003  mais +0.0035  menos +0.0222   -> ok ok FALHA
+            sem burn-in: med +2.7108 +1.1899 -0.7386 | 1o decimo +2.7140 vs ultimo +2.7192 (d +0.0052)
+C3  ENTERPRISE + CURN, DR2full  (29990 amostras, 74 parametros + 4 colunas extras)
+   log10_A  nosso -14.5278 +0.2939 -0.4391 | artigo -14.53 +0.29 -0.44
+            delta  med +0.0022  mais +0.0039  menos -0.0009   -> ok ok ok
+            sem burn-in: med -14.5279 +0.2986 -0.4390 | 1o decimo -14.5222 vs ultimo -14.5377 (d -0.0155)
+   gamma    nosso +4.1273 +0.7969 -0.5898 | artigo +4.13 +0.80 -0.59
+            delta  med -0.0027  mais -0.0031  menos -0.0002   -> ok ok ok
+            sem burn-in: med +4.1272 +0.7945 -0.6112 | 1o decimo +4.1098 vs ultimo +4.1464 (d +0.0366)

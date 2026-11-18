@@ -1,0 +1,248 @@
+{
+ "tolerance": {
+  "median": 0.01,
+  "bound": 0.02
+ },
+ "cases": {
+  "C1": {
+   "label": "ENTERPRISE + GWB, DR2full",
+   "dir": "DR2full__hd_pl/hd_pl",
+   "n_samples": 29990,
+   "n_params": 74,
+   "n_columns": 78,
+   "extra_columns": 4,
+   "params": {
+    "log10_A": {
+     "param_name": "gw_hd_log10_A",
+     "column": 73,
+     "n_post_burn": 22493,
+     "frozen_rule_burn25": {
+      "median": -14.535652095273779,
+      "plus": 0.28022893777153435,
+      "minus": 0.4063720254579657,
+      "p5": -14.942024120731745,
+      "p95": -14.255423157502245
+     },
+     "no_burn_in": {
+      "median": -14.534862077662797,
+      "plus": 0.28416218599306653,
+      "minus": 0.40793792705289356,
+      "p5": -14.942800004715691,
+      "p95": -14.250699891669731
+     },
+     "stationarity_first_vs_last_tenth": {
+      "median_first_tenth": -14.535298694796078,
+      "median_last_tenth": -14.556660735460394,
+      "delta": -0.02136204066431624
+     },
+     "paper": {
+      "median": -14.54,
+      "plus": 0.28,
+      "minus": 0.41
+     },
+     "delta_median": 0.004347904726220264,
+     "delta_plus": 0.00022893777153432104,
+     "delta_minus": -0.0036279745420342846,
+     "pass_median": true,
+     "pass_plus": true,
+     "pass_minus": true
+    },
+    "gamma": {
+     "param_name": "gw_hd_gamma",
+     "column": 72,
+     "n_post_burn": 22493,
+     "frozen_rule_burn25": {
+      "median": 4.191404084315932,
+      "plus": 0.7323596420169638,
+      "minus": 0.6329750713128974,
+      "p5": 3.558429013003035,
+      "p95": 4.923763726332896
+     },
+     "no_burn_in": {
+      "median": 4.182796925507028,
+      "plus": 0.7409333278477064,
+      "minus": 0.633382762096494,
+      "p5": 3.549414163410534,
+      "p95": 4.9237302533547345
+     },
+     "stationarity_first_vs_last_tenth": {
+      "median_first_tenth": 4.165601272346961,
+      "median_last_tenth": 4.239440504972894,
+      "delta": 0.07383923262593317
+     },
+     "paper": {
+      "median": 4.19,
+      "plus": 0.73,
+      "minus": 0.63
+     },
+     "delta_median": 0.001404084315931975,
+     "delta_plus": 0.0023596420169638144,
+     "delta_minus": 0.002975071312897426,
+     "pass_median": true,
+     "pass_plus": true,
+     "pass_minus": true
+    }
+   }
+  },
+  "C2": {
+   "label": "ENTERPRISE + GWB, DR2new",
+   "dir": "DR2new__hd_pl/hd_pl",
+   "n_samples": 29990,
+   "n_params": 67,
+   "n_columns": 71,
+   "extra_columns": 4,
+   "params": {
+    "log10_A": {
+     "param_name": "gw_hd_log10_A",
+     "column": 66,
+     "n_post_burn": 22493,
+     "frozen_rule_burn25": {
+      "median": -13.935281496555291,
+      "plus": 0.23289264358914075,
+      "minus": 0.4831210652377145,
+      "p5": -14.418402561793005,
+      "p95": -13.70238885296615
+     },
+     "no_burn_in": {
+      "median": -13.936482551772073,
+      "plus": 0.23935077030519558,
+      "minus": 0.4809566707497712,
+      "p5": -14.417439222521844,
+      "p95": -13.697131781466878
+     },
+     "stationarity_first_vs_last_tenth": {
+      "median_first_tenth": -13.94042061088273,
+      "median_last_tenth": -13.930926938611893,
+      "delta": 0.009493672270837195
+     },
+     "paper": {
+      "median": -13.94,
+      "plus": 0.23,
+      "minus": 0.48
+     },
+     "delta_median": 0.004718503444708588,
+     "delta_plus": 0.0028926435891407365,
+     "delta_minus": 0.003121065237714493,
+     "pass_median": true,
+     "pass_plus": true,
+     "pass_minus": true
+    },
+    "gamma": {
+     "param_name": "gw_hd_gamma",
+     "column": 65,
+     "n_post_burn": 22493,
+     "frozen_rule_burn25": {
+      "median": 2.710311387957484,
+      "plus": 1.183508627834589,
+      "minus": 0.7322396897893337,
+      "p5": 1.97807169816815,
+      "p95": 3.893820015792073
+     },
+     "no_burn_in": {
+      "median": 2.7108412944177585,
+      "plus": 1.1899245940348475,
+      "minus": 0.7385620829432442,
+      "p5": 1.9722792114745142,
+      "p95": 3.900765888452606
+     },
+     "stationarity_first_vs_last_tenth": {
+      "median_first_tenth": 2.714024724268527,
+      "median_last_tenth": 2.7192139014638905,
+      "delta": 0.005189177195363381
+     },
+     "paper": {
+      "median": 2.71,
+      "plus": 1.18,
+      "minus": 0.71
+     },
+     "delta_median": 0.0003113879574838663,
+     "delta_plus": 0.003508627834589051,
+     "delta_minus": 0.022239689789333772,
+     "pass_median": true,
+     "pass_plus": true,
+     "pass_minus": false
+    }
+   }
+  },
+  "C3": {
+   "label": "ENTERPRISE + CURN, DR2full",
+   "dir": "DR2full__crn_pl/crn_pl",
+   "n_samples": 29990,
+   "n_params": 74,
+   "n_columns": 78,
+   "extra_columns": 4,
+   "params": {
+    "log10_A": {
+     "param_name": "gw_crn_log10_A",
+     "column": 73,
+     "n_post_burn": 22493,
+     "frozen_rule_burn25": {
+      "median": -14.527755345066002,
+      "plus": 0.293883885843254,
+      "minus": 0.43908202641030414,
+      "p5": -14.966837371476306,
+      "p95": -14.233871459222748
+     },
+     "no_burn_in": {
+      "median": -14.52791693071001,
+      "plus": 0.2986372421095851,
+      "minus": 0.4390170223113756,
+      "p5": -14.966933953021385,
+      "p95": -14.229279688600425
+     },
+     "stationarity_first_vs_last_tenth": {
+      "median_first_tenth": -14.522212009220183,
+      "median_last_tenth": -14.537690069849825,
+      "delta": -0.015478060629641632
+     },
+     "paper": {
+      "median": -14.53,
+      "plus": 0.29,
+      "minus": 0.44
+     },
+     "delta_median": 0.002244654933997836,
+     "delta_plus": 0.003883885843253998,
+     "delta_minus": -0.0009179735896958641,
+     "pass_median": true,
+     "pass_plus": true,
+     "pass_minus": true
+    },
+    "gamma": {
+     "param_name": "gw_crn_gamma",
+     "column": 72,
+     "n_post_burn": 22493,
+     "frozen_rule_burn25": {
+      "median": 4.127349535952171,
+      "plus": 0.7969489964397267,
+      "minus": 0.5897822404185531,
+      "p5": 3.537567295533618,
+      "p95": 4.924298532391898
+     },
+     "no_burn_in": {
+      "median": 4.12723783047888,
+      "plus": 0.7944848503500097,
+      "minus": 0.6111884534196306,
+      "p5": 3.51604937705925,
+      "p95": 4.92172268082889
+     },
+     "stationarity_first_vs_last_tenth": {
+      "median_first_tenth": 4.1098350991780395,
+      "median_last_tenth": 4.146411961762954,
+      "delta": 0.03657686258491477
+     },
+     "paper": {
+      "median": 4.13,
+      "plus": 0.8,
+      "minus": 0.59
+     },
+     "delta_median": -0.002650464047828649,
+     "delta_plus": -0.0030510035602733243,
+     "delta_minus": -0.00021775958144687468,
+     "pass_median": true,
+     "pass_plus": true,
+     "pass_minus": true
+    }
+   }
+  }
+ }
+}
