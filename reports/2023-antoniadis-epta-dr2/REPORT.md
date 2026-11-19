@@ -1,5 +1,7 @@
 # EPTA DR2 III — recount of the published posterior summaries
 
+- Date: 2026-11-18
+
 **Verdict on the frozen claims: Partially reproduced.** Seventeen of the eighteen numbers
 land inside the band. The one that misses is the lower bound of the spectral index in
 DR2new — and we now know why: **Table 2 misprints it.** The paper's own text gives
