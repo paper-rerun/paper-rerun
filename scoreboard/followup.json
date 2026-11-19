@@ -32,7 +32,7 @@
   "paper": "DrugEx",
   "repository": "CDDLeiden/DrugEx",
   "ask": "The validity column of the RNN rows in Table S4 counts non-empty strings, not parseable molecules, which their own deposited molecules confirm on all twenty RNN machine-rows; the ChEMBL 27 LSTM uniqueness of 0.600 reproduces under no reading we or a blind re-run could build; no released code computes either column, so which script produced them; and python -m drugex.generate fails on a default install because generate.py pulls in the optional qsprpred through drugex.train.",
-  "status": "posted"
+  "status": "answered"
  },
  {
   "kind": "Issue",
