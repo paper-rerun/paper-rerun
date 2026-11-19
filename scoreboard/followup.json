@@ -29,6 +29,13 @@
  },
  {
   "kind": "Issue",
+  "paper": "DrugEx",
+  "repository": "CDDLeiden/DrugEx",
+  "ask": "The validity column of the RNN rows in Table S4 counts non-empty strings, not parseable molecules, which their own deposited molecules confirm on all twenty RNN machine-rows; the ChEMBL 27 LSTM uniqueness of 0.600 reproduces under no reading we or a blind re-run could build; no released code computes either column, so which script produced them; and python -m drugex.generate fails on a default install because generate.py pulls in the optional qsprpred through drugex.train.",
+  "status": "posted"
+ },
+ {
+  "kind": "Issue",
   "paper": "PeSTo",
   "repository": "LBM-EPFL/PeSTo",
   "ask": "Ship or document the benchmark subset of contacts_rr5A_64nn_8192.h5 (issue #3); publish the 417-structure ScanNet list and state \"biounit 1, first model copy\" in the Methods; rename the pdbs_test/ files that hold \":\" and break git clone on Windows; say that the \"38 out of 53\" counts MaSIF-site, SPPIDER and PSIVER only; pin versions; and the 53 prediction files in pdbs_test/ match no released checkpoint (median 0.90 instead of 0.92), so anyone measuring them concludes the paper overstates Fig. 2b.",
