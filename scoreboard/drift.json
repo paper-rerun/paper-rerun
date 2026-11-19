@@ -3,7 +3,7 @@
   "report": "2022-qu-particle-transformer",
   "package": "weaver-core",
   "finding": "The README installs weaver-core>=0.4. With 0.5.3 the released ParT checkpoint runs without error but scores 0.123 accuracy instead of 0.860.",
-  "today": "installs weaver-core 0.5.4",
+  "today": "installs weaver-core 0.5.5",
   "status": "fixed or avoided"
  },
  {

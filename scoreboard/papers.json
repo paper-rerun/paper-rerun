@@ -1,5 +1,44 @@
 [
  {
+  "paper": "Nellie",
+  "report": "2025-lefebvre-nellie",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2025-lefebvre-nellie/REPORT.md",
+  "venue": "Nature Methods",
+  "year": 2025,
+  "field": "cell imaging",
+  "area": "Biology",
+  "verdict": "Partially reproduced",
+  "main_issue": "Scoring code penalises the baselines",
+  "finding": "The segmentation benchmark of Extended Data Fig. 2a/b: volume regenerated with the authors' own generator, four of the thirteen noise levels segmented with Nellie 0.4.1, scored with their own check_IoU. On the 100-cell slice the figure exports, 6 of our 8 frozen values land inside the band, IoU within 0.011 of print at three of the four levels. Nine things do not line up, and two of them change the published comparison. The if len(unique_labels) < 100 guard in the scoring code skips the matching loop and scores the cell zero whatever the overlap: Nellie never reaches it at any level we ran, at most 63 labels in a cell, while Triangle reaches it in all 1000 cells at σ = 8192, up to 1113 labels, and the published Triangle row there is exactly 0.0000 ± 0.0000. We reproduce that zero and the 0.0396 one level up, where only 27 cells trip the guard, so the non-monotonic bump in the published curve is the guard switching off. And fp goes negative when one label fills the crop, which scores a correct match F1 = 0. Both can only cost a method that over-segments or saturates, never the one being evaluated. The Source Data prints N = 10 on every row and that is arithmetically impossible: F1 is bounded in [0, 1], so three rows print an sd above the largest ten values can have, and two of them reconstruct exactly as 100 cells. Also: the level axis is labelled intensity where the generator varies length; add_noise clips the noise instead of the frame, so the x axis sweeps a background offset of σ/√(2π) together with the noise; and the release ships a runner for every competing method but none for Nellie, sets no seed, and its two pin sets contradict each other, so the figure cannot be rebuilt from it. Two of our own numbers do not reproduce and we cannot attribute them, F1 0.3624 against 0.1300 at σ = 32768 and 0.9800 against a printed 1.0000 at σ = 8 — but Otsu and Triangle, sharing the same volume, ground truth, noise draw and scoring, come back to four decimals, 14 of 16 numbers within 0.0027, so whatever that difference is, it is in the segmenter.",
+  "rerun_date": "2026-11-18"
+ },
+ {
+  "paper": "EPTA DR2 III",
+  "report": "2023-antoniadis-epta-dr2",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2023-antoniadis-epta-dr2/REPORT.md",
+  "venue": "A&A",
+  "year": 2023,
+  "field": "gravitational waves",
+  "area": "Physics",
+  "verdict": "Partially reproduced",
+  "main_issue": "",
+  "finding": "Recount of the published posterior summaries from the EPTA DR2 chains on Zenodo, not a re-run of the Bayesian search. Across the fourteen ENTERPRISE cells of Table 2 and Table A.1, 25 of the 28 medians come back within 0.005 of print, so the chains and the tables are the same analysis. Three things do not line up. Table 2 gives the DR2new GWB spectral index a lower bound of −0.71, but the paper's own Section 4 and conclusions both print −0.73 and the chain gives −0.7322, so the table misprints one digit — and that single cell was the whole of our frozen failure. Table A.1 is captioned “90% credible regions” but all eight of its ENTERPRISE numbers match our 68% equal-tailed bounds to within 0.005, with the best-fitting level between 67.5% and 68.8% on every one, while the same scan puts Table 2 at exactly 90.0%; as printed, a reader comparing the two tables would read the InPTA addition as tightening the constraint by about 40%. And the three DR2new ORF rows of Table 2 match no standard level, best fit 85-87%, the binned row off by 0.157 on a bound and 0.022 on a median, while the same three chains in DR2full reproduce to within 0.005 — unexplained. The blind recount found the first of the three by reading the LaTeX source instead of the PDF; the adversarial review forced the survey that found the other two, after pointing out that the three frozen claims were the quiet corner of a release that supports fourteen cells.",
+  "rerun_date": "2026-11-18"
+ },
+ {
+  "paper": "DESI DR2 BAO",
+  "report": "2025-desi-dr2-bao",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2025-desi-dr2-bao/REPORT.md",
+  "venue": "Phys. Rev. D",
+  "year": 2025,
+  "field": "cosmology",
+  "area": "Physics",
+  "verdict": "Reproduced",
+  "main_issue": "",
+  "finding": "Flat ΛCDM from the public DR2 BAO distances, our own likelihood and a dense marginalised grid with CAMB: Omega_m = 0.29755 ± 0.00863 against 0.2975 ± 0.0086, r_d h = 101.5313 ± 0.7360 Mpc against 101.54 ± 0.73, and H0 with BBN 68.5466 ± 0.5980 against 68.51 ± 0.58. All three inside the pre-registered band, the worst at 0.063σ. The DR1 prior defect does not repeat: refitting H0 under the slice DR1's chain imposed gives −0.223σ and under DR2's varying-N_eff prior −0.242σ, both outside the band, so only the prior the paper prints reproduces the paper's H0. Three things about the release: the released 13×13 covariance is not the likelihood of Table IV, being 0.2 to 11.5% wider along the isotropic direction while matching to 0.1-2.5% along the Alcock-Paczynski one; the Lyman-alpha row of the mean file lists D_H before D_M, the reverse of every other tracer; and the Lyman-alpha D_M/r_d of Table IV is truncated, not rounded. An independent blind rerun got the same three values. An adversarial review then found two false statements the report made about itself, both corrected and named in it: the grids were not pre-registered, and one frozen edge-mass gate was missed.",
+  "rerun_date": "2026-11-17"
+ },
+ {
   "paper": "MACE-OFF",
   "report": "2025-kovacs-maceoff",
   "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2025-kovacs-maceoff/REPORT.md",
@@ -284,31 +323,5 @@
   "main_issue": "More compute than one home GPU",
   "finding": "All four values fall inside our 95% interval on a weighted 300k-window sample. The full test set would take about 115 days on our GPU.",
   "rerun_date": "2026-10-22"
- },
- {
-  "paper": "DESI DR2 BAO",
-  "report": "2025-desi-dr2-bao",
-  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2025-desi-dr2-bao/REPORT.md",
-  "venue": "Phys. Rev. D",
-  "year": 2025,
-  "field": "cosmology",
-  "area": "Physics",
-  "verdict": "Reproduced",
-  "main_issue": "Released covariance differs from the published table",
-  "finding": "Flat ΛCDM from the public DR2 BAO distances, our own likelihood and a dense marginalised grid with CAMB: Omega_m = 0.29755 ± 0.00863 against 0.2975 ± 0.0086, r_d h = 101.5313 ± 0.7360 Mpc against 101.54 ± 0.73, and H0 with BBN 68.5466 ± 0.5980 against 68.51 ± 0.58. All three inside the pre-registered band, the worst at 0.063σ. The DR1 prior defect does not repeat: refitting H0 under the slice DR1's chain imposed gives −0.223σ and under DR2's varying-N_eff prior −0.242σ, both outside the band, so only the prior the paper prints reproduces the paper's H0. Three things about the release: the released 13×13 covariance is not the likelihood of Table IV, being 0.2 to 11.5% wider along the isotropic direction while matching to 0.1-2.5% along the Alcock-Paczynski one; the Lyman-alpha row of the mean file lists D_H before D_M, the reverse of every other tracer; and the Lyman-alpha D_M/r_d of Table IV is truncated, not rounded. An independent blind rerun got the same three values. An adversarial review then found two false statements the report made about itself, both corrected and named in it: the grids were not pre-registered, and one frozen edge-mass gate was missed.",
-  "rerun_date": "2026-11-17"
- },
- {
-  "paper": "EPTA DR2 III",
-  "report": "2023-antoniadis-epta-dr2",
-  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2023-antoniadis-epta-dr2/REPORT.md",
-  "venue": "Astronomy & Astrophysics",
-  "year": 2023,
-  "field": "gravitational waves",
-  "area": "Physics",
-  "verdict": "Partially reproduced",
-  "main_issue": "Two tables misstate what they print",
-  "finding": "Recount of the published posterior summaries from the EPTA DR2 chains on Zenodo, not a re-run of the Bayesian search. Across the fourteen ENTERPRISE cells of Table 2 and Table A.1, 25 of the 28 medians come back within 0.005 of print, so the chains and the tables are the same analysis. Three things do not line up. Table 2 gives the DR2new GWB spectral index a lower bound of −0.71, but the paper's own Section 4 and conclusions both print −0.73 and the chain gives −0.7322, so the table misprints one digit — and that single cell was the whole of our frozen failure. Table A.1 is captioned “90% credible regions” but all eight of its ENTERPRISE numbers match our 68% equal-tailed bounds to within 0.005, with the best-fitting level between 67.5% and 68.8% on every one, while the same scan puts Table 2 at exactly 90.0%; as printed, a reader comparing the two tables would read the InPTA addition as tightening the constraint by about 40%. And the three DR2new ORF rows of Table 2 match no standard level, best fit 85-87%, the binned row off by 0.157 on a bound and 0.022 on a median, while the same three chains in DR2full reproduce to within 0.005 — unexplained. The blind recount found the first of the three by reading the LaTeX source instead of the PDF; the adversarial review forced the survey that found the other two, after pointing out that the three frozen claims were the quiet corner of a release that supports fourteen cells.",
-  "rerun_date": "2026-11-18"
  }
 ]

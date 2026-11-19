@@ -56,6 +56,7 @@ MAIN_ISSUE = {
 	"2025-stringer-cellpose3": "Test data not released",
 	"2025-zhai-plantcad": "More compute than one home GPU",
 	"2025-fallahpour-codontransformer": "Source Data table corrupt on deposit",
+	"2025-lefebvre-nellie": "Scoring code penalises the baselines",
 }
 
 

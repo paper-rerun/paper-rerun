@@ -1,0 +1,26 @@
+{
+ "8": {
+  "size_mb": 796.3,
+  "nellie_s": "ja existia",
+  "otsu_s": 22.2,
+  "triangle_s": 18.2
+ },
+ "1024": {
+  "size_mb": 796.3,
+  "nellie_s": 1475.9,
+  "otsu_s": 22.5,
+  "triangle_s": 24.6
+ },
+ "8192": {
+  "size_mb": 796.3,
+  "nellie_s": 1816.9,
+  "otsu_s": 15.4,
+  "triangle_s": 36.4
+ },
+ "32768": {
+  "size_mb": 796.3,
+  "nellie_s": 4057.1,
+  "otsu_s": 42.4,
+  "triangle_s": 27.1
+ }
+}

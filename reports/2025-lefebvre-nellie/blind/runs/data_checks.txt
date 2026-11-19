@@ -1,0 +1,115 @@
+--- Multigrid_F1_lv5_nellie.txt ---
+header: ['Noise', 'Nellie', 'Nellie', 'Nellie']
+rows:   13, columns per row: [4]
+C1 noise column == expected 13 levels: True  ([8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768])
+C2 N column distinct values: ['10']
+
+--- IoU_Multigrid_F1_lv5_nellie.txt ---
+header: ['Noise', 'Nellie', 'Nellie', 'Nellie']
+rows:   13, columns per row: [4]
+C1 noise column == expected 13 levels: True  ([8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768])
+C2 N column distinct values: ['10']
+
+C3 F1/IoU row alignment:
+  same row count: True
+  same noise order: True
+  same N column: True
+
+=== F1: C4 / C5 / N-consistency ===
+  noise          mean            sd    N  sdmax(N=10)  sdmax(N=100)                      verdict
+      8  1.0000000000  0.0000000000   10     0.000000      0.000000                           ok
+     16  1.0000000000  0.0000000000   10     0.000000      0.000000                           ok
+     32  1.0000000000  0.0000000000   10     0.000000      0.000000                           ok
+     64  1.0000000000  0.0000000000   10     0.000000      0.000000                           ok
+    128  1.0000000000  0.0000000000   10     0.000000      0.000000                           ok
+    256  1.0000000000  0.0000000000   10     0.000000      0.000000                           ok
+    512  1.0000000000  0.0000000000   10     0.000000      0.000000                           ok
+   1024  0.9809523810  0.1335032930   10     0.057143      0.133503              N=10 IMPOSSIBLE
+   2048  0.9466666667  0.2196967607   10     0.160000      0.219697              N=10 IMPOSSIBLE
+   4096  0.9475000000  0.2129994131   10     0.157500      0.218789              N=10 IMPOSSIBLE
+   8192  0.8036324786  0.3649624567   10     0.392819      0.394328                           ok
+  16384  0.5357914308  0.3412057061   10     0.475119      0.496268                           ok
+  32768  0.1300426936  0.1135178150   10     0.303504      0.336287                           ok
+
+=== IoU: C4 / C5 / N-consistency ===
+  noise          mean            sd    N  sdmax(N=10)  sdmax(N=100)                      verdict
+      8  0.7340524845  0.1869225936   10     0.415647      0.439100                           ok
+     16  0.7467186583  0.1647048170   10     0.405262      0.432349                           ok
+     32  0.7474839605  0.1643319607   10     0.404741      0.432283                           ok
+     64  0.7540938075  0.1648867121   10     0.400754      0.427807                           ok
+    128  0.7641067185  0.1623590204   10     0.396532      0.421696                           ok
+    256  0.7655832143  0.1607287035   10     0.396098      0.420713                           ok
+    512  0.7554049155  0.1733846574   10     0.400076      0.426948                           ok
+   1024  0.7703848238  0.1630871702   10     0.395028      0.420145                           ok
+   2048  0.7278020572  0.2275407425   10     0.421940      0.443161                           ok
+   4096  0.7031292002  0.2287067497   10     0.453550      0.454520                           ok
+   8192  0.6198964329  0.2986809070   10     0.468708      0.485306                           ok
+  16384  0.5118902371  0.3034934986   10     0.489267      0.498323                           ok
+  32768  0.3131364879  0.2965925457   10     0.451299      0.461443                           ok
+
+=== Which N reproduces the published (mean, sd) pair exactly? ===
+For each F1 row, search for a multiset of N section scores drawn from the
+F1 values the released code can emit, {0} U {2/(2+fp)}, matching mean and
+population sd to 5e-10.
+noise      8: mean 1.0000000000 sd 0.0000000000 (published N=10)
+    N=10: 10 x 1.0
+    N=100: 100 x 1.0
+    N=1000: 1000 x 1.0
+noise     16: mean 1.0000000000 sd 0.0000000000 (published N=10)
+    N=10: 10 x 1.0
+    N=100: 100 x 1.0
+    N=1000: 1000 x 1.0
+noise     32: mean 1.0000000000 sd 0.0000000000 (published N=10)
+    N=10: 10 x 1.0
+    N=100: 100 x 1.0
+    N=1000: 1000 x 1.0
+noise     64: mean 1.0000000000 sd 0.0000000000 (published N=10)
+    N=10: 10 x 1.0
+    N=100: 100 x 1.0
+    N=1000: 1000 x 1.0
+noise    128: mean 1.0000000000 sd 0.0000000000 (published N=10)
+    N=10: 10 x 1.0
+    N=100: 100 x 1.0
+    N=1000: 1000 x 1.0
+noise    256: mean 1.0000000000 sd 0.0000000000 (published N=10)
+    N=10: 10 x 1.0
+    N=100: 100 x 1.0
+    N=1000: 1000 x 1.0
+noise    512: mean 1.0000000000 sd 0.0000000000 (published N=10)
+    N=10: 10 x 1.0
+    N=100: 100 x 1.0
+    N=1000: 1000 x 1.0
+noise   1024: mean 0.9809523810 sd 0.1335032930 (published N=10)
+    no exact decomposition found at N in (10, 100, 1000)
+noise   2048: mean 0.9466666667 sd 0.2196967607 (published N=10)
+    no exact decomposition found at N in (10, 100, 1000)
+noise   4096: mean 0.9475000000 sd 0.2129994131 (published N=10)
+    no exact decomposition found at N in (10, 100, 1000)
+noise   8192: mean 0.8036324786 sd 0.3649624567 (published N=10)
+    no exact decomposition found at N in (10, 100, 1000)
+noise  16384: mean 0.5357914308 sd 0.3412057061 (published N=10)
+    no exact decomposition found at N in (10, 100, 1000)
+noise  32768: mean 0.1300426936 sd 0.1135178150 (published N=10)
+    no exact decomposition found at N in (10, 100, 1000)
+
+=== IoU rows: same question, continuous values so only the N bound applies ===
+noise      8: mean 0.7340524845 sd 0.1869225936 N=10 | sd/sdmax(10)=  0.450 sd/sdmax(100)=  0.426
+noise     16: mean 0.7467186583 sd 0.1647048170 N=10 | sd/sdmax(10)=  0.406 sd/sdmax(100)=  0.381
+noise     32: mean 0.7474839605 sd 0.1643319607 N=10 | sd/sdmax(10)=  0.406 sd/sdmax(100)=  0.380
+noise     64: mean 0.7540938075 sd 0.1648867121 N=10 | sd/sdmax(10)=  0.411 sd/sdmax(100)=  0.385
+noise    128: mean 0.7641067185 sd 0.1623590204 N=10 | sd/sdmax(10)=  0.409 sd/sdmax(100)=  0.385
+noise    256: mean 0.7655832143 sd 0.1607287035 N=10 | sd/sdmax(10)=  0.406 sd/sdmax(100)=  0.382
+noise    512: mean 0.7554049155 sd 0.1733846574 N=10 | sd/sdmax(10)=  0.433 sd/sdmax(100)=  0.406
+noise   1024: mean 0.7703848238 sd 0.1630871702 N=10 | sd/sdmax(10)=  0.413 sd/sdmax(100)=  0.388
+noise   2048: mean 0.7278020572 sd 0.2275407425 N=10 | sd/sdmax(10)=  0.539 sd/sdmax(100)=  0.513
+noise   4096: mean 0.7031292002 sd 0.2287067497 N=10 | sd/sdmax(10)=  0.504 sd/sdmax(100)=  0.503
+noise   8192: mean 0.6198964329 sd 0.2986809070 N=10 | sd/sdmax(10)=  0.637 sd/sdmax(100)=  0.615
+noise  16384: mean 0.5118902371 sd 0.3034934986 N=10 | sd/sdmax(10)=  0.620 sd/sdmax(100)=  0.609
+noise  32768: mean 0.3131364879 sd 0.2965925457 N=10 | sd/sdmax(10)=  0.657 sd/sdmax(100)=  0.643
+
+=== other methods, N column and the same N=10 feasibility test (F1 files) ===
+Multigrid_F1_lv5_mitograph.txt           N=  10 rows= 13 rows where N=10 is impossible:   2  where N=100 is impossible:   0
+Multigrid_F1_lv5_mitometer.txt           N=  10 rows= 13 rows where N=10 is impossible:   1  where N=100 is impossible:   0
+Multigrid_F1_lv5_nellie.txt              N=  10 rows= 13 rows where N=10 is impossible:   3  where N=100 is impossible:   0
+Multigrid_F1_lv5_otsu.txt                N=  10 rows= 13 rows where N=10 is impossible:   0  where N=100 is impossible:   0
+Multigrid_F1_lv5_triangle.txt            N=  10 rows= 13 rows where N=10 is impossible:   0  where N=100 is impossible:   0

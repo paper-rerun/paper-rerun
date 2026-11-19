@@ -1,0 +1,30 @@
+C - which axis carries intensity in the clean volume
+
+axis 0: peak 32767..32767 (range 0)   voxels 344..2342 (range 1999)
+axis 1: peak 32767..32767 (range 0)   voxels 406..2266 (range 1860)
+axis 2: peak 6553..58982 (range 52429)   voxels 1222..1222 (range 0)
+the generator's intensity_vector runs 6553 -> 58982
+check_IoU names its axes [thickness, intensity, length]; visualize.py slices [:, level, :] and calls that an intensity level
+
+D - fp goes negative when one label fills the section crop
+
+output = one label on the object:      f1 1.0000  iou 1.0000
+output = that label filling the crop:  f1 0.0000  iou 0.3554
+fp = len(unique[unique != tp_label]) - 1 assumes label 0 is present in the crop
+
+E - is the ground truth geometry degenerate at short lengths, lv5 included
+
+length level 0 (4.0 px): axis1 spans 3..3, axis2 spans 3..3  -> straight rod pinned in the corner
+length level 3 (16.0 px): axis1 spans 15..15, axis2 spans 15..15  -> straight rod pinned in the corner
+length level 5 (24.0 px): axis1 spans 20..23, axis2 spans 20..23  -> curved
+length level 7 (32.0 px): axis1 spans 20..30, axis2 spans 20..30  -> curved
+length level 9 (40.0 px): axis1 spans 20..30, axis2 spans 20..30  -> curved
+create_skeleton_sub_volume clips with np.clip(y, 0, length-1), not the 50-voxel cell
+the exported series is lv5
+
+F - is the added noise Gaussian, or half-normal plus an offset
+
+nominal std   256 -> added mean    103.0  sd    151.0   (std/sqrt(2pi) =    102.1)
+nominal std  8192 -> added mean   3278.3  sd   4795.6   (std/sqrt(2pi) =   3268.1)
+nominal std 32768 -> added mean  12715.9  sd  18104.3   (std/sqrt(2pi) =  13072.5)
+utils.add_noise clips the noise, not the noisy frame

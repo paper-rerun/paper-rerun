@@ -1,0 +1,11 @@
+level  metric  draw 0   draw 1   |diff|   sd across the 2 draws   sd printed (N=10)
+    8  f1      0.9760   0.9787   0.0027   0.0019                 0.0000
+ 1024  f1      0.9817   0.9821   0.0003   0.0002                 0.1335
+ 8192  f1      0.8173   0.8146   0.0027   0.0019                 0.3650
+32768  f1      0.4161   0.4315   0.0153   0.0108                 0.1135
+    8  iou     0.7017   0.7032   0.0015   0.0010                 0.1869
+ 1024  iou     0.7311   0.7360   0.0049   0.0035                 0.1631
+ 8192  iou     0.5964   0.5983   0.0020   0.0014                 0.2987
+32768  iou     0.4180   0.4204   0.0024   0.0017                 0.2966
+
+On the seven pairs with a non-zero printed sd, the printed bar is 10x to 542x the spread between two independent draws.

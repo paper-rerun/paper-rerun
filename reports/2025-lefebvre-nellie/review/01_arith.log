@@ -1,0 +1,127 @@
+published rows (all 13 levels), F1 then IoU:
+  f1        8  1.0000000000  0.0000000000  N=10
+  f1       16  1.0000000000  0.0000000000  N=10
+  f1       32  1.0000000000  0.0000000000  N=10
+  f1       64  1.0000000000  0.0000000000  N=10
+  f1      128  1.0000000000  0.0000000000  N=10
+  f1      256  1.0000000000  0.0000000000  N=10
+  f1      512  1.0000000000  0.0000000000  N=10
+  f1     1024  0.9809523810  0.1335032930  N=10
+  f1     2048  0.9466666667  0.2196967607  N=10
+  f1     4096  0.9475000000  0.2129994131  N=10
+  f1     8192  0.8036324786  0.3649624567  N=10
+  f1    16384  0.5357914308  0.3412057061  N=10
+  f1    32768  0.1300426936  0.1135178150  N=10
+  iou       8  0.7340524845  0.1869225936  N=10
+  iou      16  0.7467186583  0.1647048170  N=10
+  iou      32  0.7474839605  0.1643319607  N=10
+  iou      64  0.7540938075  0.1648867121  N=10
+  iou     128  0.7641067185  0.1623590204  N=10
+  iou     256  0.7655832143  0.1607287035  N=10
+  iou     512  0.7554049155  0.1733846574  N=10
+  iou    1024  0.7703848238  0.1630871702  N=10
+  iou    2048  0.7278020572  0.2275407425  N=10
+  iou    4096  0.7031292002  0.2287067497  N=10
+  iou    8192  0.6198964329  0.2986809070  N=10
+  iou   16384  0.5118902371  0.3034934986  N=10
+  iou   32768  0.3131364879  0.2965925457  N=10
+
+A. grid_N.npz vs grid_N_t0.npz identical? (the report's main table and draw 0)
+       8  f1 True  iou True
+    1024  f1 True  iou True
+    8192  f1 True  iou True
+   32768  f1 True  iou True
+
+B. report's verdict table recomputed (primary = mean of 10 means over axis 1)
+  level metric  mean      sd(ax1)   pub mean  pub sd   delta     band    pass
+      8 f1      0.9760    0.0092    1.0000    0.0000   -0.0240   0.0100  FAIL
+      8 iou     0.7017    0.0586    0.7341    0.1869   -0.0324   0.1869  ok
+   1024 f1      0.9817    0.0022    0.9810    0.1335   +0.0008   0.1335  ok
+   1024 iou     0.7311    0.0564    0.7704    0.1631   -0.0393   0.1631  ok
+   8192 f1      0.8173    0.0315    0.8036    0.3650   +0.0137   0.3650  ok
+   8192 iou     0.5964    0.0355    0.6199    0.2987   -0.0235   0.2987  ok
+  32768 f1      0.4161    0.0696    0.1300    0.1135   +0.2861   0.1135  FAIL
+  32768 iou     0.4180    0.0224    0.3131    0.2966   +0.1048   0.2966  ok
+
+C. aggregation scan, including candidates the report never tried
+  mean |sd - pub sd| over the 8 pairs, and over the 6 pairs whose mean reproduces:
+    mean of 10 within-slice sds, ax1               8 pairs 0.0598   6 pairs 0.0128
+    all 1000 cells (ddof0)                         8 pairs 0.0625   6 pairs 0.0146
+    all 1000 cells (ddof1)                         8 pairs 0.0626   6 pairs 0.0146
+    median-ish: sd of 100 cells in middle ax1 slice  8 pairs 0.0644   6 pairs 0.0176
+    mean of 10 within-slice sds, ax0               8 pairs 0.0679   6 pairs 0.0357
+    sd of 10 means over ax2 (called length)        8 pairs 0.0759   6 pairs 0.0654
+    mean of 10 within-slice sds, ax2               8 pairs 0.1066   6 pairs 0.1116
+    sd of 10 means over ax0 (thickness)            8 pairs 0.1278   6 pairs 0.1615
+    sd of 10 means over ax1 (called intensity)     8 pairs 0.1613   6 pairs 0.2062
+    sd of 10 within-slice sds, ax1                 8 pairs 0.1818   6 pairs 0.2206
+    sem of 10 means over ax1                       8 pairs 0.1841   6 pairs 0.2297
+    sem over 1000 cells                            8 pairs 0.1877   6 pairs 0.2326
+
+D. per-pair comparison for the best few candidates
+  all 1000 cells (ddof0)
+         8 f1    ours 0.1497   pub 0.0000   diff +0.1497
+         8 iou   ours 0.1926   pub 0.1869   diff +0.0057
+      1024 f1    ours 0.1290   pub 0.1335   diff -0.0045
+      1024 iou   ours 0.1791   pub 0.1631   diff +0.0160
+      8192 f1    ours 0.3758   pub 0.3650   diff +0.0109
+      8192 iou   ours 0.2982   pub 0.2987   diff -0.0005
+     32768 f1    ours 0.3767   pub 0.1135   diff +0.2631
+     32768 iou   ours 0.3465   pub 0.2966   diff +0.0499
+  mean of 10 within-slice sds, ax1
+         8 f1    ours 0.1457   pub 0.0000   diff +0.1457
+         8 iou   ours 0.1828   pub 0.1869   diff -0.0041
+      1024 f1    ours 0.1281   pub 0.1335   diff -0.0054
+      1024 iou   ours 0.1689   pub 0.1631   diff +0.0059
+      8192 f1    ours 0.3736   pub 0.3650   diff +0.0086
+      8192 iou   ours 0.2947   pub 0.2987   diff -0.0039
+     32768 f1    ours 0.3698   pub 0.1135   diff +0.2563
+     32768 iou   ours 0.3454   pub 0.2966   diff +0.0488
+  mean of 10 within-slice sds, ax2
+         8 f1    ours 0.0415   pub 0.0000   diff +0.0415
+         8 iou   ours 0.1628   pub 0.1869   diff -0.0242
+      1024 f1    ours 0.0369   pub 0.1335   diff -0.0966
+      1024 iou   ours 0.1628   pub 0.1631   diff -0.0003
+      8192 f1    ours 0.1057   pub 0.3650   diff -0.2592
+      8192 iou   ours 0.1610   pub 0.2987   diff -0.1377
+     32768 f1    ours 0.2553   pub 0.1135   diff +0.1418
+     32768 iou   ours 0.1448   pub 0.2966   diff -0.1518
+  sd of 10 means over ax2 (called length)
+         8 f1    ours 0.0720   pub 0.0000   diff +0.0720
+         8 iou   ours 0.0929   pub 0.1869   diff -0.0941
+      1024 f1    ours 0.0548   pub 0.1335   diff -0.0787
+      1024 iou   ours 0.0544   pub 0.1631   diff -0.1087
+      8192 f1    ours 0.3163   pub 0.3650   diff -0.0486
+      8192 iou   ours 0.2405   pub 0.2987   diff -0.0581
+     32768 f1    ours 0.2562   pub 0.1135   diff +0.1427
+     32768 iou   ours 0.3006   pub 0.2966   diff +0.0041
+
+E. replicate spread, recomputed, with the n=2 confidence interval on sigma
+  level metric  draw0    draw1    sd(ddof1)  pub sd   ratio   sd 95%% CI on sigma
+      8 f1      0.9760   0.9787   0.001886   0.0000       0.0  [0.00084, 0.06017]
+   1024 f1      0.9817   0.9821   0.000246   0.1335     542.1  [0.00011, 0.00786]
+   8192 f1      0.8173   0.8146   0.001908   0.3650     191.3  [0.00085, 0.06089]
+  32768 f1      0.4161   0.4315   0.010830   0.1135      10.5  [0.00483, 0.34561]
+      8 iou     0.7017   0.7032   0.001041   0.1869     179.6  [0.00046, 0.03321]
+   1024 iou     0.7311   0.7360   0.003495   0.1631      46.7  [0.00156, 0.11154]
+   8192 iou     0.5964   0.5983   0.001398   0.2987     213.6  [0.00062, 0.04461]
+  32768 iou     0.4180   0.4204   0.001721   0.2966     172.4  [0.00077, 0.05491]
+  ratio range over the 7 pairs with pub sd > 0: 10.5 to 542.1
+  pairs where the 95%% upper bound on sigma still falls below the printed sd:
+     1024 f1   upper 0.0079 vs printed 0.1335 -> below
+     8192 f1   upper 0.0609 vs printed 0.3650 -> below
+    32768 f1   upper 0.3456 vs printed 0.1135 -> NOT below
+        8 iou  upper 0.0332 vs printed 0.1869 -> below
+     1024 iou  upper 0.1115 vs printed 0.1631 -> below
+     8192 iou  upper 0.0446 vs printed 0.2987 -> below
+    32768 iou  upper 0.0549 vs printed 0.2966 -> below
+
+F. cells scoring both f1 == 0 and iou == 0, per level (report says 10, 0, 33, 58)
+       8  f1==0   22  iou==0   10  both   10  f1==0 & 0<iou   12
+    1024  f1==0   12  iou==0    0  both    0  f1==0 & 0<iou   12
+    8192  f1==0  152  iou==0   33  both   33  f1==0 & 0<iou  119
+   32768  f1==0  344  iou==0   58  both   58  f1==0 & 0<iou  286
+
+G. sigma=8 F1: how many of 1000 cells fail (report says 22)
+  draw _t0: cells with f1 < 1: 26 ; mean 0.9760
+  draw _t1: cells with f1 < 1: 24 ; mean 0.9787

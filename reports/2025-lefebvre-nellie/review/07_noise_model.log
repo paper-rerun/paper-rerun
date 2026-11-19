@@ -1,0 +1,12 @@
+toy delta blurred by add_noise(psf_sigma=0.85), profiles through the peak
+  along axis0 (z): [0, 0, 13217, 0, 0]
+  along axis1 (y): [829, 6615, 13217, 6615, 829]
+  along axis2 (x): [829, 6615, 13217, 6615, 829]
+  -> add_noise loops over the first axis of whatever it is given; multi_grid.py hands it
+     a 3D volume, so each z slice is blurred in 2D and there is no axial blur at all.
+
+background of a zero volume at gaussian_std=32768, no Poisson:
+  mean 12763  min 0  max 65535  (a zero-mean normal would give mean 0)
+  sigma / sqrt(2*pi) = 13073, the mean of a normal with its negative half set to zero
+
+first 3 z slices of the real sigma=32768 file: mean 12800  median 16  min 0

@@ -1,0 +1,5 @@
+triangle std  8192: occupancy 0.0244  global labels 1134942  cells with >=100 labels 1000 of 1000  median 1014  max 1113
+otsu     std 32768: occupancy 0.2610  global labels 51718  cells with >=100 labels 0 of 1000  median 44  max 65
+triangle std 32768: occupancy 0.2333  global labels 96462  cells with >=100 labels 37 of 1000  median 82  max 108
+triangle std  1024: occupancy 0.0190  global labels 36869  cells with >=100 labels 0 of 1000  median 33  max 56
+otsu     std  8192: occupancy 0.0074  global labels 2789  cells with >=100 labels 0 of 1000  median 2  max 77

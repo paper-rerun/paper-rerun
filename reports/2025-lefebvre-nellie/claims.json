@@ -1,0 +1,45 @@
+{
+  "paper": "Lefebvre et al., Nellie: automated organelle segmentation, tracking and hierarchical feature extraction in 2D/3D live-cell microscopy, Nature Methods (2025)",
+  "repos": {
+    "nellie": "aelefebv/nellie, pinned to the released version 0.4.1, not main",
+    "benchmark": "aelefebv/nellie-supplemental at 7a639bca9b426a1addbf358fe8fffb389949b30d"
+  },
+  "source_of_targets": "Source Data of Extended Data Fig. 2, Springer MOESM16 zip, folder seg_sim_exported_data/, files Multigrid_F1_lv5_nellie.txt and IoU_Multigrid_F1_lv5_nellie.txt. Tab separated, one row per noise level, columns mean, std, N. N is 10 at every level.",
+  "what_this_run_is": "Regenerate the simulated benchmark with the authors' own generator, run Nellie 0.4.1 over it, and recompute IoU and F1 with the authors' own analysis code. The input is generated, not downloaded.",
+  "targets_nellie": {
+    "8":     {"F1": [1.0000000000, 0.0000000000], "IoU": [0.7340524845, 0.1869225936]},
+    "1024":  {"F1": [0.9809523810, 0.1335032930], "IoU": [0.7703848238, 0.1630871702]},
+    "8192":  {"F1": [0.8036324786, 0.3649624567], "IoU": [0.6198964329, 0.2986809070]},
+    "32768": {"F1": [0.1300426936, 0.1135178150], "IoU": [0.3131364879, 0.2965925457]}
+  },
+  "why_only_four_levels": "The paper sweeps 13 noise levels. The full sweep is estimated at 6 to 20 h of CPU and about 150 GB of intermediate files, which is outside this machine's budget while its owner is working. The four chosen are fixed here, before any run: 8 is the plateau, 1024 is the knee, 8192 is the decline, 32768 is the collapse. They were chosen to span the published curve, not for what they might show. The other nine are dropped for cost and the report must say so. This clause exists because the previous run in this project froze three of fourteen available cells and the three happened to be the ones that agreed.",
+  "aggregation_fork": {
+    "problem": "The authors' analysis.py produces a 10x10x10 array of per-object F1 and IoU per noise level and pickles it. It does not produce the published mean and sd. visualize.py then takes, for each of the 10 intensity levels, the 10x10 slice over thickness and length and reduces it to a mean and an sd over those 100 values. The published Source Data has one row per noise level with N = 10, so a further reduction happens in plotting code that is not in the repository.",
+    "primary": "Mean of the 10 per-intensity means, and the sd across those 10 numbers. This is the only reading that yields N = 10, and it matches the shape visualize.py writes.",
+    "alternative": "Mean and sd over all 1000 per-object values, with N reported as the grid dimension.",
+    "rule": "The primary is the claim. The alternative is computed and reported as a diagnostic. If the primary misses and the alternative hits, the report says so plainly and the verdict follows the primary.",
+    "note": "If the primary reading is right, the published error bar is the spread across object brightness inside one simulation, not the spread across repeated simulations. The report should say that whatever the verdict, because a reader sees N = 10 and assumes replicates."
+  },
+  "tolerance": {
+    "mean": "Within one published sd of the published mean, per noise level and per metric. Where the published sd is 0 (F1 at the plateau), the band is |delta| <= 0.01 absolute instead, because an exact match cannot be required of an unseeded simulation.",
+    "sd": "Reported beside the published sd and discussed, not part of the pass/fail rule. An unseeded simulation has no reason to reproduce a spread exactly.",
+    "verdict": "Reproduced if all eight means (4 levels x 2 metrics) pass. Partially reproduced if the plateau and at least half pass. Not reproduced otherwise."
+  },
+  "known_before_running": [
+    "The simulation has no seed: comparisons/simulations/utils.py calls np.random.normal and np.random.poisson with no seed and no seed argument. The input is reconstructible statistically, not bit for bit. This is why the band is one published sd.",
+    "analysis.py reads only the first timepoint of each 3-timepoint stack, so the 3 timepoints are not the replicates either.",
+    "Issue #49, opened by the author, reports a regression between the released version and main in voxel_matches.npy. It affects tracking, not segmentation, and is a second reason to pin 0.4.1 and to target the segmentation figure.",
+    "MitoGraph is a C++ binary and Mitometer is MATLAB. Neither will be run. Otsu and Triangle are cheap and will be run as controls. The report must not imply those columns exist when they do not.",
+    "Figures 4 and 5 train networks whose weights were not published. They are out of scope.",
+    "Data availability says the real microscopy .tif files are available on request. We will not ask, and no real-cell figure is in scope."
+  ],
+  "self_checks": [
+    "The regenerated noiseless volume must contain exactly 1000 connected components before noise is added; if it does not, the generator did not run as published and nothing downstream is reported.",
+    "Every number is read from the authors' own analysis.py output, not from a reimplementation.",
+    "Wall clock and peak disk are recorded per level. The smallest level runs alone first and the rest only start if its cost extrapolates inside the budget."
+  ],
+  "not_claimed": [
+    "We do not claim anything about tracking, about the real-cell figures, or about the two methods we cannot run.",
+    "We do not claim the simulated input is identical to the authors' input. It cannot be, without a seed."
+  ]
+}

@@ -1,0 +1,27 @@
+noiseless volume shape (510, 510, 510) dtype uint16
+marked voxels (> 0): 1223550
+connected components (default connectivity): 1000
+connected components (full 3x3x3): 1000
+
+per-cell peak intensity, marginal means along each axis of check_IoU's array
+  axis0 (check_IoU: thickness)     peak [32767, 32767, 32767, 32767, 32767, 32767, 32767, 32767, 32767, 32767]
+  axis1 (check_IoU: intensity)     peak [32767, 32767, 32767, 32767, 32767, 32767, 32767, 32767, 32767, 32767]
+  axis2 (check_IoU: length)        peak [6553, 12378, 18203, 24029, 29854, 35680, 41505, 47331, 53156, 58982]
+  axis0                            voxels [344, 345, 865, 868, 868, 1411, 1411, 1421, 2342, 2342]
+  axis1                            voxels [406, 426, 558, 727, 896, 1202, 1650, 1976, 2111, 2266]
+  axis2                            voxels [1222, 1222, 1222, 1222, 1222, 1222, 1222, 1222, 1222, 1222]
+  intensity_vector in multi_grid.py: [6553, 12378, 18204, 24029, 29855, 35680, 41506, 47331, 53157, 58982]
+
+per-cell label counts in nellie's output, t0: how many cells hit the >=100 shortcut
+  std     8: cells with >=100 labels   0 | f1=0 & iou=0  10 | of those, shortcut   0, genuinely missed  10
+           shortcut cells not scored zero: 0 (should be 0)
+           max labels in a cell 18, median 2
+  std  1024: cells with >=100 labels   0 | f1=0 & iou=0   0 | of those, shortcut   0, genuinely missed   0
+           shortcut cells not scored zero: 0 (should be 0)
+           max labels in a cell 51, median 2
+  std  8192: cells with >=100 labels   0 | f1=0 & iou=0  33 | of those, shortcut   0, genuinely missed  33
+           shortcut cells not scored zero: 0 (should be 0)
+           max labels in a cell 52, median 2
+  std 32768: cells with >=100 labels   0 | f1=0 & iou=0  58 | of those, shortcut   0, genuinely missed  58
+           shortcut cells not scored zero: 0 (should be 0)
+           max labels in a cell 63, median 4

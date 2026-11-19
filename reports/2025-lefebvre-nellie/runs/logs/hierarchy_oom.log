@@ -1,0 +1,23 @@
+ok
+Traceback (most recent call last):
+  File "E:\Ciencia\noturno\2025-lefebvre-nellie\scripts\02_run_methods.py", line 65, in <module>
+    nellie_run(file_info, remove_edges=False)
+  File "E:\Ciencia\noturno\2025-lefebvre-nellie\env\venv\Lib\site-packages\nellie\run.py", line 32, in run
+    hierarchy.run()
+  File "E:\Ciencia\noturno\2025-lefebvre-nellie\env\venv\Lib\site-packages\nellie\feature_extraction\hierarchical.py", line 322, in run
+    self._get_hierarchies()
+  File "E:\Ciencia\noturno\2025-lefebvre-nellie\env\venv\Lib\site-packages\nellie\feature_extraction\hierarchical.py", line 172, in _get_hierarchies
+    self.branches.run()
+  File "E:\Ciencia\noturno\2025-lefebvre-nellie\env\venv\Lib\site-packages\nellie\feature_extraction\hierarchical.py", line 1668, in run
+    self._run_frame(t)
+  File "E:\Ciencia\noturno\2025-lefebvre-nellie\env\venv\Lib\site-packages\nellie\feature_extraction\hierarchical.py", line 1658, in _run_frame
+    self._get_branch_stats(t)
+  File "E:\Ciencia\noturno\2025-lefebvre-nellie\env\venv\Lib\site-packages\nellie\feature_extraction\hierarchical.py", line 1492, in _get_branch_stats
+    dist = np.linalg.norm(branch_idx_array_1 - branch_idx_array_2, axis=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Ciencia\noturno\2025-lefebvre-nellie\env\venv\Lib\site-packages\numpy\linalg\linalg.py", line 2582, in norm
+    s = (x.conj() * x).real
+         ~~~~~~~~~^~~
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 8.67 GiB for an array with shape (19697, 19697, 3) and data type float64
+
+[exited with code 0]

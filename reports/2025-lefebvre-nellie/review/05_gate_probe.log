@@ -1,0 +1,11 @@
+same 10x10x10 grid, authors' gate vs a row-lookup gate, over random scenes
+  trial 0  f1 identical True  iou identical True  mean f1 0.4263  mean iou 0.2875
+  trial 1  f1 identical True  iou identical True  mean f1 0.4393  mean iou 0.2917
+  trial 2  f1 identical True  iou identical True  mean f1 0.4162  mean iou 0.2692
+  trial 3  f1 identical True  iou identical True  mean f1 0.4240  mean iou 0.2772
+  trial 4  f1 identical True  iou identical True  mean f1 0.4245  mean iou 0.2834
+  trial 5  f1 identical True  iou identical True  mean f1 0.4499  mean iou 0.3071
+
+and the gate itself: how often it lets a non-overlapping label through
+  broken gate says overlap: 0 coords
+  rows really shared: 0

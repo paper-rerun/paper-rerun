@@ -1,0 +1,99 @@
+{
+  "check_id": "2025-lefebvre-nellie-cego",
+  "target": {
+    "paper": "Lefebvre AEYT et al., Nellie: automated organelle segmentation, tracking and hierarchical feature extraction in 2D/3D live-cell microscopy, Nature Methods 2025",
+    "figure": "Extended Data Fig. 2a (F1) and 2b (IoU) vs Gaussian noise level",
+    "data_files": ["Multigrid_F1_lv5_nellie.txt", "IoU_Multigrid_F1_lv5_nellie.txt"],
+    "code": [
+      "aelefebv/nellie-supplemental @ 7a639bca9b426a1addbf358fe8fffb389949b30d",
+      "aelefebv/nellie (pip package / GitHub main)"
+    ]
+  },
+  "independence": "Blind. No artefact of any prior review of this figure was opened.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Each of the two Nellie noise-sweep files has exactly 13 data rows, one per Gaussian std in [8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768], with three columns mean, sd, N.",
+      "route": "Parse the TSV from Supplementary Data (MOESM16); count rows and columns.",
+      "tolerance": "exact"
+    },
+    {
+      "id": "C2",
+      "statement": "N is the same integer in every row of both files, and equals 100, because comparisons/simulations/multi_grid/visualize.py aggregates stats[stat][key][:, level, :], a 10x10 slice of the 10x10x10 per-section array, i.e. 100 section values per published point.",
+      "route": "Read the N column of both files and compare with 100.",
+      "tolerance": "exact integer equality; any other constant value is reported as a mismatch with the code route, not as an error per se"
+    },
+    {
+      "id": "C3",
+      "statement": "F1 and IoU files agree row-for-row on noise level and on N, since both come from the same check_IoU call per noise level.",
+      "route": "Row-wise comparison of the two files.",
+      "tolerance": "exact for N; noise level ordering identical"
+    },
+    {
+      "id": "C4",
+      "statement": "Every mean lies in [0,1] and every sd respects the variance bound for a [0,1]-bounded variable: sd <= sqrt(mean*(1-mean)) for a population sd (np.nanstd, ddof=0, as in visualize.py). A looser ddof=1 variant sqrt(N/(N-1)*mean*(1-mean)) is also evaluated.",
+      "route": "Arithmetic on the parsed columns.",
+      "tolerance": "1e-9 absolute slack"
+    },
+    {
+      "id": "C5",
+      "statement": "Where mean == 0 the sd is also 0, and where sd == 0 the mean is 0 or 1 (all 100 sections identical).",
+      "route": "Arithmetic on the parsed columns.",
+      "tolerance": "1e-12"
+    },
+    {
+      "id": "C6",
+      "statement": "N is not computed anywhere in the released analysis/visualisation code; visualize.py writes only mean and std per (noise level, level index) to multigrid_all_vals.csv. So the published N column was added outside the released code and cannot be verified from it.",
+      "route": "Static read of analysis.py and visualize.py; grep for any count written to output.",
+      "tolerance": "qualitative"
+    },
+    {
+      "id": "C7",
+      "statement": "Axis-label swap: multi_grid.py writes axis0=thickness, axis1=length, axis2=intensity (start_x=ix*50 with ix driving thickness, start_y=iy*50 with iy driving length, start_z=iz*50 with iz driving intensity), while check_IoU in analysis.py names axis1=intensity and axis2=length, and visualize.py slices [:, level, :] calling that level an intensity level. Therefore a published lv<k> curve is a fixed LENGTH level averaged over thickness and intensity, not a fixed intensity level.",
+      "route": "Run the generator placement logic at reduced scale (2x2x2 grid) with distinguishable thickness/length/intensity, read back which property varies along which axis, compare with the check_IoU naming.",
+      "tolerance": "demonstration on a built array, not assertion"
+    },
+    {
+      "id": "C8",
+      "statement": "check_IoU bug: fp = len(unique_labels[unique_labels != tp_label]) - 1 becomes -1 when the section crop contains no background voxel (label 0 absent). Then tp+fp == 0, precision is set to 0 and F1 becomes 0 even for a correctly matched single object with IoU >= 0.1.",
+      "route": "Hand-built gt/output pair fed to a verbatim copy of check_IoU; show the returned F1 is 0 where the correct F1 is 1.",
+      "tolerance": "demonstration"
+    },
+    {
+      "id": "C9",
+      "statement": "check_IoU bail-out: the test 'if len(unique_labels) < 100' skips matching entirely, so any section with 100 or more connected components scores F1 = 0 and IoU = 0 regardless of how good the best match is. This penalises fragmenting methods by construction rather than by measurement.",
+      "route": "Hand-built array: one perfect match plus at least 99 single-voxel specks; show F1 and IoU drop from the correct values to 0.",
+      "tolerance": "demonstration"
+    },
+    {
+      "id": "C10",
+      "statement": "np.isin(gt_partial_coords, label_coords).all(axis=1) does not test row (coordinate-triple) membership; it tests per-component value membership. It therefore fails to reject non-overlapping labels (ineffective pre-filter) but never rejects a genuinely overlapping label, so it is a performance defect with no effect on the reported numbers.",
+      "route": "Hand-built coordinate arrays showing a non-overlapping label passing the test, plus a demonstration that an overlapping label always passes.",
+      "tolerance": "demonstration"
+    },
+    {
+      "id": "C11",
+      "statement": "utils.add_noise clips the Gaussian noise itself to [0, 65535] (np.clip(normal_noise, 0, 65535)) before adding it, so the Gaussian noise is half-normal: positive only, and it raises the background mean by std/sqrt(2*pi). The x axis of the figure is therefore a combined noise plus background-offset sweep, not zero-mean Gaussian noise.",
+      "route": "Numerical demonstration on a synthetic frame: compare realised noise mean and sd with the nominal std.",
+      "tolerance": "demonstration; agreement with std/sqrt(2*pi) within 1%"
+    },
+    {
+      "id": "C12",
+      "statement": "create_skeleton_sub_volume clips the sinusoid coordinates with np.clip(y, 0, length-1) instead of the 50-voxel volume extent, so for every length below 26 the object is displaced to the low corner of its 50^3 cell and flattened against the clip, instead of being centred at 25. This changes the simulated ground truth for most length levels.",
+      "route": "Call the function verbatim for several lengths and report the resulting coordinate ranges.",
+      "tolerance": "demonstration"
+    },
+    {
+      "id": "C13",
+      "statement": "Reproducibility pins: the two requirements.txt files are full pip freezes (numpy 1.26.4, scikit-image 0.23.1, scipy 1.13.0, tifffile 2024.2.12) but neither pins nellie, the software under test; no RNG seed is set anywhere in the repository, so the noisy volumes cannot be regenerated bit-for-bit; and no script that runs Nellie on these simulations is present in the released supplemental repo, so Nellie parameters for this figure are not recoverable from the release.",
+      "route": "grep for nellie and for seed in both requirements.txt and across the repo file list.",
+      "tolerance": "qualitative"
+    }
+  ],
+  "declared_non_checks": [
+    "I will NOT regenerate the 510^3 benchmark volume nor segment any noise level with Nellie. Reasons: (a) about 10 GB plus 30-70 min CPU per level on a machine shared with the user's running Unreal Editors; (b) no RNG seed is set in the released code, so my noise realisation would differ from the published one by construction; (c) no script that runs Nellie on these simulations is released, so the segmentation parameters behind the published row are unknown and any mismatch would be unattributable. A number produced under (b) and (c) would not be evidence about the published row.",
+    "Instead, as my own number, I will exercise the released measurement function check_IoU verbatim on small hand-built volumes with known ground truth, which is what the claims above actually test.",
+    "I will not attempt to verify the four competitor methods' rows."
+  ],
+  "frozen_before": "any read of the Supplementary Data (MOESM16) numbers"
+}

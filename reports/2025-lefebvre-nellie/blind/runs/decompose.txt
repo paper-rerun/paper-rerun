@@ -1,0 +1,33 @@
+Candidate reconstructions. Each F1 section score the released code can emit is
+0 or 2/(2+fp). A 100-section population is tried; the two rows below sit exactly
+at the maximum dispersion a 100-value sample with that mean can have.
+noise   1024: published mean 0.9809523810 sd 0.1335032930
+   trial 100-value config: 98 x 1 + 1 x 2/21 + 1 x 0
+   -> mean 0.9809523810 sd 0.1335032930   EXACT MATCH
+   95% CI half-width with N=10: 0.0827  -> mean+CI = 1.0637
+   95% CI half-width with N=100: 0.0262  -> mean+CI = 1.0071
+noise   2048: published mean 0.9466666667 sd 0.2196967607
+   trial 100-value config: 94 x 1 + 1 x 2/3 + 5 x 0
+   -> mean 0.9466666667 sd 0.2196967607   EXACT MATCH
+   95% CI half-width with N=10: 0.1362  -> mean+CI = 1.0828
+   95% CI half-width with N=100: 0.0431  -> mean+CI = 0.9897
+noise   4096: published mean 0.9475000000 sd 0.2129994131
+   trial 100-value config: 94 x 1 + 1 x 3/4 + 5 x 0
+   -> mean 0.9475000000 sd 0.2187892822   no match (mean ok: True)
+   95% CI half-width with N=10: 0.1320  -> mean+CI = 1.0795
+   95% CI half-width with N=100: 0.0417  -> mean+CI = 0.9892
+noise   8192: published mean 0.8036324786 sd 0.3649624567
+   trial 100-value config: 80 x 1 + 1 x 85/234 + 19 x 0
+   -> mean 0.8036324786 sd 0.3943276929   no match (mean ok: True)
+   95% CI half-width with N=10: 0.2262  -> mean+CI = 1.0298
+   95% CI half-width with N=100: 0.0715  -> mean+CI = 0.8752
+noise  16384: published mean 0.5357914308 sd 0.3412057061
+   trial 100-value config: 53 x 1 + 1 x 311/537 + 46 x 0
+   -> mean 0.5357914339 sd 0.4962676798   no match (mean ok: False)
+   95% CI half-width with N=10: 0.2115  -> mean+CI = 0.7473
+   95% CI half-width with N=100: 0.0669  -> mean+CI = 0.6027
+noise  32768: published mean 0.1300426936 sd 0.1135178150
+   trial 100-value config: 13 x 1 + 1 x 4/937 + 86 x 0
+   -> mean 0.1300426894 sd 0.3362872004   no match (mean ok: False)
+   95% CI half-width with N=10: 0.0704  -> mean+CI = 0.2004
+   95% CI half-width with N=100: 0.0222  -> mean+CI = 0.1523

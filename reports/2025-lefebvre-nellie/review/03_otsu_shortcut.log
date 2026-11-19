@@ -1,0 +1,8 @@
+otsu     std     8: cells with >=100 labels    0 of 1000  median     2  max     6
+otsu     std  1024: cells with >=100 labels    0 of 1000  median     2  max     6
+otsu     std  8192: cells with >=100 labels    0 of 1000  median     2  max    77
+otsu     std 32768: cells with >=100 labels  355 of 1000  median    95  max   136
+triangle std     8: cells with >=100 labels    0 of 1000  median     2  max     2
+triangle std  1024: cells with >=100 labels    0 of 1000  median    33  max    56
+triangle std  8192: cells with >=100 labels 1000 of 1000  median  1014  max  1113
+triangle std 32768: cells with >=100 labels 1000 of 1000  median   157  max   204
