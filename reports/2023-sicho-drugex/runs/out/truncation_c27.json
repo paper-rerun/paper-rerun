@@ -1,0 +1,26 @@
+{
+ "max_len_100": {
+  "n": 1800,
+  "validity": 0.6705555555555556,
+  "invalid": 593,
+  "invalid_at_token_limit": 3
+ },
+ "max_len_120": {
+  "n": 1800,
+  "validity": 0.695,
+  "invalid": 549,
+  "invalid_at_token_limit": 0
+ },
+ "max_len_140": {
+  "n": 1800,
+  "validity": 0.6666666666666666,
+  "invalid": 600,
+  "invalid_at_token_limit": 0
+ },
+ "max_len_200": {
+  "n": 1800,
+  "validity": 0.6977777777777778,
+  "invalid": 544,
+  "invalid_at_token_limit": 0
+ }
+}

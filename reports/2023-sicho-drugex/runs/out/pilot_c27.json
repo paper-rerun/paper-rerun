@@ -1,0 +1,18 @@
+{
+ "model": "chembl_27_v2_smiles_rnn_PT.pkg",
+ "kind": "lstm",
+ "n": 1200,
+ "batch": 600,
+ "sample_seconds": 6.1,
+ "ms_per_molecule": 5.073,
+ "frozen_validity": 0.6958333333333333,
+ "frozen_uniqueness": 0.8790419161676647,
+ "secondary_uniqueness_distinct_raw_over_n": 0.9083333333333333,
+ "secondary_uniqueness_distinct_canonical_over_n": 0.6116666666666667,
+ "secondary_validity_parseable_including_multifragment": 0.6958333333333333,
+ "n_valid": 835,
+ "distinct_valid": 734,
+ "multifragment": 0,
+ "torch": "2.15.0+cpu",
+ "rdkit": "2026.09.2"
+}

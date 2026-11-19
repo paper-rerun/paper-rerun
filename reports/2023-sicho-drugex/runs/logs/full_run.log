@@ -1,0 +1,56 @@
+=== ChEMBL 27 LSTM, n=100000, batch 600 ===
+12000/100000  145s
+24000/100000  348s
+36000/100000  487s
+48000/100000  596s
+60000/100000  709s
+72000/100000  816s
+84000/100000  910s
+96000/100000  1049s
+{
+ "model": "chembl_27_v2_smiles_rnn_PT.pkg",
+ "kind": "lstm",
+ "n": 100000,
+ "batch": 600,
+ "sample_seconds": 1081.4,
+ "ms_per_molecule": 10.814,
+ "frozen_validity": 0.68323,
+ "frozen_uniqueness": 0.5746673887270758,
+ "secondary_uniqueness_distinct_raw_over_n": 0.66487,
+ "secondary_uniqueness_distinct_canonical_over_n": 0.39263,
+ "secondary_validity_parseable_including_multifragment": 0.68323,
+ "n_valid": 68323,
+ "distinct_valid": 39263,
+ "multifragment": 0,
+ "torch": "2.15.0+cpu",
+ "rdkit": "2026.09.2",
+ "peak_working_set_mb": 390.6
+}
+=== ChEMBL 31 GRU, n=100000, batch 600 ===
+12000/100000  119s
+24000/100000  264s
+36000/100000  397s
+48000/100000  524s
+60000/100000  642s
+72000/100000  796s
+84000/100000  904s
+96000/100000  1023s
+{
+ "model": "chembl_31_smiles_rnn_GRU_PT.pkg",
+ "kind": "gru",
+ "n": 100000,
+ "batch": 600,
+ "sample_seconds": 1092.5,
+ "ms_per_molecule": 10.925,
+ "frozen_validity": 0.91462,
+ "frozen_uniqueness": 0.9962060746539546,
+ "secondary_uniqueness_distinct_raw_over_n": 0.99665,
+ "secondary_uniqueness_distinct_canonical_over_n": 0.91115,
+ "secondary_validity_parseable_including_multifragment": 0.91462,
+ "n_valid": 91462,
+ "distinct_valid": 91115,
+ "multifragment": 0,
+ "torch": "2.15.0+cpu",
+ "rdkit": "2026.09.2",
+ "peak_working_set_mb": 380.0
+}

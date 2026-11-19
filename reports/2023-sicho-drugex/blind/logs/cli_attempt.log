@@ -1,0 +1,22 @@
+E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\qsprpred\models\__init__.py:1: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\mordred\InformationContent.py:53: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if dst is ():
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\drugex\generate.py", line 10, in <module>
+    from drugex.train import CreateEnvironment, SetUpGenerator, DataPreparation
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\drugex\train.py", line 7, in <module>
+    from qsprpred.models.interfaces import QSPRModel
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\qsprpred\models\interfaces.py", line 13, in <module>
+    from qsprpred.data.data import MoleculeTable, QSPRDataset
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\qsprpred\data\data.py", line 12, in <module>
+    from qsprpred.data.interfaces import MoleculeDataSet, datasplit
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\qsprpred\data\interfaces.py", line 6, in <module>
+    from qsprpred.data.utils.descriptorcalculator import Calculator
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\qsprpred\data\utils\descriptorcalculator.py", line 8, in <module>
+    from qsprpred.data.utils.descriptorsets import DescriptorSet, get_descriptor
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\qsprpred\data\utils\descriptorsets.py", line 15, in <module>
+    from Mold2_pywrapper import Mold2 as Mold2_calculator
+ModuleNotFoundError: No module named 'Mold2_pywrapper'

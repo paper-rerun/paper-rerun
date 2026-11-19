@@ -1,0 +1,102 @@
+{
+  "preregistration": {
+    "written_before_any_measurement": true,
+    "date_utc": "2026-11-19",
+    "paper": {
+      "citation": "Sicho M., Luukkonen S., van den Maagdenberg H.W., Schoenmaker L., Bequignon O.J.M., van Westen G.J.P. DrugEx: Deep Learning Models and Tools for Exploration of Drug-like Chemical Space. J. Chem. Inf. Model. 2023, 63(12), 3629-3636.",
+      "doi": "10.1021/acs.jcim.3c00434",
+      "table": "Supporting Information Table S4 (Sampling statistics)",
+      "underlying_data_doi": "10.5281/zenodo.7928362"
+    },
+    "targets": [
+      {
+        "id": "chembl27_lstm_validity",
+        "model": "ChEMBL 27 LSTM RNN",
+        "metric": "validity",
+        "published_value": 0.999,
+        "per_machine_published_values": [0.999, 0.999, 0.999, 0.999, 0.999, 0.999]
+      },
+      {
+        "id": "chembl27_lstm_uniqueness",
+        "model": "ChEMBL 27 LSTM RNN",
+        "metric": "uniqueness",
+        "published_value": 0.600,
+        "per_machine_published_values": [0.599, 0.601, 0.600, 0.601, 0.600, 0.599]
+      },
+      {
+        "id": "chembl31_gru_validity",
+        "model": "ChEMBL 31 GRU RNN",
+        "metric": "validity",
+        "published_value": 1.000,
+        "per_machine_published_values": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+      },
+      {
+        "id": "chembl31_gru_uniqueness",
+        "model": "ChEMBL 31 GRU RNN",
+        "metric": "uniqueness",
+        "published_value": 0.996,
+        "per_machine_published_values": [0.996, 0.996, 0.996, 0.996, 0.996, 0.996]
+      }
+    ],
+    "out_of_scope": [
+      "all transformer rows of Table S4 (input fragment split never published)",
+      "the relative sampling time column (wall clock on the authors' GPUs; this run is CPU-only)",
+      "the accuracy column (defined for transformer models only)"
+    ],
+    "weights_used": [
+      {
+        "model": "ChEMBL 27 LSTM RNN",
+        "source": "https://doi.org/10.5281/zenodo.7096837",
+        "file": "DrugEx_v2_PT_ChEMBL27.zip",
+        "sha256_zip": "63a4a196971a3a8847fcc299b51003c8267bbf21e43c17e3d940f840a1801a8d",
+        "checkpoint": "chembl_27_v2_smiles_rnn_PT.pkg",
+        "vocabulary": "chembl_27_v2_smiles_rnn_PT.vocab"
+      },
+      {
+        "model": "ChEMBL 31 GRU RNN",
+        "source": "https://doi.org/10.5281/zenodo.7550739",
+        "file": "DrugEx_v2_GRU_PT_ChEMBL31.zip",
+        "sha256_zip": "d09a6c71727608a988e3bc670dcc00485aceffe1d076145beeb2494d50c8d473",
+        "checkpoint": "chembl_31_smiles_rnn_GRU_PT.pkg",
+        "vocabulary": "chembl_31_smiles_rnn_GRU_PT.vocab"
+      }
+    ],
+    "software": {
+      "drugex": "v3.4.4 (GitHub tag, released 2023-05-15, the release contemporaneous with the paper)",
+      "python": "3.11.15",
+      "torch": "2.2.2+cpu",
+      "rdkit": "2023.09.5",
+      "device": "CPU only, torch.set_num_threads(4)"
+    },
+    "sampling_protocol": {
+      "n_sampled_per_model": 100000,
+      "batch_size": 600,
+      "note_on_n": "uniqueness falls as n grows, so the 100,000-molecule claim is judged only from a 100,000-molecule sample; smaller pilots are used solely to check that the code runs and to estimate runtime",
+      "procedure": "drugex.training.generators.SequenceRNN loaded from the released .pkg with the released .vocab (max_len=100), then SequenceRNN.generate(num_samples=100000, batch_size=600, drop_invalid=False, drop_duplicates=False, evaluator=None). drop_invalid=False is required because the released code resamples until it has num_samples *post-filter* molecules; with the defaults the output is valid-and-unique by construction and neither metric is computable from it. This is the API equivalent of the released CLI 'python -m drugex.generate ... -n 100000 -bs 600 --keep_invalid'.",
+      "runs_per_model": 1,
+      "justification_runs": "the authors report that the deviation across independent sampling runs was below 1.00% for every column except relative sampling time, and their own six machines give a spread of 0.002 on uniqueness at n=100,000; one run of n=100,000 is therefore enough to judge a 0.01 tolerance"
+    },
+    "definitions_chosen": {
+      "validity_primary": "validity = (number of the 100,000 raw sampled SMILES strings that RDKit's Chem.MolFromSmiles parses to a non-None molecule AND that contain no '.') / 100,000. This is exactly drugex.training.scorers.smiles.SmilesChecker.checkSmiles(..., no_multifrag_smiles=True)['Valid'], the only validity computation in the released package, and the one the release uses on this code path (no_multifrag_smiles=True is hard-coded in drugex/generate.py).",
+      "uniqueness_primary": "uniqueness = (number of distinct RDKit canonical SMILES among the valid molecules) / (number of valid molecules). Canonicalisation is Chem.MolToSmiles(Chem.MolFromSmiles(s)), the same canonicalisation the release applies in Generator.filterNewMolecules. Rationale: 'ratio of unique molecules' is a statement about molecules, and an unparseable string is not a molecule, so only valid ones can be counted; and the release itself de-duplicates only after canonicalising the valid set.",
+      "uniqueness_secondary_variants_to_be_reported": [
+        "U_over_n: distinct canonical SMILES among valid / 100,000",
+        "U_raw_strings: distinct raw (non-canonicalised) sampled strings among valid / number of valid",
+        "U_multifrag_allowed: validity and uniqueness computed without the no-'.' rule"
+      ],
+      "why_variants": "the published legend ('the ratio of unique molecules') does not fix the denominator or whether canonicalisation is applied; with validity near 1.000 these variants differ by less than 0.002, so the variants are reported for completeness and cannot by themselves decide the verdict"
+    },
+    "tolerance_and_verdict_rule": {
+      "reproduced": "every in-scope target matched within 0.010 absolute on the primary definition",
+      "partially_reproduced": "at least one but not all targets matched within 0.010 absolute",
+      "not_reproduced": "no target matched within 0.010 absolute",
+      "rationale": "the published values are given to three decimals and the authors state run-to-run deviation below 1.00%; 0.010 absolute is that stated deviation"
+    },
+    "falsifiers_declared_in_advance": [
+      "if a metric misses, test the secondary definitions above before concluding",
+      "if a metric misses, test whether a different released DrugEx version (v3.4.0 ... v3.4.8) changes the result",
+      "if a metric misses, cross-check against the authors' own per-molecule output (Zenodo 10.5281/zenodo.7928362, DrugEx_pretrained_models_sampled_molecules.tsv.xz, sha256 71751ae7408fdd283b9e76f4fd7c235673e76eba349c333c2b8832c8496be225) to separate 'the number is wrong' from 'my sampling or scoring is wrong'",
+      "a CPU/GPU difference cannot explain a validity or uniqueness difference, since sampling is multinomial from the softmax and device-independent in distribution; if my numbers differ, the explanation must be in the definition, the weights, or my code"
+    ]
+  }
+}

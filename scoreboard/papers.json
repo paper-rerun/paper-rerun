@@ -1,5 +1,18 @@
 [
  {
+  "paper": "DrugEx",
+  "report": "2023-sicho-drugex",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2023-sicho-drugex/REPORT.md",
+  "venue": "J. Chem. Inf. Model.",
+  "year": 2023,
+  "field": "drug design",
+  "area": "Biology",
+  "verdict": "Partially reproduced",
+  "main_issue": "Table column is not the quantity described",
+  "finding": "Table S4 of the Supporting Information, the two RNNs the table names first: 100,000 sequences sampled from each pretrained model on CPU with the authors' own dev code, and the two ratios recomputed. One of our four frozen values lands inside the band. The reason the other three miss is that the validity column of the RNN rows is not validity: it is the share of sampled sequences that came out as a non-empty string, parseable or not. That rule reproduces the printed value on all twenty RNN machine-rows of the authors' own deposit and on both of our samples, while the share RDKit actually parses is 0.685 for the ChEMBL 27 LSTM against a printed 0.999, and 0.914 for the ChEMBL 31 GRU against 1.000. The row that settles it is the ChEMBL 27 LSTM, the only RNN not printing 1.000: its 0.999 is neither a rounded 1.000 nor a rounded 0.685, it is exactly what about ninety empty strings in 100,000 leave behind, and our run gives 80. The legend describes the parseable ratio, so as printed the column is near 1.000 for any model that emits a string at all. The ChEMBL 27 LSTM uniqueness of 0.600 we could not account for at all: the four readings we could build off the authors' deposited molecules give 0.661, 0.572, 0.594 and 0.390, and their own six machines print 0.599 to 0.601, so it is stable and not a slip. A blind recount with its own sample and its own pre-registered definitions reached the same four candidates and the same dead end, and no code in the release computes either column: generate() defaults to dropping invalids and duplicates and resampling until it holds the count, so its output is valid and unique by construction. Our sample and theirs are the same distribution: 51.5% of our distinct molecules appear in a single deposited machine of 100,000, against 51.9% between two of their own machines. Also, python -m drugex.generate fails on a default install, because generate.py imports drugex.train, which imports the optional qsprpred at module level.",
+  "rerun_date": "2026-11-19"
+ },
+ {
   "paper": "Nellie",
   "report": "2025-lefebvre-nellie",
   "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2025-lefebvre-nellie/REPORT.md",

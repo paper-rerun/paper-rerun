@@ -25,6 +25,7 @@ AREAS = {
 	"protein structure": "Biology", "cell biology": "Biology", "genomics": "Biology",
 	"protein fitness": "Biology", "protein design": "Biology", "cell imaging": "Biology",
 	"plant genomics": "Biology", "gene design": "Biology",
+	"drug design": "Biology",
 	"cosmology": "Physics", "particle physics": "Physics",
 	"materials / chemistry": "Materials and chemistry", "materials": "Materials and chemistry",
 	"machine learning": "Computing", "chemistry": "Materials and chemistry",
@@ -57,6 +58,7 @@ MAIN_ISSUE = {
 	"2025-zhai-plantcad": "More compute than one home GPU",
 	"2025-fallahpour-codontransformer": "Source Data table corrupt on deposit",
 	"2025-lefebvre-nellie": "Scoring code penalises the baselines",
+	"2023-sicho-drugex": "Table column is not the quantity described",
 }
 
 

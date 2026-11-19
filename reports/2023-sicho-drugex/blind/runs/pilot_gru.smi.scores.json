@@ -1,0 +1,15 @@
+{
+  "file": "runs/pilot_gru.smi",
+  "n_sampled": 1800,
+  "n_empty_strings": 0,
+  "n_valid_primary": 1641,
+  "validity_primary": 0.911667,
+  "n_unique_canonical_among_valid": 1641,
+  "uniqueness_primary": 1.0,
+  "variants": {
+    "uniqueness_over_n_sampled": 0.911667,
+    "uniqueness_raw_strings_over_valid": 1.0,
+    "validity_multifrag_allowed": 0.911667,
+    "uniqueness_multifrag_allowed": 1.0
+  }
+}

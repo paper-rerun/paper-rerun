@@ -1,0 +1,60 @@
+{
+ "claims_inside_band": 1,
+ "claims_total": 4,
+ "verdict": "Partially reproduced",
+ "claims_hash_checked": "96d22c18194e8e1b5de69bb4a132290fe85524628e9b65e42dc83aa9270c3ee5",
+ "results": [
+  {
+   "id": "C1",
+   "model": "ChEMBL 27 LSTM RNN",
+   "metric": "validity",
+   "ours": 0.68323,
+   "published": 0.999,
+   "delta": -0.31577,
+   "band": 0.00999,
+   "inside": false
+  },
+  {
+   "id": "C2",
+   "model": "ChEMBL 27 LSTM RNN",
+   "metric": "uniqueness",
+   "ours": 0.5746673887270758,
+   "published": 0.6,
+   "delta": -0.025332611272924188,
+   "band": 0.006,
+   "inside": false
+  },
+  {
+   "id": "C3",
+   "model": "ChEMBL 31 GRU RNN",
+   "metric": "validity",
+   "ours": 0.91462,
+   "published": 1.0,
+   "delta": -0.08538000000000001,
+   "band": 0.01,
+   "inside": false
+  },
+  {
+   "id": "C4",
+   "model": "ChEMBL 31 GRU RNN",
+   "metric": "uniqueness",
+   "ours": 0.9962060746539546,
+   "published": 0.996,
+   "delta": 0.00020607465395461322,
+   "band": 0.00996,
+   "inside": true
+  }
+ ],
+ "secondary": {
+  "ChEMBL 27 LSTM RNN": {
+   "secondary_uniqueness_distinct_raw_over_n": 0.66487,
+   "secondary_uniqueness_distinct_canonical_over_n": 0.39263,
+   "secondary_validity_parseable_including_multifragment": 0.68323
+  },
+  "ChEMBL 31 GRU RNN": {
+   "secondary_uniqueness_distinct_raw_over_n": 0.99665,
+   "secondary_uniqueness_distinct_canonical_over_n": 0.91115,
+   "secondary_validity_parseable_including_multifragment": 0.91462
+  }
+ }
+}

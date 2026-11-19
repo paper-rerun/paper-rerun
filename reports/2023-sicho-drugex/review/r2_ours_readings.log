@@ -1,0 +1,32 @@
+{
+ "ChEMBL 27 LSTM": {
+  "n": 100000,
+  "n_valid": 68323,
+  "distinct_raw": 66487,
+  "distinct_valid_raw": 39502,
+  "distinct_canon": 39263,
+  "V:parseable_single_frag": 0.68323,
+  "U:distinct_canon_over_valid": 0.5746673887270758,
+  "U:distinct_raw_over_n": 0.66487,
+  "U:distinct_canon_over_n": 0.39263,
+  "U:distinct_valid_raw_over_distinct_raw": 0.5941311835396393,
+  "U:distinct_canon_over_distinct_raw": 0.5905364958563328,
+  "U:distinct_valid_raw_over_valid": 0.5781654786821422
+ },
+ "ChEMBL 31 GRU": {
+  "n": 100000,
+  "n_valid": 91462,
+  "distinct_raw": 99665,
+  "distinct_valid_raw": 91128,
+  "distinct_canon": 91115,
+  "V:parseable_single_frag": 0.91462,
+  "U:distinct_canon_over_valid": 0.9962060746539546,
+  "U:distinct_raw_over_n": 0.99665,
+  "U:distinct_canon_over_n": 0.91115,
+  "U:distinct_valid_raw_over_distinct_raw": 0.9143430492148699,
+  "U:distinct_canon_over_distinct_raw": 0.914212612251041,
+  "U:distinct_valid_raw_over_valid": 0.9963482101856509
+ }
+}
+
+[exited with code 0]

@@ -1,0 +1,15 @@
+{
+  "file": "runs/full_chembl27_lstm.smi",
+  "n_sampled": 100000,
+  "n_empty_strings": 84,
+  "n_valid_primary": 68558,
+  "validity_primary": 0.68558,
+  "n_unique_canonical_among_valid": 39200,
+  "uniqueness_primary": 0.571779,
+  "variants": {
+    "uniqueness_over_n_sampled": 0.392,
+    "uniqueness_raw_strings_over_valid": 0.575542,
+    "validity_multifrag_allowed": 0.68558,
+    "uniqueness_multifrag_allowed": 0.571779
+  }
+}

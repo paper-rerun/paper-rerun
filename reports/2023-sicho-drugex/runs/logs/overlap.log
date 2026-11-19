@@ -1,0 +1,124 @@
+{
+ "ChEMBL 27": {
+  "ours_distinct": 39262,
+  "per_machine": {
+   "M01": {
+    "theirs_distinct": 39230,
+    "shared": 6140,
+    "share_of_ours": 0.1563853089501299,
+    "share_of_theirs": 0.15651287280142748
+   },
+   "M02": {
+    "theirs_distinct": 38963,
+    "shared": 6067,
+    "share_of_ours": 0.15452600478834497,
+    "share_of_theirs": 0.15571182917126505
+   },
+   "M03": {
+    "theirs_distinct": 39277,
+    "shared": 6161,
+    "share_of_ours": 0.15692017727064336,
+    "share_of_theirs": 0.15686024900068743
+   },
+   "M04": {
+    "theirs_distinct": 39297,
+    "shared": 6236,
+    "share_of_ours": 0.1588304212724772,
+    "share_of_theirs": 0.158688958444665
+   }
+  },
+  "their_machine_pairs": {
+   "M01-M02": {
+    "shared": 6149,
+    "share_of_first": 0.15674228906449145
+   },
+   "M01-M03": {
+    "shared": 6175,
+    "share_of_first": 0.15740504715778741
+   },
+   "M01-M04": {
+    "shared": 6185,
+    "share_of_first": 0.15765995411674738
+   },
+   "M02-M03": {
+    "shared": 6111,
+    "share_of_first": 0.15684110566434822
+   },
+   "M02-M04": {
+    "shared": 6137,
+    "share_of_first": 0.157508405410261
+   },
+   "M03-M04": {
+    "shared": 6269,
+    "share_of_first": 0.1596099498434198
+   }
+  },
+  "their_rows_flagged_valid_that_this_rdkit_rejects": {
+   "M01": 29,
+   "M02": 21,
+   "M03": 28,
+   "M04": 18
+  }
+ },
+ "ChEMBL 31": {
+  "ours_distinct": 91115,
+  "per_machine": {
+   "M01": {
+    "theirs_distinct": 91064,
+    "shared": 495,
+    "share_of_ours": 0.005432694945947429,
+    "share_of_theirs": 0.005435737503294387
+   },
+   "M02": {
+    "theirs_distinct": 91291,
+    "shared": 507,
+    "share_of_ours": 0.005564396641606761,
+    "share_of_theirs": 0.0055536690363781754
+   },
+   "M03": {
+    "theirs_distinct": 91242,
+    "shared": 512,
+    "share_of_ours": 0.005619272348131482,
+    "share_of_theirs": 0.005611450866925319
+   },
+   "M04": {
+    "theirs_distinct": 91183,
+    "shared": 490,
+    "share_of_ours": 0.005377819239422707,
+    "share_of_theirs": 0.005373808714343682
+   }
+  },
+  "their_machine_pairs": {
+   "M01-M02": {
+    "shared": 492,
+    "share_of_first": 0.005402793639638056
+   },
+   "M01-M03": {
+    "shared": 499,
+    "share_of_first": 0.005479662654836159
+   },
+   "M01-M04": {
+    "shared": 507,
+    "share_of_first": 0.005567512957919705
+   },
+   "M02-M03": {
+    "shared": 531,
+    "share_of_first": 0.005816564612064716
+   },
+   "M02-M04": {
+    "shared": 486,
+    "share_of_first": 0.005323635407652452
+   },
+   "M03-M04": {
+    "shared": 490,
+    "share_of_first": 0.005370333837487122
+   }
+  },
+  "their_rows_flagged_valid_that_this_rdkit_rejects": {
+   "M01": 13,
+   "M02": 13,
+   "M03": 16,
+   "M04": 14
+  }
+ }
+}

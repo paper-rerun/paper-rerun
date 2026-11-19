@@ -1,0 +1,84 @@
+=== sheet 'Title page'  1x1 ===
+=== sheet 'Summary'  13x5 ===
+Sampling performance of DrugEx pretrained models. Mean average values are reported. Standard deviations across independent sampling runs are reported only for the relative sampling time as all others were lower than 1.00%. Validity, accuracy and uniqueness are defined as the ratio of molecular representations that make valid molecular structures, the ratio of molecules containing the desired fragments (transformer models only) and the ratio of unique molecules. The reported sampling time per molecule is relative to that of the LSTM model trained with ChEMBL version 27. Sampling was independently performed on an NVIDIA A30, two separate NVIDIA GeForce RTX 2080 Ti, an NVIDIA GeForce GTX 1080 and on two separate NVIDIA GeForce RTX 3050 Ti laptop GPUs. Sample sizes were set to 100,000 molecules for RNNs and 10,000 for transformers respectively. The batch size was set to 600 for RNNs, 512 for graph transformers and 128 for SMILES transformers respectively. |  |  |  | 
+ | relative sampling time | validity | accuracy | uniqueness
+ChEMBL 31 GRU RNN - | 0.705±0.049 | 1.000 | - | 0.996
+Papyrus 05.5 GRU RNN - | 0.706±0.052 | 1.000 | - | 0.992
+ChEMBL 27 LSTM RNN - | 1.000±0.000 | 0.999 | - | 0.600
+ChEMBL 31 LSTM RNN - | 0.470±0.038 | 1.000 | - | 0.994
+Papyrus 05.5 LSTM RNN - | 0.474±0.050 | 1.000 | - | 0.988
+Papyrus 05.5 SMILES transformer BRICS | 86.628±50.843 | 0.947 | 0.622 | 0.591
+Papyrus 05.5 SMILES transformer RECAP | 86.376±50.629 | 0.963 | 0.675 | 0.649
+ChEMBL 27 graph transformer BRICS | 23.292±10.249 | 1.000 | 0.796 | 0.791
+ChEMBL 31 graph transformer BRICS | 25.253±10.373 | 1.000 | 0.786 | 0.775
+Papyrus 05.5 graph transformer BRICS | 24.694±10.270 | 1.000 | 0.762 | 0.751
+Papyrus 05.5 graph transformer RECAP | 24.843±10.378 | 1.000 | 0.814 | 0.810
+=== sheet 'Values'  70x13 ===
+Sampling performance of DrugEx pretrained models. Validity, accuracy and uniqueness are defined as the ratio of molecular representations that make valid molecular structures, the ratio of molecules containing the desired fragments (transformer models only) and the ratio of unique molecules. The reported sampling time per molecule is relative to that of the LSTM model trained with ChEMBL version 27 on the corresponding machine. Sample sizes were set to 100,000 molecules for RNNs and 10,000 for transformers respectively. The batch size was set to 600 for RNNs, 512 for graph transformers and 128 for SMILES transformers respectively. |  |  |  |  |  |  |  |  |  |  |  | 
+ | dataset | DrugEx version | fragmentation method | Machine | GPU | validity | accuracy | uniqueness | sampling time (ms) | batch size | sample size | sampling ratio
+ChEMBL 27 LSTM RNN - | ChEMBL 27 | LSTM RNN | - | M01 | NVIDIA A30 | 0.999 | - | 0.599 | 2.926 | 600 | 100000 | 1
+ChEMBL 31 GRU RNN - | ChEMBL 31 | GRU RNN | - | M01 | NVIDIA A30 | 1 | - | 0.996 | 2.086 | 600 | 100000 | 0.7129186602870813
+Papyrus 05.5 GRU RNN - | Papyrus 05.5 | GRU RNN | - | M01 | NVIDIA A30 | 1 | - | 0.992 | 2.095 | 600 | 100000 | 0.7159945317840055
+ChEMBL 31 LSTM RNN - | ChEMBL 31 | LSTM RNN | - | M01 | NVIDIA A30 | 1 | - | 0.994 | 1.204 | 600 | 100000 | 0.41148325358851673
+Papyrus 05.5 LSTM RNN - | Papyrus 05.5 | LSTM RNN | - | M01 | NVIDIA A30 | 1 | - | 0.988 | 1.218 | 600 | 100000 | 0.416267942583732
+ChEMBL 27 graph transformer BRICS | ChEMBL 27 | graph transformer | BRICS | M01 | NVIDIA A30 | 1 | 0.799 | 0.793 | 28.821 | 512 | 10000 | 9.849965823650034
+Papyrus 05.5 SMILES transformer BRICS | Papyrus 05.5 | SMILES transformer | BRICS | M01 | NVIDIA A30 | 0.947 | 0.624 | 0.593 | 68.553 | 128 | 10000 | 23.428913192071086
+Papyrus 05.5 SMILES transformer RECAP | Papyrus 05.5 | SMILES transformer | RECAP | M01 | NVIDIA A30 | 0.963 | 0.677 | 0.649 | 68.532 | 128 | 10000 | 23.421736158578263
+ChEMBL 31 graph transformer BRICS | ChEMBL 31 | graph transformer | BRICS | M01 | NVIDIA A30 | 1 | 0.783 | 0.773 | 35.714 | 512 | 10000 | 12.205741626794257
+Papyrus 05.5 graph transformer BRICS | Papyrus 05.5 | graph transformer | BRICS | M01 | NVIDIA A30 | 1 | 0.758 | 0.747 | 34.321 | 512 | 10000 | 11.729665071770334
+Papyrus 05.5 graph transformer RECAP | Papyrus 05.5 | graph transformer | RECAP | M01 | NVIDIA A30 | 1 | 0.815 | 0.812 | 34.68 | 512 | 10000 | 11.85235816814764
+ChEMBL 27 LSTM RNN - | ChEMBL 27 | LSTM RNN | - | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 0.999 | - | 0.601 | 2.875 | 600 | 100000 | 1
+ChEMBL 31 GRU RNN - | ChEMBL 31 | GRU RNN | - | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | - | 0.996 | 1.828 | 600 | 100000 | 0.6358260869565218
+Papyrus 05.5 GRU RNN - | Papyrus 05.5 | GRU RNN | - | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | - | 0.992 | 1.835 | 600 | 100000 | 0.6382608695652173
+ChEMBL 31 LSTM RNN - | ChEMBL 31 | LSTM RNN | - | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | - | 0.993 | 1.298 | 600 | 100000 | 0.4514782608695652
+Papyrus 05.5 LSTM RNN - | Papyrus 05.5 | LSTM RNN | - | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | - | 0.987 | 1.236 | 600 | 100000 | 0.42991304347826087
+ChEMBL 27 graph transformer BRICS | ChEMBL 27 | graph transformer | BRICS | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | 0.794 | 0.788 | 108.917 | 512 | 10000 | 37.884173913043476
+Papyrus 05.5 SMILES transformer BRICS | Papyrus 05.5 | SMILES transformer | BRICS | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 0.947 | 0.624 | 0.591 | 440.079 | 128 | 10000 | 153.07095652173913
+Papyrus 05.5 SMILES transformer RECAP | Papyrus 05.5 | SMILES transformer | RECAP | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 0.962 | 0.672 | 0.649 | 440.355 | 128 | 10000 | 153.16695652173914
+ChEMBL 31 graph transformer BRICS | ChEMBL 31 | graph transformer | BRICS | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | 0.787 | 0.776 | 113.135 | 512 | 10000 | 39.35130434782609
+Papyrus 05.5 graph transformer BRICS | Papyrus 05.5 | graph transformer | BRICS | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | 0.759 | 0.748 | 109.563 | 512 | 10000 | 38.10886956521739
+Papyrus 05.5 graph transformer RECAP | Papyrus 05.5 | graph transformer | RECAP | M02 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | 0.816 | 0.813 | 109.341 | 512 | 10000 | 38.03165217391304
+ChEMBL 27 LSTM RNN - | ChEMBL 27 | LSTM RNN | - | M03 | NVIDIA GeForce RTX 2080 Ti | 0.999 | - | 0.6 | 2.273 | 600 | 100000 | 1
+ChEMBL 31 GRU RNN - | ChEMBL 31 | GRU RNN | - | M03 | NVIDIA GeForce RTX 2080 Ti | 1 | - | 0.996 | 1.693 | 600 | 100000 | 0.7448306203255609
+Papyrus 05.5 GRU RNN - | Papyrus 05.5 | GRU RNN | - | M03 | NVIDIA GeForce RTX 2080 Ti | 1 | - | 0.992 | 1.708 | 600 | 100000 | 0.7514298284205895
+ChEMBL 31 LSTM RNN - | ChEMBL 31 | LSTM RNN | - | M03 | NVIDIA GeForce RTX 2080 Ti | 1 | - | 0.994 | 1.138 | 600 | 100000 | 0.5006599208095028
+Papyrus 05.5 LSTM RNN - | Papyrus 05.5 | LSTM RNN | - | M03 | NVIDIA GeForce RTX 2080 Ti | 1 | - | 0.988 | 1.148 | 600 | 100000 | 0.5050593928728552
+ChEMBL 27 graph transformer BRICS | ChEMBL 27 | graph transformer | BRICS | M03 | NVIDIA GeForce RTX 2080 Ti | 1 | 0.794 | 0.79 | 42.476 | 512 | 10000 | 18.687197536295642
+Papyrus 05.5 SMILES transformer BRICS | Papyrus 05.5 | SMILES transformer | BRICS | M03 | NVIDIA GeForce RTX 2080 Ti | 0.944 | 0.619 | 0.588 | 130.566 | 128 | 10000 | 57.44214694236691
+Papyrus 05.5 SMILES transformer RECAP | Papyrus 05.5 | SMILES transformer | RECAP | M03 | NVIDIA GeForce RTX 2080 Ti | 0.963 | 0.671 | 0.647 | 130.316 | 128 | 10000 | 57.3321601407831
+ChEMBL 31 graph transformer BRICS | ChEMBL 31 | graph transformer | BRICS | M03 | NVIDIA GeForce RTX 2080 Ti | 1 | 0.785 | 0.773 | 46.177 | 512 | 10000 | 20.315442146942367
+Papyrus 05.5 graph transformer BRICS | Papyrus 05.5 | graph transformer | BRICS | M03 | NVIDIA GeForce RTX 2080 Ti | 1 | 0.767 | 0.759 | 44.753 | 512 | 10000 | 19.688957325120985
+Papyrus 05.5 graph transformer RECAP | Papyrus 05.5 | graph transformer | RECAP | M03 | NVIDIA GeForce RTX 2080 Ti | 1 | 0.816 | 0.812 | 43.708 | 512 | 10000 | 19.229212494500658
+ChEMBL 27 LSTM RNN - | ChEMBL 27 | LSTM RNN | - | M04 | NVIDIA GeForce GTX 1080 | 0.999 | - | 0.601 | 2.504 | 600 | 100000 | 1
+ChEMBL 31 GRU RNN - | ChEMBL 31 | GRU RNN | - | M04 | NVIDIA GeForce GTX 1080 | 1 | - | 0.996 | 1.857 | 600 | 100000 | 0.7416134185303515
+Papyrus 05.5 GRU RNN - | Papyrus 05.5 | GRU RNN | - | M04 | NVIDIA GeForce GTX 1080 | 1 | - | 0.993 | 1.872 | 600 | 100000 | 0.7476038338658147
+ChEMBL 31 LSTM RNN - | ChEMBL 31 | LSTM RNN | - | M04 | NVIDIA GeForce GTX 1080 | 1 | - | 0.994 | 1.276 | 600 | 100000 | 0.5095846645367412
+Papyrus 05.5 LSTM RNN - | Papyrus 05.5 | LSTM RNN | - | M04 | NVIDIA GeForce GTX 1080 | 1 | - | 0.988 | 1.364 | 600 | 100000 | 0.5447284345047924
+ChEMBL 27 graph transformer BRICS | ChEMBL 27 | graph transformer | BRICS | M04 | NVIDIA GeForce GTX 1080 | 1 | 0.797 | 0.793 | 60.067 | 512 | 10000 | 23.98841853035144
+Papyrus 05.5 SMILES transformer BRICS | Papyrus 05.5 | SMILES transformer | BRICS | M04 | NVIDIA GeForce GTX 1080 | 0.949 | 0.619 | 0.591 | 256.732 | 128 | 10000 | 102.52875399361024
+Papyrus 05.5 SMILES transformer RECAP | Papyrus 05.5 | SMILES transformer | RECAP | M04 | NVIDIA GeForce GTX 1080 | 0.963 | 0.674 | 0.647 | 256.559 | 128 | 10000 | 102.45966453674123
+ChEMBL 31 graph transformer BRICS | ChEMBL 31 | graph transformer | BRICS | M04 | NVIDIA GeForce GTX 1080 | 1 | 0.784 | 0.773 | 66.02 | 512 | 10000 | 26.36581469648562
+Papyrus 05.5 graph transformer BRICS | Papyrus 05.5 | graph transformer | BRICS | M04 | NVIDIA GeForce GTX 1080 | 1 | 0.763 | 0.753 | 64.413 | 512 | 10000 | 25.724041533546323
+Papyrus 05.5 graph transformer RECAP | Papyrus 05.5 | graph transformer | RECAP | M04 | NVIDIA GeForce GTX 1080 | 1 | 0.812 | 0.808 | 64.001 | 512 | 10000 | 25.55950479233227
+ChEMBL 27 LSTM RNN - | ChEMBL 27 | LSTM RNN | - | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 0.999 | - | 0.6 | 3.052 | 600 | 100000 | 1
+ChEMBL 31 GRU RNN - | ChEMBL 31 | GRU RNN | - | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | - | 0.996 | 1.992 | 600 | 100000 | 0.6526867627785059
+Papyrus 05.5 GRU RNN - | Papyrus 05.5 | GRU RNN | - | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | - | 0.992 | 1.963 | 600 | 100000 | 0.6431847968545217
+ChEMBL 31 LSTM RNN - | ChEMBL 31 | LSTM RNN | - | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | - | 0.994 | 1.375 | 600 | 100000 | 0.450524246395806
+Papyrus 05.5 LSTM RNN - | Papyrus 05.5 | LSTM RNN | - | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | - | 0.988 | 1.372 | 600 | 100000 | 0.44954128440366975
+ChEMBL 27 graph transformer BRICS | ChEMBL 27 | graph transformer | BRICS | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | 0.798 | 0.793 | 97.53 | 512 | 10000 | 31.956094364351245
+Papyrus 05.5 SMILES transformer BRICS | Papyrus 05.5 | SMILES transformer | BRICS | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 0.947 | 0.618 | 0.59 | 404.828 | 128 | 10000 | 132.6435124508519
+Papyrus 05.5 SMILES transformer RECAP | Papyrus 05.5 | SMILES transformer | RECAP | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 0.964 | 0.679 | 0.652 | 400.539 | 128 | 10000 | 131.23820445609437
+ChEMBL 31 graph transformer BRICS | ChEMBL 31 | graph transformer | BRICS | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | 0.788 | 0.778 | 106.798 | 512 | 10000 | 34.992791612057665
+Papyrus 05.5 graph transformer BRICS | Papyrus 05.5 | graph transformer | BRICS | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | 0.763 | 0.752 | 106.91 | 512 | 10000 | 35.029488859764086
+Papyrus 05.5 graph transformer RECAP | Papyrus 05.5 | graph transformer | RECAP | M05 | NVIDIA GeForce RTX 3050 Ti laptop | 1 | 0.815 | 0.811 | 109.667 | 512 | 10000 | 35.93283093053735
+ChEMBL 27 LSTM RNN - | ChEMBL 27 | LSTM RNN | - | M06 | NVIDIA GeForce RTX 2080 Ti | 0.999 | - | 0.599 | 2.299 | 600 | 100000 | 1
+ChEMBL 31 GRU RNN - | ChEMBL 31 | GRU RNN | - | M06 | NVIDIA GeForce RTX 2080 Ti | 1 | - | 0.996 | 1.705 | 600 | 100000 | 0.7416267942583733
+Papyrus 05.5 GRU RNN - | Papyrus 05.5 | GRU RNN | - | M06 | NVIDIA GeForce RTX 2080 Ti | 1 | - | 0.992 | 1.7 | 600 | 100000 | 0.7394519356241844
+ChEMBL 31 LSTM RNN - | ChEMBL 31 | LSTM RNN | - | M06 | NVIDIA GeForce RTX 2080 Ti | 1 | - | 0.994 | 1.139 | 600 | 100000 | 0.4954327968682036
+Papyrus 05.5 LSTM RNN - | Papyrus 05.5 | LSTM RNN | - | M06 | NVIDIA GeForce RTX 2080 Ti | 1 | - | 0.988 | 1.142 | 600 | 100000 | 0.4967377120487168
+ChEMBL 27 graph transformer BRICS | ChEMBL 27 | graph transformer | BRICS | M06 | NVIDIA GeForce RTX 2080 Ti | 1 | 0.796 | 0.79 | 39.972 | 512 | 10000 | 17.386689865158765
+Papyrus 05.5 SMILES transformer BRICS | Papyrus 05.5 | SMILES transformer | BRICS | M06 | NVIDIA GeForce RTX 2080 Ti | 0.947 | 0.626 | 0.595 | 116.448 | 128 | 10000 | 50.65158764680296
+Papyrus 05.5 SMILES transformer RECAP | Papyrus 05.5 | SMILES transformer | RECAP | M06 | NVIDIA GeForce RTX 2080 Ti | 0.962 | 0.674 | 0.651 | 116.418 | 128 | 10000 | 50.63853849499783
+ChEMBL 31 graph transformer BRICS | ChEMBL 31 | graph transformer | BRICS | M06 | NVIDIA GeForce RTX 2080 Ti | 1 | 0.786 | 0.774 | 42.043 | 512 | 10000 | 18.287516311439756
+Papyrus 05.5 graph transformer BRICS | Papyrus 05.5 | graph transformer | BRICS | M06 | NVIDIA GeForce RTX 2080 Ti | 1 | 0.759 | 0.749 | 41.116 | 512 | 10000 | 17.884297520661157
+Papyrus 05.5 graph transformer RECAP | Papyrus 05.5 | graph transformer | RECAP | M06 | NVIDIA GeForce RTX 2080 Ti | 1 | 0.809 | 0.805 | 42.421 | 512 | 10000 | 18.45193562418443

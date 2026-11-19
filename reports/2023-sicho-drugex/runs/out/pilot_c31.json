@@ -1,0 +1,19 @@
+{
+ "model": "chembl_31_smiles_rnn_GRU_PT.pkg",
+ "kind": "gru",
+ "n": 600,
+ "batch": 600,
+ "sample_seconds": 3.8,
+ "ms_per_molecule": 6.335,
+ "frozen_validity": 0.91,
+ "frozen_uniqueness": 1.0,
+ "secondary_uniqueness_distinct_raw_over_n": 1.0,
+ "secondary_uniqueness_distinct_canonical_over_n": 0.91,
+ "secondary_validity_parseable_including_multifragment": 0.91,
+ "n_valid": 546,
+ "distinct_valid": 546,
+ "multifragment": 0,
+ "torch": "2.15.0+cpu",
+ "rdkit": "2026.09.2",
+ "peak_working_set_mb": 368.6
+}

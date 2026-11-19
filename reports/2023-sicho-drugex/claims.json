@@ -1,0 +1,72 @@
+{
+ "paper": "Sicho, M.; Luukkonen, S.; van den Maagdenberg, H. W.; Schoenmaker, L.; Bequignon, O. J. M.; van Westen, G. J. P. DrugEx: Deep Learning Models and Tools for Exploration of Drug-like Chemical Space. J. Chem. Inf. Model. 2023, 63 (12), 3629-3636. DOI 10.1021/acs.jcim.3c00434",
+ "where_the_numbers_live": "Supporting Information, section S4 'Sampling statistics', Table S4. The same table is deposited as a spreadsheet at 10.5281/zenodo.7928362 (DrugEx_pretrained_models_sampling_time.xlsx, sha256 027e7ee2c9b9a80b9e8d33ea383b6b08f07facbeef2e4203fdf997d2089f1b0d), which also carries one row per model per machine over six GPUs. The article body has no benchmark number: it is a software paper. Filipe approved a supplementary number as a target on 2026-11-08, on the condition that the report says where it comes from.",
+ "code": "https://github.com/CDDLeiden/DrugEx at branch dev, commit 76c1c39195. MIT. Not master: in master, sequence_rnn.py sets torch.device('cuda:-1') with no guard and cannot run on a machine without a GPU. PR #20, which proposed that guard, was closed without merge on 2026-07-29.",
+ "weights": "Zenodo, MIT, anonymous download. ChEMBL 27 LSTM RNN: 10.5281/zenodo.7096837, DrugEx_v2_PT_ChEMBL27.zip, 20663962 B, md5 ed6ebd972e530a108e16ed4646b2a38a. ChEMBL 31 GRU RNN: 10.5281/zenodo.7550739, DrugEx_v2_GRU_PT_ChEMBL31.zip, 17380798 B.",
+ "route": "Pure inference. Each RNN samples from scratch, so there is no input test set to rebuild. We sample 100000 sequences per model at batch size 600, keeping every sequence including the invalid and the repeated ones, and compute the two ratios ourselves. No training, no fine-tuning, CPU only.",
+
+ "definitions_frozen_before_sampling": {
+  "why_this_section_exists": "No code in the DrugEx release computes a uniqueness ratio, and the script behind Table S4 was not published, so the definition is not in the release. The deposit does ship every molecule the authors sampled, with their own Valid and Unique flag per row (DrugEx_pretrained_models_sampled_molecules.tsv.xz, sha256 71751ae7408fdd283b9e76f4fd7c235673e76eba349c333c2b8832c8496be225). We recomputed both ratios from those molecules under every reading that makes sense (scripts/02_definitions.py, runs/out/definitions.json) and kept the reading that reproduces a published value. That is the whole use we made of the deposit before freezing.",
+  "validity": "the number of sampled sequences that RDKit parses into a valid molecule, divided by the number of sequences sampled (100000). DrugEx counts a multi-fragment SMILES as invalid by default (no_multifrag_smiles=True), so a parsed molecule whose canonical SMILES contains a '.' does not count. On the authors' own molecules the two agree to 0.00000, because no sampled sequence of either RNN parses into more than one fragment.",
+  "uniqueness": "the number of distinct canonical SMILES among the valid molecules, divided by the number of valid molecules. Reason for the denominator: the legend says 'ratio of unique molecules', and an unparseable string is not a molecule. Reason for the canonical form: this is the only reading that returns a published value from the authors' own deposited molecules (0.99651 against the printed 0.996 for the ChEMBL 31 GRU).",
+  "secondary_readings_reported_but_not_judged": [
+   "uniqueness as distinct raw strings / 100000, which is what the deposit's own Unique flag counts",
+   "uniqueness as distinct canonical SMILES / 100000",
+   "validity as the deposit's own Valid flag"
+  ],
+  "no_seed": "torch.manual_seed appears nowhere in the repository and generate.py has no --seed, so the exact sample cannot be reproduced. The authors publish the dispersion instead: the Table S4 legend states that the deviation across independent sampling runs was below 1.00% for everything except the relative sampling time, and the spreadsheet shows the ChEMBL 27 LSTM uniqueness at 0.599, 0.600, 0.601 across six GPUs. The sample size is part of the claim and is not reduced: uniqueness is a function of n."
+ },
+
+ "band": {
+  "rule": "A claim is reproduced when |ours - published| <= 0.01 * published, that is 1% relative.",
+  "where_it_comes_from": "The authors' own statement of run-to-run dispersion in the Table S4 legend. It is not a band we invented and it is not read off our results.",
+  "what_it_costs": "On uniqueness 0.600 the band is +/-0.006, which still separates the ChEMBL 27 LSTM from every other RNN in the table (0.988 to 0.996). On validity 0.999 it is +/-0.0100.",
+  "known_weakness": "The deposit's per-machine spread is tighter than this band: +/-0.001 on uniqueness over six GPUs and 0.000 on validity. We judge by the 1% the authors state, not by the spread, because CPU inference is an axis the deposit does not cover. Both numbers are reported."
+ },
+
+ "claims": [
+  {
+   "id": "C1",
+   "model": "ChEMBL 27 LSTM RNN",
+   "metric": "validity",
+   "published": 0.999,
+   "band": 0.00999,
+   "condition": "n = 100000 sequences sampled, batch size 600"
+  },
+  {
+   "id": "C2",
+   "model": "ChEMBL 27 LSTM RNN",
+   "metric": "uniqueness",
+   "published": 0.600,
+   "band": 0.006,
+   "condition": "n = 100000 sequences sampled, batch size 600",
+   "note": "The one number in Table S4 worth the run. Every other RNN prints 0.988 to 0.996; this model prints 0.600. Either it reproduces or it does not."
+  },
+  {
+   "id": "C3",
+   "model": "ChEMBL 31 GRU RNN",
+   "metric": "validity",
+   "published": 1.000,
+   "band": 0.01,
+   "condition": "n = 100000 sequences sampled, batch size 600",
+   "note": "Control. A value of 1.000 can only be matched or missed downward."
+  },
+  {
+   "id": "C4",
+   "model": "ChEMBL 31 GRU RNN",
+   "metric": "uniqueness",
+   "published": 0.996,
+   "band": 0.00996,
+   "condition": "n = 100000 sequences sampled, batch size 600"
+  }
+ ],
+
+ "out_of_scope": {
+  "transformers": "All six transformer rows of Table S4 are out. generate.py defaults to -i ligand_4:4_brics_test, a BRICS split of Papyrus 05.5 that was never published (no ids, no split file, and FragmentPairsSplitter takes seed=None), so their accuracy and uniqueness cannot be scored against the authors' input. They also cost 86x the time per molecule.",
+  "relative_sampling_time": "The time column of Table S4 is wall clock on the authors' GPUs. We run on CPU, so it is not comparable and is not a target.",
+  "the_other_three_rnns": "Papyrus 05.5 GRU, ChEMBL 31 LSTM and Papyrus 05.5 LSTM are inside the released weights and could be run later. They are not in this verdict."
+ },
+
+ "hardware": "Ryzen 9 3900X, 64 GB, CPU only, under nice. The GPU belongs to the user's own work and is not used.",
+ "frozen_before": "any sampling of our own. The only measurement that preceded this file is the recount of the authors' deposited molecules in scripts/01 and scripts/02, which exists to fix the definitions above, as the pipeline requires."
+}

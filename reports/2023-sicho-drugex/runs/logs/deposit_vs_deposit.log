@@ -1,0 +1,185 @@
+{
+ "per_machine": {
+  "M01|ChEMBL 27|sequence LSTM RNN": {
+   "published_validity": 0.999,
+   "published_uniqueness": 0.599,
+   "sample_size_both": [
+    100000,
+    100000
+   ],
+   "batch_size_published": 600,
+   "recomputed": {
+    "validity_their_flag": 0.68577,
+    "validity_parseable": 0.68638,
+    "validity_single_fragment": 0.68638,
+    "uniqueness_their_flag": 0.66418,
+    "uniqueness_distinct_raw_over_n": 0.66418,
+    "uniqueness_distinct_canonical_over_n": 0.39231,
+    "uniqueness_distinct_canonical_over_valid": 0.571563856755733
+   }
+  },
+  "M01|ChEMBL 31|sequence GRU RNN": {
+   "published_validity": 1.0,
+   "published_uniqueness": 0.996,
+   "sample_size_both": [
+    100000,
+    100000
+   ],
+   "batch_size_published": 600,
+   "recomputed": {
+    "validity_their_flag": 0.91401,
+    "validity_parseable": 0.91388,
+    "validity_single_fragment": 0.91388,
+    "uniqueness_their_flag": 0.99689,
+    "uniqueness_distinct_raw_over_n": 0.99689,
+    "uniqueness_distinct_canonical_over_n": 0.91064,
+    "uniqueness_distinct_canonical_over_valid": 0.9964546767628135
+   }
+  },
+  "M02|ChEMBL 27|sequence LSTM RNN": {
+   "published_validity": 0.999,
+   "published_uniqueness": 0.601,
+   "sample_size_both": [
+    100000,
+    100000
+   ],
+   "batch_size_published": 600,
+   "recomputed": {
+    "validity_their_flag": 0.68485,
+    "validity_parseable": 0.68547,
+    "validity_single_fragment": 0.68547,
+    "uniqueness_their_flag": 0.66105,
+    "uniqueness_distinct_raw_over_n": 0.66105,
+    "uniqueness_distinct_canonical_over_n": 0.38964,
+    "uniqueness_distinct_canonical_over_valid": 0.5684275022976936
+   }
+  },
+  "M02|ChEMBL 31|sequence GRU RNN": {
+   "published_validity": 1.0,
+   "published_uniqueness": 0.996,
+   "sample_size_both": [
+    100000,
+    100000
+   ],
+   "batch_size_published": 600,
+   "recomputed": {
+    "validity_their_flag": 0.91624,
+    "validity_parseable": 0.91611,
+    "validity_single_fragment": 0.91611,
+    "uniqueness_their_flag": 0.99693,
+    "uniqueness_distinct_raw_over_n": 0.99693,
+    "uniqueness_distinct_canonical_over_n": 0.91291,
+    "uniqueness_distinct_canonical_over_valid": 0.9965069696870463
+   }
+  },
+  "M03|ChEMBL 27|sequence LSTM RNN": {
+   "published_validity": 0.999,
+   "published_uniqueness": 0.6,
+   "sample_size_both": [
+    100000,
+    100000
+   ],
+   "batch_size_published": 600,
+   "recomputed": {
+    "validity_their_flag": 0.68744,
+    "validity_parseable": 0.68785,
+    "validity_single_fragment": 0.68785,
+    "uniqueness_their_flag": 0.66301,
+    "uniqueness_distinct_raw_over_n": 0.66301,
+    "uniqueness_distinct_canonical_over_n": 0.39278,
+    "uniqueness_distinct_canonical_over_valid": 0.571025659664171
+   }
+  },
+  "M03|ChEMBL 31|sequence GRU RNN": {
+   "published_validity": 1.0,
+   "published_uniqueness": 0.996,
+   "sample_size_both": [
+    100000,
+    100000
+   ],
+   "batch_size_published": 600,
+   "recomputed": {
+    "validity_their_flag": 0.91589,
+    "validity_parseable": 0.91573,
+    "validity_single_fragment": 0.91573,
+    "uniqueness_their_flag": 0.99678,
+    "uniqueness_distinct_raw_over_n": 0.99678,
+    "uniqueness_distinct_canonical_over_n": 0.91242,
+    "uniqueness_distinct_canonical_over_valid": 0.9963853974424776
+   }
+  },
+  "M04|ChEMBL 27|sequence LSTM RNN": {
+   "published_validity": 0.999,
+   "published_uniqueness": 0.601,
+   "sample_size_both": [
+    100000,
+    100000
+   ],
+   "batch_size_published": 600,
+   "recomputed": {
+    "validity_their_flag": 0.68633,
+    "validity_parseable": 0.68683,
+    "validity_single_fragment": 0.68683,
+    "uniqueness_their_flag": 0.66308,
+    "uniqueness_distinct_raw_over_n": 0.66308,
+    "uniqueness_distinct_canonical_over_n": 0.39298,
+    "uniqueness_distinct_canonical_over_valid": 0.5721648734038991
+   }
+  },
+  "M04|ChEMBL 31|sequence GRU RNN": {
+   "published_validity": 1.0,
+   "published_uniqueness": 0.996,
+   "sample_size_both": [
+    100000,
+    100000
+   ],
+   "batch_size_published": 600,
+   "recomputed": {
+    "validity_their_flag": 0.91526,
+    "validity_parseable": 0.91512,
+    "validity_single_fragment": 0.91512,
+    "uniqueness_their_flag": 0.99682,
+    "uniqueness_distinct_raw_over_n": 0.99682,
+    "uniqueness_distinct_canonical_over_n": 0.91183,
+    "uniqueness_distinct_canonical_over_valid": 0.9964048430806889
+   }
+  },
+  "M05|ChEMBL 27|sequence LSTM RNN": {
+   "published": {
+    "validity": 0.999,
+    "uniqueness": 0.6,
+    "sample_size": 100000,
+    "batch_size": 600
+   },
+   "molecules_file": "not in the tsv"
+  },
+  "M05|ChEMBL 31|sequence GRU RNN": {
+   "published": {
+    "validity": 1.0,
+    "uniqueness": 0.996,
+    "sample_size": 100000,
+    "batch_size": 600
+   },
+   "molecules_file": "not in the tsv"
+  },
+  "M06|ChEMBL 27|sequence LSTM RNN": {
+   "published": {
+    "validity": 0.999,
+    "uniqueness": 0.599,
+    "sample_size": 100000,
+    "batch_size": 600
+   },
+   "molecules_file": "not in the tsv"
+  },
+  "M06|ChEMBL 31|sequence GRU RNN": {
+   "published": {
+    "validity": 1.0,
+    "uniqueness": 0.996,
+    "sample_size": 100000,
+    "batch_size": 600
+   },
+   "molecules_file": "not in the tsv"
+  }
+ },
+ "readings_that_match_both_models": []
+}

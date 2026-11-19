@@ -1,0 +1,16 @@
+{
+  "peak_rss_mb": 410.3,
+  "pkg": "downloads/models/ex27/chembl_27_v2_smiles_rnn_PT.pkg",
+  "vocab": "downloads/models/ex27/chembl_27_v2_smiles_rnn_PT.vocab",
+  "arch": "lstm",
+  "num": 100000,
+  "batch_size": 600,
+  "seed": 1,
+  "threads": 4,
+  "voc_size": 85,
+  "max_len": 100,
+  "seconds": 723.64,
+  "ms_per_mol": 7.2364,
+  "drugex": "3.4.4",
+  "torch": "2.2.2+cpu"
+}

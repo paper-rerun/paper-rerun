@@ -1,0 +1,166 @@
+{
+ "per_row": {
+  "ChEMBL 27|sequence LSTM RNN|M01": {
+   "n": 100000,
+   "nonempty": 99910,
+   "nonempty_share": 0.9991,
+   "their_valid_flag_share": 0.68577,
+   "published_validity": 0.999,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 27|sequence LSTM RNN|M02": {
+   "n": 100000,
+   "nonempty": 99917,
+   "nonempty_share": 0.99917,
+   "their_valid_flag_share": 0.68485,
+   "published_validity": 0.999,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 27|sequence LSTM RNN|M03": {
+   "n": 100000,
+   "nonempty": 99931,
+   "nonempty_share": 0.99931,
+   "their_valid_flag_share": 0.68744,
+   "published_validity": 0.999,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 27|sequence LSTM RNN|M04": {
+   "n": 100000,
+   "nonempty": 99932,
+   "nonempty_share": 0.99932,
+   "their_valid_flag_share": 0.68633,
+   "published_validity": 0.999,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 31|sequence GRU RNN|M01": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.91401,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 31|sequence GRU RNN|M02": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.91624,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 31|sequence GRU RNN|M03": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.91589,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 31|sequence GRU RNN|M04": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.91526,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 31|sequence LSTM RNN|M01": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.9622,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 31|sequence LSTM RNN|M02": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.96071,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 31|sequence LSTM RNN|M03": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.96286,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "ChEMBL 31|sequence LSTM RNN|M04": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.96164,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "Papyrus 05.5|sequence GRU RNN|M01": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.91674,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "Papyrus 05.5|sequence GRU RNN|M02": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.91493,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "Papyrus 05.5|sequence GRU RNN|M03": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.91499,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "Papyrus 05.5|sequence GRU RNN|M04": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.91449,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "Papyrus 05.5|sequence LSTM RNN|M01": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.95656,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "Papyrus 05.5|sequence LSTM RNN|M02": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.95681,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "Papyrus 05.5|sequence LSTM RNN|M03": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.95696,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  },
+  "Papyrus 05.5|sequence LSTM RNN|M04": {
+   "n": 100000,
+   "nonempty": 100000,
+   "nonempty_share": 1.0,
+   "their_valid_flag_share": 0.95717,
+   "published_validity": 1.0,
+   "nonempty_rounds_to_published": true
+  }
+ },
+ "rnn_rows": 20,
+ "rnn_rows_matching_nonempty": 20
+}

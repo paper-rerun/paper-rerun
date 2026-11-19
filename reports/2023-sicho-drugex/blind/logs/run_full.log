@@ -1,0 +1,49 @@
+12000/100000 79s eta 578s
+24000/100000 191s eta 604s
+36000/100000 284s eta 505s
+48000/100000 375s eta 407s
+60000/100000 463s eta 309s
+72000/100000 531s eta 206s
+84000/100000 625s eta 119s
+96000/100000 701s eta 29s
+{"peak_rss_mb": 410.3, "pkg": "downloads/models/ex27/chembl_27_v2_smiles_rnn_PT.pkg", "vocab": "downloads/models/ex27/chembl_27_v2_smiles_rnn_PT.vocab", "arch": "lstm", "num": 100000, "batch_size": 600, "seed": 1, "threads": 4, "voc_size": 85, "max_len": 100, "seconds": 723.64, "ms_per_mol": 7.2364, "drugex": "3.4.4", "torch": "2.2.2+cpu"}
+{
+  "file": "runs/full_chembl27_lstm.smi",
+  "n_sampled": 100000,
+  "n_empty_strings": 84,
+  "n_valid_primary": 68558,
+  "validity_primary": 0.68558,
+  "n_unique_canonical_among_valid": 39200,
+  "uniqueness_primary": 0.571779,
+  "variants": {
+    "uniqueness_over_n_sampled": 0.392,
+    "uniqueness_raw_strings_over_valid": 0.575542,
+    "validity_multifrag_allowed": 0.68558,
+    "uniqueness_multifrag_allowed": 0.571779
+  }
+}
+12000/100000 234s eta 1713s
+24000/100000 514s eta 1628s
+36000/100000 805s eta 1432s
+48000/100000 1070s eta 1159s
+60000/100000 1468s eta 979s
+72000/100000 1736s eta 675s
+84000/100000 1953s eta 372s
+96000/100000 2283s eta 95s
+{"peak_rss_mb": 365.6, "pkg": "downloads/models/ex31/chembl_31_smiles_rnn_GRU_PT.pkg", "vocab": "downloads/models/ex31/chembl_31_smiles_rnn_GRU_PT.vocab", "arch": "gru", "num": 100000, "batch_size": 600, "seed": 1, "threads": 4, "voc_size": 88, "max_len": 100, "seconds": 2689.67, "ms_per_mol": 26.8967, "drugex": "3.4.4", "torch": "2.2.2+cpu"}
+{
+  "file": "runs/full_chembl31_gru.smi",
+  "n_sampled": 100000,
+  "n_empty_strings": 0,
+  "n_valid_primary": 91398,
+  "validity_primary": 0.91398,
+  "n_unique_canonical_among_valid": 91092,
+  "uniqueness_primary": 0.996652,
+  "variants": {
+    "uniqueness_over_n_sampled": 0.91092,
+    "uniqueness_raw_strings_over_valid": 0.996783,
+    "validity_multifrag_allowed": 0.91398,
+    "uniqueness_multifrag_allowed": 0.996652
+  }
+}
+ALL_DONE

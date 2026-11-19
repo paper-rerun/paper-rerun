@@ -1,0 +1,91 @@
+E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\qsprpred\models\__init__.py:1: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\mordred\InformationContent.py:53: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if dst is ():
+Failed to find the pandas get_adjustment() function to patch
+Failed to patch pandas - PandasTools will have limited functionality
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\drugex\generate.py", line 251, in <module>
+    Design(args)
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\drugex\generate.py", line 188, in Design
+    agent = setup_generator.setGeneratorAlgorithm(voc)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\drugex\train.py", line 545, in setGeneratorAlgorithm
+    generator = SequenceRNN(voc, is_lstm= not self.use_gru, use_gpus=self.use_gpus)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\drugex\training\generators\sequence_rnn.py", line 29, in __init__
+    self.attachToGPUs(self.gpus)
+  File "E:\Ciencia\noturno\2023-sicho-drugex-cego\.venv\Lib\site-packages\drugex\training\generators\sequence_rnn.py", line 46, in attachToGPUs
+    self.device = torch.device(f'cuda:{gpus[0]}')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Invalid device string: 'cuda:-1'
+{
+  "base_dir": ".",
+  "debug": false,
+  "generator": "chembl_31_smiles_rnn_GRU_PT",
+  "input_file": "ligand_4:4_brics_test",
+  "voc_files": [
+    "chembl_31_smiles_rnn_GRU_PT.vocab"
+  ],
+  "num": 10,
+  "keep_invalid": true,
+  "keep_duplicates": false,
+  "keep_undesired": false,
+  "predictor": [],
+  "activity_threshold": 6.5,
+  "active_targets": [],
+  "inactive_targets": [],
+  "window_targets": [],
+  "ligand_efficiency": false,
+  "le_thresholds": [
+    0.0,
+    0.5
+  ],
+  "lipophilic_efficiency": false,
+  "lipe_thresholds": [
+    4.0,
+    6.0
+  ],
+  "qed": false,
+  "uniqueness": false,
+  "sa_score": false,
+  "ra_score": false,
+  "molecular_weight": false,
+  "mw_thresholds": [
+    200,
+    600
+  ],
+  "logP": false,
+  "logP_thresholds": [
+    -5,
+    5
+  ],
+  "tpsa": false,
+  "tpsa_thresholds": [
+    0,
+    140
+  ],
+  "similarity_mol": null,
+  "similarity_type": "fraggle",
+  "similarity_threshold": 0.5,
+  "similarity_tversky_weights": [
+    0.7,
+    0.3
+  ],
+  "use_gpus": "1,2,3,4",
+  "batch_size": 10,
+  "no_git": true,
+  "mol_type": "smiles",
+  "algorithm": "rnn",
+  "use_gru": true,
+  "epsilon": 0.1,
+  "beta": 0.0,
+  "scheme": "PR",
+  "env_task": "CLS",
+  "env_alg": [
+    "RF"
+  ],
+  "targets": []
+}

@@ -1,0 +1,20 @@
+Downloads and their sha256 (all fetched 2026-11-19 over HTTPS with TLS verification on):
+
+Zenodo 10.5281/zenodo.7096837  DrugEx_v2_PT_ChEMBL27.zip
+  63a4a196971a3a8847fcc299b51003c8267bbf21e43c17e3d940f840a1801a8d
+Zenodo 10.5281/zenodo.7550739  DrugEx_v2_GRU_PT_ChEMBL31.zip
+  d09a6c71727608a988e3bc670dcc00485aceffe1d076145beeb2494d50c8d473
+Zenodo 10.5281/zenodo.7928362  DrugEx_pretrained_models_sampling_time.xlsx
+  027e7ee2c9b9a80b9e8d33ea383b6b08f07facbeef2e4203fdf997d2089f1b0d
+Zenodo 10.5281/zenodo.7928362  DrugEx_pretrained_models_sampled_molecules.tsv.xz
+  71751ae7408fdd283b9e76f4fd7c235673e76eba349c333c2b8832c8496be225
+GitHub  CDDLeiden/DrugEx tag v3.4.4 source tarball
+GitHub  CDDLeiden/QSPRPred tag v1.3.1 source tarball
+EuropePMC PMC10306259 fullTextXML (article text)
+
+Not obtainable: the Supporting Information PDF itself. pubs.acs.org returns an HTML
+interstitial instead of ci3c00434_si_001.pdf, and the EuropePMC supplementaryFiles
+endpoint for PMC10306259 returns only the article figures. The Table S4 numbers and
+legend used here were read instead from the authors' own underlying data deposit
+(Zenodo 10.5281/zenodo.7928362), which the paper cites as the source of Table S4 and
+which carries the legend verbatim.

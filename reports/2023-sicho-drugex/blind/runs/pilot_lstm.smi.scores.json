@@ -1,0 +1,15 @@
+{
+  "file": "runs/pilot_lstm.smi",
+  "n_sampled": 1800,
+  "n_empty_strings": 1,
+  "n_valid_primary": 1229,
+  "validity_primary": 0.682778,
+  "n_unique_canonical_among_valid": 1030,
+  "uniqueness_primary": 0.83808,
+  "variants": {
+    "uniqueness_over_n_sampled": 0.572222,
+    "uniqueness_raw_strings_over_valid": 0.83808,
+    "validity_multifrag_allowed": 0.682778,
+    "uniqueness_multifrag_allowed": 0.83808
+  }
+}

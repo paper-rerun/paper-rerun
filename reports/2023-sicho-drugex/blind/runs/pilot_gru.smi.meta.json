@@ -1,0 +1,16 @@
+{
+  "peak_rss_mb": 363.4,
+  "pkg": "downloads/models/ex31/chembl_31_smiles_rnn_GRU_PT.pkg",
+  "vocab": "downloads/models/ex31/chembl_31_smiles_rnn_GRU_PT.vocab",
+  "arch": "gru",
+  "num": 1800,
+  "batch_size": 600,
+  "seed": null,
+  "threads": 4,
+  "voc_size": 88,
+  "max_len": 100,
+  "seconds": 40.07,
+  "ms_per_mol": 22.2618,
+  "drugex": "3.4.4",
+  "torch": "2.2.2+cpu"
+}

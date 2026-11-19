@@ -1,0 +1,98 @@
+{
+ "M01|ChEMBL 27|sequence LSTM RNN": {
+  "n": 100000,
+  "unique_flag_over_n": 0.66418,
+  "unique_flag_over_valid": 0.9685171413156014,
+  "distinct_smiles_over_n": 0.66418,
+  "distinct_valid_smiles_over_valid": 0.57612610642052,
+  "valid_flag_over_n": 0.68577,
+  "novel_flag_over_n": 0.5935,
+  "valid_and_unique_over_n": 0.39509,
+  "distinct_smiles": 66418,
+  "distinct_valid_smiles": 39509
+ },
+ "M01|ChEMBL 31|sequence GRU RNN": {
+  "n": 100000,
+  "unique_flag_over_n": 0.99689,
+  "unique_flag_over_valid": 1.0906773448868174,
+  "distinct_smiles_over_n": 0.99689,
+  "distinct_valid_smiles_over_valid": 0.9965974114068774,
+  "valid_flag_over_n": 0.91401,
+  "novel_flag_over_n": 0.91238,
+  "valid_and_unique_over_n": 0.9109,
+  "distinct_smiles": 99689,
+  "distinct_valid_smiles": 91090
+ },
+ "M02|ChEMBL 27|sequence LSTM RNN": {
+  "n": 100000,
+  "unique_flag_over_n": 0.66105,
+  "unique_flag_over_valid": 0.965247864495875,
+  "distinct_smiles_over_n": 0.66105,
+  "distinct_valid_smiles_over_valid": 0.5727385558881507,
+  "valid_flag_over_n": 0.68485,
+  "novel_flag_over_n": 0.59286,
+  "valid_and_unique_over_n": 0.39224,
+  "distinct_smiles": 66105,
+  "distinct_valid_smiles": 39224
+ },
+ "M02|ChEMBL 31|sequence GRU RNN": {
+  "n": 100000,
+  "unique_flag_over_n": 0.99693,
+  "unique_flag_over_valid": 1.088066445472802,
+  "distinct_smiles_over_n": 0.99693,
+  "distinct_valid_smiles_over_valid": 0.9966493495154108,
+  "valid_flag_over_n": 0.91624,
+  "novel_flag_over_n": 0.91496,
+  "valid_and_unique_over_n": 0.91317,
+  "distinct_smiles": 99693,
+  "distinct_valid_smiles": 91317
+ },
+ "M03|ChEMBL 27|sequence LSTM RNN": {
+  "n": 100000,
+  "unique_flag_over_n": 0.66301,
+  "unique_flag_over_valid": 0.9644623530780868,
+  "distinct_smiles_over_n": 0.66301,
+  "distinct_valid_smiles_over_valid": 0.5751920167578262,
+  "valid_flag_over_n": 0.68744,
+  "novel_flag_over_n": 0.59336,
+  "valid_and_unique_over_n": 0.39541,
+  "distinct_smiles": 66301,
+  "distinct_valid_smiles": 39541
+ },
+ "M03|ChEMBL 31|sequence GRU RNN": {
+  "n": 100000,
+  "unique_flag_over_n": 0.99678,
+  "unique_flag_over_valid": 1.0883184661913547,
+  "distinct_smiles_over_n": 0.99678,
+  "distinct_valid_smiles_over_valid": 0.996506130648877,
+  "valid_flag_over_n": 0.91589,
+  "novel_flag_over_n": 0.91446,
+  "valid_and_unique_over_n": 0.91269,
+  "distinct_smiles": 99678,
+  "distinct_valid_smiles": 91269
+ },
+ "M04|ChEMBL 27|sequence LSTM RNN": {
+  "n": 100000,
+  "unique_flag_over_n": 0.66308,
+  "unique_flag_over_valid": 0.9661241676744423,
+  "distinct_smiles_over_n": 0.66308,
+  "distinct_valid_smiles_over_valid": 0.5765885215566856,
+  "valid_flag_over_n": 0.68633,
+  "novel_flag_over_n": 0.59284,
+  "valid_and_unique_over_n": 0.39573,
+  "distinct_smiles": 66308,
+  "distinct_valid_smiles": 39573
+ },
+ "M04|ChEMBL 31|sequence GRU RNN": {
+  "n": 100000,
+  "unique_flag_over_n": 0.99682,
+  "unique_flag_over_valid": 1.0891112907807619,
+  "distinct_smiles_over_n": 0.99682,
+  "distinct_valid_smiles_over_valid": 0.9965255774315495,
+  "valid_flag_over_n": 0.91526,
+  "novel_flag_over_n": 0.91374,
+  "valid_and_unique_over_n": 0.91208,
+  "distinct_smiles": 99682,
+  "distinct_valid_smiles": 91208
+ }
+}

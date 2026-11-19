@@ -1,0 +1,7 @@
+{
+  "file": "runs/full_chembl31_gru.smi",
+  "n": 100000,
+  "authors_operational_validity_nonempty_over_n": 1.0,
+  "authors_operational_uniqueness_distinct_raw_over_n": 0.99706,
+  "distinct_canonical_valid_over_n": 0.91092
+}

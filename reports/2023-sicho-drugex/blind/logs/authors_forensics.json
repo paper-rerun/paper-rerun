@@ -1,0 +1,47 @@
+[
+ {
+  "group": [
+   "ChEMBL 27",
+   "sequence LSTM RNN",
+   "M01"
+  ],
+  "n": 100000,
+  "mean_flag_Valid": 0.68577,
+  "mean_flag_Unique": 0.66418,
+  "xtab_Valid_Unique": {
+   "V=0.0,U=0": 4514,
+   "V=0.0,U=1": 26909,
+   "V=1.0,U=0": 29068,
+   "V=1.0,U=1": 39509
+  },
+  "rdkit_validity_strict_over_n": 0.68577,
+  "rdkit_validity_loose_over_n": 0.68577,
+  "distinct_canon_among_valid": 39258,
+  "uniq_distinct_over_nvalid": 0.572466,
+  "uniq_distinct_over_n": 0.39258,
+  "distinct_raw_strings_over_n": 0.66418,
+  "distinct_raw_strings_among_flagged_valid_over_nflagged": 0.576126
+ },
+ {
+  "group": [
+   "ChEMBL 31",
+   "sequence GRU RNN",
+   "M01"
+  ],
+  "n": 100000,
+  "mean_flag_Valid": 0.91401,
+  "mean_flag_Unique": 0.99689,
+  "xtab_Valid_Unique": {
+   "V=0.0,U=1": 8599,
+   "V=1.0,U=0": 311,
+   "V=1.0,U=1": 91090
+  },
+  "rdkit_validity_strict_over_n": 0.91401,
+  "rdkit_validity_loose_over_n": 0.91401,
+  "distinct_canon_among_valid": 91077,
+  "uniq_distinct_over_nvalid": 0.996455,
+  "uniq_distinct_over_n": 0.91077,
+  "distinct_raw_strings_over_n": 0.99689,
+  "distinct_raw_strings_among_flagged_valid_over_nflagged": 0.996597
+ }
+]

@@ -1,0 +1,7 @@
+{
+  "file": "runs/full_chembl27_lstm.smi",
+  "n": 100000,
+  "authors_operational_validity_nonempty_over_n": 0.99916,
+  "authors_operational_uniqueness_distinct_raw_over_n": 0.66179,
+  "distinct_canonical_valid_over_n": 0.392
+}
