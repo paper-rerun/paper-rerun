@@ -1,0 +1,9 @@
+tde_hmm_notts_meguk_giles: n_states=12 n_channels=80 pca=False covs=[12, 80, 80] (osl-dynamics version: 2.0.dev3)
+tde_hmm_notts_meguk_glasser: n_states=8 n_channels=120 pca=True covs=[8, 120, 120] (osl-dynamics version: 2.0.dev3)
+ae_hmm_notts_meguk_glasser: n_states=8 n_channels=52 pca=False covs=[8, 52, 52] (osl-dynamics version: 2.0.dev3)
+
+giles_model_matches_the_script: False
+giles_states_deposited: 12
+giles_states_the_script_asks_for: 8
+giles_has_pca_components: False
+note: The paper's figures 3, 4 and 5 are the Giles 38-parcel pipeline. The only deposited model on that parcellation has a different number of states from the script that made the figure, and does not carry the PCA basis its covariances live in, so it cannot be mapped back to the data. The two 8-state models are on a parcellation the paper never mentions.

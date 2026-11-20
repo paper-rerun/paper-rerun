@@ -31,10 +31,12 @@ AREAS = {
 	"machine learning": "Computing", "chemistry": "Materials and chemistry",
 	"molecular simulation": "Materials and chemistry",
 	"weather and climate": "Earth sciences", "gravitational waves": "Physics",
+	"neuroscience": "Neuroscience",
 }
 
 # The main thing each rerun found, in one category, read from the report
 MAIN_ISSUE = {
+	"2024-gohil-osl-dynamics": "Group labels swapped in the figure script",
 	"2025-kovacs-maceoff": "Released test set differs from the paper counts",
 	"2023-agazie-nanograv15": "Reference data offline or deleted",
 	"2024-desi-bao-vi": "Code differs from the Methods",

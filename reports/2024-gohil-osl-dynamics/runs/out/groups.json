@@ -1,0 +1,29 @@
+{
+ "n_subjects": 65,
+ "n_young": 27,
+ "n_old": 38,
+ "published_n_young": 27,
+ "published_n_old": 38,
+ "C6_reproduces": true,
+ "young_age_range": [
+  21.0,
+  33.0
+ ],
+ "old_age_range": [
+  39.0,
+  60.0
+ ],
+ "published_young_range": [
+  18,
+  34
+ ],
+ "published_old_range": [
+  34,
+  60
+ ],
+ "n_subjects_aged_exactly_34": 0,
+ "empty_gap_between_groups": [
+  33.0,
+  39.0
+ ]
+}

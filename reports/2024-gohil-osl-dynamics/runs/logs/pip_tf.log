@@ -1,0 +1,768 @@
+Requirement already satisfied: osl-dynamics[tf] in .\venv\Lib\site-packages (3.8.2)
+Requirement already satisfied: fslpy in .\venv\Lib\site-packages (from osl-dynamics[tf]) (3.29.1)
+Requirement already satisfied: h5io in .\venv\Lib\site-packages (from osl-dynamics[tf]) (0.2.6)
+Requirement already satisfied: h5py in .\venv\Lib\site-packages (from osl-dynamics[tf]) (3.16.0)
+Requirement already satisfied: ipyevents in .\venv\Lib\site-packages (from osl-dynamics[tf]) (2.0.4)
+Requirement already satisfied: ipywidgets in .\venv\Lib\site-packages (from osl-dynamics[tf]) (8.1.9)
+Requirement already satisfied: mat73 in .\venv\Lib\site-packages (from osl-dynamics[tf]) (0.65)
+Requirement already satisfied: matplotlib in .\venv\Lib\site-packages (from osl-dynamics[tf]) (3.11.2)
+Requirement already satisfied: mne in .\venv\Lib\site-packages (from osl-dynamics[tf]) (1.13.2)
+Requirement already satisfied: mne-icalabel[onnx] in .\venv\Lib\site-packages (from osl-dynamics[tf]) (0.10.0)
+Requirement already satisfied: nest-asyncio2 in .\venv\Lib\site-packages (from osl-dynamics[tf]) (1.7.4)
+Requirement already satisfied: nibabel in .\venv\Lib\site-packages (from osl-dynamics[tf]) (5.5.0)
+Requirement already satisfied: nilearn in .\venv\Lib\site-packages (from osl-dynamics[tf]) (0.14.1)
+Requirement already satisfied: numba in .\venv\Lib\site-packages (from osl-dynamics[tf]) (0.68.1)
+Requirement already satisfied: numpy in .\venv\Lib\site-packages (from osl-dynamics[tf]) (2.5.5)
+Requirement already satisfied: osfclient in .\venv\Lib\site-packages (from osl-dynamics[tf]) (0.0.5)
+Requirement already satisfied: packaging in .\venv\Lib\site-packages (from osl-dynamics[tf]) (26.3)
+Requirement already satisfied: pooch in .\venv\Lib\site-packages (from osl-dynamics[tf]) (1.9.0)
+Requirement already satisfied: pandas in .\venv\Lib\site-packages (from osl-dynamics[tf]) (3.1.1)
+Requirement already satisfied: pyside6 in .\venv\Lib\site-packages (from osl-dynamics[tf]) (6.12.0)
+Requirement already satisfied: pyvista in .\venv\Lib\site-packages (from osl-dynamics[tf]) (0.49.2)
+Requirement already satisfied: pyvistaqt in .\venv\Lib\site-packages (from osl-dynamics[tf]) (0.14.0)
+Requirement already satisfied: pyyaml in .\venv\Lib\site-packages (from osl-dynamics[tf]) (6.0.3)
+Requirement already satisfied: scikit-image in .\venv\Lib\site-packages (from osl-dynamics[tf]) (0.26.0)
+Requirement already satisfied: scikit-learn in .\venv\Lib\site-packages (from osl-dynamics[tf]) (1.9.1)
+Requirement already satisfied: scipy in .\venv\Lib\site-packages (from osl-dynamics[tf]) (1.18.1)
+Requirement already satisfied: seaborn in .\venv\Lib\site-packages (from osl-dynamics[tf]) (0.13.2)
+Requirement already satisfied: threadpoolctl in .\venv\Lib\site-packages (from osl-dynamics[tf]) (3.8.0)
+Requirement already satisfied: tqdm in .\venv\Lib\site-packages (from osl-dynamics[tf]) (4.70.1)
+Requirement already satisfied: trame in .\venv\Lib\site-packages (from osl-dynamics[tf]) (4.0.0)
+Requirement already satisfied: trame-vtk in .\venv\Lib\site-packages (from osl-dynamics[tf]) (2.11.17)
+Requirement already satisfied: trame-vuetify in .\venv\Lib\site-packages (from osl-dynamics[tf]) (3.3.0)
+Collecting tensorflow==2.19.1 (from osl-dynamics[tf])
+  Using cached tensorflow-2.19.1-cp312-cp312-win_amd64.whl.metadata (4.1 kB)
+Collecting tensorflow-probability==0.25.0 (from osl-dynamics[tf])
+  Using cached tensorflow_probability-0.25.0-py2.py3-none-any.whl.metadata (13 kB)
+Collecting tf-keras==2.19.0 (from osl-dynamics[tf])
+  Using cached tf_keras-2.19.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting absl-py>=1.0.0 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached absl_py-2.5.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting astunparse>=1.6.0 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Requirement already satisfied: flatbuffers>=24.3.25 in .\venv\Lib\site-packages (from tensorflow==2.19.1->osl-dynamics[tf]) (25.12.19)
+Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached gast-0.7.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting google-pasta>=0.1.1 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+Collecting libclang>=13.0.0 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached libclang-18.1.1-py2.py3-none-win_amd64.whl.metadata (5.3 kB)
+Collecting opt-einsum>=2.3.2 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<6.0.0dev,>=3.20.3 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached protobuf-5.29.6-cp310-abi3-win_amd64.whl.metadata (592 bytes)
+Requirement already satisfied: requests<3,>=2.21.0 in .\venv\Lib\site-packages (from tensorflow==2.19.1->osl-dynamics[tf]) (2.34.2)
+Collecting setuptools (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+Requirement already satisfied: six>=1.12.0 in .\venv\Lib\site-packages (from tensorflow==2.19.1->osl-dynamics[tf]) (1.17.0)
+Collecting termcolor>=1.1.0 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached termcolor-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+Requirement already satisfied: typing-extensions>=3.6.6 in .\venv\Lib\site-packages (from tensorflow==2.19.1->osl-dynamics[tf]) (4.16.0)
+Collecting wrapt>=1.11.0 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached wrapt-2.5.2-cp312-cp312-win_amd64.whl.metadata (7.7 kB)
+Collecting grpcio<2.0,>=1.24.3 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached grpcio-1.85.3-cp312-cp312-win_amd64.whl.metadata (3.9 kB)
+Collecting tensorboard~=2.19.0 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached tensorboard-2.19.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting keras>=3.5.0 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached keras-3.15.1-py3-none-any.whl.metadata (6.4 kB)
+Collecting numpy (from osl-dynamics[tf])
+  Using cached numpy-2.1.3-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Collecting ml-dtypes<1.0.0,>=0.5.1 (from tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached ml_dtypes-0.7.0-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Requirement already satisfied: decorator in .\venv\Lib\site-packages (from tensorflow-probability==0.25.0->osl-dynamics[tf]) (5.3.1)
+Requirement already satisfied: cloudpickle>=1.3 in .\venv\Lib\site-packages (from tensorflow-probability==0.25.0->osl-dynamics[tf]) (3.1.3)
+Collecting dm-tree (from tensorflow-probability==0.25.0->osl-dynamics[tf])
+  Using cached dm_tree-0.1.10-cp312-cp312-win_amd64.whl.metadata (2.6 kB)
+Requirement already satisfied: charset_normalizer<4,>=2 in .\venv\Lib\site-packages (from requests<3,>=2.21.0->tensorflow==2.19.1->osl-dynamics[tf]) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in .\venv\Lib\site-packages (from requests<3,>=2.21.0->tensorflow==2.19.1->osl-dynamics[tf]) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in .\venv\Lib\site-packages (from requests<3,>=2.21.0->tensorflow==2.19.1->osl-dynamics[tf]) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in .\venv\Lib\site-packages (from requests<3,>=2.21.0->tensorflow==2.19.1->osl-dynamics[tf]) (2026.10.23)
+Collecting markdown>=2.6.8 (from tensorboard~=2.19.0->tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached markdown-3.11.3-py3-none-any.whl.metadata (5.1 kB)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard~=2.19.0->tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached tensorboard_data_server-0.7.2-py3-none-any.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard~=2.19.0->tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+Collecting wheel<1.0,>=0.23.0 (from astunparse>=1.6.0->tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+Requirement already satisfied: rich in .\venv\Lib\site-packages (from keras>=3.5.0->tensorflow==2.19.1->osl-dynamics[tf]) (15.0.0)
+Collecting namex (from keras>=3.5.0->tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+Collecting optree (from keras>=3.5.0->tensorflow==2.19.1->osl-dynamics[tf])
+  Using cached optree-0.20.0-cp312-cp312-win_amd64.whl.metadata (33 kB)
+Requirement already satisfied: markupsafe>=2.1.1 in .\venv\Lib\site-packages (from werkzeug>=1.0.1->tensorboard~=2.19.0->tensorflow==2.19.1->osl-dynamics[tf]) (3.0.4)
+Requirement already satisfied: attrs>=18.2.0 in .\venv\Lib\site-packages (from dm-tree->tensorflow-probability==0.25.0->osl-dynamics[tf]) (26.1.0)
+Requirement already satisfied: dill in .\venv\Lib\site-packages (from fslpy->osl-dynamics[tf]) (0.4.1)
+Requirement already satisfied: backports.zstd in .\venv\Lib\site-packages (from fslpy->osl-dynamics[tf]) (1.8.0)
+Requirement already satisfied: comm>=0.1.3 in .\venv\Lib\site-packages (from ipywidgets->osl-dynamics[tf]) (0.2.3)
+Requirement already satisfied: ipython>=6.1.0 in .\venv\Lib\site-packages (from ipywidgets->osl-dynamics[tf]) (9.18.1)
+Requirement already satisfied: traitlets>=4.3.1 in .\venv\Lib\site-packages (from ipywidgets->osl-dynamics[tf]) (5.16.1)
+Requirement already satisfied: widgetsnbextension~=4.0.16 in .\venv\Lib\site-packages (from ipywidgets->osl-dynamics[tf]) (4.0.16)
+Requirement already satisfied: jupyterlab_widgets~=3.0.17 in .\venv\Lib\site-packages (from ipywidgets->osl-dynamics[tf]) (3.0.17)
+Requirement already satisfied: colorama>=0.4.4 in .\venv\Lib\site-packages (from ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (0.4.6)
+Requirement already satisfied: ipython-pygments-lexers>=1.0.0 in .\venv\Lib\site-packages (from ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (1.1.1)
+Requirement already satisfied: jedi>=0.18.2 in .\venv\Lib\site-packages (from ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (0.20.1)
+Requirement already satisfied: matplotlib-inline>=0.1.6 in .\venv\Lib\site-packages (from ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (0.2.2)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in .\venv\Lib\site-packages (from ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (3.0.53)
+Requirement already satisfied: psutil>=7 in .\venv\Lib\site-packages (from ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (7.2.2)
+Requirement already satisfied: pygments>=2.14.0 in .\venv\Lib\site-packages (from ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (2.21.0)
+Requirement already satisfied: stack_data>=0.6.0 in .\venv\Lib\site-packages (from ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (0.6.3)
+Requirement already satisfied: wcwidth>=0.1.4 in .\venv\Lib\site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (0.9.4)
+Requirement already satisfied: parso<0.9.0,>=0.8.7 in .\venv\Lib\site-packages (from jedi>=0.18.2->ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (0.8.7)
+Requirement already satisfied: executing>=1.2.0 in .\venv\Lib\site-packages (from stack_data>=0.6.0->ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (2.3.0)
+Requirement already satisfied: asttokens>=2.1.0 in .\venv\Lib\site-packages (from stack_data>=0.6.0->ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (3.0.2)
+Requirement already satisfied: pure-eval in .\venv\Lib\site-packages (from stack_data>=0.6.0->ipython>=6.1.0->ipywidgets->osl-dynamics[tf]) (0.2.4)
+Requirement already satisfied: contourpy>=1.0.1 in .\venv\Lib\site-packages (from matplotlib->osl-dynamics[tf]) (1.4.0)
+Requirement already satisfied: cycler>=0.10 in .\venv\Lib\site-packages (from matplotlib->osl-dynamics[tf]) (0.12.1)
+Requirement already satisfied: fonttools>=4.28.2 in .\venv\Lib\site-packages (from matplotlib->osl-dynamics[tf]) (4.68.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in .\venv\Lib\site-packages (from matplotlib->osl-dynamics[tf]) (1.5.1)
+Requirement already satisfied: pillow>=9 in .\venv\Lib\site-packages (from matplotlib->osl-dynamics[tf]) (13.0.0)
+Requirement already satisfied: pyparsing>=3 in .\venv\Lib\site-packages (from matplotlib->osl-dynamics[tf]) (3.3.3)
+Requirement already satisfied: python-dateutil>=2.7 in .\venv\Lib\site-packages (from matplotlib->osl-dynamics[tf]) (4.0.0)
+Requirement already satisfied: tzdata in .\venv\Lib\site-packages (from python-dateutil>=2.7->matplotlib->osl-dynamics[tf]) (2026.6)
+Requirement already satisfied: jinja2>=3.1 in .\venv\Lib\site-packages (from mne->osl-dynamics[tf]) (3.1.6)
+Requirement already satisfied: lazy-loader>=0.3 in .\venv\Lib\site-packages (from mne->osl-dynamics[tf]) (0.6)
+Requirement already satisfied: platformdirs>=2.5.0 in .\venv\Lib\site-packages (from pooch->osl-dynamics[tf]) (4.14.7)
+Requirement already satisfied: onnxruntime in .\venv\Lib\site-packages (from mne-icalabel[onnx]->osl-dynamics[tf]) (1.32.0)
+Requirement already satisfied: joblib>=1.2.0 in .\venv\Lib\site-packages (from nilearn->osl-dynamics[tf]) (1.6.0)
+Requirement already satisfied: narwhals>=2.0.1 in .\venv\Lib\site-packages (from scikit-learn->osl-dynamics[tf]) (2.29.0)
+Requirement already satisfied: llvmlite<0.51,>=0.50.0dev0 in .\venv\Lib\site-packages (from numba->osl-dynamics[tf]) (0.50.0)
+Requirement already satisfied: PySide6_Essentials==6.12.0 in .\venv\Lib\site-packages (from pyside6->osl-dynamics[tf]) (6.12.0)
+Requirement already satisfied: PySide6_Addons==6.12.0 in .\venv\Lib\site-packages (from pyside6->osl-dynamics[tf]) (6.12.0)
+Requirement already satisfied: PySide6_WebEngine==6.12.0.140 in .\venv\Lib\site-packages (from pyside6->osl-dynamics[tf]) (6.12.0.140)
+Requirement already satisfied: PySide6_Pdf==6.12.0.140 in .\venv\Lib\site-packages (from pyside6->osl-dynamics[tf]) (6.12.0.140)
+Requirement already satisfied: shiboken6==6.12.0 in .\venv\Lib\site-packages (from PySide6_Essentials==6.12.0->pyside6->osl-dynamics[tf]) (6.12.0)
+Requirement already satisfied: cyclopts>=4.0.0 in .\venv\Lib\site-packages (from pyvista->osl-dynamics[tf]) (5.5.2)
+Requirement already satisfied: pyvista-validation==0.2.2 in .\venv\Lib\site-packages (from pyvista->osl-dynamics[tf]) (0.2.2)
+Requirement already satisfied: scooby>=0.5.1 in .\venv\Lib\site-packages (from pyvista->osl-dynamics[tf]) (0.12.1)
+Requirement already satisfied: vtk!=9.4.0 in .\venv\Lib\site-packages (from pyvista->osl-dynamics[tf]) (9.7.2)
+Requirement already satisfied: docstring-parser<4.0,>=0.15 in .\venv\Lib\site-packages (from cyclopts>=4.0.0->pyvista->osl-dynamics[tf]) (0.18.0)
+Requirement already satisfied: rich-rst<3,>=2.0.1 in .\venv\Lib\site-packages (from cyclopts>=4.0.0->pyvista->osl-dynamics[tf]) (2.2.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in .\venv\Lib\site-packages (from rich->keras>=3.5.0->tensorflow==2.19.1->osl-dynamics[tf]) (4.3.0)
+Requirement already satisfied: mdurl~=0.1 in .\venv\Lib\site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow==2.19.1->osl-dynamics[tf]) (0.1.2)
+Requirement already satisfied: QtPy>=2.3.0 in .\venv\Lib\site-packages (from pyvistaqt->osl-dynamics[tf]) (2.4.3)
+Requirement already satisfied: networkx>=3.0 in .\venv\Lib\site-packages (from scikit-image->osl-dynamics[tf]) (3.7)
+Requirement already satisfied: imageio!=2.35.0,>=2.33 in .\venv\Lib\site-packages (from scikit-image->osl-dynamics[tf]) (2.38.2)
+Requirement already satisfied: tifffile>=2022.8.12 in .\venv\Lib\site-packages (from scikit-image->osl-dynamics[tf]) (2026.11.16)
+Requirement already satisfied: trame-client<5,>=4 in .\venv\Lib\site-packages (from trame->osl-dynamics[tf]) (4.1.4)
+Requirement already satisfied: trame-common<2,>=1.2.7 in .\venv\Lib\site-packages (from trame->osl-dynamics[tf]) (1.3.0)
+Requirement already satisfied: trame-server<5,>=4 in .\venv\Lib\site-packages (from trame->osl-dynamics[tf]) (4.1.2)
+Requirement already satisfied: wslink>=2.5.7 in .\venv\Lib\site-packages (from trame->osl-dynamics[tf]) (2.6.0)
+Requirement already satisfied: more-itertools in .\venv\Lib\site-packages (from trame-server<5,>=4->trame->osl-dynamics[tf]) (11.2.1)
+Requirement already satisfied: aiohttp<4 in .\venv\Lib\site-packages (from wslink>=2.5.7->trame->osl-dynamics[tf]) (3.14.5)
+Requirement already satisfied: msgpack<2,>=1 in .\venv\Lib\site-packages (from wslink>=2.5.7->trame->osl-dynamics[tf]) (1.2.4)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in .\venv\Lib\site-packages (from aiohttp<4->wslink>=2.5.7->trame->osl-dynamics[tf]) (2.7.1)
+Requirement already satisfied: aiosignal>=1.4.0 in .\venv\Lib\site-packages (from aiohttp<4->wslink>=2.5.7->trame->osl-dynamics[tf]) (1.4.0)
+Requirement already satisfied: frozenlist>=1.1.1 in .\venv\Lib\site-packages (from aiohttp<4->wslink>=2.5.7->trame->osl-dynamics[tf]) (1.8.0)
+Requirement already satisfied: multidict<8.0,>=4.5 in .\venv\Lib\site-packages (from aiohttp<4->wslink>=2.5.7->trame->osl-dynamics[tf]) (7.2.1)
+Requirement already satisfied: propcache>=0.2.0 in .\venv\Lib\site-packages (from aiohttp<4->wslink>=2.5.7->trame->osl-dynamics[tf]) (0.5.4)
+Requirement already satisfied: yarl<2.0,>=1.25.1 in .\venv\Lib\site-packages (from aiohttp<4->wslink>=2.5.7->trame->osl-dynamics[tf]) (1.25.1)
+Downloading tensorflow-2.19.1-cp312-cp312-win   --------------------   ---------------------------------------- 376.0/376.0 MB 8.1 MB/s  0:00:41
+Using cached tensorflow_probability-0.25.0-py2.py3-none-any.whl (7.0 MB)
+Using cached tf_keras-2.19.0-py3-none-any.whl (1.7 MB)
+Using cached grpcio-1.85.3-cp312-cp312-win_amd64.whl (5.6 MB)
+Using cached ml_dtypes-0.7.0-cp312-cp312-win_amd64.whl (463 kB)
+Using cached numpy-2.1.3-cp312-cp312-win_amd64.whl (12.6 MB)
+Using cached protobuf-5.29.6-cp310-abi3-win_amd64.whl (435 kB)
+Using cached tensorboard-2.19.0-py3-none-any.whl (5.5 MB)
+Using cached tensorboard_data_server-0.7.2-py3-none-any.whl (2.4 kB)
+Using cached absl_py-2.5.1-py3-none-any.whl (137 kB)
+Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Using cached wheel-0.48.0-py3-none-any.whl (33 kB)
+Using cached gast-0.7.0-py3-none-any.whl (22 kB)
+Using cached google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Using cached keras-3.15.1-py3-none-any.whl (2.4 MB)
+Using cached libclang-18.1.1-py2.py3-none-win_amd64.whl (26.4 MB)
+Using cached markdown-3.11.3-py3-none-any.whl (116 kB)
+Using cached opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+Using cached setuptools-84.2.1-py3-none-any.whl (876 kB)
+Using cached termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+Using cached werkzeug-3.1.9-py3-none-any.whl (228 kB)
+Using cached wrapt-2.5.2-cp312-cp312-win_amd64.whl (106 kB)
+Using cached dm_tree-0.1.10-cp312-cp312-win_amd64.whl (112 kB)
+Using cached namex-0.1.0-py3-none-any.whl (5.9 kB)
+Using cached optree-0.20.0-cp312-cp312-win_amd64.whl (567 kB)
+Installing collected packages: namex, libclang, wrapt, wheel, werkzeug, termcolor, tensorboard-data-server, setuptools, protobuf, optree, opt-einsum, numpy, markdown, grpcio, google-pasta, gast, absl-py, tensorboard, ml-dtypes, dm-tree, astunparse, tensorflow-probability, keras, tensorflow, tf-keras
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 5.29.6
+    Uninstalling protobuf-5.29.6:
+      Successfully uninstalled protobuf-5.29.6
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.1.3
+    Uninstalling numpy-2.1.3:
+      Rolling back uninstall of numpy
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy-2.1.3-cp312-cp312-win_amd64.whl
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy-2.1.3-cp312-cp312-win_amd64.whl
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy-2.1.3.dist-info\
+       from E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\~umpy-2.1.3.dist-info
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy.libs\
+       from E:\Ciencia\noturnoERROR: Could not install packages due to an OSError: [WinError 32] The process cannot access the file because it is being used by another process: 'E:\\Ciencia\\noturno\\2024-gohil-osl-dynamics\\venv\\Lib\\site-packages\\keras\\src\\layers\\regularization\\activity_regularization_test.py'
+Check the permissions.
+
+
+b\site-packages\numpy\__init__.cython-30.pxd
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\__init__.cython-30.pxd
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\__init__.pxd
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\__init__.pxd
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\__init__.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\__init__.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\__init__.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\__init__.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\__pycache__\__config__.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\__pycache__\__config__.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\__pycache__\__init__.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\__pycache__\__init__.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\__pycache__\_array_api_info.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\__pycache__\_array_api_info.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\__pycache__\_configtool.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\__pycache__\_configtool.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_array_api_info.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_array_api_info.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_array_api_info.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_array_api_info.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_configtool.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_configtool.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__init__.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__init__.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__init__.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__init__.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\__init__.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\__init__.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_add_newdocs.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_add_newdocs.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_add_newdocs_scalars.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_add_newdocs_scalars.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_asarray.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_asarray.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_dtype.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_dtype.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_dtype_ctypes.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_dtype_ctypes.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_exceptions.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_exceptions.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_internal.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_internal.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_machar.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_machar.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_methods.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_methods.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_string_helpers.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_string_helpers.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_type_aliases.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_type_aliases.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\_ufunc_config.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\_ufunc_config.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\arrayprint.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\arrayprint.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\cversions.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\cversions.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\defchararray.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\defchararray.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\einsumfunc.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\einsumfunc.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\fromnumeric.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\fromnumeric.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\function_base.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\function_base.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\getlimits.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\getlimits.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\memmap.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\memmap.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\multiarray.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\multiarray.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\numeric.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\numeric.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\numerictypes.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\numerictypes.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\overrides.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\overrides.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\printoptions.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\printoptions.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\records.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\records.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\shape_base.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\shape_base.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\__pycache__\strings.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\__pycache__\strings.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_add_newdocs.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_add_newdocs.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_add_newdocs_scalars.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_add_newdocs_scalars.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_asarray.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_asarray.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_asarray.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_asarray.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_dtype.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_dtype.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_dtype_ctypes.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_dtype_ctypes.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_exceptions.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_exceptions.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_internal.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_internal.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_internal.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_internal.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_machar.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_machar.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_methods.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_methods.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_multiarray_tests.cp312-win_amd64.lib
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_multiarray_tests.cp312-win_amd64.lib
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_multiarray_tests.cp312-win_amd64.pyd
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_multiarray_tests.cp312-win_amd64.pyd
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_multiarray_umath.cp312-win_amd64.lib
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_multiarray_umath.cp312-win_amd64.lib
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_multiarray_umath.cp312-win_amd64.pyd
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_multiarray_umath.cp312-win_amd64.pyd
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_operand_flag_tests.cp312-win_amd64.lib
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_operand_flag_tests.cp312-win_amd64.lib
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_operand_flag_tests.cp312-win_amd64.pyd
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_operand_flag_tests.cp312-win_amd64.pyd
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_rational_tests.cp312-win_amd64.lib
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_rational_tests.cp312-win_amd64.lib
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_rational_tests.cp312-win_amd64.pyd
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_rational_tests.cp312-win_amd64.pyd
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_simd.cp312-win_amd64.lib
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_simd.cp312-win_amd64.lib
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_simd.cp312-win_amd64.pyd
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_simd.cp312-win_amd64.pyd
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_string_helpers.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_string_helpers.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_struct_ufunc_tests.cp312-win_amd64.lib
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_struct_ufunc_tests.cp312-win_amd64.lib
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_struct_ufunc_tests.cp312-win_amd64.pyd
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_struct_ufunc_tests.cp312-win_amd64.pyd
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_type_aliases.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_type_aliases.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_type_aliases.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_type_aliases.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_ufunc_config.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_ufunc_config.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_ufunc_config.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_ufunc_config.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_umath_tests.cp312-win_amd64.lib
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_umath_tests.cp312-win_amd64.lib
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\_umath_tests.cp312-win_amd64.pyd
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\_umath_tests.cp312-win_amd64.pyd
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\arrayprint.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\arrayprint.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\arrayprint.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\arrayprint.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\cversions.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\cversions.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\defchararray.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\defchararray.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\defchararray.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\defchararray.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\einsumfunc.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\einsumfunc.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\einsumfunc.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\einsumfunc.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\fromnumeric.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\fromnumeric.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\fromnumeric.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\fromnumeric.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\function_base.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\function_base.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\function_base.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\function_base.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\getlimits.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\getlimits.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\getlimits.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\getlimits.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\include\numpy\
+       from E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\numpy\_core\include\~umpy
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\lib\
+       from E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\numpy\_core\~ib
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\memmap.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\memmap.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\memmap.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\memmap.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\multiarray.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\multiarray.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\multiarray.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\multiarray.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\numeric.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\numeric.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\numeric.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\numeric.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\numerictypes.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\numerictypes.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\numerictypes.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\numerictypes.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\overrides.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\overrides.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\printoptions.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\printoptions.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\records.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\records.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\records.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\records.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\shape_base.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\shape_base.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\shape_base.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\shape_base.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\strings.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\strings.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\strings.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\strings.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\_locales.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\_locales.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\_natype.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\_natype.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test__exceptions.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test__exceptions.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_abc.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_abc.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_api.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_api.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_argparse.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_argparse.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_array_api_info.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_array_api_info.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_array_coercion.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_array_coercion.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_array_interface.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_array_interface.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_arraymethod.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_arraymethod.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_arrayobject.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_arrayobject.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_arrayprint.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_arrayprint.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_casting_floatingpoint_errors.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_casting_floatingpoint_errors.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_casting_unittests.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_casting_unittests.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_conversion_utils.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_conversion_utils.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_cpu_dispatcher.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_cpu_dispatcher.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_cpu_features.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_cpu_features.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_custom_dtypes.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_custom_dtypes.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_cython.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_cython.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_datetime.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_datetime.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_defchararray.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_defchararray.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_deprecations.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_deprecations.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_dlpack.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_dlpack.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_dtype.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_dtype.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_einsum.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_einsum.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_errstate.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_errstate.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_extint128.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_extint128.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_function_base.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_function_base.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_getlimits.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_getlimits.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_half.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_half.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_hashtable.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_hashtable.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_indexerrors.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_indexerrors.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_indexing.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_indexing.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_item_selection.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_item_selection.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_limited_api.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_limited_api.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_longdouble.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_longdouble.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_machar.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_machar.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_mem_overlap.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_mem_overlap.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_mem_policy.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_mem_policy.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_memmap.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_memmap.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_multiarray.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_multiarray.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_multithreading.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_multithreading.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_nditer.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_nditer.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_nep50_promotions.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_nep50_promotions.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_numeric.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_numeric.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\__pycache__\test_numerictypes.cpython-312.pyc
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\__pycache__\test_numerictypes.cpython-312.pyc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\_locales.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\_locales.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\_natype.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\_natype.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\data\
+       from E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\numpy\_core\tests\~ata
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\examples\cython\
+       from E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\numpy\_core\tests\examples\~ython
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\examples\limited_api\
+       from E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\numpy\_core\tests\examples\~imited_api
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test__exceptions.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test__exceptions.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_abc.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_abc.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_api.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_api.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_argparse.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_argparse.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_array_api_info.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_array_api_info.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_array_coercion.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_array_coercion.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_array_interface.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_array_interface.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_arraymethod.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_arraymethod.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_arrayobject.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_arrayobject.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_arrayprint.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_arrayprint.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_casting_floatingpoint_errors.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_casting_floatingpoint_errors.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_casting_unittests.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_casting_unittests.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_conversion_utils.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_conversion_utils.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_cpu_dispatcher.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_cpu_dispatcher.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_cpu_features.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_cpu_features.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_custom_dtypes.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_custom_dtypes.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_cython.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_cython.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_datetime.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_datetime.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_defchararray.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_defchararray.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_deprecations.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_deprecations.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_dlpack.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_dlpack.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_dtype.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_dtype.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_einsum.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_einsum.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_errstate.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_errstate.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_extint128.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_extint128.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_function_base.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_function_base.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_getlimits.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_getlimits.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_half.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_half.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_hashtable.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_hashtable.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_indexerrors.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_indexerrors.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_indexing.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_indexing.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_item_selection.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_item_selection.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_limited_api.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_limited_api.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_longdouble.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_longdouble.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_machar.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_machar.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_mem_overlap.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_mem_overlap.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_mem_policy.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_mem_policy.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_memmap.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_memmap.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_multiarray.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_multiarray.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_multithreading.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_multithreading.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_nditer.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_nditer.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_nep50_promotions.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_nep50_promotions.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_numeric.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_numeric.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_numerictypes.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_numerictypes.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_overrides.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_overrides.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_print.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_print.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_protocols.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_protocols.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_records.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_records.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_regression.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_regression.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_scalar_ctors.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_scalar_ctors.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_scalar_methods.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_scalar_methods.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_scalarbuffer.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_scalarbuffer.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_scalarinherit.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_scalarinherit.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_scalarmath.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_scalarmath.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_scalarprint.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_scalarprint.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_shape_base.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_shape_base.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_simd.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_simd.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_simd_module.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_simd_module.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_stringdtype.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_stringdtype.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_strings.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_strings.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_ufunc.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_ufunc.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_umath.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_umath.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_umath_accuracy.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_umath_accuracy.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_umath_complex.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_umath_complex.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\tests\test_unicode.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\tests\test_unicode.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_core\umath.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_core\umath.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_distributor_init.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_distributor_init.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_expired_attrs_2_0.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_expired_attrs_2_0.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_globals.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_globals.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_pyinstaller\__init__.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_pyinstaller\__init__.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_pyinstaller\hook-numpy.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_pyinstaller\hook-numpy.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_pyinstaller\tests\__init__.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_pyinstaller\tests\__init__.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_pyinstaller\tests\pyinstaller-smoke.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_pyinstaller\tests\pyinstaller-smoke.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_pyinstaller\tests\test_pyinstaller.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_pyinstaller\tests\test_pyinstaller.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_pytesttester.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_pytesttester.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_pytesttester.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_pytesttester.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\__init__.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\__init__.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_add_docstring.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_add_docstring.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_array_like.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_array_like.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_callable.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_callable.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_char_codes.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_char_codes.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_dtype_like.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_dtype_like.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_extended_precision.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_extended_precision.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_nbit.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_nbit.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_nested_sequence.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_nested_sequence.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_scalars.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_scalars.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_shape.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_shape.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_typing\_ufunc.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_typing\_ufunc.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_utils\__init__.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_utils\__init__.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_utils\_convertions.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_utils\_convertions.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_utils\_inspect.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_utils\_inspect.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\_utils\_pep440.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\_utils\_pep440.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\char\__init__.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\char\__init__.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\char\__init__.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\char\__init__.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\compat\__init__.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\compat\__init__.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\compat\py3k.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\compat\py3k.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\compat\tests\__init__.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\compat\tests\__init__.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\conftest.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\conftest.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\__init__.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\__init__.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\__init__.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\__init__.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\_dtype.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\_dtype.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\_dtype_ctypes.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\_dtype_ctypes.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\_internal.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\_internal.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\_multiarray_umath.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\_multiarray_umath.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\_utils.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\_utils.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\arrayprint.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\arrayprint.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\defchararray.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\defchararray.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\einsumfunc.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\einsumfunc.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\fromnumeric.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\fromnumeric.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\function_base.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\function_base.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\getlimits.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\getlimits.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\multiarray.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\multiarray.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\numeric.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\numeric.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\numerictypes.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\numerictypes.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\overrides.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\overrides.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\records.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\records.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\shape_base.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\shape_base.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\core\umath.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\core\umath.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\ctypeslib.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\ctypeslib.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\ctypeslib.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\ctypeslib.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\doc\
+       from E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\numpy\~oc
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\dtypes.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\dtypes.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\dtypes.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\dtypes.pyi
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\exceptions.py
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\exceptions.py
+      Moving to e:\ciencia\noturno\2024-gohil-osl-dynamics\venv\lib\site-packages\numpy\exceptions.pyi
+       from C:\Users\tessa\AppData\Local\Temp\pip-uninstall-v0__dtgr\numpy\exceptions.pyi
+      ERROR: Could not restore 'e:\\ciencia\\noturno\\2024-gohil-osl-dynamics\\venv\\lib\\site-packages\\numpy\\f2py\\' from 'E:\\Ciencia\\noturno\\2024-gohil-osl-dynamics\\venv\\Lib\\site-packages\\numpy\\~2py'. Check both paths before retrying.
+ERROR: Could not install packages due to an OSError: [WinError 32] The process cannot access the file because it is being used by another process: 'e:\\ciencia\\noturno\\2024-gohil-osl-dynamics\\venv\\lib\\site-packages\\numpy\\f2py\\tests\\test_kind.py'
+Check the permissions.
+
+
+EXIT=1
+EXIT=1

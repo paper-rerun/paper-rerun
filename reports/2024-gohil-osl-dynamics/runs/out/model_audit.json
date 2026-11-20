@@ -1,0 +1,104 @@
+{
+ "script_asks": {
+  "ctf_rest/tde_hmm_networks.py": {
+   "n_states": 8,
+   "n_channels": 80,
+   "parcellation": "atlas-Giles_nparc-38"
+  },
+  "ctf_rest/tde_hmm_bursts.py": {
+   "n_states": 3,
+   "n_channels": 1,
+   "parcellation": "single parcel, left motor cortex"
+  },
+  "elekta_task/ae_hmm.py": {
+   "n_states": 8,
+   "n_channels": 38,
+   "parcellation": "atlas-Giles_nparc-38"
+  }
+ },
+ "deposited": {
+  "tde_hmm_notts_meguk_giles": {
+   "files": [
+    "config.yml",
+    "covs.npy",
+    "history.pkl",
+    "init_history.pkl",
+    "initial_state_probs.npy",
+    "means.npy",
+    "model.weights.h5",
+    "trans_prob.npy"
+   ],
+   "n_states": 12,
+   "n_channels": 80,
+   "n_epochs": 20,
+   "sequence_length": 200,
+   "learn_means": false,
+   "has_pca_components": false,
+   "weights_format": "keras .h5",
+   "written_by": "osl-dynamics version: 2.0.dev3",
+   "covs_shape": [
+    12,
+    80,
+    80
+   ]
+  },
+  "tde_hmm_notts_meguk_glasser": {
+   "files": [
+    "config.yml",
+    "covs.npy",
+    "history.pkl",
+    "init_history.pkl",
+    "initial_state_probs.npy",
+    "means.npy",
+    "model.weights.h5",
+    "pca_components.npy",
+    "trans_prob.npy"
+   ],
+   "n_states": 8,
+   "n_channels": 120,
+   "n_epochs": 20,
+   "sequence_length": 200,
+   "learn_means": false,
+   "has_pca_components": true,
+   "weights_format": "keras .h5",
+   "written_by": "osl-dynamics version: 2.0.dev3",
+   "covs_shape": [
+    8,
+    120,
+    120
+   ]
+  },
+  "ae_hmm_notts_meguk_glasser": {
+   "files": [
+    "config.yml",
+    "covs.npy",
+    "history.pkl",
+    "init_history.pkl",
+    "initial_state_probs.npy",
+    "means.npy",
+    "model.weights.h5",
+    "trans_prob.npy"
+   ],
+   "n_states": 8,
+   "n_channels": 52,
+   "n_epochs": 20,
+   "sequence_length": 200,
+   "learn_means": true,
+   "has_pca_components": false,
+   "weights_format": "keras .h5",
+   "written_by": "osl-dynamics version: 2.0.dev3",
+   "covs_shape": [
+    8,
+    52,
+    52
+   ]
+  }
+ },
+ "verdict": {
+  "giles_model_matches_the_script": false,
+  "giles_states_deposited": 12,
+  "giles_states_the_script_asks_for": 8,
+  "giles_has_pca_components": false,
+  "note": "The paper's figures 3, 4 and 5 are the Giles 38-parcel pipeline. The only deposited model on that parcellation has a different number of states from the script that made the figure, and does not carry the PCA basis its covariances live in, so it cannot be mapped back to the data. The two 8-state models are on a parcellation the paper never mentions."
+ }
+}

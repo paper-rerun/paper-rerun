@@ -1,0 +1,79 @@
+2026-11-20 09:06:03.787943: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-20 09:06:17.045754: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING:tensorflow:From E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\tensorflow_probability\python\internal\backend\numpy\_utils.py:48: The name tf.logging.TaskLevelStatusMessage is deprecated. Please use tf.compat.v1.logging.TaskLevelStatusMessage instead.
+
+WARNING:tensorflow:From E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\tensorflow_probability\python\internal\backend\numpy\_utils.py:48: The name tf.control_flow_v2_enabled is deprecated. Please use tf.compat.v1.control_flow_v2_enabled instead.
+
+Loading files:   0%|          | 0/65 [00:00<?]Loading files: 100%|##########| 65/65 [00:00<00:00]
+Calculating PCA components:   0%|          | 0/65 [00:00<?]Calculating PCA components:  85%|########4 | 55/65 [00:31<00:05]Calculating PCA components: 100%|##########| 65/65 [00:41<00:00]
+[09:07:45] Explained variance: 62.7%
+Applying TDE-PCA:   0%|          | 0/65 [00:00<?]Applying TDE-PCA: 100%|##########| 65/65 [00:10<00:00]
+Standardizing:   0%|          | 0/65 [00:00<?]Standardizing: 100%|##########| 65/65 [00:04<00:00]
+n_subjects 65 n_channels 80
+2026-11-20 09:08:01.268340: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[09:08:01] Random state time course initialization
+2026-11-20 09:08:07.697556: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+2026-11-20 09:08:16.710947: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+2026-11-20 09:08:45.108069: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+Initialization 0:   0%|          | 0/2 [00:00<?]WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795176532.824228   64668 service.cc:152] XLA service 0x1a8f4c74560 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1795176532.824398   64668 service.cc:160]   StreamExecutor device (0): Host, Default Version
+2026-11-20 09:08:52.933937: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+I0000 00:00:1795176533.291770   64668 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+Initialization 0:  50%|#####     | 1/2 [00:42<00:42, loss=111.4, ll=111.4]Initialization 0: 100%|##########| 2/2 [01:41<00:00, loss=111, ll=111]    Initialization 0: 100%|##########| 2/2 [01:41<00:00, loss=111, ll=111]
+Initialization 1:   0%|          | 0/2 [00:00<?]Initialization 1:  50%|#####     | 1/2 [00:45<00:45, loss=111.4, ll=111.4]Initialization 1: 100%|##########| 2/2 [01:20<00:00, loss=111, ll=111]    Initialization 1: 100%|##########| 2/2 [01:20<00:00, loss=111, ll=111]
+Initialization 2:   0%|          | 0/2 [00:00<?]Initialization 2:  50%|#####     | 1/2 [00:37<00:37, loss=111.4, ll=111.4]Initialization 2: 100%|##########| 2/2 [01:22<00:00, loss=111, ll=111]    Initialization 2: 100%|##########| 2/2 [01:22<00:00, loss=111, ll=111]
+Initialization 3:   0%|          | 0/2 [00:00<?]Initialization 3:  50%|#####     | 1/2 [00:36<00:36, loss=111.4, ll=111.4]Initialization 3: 100%|##########| 2/2 [01:31<00:00, loss=111, ll=111]    Initialization 3: 100%|##########| 2/2 [01:31<00:00, loss=111, ll=111]
+Initialization 4:   0%|          | 0/2 [00:00<?]Initialization 4:  50%|#####     | 1/2 [00:57<00:57, loss=111.3, ll=111.3]Initialization 4: 100%|##########| 2/2 [02:04<00:00, loss=111, ll=111]    Initialization 4: 100%|##########| 2/2 [02:04<00:00, loss=111, ll=111]
+[09:16:51] Using initialization 1 (loss=111)
+Epoch 1/20:   0%|          | 0/95 [00:00<?]Epoch 1/20:  43%|####3     | 41/95 [00:30<00:39, loss=111, ll=111]Epoch 1/20:  83%|########3 | 79/95 [01:10<00:11, loss=111, ll=111]Epoch 1/20:  84%|########4 | 80/95 [01:10<00:13, loss=111, ll=111]Epoch 1/20: 100%|##########| 95/95 [01:28<00:00, loss=110.9, ll=110.9]
+Epoch 2/20:   0%|          | 0/95 [00:00<?]Epoch 2/20:  69%|######9   | 66/95 [00:30<00:13, loss=110.9, ll=110.9]Epoch 2/20: 100%|##########| 95/95 [00:45<00:00, loss=111, ll=111]    
+Epoch 3/20:   0%|          | 0/95 [00:00<?]Epoch 3/20:  80%|########  | 76/95 [00:30<00:07, loss=110.9, ll=110.9]Epoch 3/20: 100%|##########| 95/95 [00:35<00:00, loss=111, ll=111]    
+Epoch 4/20:   0%|          | 0/95 [00:00<?]Epoch 4/20: 100%|##########| 95/95 [00:25<00:00, loss=110.9, ll=110.9]
+Epoch 5/20:   0%|          | 0/95 [00:00<?]Epoch 5/20:  48%|####8     | 46/95 [00:30<00:32, loss=111.1, ll=111.1]Epoch 5/20:  88%|########8 | 84/95 [01:06<00:07, loss=111, ll=111]    Epoch 5/20:  89%|########9 | 85/95 [01:06<00:08, loss=110.9, ll=110.9]Epoch 5/20: 100%|##########| 95/95 [01:13<00:00, loss=110.9, ll=110.9]
+Epoch 6/20:   0%|          | 0/95 [00:00<?]Epoch 6/20:  91%|######### | 86/95 [00:30<00:03, loss=110.9, ll=110.9]Epoch 6/20: 100%|##########| 95/95 [00:33<00:00, loss=110.9, ll=110.9]
+Epoch 7/20:   0%|          | 0/95 [00:00<?]Epoch 7/20:  63%|######3   | 60/95 [00:30<00:17, loss=110.9, ll=110.9]Epoch 7/20: 100%|##########| 95/95 [00:39<00:00, loss=110.9, ll=110.9]
+Epoch 8/20:   0%|          | 0/95 [00:00<?]Epoch 8/20:  77%|#######6  | 73/95 [00:30<00:09, loss=110.8, ll=110.8]Epoch 8/20: 100%|##########| 95/95 [00:35<00:00, loss=110.9, ll=110.9]
+Epoch 9/20:   0%|          | 0/95 [00:00<?]Epoch 9/20:  84%|########4 | 80/95 [00:30<00:05, loss=110.9, ll=110.9]Epoch 9/20: 100%|##########| 95/95 [00:54<00:00, loss=110.9, ll=110.9]
+Epoch 10/20:   0%|          | 0/95 [00:00<?]Epoch 10/20:  71%|#######   | 67/95 [00:30<00:12, loss=110.8, ll=110.8]Epoch 10/20: 100%|##########| 95/95 [00:51<00:00, loss=110.8, ll=110.8]
+Epoch 11/20:   0%|          | 0/95 [00:00<?]Epoch 11/20:  86%|########6 | 82/95 [00:30<00:04, loss=110.8, ll=110.8]Epoch 11/20: 100%|##########| 95/95 [00:37<00:00, loss=110.8, ll=110.8]
+Epoch 12/20:   0%|          | 0/95 [00:00<?]Epoch 12/20: 100%|##########| 95/95 [00:22<00:00, loss=110.8, ll=110.8]
+Epoch 13/20:   0%|          | 0/95 [00:00<?]Epoch 13/20:  71%|#######   | 67/95 [00:30<00:12, loss=110.8, ll=110.8]Epoch 13/20: 100%|##########| 95/95 [00:42<00:00, loss=110.8, ll=110.8]
+Epoch 14/20:   0%|          | 0/95 [00:00<?]Epoch 14/20: 100%|##########| 95/95 [00:20<00:00, loss=110.8, ll=110.8]
+Epoch 15/20:   0%|          | 0/95 [00:00<?]Epoch 15/20: 100%|##########| 95/95 [00:19<00:00, loss=110.8, ll=110.8]
+Epoch 16/20:   0%|          | 0/95 [00:00<?]Epoch 16/20:  88%|########8 | 84/95 [00:30<00:03, loss=110.8, ll=110.8]Epoch 16/20: 100%|##########| 95/95 [00:32<00:00, loss=110.8, ll=110.8]
+Epoch 17/20:   0%|          | 0/95 [00:00<?]Epoch 17/20:  67%|######7   | 64/95 [00:30<00:14, loss=110.8, ll=110.8]Epoch 17/20: 100%|##########| 95/95 [00:49<00:00, loss=110.8, ll=110.8]
+Epoch 18/20:   0%|          | 0/95 [00:00<?]Epoch 18/20:  20%|##        | 19/95 [00:31<02:04, loss=110.8, ll=110.8]Epoch 18/20:  58%|#####7    | 55/95 [01:01<00:42, loss=110.8, ll=110.8]Epoch 18/20:  78%|#######7  | 74/95 [01:37<00:22, loss=110.8, ll=110.8]Epoch 18/20:  79%|#######8  | 75/95 [01:39<00:27, loss=110.8, ll=110.8]Epoch 18/20: 100%|##########| 95/95 [01:52<00:00, loss=110.8, ll=110.8]
+Epoch 19/20:   0%|          | 0/95 [00:00<?]Epoch 19/20:  67%|######7   | 64/95 [00:30<00:14, loss=110.7, ll=110.7]Epoch 19/20: 100%|##########| 95/95 [00:56<00:00, loss=110.8, ll=110.8]
+Epoch 20/20:   0%|          | 0/95 [00:00<?]Epoch 20/20:  44%|####4     | 42/95 [00:30<00:38, loss=110.8, ll=110.8]Epoch 20/20:  77%|#######6  | 73/95 [01:09<00:15, loss=110.7, ll=110.7]Epoch 20/20:  78%|#######7  | 74/95 [01:10<00:20, loss=110.7, ll=110.7]Epoch 20/20: 100%|##########| 95/95 [01:26<00:00, loss=110.8, ll=110.8]
+Calculating free energy:   0%|          | 0/95 [00:00<?]Calculating free energy:  16%|#5        | 15/95 [00:31<02:47]Calculating free energy:  16%|#5        | 15/95 [01:02<02:47]Calculating free energy:  28%|##8       | 27/95 [01:02<02:41]Calculating free energy:  28%|##8       | 27/95 [01:32<02:41]Calculating free energy:  41%|####1     | 39/95 [01:33<02:17]Calculating free energy:  62%|######2   | 59/95 [02:04<01:11]Calculating free energy:  91%|######### | 86/95 [02:34<00:13]Calculating free energy: 100%|##########| 95/95 [02:42<00:00]
+free_energy 110.20202901504872
+Inferring alpha:   0%|          | 0/65 [00:00<?]2026-11-20 09:35:40.281021: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+2026-11-20 09:35:46.518727: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+Inferring alpha:  25%|##4       | 16/65 [00:30<01:32]Inferring alpha:  25%|##4       | 16/65 [01:08<01:32]Inferring alpha:  31%|###       | 20/65 [01:14<03:12]Inferring alpha:  37%|###6      | 24/65 [01:46<03:37]2026-11-20 09:37:38.164794: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+Inferring alpha:  37%|###6      | 24/65 [02:19<03:37]Inferring alpha:  45%|####4     | 29/65 [02:24<03:39]Inferring alpha:  74%|#######3  | 48/65 [02:55<00:54]2026-11-20 09:38:50.779407: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+Inferring alpha: 100%|##########| 65/65 [03:26<00:00]
+[09:39:09] Running 1000 row_shuffle permutations of t-contrast 'Group_1.0-Group_2.0'
+Permutations:   0%|          | 0/1000 [00:00<?]Permutations: 100%|##########| 1000/1000 [00:00<00:00]
+pvalues
+ [[0.55944056 0.02597403 1.         0.06593407 0.90909091 0.09490509
+  0.18081918 0.13586414]
+ [0.88811189 1.         0.16283716 0.04295704 1.         0.20679321
+  0.83216783 0.97402597]
+ [0.93506494 0.28071928 0.95104895 0.7972028  0.34665335 0.16983017
+  0.01998002 0.02697303]
+ [0.97102897 0.04295704 0.85014985 0.9040959  0.20679321 0.12887113
+  0.05594406 0.18081918]]
+copes (young - old)
+ [[-1.49853353e-02  3.15160166e-02  3.12035887e-03 -2.47725111e-02
+   1.42189802e-02  3.67655606e-02 -1.46912361e-02 -3.11718336e-02]
+ [-7.43260869e-03 -1.85329745e-04 -4.59263519e-03 -6.68349687e-03
+   5.49198474e-04  2.61670306e-03 -8.50968141e-03 -4.29057511e-03]
+ [ 3.29689753e-02 -9.60861484e-02 -4.81239443e-02  3.59578545e-02
+  -2.93962351e-02 -1.05227080e-01  6.15638102e-01  5.01949796e-01]
+ [-5.94198690e-02  4.74461697e-01  1.76958064e-01 -1.44235594e-01
+   1.79470861e-01  5.30566561e-01 -1.24838807e-01 -2.63961223e-01]]
+DONE run 2

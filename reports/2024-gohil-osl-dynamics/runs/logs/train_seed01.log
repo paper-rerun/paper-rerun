@@ -1,0 +1,103 @@
+[02:06:36] Using config:
+ {'load_data': {'inputs': 'training_data/networks',
+               'kwargs': {'sampling_frequency': 250,
+                          'parcellation_file': 'atlas-Giles_nparc-38_space-MNI_res-8x8x8.nii.gz',
+                          'n_jobs': 4},
+               'prepare': {'tde_pca': {'n_embeddings': 15,
+                                       'n_pca_components': 80},
+                           'standardize': {}}},
+ 'train_hmm': {'config_kwargs': {'n_states': 8,
+                                 'learn_means': False,
+                                 'learn_covariances': True}}}
+[02:06:36] load_data: {'inputs': 'training_data/networks', 'prepare': {'tde_pca': {'n_embeddings': 15, 'n_pca_components': 80}, 'standardize': {}}, 'kwargs': {'store_dir': 'tmp_8747', 'sampling_frequency': 250, 'parcellation_file': 'atlas-Giles_nparc-38_space-MNI_res-8x8x8.nii.gz', 'n_jobs': 4}}
+Loading files:   0%|          | 0/65 [00:00<?]Loading files: 100%|##########| 65/65 [00:00<00:00]
+Calculating PCA components:   0%|          | 0/65 [00:00<?]Calculating PCA components:  62%|######1   | 40/65 [00:30<00:18]Calculating PCA components: 100%|##########| 65/65 [00:39<00:00]
+[02:07:17] Explained variance: 62.7%
+Applying TDE-PCA:   0%|          | 0/65 [00:00<?]Applying TDE-PCA: 100%|##########| 65/65 [00:05<00:00]
+Standardizing:   0%|          | 0/65 [00:00<?]Standardizing: 100%|##########| 65/65 [00:01<00:00]
+[02:07:23] train_hmm: {'config_kwargs': {'n_states': 8, 'learn_means': False, 'learn_covariances': True}}
+WARNING:tensorflow:From E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING:tensorflow:From E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\tensorflow_probability\python\internal\backend\numpy\_utils.py:48: The name tf.logging.TaskLevelStatusMessage is deprecated. Please use tf.compat.v1.logging.TaskLevelStatusMessage instead.
+
+WARNING:tensorflow:From E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\tensorflow_probability\python\internal\backend\numpy\_utils.py:48: The name tf.control_flow_v2_enabled is deprecated. Please use tf.compat.v1.control_flow_v2_enabled instead.
+
+[02:07:50] Building model
+[02:07:50] Using config_kwargs: {'n_channels': 80, 'sequence_length': 200, 'batch_size': 256, 'learning_rate': 0.01, 'n_epochs': 20, 'n_states': 8, 'learn_means': False, 'learn_covariances': True}
+Model: "HMM"
++--------------------------------------------------------------------------+
+| Layer (type)        | Output Shape      |    Param # | Connected to      |
+|---------------------+-------------------+------------+-------------------|
+| data (InputLayer)   | (None, 200, 80)   |          0 | -                 |
+|---------------------+-------------------+------------+-------------------|
+| means               | (8, 80)           |        640 | data[0][0]        |
+| (VectorsLayer)      |                   |            |                   |
+|---------------------+-------------------+------------+-------------------|
+| covs                | (8, 80, 80)       |     25,920 | data[0][0]        |
+| (CovarianceMatrice… |                   |            |                   |
+|---------------------+-------------------+------------+-------------------|
+| ll                  | (None, 200, 8)    |          0 | data[0][0],       |
+| (SeparateLogLikeli… |                   |            | means[0][0],      |
+|                     |                   |            | covs[0][0]        |
+|---------------------+-------------------+------------+-------------------|
+| hid_state_inf       | [(None, 200, 8),  |         72 | ll[0][0]          |
+| (HiddenMarkovState… | (None, 200, 8,    |            |                   |
+|                     | 8)]               |            |                   |
+|---------------------+-------------------+------------+-------------------|
+| ll_loss             | (1)               |          0 | ll[0][0],         |
+| (SumLogLikelihoodL… |                   |            | hid_state_inf[0]… |
++--------------------------------------------------------------------------+
+ Total params: 26,634 (104.04 KB)
+ Trainable params: 25,992 (101.53 KB)
+ Non-trainable params: 640 (2.50 KB)
+ Optimizer params: 2 (12.00 B)
+[02:07:50] Using init_kwargs: {'n_init': 5, 'n_epochs': 2}
+[02:07:50] Random state time course initialization
+Initialization 0:   0%|          | 0/2 [00:00<?]WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795151311.650205   44372 service.cc:152] XLA service 0x25ae8de8450 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1795151311.650492   44372 service.cc:160]   StreamExecutor device (0): Host, Default Version
+I0000 00:00:1795151312.262532   44372 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+Initialization 0:  50%|#####     | 1/2 [00:44<00:44, loss=111.4, ll=111.4]Initialization 0: 100%|##########| 2/2 [01:17<00:00, loss=111, ll=111]    Initialization 0: 100%|##########| 2/2 [01:17<00:00, loss=111, ll=111]
+Initialization 1:   0%|          | 0/2 [00:00<?]Initialization 1:  50%|#####     | 1/2 [01:05<01:05, loss=111.4, ll=111.4]Initialization 1: 100%|##########| 2/2 [02:05<00:00, loss=110.9, ll=110.9]Initialization 1: 100%|##########| 2/2 [02:05<00:00, loss=110.9, ll=110.9]
+Initialization 2:   0%|          | 0/2 [00:00<?]Initialization 2:  50%|#####     | 1/2 [00:41<00:41, loss=111.4, ll=111.4]Initialization 2: 100%|##########| 2/2 [01:08<00:00, loss=111, ll=111]    
+Initialization 3:   0%|          | 0/2 [00:00<?]Initialization 3:  50%|#####     | 1/2 [00:31<00:31, loss=111.4, ll=111.4]Initialization 3: 100%|##########| 2/2 [01:05<00:00, loss=110.9, ll=110.9]Initialization 3: 100%|##########| 2/2 [01:05<00:00, loss=110.9, ll=110.9]
+Initialization 4:   0%|          | 0/2 [00:00<?]Initialization 4:  50%|#####     | 1/2 [00:42<00:42, loss=111.4, ll=111.4]Initialization 4: 100%|##########| 2/2 [01:13<00:00, loss=111, ll=111]    Initialization 4: 100%|##########| 2/2 [01:13<00:00, loss=111, ll=111]
+[02:15:18] Using initialization 1 (loss=110.9)
+Epoch 1/20:   0%|          | 0/95 [00:00<?]Epoch 1/20:  52%|#####1    | 49/95 [00:30<00:28, loss=110.9, ll=110.9]Epoch 1/20: 100%|##########| 95/95 [00:43<00:00, loss=111, ll=111]    
+Epoch 2/20:   0%|          | 0/95 [00:00<?]Epoch 2/20:  99%|#########8| 94/95 [00:30<00:00, loss=111, ll=111]Epoch 2/20: 100%|##########| 95/95 [00:30<00:00, loss=111, ll=111]
+Epoch 3/20:   0%|          | 0/95 [00:00<?]Epoch 3/20:  43%|####3     | 41/95 [00:44<00:58, loss=110.9, ll=110.9]Epoch 3/20:  83%|########3 | 79/95 [01:14<00:14, loss=110.9, ll=110.9]Epoch 3/20: 100%|##########| 95/95 [01:23<00:00, loss=110.9, ll=110.9]
+Epoch 4/20:   0%|          | 0/95 [00:00<?]Epoch 4/20:  42%|####2     | 40/95 [00:34<00:47, loss=111, ll=111]Epoch 4/20:  52%|#####1    | 49/95 [01:09<00:40, loss=111, ll=111]Epoch 4/20:  53%|#####2    | 50/95 [01:11<01:12, loss=111, ll=111]Epoch 4/20: 100%|##########| 95/95 [01:38<00:00, loss=110.9, ll=110.9]
+Epoch 5/20:   0%|          | 0/95 [00:00<?]Epoch 5/20:  55%|#####4    | 52/95 [00:30<00:25, loss=110.8, ll=110.8]Epoch 5/20: 100%|##########| 95/95 [00:57<00:00, loss=110.9, ll=110.9]
+Epoch 6/20:   0%|          | 0/95 [00:00<?]Epoch 6/20:  55%|#####4    | 52/95 [00:30<00:25, loss=110.9, ll=110.9]Epoch 6/20: 100%|##########| 95/95 [00:49<00:00, loss=110.8, ll=110.8]
+Epoch 7/20:   0%|          | 0/95 [00:00<?]Epoch 7/20:  64%|######4   | 61/95 [00:30<00:16, loss=110.9, ll=110.9]Epoch 7/20: 100%|##########| 95/95 [00:49<00:00, loss=110.9, ll=110.9]
+Epoch 8/20:   0%|          | 0/95 [00:00<?]Epoch 8/20:  47%|####7     | 45/95 [00:30<00:33, loss=110.9, ll=110.9]Epoch 8/20:  97%|#########6| 92/95 [01:00<00:01, loss=110.9, ll=110.9]Epoch 8/20: 100%|##########| 95/95 [01:03<00:00, loss=110.8, ll=110.8]
+Epoch 9/20:   0%|          | 0/95 [00:00<?]Epoch 9/20:  66%|######6   | 63/95 [00:30<00:15, loss=110.9, ll=110.9]Epoch 9/20: 100%|##########| 95/95 [00:49<00:00, loss=110.9, ll=110.9]
+Epoch 10/20:   0%|          | 0/95 [00:00<?]Epoch 10/20:  92%|#########1| 87/95 [00:30<00:02, loss=110.8, ll=110.8]Epoch 10/20: 100%|##########| 95/95 [00:34<00:00, loss=110.8, ll=110.8]
+Epoch 11/20:   0%|          | 0/95 [00:00<?]Epoch 11/20:  77%|#######6  | 73/95 [00:30<00:09, loss=110.9, ll=110.9]Epoch 11/20: 100%|##########| 95/95 [01:02<00:00, loss=110.8, ll=110.8]
+Epoch 12/20:   0%|          | 0/95 [00:00<?]Epoch 12/20:  46%|####6     | 44/95 [00:30<00:35, loss=110.8, ll=110.8]Epoch 12/20:  79%|#######8  | 75/95 [01:07<00:13, loss=110.8, ll=110.8]Epoch 12/20:  80%|########  | 76/95 [01:07<00:17, loss=110.8, ll=110.8]Epoch 12/20: 100%|##########| 95/95 [01:18<00:00, loss=110.8, ll=110.8]
+Epoch 13/20:   0%|          | 0/95 [00:00<?]Epoch 13/20:  59%|#####8    | 56/95 [00:30<00:20, loss=110.8, ll=110.8]Epoch 13/20: 100%|##########| 95/95 [01:00<00:00, loss=110.8, ll=110.8]
+Epoch 14/20:   0%|          | 0/95 [00:00<?]Epoch 14/20:  61%|######1   | 58/95 [00:30<00:19, loss=110.9, ll=110.9]Epoch 14/20: 100%|##########| 95/95 [00:41<00:00, loss=110.8, ll=110.8]
+Epoch 15/20:   0%|          | 0/95 [00:00<?]Epoch 15/20:  48%|####8     | 46/95 [00:30<00:32, loss=110.8, ll=110.8]Epoch 15/20: 100%|##########| 95/95 [00:44<00:00, loss=110.7, ll=110.7]
+Epoch 16/20:   0%|          | 0/95 [00:00<?]Epoch 16/20:  88%|########8 | 84/95 [00:30<00:03, loss=110.8, ll=110.8]Epoch 16/20: 100%|##########| 95/95 [00:33<00:00, loss=110.8, ll=110.8]
+Epoch 17/20:   0%|          | 0/95 [00:00<?]Epoch 17/20:  86%|########6 | 82/95 [00:30<00:04, loss=110.8, ll=110.8]Epoch 17/20: 100%|##########| 95/95 [00:33<00:00, loss=110.8, ll=110.8]
+Epoch 18/20:   0%|          | 0/95 [00:00<?]Epoch 18/20: 100%|##########| 95/95 [00:29<00:00, loss=110.7, ll=110.7]
+Epoch 19/20:   0%|          | 0/95 [00:00<?]Epoch 19/20: 100%|##########| 95/95 [00:23<00:00, loss=110.8, ll=110.8]
+Epoch 20/20:   0%|          | 0/95 [00:00<?]Epoch 20/20:  87%|########7 | 83/95 [00:30<00:04, loss=110.8, ll=110.8]Epoch 20/20: 100%|##########| 95/95 [00:33<00:00, loss=110.8, ll=110.8]
+Calculating free energy:   0%|          | 0/95 [00:00<?]Calculating free energy:  46%|####6     | 44/95 [00:30<00:34]Calculating free energy:  46%|####6     | 44/95 [01:03<00:34]Calculating free energy:  52%|#####1    | 49/95 [01:14<01:23]Calculating free energy:  56%|#####5    | 53/95 [01:47<01:53]Calculating free energy:  76%|#######5  | 72/95 [02:18<00:50]Calculating free energy:  96%|#########5| 91/95 [02:53<00:08]Calculating free energy: 100%|##########| 95/95 [02:57<00:00]
+[02:34:55] Saving model to: runs/hmm/seed01/model
+[02:34:56] Saving runs/hmm/seed01/model/init_history.pkl
+[02:34:56] Saving runs/hmm/seed01/model/history.pkl
+Inferring alpha:   0%|          | 0/65 [00:00<?]Inferring alpha:  17%|#6        | 11/65 [00:31<02:32]Inferring alpha:  55%|#####5    | 36/65 [01:01<00:46]Inferring alpha: 100%|##########| 65/65 [01:30<00:00]
+[02:36:37] Saving runs/hmm/seed01/inf_params/alp.pkl
+[02:36:38] Saving runs/hmm/seed01/inf_params/means.npy
+[02:36:38] Saving runs/hmm/seed01/inf_params/covs.npy
+[02:36:38] Saving runs/hmm/seed01/inf_params/initial_state_probs.npy
+[02:36:38] Saving runs/hmm/seed01/inf_params/trans_prob.npy
+{
+ "seed": 1,
+ "free_energy": 110.20281682757752,
+ "wall_clock_seconds": 1802.1,
+ "n_states": 8,
+ "output_dir": "runs/hmm/seed01"
+}
+EXIT=0

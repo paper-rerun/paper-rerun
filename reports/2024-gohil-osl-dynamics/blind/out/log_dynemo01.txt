@@ -1,0 +1,17 @@
+2026-11-20 08:46:20.129405: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-20 08:46:24.405865: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING:tensorflow:From E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\tensorflow_probability\python\internal\backend\numpy\_utils.py:48: The name tf.logging.TaskLevelStatusMessage is deprecated. Please use tf.compat.v1.logging.TaskLevelStatusMessage instead.
+
+WARNING:tensorflow:From E:\Ciencia\noturno\2024-gohil-osl-dynamics\venv\Lib\site-packages\tensorflow_probability\python\internal\backend\numpy\_utils.py:48: The name tf.control_flow_v2_enabled is deprecated. Please use tf.compat.v1.control_flow_v2_enabled instead.
+
+Loading files:   0%|          | 0/65 [00:00<?]Loading files: 100%|##########| 65/65 [00:01<00:00]
+Calculating PCA components:   0%|          | 0/65 [00:00<?]Calculating PCA components:   2%|1         | 1/65 [00:50<53:24]Calculating PCA components:  62%|######1   | 40/65 [01:20<00:41]Calculating PCA components:  62%|######1   | 40/65 [01:58<00:41]Calculating PCA components:  97%|#########6| 63/65 [02:28<00:04]Calculating PCA components: 100%|##########| 65/65 [02:32<00:00]
+[08:49:27] Explained variance: 62.7%
+Applying TDE-PCA:   0%|          | 0/65 [00:00<?]Applying TDE-PCA: 100%|##########| 65/65 [00:08<00:00]
+Standardizing:   0%|          | 0/65 [00:00<?]Standardizing: 100%|##########| 65/65 [00:02<00:00]
+n_subjects 65 n_channels 80
+2026-11-20 08:49:38.075346: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/40:   0%|          | 0/189 [00:00<?]Epoch 1/40:   1%|          | 1/189 [00:35<1:51:11, loss=113.4, kl=0, ll=113.4]Epoch 1/40:   4%|4         | 8/189 [01:08<22:47, loss=113.6, kl=0, ll=113.6]  Epoch 1/40:   6%|6         | 12/189 [01:40<22:17, loss=113.2, kl=0, ll=113.2]Epoch 1/40:   7%|6         | 13/189 [01:42<21:01, loss=113.3, kl=0, ll=113.3]Epoch 1/40:   8%|8         | 16/189 [02:20<20:40, loss=113.3, kl=0, ll=113.3]Epoch 1/40:   9%|8         | 17/189 [02:49<30:22, loss=113.3, kl=0, ll=113.3]Epoch 1/40:  10%|9         | 18/189 [03:23<30:12, loss=113.2, kl=0, ll=113.2]Epoch 1/40:  10%|#         | 19/189 [03:23<33:38, loss=113.3, kl=0, ll=113.3]

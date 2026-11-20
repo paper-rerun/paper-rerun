@@ -1,0 +1,29 @@
+{
+  "paper": "C. Gohil, R. Huang, E. Roberts, M. W. J. van Es, A. J. Quinn, D. Vidaurre, M. W. Woolrich, \"osl-dynamics, a toolbox for modeling fast dynamic brain activity\", eLife 12:RP91949 (2024). DOI 10.7554/eLife.91949. Full text read from Europe PMC PMC10945565.",
+  "what_we_check": "Section 2.3, the young-vs-old group comparison of the TDE-HMM on the CTF rest (Nottingham MEGUK) dataset, and the claim in Section 2.4 that DyNeMo finds a stronger effect than the TDE-HMM on the same contrast. The paper has no tables; these are the only statements in it with a direction, a parameter and a threshold.",
+  "frozen_rule": {
+    "we_do_not_retrain": "The authors deposited the trained TDE-HMM at osf.io/by2tc under trained_models/tde_hmm_notts_meguk_giles.zip. We load that fit and run inference, we do not train a model. HMM training is stochastic and the paper's own figure supplements show three sets of ten runs with different free energies, so a fresh fit would differ by construction and would test nothing about the paper.",
+    "state_numbering": "States are taken in the order the deposited model stores them. State 4 is whatever state 4 is in their fit, and likewise 1, 6 and 8. We do not relabel states to make a claim come out right; if the deposited ordering does not carry their labels, that is reported as a finding.",
+    "summary_stats": "fractional_occupancies, mean_lifetimes, mean_intervals and switching_rates from osl_dynamics.inference.modes, on the Viterbi path (argmax_time_courses) of the inferred state probabilities, at 250 Hz, exactly as examples/toolbox_paper/ctf_rest/tde_hmm_networks.py does it.",
+    "group_assignment": "From training_data/demographics.csv, old if age > 34, young otherwise, which is what their load_group_assignments does.",
+    "test": "osl_dynamics.stats.group_diff with n_perm=1000, the call their script makes. The permutation test is random, so we run it with three different seeds and report all three p-values per claim; a claim passes only if all three land on the same side of the threshold.",
+    "what_counts_as_reproduced": "The direction of the group difference and the side of the printed threshold, not the p-value itself. The paper prints p<0.05 and p<0.01, so there is no number to hit."
+  },
+  "claims": [
+    {"id": "C1", "text": "Fractional occupancy of state 4 (sensorimotor) is increased in the old group, p<0.05.", "param": "fractional_occupancy", "state": 4, "direction": "old > young", "threshold": 0.05},
+    {"id": "C2", "text": "Switching rate of state 4 (sensorimotor) is increased in the old group, p<0.05.", "param": "switching_rate", "state": 4, "direction": "old > young", "threshold": 0.05},
+    {"id": "C3", "text": "Mean lifetime of state 6 (visual) is decreased in the old group, p<0.05.", "param": "mean_lifetime", "state": 6, "direction": "old < young", "threshold": 0.05},
+    {"id": "C4", "text": "The old group has a wider distribution of mean intervals for state 1 (default mode), p<0.05.", "param": "mean_interval", "state": 1, "direction": "see note_on_wider", "threshold": 0.05},
+    {"id": "C5", "text": "The old group has a wider distribution of mean intervals for state 8 (suppressed), p<0.05.", "param": "mean_interval", "state": 8, "direction": "see note_on_wider", "threshold": 0.05},
+    {"id": "C6", "text": "The split is 27 subjects in the young group and 38 in the old group, out of 65.", "param": "group_sizes", "expected": [27, 38], "threshold": 0},
+    {"id": "C7", "text": "On the same contrast, DyNeMo reveals a stronger effect than the TDE-HMM: p<0.01 against the TDE-HMM's p<0.05.", "param": "mode_contribution", "mode": 4, "direction": "old > young", "threshold": 0.01, "note": "needs the deposited DyNeMo fit; if only the 5-subject deposit exists for DyNeMo, this claim is reported as not checkable rather than failed."}
+  ],
+  "note_on_wider": "The paper says the old group has a 'wider distribution' of mean intervals, which is a statement about spread. The test their own script runs, stats.group_diff, compares means (its COPE is a mean difference). We score what their script computes, the mean difference at p<0.05, as the primary reading, and we declare here, before running anything, that we will also report the ratio of standard deviations between the two groups and a Levene test on it as a secondary reading, because that is what 'wider' says.",
+  "secondary_readings_declared_in_advance": [
+    "Standard deviation ratio old/young and a Levene test, for C4 and C5, for the reason above.",
+    "The same five claims recomputed from the state probabilities directly (expected values) instead of the Viterbi path, because the choice of hard assignment is not stated in the paper.",
+    "Group sizes and the age range of each group as read from demographics.csv, against the printed '18-34' and '34-60', which overlap at 34."
+  ],
+  "tolerance": "None on a p-value: the paper prints thresholds, not values. A claim reproduces when the direction matches and all three seeds put the p-value on the printed side of the threshold. C6 is exact.",
+  "frozen_before": "Nothing has been computed. The data and the trained model are downloading as this is written; no model has been loaded and no statistic calculated."
+}

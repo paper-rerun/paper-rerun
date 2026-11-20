@@ -1,0 +1,7 @@
+{
+ "seed": 1,
+ "free_energy": 110.20281682757752,
+ "wall_clock_seconds": 1802.1,
+ "n_states": 8,
+ "output_dir": "runs/hmm/seed01"
+}
