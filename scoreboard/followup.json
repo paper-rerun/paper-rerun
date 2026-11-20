@@ -4,7 +4,7 @@
   "paper": "osl-dynamics",
   "repository": "OHBA-analysis/osl-dynamics",
   "ask": "examples/toolbox_paper/ctf_rest/tde_hmm_networks.py line 50 (and tde_dynemo_networks.py line 46) label the groups the wrong way round: group = [\"Old\" if a == 1 else \"Young\" ...] where load_group_assignments builds 1 for young. It only feeds the seaborn hue, so the statistics are fine and the legend of Figure 4BI is swapped, which inverts every direction section 2.3 states. Also: ship pca_components.npy with every model archive, without it a deposited model cannot be applied to the deposited data.",
-  "status": "not sent: drafted, waiting to be posted"
+  "status": "posted"
  },
  {
   "kind": "Pull request",
