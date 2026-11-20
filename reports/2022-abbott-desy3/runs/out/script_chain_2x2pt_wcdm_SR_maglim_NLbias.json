@@ -1,0 +1,22 @@
+{
+ "chain": "downloads/chain_2x2pt_wcdm_SR_maglim_NLbias.txt",
+ "n_columns": 43,
+ "index_30_is": "bias_lens--b2e_sig8sq_bin4",
+ "index_36_is": "cosmological_parameters--sigma_8",
+ "S8_by_header": {
+  "mean": 0.8487360297795026,
+  "q16": 0.8044424821133337,
+  "q84": 0.894347948802142
+ },
+ "S8_as_the_script_computes_it": {
+  "mean": -0.4248824728039523,
+  "q16": -1.489801161286001,
+  "q84": 0.49720896469931675
+ },
+ "weight_column_the_script_uses": {
+  "name": "cosmological_parameters--sigma_8",
+  "min": 0.0496670466409088,
+  "max": 2.11614271341414,
+  "negative_values": 0
+ }
+}

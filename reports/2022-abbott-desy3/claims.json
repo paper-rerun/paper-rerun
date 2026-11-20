@@ -1,0 +1,47 @@
+{
+  "paper": "DES Collaboration (Abbott et al.), Dark Energy Survey Year 3 results: Cosmological constraints from galaxy clustering and weak lensing, Phys. Rev. D 105, 023520 (2022)",
+  "arxiv": "2105.13549",
+  "source_of_targets": "Eq. (17) and Eq. (19) of the paper and the fiducial rows of Table IV, read from the ar5iv HTML of arXiv:2105.13549, not from pdftotext.",
+  "trap": "pdftotext interleaves the +/- superscripts character by character, so 0.733 +0.039/-0.049 comes out as '0.733+-00..003499'. Reading the layout version wrongly gave sigma_8 = 0.719 +0.047/-0.034 for wCDM, when the HTML says +0.037/-0.044. Same class of bug the EPTA and DESI DR2 runs hit.",
+  "what_this_run_is": "A recount of posterior summaries from the chains the authors published, not a re-run of the CosmoSIS/PolyChord inference. It checks the summarising step, not the inference.",
+  "data": {
+    "server": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/chains/",
+    "login_required": false,
+    "files": [
+      {"name": "chain_3x2pt_lcdm_SR_maglim.txt", "bytes": 16351854, "sha256": "2ba4415560c8a02ccb8da0b7d5cf4552c088a1cc981c1ee96fda90bba31563ff"},
+      {"name": "chain_3x2pt_wcdm_SR_maglim.txt", "bytes": 17683697, "sha256": "12cbf1b1c4629960a9fa42b56723224c727023b0983ac6d90dea4f09bfaae627"},
+      {"name": "chain_all_lcdm.txt", "bytes": 50762197, "sha256": "57b2257df22a12f1400251987c46038c5411fd6633b2286cc91c69fe4dc1109c"}
+    ]
+  },
+  "route": "Read each chain by its own header line, never by a fixed column index. Take omega_m and SIGMA_8 and form S_8 = sigma_8 * sqrt(omega_m / 0.3), exactly as the authors' own read_chains_y3a2.py does. Weight every sample by the 'weight' column (PolyChord nested-sampling weights). The paper says 'mean with 68% confidence limits', so the frozen rule is: central value = weighted mean of the marginal; plus = weighted 84th percentile minus the mean; minus = the mean minus the weighted 16th percentile.",
+  "frozen_rule": "weighted mean, with the 16th and 84th weighted percentiles as the bounds",
+  "secondary_readings_declared_before_running": [
+    "weighted median with the same 16/84 percentiles",
+    "ChainConsumer with its default KDE, statistics='mean', which is the package the authors' own script uses to plot these chains",
+    "highest-density 68% interval around the mean"
+  ],
+  "claims": [
+    {"id": "C1", "what": "3x2pt fiducial, LCDM, MagLim", "chain": "chain_3x2pt_lcdm_SR_maglim.txt", "param": "S_8", "value": 0.776, "plus": 0.017, "minus": 0.017, "where": "Eq. (17) and Table IV"},
+    {"id": "C2", "what": "3x2pt fiducial, LCDM, MagLim", "chain": "chain_3x2pt_lcdm_SR_maglim.txt", "param": "Omega_m", "value": 0.339, "plus": 0.032, "minus": 0.031, "where": "Eq. (17) and Table IV"},
+    {"id": "C3", "what": "3x2pt fiducial, LCDM, MagLim", "chain": "chain_3x2pt_lcdm_SR_maglim.txt", "param": "sigma_8", "value": 0.733, "plus": 0.039, "minus": 0.049, "where": "Eq. (17) and Table IV"},
+    {"id": "C4", "what": "3x2pt, wCDM, MagLim", "chain": "chain_3x2pt_wcdm_SR_maglim.txt", "param": "S_8", "value": 0.775, "plus": 0.026, "minus": 0.024, "where": "abstract and Eq. (19), Table IV"},
+    {"id": "C5", "what": "3x2pt, wCDM, MagLim", "chain": "chain_3x2pt_wcdm_SR_maglim.txt", "param": "Omega_m", "value": 0.352, "plus": 0.035, "minus": 0.041, "where": "abstract and Eq. (19), Table IV"},
+    {"id": "C6", "what": "3x2pt, wCDM, MagLim", "chain": "chain_3x2pt_wcdm_SR_maglim.txt", "param": "sigma_8", "value": 0.719, "plus": 0.037, "minus": 0.044, "where": "Eq. (19), Table IV"},
+    {"id": "C7", "what": "3x2pt, wCDM, MagLim", "chain": "chain_3x2pt_wcdm_SR_maglim.txt", "param": "w", "value": -0.98, "plus": 0.32, "minus": 0.20, "where": "abstract and Eq. (19), Table IV"},
+    {"id": "C8", "what": "DES 3x2pt + BAO + RSD + SNe + Planck + CMB lensing, LCDM", "chain": "chain_all_lcdm.txt", "param": "S_8", "value": 0.812, "plus": 0.008, "minus": 0.008, "where": "abstract and Sec. VIII"},
+    {"id": "C9", "what": "DES 3x2pt + BAO + RSD + SNe + Planck + CMB lensing, LCDM", "chain": "chain_all_lcdm.txt", "param": "Omega_m", "value": 0.306, "plus": 0.004, "minus": 0.005, "where": "abstract and Sec. VIII"},
+    {"id": "C10", "what": "DES 3x2pt + BAO + RSD + SNe + Planck + CMB lensing, LCDM", "chain": "chain_all_lcdm.txt", "param": "h", "value": 0.680, "plus": 0.004, "minus": 0.003, "where": "abstract and Sec. VIII"}
+  ],
+  "tolerance": {
+    "central_3dp": "|delta| <= 0.001 for a value printed with three decimals: rounding alone allows 0.0005 and the rest covers percentile noise.",
+    "central_2dp": "|delta| <= 0.005 for w, printed with two decimals.",
+    "bounds_3dp": "|delta| <= 0.002 on each of the two bounds printed with three decimals, because a tail percentile is noisier than a mean.",
+    "bounds_2dp": "|delta| <= 0.01 on each bound of w.",
+    "verdict": "Reproduced if every claim passes on the central value and on both bounds. Partially reproduced if the central values pass and some bound does not. Not reproduced if a central value fails."
+  },
+  "out_of_scope": [
+    "Re-running CosmoSIS or PolyChord: the inference itself is thousands of CPU hours.",
+    "The redMaGiC rows and the Xlens result, which need a chain not in this set.",
+    "p-values and tension metrics, which need the full likelihood."
+  ]
+}

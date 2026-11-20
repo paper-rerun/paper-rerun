@@ -1,0 +1,208 @@
+{
+ "files": {
+  "chain_1x2pt_lcdm_SR_maglim.txt": {
+   "n_columns": 35,
+   "index_30": "data_vector--2pt_chi2",
+   "index_36": null
+  },
+  "chain_1x2pt_lcdm_SR_maglim_opt.txt": {
+   "n_columns": 35,
+   "index_30": "data_vector--2pt_chi2",
+   "index_36": null
+  },
+  "chain_1x2pt_wcdm_SR_maglim.txt": {
+   "n_columns": 36,
+   "index_30": "cosmological_parameters--sigma_12",
+   "index_36": null
+  },
+  "chain_2x2pt_lcdm_SR_maglim.txt": {
+   "n_columns": 38,
+   "index_30": "intrinsic_alignment_parameters--bias_ta",
+   "index_36": "post"
+  },
+  "chain_2x2pt_lcdm_SR_maglim_NLbias.txt": {
+   "n_columns": 42,
+   "index_30": "intrinsic_alignment_parameters--a1",
+   "index_36": "cosmological_parameters--sigma_12"
+  },
+  "chain_2x2pt_lcdm_SR_redmagic.txt": {
+   "n_columns": 37,
+   "index_30": "cosmological_parameters--sigma_8",
+   "index_36": "weight"
+  },
+  "chain_2x2pt_wcdm_SR_maglim.txt": {
+   "n_columns": 39,
+   "index_30": "intrinsic_alignment_parameters--alpha2",
+   "index_36": "like"
+  },
+  "chain_2x2pt_wcdm_SR_maglim_NLbias.txt": {
+   "n_columns": 43,
+   "index_30": "bias_lens--b2e_sig8sq_bin4",
+   "index_36": "cosmological_parameters--sigma_8"
+  },
+  "chain_3x2pt_fixednu_lcdm.txt": {
+   "n_columns": 37,
+   "index_30": "cosmological_parameters--sigma_8",
+   "index_36": "weight"
+  },
+  "chain_3x2pt_lcdm_SR_maglim.txt": {
+   "n_columns": 38,
+   "index_30": "intrinsic_alignment_parameters--bias_ta",
+   "index_36": "post"
+  },
+  "chain_3x2pt_lcdm_SR_maglim_NLbias.txt": {
+   "n_columns": 50,
+   "index_30": "bias_lens--b1e_sig8_bin5",
+   "index_36": "bias_lens--b2e_sig8sq_bin5"
+  },
+  "chain_3x2pt_lcdm_SR_maglim_opt.txt": {
+   "n_columns": 38,
+   "index_30": "intrinsic_alignment_parameters--bias_ta",
+   "index_36": "post"
+  },
+  "chain_3x2pt_lcdm_SR_redmagic.txt": {
+   "n_columns": 37,
+   "index_30": "cosmological_parameters--sigma_8",
+   "index_36": "weight"
+  },
+  "chain_3x2pt_wcdm_SR_maglim.txt": {
+   "n_columns": 39,
+   "index_30": "intrinsic_alignment_parameters--alpha2",
+   "index_36": "like"
+  },
+  "chain_3x2pt_wcdm_SR_maglim_NLbias.txt": {
+   "n_columns": 51,
+   "index_30": "bias_lens--b1e_sig8_bin4",
+   "index_36": "bias_lens--b2e_sig8sq_bin4"
+  },
+  "chain_all_lcdm.txt": {
+   "n_columns": 61,
+   "index_30": "intrinsic_alignment_parameters--alpha2",
+   "index_36": "planck--ps_a_100_100"
+  },
+  "chain_all_wcdm.txt": {
+   "n_columns": 62,
+   "index_30": "intrinsic_alignment_parameters--alpha1",
+   "index_36": "planck--a_sz"
+  },
+  "chain_des_all_lcdm.txt": {
+   "n_columns": 39,
+   "index_30": "intrinsic_alignment_parameters--alpha2",
+   "index_36": "like"
+  },
+  "chain_des_all_wcdm.txt": {
+   "n_columns": 40,
+   "index_30": "intrinsic_alignment_parameters--alpha1",
+   "index_36": "prior"
+  },
+  "chain_external_lowz_lcdm.txt": {
+   "n_columns": 14,
+   "index_30": null,
+   "index_36": null
+  },
+  "chain_external_lowz_wcdm.txt": {
+   "n_columns": 15,
+   "index_30": null,
+   "index_36": null
+  },
+  "chain_highzh0_lcdm.txt": {
+   "n_columns": 38,
+   "index_30": "intrinsic_alignment_parameters--bias_ta",
+   "index_36": "post"
+  },
+  "chain_highzh0_wcdm.txt": {
+   "n_columns": 39,
+   "index_30": "intrinsic_alignment_parameters--alpha2",
+   "index_36": "like"
+  },
+  "chain_lowz_lcdm.txt": {
+   "n_columns": 39,
+   "index_30": "intrinsic_alignment_parameters--alpha2",
+   "index_36": "like"
+  },
+  "chain_lowz_wcdm.txt": {
+   "n_columns": 40,
+   "index_30": "intrinsic_alignment_parameters--alpha1",
+   "index_36": "prior"
+  },
+  "chain_p-TTTEEE-lowE_lcdm.txt": {
+   "n_columns": 35,
+   "index_30": "data_vector--2pt_chi2",
+   "index_36": null
+  },
+  "chain_p-TTTEEE-lowE_wcdm.txt": {
+   "n_columns": 36,
+   "index_30": "cosmological_parameters--sigma_12",
+   "index_36": null
+  },
+  "chain_planck_des_lcdm.txt": {
+   "n_columns": 60,
+   "index_30": "intrinsic_alignment_parameters--alpha2",
+   "index_36": "planck--ps_a_100_100"
+  },
+  "chain_planck_des_wcdm.txt": {
+   "n_columns": 61,
+   "index_30": "intrinsic_alignment_parameters--alpha1",
+   "index_36": "planck--a_sz"
+  }
+ },
+ "n_files": 29,
+ "wrong_sigma8": [
+  "chain_1x2pt_lcdm_SR_maglim.txt",
+  "chain_1x2pt_lcdm_SR_maglim_opt.txt",
+  "chain_1x2pt_wcdm_SR_maglim.txt",
+  "chain_2x2pt_lcdm_SR_maglim.txt",
+  "chain_2x2pt_lcdm_SR_maglim_NLbias.txt",
+  "chain_2x2pt_wcdm_SR_maglim.txt",
+  "chain_2x2pt_wcdm_SR_maglim_NLbias.txt",
+  "chain_3x2pt_lcdm_SR_maglim.txt",
+  "chain_3x2pt_lcdm_SR_maglim_NLbias.txt",
+  "chain_3x2pt_lcdm_SR_maglim_opt.txt",
+  "chain_3x2pt_wcdm_SR_maglim.txt",
+  "chain_3x2pt_wcdm_SR_maglim_NLbias.txt",
+  "chain_all_lcdm.txt",
+  "chain_all_wcdm.txt",
+  "chain_des_all_lcdm.txt",
+  "chain_des_all_wcdm.txt",
+  "chain_external_lowz_lcdm.txt",
+  "chain_external_lowz_wcdm.txt",
+  "chain_highzh0_lcdm.txt",
+  "chain_highzh0_wcdm.txt",
+  "chain_lowz_lcdm.txt",
+  "chain_lowz_wcdm.txt",
+  "chain_p-TTTEEE-lowE_lcdm.txt",
+  "chain_p-TTTEEE-lowE_wcdm.txt",
+  "chain_planck_des_lcdm.txt",
+  "chain_planck_des_wcdm.txt"
+ ],
+ "wrong_weight": [
+  "chain_1x2pt_lcdm_SR_maglim.txt",
+  "chain_1x2pt_lcdm_SR_maglim_opt.txt",
+  "chain_1x2pt_wcdm_SR_maglim.txt",
+  "chain_2x2pt_lcdm_SR_maglim.txt",
+  "chain_2x2pt_lcdm_SR_maglim_NLbias.txt",
+  "chain_2x2pt_wcdm_SR_maglim.txt",
+  "chain_2x2pt_wcdm_SR_maglim_NLbias.txt",
+  "chain_3x2pt_lcdm_SR_maglim.txt",
+  "chain_3x2pt_lcdm_SR_maglim_NLbias.txt",
+  "chain_3x2pt_lcdm_SR_maglim_opt.txt",
+  "chain_3x2pt_wcdm_SR_maglim.txt",
+  "chain_3x2pt_wcdm_SR_maglim_NLbias.txt",
+  "chain_all_lcdm.txt",
+  "chain_all_wcdm.txt",
+  "chain_des_all_lcdm.txt",
+  "chain_des_all_wcdm.txt",
+  "chain_external_lowz_lcdm.txt",
+  "chain_external_lowz_wcdm.txt",
+  "chain_highzh0_lcdm.txt",
+  "chain_highzh0_wcdm.txt",
+  "chain_lowz_lcdm.txt",
+  "chain_lowz_wcdm.txt",
+  "chain_p-TTTEEE-lowE_lcdm.txt",
+  "chain_p-TTTEEE-lowE_wcdm.txt",
+  "chain_planck_des_lcdm.txt",
+  "chain_planck_des_wcdm.txt"
+ ],
+ "n_wrong_sigma8": 26,
+ "n_wrong_weight": 26
+}

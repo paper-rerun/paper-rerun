@@ -1,0 +1,276 @@
+{
+ "claims_hash": "3cda9babf5234a35c57e04960268f2228b06786e3d13755a94da4e91db3bd7f9",
+ "frozen": {
+  "central_only": 10,
+  "central_and_both_bounds": 6,
+  "of": 10
+ },
+ "paper_rule_hpd": {
+  "central_only": 10,
+  "central_and_both_bounds": 10,
+  "of": 10
+ },
+ "rows": [
+  {
+   "id": "C1",
+   "param": "S_8",
+   "chain": "chain_3x2pt_lcdm_SR_maglim.txt",
+   "published": {
+    "value": 0.776,
+    "plus": 0.017,
+    "minus": 0.017
+   },
+   "frozen_rule": {
+    "central": 0.7759810231913015,
+    "plus": 0.017776032740759784,
+    "minus": 0.01782836522340303,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   },
+   "paper_rule_hpd": {
+    "central": 0.7759810231913015,
+    "plus": 0.017306110621859383,
+    "minus": 0.01814995901835359,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   }
+  },
+  {
+   "id": "C2",
+   "param": "Omega_m",
+   "chain": "chain_3x2pt_lcdm_SR_maglim.txt",
+   "published": {
+    "value": 0.339,
+    "plus": 0.032,
+    "minus": 0.031
+   },
+   "frozen_rule": {
+    "central": 0.33880816616022374,
+    "plus": 0.03091984010559412,
+    "minus": 0.031108725520319458,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   },
+   "paper_rule_hpd": {
+    "central": 0.33880816616022374,
+    "plus": 0.031231928345560267,
+    "minus": 0.03165089684673311,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   }
+  },
+  {
+   "id": "C3",
+   "param": "sigma_8",
+   "chain": "chain_3x2pt_lcdm_SR_maglim.txt",
+   "published": {
+    "value": 0.733,
+    "plus": 0.039,
+    "minus": 0.049
+   },
+   "frozen_rule": {
+    "central": 0.7329662909418221,
+    "plus": 0.04488999006146688,
+    "minus": 0.04497514034841399,
+    "central_ok": true,
+    "plus_ok": false,
+    "minus_ok": false
+   },
+   "paper_rule_hpd": {
+    "central": 0.7329662909418221,
+    "plus": 0.04048364114040148,
+    "minus": 0.05017494539242007,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   }
+  },
+  {
+   "id": "C4",
+   "param": "S_8",
+   "chain": "chain_3x2pt_wcdm_SR_maglim.txt",
+   "published": {
+    "value": 0.775,
+    "plus": 0.026,
+    "minus": 0.024
+   },
+   "frozen_rule": {
+    "central": 0.7745391473020944,
+    "plus": 0.02496379287118322,
+    "minus": 0.024684789034133403,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   },
+   "paper_rule_hpd": {
+    "central": 0.7745391473020944,
+    "plus": 0.0257344981479648,
+    "minus": 0.02386122030255311,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   }
+  },
+  {
+   "id": "C5",
+   "param": "Omega_m",
+   "chain": "chain_3x2pt_wcdm_SR_maglim.txt",
+   "published": {
+    "value": 0.352,
+    "plus": 0.035,
+    "minus": 0.041
+   },
+   "frozen_rule": {
+    "central": 0.35155951678714054,
+    "plus": 0.03733739909995604,
+    "minus": 0.03902597444328676,
+    "central_ok": true,
+    "plus_ok": false,
+    "minus_ok": true
+   },
+   "paper_rule_hpd": {
+    "central": 0.35155951678714054,
+    "plus": 0.0352169623798147,
+    "minus": 0.042096194775884443,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   }
+  },
+  {
+   "id": "C6",
+   "param": "sigma_8",
+   "chain": "chain_3x2pt_wcdm_SR_maglim.txt",
+   "published": {
+    "value": 0.719,
+    "plus": 0.037,
+    "minus": 0.044
+   },
+   "frozen_rule": {
+    "central": 0.7185040703218089,
+    "plus": 0.04189376007521872,
+    "minus": 0.040366478860221156,
+    "central_ok": true,
+    "plus_ok": false,
+    "minus_ok": false
+   },
+   "paper_rule_hpd": {
+    "central": 0.7185040703218089,
+    "plus": 0.03836611601522932,
+    "minus": 0.04457118542091065,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   }
+  },
+  {
+   "id": "C7",
+   "param": "w",
+   "chain": "chain_3x2pt_wcdm_SR_maglim.txt",
+   "published": {
+    "value": -0.98,
+    "plus": 0.32,
+    "minus": 0.2
+   },
+   "frozen_rule": {
+    "central": -0.9808450040768942,
+    "plus": 0.2668350220854393,
+    "minus": 0.2772502011072543,
+    "central_ok": true,
+    "plus_ok": false,
+    "minus_ok": false
+   },
+   "paper_rule_hpd": {
+    "central": -0.9808450040768942,
+    "plus": 0.32819282416891327,
+    "minus": 0.20522042666818308,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   }
+  },
+  {
+   "id": "C8",
+   "param": "S_8",
+   "chain": "chain_all_lcdm.txt",
+   "published": {
+    "value": 0.812,
+    "plus": 0.008,
+    "minus": 0.008
+   },
+   "frozen_rule": {
+    "central": 0.8119761073451812,
+    "plus": 0.007900991660502621,
+    "minus": 0.008037129741802485,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   },
+   "paper_rule_hpd": {
+    "central": 0.8119761073451812,
+    "plus": 0.007694232232084874,
+    "minus": 0.008096801597408665,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   }
+  },
+  {
+   "id": "C9",
+   "param": "Omega_m",
+   "chain": "chain_all_lcdm.txt",
+   "published": {
+    "value": 0.306,
+    "plus": 0.004,
+    "minus": 0.005
+   },
+   "frozen_rule": {
+    "central": 0.30621334421446306,
+    "plus": 0.004317218851518145,
+    "minus": 0.004363478918668062,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   },
+   "paper_rule_hpd": {
+    "central": 0.30621334421446306,
+    "plus": 0.004059120722583909,
+    "minus": 0.004519877165433339,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   }
+  },
+  {
+   "id": "C10",
+   "param": "h",
+   "chain": "chain_all_lcdm.txt",
+   "published": {
+    "value": 0.68,
+    "plus": 0.004,
+    "minus": 0.003
+   },
+   "frozen_rule": {
+    "central": 0.6802121400476725,
+    "plus": 0.0034477472855735103,
+    "minus": 0.0033955846180165894,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   },
+   "paper_rule_hpd": {
+    "central": 0.6802121400476725,
+    "plus": 0.003525774612679,
+    "minus": 0.0034002734034102033,
+    "central_ok": true,
+    "plus_ok": true,
+    "minus_ok": true
+   }
+  }
+ ],
+ "verdict_frozen_rule": "Partially reproduced"
+}

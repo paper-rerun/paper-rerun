@@ -1,0 +1,47 @@
+{
+  "registro": "pre-registro cego, escrito antes de baixar ou calcular qualquer coisa",
+  "data": "2026-11-20",
+  "artigo": "DES Collaboration (Abbott et al.) 2022, Phys. Rev. D 105, 023520, arXiv:2105.13549",
+  "frase_do_artigo": "We report the mean in each parameter, along with the 68% confidence limit (CL) of posterior volume around the mean.",
+  "pre_processamento_fixado": {
+    "peso": "as cadeias sao de nested sampling (PolyChord); toda estatistica usa a coluna de peso do arquivo (nome lido do cabecalho, nunca indice fixo)",
+    "S8": "sigma_8 * sqrt(Omega_m/0.3), calculado linha a linha antes de qualquer marginalizacao",
+    "burn-in": "nenhum; cadeia de nested sampling nao tem burn-in, o peso ja cuida disso"
+  },
+  "definicoes_candidatas": {
+    "D1_PRINCIPAL": {
+      "nome": "quantil deslocado a partir da media (34% de volume de cada lado da media)",
+      "receita": "com a CDF ponderada F da marginal 1D: p0 = F(media); limite inferior = Q(p0 - 0.34), limite superior = Q(p0 + 0.34); se p0-0.34 < 0 ou p0+0.34 > 1, truncar e nao compensar do outro lado",
+      "por_que": "e a leitura literal de '68% de volume de posterior EM TORNO DA MEDIA': a media e o ponto de referencia e metade do volume (34%) e contado para cada lado dela; produz limites assimetricos, como os impressos"
+    },
+    "D2": {
+      "nome": "quantis iguais 16/84 (intervalo de cauda igual), citado em relacao a media",
+      "receita": "limite inferior = Q(0.16) - media; superior = Q(0.84) - media"
+    },
+    "D3": {
+      "nome": "intervalo de maior densidade (HPDI) de 68%, citado em relacao a media",
+      "receita": "menor intervalo [a,b] da marginal 1D com 68% do volume; limites = a-media e b-media"
+    },
+    "D4": {
+      "nome": "intervalo simetrico em x em torno da media",
+      "receita": "menor d tal que P(media-d < x < media+d) = 0.68; limites = -d e +d (simetricos)"
+    },
+    "D5": {
+      "nome": "quantis iguais recentrados na mediana (o que muitos codigos chamam de 68% CL)",
+      "receita": "limite inferior = Q(0.16) - mediana; superior = Q(0.84) - mediana; valor central reportado = media"
+    }
+  },
+  "principal": "D1_PRINCIPAL",
+  "tolerancia": {
+    "valor_central": "reproduz se |meu - impresso| <= max(0.002, 0.20 * sigma_impresso). 0.002 e meia unidade do ultimo digito impresso (3 casas). Para w (2 casas): max(0.01, 0.20*sigma)",
+    "limites": "reproduz se |meu - impresso| <= max(0.002, 0.15 * |limite impresso|). Para w: max(0.01, 0.15*|limite|)",
+    "justificativa": "o artigo imprime 3 casas (2 para w); a cadeia e finita e o ruido de amostragem em quantil de cauda e real, por isso 15% de folga no limite"
+  },
+  "vereditos_possiveis": {
+    "REPRODUZ": "todos os 10 alvos (valor central e os dois limites de cada um) dentro da tolerancia pela D1_PRINCIPAL",
+    "REPRODUZ_COM_OUTRA_DEFINICAO": "D1 falha em algum limite mas uma unica definicao alternativa (D2..D5) passa em TODOS os 10 alvos; nesse caso o artigo reproduz, mas a frase de metodos descreve mal o que foi feito",
+    "REPRODUZ_PARCIAL": "todos os valores centrais passam e nenhuma definicao unica fecha todos os limites",
+    "NAO_REPRODUZ": "algum valor central fora da tolerancia por qualquer definicao, ou mais de um limite fora de todas as definicoes testadas sem explicacao"
+  },
+  "compromisso": "o veredito sai desta regra; nao vou afrouxar a tolerancia depois de ver os numeros. Se precisar de outra definicao, isso e relatado como achado, nao como ajuste da regra."
+}

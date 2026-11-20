@@ -1,0 +1,53 @@
+{
+ "chain": "downloads/chain_3x2pt_lcdm_SR_maglim.txt",
+ "n_samples": 22619,
+ "weight_sum": 0.9999999999999117,
+ "effective_samples": 6310.4420643100375,
+ "columns": 38,
+ "params": {
+  "Omega_m": {
+   "frozen_mean": 0.33880816616022374,
+   "frozen_plus": 0.03091984010559412,
+   "frozen_minus": 0.031108725520319458,
+   "secondary_median": 0.3390805987326552,
+   "secondary_median_plus": 0.03064740753316264,
+   "secondary_median_minus": 0.03138115809275094,
+   "q16": 0.3076994406399043,
+   "q84": 0.36972800626581787,
+   "std": 0.03111952737641929
+  },
+  "sigma_8": {
+   "frozen_mean": 0.7329662909418221,
+   "frozen_plus": 0.04488999006146688,
+   "frozen_minus": 0.04497514034841399,
+   "secondary_median": 0.7294738129864251,
+   "secondary_median_plus": 0.048382468016863855,
+   "secondary_median_minus": 0.04148266239301701,
+   "q16": 0.6879911505934081,
+   "q84": 0.777856281003289,
+   "std": 0.04593739211542342
+  },
+  "S_8": {
+   "frozen_mean": 0.7759810231913015,
+   "frozen_plus": 0.017776032740759784,
+   "frozen_minus": 0.01782836522340303,
+   "secondary_median": 0.7755991541317253,
+   "secondary_median_plus": 0.01815790180033594,
+   "secondary_median_minus": 0.017446496163826875,
+   "q16": 0.7581526579678984,
+   "q84": 0.7937570559320613,
+   "std": 0.018282674130537913
+  },
+  "h": {
+   "frozen_mean": 0.6713638048500428,
+   "frozen_plus": 0.08560974381264164,
+   "frozen_minus": 0.08148114088913838,
+   "secondary_median": 0.6592324009796352,
+   "secondary_median_plus": 0.0977411476830492,
+   "secondary_median_minus": 0.06934973701873082,
+   "q16": 0.5898826639609044,
+   "q84": 0.7569735486626844,
+   "std": 0.07822809498012498
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "chain": "downloads/chain_3x2pt_lcdm_SR_maglim.txt",
+ "n_columns": 38,
+ "index_30_is": "intrinsic_alignment_parameters--bias_ta",
+ "index_36_is": "post",
+ "S8_by_header": {
+  "mean": 0.7759810231913015,
+  "q16": 0.7581526579678984,
+  "q84": 0.7937570559320613
+ },
+ "S8_as_the_script_computes_it": {
+  "mean": 0.929336817066133,
+  "q16": 0.15144185636388127,
+  "q84": 1.7381000003140952
+ },
+ "weight_column_the_script_uses": {
+  "name": "post",
+  "min": -960191.0072395972,
+  "max": 5868.977930942693,
+  "negative_values": 525
+ }
+}

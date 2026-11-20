@@ -1,0 +1,64 @@
+{
+ "chain": "downloads/chain_3x2pt_wcdm_SR_maglim.txt",
+ "n_samples": 23652,
+ "weight_sum": 1.0000000000003375,
+ "effective_samples": 6505.510994489789,
+ "columns": 39,
+ "params": {
+  "Omega_m": {
+   "frozen_mean": 0.35155951678714054,
+   "frozen_plus": 0.03733739909995604,
+   "frozen_minus": 0.03902597444328676,
+   "secondary_median": 0.35021316553774906,
+   "secondary_median_plus": 0.03868375034934751,
+   "secondary_median_minus": 0.037679623193895284,
+   "q16": 0.3125335423438538,
+   "q84": 0.3888969158870966,
+   "std": 0.03870070147777553
+  },
+  "sigma_8": {
+   "frozen_mean": 0.7185040703218089,
+   "frozen_plus": 0.04189376007521872,
+   "frozen_minus": 0.040366478860221156,
+   "secondary_median": 0.716976885615424,
+   "secondary_median_plus": 0.04342094478160352,
+   "secondary_median_minus": 0.03883929415383636,
+   "q16": 0.6781375914615877,
+   "q84": 0.7603978303970276,
+   "std": 0.04197150113108402
+  },
+  "S_8": {
+   "frozen_mean": 0.7745391473020944,
+   "frozen_plus": 0.02496379287118322,
+   "frozen_minus": 0.024684789034133403,
+   "secondary_median": 0.7755211948119873,
+   "secondary_median_plus": 0.023981745361290274,
+   "secondary_median_minus": 0.02566683654402635,
+   "q16": 0.749854358267961,
+   "q84": 0.7995029401732776,
+   "std": 0.02495250963014098
+  },
+  "h": {
+   "frozen_mean": 0.6488602750862801,
+   "frozen_plus": 0.07479314500551659,
+   "frozen_minus": 0.07240009820962923,
+   "secondary_median": 0.6385828495152136,
+   "secondary_median_plus": 0.08507057057658307,
+   "secondary_median_minus": 0.06212267263856275,
+   "q16": 0.5764601768766509,
+   "q84": 0.7236534200917967,
+   "std": 0.0671840062849363
+  },
+  "w": {
+   "frozen_mean": -0.9808450040768942,
+   "frozen_plus": 0.2668350220854393,
+   "frozen_minus": 0.2772502011072543,
+   "secondary_median": -0.946986792071952,
+   "secondary_median_plus": 0.2329768100804971,
+   "secondary_median_minus": 0.3111084131121965,
+   "q16": -1.2580952051841485,
+   "q84": -0.7140099819914549,
+   "std": 0.27705479422070084
+  }
+ }
+}

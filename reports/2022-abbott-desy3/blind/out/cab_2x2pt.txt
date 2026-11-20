@@ -1,0 +1,95 @@
+#cosmological_parameters--omega_m	cosmological_parameters--h0	cosmological_parameters--omega_b	cosmological_parameters--n_s	cosmological_parameters--a_s	cosmological_parameters--omnuh2	cosmological_parameters--w	shear_calibration_parameters--m1	shear_calibration_parameters--m2	shear_calibration_parameters--m3	shear_calibration_parameters--m4	wl_photoz_errors--bias_1	wl_photoz_errors--bias_2	wl_photoz_errors--bias_3	wl_photoz_errors--bias_4	lens_photoz_errors--bias_1	lens_photoz_errors--bias_2	lens_photoz_errors--bias_3	lens_photoz_errors--bias_4	lens_photoz_errors--width_1	lens_photoz_errors--width_2	lens_photoz_errors--width_3	lens_photoz_errors--width_4	bias_lens--b1e_sig8_bin1	bias_lens--b1e_sig8_bin2	bias_lens--b1e_sig8_bin3	bias_lens--b1e_sig8_bin4	bias_lens--b2e_sig8sq_bin1	bias_lens--b2e_sig8sq_bin2	bias_lens--b2e_sig8sq_bin3	bias_lens--b2e_sig8sq_bin4	intrinsic_alignment_parameters--a1	intrinsic_alignment_parameters--a2	intrinsic_alignment_parameters--alpha1	intrinsic_alignment_parameters--alpha2	intrinsic_alignment_parameters--bias_ta	COSMOLOGICAL_PARAMETERS--SIGMA_8	COSMOLOGICAL_PARAMETERS--SIGMA_12	DATA_VECTOR--2PT_CHI2	prior	like	post	weight
+#sampler=polychord
+#n_varied=36
+#module_0=consistent_parameters 1.0
+#module_1=BBN-Consistency 0705.0290
+## CITE Comp.Phys.Commun.178:956-971,2008
+#module_2=camb Jan15
+## CITE http://arxiv.org/abs/1201.3654
+## CITE http://arxiv.org/abs/astro-ph/9911177
+#module_3=Halofit_Takahashi Camb-Nov-13
+## CITE http://arxiv.org/abs/astro-ph/0207664
+## CITE http://arxiv.org/abs/1208.2701
+## CITE http://arxiv.org/abs/1208.2701
+#module_4=extrapolate 1.0
+#module_5=load_nz_fits 1
+#module_6=lens_photoz_width #name from ini file
+#module_7=photoz_bias 1
+#module_8=bias_marg #name from ini file
+#module_9=photoz_bias 1
+#module_10=fast_pt #name from ini file
+#module_11=IA #name from ini file
+#module_12=project_2d 1.0
+#module_13=project_2d 1.0
+#module_14=project_2d 1.0
+#module_15=add_intrinsic 1.0
+#module_16=add_eb #name from ini file
+#module_17=shear_2pt_eplusb #name from ini file
+#module_18=shear_2pt_eminusb #name from ini file
+#module_19=choose_xip #name from ini file
+#module_20=2pt_gal #name from ini file
+#module_21=2pt_gal_shear #name from ini file
+#module_22=shear_bias 1
+#module_23=add_pm #name from ini file
+#module_24=smallratio_like #name from ini file
+#module_25=2pt 1
+#timestamp=2021-04-14T23:01:15.908929
+#platform=Linux-4.12.14-150.17_5.0.93-cray_ari_c-x86_64-with-glibc2.10
+#platform_version=#1 SMP Fri Feb 12 21:54:42 UTC 2021 (4c8bf4a)
+#uuid=b1419e2660454ee7b689e855cde67995
+#cosmosis_git_version=4d890ab52ad5f112c72d69288a173289a508865d
+#csl_git_version=c45acfedd0fbcb748fc2caccae67fa6a67f2ae2c
+#cwd_git_version=63e5c4b341b3c8ab6cef74f7b4f6c739a79fa102
+#hostname=nid01360
+#username=porredon
+#live_points=500
+#feedback=3
+#resume=True
+#polychord_outfile_root=poly_2x2pt_wcdm_SR_maglim_NLbias
+#base_dir=chain_checkpoints
+#compression_factor=0.36787944117144233
+#max_iterations=-1
+#num_repeats=60
+#nprior=-1
+#random_seed=-1
+#tolerance=0.01
+#log_zero=-1000000.0
+#boost_posteriors=10.0
+#weighted_posteriors=True
+#equally_weighted_posteriors=True
+#cluster_posteriors=True
+#fast_fraction=0.1
+## START_OF_PARAMS_INI
+## [DEFAULT]
+## baseline_dir = .
+## datavector_dir = .
+## 2pt_file = ../data/des-y3/2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits
+## 2pt_data_sets = gammat wtheta
+## run_name = 2x2pt_wcdm_SR_maglim_NLbias
+## 
+## [runtime]
+## sampler = polychord
+## root = /global/cscratch1/sd/porredon/cosmosis_10_20/cosmosis
+## 
+## [multinest]
+## max_iterations = 50000
+## multinest_outfile_root = chain_checkpoints/mn_%(RUN_NAME)s
+## resume = F
+## live_points = 500
+## efficiency = 0.3
+## tolerance = 0.01
+## constant_efficiency = F
+## 
+## [polychord]
+## base_dir = chain_checkpoints
+## polychord_outfile_root = poly_%(RUN_NAME)s
+## resume = T
+## feedback = 3
+## fast_fraction = 0.1
+## live_points = 500
+## num_repeats = 60
+## tolerance = 0.01
+## boost_posteriors = 10.0
+## 
+## [output]
+## filename = chain_%(RUN_NAM

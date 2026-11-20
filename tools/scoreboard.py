@@ -59,6 +59,7 @@ MAIN_ISSUE = {
 	"2025-fallahpour-codontransformer": "Source Data table corrupt on deposit",
 	"2025-lefebvre-nellie": "Scoring code penalises the baselines",
 	"2023-sicho-drugex": "Table column is not the quantity described",
+	"2022-abbott-desy3": "Interval definition in the paper is not the one printed",
 }
 
 

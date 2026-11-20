@@ -1,5 +1,18 @@
 [
  {
+  "paper": "DES Y3 3x2pt",
+  "report": "2022-abbott-desy3",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2022-abbott-desy3/REPORT.md",
+  "venue": "Phys. Rev. D",
+  "year": 2022,
+  "field": "cosmology",
+  "area": "Physics",
+  "verdict": "Partially reproduced",
+  "main_issue": "Interval definition in the paper is not the one printed",
+  "finding": "Recount of the published posterior summaries from the chains the collaboration deposited, not a re-run of the PolyChord inference. All ten central values come back to the last printed digit — S_8 = 0.7760 against 0.776 and Ω_m = 0.3388 against 0.339 in ΛCDM, w = −0.9808 against −0.98, and the combined-probe S_8 = 0.8120 and h = 0.6802 against 0.812 and 0.680. Four of the bounds miss our frozen rule, and they miss because the rule was wrong: we froze 16th/84th percentiles, and the published bounds are the 68% highest-density interval of the smoothed marginal, which reproduces all twenty. The percentile reading a reader would reach for gives w = −0.98 ± 0.27 against the printed +0.32 −0.20, losing the asymmetry that carries the physics. Two things to report. The paper defines the interval exactly once, in Section V — \"the mean in each parameter, along with the 68% confidence limit (CL) of posterior volume around the mean\" — and taken literally that recipe gives the asymmetry inverted: w comes out +0.23 −0.36 against the printed +0.32 −0.20, and σ_8 in ΛCDM +0.052 −0.040 against +0.039 −0.049. The highest-density interval does not use the mean at all, and the printed central value is not at its centre: for w the interval runs from −1.186 to −0.653 with the mean 38% of the way along. And read_chains_y3a2.py, shipped in the same folder as the chains, reads σ_8 at column index 30 and the weight at index 36, which is right only for a 37-column header; of the 29 chains in that folder, 3 are like that and the rest run 14 to 62 columns. On the fiducial 3x2pt ΛCDM chain it reads bias_ta as σ_8 and the log-posterior as the weight, returning a mean S_8 of 0.93 instead of 0.776 and raising no error; on the file the script itself opens, the offset is six and S_8 comes out at −0.42 against 0.849. Reading the header line instead of indexing is three lines of code. A blind recount with its own pre-registered list of candidate definitions reached the same rule independently, and supplied both the inversion and the six-column offset. Our own adversarial review caught a figure in the first draft that had been written from intuition and never computed: dropping the weight column moves S_8 by 0.052, not the 0.003 the draft claimed.",
+  "rerun_date": "2026-11-20"
+ },
+ {
   "paper": "DrugEx",
   "report": "2023-sicho-drugex",
   "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2023-sicho-drugex/REPORT.md",
