@@ -11,6 +11,7 @@
 - Verdict: **Reproduced**
 - Date: 2026-11-04
 - Hardware: Ryzen 9 3900X, 31 GB RAM visible to WSL2 Ubuntu 24.04, CPU only (the RTX 2070 SUPER was not needed)
+- Correction, 2026-11-20: points 2 and 3 of "Notes for the authors" were ours, not the benchmark's. We evaluated the wrong GraphCast stores. Both are rewritten below, with what we originally reported kept visible. Nothing else in this report changes, and the verdict does not.
 
 All 50 pre-registered cells match the figure within the pre-registered tolerance, on the full set of 732 initialisations of 2020.
 
@@ -214,16 +215,18 @@ Thanks for the public bucket and the list of official commands. Everything we ne
    - Issue #254 already says the mask code was never released. A short note in the docs would help: the paper figures use the mask, while the current website and files do not. Then people comparing against the paper know which version they are looking at.
    - Our reading of the mask matches every T850 cell at the figure's printed precision, assuming the figure truncates. That reading is: the valid time's day of year and hour, normalised by the combined weight sum.
    - All our masked values sit 0.007% to 1.09% above the printed numbers, so this does not show the two implementations are the same. If yours was different, it would be good to know.
-2. **GraphCast (oper.) in the 2026 files.**
-   - Our value for this row matches the figure in all 5 cells (10 d: 751.52 against 751). We used `graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121...zarr` against hres_t0.
-   - It differs from `graphcast_hres_init_vs_hres_t0_240x121_2020.nc` by up to 0.58%.
-   - 4 of the 5 cells exceed the 0.1% auxiliary threshold we pre-registered for this comparison (1/3/5/10 d: -0.58/-0.22/+0.14/-0.33%). All other 46 cells are within it.
-   - For every other row, the files and our values agree within 0.061%.
-3. **GraphCast (ERA5) in the 2026 files.** Same pattern, smaller:
-   - our values differ from `graphcast_vs_era5_240x121_2020.nc` by 0.015 to 0.061%;
-   - HRES, Pangu-Weather and NeuralGCM agree to 0.006% or better.
+2. **GraphCast in the 2026 files — resolved 2026-11-20, and the error was ours.** Both GraphCast rows of `benchmark_results/` come from the `_v2` stores. We evaluated the older ones.
 
-   This does not affect the figure. On January 2020, evaluate.py at 156e5dc gives the same Z500 numbers as our script for both GraphCast stores (to 1.7e-9), so the gap is not in how we read these stores. It sits between evaluate.py run on the stores named in the docs and the 2026 WeatherBench-X files. We cannot tell whether it comes from the stores, the time selection or WeatherBench-X itself.
+   Re-running our own code against `graphcast_hres_init_v2/2020-240x121_equiangular_with_poles_conservative.zarr` against hres_t0, over the same 732 starts, gives 40.53334007, 124.41172879, 276.74144748, 477.17220428 and 754.01772109 m²/s² at 1, 3, 5, 7 and 10 days. Those are the values in `graphcast_hres_init_vs_hres_t0_240x121_2020.nc`. Against ERA5, `graphcast_v2/2020-240x121...zarr` gives 39.76920265, 124.19221571, 274.25088513, 467.91664684 and 731.90301202, matching `graphcast_vs_era5_240x121_2020.nc` to 4.7e-5 — the file stores four decimals, so that is its printed precision.
+
+   What we originally reported, and why it was wrong: using `graphcast_hres_init/2020/date_range_2019-11-16_2021-02-01_12_hours-240x121...zarr` we got differences from the file of up to 0.58% (1/3/5/10 d: -0.58/-0.22/+0.14/-0.33%), with 4 of 5 cells past the 0.1% auxiliary threshold we had pre-registered; and on the ERA5 row, 0.015 to 0.061%. We wrote that the gap sat "between evaluate.py run on the stores named in the docs and the 2026 WeatherBench-X files" and that we could not tell whether it came from the stores, the time selection or WeatherBench-X. It came from the stores, and it was our choice of them. `evaluate.py` and WeatherBench-X are not implicated.
+
+   The figure cells are unaffected: the older store reproduces Fig. 1 (10 d: 751.52 against a printed 751), which is what the pre-registered claims were about.
+
+   A third party raised the `_v2` store in [issue #318](https://github.com/google-research/weatherbench2/issues/318); we then checked it ourselves, which is where the numbers above come from.
+
+3. **The documentation request stands.** `datasets/` carries `graphcast/`, `graphcast_v2/`, `graphcast_hres_init/` and `graphcast_hres_init_v2/` side by side; `docs/source/official-evaluation.md` gives no command for GraphCast at all; and nothing in the bucket says which pair is current. We took the store from the bucket listing and the data guide, and took the wrong one. A line naming the two `_v2` paths next to the evaluation command would close this.
+
 4. **Small things in the paper text.**
    - The Fig. 1 axis label for Z500 reads "kg²/m²", but the values are geopotential in m²/s².
    - Section 3.6 says the Pangu-Weather data goes to 7 days, but the figure and the store go to 10 days.

@@ -66,7 +66,7 @@
   "kind": "Issue",
   "paper": "WeatherBench 2",
   "repository": "google-research/weatherbench2",
-  "ask": "Say in the docs that the paper's T850 values use the below-ground mask (0.8-3.2% effect); why the 2026 GraphCast benchmark files differ from evaluate.py by up to 0.58%; small fixes to the paper text.",
+  "ask": "Say in the docs that the paper's T850 values use the below-ground mask (0.8-3.2% effect); name the GraphCast store paths next to the evaluation command, since datasets/ carries both graphcast* and graphcast*_v2 and the docs give no GraphCast command; small fixes to the paper text.",
   "status": "posted"
  },
  {

@@ -165,7 +165,7 @@
   "area": "Earth sciences",
   "verdict": "Reproduced",
   "main_issue": "Code differs from the Methods",
-  "finding": "Fig. 1 (global RMSE, 2020) for IFS HRES, GraphCast, Pangu-Weather, the two operational-start rows and NeuralGCM 0.7°: all 50 pre-registered Z500 and T850 cells match on the full 732 initialisations. Z500 matches with the public code as it is; T850 only matches with the below-ground mask of Section 4.2.1, which is not in the public code. We pointed the authors to it.",
+  "finding": "Fig. 1 (global RMSE, 2020) for IFS HRES, GraphCast, Pangu-Weather, the two operational-start rows and NeuralGCM 0.7°: all 50 pre-registered Z500 and T850 cells match on the full 732 initialisations. Z500 matches with the public code as it is; T850 only matches with the below-ground mask of Section 4.2.1, which is not in the public code. We pointed the authors to it. We also reported that the 2026 benchmark files disagreed with the GraphCast stores by up to 0.58%; that was ours — the files come from the _v2 stores and we had evaluated the older ones. Re-run against graphcast_hres_init_v2 the five operational Z500 scores come back as 40.53334007, 124.41172879, 276.74144748, 477.17220428 and 754.01772109, which is the released file to every digit it prints. Corrected in the report on 2026-11-20.",
   "rerun_date": "2026-11-04"
  },
  {
