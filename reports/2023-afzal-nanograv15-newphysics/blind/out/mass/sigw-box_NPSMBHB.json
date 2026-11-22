@@ -1,0 +1,46 @@
+{
+ "model": "sigw-box",
+ "analysis": "NPSMBHB",
+ "params": {
+  "log10_A": {
+   "printed": [
+    -1.68,
+    -0.74
+   ],
+   "mass_inside_printed": 0.6797590016600836,
+   "width_printed": 0.94
+  },
+  "log10_f_min": {
+   "printed": [
+    -7.97,
+    -6.84
+   ],
+   "mass_inside_printed": 0.7443637300360639,
+   "width_printed": 1.13
+  },
+  "log10_f_max": {
+   "printed": [
+    -6.45,
+    -5.0
+   ],
+   "mass_inside_printed": 0.679262693914935,
+   "width_printed": 1.4500000000000002
+  },
+  "log10_A_bhb": {
+   "printed": [
+    -16.15,
+    -15.21
+   ],
+   "mass_inside_printed": 0.6806073616119984,
+   "width_printed": 0.9399999999999977
+  },
+  "gamma_bhb": {
+   "printed": [
+    4.31,
+    5.0
+   ],
+   "mass_inside_printed": 0.6765710687503578,
+   "width_printed": 0.6900000000000004
+  }
+ }
+}

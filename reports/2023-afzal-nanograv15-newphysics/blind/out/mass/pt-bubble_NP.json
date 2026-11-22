@@ -1,0 +1,54 @@
+{
+ "model": "pt-bubble",
+ "analysis": "NP",
+ "params": {
+  "log10_T_star": {
+   "printed": [
+    -1.33,
+    -0.39
+   ],
+   "mass_inside_printed": 0.6792963131819701,
+   "width_printed": 0.9400000000000001
+  },
+  "log10_alpha_star": {
+   "printed": [
+    0.03,
+    1.0
+   ],
+   "mass_inside_printed": 0.6773138810370506,
+   "width_printed": 0.97
+  },
+  "log10_HR": {
+   "printed": [
+    -0.56,
+    0.0
+   ],
+   "mass_inside_printed": 0.6781240691772287,
+   "width_printed": 0.56
+  },
+  "a": {
+   "printed": [
+    1.49,
+    2.54
+   ],
+   "mass_inside_printed": 0.6828378468739552,
+   "width_printed": 1.05
+  },
+  "b": {
+   "printed": [
+    1.0,
+    2.32
+   ],
+   "mass_inside_printed": 0.6779667487310416,
+   "width_printed": 1.3199999999999998
+  },
+  "c": {
+   "printed": [
+    1.69,
+    3.0
+   ],
+   "mass_inside_printed": 0.6813395337527735,
+   "width_printed": 1.31
+  }
+ }
+}

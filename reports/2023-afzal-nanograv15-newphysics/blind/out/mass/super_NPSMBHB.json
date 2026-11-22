@@ -1,0 +1,38 @@
+{
+ "model": "super",
+ "analysis": "NPSMBHB",
+ "params": {
+  "log10_Gmu": {
+   "printed": [
+    -12.09,
+    -11.49
+   ],
+   "mass_inside_printed": 0.6827921214160937,
+   "width_printed": 0.5999999999999996
+  },
+  "log10_P": {
+   "printed": [
+    -3.0,
+    -1.99
+   ],
+   "mass_inside_printed": 0.6813894898793211,
+   "width_printed": 1.01
+  },
+  "log10_A_bhb": {
+   "printed": [
+    -16.18,
+    -15.28
+   ],
+   "mass_inside_printed": 0.6786752568232447,
+   "width_printed": 0.9000000000000004
+  },
+  "gamma_bhb": {
+   "printed": [
+    4.3,
+    4.99
+   ],
+   "mass_inside_printed": 0.6820013782713913,
+   "width_printed": 0.6900000000000004
+  }
+ }
+}

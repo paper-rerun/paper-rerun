@@ -1,0 +1,46 @@
+{
+ "model": "igw",
+ "analysis": "NPSMBHB",
+ "params": {
+  "log10_T_rh": {
+   "printed": [
+    -1.89,
+    2.11
+   ],
+   "mass_inside_printed": 0.722704893073806,
+   "width_printed": 4.0
+  },
+  "log10_r": {
+   "printed": [
+    -23.03,
+    -7.21
+   ],
+   "mass_inside_printed": 0.7499271543344342,
+   "width_printed": 15.82
+  },
+  "n_t": {
+   "printed": [
+    1.56,
+    4.03
+   ],
+   "mass_inside_printed": 0.8108951506492087,
+   "width_printed": 2.47
+  },
+  "log10_A_bhb": {
+   "printed": [
+    -16.2,
+    -15.14
+   ],
+   "mass_inside_printed": 0.675754495272449,
+   "width_printed": 1.0599999999999987
+  },
+  "gamma_bhb": {
+   "printed": [
+    4.26,
+    5.0
+   ],
+   "mass_inside_printed": 0.6832717307286909,
+   "width_printed": 0.7400000000000002
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "super",
+ "analysis": "NP",
+ "params": {
+  "log10_Gmu": {
+   "printed": [
+    -12.08,
+    -11.5
+   ],
+   "mass_inside_printed": 0.6810416199351537,
+   "width_printed": 0.5800000000000001
+  },
+  "log10_P": {
+   "printed": [
+    -3.0,
+    -2.01
+   ],
+   "mass_inside_printed": 0.681739839719407,
+   "width_printed": 0.9900000000000002
+  }
+ }
+}

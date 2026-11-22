@@ -1,0 +1,56 @@
+sigw_delta.pkl.gz: 4017450 samples, 141 columns -> sigw_delta_np.json
+   nmodel: {0: 4017450}
+sigw_delta_bhb.pkl.gz: 3238125 samples, 143 columns -> sigw_delta_npsmbhb.json
+   nmodel: {0: 3238125}
+sigw_gauss.pkl.gz: 3585750 samples, 142 columns -> sigw_gauss_np.json
+   nmodel: {0: 3585750}
+sigw_gauss_bhb.pkl.gz: 2835225 samples, 144 columns -> sigw_gauss_npsmbhb.json
+   nmodel: {0: 2835225}
+sigw_box.pkl.gz: 3857475 samples, 142 columns -> sigw_box_np.json
+   nmodel: {0: 3857475}
+sigw_box_bhb.pkl.gz: 1746900 samples, 144 columns -> sigw_box_npsmbhb.json
+   nmodel: {0: 1746900}
+pt_bubble.pkl.gz: 4112625 samples, 145 columns -> pt_bubble_np.json
+   nmodel: {0: 4112625}
+pt_bubble_bhb.pkl.gz: 3492525 samples, 147 columns -> pt_bubble_npsmbhb.json
+   nmodel: {0: 3492525}
+pt_sound.pkl.gz: 3826125 samples, 145 columns -> pt_sound_np.json
+   nmodel: {0: 3826125}
+pt_sound_bhb.pkl.gz: 3532050 samples, 147 columns -> pt_sound_npsmbhb.json
+   nmodel: {0: 3532050}
+stable_c.pkl.gz: 3815100 samples, 140 columns -> stable_c_np.json
+   nmodel: {0: 3815100}
+stable_c_bhb.pkl.gz: 3242250 samples, 142 columns -> stable_c_npsmbhb.json
+   nmodel: {0: 3242250}
+stable_k.pkl.gz: 3122775 samples, 140 columns -> stable_k_np.json
+   nmodel: {0: 3122775}
+stable_k_bhb.pkl.gz: 2770050 samples, 142 columns -> stable_k_npsmbhb.json
+   nmodel: {0: 2770050}
+stable_m.pkl.gz: 3950850 samples, 140 columns -> stable_m_np.json
+   nmodel: {0: 3950850}
+stable_m_bhb.pkl.gz: 3361425 samples, 142 columns -> stable_m_npsmbhb.json
+   nmodel: {0: 3361425}
+stable_n.pkl.gz: 4039200 samples, 140 columns -> stable_n_np.json
+   nmodel: {0: 4039200}
+stable_n_bhb.pkl.gz: 3337350 samples, 142 columns -> stable_n_npsmbhb.json
+   nmodel: {0: 3337350}
+meta_l.pkl.gz: 3665775 samples, 141 columns -> meta_l_np.json
+   nmodel: {0: 3665775}
+meta_l_bhb.pkl.gz: 3069975 samples, 143 columns -> meta_l_npsmbhb.json
+   nmodel: {0: 3069975}
+meta_ls.pkl.gz: 3732600 samples, 141 columns -> meta_ls_np.json
+   nmodel: {0: 3732600}
+meta_ls_bhb.pkl.gz: 3101025 samples, 143 columns -> meta_ls_npsmbhb.json
+   nmodel: {0: 3101025}
+super.pkl.gz: 3677925 samples, 141 columns -> super_np.json
+   nmodel: {0: 3677925}
+super_bhb.pkl.gz: 3119850 samples, 143 columns -> super_npsmbhb.json
+   nmodel: {0: 3119850}
+dw_sm.pkl.gz: 4634400 samples, 143 columns -> dw_sm_np.json
+   nmodel: {0: 4634400}
+dw_sm_bhb.pkl.gz: 3047625 samples, 145 columns -> dw_sm_npsmbhb.json
+   nmodel: {0: 3047625}
+dw_ds.pkl.gz: 5209425 samples, 143 columns -> dw_ds_np.json
+   nmodel: {0: 5209425}
+dw_ds_bhb.pkl.gz: 3074550 samples, 145 columns -> dw_ds_npsmbhb.json
+   nmodel: {0: 3074550}

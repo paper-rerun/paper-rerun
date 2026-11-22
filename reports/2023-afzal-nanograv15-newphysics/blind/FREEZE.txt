@@ -1,0 +1,7 @@
+c96313d2fd8d460fc244d77e7f4fd1edf20c693e3dc19d6d7c035f9779ebfe24 *PREREG.md
+16e5e19227ce9131502b98af07c0344706b9c451cbb822b9ce5f65929ba4a9bc *out/table4_printed.json
+4a857c6cc7d169f6817e883c5ec8c6bcf2fd0cd88d2f3dc11e7d765e6c862b47 *out/priors.json
+c2bc7667934cf1e2121974e8bd1ca88b6d3134bf57e99100c5168a7a503e6897 *scripts/parse_table4.py
+ff9f0ac38cdad0bd326b69e9be366a160ccc8941dbfb3ce46d4a0c0090f250ab *arxiv-src/main.tex
+d9dfa0aff736266bc4125b6f01d3a518dd40e50d3d9abbe2842dbd37ef40d8f2 *eprint.tar.gz
+Sat Nov 21 17:27:07 UTC 2026

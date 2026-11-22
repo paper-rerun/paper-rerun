@@ -1,0 +1,54 @@
+{
+ "model": "dw-dr",
+ "analysis": "NPSMBHB",
+ "params": {
+  "log10_T_star": {
+   "printed": [
+    -1.27,
+    -0.67
+   ],
+   "mass_inside_printed": 0.6817996129514888,
+   "width_printed": 0.6
+  },
+  "log10_dNeff": {
+   "printed": [
+    -0.63,
+    0.41
+   ],
+   "mass_inside_printed": 0.6798942934738417,
+   "width_printed": 1.04
+  },
+  "b": {
+   "printed": [
+    0.5,
+    0.83
+   ],
+   "mass_inside_printed": 0.6800640744173945,
+   "width_printed": 0.32999999999999996
+  },
+  "c": {
+   "printed": [
+    1.44,
+    3.0
+   ],
+   "mass_inside_printed": 0.6793839748906344,
+   "width_printed": 1.56
+  },
+  "log10_A_bhb": {
+   "printed": [
+    -16.03,
+    -14.4
+   ],
+   "mass_inside_printed": 0.8154647021515343,
+   "width_printed": 1.6300000000000008
+  },
+  "gamma_bhb": {
+   "printed": [
+    4.1,
+    4.9
+   ],
+   "mass_inside_printed": 0.6775648468881625,
+   "width_printed": 0.8000000000000007
+  }
+ }
+}

@@ -1,0 +1,107 @@
+=== igw NP 17:31:30
+ok igw NP n=3846825 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/igw_NP.json
+=== igw NPSMBHB 17:31:42
+ok igw NPSMBHB n=3201975 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/igw_NPSMBHB.json
+=== sigw-delta NP 17:31:52
+ok sigw-delta NP n=4017450 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/sigw-delta_NP.json
+=== sigw-delta NPSMBHB 17:32:04
+ok sigw-delta NPSMBHB n=3238125 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/sigw-delta_NPSMBHB.json
+=== sigw-gauss NP 17:32:14
+ok sigw-gauss NP n=3585750 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/sigw-gauss_NP.json
+=== sigw-gauss NPSMBHB 17:32:24
+ok sigw-gauss NPSMBHB n=2835225 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/sigw-gauss_NPSMBHB.json
+=== sigw-box NP 17:32:34
+ok sigw-box NP n=3857475 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/sigw-box_NP.json
+=== sigw-box NPSMBHB 17:32:45
+ok sigw-box NPSMBHB n=1746900 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/sigw-box_NPSMBHB.json
+=== pt-bubble NP 17:32:51
+ok pt-bubble NP n=4112625 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/pt-bubble_NP.json
+=== pt-bubble NPSMBHB 17:33:05
+ok pt-bubble NPSMBHB n=3492525 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/pt-bubble_NPSMBHB.json
+=== pt-sound NP 17:33:18
+ok pt-sound NP n=3826125 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/pt-sound_NP.json
+=== pt-sound NPSMBHB 17:33:31
+ok pt-sound NPSMBHB n=3532050 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/pt-sound_NPSMBHB.json
+=== stable-c NP 17:33:44
+Traceback (most recent call last):
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\compute_one.py", line 157, in <module>
+    main()
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\compute_one.py", line 89, in main
+    params, arr = load_chain(path)
+                  ^^^^^^^^^^^^^^^^
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\safeload.py", line 62, in load_chain
+    raise ValueError('top level is %r, expected list' % type(obj))
+ValueError: top level is <class 'tuple'>, expected list
+FAILED stable-c NP
+=== stable-c NPSMBHB 17:33:54
+Traceback (most recent call last):
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\compute_one.py", line 157, in <module>
+    main()
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\compute_one.py", line 89, in main
+    params, arr = load_chain(path)
+                  ^^^^^^^^^^^^^^^^
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\safeload.py", line 62, in load_chain
+    raise ValueError('top level is %r, expected list' % type(obj))
+ValueError: top level is <class 'tuple'>, expected list
+FAILED stable-c NPSMBHB
+=== stable-k NP 17:34:02
+Traceback (most recent call last):
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\compute_one.py", line 157, in <module>
+    main()
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\compute_one.py", line 89, in main
+    params, arr = load_chain(path)
+                  ^^^^^^^^^^^^^^^^
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\safeload.py", line 62, in load_chain
+    raise ValueError('top level is %r, expected list' % type(obj))
+ValueError: top level is <class 'tuple'>, expected list
+FAILED stable-k NP
+=== stable-k NPSMBHB 17:34:10
+Traceback (most recent call last):
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\compute_one.py", line 157, in <module>
+    main()
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\compute_one.py", line 89, in main
+    params, arr = load_chain(path)
+                  ^^^^^^^^^^^^^^^^
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\safeload.py", line 62, in load_chain
+    raise ValueError('top level is %r, expected list' % type(obj))
+ValueError: top level is <class 'tuple'>, expected list
+FAILED stable-k NPSMBHB
+=== stable-m NP 17:34:16
+Traceback (most recent call last):
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\compute_one.py", line 157, in <module>
+    main()
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\compute_one.py", line 89, in main
+    params, arr = load_chain(path)
+                  ^^^^^^^^^^^^^^^^
+  File "E:\Ciencia\noturno\2023-afzal-nanograv15-newphysics-cego\scripts\safeload.py", line 62, in load_chain
+    if not isinstance(obj, (list, tuple)):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: top level is <class 'tuple'>, expected list
+FAILED stable-m NP
+=== stable-m NPSMBHB 17:34:27
+ok stable-m NPSMBHB n=3361425 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/stable-m_NPSMBHB.json
+=== stable-n NP 17:34:36
+ok stable-n NP n=4039200 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/stable-n_NP.json
+=== stable-n NPSMBHB 17:34:46
+ok stable-n NPSMBHB n=3337350 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/stable-n_NPSMBHB.json
+=== meta-l NP 17:34:55
+ok meta-l NP n=3665775 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/meta-l_NP.json
+=== meta-l NPSMBHB 17:35:06
+ok meta-l NPSMBHB n=3069975 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/meta-l_NPSMBHB.json
+=== meta-ls NP 17:35:15
+ok meta-ls NP n=3732600 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/meta-ls_NP.json
+=== meta-ls NPSMBHB 17:35:26
+ok meta-ls NPSMBHB n=3101025 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/meta-ls_NPSMBHB.json
+=== super NP 17:35:35
+ok super NP n=3677925 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/super_NP.json
+=== super NPSMBHB 17:35:45
+ok super NPSMBHB n=3119850 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/super_NPSMBHB.json
+=== dw-sm NP 17:35:54
+ok dw-sm NP n=4634400 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/dw-sm_NP.json
+=== dw-sm NPSMBHB 17:36:09
+ok dw-sm NPSMBHB n=3047625 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/dw-sm_NPSMBHB.json
+=== dw-dr NP 17:36:18
+ok dw-dr NP n=5209425 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/dw-dr_NP.json
+=== dw-dr NPSMBHB 17:36:35
+ok dw-dr NPSMBHB n=3074550 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells/dw-dr_NPSMBHB.json
+ALL DONE Sat Nov 21 17:36:46 UTC 2026

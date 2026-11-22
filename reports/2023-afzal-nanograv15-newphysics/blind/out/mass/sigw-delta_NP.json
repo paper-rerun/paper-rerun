@@ -1,0 +1,22 @@
+{
+ "model": "sigw-delta",
+ "analysis": "NP",
+ "params": {
+  "log10_A": {
+   "printed": [
+    -1.0,
+    -0.01
+   ],
+   "mass_inside_printed": 0.6776298398237688,
+   "width_printed": 0.99
+  },
+  "log10_f_star": {
+   "printed": [
+    -6.17,
+    -5.0
+   ],
+   "mass_inside_printed": 0.6756474878343227,
+   "width_printed": 1.17
+  }
+ }
+}

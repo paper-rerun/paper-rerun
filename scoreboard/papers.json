@@ -1,5 +1,18 @@
 [
  {
+  "paper": "NANOGrav 15 yr New Physics",
+  "report": "2023-afzal-nanograv15-newphysics",
+  "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2023-afzal-nanograv15-newphysics/REPORT.md",
+  "venue": "ApJL",
+  "year": 2023,
+  "field": "gravitational waves",
+  "area": "Physics",
+  "verdict": "Partially reproduced",
+  "main_issue": "Corrupt block in a deposited chain, and four dropped minus signs",
+  "finding": "Table 4 recounted from the 22.4 GB of MCMC chains the collaboration deposited, not a re-run of the inference. The paper states its estimator in an appendix — the Bayes estimator is the sample mean of the 1D marginal and its standard deviation the sample standard deviation — which is the sentence our DES Y3 rerun found missing, and it makes the recount well posed. 103 of the 112 Bayes-estimator cells come back from the deposited arrays with no burn-in and no thinning; 108 once each cell is scored at the precision it is actually printed to. Four things in the remainder. One deposited file, sigw_gauss_bhb.pkl.gz, ends in a contiguous block of 46,378 corrupt rows (indices 2,788,847 to 2,835,224, finishing on the last row) whose log_posterior runs from 1.5e7 to 1.3e12, where the clean part of that same file tops out at 8.8e6 and the other 29 files sit within about ten of 7.9728e6; in those rows gamma_bhb reaches 13.53 against a largest value of 6.45 anywhere else. Remove exactly those rows and the model's published values return — gamma_BHB 4.6542 ± 0.3441 against a printed 4.65 ± 0.34, where the full file gives 4.7993 ± 1.1759. The paper is right and the deposited file is not, and nothing in the deposit flags it. Three cells print log10 alpha_* with the sign reversed: pt-bubble NP −0.26 against our +0.2634, pt-bubble NP+SMBHB −0.23 against +0.2256, pt-sound NP −0.22 against +0.2187, each with the standard deviation printed in the same cell reproducing exactly. The fourth cell of that parameter prints +0.14 and reproduces, so it is not a convention between chains and table, and dw-sm's alpha_* is genuinely −0.88 and reproduces as printed. In the two pt-bubble rows the table is at odds with itself, printing a maximum posterior of 1* and an interval of [0.03, 1*] beside a negative mean. A fourth sign is dropped in the dw-dr ΔN_eff interval, and that one is visible from the paper alone: the NP+SMBHB column prints an upper edge of 0.41*, the asterisk means by the caption that the value sits at the prior boundary, and Table 3 gives that prior as log-uniform on [−3, −0.41]; the NP column of the same row prints −0.41. One cell we could not account for: Δ in sigw-gauss comes out at 1.30505 after the corrupt rows go, against a printed 1.30, and both ways of cutting those rows give the same answer. The Bayes factors, including the 10 to 100 favouring cosmological models over black-hole binaries, are out of scope throughout: they come from the evidence, not the marginals. A blind recount with its own pre-registration, frozen before it opened a chain and with no sight of our scripts or results, reached the first two findings independently and supplied the third; it also scored the interval column and showed the printed intervals are genuine highest-density regions, median coverage 0.6806 over 112 of them. Our own adversarial review then corrected the headline count, which had been 108 by counting a cell that fails and failing a cell that passes, and took out two comparison figures that flattered the case.",
+  "rerun_date": "2026-11-21"
+ },
+ {
   "paper": "osl-dynamics",
   "report": "2024-gohil-osl-dynamics",
   "report_url": "https://github.com/paper-rerun/paper-rerun/blob/main/reports/2024-gohil-osl-dynamics/REPORT.md",

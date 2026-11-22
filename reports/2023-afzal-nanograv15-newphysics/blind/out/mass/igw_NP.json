@@ -1,0 +1,30 @@
+{
+ "model": "igw",
+ "analysis": "NP",
+ "params": {
+  "log10_T_rh": {
+   "printed": [
+    -1.51,
+    2.53
+   ],
+   "mass_inside_printed": 0.7409705406406583,
+   "width_printed": 4.04
+  },
+  "log10_r": {
+   "printed": [
+    -22.16,
+    -6.58
+   ],
+   "mass_inside_printed": 0.8162115510843357,
+   "width_printed": 15.58
+  },
+  "n_t": {
+   "printed": [
+    1.53,
+    3.92
+   ],
+   "mass_inside_printed": 0.854037290492809,
+   "width_printed": 2.3899999999999997
+  }
+ }
+}

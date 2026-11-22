@@ -36,6 +36,7 @@ AREAS = {
 
 # The main thing each rerun found, in one category, read from the report
 MAIN_ISSUE = {
+	"2023-afzal-nanograv15-newphysics": "Corrupt block in a deposited chain, and four dropped minus signs",
 	"2024-gohil-osl-dynamics": "Group labels swapped in the figure script",
 	"2025-kovacs-maceoff": "Released test set differs from the paper counts",
 	"2023-agazie-nanograv15": "Reference data offline or deleted",

@@ -1,0 +1,70 @@
+{
+ "model": "pt-bubble",
+ "analysis": "NPSMBHB",
+ "params": {
+  "log10_T_star": {
+   "printed": [
+    -1.34,
+    -0.34
+   ],
+   "mass_inside_printed": 0.6814499538299654,
+   "width_printed": 1.0
+  },
+  "log10_alpha_star": {
+   "printed": [
+    0.01,
+    1.0
+   ],
+   "mass_inside_printed": 0.6726276834095676,
+   "width_printed": 0.99
+  },
+  "log10_HR": {
+   "printed": [
+    -0.58,
+    0.0
+   ],
+   "mass_inside_printed": 0.6789265645915205,
+   "width_printed": 0.58
+  },
+  "a": {
+   "printed": [
+    1.54,
+    2.63
+   ],
+   "mass_inside_printed": 0.6810725764310921,
+   "width_printed": 1.0899999999999999
+  },
+  "b": {
+   "printed": [
+    1.0,
+    2.33
+   ],
+   "mass_inside_printed": 0.6816352066198524,
+   "width_printed": 1.33
+  },
+  "c": {
+   "printed": [
+    1.69,
+    3.0
+   ],
+   "mass_inside_printed": 0.6797030801497483,
+   "width_printed": 1.31
+  },
+  "log10_A_bhb": {
+   "printed": [
+    -16.17,
+    -15.21
+   ],
+   "mass_inside_printed": 0.6771353104129534,
+   "width_printed": 0.9600000000000009
+  },
+  "gamma_bhb": {
+   "printed": [
+    4.3,
+    5.0
+   ],
+   "mass_inside_printed": 0.6766551420533854,
+   "width_printed": 0.7000000000000002
+  }
+ }
+}

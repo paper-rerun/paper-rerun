@@ -1,0 +1,30 @@
+{
+ "model": "stable-m",
+ "analysis": "NPSMBHB",
+ "params": {
+  "log10_Gmu": {
+   "printed": [
+    -11.91,
+    -10.27
+   ],
+   "mass_inside_printed": 0.6817379533977406,
+   "width_printed": 1.6400000000000006
+  },
+  "log10_A_bhb": {
+   "printed": [
+    -15.67,
+    -14.34
+   ],
+   "mass_inside_printed": 0.7901758926645693,
+   "width_printed": 1.33
+  },
+  "gamma_bhb": {
+   "printed": [
+    3.96,
+    4.73
+   ],
+   "mass_inside_printed": 0.6768049264820724,
+   "width_printed": 0.7700000000000005
+  }
+ }
+}

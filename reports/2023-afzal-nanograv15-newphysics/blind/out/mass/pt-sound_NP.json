@@ -1,0 +1,54 @@
+{
+ "model": "pt-sound",
+ "analysis": "NP",
+ "params": {
+  "log10_T_star": {
+   "printed": [
+    -2.33,
+    -1.48
+   ],
+   "mass_inside_printed": 0.6782734489855925,
+   "width_printed": 0.8500000000000001
+  },
+  "log10_alpha_star": {
+   "printed": [
+    -0.37,
+    1.0
+   ],
+   "mass_inside_printed": 0.9061345355941063,
+   "width_printed": 1.37
+  },
+  "log10_HR": {
+   "printed": [
+    -1.28,
+    -0.57
+   ],
+   "mass_inside_printed": 0.6861827567055441,
+   "width_printed": 0.7100000000000001
+  },
+  "a": {
+   "printed": [
+    3.0,
+    3.72
+   ],
+   "mass_inside_printed": 0.6772468228298867,
+   "width_printed": 0.7200000000000002
+  },
+  "b": {
+   "printed": [
+    2.0,
+    3.17
+   ],
+   "mass_inside_printed": 0.6799053873043877,
+   "width_printed": 1.17
+  },
+  "c": {
+   "printed": [
+    3.87,
+    5.0
+   ],
+   "mass_inside_printed": 0.6800224770492339,
+   "width_printed": 1.13
+  }
+ }
+}

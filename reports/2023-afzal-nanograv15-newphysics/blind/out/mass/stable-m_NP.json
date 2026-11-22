@@ -1,0 +1,14 @@
+{
+ "model": "stable-m",
+ "analysis": "NP",
+ "params": {
+  "log10_Gmu": {
+   "printed": [
+    -10.68,
+    -10.42
+   ],
+   "mass_inside_printed": 0.6709705506410013,
+   "width_printed": 0.2599999999999998
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "model": "sigw-gauss",
+ "analysis": "NP",
+ "params": {
+  "log10_A": {
+   "printed": [
+    -1.03,
+    0.2
+   ],
+   "mass_inside_printed": 0.6736498640451788,
+   "width_printed": 1.23
+  },
+  "log10_f_star": {
+   "printed": [
+    -7.25,
+    -5.65
+   ],
+   "mass_inside_printed": 0.6765786794952241,
+   "width_printed": 1.5999999999999996
+  },
+  "Delta": {
+   "printed": [
+    0.51,
+    2.07
+   ],
+   "mass_inside_printed": 0.6819747612075577,
+   "width_printed": 1.5599999999999998
+  }
+ }
+}

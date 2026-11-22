@@ -1,0 +1,38 @@
+{
+ "model": "dw-dr",
+ "analysis": "NP",
+ "params": {
+  "log10_T_star": {
+   "printed": [
+    -1.1,
+    -0.82
+   ],
+   "mass_inside_printed": 0.6682207729259947,
+   "width_printed": 0.28000000000000014
+  },
+  "log10_dNeff": {
+   "printed": [
+    -0.49,
+    -0.41
+   ],
+   "mass_inside_printed": 0.6479346568959146,
+   "width_printed": 0.08000000000000002
+  },
+  "b": {
+   "printed": [
+    0.5,
+    0.97
+   ],
+   "mass_inside_printed": 0.9475794353503506,
+   "width_printed": 0.47
+  },
+  "c": {
+   "printed": [
+    1.62,
+    3.0
+   ],
+   "mass_inside_printed": 0.679404924727777,
+   "width_printed": 1.38
+  }
+ }
+}

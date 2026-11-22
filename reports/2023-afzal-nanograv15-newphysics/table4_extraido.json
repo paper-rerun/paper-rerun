@@ -1,0 +1,2068 @@
+{
+ "source": "arXiv:2306.16219 main.tex, longtable tab:list (Table 4)",
+ "cell_order": [
+  "bayes_np",
+  "bayes_npsmbhb",
+  "maxpost_np",
+  "maxpost_npsmbhb",
+  "ci_np",
+  "ci_npsmbhb",
+  "k_bound"
+ ],
+ "models": [
+  {
+   "model": "igw",
+   "title": "Inflationary Gravitational Waves",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}T_{\\rm rh}/\\textrm{GeV}",
+     "bayes_np": {
+      "value": 0.02,
+      "sd": 1.6,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.07,
+      "sd": 1.61,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -0.53,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -0.6,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -1.51,
+      "high": 2.53,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -1.89,
+      "high": 2.11,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}r",
+     "bayes_np": {
+      "value": -14.06,
+      "sd": 5.82,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -15.97,
+      "sd": 7.27,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -10.14,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -10.59,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -22.16,
+      "high": -6.58,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -23.03,
+      "high": -7.21,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "n_t",
+     "bayes_np": {
+      "value": 2.61,
+      "sd": 0.85,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 2.68,
+      "sd": 0.97,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 2.02,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": 2.08,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": 1.53,
+      "high": 3.92,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": 1.56,
+      "high": 4.03,
+      "at_prior_edge": false
+     },
+     "k_bound": {
+      "value": 5.72,
+      "at_prior_edge": false
+     }
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.6,
+      "sd": 0.56,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.64,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.2,
+      "high": -15.14,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.61,
+      "sd": 0.37,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.64,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.26,
+      "high": 5.0,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "sigw-delta",
+   "title": "Scalar-induced Gravitational Waves",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}A",
+     "bayes_np": {
+      "value": -0.69,
+      "sd": 0.47,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.71,
+      "sd": 0.49,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -0.14,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -0.17,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -1.0,
+      "high": -0.01,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -1.03,
+      "high": -0.02,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}f_*/{\\rm Hz}",
+     "bayes_np": {
+      "value": -5.9,
+      "sd": 0.6,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -5.93,
+      "sd": 0.67,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -5.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": -5.0,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": -6.17,
+      "high": -5.0,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": -6.19,
+      "high": -5.0,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.77,
+      "sd": 0.46,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.71,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.18,
+      "high": -15.29,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.65,
+      "sd": 0.35,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.65,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.31,
+      "high": 4.99,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "sigw-gauss",
+   "title": "Scalar-induced Gravitational Waves",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}A",
+     "bayes_np": {
+      "value": -0.38,
+      "sd": 0.58,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.36,
+      "sd": 0.61,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -0.34,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -0.29,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -1.03,
+      "high": 0.2,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -1.04,
+      "high": 0.24,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}f_*/{\\rm Hz}",
+     "bayes_np": {
+      "value": -6.32,
+      "sd": 0.71,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -6.3,
+      "sd": 0.73,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -7.03,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -6.85,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -7.25,
+      "high": -5.65,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -7.17,
+      "high": -5.57,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\Delta",
+     "bayes_np": {
+      "value": 1.35,
+      "sd": 0.7,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 1.3,
+      "sd": 0.7,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 1.6,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": 1.54,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": 0.51,
+      "high": 2.07,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": 0.37,
+      "high": 1.92,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.72,
+      "sd": 0.46,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.65,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.14,
+      "high": -15.22,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.65,
+      "sd": 0.34,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.65,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.32,
+      "high": 5.0,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "sigw-box",
+   "title": "Scalar-induced Gravitational Waves",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}A",
+     "bayes_np": {
+      "value": -1.06,
+      "sd": 0.52,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -1.02,
+      "sd": 0.57,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -1.26,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -1.25,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -1.72,
+      "high": -0.82,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -1.68,
+      "high": -0.74,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}f_{\\rm min}/{\\rm Hz}",
+     "bayes_np": {
+      "value": -7.34,
+      "sd": 0.48,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -7.29,
+      "sd": 0.55,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -7.5,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -7.48,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -8.01,
+      "high": -6.97,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -7.97,
+      "high": -6.84,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}f_{\\rm max}/{\\rm Hz}",
+     "bayes_np": {
+      "value": -6.06,
+      "sd": 0.65,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -6.12,
+      "sd": 0.81,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -5.4,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -5.36,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -6.42,
+      "high": -5.0,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": -6.45,
+      "high": -5.0,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.7,
+      "sd": 0.49,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.64,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.15,
+      "high": -15.21,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.65,
+      "sd": 0.35,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.66,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.31,
+      "high": 5.0,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "pt-bubble",
+   "title": "Cosmological Phase Transition",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}T_{\\rm *}/\\textrm{GeV}",
+     "bayes_np": {
+      "value": -0.76,
+      "sd": 0.49,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.71,
+      "sd": 0.7,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -0.9,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -0.89,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -1.33,
+      "high": -0.39,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -1.34,
+      "high": -0.34,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}\\alpha_*",
+     "bayes_np": {
+      "value": -0.26,
+      "sd": 0.47,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.23,
+      "sd": 0.52,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 1.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": 0.74,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": 0.03,
+      "high": 1.0,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": 0.01,
+      "high": 1.0,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}H_*R_*",
+     "bayes_np": {
+      "value": -0.42,
+      "sd": 0.26,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.47,
+      "sd": 0.39,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 0.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": -0.06,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -0.56,
+      "high": 0.0,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": -0.58,
+      "high": 0.0,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "a",
+     "bayes_np": {
+      "value": 2.04,
+      "sd": 0.48,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 2.07,
+      "sd": 0.49,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 1.97,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": 2.01,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": 1.49,
+      "high": 2.54,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": 1.54,
+      "high": 2.63,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "b",
+     "bayes_np": {
+      "value": 1.97,
+      "sd": 0.58,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 1.98,
+      "sd": 0.58,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 1.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": 1.0,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": 1.0,
+      "high": 2.32,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": 1.0,
+      "high": 2.33,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "c",
+     "bayes_np": {
+      "value": 2.03,
+      "sd": 0.57,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 2.03,
+      "sd": 0.57,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 3.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": 2.93,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": 1.69,
+      "high": 3.0,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": 1.69,
+      "high": 3.0,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.68,
+      "sd": 0.51,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.65,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.17,
+      "high": -15.21,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.64,
+      "sd": 0.35,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.65,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.3,
+      "high": 5.0,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "pt-sound",
+   "title": "Cosmological Phase Transition",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}T_{\\rm *}/\\textrm{GeV}",
+     "bayes_np": {
+      "value": -1.84,
+      "sd": 0.41,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -1.56,
+      "sd": 1.06,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -2.0,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -1.95,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -2.33,
+      "high": -1.48,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -2.31,
+      "high": -1.3,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}\\alpha_*",
+     "bayes_np": {
+      "value": -0.22,
+      "sd": 0.44,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 0.14,
+      "sd": 0.56,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -0.21,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -0.15,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -0.37,
+      "high": 1.0,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": -0.34,
+      "high": 0.73,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}H_*R_*",
+     "bayes_np": {
+      "value": -0.81,
+      "sd": 0.36,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.87,
+      "sd": 0.51,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -1.05,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -1.01,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -1.28,
+      "high": -0.57,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -1.26,
+      "high": -0.45,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "a",
+     "bayes_np": {
+      "value": 3.58,
+      "sd": 0.47,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 3.74,
+      "sd": 0.54,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 3.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": 3.0,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": 3.0,
+      "high": 3.72,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": 3.0,
+      "high": 3.98,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "b",
+     "bayes_np": {
+      "value": 2.87,
+      "sd": 0.57,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 2.92,
+      "sd": 0.57,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 2.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": 2.0,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": 2.0,
+      "high": 3.17,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": 2.0,
+      "high": 3.25,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "c",
+     "bayes_np": {
+      "value": 4.16,
+      "sd": 0.56,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 4.09,
+      "sd": 0.57,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 5.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": 5.0,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": 3.87,
+      "high": 5.0,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": 3.77,
+      "high": 5.0,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.45,
+      "sd": 0.55,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.39,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.04,
+      "high": -14.94,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.63,
+      "sd": 0.38,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.67,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.27,
+      "high": 5.03,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "stable-c",
+   "title": "Cosmic Strings: Cusp-only Spectrum",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}G\\mu",
+     "bayes_np": {
+      "value": -10.15,
+      "sd": 0.16,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -11.41,
+      "sd": 1.25,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -10.18,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -10.22,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -10.33,
+      "high": -10.01,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -12.13,
+      "high": -9.88,
+      "at_prior_edge": false
+     },
+     "k_bound": {
+      "value": -9.67,
+      "at_prior_edge": false
+     }
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -14.95,
+      "sd": 0.58,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -14.56,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -15.58,
+      "high": -14.31,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.34,
+      "sd": 0.38,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.24,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 3.91,
+      "high": 4.66,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "stable-k",
+   "title": "Cosmic Strings: Kink-only Spectrum",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}G\\mu",
+     "bayes_np": {
+      "value": -10.33,
+      "sd": 0.15,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -11.34,
+      "sd": 1.17,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -10.36,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -10.38,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -10.5,
+      "high": -10.21,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -11.84,
+      "high": -10.04,
+      "at_prior_edge": false
+     },
+     "k_bound": {
+      "value": -9.87,
+      "at_prior_edge": false
+     }
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.04,
+      "sd": 0.61,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -14.56,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -15.68,
+      "high": -14.34,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.39,
+      "sd": 0.38,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.28,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 3.95,
+      "high": 4.72,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "stable-m",
+   "title": "Cosmic Strings: Monochromatic Emission",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}G\\mu",
+     "bayes_np": {
+      "value": -10.53,
+      "sd": 0.14,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -11.47,
+      "sd": 1.09,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -10.56,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -10.6,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -10.68,
+      "high": -10.42,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -11.91,
+      "high": -10.27,
+      "at_prior_edge": false
+     },
+     "k_bound": {
+      "value": -10.1,
+      "at_prior_edge": false
+     }
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.05,
+      "sd": 0.61,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -14.58,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -15.67,
+      "high": -14.34,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.39,
+      "sd": 0.38,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.28,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 3.96,
+      "high": 4.73,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "stable-n",
+   "title": "Cosmic Strings: Numerical Spectrum",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}G\\mu",
+     "bayes_np": {
+      "value": -10.18,
+      "sd": 0.15,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -11.34,
+      "sd": 1.23,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -10.21,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -10.25,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -10.35,
+      "high": -10.05,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -11.99,
+      "high": -9.9,
+      "at_prior_edge": false
+     },
+     "k_bound": {
+      "value": -9.71,
+      "at_prior_edge": false
+     }
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -14.99,
+      "sd": 0.59,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -14.56,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -15.61,
+      "high": -14.32,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.37,
+      "sd": 0.38,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.26,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 3.93,
+      "high": 4.69,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "meta-l",
+   "title": "Metastable Cosmic strings: Loops Only",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}G\\mu",
+     "bayes_np": {
+      "value": -5.8,
+      "sd": 0.78,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -5.9,
+      "sd": 1.2,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -5.04,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -5.05,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -6.14,
+      "high": -4.84,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -6.19,
+      "high": -4.83,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\sqrt{\\kappa}",
+     "bayes_np": {
+      "value": 7.95,
+      "sd": 0.13,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 7.95,
+      "sd": 0.18,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 7.85,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": 7.84,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": 7.81,
+      "high": 8.0,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": 7.8,
+      "high": 8.0,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.73,
+      "sd": 0.48,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.67,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.18,
+      "high": -15.25,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.64,
+      "sd": 0.35,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.66,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.3,
+      "high": 5.0,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "meta-ls",
+   "title": "Metastable Cosmic Strings: Loops and Segments",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}G\\mu",
+     "bayes_np": {
+      "value": -5.62,
+      "sd": 1.01,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -5.7,
+      "sd": 1.4,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -4.46,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -4.44,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -6.26,
+      "high": -4.24,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -6.33,
+      "high": -4.15,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\sqrt{\\kappa}",
+     "bayes_np": {
+      "value": 7.83,
+      "sd": 0.18,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 7.82,
+      "sd": 0.23,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 7.61,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": 7.61,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": 7.59,
+      "high": 7.92,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": 7.57,
+      "high": 7.93,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.71,
+      "sd": 0.49,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.67,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.17,
+      "high": -15.23,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.64,
+      "sd": 0.35,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.65,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.3,
+      "high": 5.0,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "super",
+   "title": "Cosmic Superstrings",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}G\\mu",
+     "bayes_np": {
+      "value": -11.67,
+      "sd": 0.32,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -11.68,
+      "sd": 0.35,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -11.94,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -11.96,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -12.08,
+      "high": -11.5,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -12.09,
+      "high": -11.49,
+      "at_prior_edge": false
+     },
+     "k_bound": {
+      "value": -9.97,
+      "at_prior_edge": false
+     }
+    },
+    {
+     "parameter": "\\log_{10}P",
+     "bayes_np": {
+      "value": -2.23,
+      "sd": 0.55,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -2.21,
+      "sd": 0.57,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -3.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": -3.0,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": -3.0,
+      "high": -2.01,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": -3.0,
+      "high": -1.99,
+      "at_prior_edge": true
+     },
+     "k_bound": {
+      "raw": "---"
+     }
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.76,
+      "sd": 0.46,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.7,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.18,
+      "high": -15.28,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.64,
+      "sd": 0.35,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.65,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.3,
+      "high": 4.99,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "dw-sm",
+   "title": "Domain Walls",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}T_{\\rm *}/\\textrm{GeV}",
+     "bayes_np": {
+      "value": -0.73,
+      "sd": 0.21,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.65,
+      "sd": 0.49,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -0.79,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -0.78,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -0.96,
+      "high": -0.56,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -0.97,
+      "high": -0.51,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}\\alpha_*",
+     "bayes_np": {
+      "value": -0.88,
+      "sd": 0.21,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.87,
+      "sd": 0.32,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -0.92,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -0.9,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -1.1,
+      "high": -0.71,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -1.1,
+      "high": -0.66,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "b",
+     "bayes_np": {
+      "value": 0.74,
+      "sd": 0.14,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 0.74,
+      "sd": 0.14,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 0.5,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": 0.5,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": 0.5,
+      "high": 0.83,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": 0.5,
+      "high": 0.83,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "c",
+     "bayes_np": {
+      "value": 2.01,
+      "sd": 0.7,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 1.92,
+      "sd": 0.74,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 3.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": 3.0,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": 1.72,
+      "high": 3.0,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": 1.57,
+      "high": 3.0,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.6,
+      "sd": 0.5,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.49,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.06,
+      "high": -15.08,
+      "at_prior_edge": false
+     },
+     "k_bound": {
+      "raw": "---"
+     }
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.66,
+      "sd": 0.35,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.67,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.32,
+      "high": 5.02,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  },
+  {
+   "model": "dw-dr",
+   "title": "Domain Walls",
+   "parameters": [
+    {
+     "parameter": "\\log_{10}T_{\\rm *}/\\textrm{GeV}",
+     "bayes_np": {
+      "value": -0.98,
+      "sd": 0.15,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.62,
+      "sd": 1.37,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -0.94,
+      "at_prior_edge": false
+     },
+     "maxpost_npsmbhb": {
+      "value": -0.94,
+      "at_prior_edge": false
+     },
+     "ci_np": {
+      "low": -1.1,
+      "high": -0.82,
+      "at_prior_edge": false
+     },
+     "ci_npsmbhb": {
+      "low": -1.27,
+      "high": -0.67,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10} \\Delta N_{\\rm eff}",
+     "bayes_np": {
+      "value": -0.48,
+      "sd": 0.06,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": -0.87,
+      "sd": 0.71,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": -0.41,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": -0.41,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": -0.49,
+      "high": -0.41,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": -0.63,
+      "high": 0.41,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "b",
+     "bayes_np": {
+      "value": 0.74,
+      "sd": 0.14,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 0.74,
+      "sd": 0.14,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 0.5,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": 0.5,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": 0.5,
+      "high": 0.97,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": 0.5,
+      "high": 0.83,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "c",
+     "bayes_np": {
+      "value": 1.95,
+      "sd": 0.68,
+      "at_prior_edge": false
+     },
+     "bayes_npsmbhb": {
+      "value": 1.83,
+      "sd": 0.73,
+      "at_prior_edge": false
+     },
+     "maxpost_np": {
+      "value": 3.0,
+      "at_prior_edge": true
+     },
+     "maxpost_npsmbhb": {
+      "value": 3.0,
+      "at_prior_edge": true
+     },
+     "ci_np": {
+      "low": 1.62,
+      "high": 3.0,
+      "at_prior_edge": true
+     },
+     "ci_npsmbhb": {
+      "low": 1.44,
+      "high": 3.0,
+      "at_prior_edge": true
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\log_{10}A_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": -15.33,
+      "sd": 0.65,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": -15.59,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": -16.03,
+      "high": -14.4,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    },
+    {
+     "parameter": "\\gamma_{\\scriptscriptstyle\\rm BHB}",
+     "bayes_np": null,
+     "bayes_npsmbhb": {
+      "value": 4.51,
+      "sd": 0.39,
+      "at_prior_edge": false
+     },
+     "maxpost_np": null,
+     "maxpost_npsmbhb": {
+      "value": 4.52,
+      "at_prior_edge": false
+     },
+     "ci_np": null,
+     "ci_npsmbhb": {
+      "low": 4.1,
+      "high": 4.9,
+      "at_prior_edge": false
+     },
+     "k_bound": null
+    }
+   ]
+  }
+ ]
+}

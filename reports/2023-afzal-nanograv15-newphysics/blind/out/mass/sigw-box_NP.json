@@ -1,0 +1,30 @@
+{
+ "model": "sigw-box",
+ "analysis": "NP",
+ "params": {
+  "log10_A": {
+   "printed": [
+    -1.72,
+    -0.82
+   ],
+   "mass_inside_printed": 0.7018477112619006,
+   "width_printed": 0.9
+  },
+  "log10_f_min": {
+   "printed": [
+    -8.01,
+    -6.97
+   ],
+   "mass_inside_printed": 0.7494096526873149,
+   "width_printed": 1.04
+  },
+  "log10_f_max": {
+   "printed": [
+    -6.42,
+    -5.0
+   ],
+   "mass_inside_printed": 0.6771245439050156,
+   "width_printed": 1.42
+  }
+ }
+}

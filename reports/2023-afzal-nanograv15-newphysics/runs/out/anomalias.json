@@ -1,0 +1,78 @@
+{
+ "gamma_bhb_tail": {
+  "prior_in_sigw_gauss_file": null,
+  "prior_in_sigw_delta_file": null,
+  "sigw_delta_max": 6.218255567945351,
+  "sigw_gauss_max": 13.525167574317468,
+  "samples_above_sigw_delta_max": 46400,
+  "fraction_above": 0.01636554418079694,
+  "mean_all": 4.7992722552070095,
+  "sd_all": 1.1758753032971325,
+  "mean_without_them": 4.654092280555776,
+  "sd_without_them": 0.3431976560437238,
+  "published_mean": 4.65,
+  "published_sd": 0.34
+ },
+ "log10_alpha": [
+  {
+   "model": "pt-bubble",
+   "variant": "np",
+   "prior": [
+    -2.0,
+    1.0
+   ],
+   "our_mean": 0.2634,
+   "our_sd": 0.4658,
+   "printed_mean": -0.26,
+   "printed_sd": 0.47,
+   "distance_as_printed": 0.5234,
+   "distance_if_sign_flipped": 0.0034,
+   "fraction_of_samples_below_zero": 0.305
+  },
+  {
+   "model": "pt-bubble",
+   "variant": "npsmbhb",
+   "prior": [
+    -2.0,
+    1.0
+   ],
+   "our_mean": 0.2256,
+   "our_sd": 0.5183,
+   "printed_mean": -0.23,
+   "printed_sd": 0.52,
+   "distance_as_printed": 0.4556,
+   "distance_if_sign_flipped": 0.0044,
+   "fraction_of_samples_below_zero": 0.3212
+  },
+  {
+   "model": "pt-sound",
+   "variant": "np",
+   "prior": [
+    -2.0,
+    1.0
+   ],
+   "our_mean": 0.2187,
+   "our_sd": 0.4373,
+   "printed_mean": -0.22,
+   "printed_sd": 0.44,
+   "distance_as_printed": 0.4387,
+   "distance_if_sign_flipped": 0.0013,
+   "fraction_of_samples_below_zero": 0.3626
+  },
+  {
+   "model": "pt-sound",
+   "variant": "npsmbhb",
+   "prior": [
+    -2.0,
+    1.0
+   ],
+   "our_mean": 0.1354,
+   "our_sd": 0.5592,
+   "printed_mean": 0.14,
+   "printed_sd": 0.56,
+   "distance_as_printed": 0.0046,
+   "distance_if_sign_flipped": 0.2754,
+   "fraction_of_samples_below_zero": 0.3926
+  }
+ ]
+}

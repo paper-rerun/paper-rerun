@@ -1,0 +1,38 @@
+{
+ "model": "dw-sm",
+ "analysis": "NP",
+ "params": {
+  "log10_T_star": {
+   "printed": [
+    -0.96,
+    -0.56
+   ],
+   "mass_inside_printed": 0.6810145865699982,
+   "width_printed": 0.3999999999999999
+  },
+  "log10_alpha_star": {
+   "printed": [
+    -1.1,
+    -0.71
+   ],
+   "mass_inside_printed": 0.6882118505092353,
+   "width_printed": 0.3900000000000001
+  },
+  "b": {
+   "printed": [
+    0.5,
+    0.83
+   ],
+   "mass_inside_printed": 0.6872194890384947,
+   "width_printed": 0.32999999999999996
+  },
+  "c": {
+   "printed": [
+    1.72,
+    3.0
+   ],
+   "mass_inside_printed": 0.6790372000690489,
+   "width_printed": 1.28
+  }
+ }
+}

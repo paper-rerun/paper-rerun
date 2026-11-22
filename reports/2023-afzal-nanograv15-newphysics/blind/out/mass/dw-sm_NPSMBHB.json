@@ -1,0 +1,54 @@
+{
+ "model": "dw-sm",
+ "analysis": "NPSMBHB",
+ "params": {
+  "log10_T_star": {
+   "printed": [
+    -0.97,
+    -0.51
+   ],
+   "mass_inside_printed": 0.6849248185062139,
+   "width_printed": 0.45999999999999996
+  },
+  "log10_alpha_star": {
+   "printed": [
+    -1.1,
+    -0.66
+   ],
+   "mass_inside_printed": 0.6800590623846438,
+   "width_printed": 0.44000000000000006
+  },
+  "b": {
+   "printed": [
+    0.5,
+    0.83
+   ],
+   "mass_inside_printed": 0.6789821582379721,
+   "width_printed": 0.32999999999999996
+  },
+  "c": {
+   "printed": [
+    1.57,
+    3.0
+   ],
+   "mass_inside_printed": 0.6805755301259178,
+   "width_printed": 1.43
+  },
+  "log10_A_bhb": {
+   "printed": [
+    -16.06,
+    -15.08
+   ],
+   "mass_inside_printed": 0.6820711209548419,
+   "width_printed": 0.9799999999999986
+  },
+  "gamma_bhb": {
+   "printed": [
+    4.32,
+    5.02
+   ],
+   "mass_inside_printed": 0.6802752963373119,
+   "width_printed": 0.6999999999999993
+  }
+ }
+}

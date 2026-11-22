@@ -1,0 +1,22 @@
+{
+ "model": "meta-ls",
+ "analysis": "NP",
+ "params": {
+  "log10_Gmu": {
+   "printed": [
+    -6.26,
+    -4.24
+   ],
+   "mass_inside_printed": 0.680083052028077,
+   "width_printed": 2.0199999999999996
+  },
+  "sqrt_kappa": {
+   "printed": [
+    7.59,
+    7.92
+   ],
+   "mass_inside_printed": 0.6712307774741467,
+   "width_printed": 0.33000000000000007
+  }
+ }
+}

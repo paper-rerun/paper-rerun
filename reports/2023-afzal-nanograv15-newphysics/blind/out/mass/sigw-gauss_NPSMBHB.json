@@ -1,0 +1,46 @@
+{
+ "model": "sigw-gauss",
+ "analysis": "NPSMBHB",
+ "params": {
+  "log10_A": {
+   "printed": [
+    -1.04,
+    0.24
+   ],
+   "mass_inside_printed": 0.6819529314251955,
+   "width_printed": 1.28
+  },
+  "log10_f_star": {
+   "printed": [
+    -7.17,
+    -5.57
+   ],
+   "mass_inside_printed": 0.6841203079120705,
+   "width_printed": 1.5999999999999996
+  },
+  "Delta": {
+   "printed": [
+    0.37,
+    1.92
+   ],
+   "mass_inside_printed": 0.6706078000864129,
+   "width_printed": 1.5499999999999998
+  },
+  "log10_A_bhb": {
+   "printed": [
+    -16.14,
+    -15.22
+   ],
+   "mass_inside_printed": 0.6706000405611547,
+   "width_printed": 0.9199999999999999
+  },
+  "gamma_bhb": {
+   "printed": [
+    4.32,
+    5.0
+   ],
+   "mass_inside_printed": 0.6663693357670026,
+   "width_printed": 0.6799999999999997
+  }
+ }
+}

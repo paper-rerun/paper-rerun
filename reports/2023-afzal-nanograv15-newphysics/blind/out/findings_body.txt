@@ -1,0 +1,304 @@
+# Blind recount of Table 4 — Afzal et al. 2023, NANOGrav 15 yr New Physics
+
+Independent recomputation. The parallel attempt's folder was not read: inside
+E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics only downloads/ and extraido/
+were opened, and triagem-2026-11-21/ was not touched at all.
+
+- Paper: Afzal et al., ApJL 951, L11 (2023), arXiv:2306.16219, doi 10.3847/2041-8213/acdc91
+- Target: Table 4, the longtable labelled tab:list
+- Data: the authors' Zenodo deposit, record 8083620, chains/stochastic/, CC-BY-4.0
+- Pre-registration: PREREG.md, frozen before any chain was opened; hashes in FREEZE.txt
+  (PREREG.md = c96313d2fd8d460fc244d77e7f4fd1edf20c693e3dc19d6d7c035f9779ebfe24,
+  out/table4_printed.json = 16e5e19227ce9131502b98af07c0344706b9c451cbb822b9ce5f65929ba4a9bc)
+- Nothing was published anywhere. Files on disk only.
+
+## 1. The frozen cell list
+
+out/table4_printed.json holds the whole of Table 4, pulled out of main.tex by
+scripts/parse_table4.py: 71 parameter rows across 15 models (igw 5, sigw-delta 4,
+sigw-gauss 5, sigw-box 5, pt-bubble 8, pt-sound 8, stable-c/k/m/n 3 each, meta-l 4,
+meta-ls 4, super 4, dw-sm 6, dw-dr 6). The two SMBHB rows of every model print "..."
+in the NP columns by construction, so those are blanks, not cells.
+
+Numeric cells tested, as pre-registered:
+
+| column | cells |
+|---|---|
+| Bayes estimator, NP (mean and sd) | 41 |
+| Bayes estimator, NP+SMBHB (mean and sd) | 71 |
+| Maximum posterior, NP | 41 |
+| Maximum posterior, NP+SMBHB | 71 |
+| 68% credible interval, NP (two edges) | 41 |
+| 68% credible interval, NP+SMBHB (two edges) | 71 |
+| total | 336 |
+
+Scored as individual numbers that is 112 means, 112 standard deviations, 112
+maximum-posterior values and 224 interval edges: 560 comparisons, which is what
+out/comparison.csv holds.
+
+Declared not checkable in advance, and still not checkable: the 6 numeric K-bound
+cells (igw n_t = 5.72; stable-c -9.67; stable-k -9.87; stable-m -10.10; stable-n
+-9.71; super -9.97). K is a likelihood ratio against a reference point, and the paper
+itself says it is "not defined in terms of a posterior probability distribution". The
+deposited chains do carry a log_likelihood column, but not the reference theta_0 nor
+the marginalisation the K ratio needs, so a posterior chain cannot yield these.
+Could not be checked.
+
+## 2. What the paper says the numbers are, and what I did
+
+Appendix A of the paper is explicit, and I followed it.
+
+- Bayes estimator and its standard deviation: "we compute the Bayes estimator and its
+  standard deviation in terms of the corresponding sample mean and sample variance" ->
+  numpy.mean and numpy.std(ddof=0). ddof=1 is recorded too and never differs at the
+  printed precision (the chains hold 1.7 to 5.2 million samples).
+- Maximum posterior: the argmax of the 1D marginalized posterior over the prior range.
+  The paper does not say how the density is estimated, so this check is soft by
+  construction. Primary: a 4000-bin histogram over the prior range convolved with a
+  Gaussian of Scott bandwidth sigma * n**(-1/5); a ladder of four further bandwidths
+  (0.005, 0.01, 0.02 and 0.05 of the prior range) is reported for sensitivity. scipy is
+  not installed on this machine, so the KDE is binning plus convolution in numpy.
+- 68% credible interval: the paper defines a highest-posterior-density interval -
+  integrate over "the regions of highest posterior density" with P > P_68. Primary, as
+  pre-registered: the shortest contiguous interval containing 68% of the samples.
+  Secondary: the min and max of the above-threshold level set of the smoothed density.
+  Both are reported for every edge; the primary decides the verdict, as frozen.
+
+Tolerance, pre-registered: reproduced if |delta| <= 0.6 * 10^-d where d is the number
+of decimals printed (0.006 at two decimals), near-miss out to 3 * 10^-d, and 0.1 for
+maximum posterior. Cells marked with a star count as reproduced if the argmax lands in
+the outermost 2% of the prior range on the right side.
+
+Mapping to the deposit. The paper's dw-dr is the deposit's dw_ds (the paper's own
+prior table calls the same model dw-ds). Column names: log10_A_bhb -> gw_bhb_np_0,
+gamma_bhb -> gw_bhb_np_1, log10_alpha_star -> log10_alpha, log10_HR -> log10_H_R,
+log10_f_min/max -> log10_fmin/fmax, Delta -> width, log10_dNeff -> log10_N_eff, and
+log10_f_* is log10_f_peak in sigw_delta but log10_fpeak in sigw_gauss. The rest match
+by name.
+
+File handling. Each file is a gzipped pickle holding a 2-element list - a dict mapping
+parameter name to prior bounds, in column order, and a float64 (nsamples, ncols)
+array. Five files hold a tuple at top level instead. The last five columns are nmodel,
+log_posterior, log_likelihood, acceptance_rate, n_parall. pickle.load was never
+called: scripts/safeload.py subclasses pickle.Unpickler and allows only
+numpy.core.multiarray._reconstruct, numpy._core.multiarray._reconstruct,
+numpy.ndarray and numpy.dtype, raising on anything else. A first pass with
+pickletools.genops, which executes nothing, confirmed those are the only globals the
+files refer to. The array is rebuilt as a read-only np.frombuffer view so no second
+multi-GB copy is made. All 30 files loaded. CPU only, SetPriorityClass IDLE.
+
+All samples were used as deposited, no burn-in and no thinning - and that turns out to
+be right, since the Bayes estimators land on the printed values with the full array.
+
+## 3. Headline result
+
+| cell type | reproduced | near-miss | not reproduced | total |
+|---|---|---|---|---|
+| Bayes mean | 105 | 2 | 5 | 112 |
+| Bayes sd | 108 | 2 | 2 | 112 |
+| Maximum posterior | 96 | 12 | 4 | 112 |
+| 68% CI, lower edge | 57 | 41 | 14 | 112 |
+| 68% CI, upper edge | 56 | 43 | 13 | 112 |
+| all | 422 | 100 | 38 | 560 |
+| K bound | - | - | - | 6 not checkable |
+
+Median absolute difference, measured minus printed:
+
+| cell type | median | 90th pct | within 0.006 | within 0.01 | within 0.03 |
+|---|---|---|---|---|---|
+| Bayes mean | 0.0030 | 0.0047 | 105/112 | 106 | 107 |
+| Bayes sd | 0.0025 | 0.0046 | 107/112 | 109 | 109 |
+| Maximum posterior | 0.0185 | 0.1261 | 28/112 | 41 | 65 |
+| CI lower edge | 0.0058 | 0.0443 | 57/112 | 76 | 98 |
+| CI upper edge | 0.0058 | 0.0393 | 56/112 | 73 | 99 |
+
+Read plainly: the Bayes-estimator column of Table 4 reproduces exactly from the
+deposited chains. A median difference of 0.003 on numbers printed to two decimals is
+rounding noise and nothing else. There are two concrete exceptions, both explained in
+section 4 and both traceable. The maximum-posterior and credible-interval columns
+reproduce in substance but not to the printed digit, because the paper does not state
+how it estimated the 1D density and those two columns cannot be computed without that
+choice.
+
+Independent confirmation that the pipeline is right: the three 95% lower limits the
+paper quotes in its Section 3 prose fall straight out of my own 95% HPD level sets -
+log10 A > -1.5495 for sigw-delta (paper -1.55), -1.4345 for sigw-gauss (paper -1.43),
+-1.8985 for sigw-box (paper -1.90).
+
+Verdicts by model:
+
+| model | reproduced | near-miss | not reproduced |
+|---|---|---|---|
+| igw | 23 | 6 | 11 |
+| sigw-delta | 23 | 7 | 0 |
+| sigw-gauss | 16 | 17 | 7 |
+| sigw-box | 27 | 9 | 4 |
+| pt-bubble | 54 | 13 | 3 |
+| pt-sound | 56 | 10 | 4 |
+| stable-c | 17 | 2 | 1 |
+| stable-k | 14 | 5 | 1 |
+| stable-m | 16 | 3 | 1 |
+| stable-n | 16 | 3 | 1 |
+| meta-l | 24 | 6 | 0 |
+| meta-ls | 21 | 8 | 1 |
+| super | 28 | 2 | 0 |
+| dw-sm | 47 | 3 | 0 |
+| dw-dr | 40 | 6 | 4 |
+
+## 4. The two findings that are not about smoothing
+
+### 4.1 A dropped minus sign on three log10 alpha_* Bayes estimators
+
+| model | analysis | printed mean | measured mean | printed sd | measured sd |
+|---|---|---|---|---|---|
+| pt-bubble | NP | -0.26 | +0.26339 | 0.47 | 0.46584 ok |
+| pt-bubble | NP+SMBHB | -0.23 | +0.22556 | 0.52 | 0.51832 ok |
+| pt-sound | NP | -0.22 | +0.21866 | 0.44 | 0.43727 ok |
+| pt-sound | NP+SMBHB | +0.14 | +0.13544 ok | 0.56 | 0.55916 ok |
+
+The magnitude reproduces to 0.005 in all three, and the standard deviation printed in
+the same cell reproduces exactly. Only the sign is wrong. The fourth cell of the same
+row, pt-sound NP+SMBHB, prints a positive 0.14 and reproduces, so this is not a sign
+convention; dw-sm's own log10 alpha_* is genuinely negative (-0.88) and reproduces.
+
+The paper's own neighbouring cells settle it. For pt-bubble the printed maximum
+posterior is 1* (NP) and 0.74 (NP+SMBHB), and the printed 68% intervals are [0.03, 1*]
+and [0.01, 1*] - both entirely positive. A Bayes estimator of -0.26 cannot sit outside
+its own 68% credible interval. So: a sign error in three cells of Table 4, not a
+disagreement about the data.
+
+### 4.2 sigw_gauss_bhb.pkl.gz has a corrupt tail block
+
+This is the one defect in the deposit. The file holds 2,835,225 samples. The last
+46,378 of them (1.64%), one contiguous block at the end, are garbage:
+
+- log_posterior runs up to 1.308e12, where every other file in the deposit sits at
+  7.97e6;
+- gamma_bhb reaches 13.53, although its prior is normal(4.7, 0.346) - 25 sigma out;
+- log10_A_bhb reaches -18.25, far outside anything the prior supports.
+
+With the block included, four cells fail outright (gamma_bhb 4.799 +- 1.176 against a
+printed 4.65 +- 0.34) and five more are near-misses. Dropping the block - a post-hoc
+step, not part of the pre-registered method - puts every sigw-gauss NP+SMBHB cell on
+the printed value, intervals included:
+
+| param | printed | all samples | corrupt block dropped | printed 68% CI | my level-set 68% |
+|---|---|---|---|---|---|
+| log10_A_bhb | -15.72 +- 0.46 | -15.6814 +- 0.5683 | -15.7244 +- 0.4641 | [-16.14, -15.22] | [-16.138, -15.221] |
+| gamma_bhb | 4.65 +- 0.34 | 4.7993 +- 1.1759 | 4.6542 +- 0.3441 | [4.32, 5.00] | [4.315, 4.999] |
+| log10_A | -0.36 +- 0.61 | -0.3610 +- 0.6047 | -0.3592 +- 0.6096 | [-1.04, 0.24] | [-1.050, 0.236] |
+| log10_f_* | -6.30 +- 0.73 | -6.2904 +- 0.7236 | -6.3006 +- 0.7252 | [-7.17, -5.57] | [-7.158, -5.551] |
+| Delta | 1.30 +- 0.70 | 1.3236 +- 0.7064 | 1.3051 +- 0.6973 | [0.37, 1.92] | [0.361, 1.918] |
+
+So the paper's numbers are right and the published file is not: the authors clearly
+summarised a chain without that tail. The defect is confined to sigw_gauss_bhb.pkl.gz;
+no other file shows a log_posterior outside 7.97e6 +- 10. This is the one thing worth
+telling the authors - anyone who reads that file as deposited and takes a mean gets a
+different answer from the paper, and nothing in the deposit flags it.
+
+## 5. Why the maximum-posterior and credible-interval columns do not land on the digit
+
+Neither column can be computed from a chain without choosing a density estimator, and
+the paper states no choice: no bandwidth, no binning, no tool. That is the whole of the
+explanation for the near-misses, and it is measurable rather than hand-waved.
+
+Credible intervals. Of 224 edges, the pre-registered primary (shortest contiguous 68%
+interval) lands within 0.006 on 113, and the pre-registered secondary (level set of the
+smoothed density) on 106; 61 edges are hit by both, and 158 of 224 (71%) by at least
+one. That last figure is post-hoc, since picking the better of two estimators per cell
+is not a rule I froze. Which one wins is not random: it tracks whether the
+above-threshold region is contiguous. Where my density makes it contiguous the two
+agree; where my density splits it, the level set's min and max span a hole and widen
+the interval. igw n_t is matched by the level set to within 0.002-0.006 and missed by
+the shortest interval by 0.04-0.62; pt-bubble b is the reverse; stable-k/m/n
+log10_A_bhb are matched by the level set (-15.694 against a printed -15.68, -15.698
+against -15.67, -15.603 against -15.61) and missed by the shortest interval by 0.3-0.4.
+That the paper's definition names "regions", plural, with a threshold P_68, says the
+level set is the faithful reading - but reproducing its edges to two decimals needs
+their bandwidth, which is not published.
+
+An independent check that the printed intervals really are 68% HPD intervals of these
+chains: the fraction of deposited samples inside each printed interval has median
+0.6806 over all 112 intervals, and 92 of them are within 0.01 of 0.68. The 18 that are
+not are all parameters whose HPD region is disjoint or runs into a prior edge - igw
+log10_T_rh 0.741/0.723, igw log10_r 0.816/0.750, igw n_t 0.854/0.811, pt-sound
+log10_alpha_* 0.906, sigw-box log10_f_min 0.749/0.744, dw-dr b 0.948, the four stable-*
+log10_A_bhb 0.790-0.812. Those are exactly the cells my two estimators disagree on, and
+they are the cells where the printed [theta_68_min, theta_68_max] is the span of a
+region holding more than 68% of the mass - which is what the paper's own definition
+produces, not an error.
+
+Maximum posterior. 96 of 112 within the pre-registered 0.1, median difference 0.019.
+The four outright failures are all broad or multimodal densities where the argmax
+wanders with the bandwidth: sigw-gauss log10_f_* NP+SMBHB (printed -6.85, mine -5.67 at
+Scott and -5.97 at the coarsest bandwidth - this is also the contaminated file),
+pt-bubble c NP+SMBHB (2.93 against 2.60), meta-ls log10 G mu NP (-4.46 against -5.55, a
+posterior with a long flat ridge), dw-dr log10_A_bhb NP+SMBHB (-15.59 against -14.56,
+bimodal). I could not establish which density estimator the authors used, so I cannot
+close those four. All I can say is that the discrepancy is of the size a bandwidth
+change produces, and that the Bayes estimator and the interval for the same parameters
+largely reproduce.
+
+igw log10_T_rh and log10_r deserve a separate word, because together with n_t they hold
+11 of the 38 failures. Both posteriors are nearly the prior: log10_T_rh has sd 1.60 on
+a uniform prior over [-3, 3] whose own sd is 1.73, and log10_r has sd 5.82 on [-40, 0].
+The Bayes estimators for both reproduce to 0.005. The HPD edges of an almost flat
+density are set by fluctuations of order the smoothing, so no estimator choice
+reproduces them - my two differ from each other by 3.1 on log10_r's lower edge in the
+NP analysis. These cells are not reproducible from a chain in principle, not just in
+this attempt. The same holds for b in both domain-wall models, whose Bayes estimator
+0.74 +- 0.14 is the mean and sd of its own uniform prior on [0.5, 1] to three decimals:
+the parameter is unconstrained, and its printed interval edge (0.97 under NP against
+0.83 under NP+SMBHB, from statistically identical posteriors) is smoothing noise.
+
+## 6. The deposit's compare/ subdirectory is a different chain set
+
+chains/stochastic/compare/ holds a second, near-duplicate set of 26 files with no dw
+models. As pre-registered I cross-checked two models against it, and it is not the
+source of Table 4:
+
+| model | analysis | param | printed | top-level | compare/ |
+|---|---|---|---|---|---|
+| super | NP | log10 G mu | -11.67 +- 0.32 | -11.6722 +- 0.3198 | -11.6386 +- 0.5081 |
+| super | NP+SMBHB | log10 G mu | -11.68 +- 0.35 | -11.6837 +- 0.3479 | -11.6506 +- 0.5503 |
+| igw | NP | log10 r | -14.06 +- 5.82 | -14.0607 +- 5.8187 | -14.7254 +- 6.8971 |
+| igw | NP | n_t | 2.61 +- 0.85 | 2.6145 +- 0.8486 | 2.6646 +- 0.9896 |
+
+The sample counts differ too (super NP: 3,677,925 at top level against 3,334,350 in
+compare/). The top-level files are the ones Table 4 was made from, and the choice
+frozen in the pre-registration was the right one.
+
+## 7. Other notes a reader would want
+
+- dw-dr, 68% CI for log10 Delta N_eff under NP+SMBHB, prints [-0.63, 0.41*]. The prior
+  is log-uniform [-3, -0.41], so a positive 0.41 is outside the prior range: another
+  dropped minus sign. Against -0.41 the edge reproduces (my shortest interval gives
+  -0.4089, my level set -0.4103); against the printed +0.41 it fails by 0.82. This was
+  flagged in the pre-registration before anything was computed.
+- The paper names the same model two ways: dw-dr in Table 4, dw-ds in Table 3 and in
+  the deposit. Not an error, but it costs a reader a minute.
+- Chain sizes run from 1,746,900 samples (sigw-box NP+SMBHB) to 5,209,425 (dw-dr NP),
+  142 to 149 columns each, 22 GB gzipped for the whole deposit.
+- Five files store a top-level tuple where the other 25 store a list: stable_c,
+  stable_c_bhb, stable_k, stable_k_bhb, stable_m. Harmless, but a reader writing a
+  loader should expect both.
+- nmodel is present in every file with values in [-0.5, 0.5]. No filtering on it is
+  needed: the Bayes estimators reproduce with every sample included.
+- The chain files are gzipped pickles from a download. They should not be opened with
+  pickle.load. Everything here went through a find_class allowlist of four numpy names.
+
+## 8. Files
+
+- PREREG.md, FREEZE.txt - the pre-registration and its hashes
+- out/table4_printed.json - the frozen printed values, 71 rows
+- out/priors.json - prior ranges from Tables 2 and 3
+- out/cells/*.json - measured estimators, one file per model and analysis
+- out/cells_compare/*.json - the compare/ cross-check
+- out/comparison.csv - the 560 comparisons, cell by cell, with both interval estimators
+  and the bandwidth ladder in the note column
+- out/report_tables.md - the full cell-by-cell verdict table
+- out/mass/*.json - fraction of samples inside each printed interval
+- out/diag_sigw_gauss_bhb.json - the corrupt-block diagnostic
+- scripts/ - safeload.py (restricted unpickler), probe_ops.py and probe_tail.py (opcode
+  walk), keydump.py, parse_table4.py, compute_one.py, compare.py, mass_in_printed.py,
+  diag_sigw_gauss_bhb.py, make_report_tables.py

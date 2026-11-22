@@ -1,0 +1,38 @@
+{
+ "model": "meta-ls",
+ "analysis": "NPSMBHB",
+ "params": {
+  "log10_Gmu": {
+   "printed": [
+    -6.33,
+    -4.15
+   ],
+   "mass_inside_printed": 0.6800880354076475,
+   "width_printed": 2.1799999999999997
+  },
+  "sqrt_kappa": {
+   "printed": [
+    7.57,
+    7.93
+   ],
+   "mass_inside_printed": 0.6858941801501116,
+   "width_printed": 0.35999999999999943
+  },
+  "log10_A_bhb": {
+   "printed": [
+    -16.17,
+    -15.23
+   ],
+   "mass_inside_printed": 0.6790206463991745,
+   "width_printed": 0.9400000000000013
+  },
+  "gamma_bhb": {
+   "printed": [
+    4.3,
+    5.0
+   ],
+   "mass_inside_printed": 0.6798897138849251,
+   "width_printed": 0.7000000000000002
+  }
+ }
+}

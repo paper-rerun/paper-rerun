@@ -1,0 +1,35 @@
+ok igw NP {'log10_T_rh': 0.741, 'log10_r': 0.8162, 'n_t': 0.854}
+ok igw NPSMBHB {'log10_T_rh': 0.7227, 'log10_r': 0.7499, 'n_t': 0.8109, 'log10_A_bhb': 0.6758, 'gamma_bhb': 0.6833}
+ok sigw-delta NP {'log10_A': 0.6776, 'log10_f_star': 0.6756}
+ok sigw-delta NPSMBHB {'log10_A': 0.6819, 'log10_f_star': 0.6788, 'log10_A_bhb': 0.6779, 'gamma_bhb': 0.6757}
+ok sigw-gauss NP {'log10_A': 0.6736, 'log10_f_star': 0.6766, 'Delta': 0.682}
+ok sigw-gauss NPSMBHB {'log10_A': 0.682, 'log10_f_star': 0.6841, 'Delta': 0.6706, 'log10_A_bhb': 0.6706, 'gamma_bhb': 0.6664}
+ok sigw-box NP {'log10_A': 0.7018, 'log10_f_min': 0.7494, 'log10_f_max': 0.6771}
+ok sigw-box NPSMBHB {'log10_A': 0.6798, 'log10_f_min': 0.7444, 'log10_f_max': 0.6793, 'log10_A_bhb': 0.6806, 'gamma_bhb': 0.6766}
+ok pt-bubble NP {'log10_T_star': 0.6793, 'log10_alpha_star': 0.6773, 'log10_HR': 0.6781, 'a': 0.6828, 'b': 0.678, 'c': 0.6813}
+ok pt-bubble NPSMBHB {'log10_T_star': 0.6814, 'log10_alpha_star': 0.6726, 'log10_HR': 0.6789, 'a': 0.6811, 'b': 0.6816, 'c': 0.6797, 'log10_A_bhb': 0.6771, 'gamma_bhb': 0.6767}
+ok pt-sound NP {'log10_T_star': 0.6783, 'log10_alpha_star': 0.9061, 'log10_HR': 0.6862, 'a': 0.6772, 'b': 0.6799, 'c': 0.68}
+ok pt-sound NPSMBHB {'log10_T_star': 0.6805, 'log10_alpha_star': 0.6865, 'log10_HR': 0.6814, 'a': 0.682, 'b': 0.6823, 'c': 0.6816, 'log10_A_bhb': 0.679, 'gamma_bhb': 0.6854}
+ok stable-c NP {'log10_Gmu': 0.6841}
+ok stable-c NPSMBHB {'log10_Gmu': 0.6804, 'log10_A_bhb': 0.8124, 'gamma_bhb': 0.6775}
+ok stable-k NP {'log10_Gmu': 0.6831}
+ok stable-k NPSMBHB {'log10_Gmu': 0.6809, 'log10_A_bhb': 0.7959, 'gamma_bhb': 0.6797}
+ok stable-m NP {'log10_Gmu': 0.671}
+ok stable-m NPSMBHB {'log10_Gmu': 0.6817, 'log10_A_bhb': 0.7902, 'gamma_bhb': 0.6768}
+ok stable-n NP {'log10_Gmu': 0.6759}
+ok stable-n NPSMBHB {'log10_Gmu': 0.6817, 'log10_A_bhb': 0.8003, 'gamma_bhb': 0.6811}
+ok meta-l NP {'log10_Gmu': 0.678, 'sqrt_kappa': 0.689}
+ok meta-l NPSMBHB {'log10_Gmu': 0.6817, 'sqrt_kappa': 0.7115, 'log10_A_bhb': 0.6778, 'gamma_bhb': 0.6839}
+ok meta-ls NP {'log10_Gmu': 0.6801, 'sqrt_kappa': 0.6712}
+ok meta-ls NPSMBHB {'log10_Gmu': 0.6801, 'sqrt_kappa': 0.6859, 'log10_A_bhb': 0.679, 'gamma_bhb': 0.6799}
+ok super NP {'log10_Gmu': 0.681, 'log10_P': 0.6817}
+ok super NPSMBHB {'log10_Gmu': 0.6828, 'log10_P': 0.6814, 'log10_A_bhb': 0.6787, 'gamma_bhb': 0.682}
+ok dw-sm NP {'log10_T_star': 0.681, 'log10_alpha_star': 0.6882, 'b': 0.6872, 'c': 0.679}
+ok dw-sm NPSMBHB {'log10_T_star': 0.6849, 'log10_alpha_star': 0.6801, 'b': 0.679, 'c': 0.6806, 'log10_A_bhb': 0.6821, 'gamma_bhb': 0.6803}
+ok dw-dr NP {'log10_T_star': 0.6682, 'log10_dNeff': 0.6479, 'b': 0.9476, 'c': 0.6794}
+ok dw-dr NPSMBHB {'log10_T_star': 0.6818, 'log10_dNeff': 0.6799, 'b': 0.6801, 'c': 0.6794, 'log10_A_bhb': 0.8155, 'gamma_bhb': 0.6776}
+ok super NP n=3334350 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells_compare/super_NP.json
+ok super NPSMBHB n=2981925 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells_compare/super_NPSMBHB.json
+ok igw NP n=3248625 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells_compare/igw_NP.json
+ok igw NPSMBHB n=2798700 -> E:/Ciencia/noturno/2023-afzal-nanograv15-newphysics-cego/out/cells_compare/igw_NPSMBHB.json
+DIAG DONE

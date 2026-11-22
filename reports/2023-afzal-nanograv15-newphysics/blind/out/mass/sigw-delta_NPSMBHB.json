@@ -1,0 +1,38 @@
+{
+ "model": "sigw-delta",
+ "analysis": "NPSMBHB",
+ "params": {
+  "log10_A": {
+   "printed": [
+    -1.03,
+    -0.02
+   ],
+   "mass_inside_printed": 0.6818526153252268,
+   "width_printed": 1.01
+  },
+  "log10_f_star": {
+   "printed": [
+    -6.19,
+    -5.0
+   ],
+   "mass_inside_printed": 0.6788345107122177,
+   "width_printed": 1.1900000000000004
+  },
+  "log10_A_bhb": {
+   "printed": [
+    -16.18,
+    -15.29
+   ],
+   "mass_inside_printed": 0.6779234896738081,
+   "width_printed": 0.8900000000000006
+  },
+  "gamma_bhb": {
+   "printed": [
+    4.31,
+    4.99
+   ],
+   "mass_inside_printed": 0.6757453773402818,
+   "width_printed": 0.6800000000000006
+  }
+ }
+}
